@@ -1,0 +1,13 @@
+*** Begin Patch
+*** Update File: lib/assessment/question-engine.ts
+@@
+ export async function selectQuestions(type: AssessmentType, seed?: string): Promise<SelectedQuestion[]> {
+   const config = ASSESSMENT_CONFIG[type];
+-  const eligible = await getPublishedEligibleQuestions();
++  const allEligible = await getPublishedEligibleQuestions();
++  const RIASEC_DOMAINS = new Set(["R", "I", "A", "S", "E", "C"]);
++  const eligible =
++    type === "riasec"
++      ? allEligible.filter((q) => RIASEC_DOMAINS.has(q.domain.trim().toUpperCase()))
++      : allEligible.filter((q) => !RIASEC_DOMAINS.has(q.domain.trim().toUpperCase()));
+*** End Patch

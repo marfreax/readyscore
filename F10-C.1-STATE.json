@@ -1,0 +1,15 @@
+{
+  "phase": "3.0-D.1-F.10-C.1",
+  "status": "CORRECTED",
+  "baseline": "RS-v2_18B",
+  "corrections": [
+    "AssessmentRunner literal newline escape removed",
+    "Runtime service import paths reconciled to actual route depth"
+  ],
+  "database_mutation": false,
+  "ria_sec_scoring_replaced": false,
+  "validation_required": [
+    "pnpm typecheck",
+    "pnpm build"
+  ]
+}

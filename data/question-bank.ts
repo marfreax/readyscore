@@ -1,0 +1,49277 @@
+export const questionBank = [
+  {
+    "id": "RS-0001",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya memiliki tujuan yang jelas mengapa ingin melanjutkan pendidikan.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0002",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya tetap berusaha walaupun nilai saya belum sesuai harapan.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0003",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mudah kehilangan semangat ketika menghadapi pelajaran yang sulit.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0004",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menikmati proses belajar hal-hal baru.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0005",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya belajar hanya jika ada ujian.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0006",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mencari informasi tambahan di luar materi yang diberikan guru.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0007",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya memiliki target akademik yang ingin dicapai setiap semester.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0008",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya merasa belajar tidak akan banyak mengubah masa depan saya.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0009",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya terdorong untuk terus meningkatkan kemampuan diri.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0010",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering berhenti mencoba ketika mengalami kegagalan.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0011",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mengerjakan tugas sebelum batas waktu.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0012",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering menunda pekerjaan sampai saat terakhir.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0013",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya memiliki jadwal belajar yang saya usahakan untuk dipatuhi.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0014",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mudah terdistraksi oleh media sosial ketika belajar.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0015",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menyelesaikan tugas tanpa harus diingatkan.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0016",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering terlambat mengumpulkan tugas.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0017",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya dapat mengatur waktu antara belajar dan hiburan.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0018",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering lupa terhadap komitmen yang telah saya buat.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0019",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya tetap menjalankan rencana belajar meskipun sedang tidak bersemangat.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0020",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mudah mengabaikan tanggung jawab belajar.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0021",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu mencari solusi sendiri sebelum meminta bantuan orang lain.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0022",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya bergantung kepada orang lain untuk menyelesaikan sebagian besar tugas saya.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0023",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya berinisiatif mempelajari sesuatu tanpa harus diminta.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0024",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunggu orang lain mengambil keputusan untuk saya.",
+    "type": "Likert",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0025",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya percaya diri mengambil keputusan setelah mempertimbangkan informasi yang ada.",
+    "type": "Likert",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0201",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0202",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0203",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0204",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0205",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0206",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0207",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0208",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0209",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0210",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0211",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0212",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0213",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0214",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0215",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0216",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0217",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0218",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0219",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0220",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0221",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0222",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0223",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0224",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0225",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0226",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0227",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0228",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0229",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0230",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0231",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0232",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0233",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0234",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0235",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0236",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0237",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0238",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0239",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0240",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0241",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0242",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0243",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0244",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0245",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0246",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0247",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0248",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0249",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0250",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0251",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0252",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0253",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0254",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0255",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0256",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0257",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0258",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0259",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0260",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0261",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0262",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0263",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0264",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0265",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0266",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0267",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0268",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0269",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0270",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0271",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0272",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0273",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0274",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0275",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0276",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0277",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0278",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0279",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0280",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0281",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0282",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0283",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0284",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0285",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0286",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0287",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0288",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0289",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0290",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0291",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0292",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0293",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0294",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0295",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0296",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0297",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0298",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0299",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0300",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0301",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0302",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0303",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0304",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0305",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0306",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0307",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0308",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0309",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0310",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0311",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0312",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0313",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0314",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0315",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0316",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0317",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0318",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0319",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0320",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0321",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0322",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0323",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0324",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0325",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0326",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0327",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0328",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0329",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0330",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0331",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0332",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0333",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0334",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0335",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0336",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0337",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0338",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0339",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0340",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0341",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0342",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0343",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0344",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0345",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0346",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0347",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0348",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0349",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0350",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0351",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0352",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0353",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0354",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0355",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0356",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0357",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0358",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0359",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0360",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0361",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0362",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0363",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0364",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0365",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0366",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0367",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0368",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0369",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0370",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0371",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0372",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0373",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0374",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0375",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0376",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0377",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0378",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0379",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0380",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0381",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0382",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0383",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0384",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0385",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0386",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0387",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0388",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0389",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0390",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0391",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0392",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0393",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0394",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0395",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0396",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek critical thinking ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0397",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek problem solving ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0398",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek komunikasi ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0399",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan kemampuan yang baik dalam aspek leadership ketika menghadapi situasi belajar atau organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0400",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya sering kesulitan tetap tenang ketika menghadapi tantangan baru dalam emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0401",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0402",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0403",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0404",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0405",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0406",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0407",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0408",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0409",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0410",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0411",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0412",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0413",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0414",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0415",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0416",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0417",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0418",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0419",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0420",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0421",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0422",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0423",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0424",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0425",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0426",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0427",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0428",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0429",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0430",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0431",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0432",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0433",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0434",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0435",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0436",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0437",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0438",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0439",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0440",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0441",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0442",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0443",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0444",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0445",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0446",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0447",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0448",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0449",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0450",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0451",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0452",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0453",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0454",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0455",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0456",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0457",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0458",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0459",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0460",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0461",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0462",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0463",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0464",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0465",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0466",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0467",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0468",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0469",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0470",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0471",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0472",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0473",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0474",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0475",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0476",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0477",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0478",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0479",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0480",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0481",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0482",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0483",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0484",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0485",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0486",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0487",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0488",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0489",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0490",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0491",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0492",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0493",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0494",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0495",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0496",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0497",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0498",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0499",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0500",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0501",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0502",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0503",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0504",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0505",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0506",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0507",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0508",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0509",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0510",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0511",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0512",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0513",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0514",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0515",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0516",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0517",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0518",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0519",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0520",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0521",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0522",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0523",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0524",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0525",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0526",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0527",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0528",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0529",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0530",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0531",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0532",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0533",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0534",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0535",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0536",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0537",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0538",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0539",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0540",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0541",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0542",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0543",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0544",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0545",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0546",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0547",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0548",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0549",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0550",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0551",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0552",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0553",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0554",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0555",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0556",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0557",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0558",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0559",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0560",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0561",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0562",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0563",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0564",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0565",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0566",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0567",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0568",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0569",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0570",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0571",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0572",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0573",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0574",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0575",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0576",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0577",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0578",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0579",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0580",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0581",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0582",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0583",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0584",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0585",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0586",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0587",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0588",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0589",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0590",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0591",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0592",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0593",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0594",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0595",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0596",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0597",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0598",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0599",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0600",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0601",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0602",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0603",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0604",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0605",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0606",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0607",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0608",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0609",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0610",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0611",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0612",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0613",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0614",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0615",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0616",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0617",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0618",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0619",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0620",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0621",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0622",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0623",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0624",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0625",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0626",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0627",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0628",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0629",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0630",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0631",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0632",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0633",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0634",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0635",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0636",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0637",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0638",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0639",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0640",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0641",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0642",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0643",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0644",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0645",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0646",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0647",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0648",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0649",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0650",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0651",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0652",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0653",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0654",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0655",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0656",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0657",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0658",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0659",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0660",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0661",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0662",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0663",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0664",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0665",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0666",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0667",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0668",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0669",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0670",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0671",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0672",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0673",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0674",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0675",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0676",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0677",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0678",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0679",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0680",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0681",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0682",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0683",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0684",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0685",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0686",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0687",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0688",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0689",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0690",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0691",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0692",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0693",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0694",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0695",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0696",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0697",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0698",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0699",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0700",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0701",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0702",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0703",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0704",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0705",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0706",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0707",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0708",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0709",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0710",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0711",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0712",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0713",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0714",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0715",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0716",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0717",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0718",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0719",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0720",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0721",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0722",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0723",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0724",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0725",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0726",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0727",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0728",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0729",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0730",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0731",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0732",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0733",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0734",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0735",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0736",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0737",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0738",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0739",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0740",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0741",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0742",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0743",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0744",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0745",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0746",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0747",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0748",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0749",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0750",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0751",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0752",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0753",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0754",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0755",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0756",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0757",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0758",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0759",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0760",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0761",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0762",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0763",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0764",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0765",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0766",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0767",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0768",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0769",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0770",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0771",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0772",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0773",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0774",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0775",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0776",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0777",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0778",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0779",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0780",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0781",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0782",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0783",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0784",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0785",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0786",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0787",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0788",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0789",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0790",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0791",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0792",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0793",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan motivasi dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0794",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0795",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan kemandirian dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0796",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan critical thinking dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0797",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan problem solving dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0798",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0799",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menunjukkan perilaku yang mendukung kemampuan leadership dalam aktivitas sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0800",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0801",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0802",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0803",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0804",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0805",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0806",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0807",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0808",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0809",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0810",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0811",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0812",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0813",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0814",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0815",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0816",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0817",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0818",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0819",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0820",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0821",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0822",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0823",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0824",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0825",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0826",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0827",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0828",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0829",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0830",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0831",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0832",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0833",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0834",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0835",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0836",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0837",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0838",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0839",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0840",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0841",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0842",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0843",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0844",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0845",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0846",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0847",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0848",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0849",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0850",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0851",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0852",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0853",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0854",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0855",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0856",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0857",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0858",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0859",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0860",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0861",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0862",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0863",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0864",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0865",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0866",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0867",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0868",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0869",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0870",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0871",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0872",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0873",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0874",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0875",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0876",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0877",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0878",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0879",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0880",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0881",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0882",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0883",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0884",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0885",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0886",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0887",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0888",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0889",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0890",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0891",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0892",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0893",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0894",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0895",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0896",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0897",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0898",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0899",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0900",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0901",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0902",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0903",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0904",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0905",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0906",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0907",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0908",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0909",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0910",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0911",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0912",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0913",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0914",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0915",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0916",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0917",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0918",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0919",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0920",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0921",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0922",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0923",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0924",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0925",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0926",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0927",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0928",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0929",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0930",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0931",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0932",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0933",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0934",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0935",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0936",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0937",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0938",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0939",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0940",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0941",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0942",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0943",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0944",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0945",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0946",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0947",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0948",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0949",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0950",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0951",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0952",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0953",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0954",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0955",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0956",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0957",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0958",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0959",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0960",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0961",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0962",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0963",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0964",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0965",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0966",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0967",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0968",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0969",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0970",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0971",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0972",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0973",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0974",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0975",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0976",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0977",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0978",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0979",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0980",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0981",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0982",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0983",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0984",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0985",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0986",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0987",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0988",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0989",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0990",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0991",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0992",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0993",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0994",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0995",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0996",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0997",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0998",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-0999",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1000",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1001",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1002",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1003",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1004",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1005",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1006",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1007",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1008",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1009",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1010",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1011",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1012",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1013",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1014",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1015",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1016",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1017",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1018",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1019",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1020",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1021",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1022",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1023",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1024",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1025",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1026",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1027",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1028",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1029",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1030",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1031",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1032",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1033",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1034",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1035",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1036",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1037",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1038",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1039",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1040",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1041",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1042",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1043",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1044",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1045",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1046",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1047",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1048",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1049",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1050",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1051",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1052",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1053",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1054",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1055",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1056",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1057",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1058",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1059",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1060",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1061",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1062",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1063",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1064",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1065",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1066",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1067",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1068",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1069",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1070",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1071",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1072",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1073",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1074",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1075",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1076",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1077",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1078",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1079",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1080",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1081",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1082",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1083",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1084",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1085",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1086",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1087",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1088",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1089",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1090",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1091",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1092",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1093",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1094",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1095",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1096",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1097",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1098",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1099",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1100",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1101",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1102",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1103",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1104",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1105",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1106",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1107",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1108",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1109",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1110",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1111",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1112",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1113",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1114",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1115",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1116",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1117",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1118",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1119",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1120",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1121",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1122",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1123",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1124",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1125",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1126",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1127",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1128",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1129",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1130",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1131",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1132",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1133",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1134",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1135",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1136",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1137",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1138",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1139",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1140",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1141",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1142",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1143",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1144",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1145",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1146",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1147",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1148",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1149",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1150",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1151",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1152",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1153",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1154",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1155",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1156",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1157",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1158",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1159",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1160",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1161",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1162",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1163",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1164",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1165",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1166",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1167",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1168",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1169",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1170",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1171",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1172",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1173",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1174",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1175",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1176",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1177",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1178",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1179",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1180",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1181",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1182",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1183",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1184",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1185",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1186",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1187",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1188",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1189",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1190",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1191",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1192",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1193",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1194",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1195",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1196",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1197",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1198",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1199",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara konsisten dalam berbagai situasi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1200",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi efektivitas pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1201",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1202",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1203",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1204",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1205",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1206",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1207",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1208",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1209",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1210",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1211",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1212",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1213",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1214",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1215",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1216",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1217",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1218",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1219",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1220",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1221",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1222",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1223",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1224",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1225",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1226",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1227",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1228",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1229",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1230",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1231",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1232",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1233",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1234",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1235",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1236",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1237",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1238",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1239",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1240",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1241",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1242",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1243",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1244",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1245",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1246",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1247",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1248",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1249",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1250",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1251",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1252",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1253",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1254",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1255",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1256",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1257",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1258",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1259",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1260",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1261",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1262",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1263",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1264",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1265",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1266",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1267",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1268",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1269",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1270",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1271",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1272",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1273",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1274",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1275",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1276",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1277",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1278",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1279",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1280",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1281",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1282",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1283",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1284",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1285",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1286",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1287",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1288",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1289",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1290",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1291",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1292",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1293",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1294",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1295",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1296",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1297",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1298",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1299",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1300",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1301",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1302",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1303",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1304",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1305",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1306",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1307",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1308",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1309",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1310",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1311",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1312",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1313",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1314",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1315",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1316",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1317",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1318",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1319",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1320",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1321",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1322",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1323",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1324",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1325",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1326",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1327",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1328",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1329",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1330",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1331",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1332",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1333",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1334",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1335",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1336",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1337",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1338",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1339",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1340",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1341",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1342",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1343",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1344",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1345",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1346",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1347",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1348",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1349",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1350",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1351",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1352",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1353",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1354",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1355",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1356",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1357",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1358",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1359",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1360",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1361",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1362",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1363",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1364",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1365",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1366",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1367",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1368",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1369",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1370",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1371",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1372",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1373",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1374",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1375",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1376",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1377",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1378",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1379",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1380",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1381",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1382",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1383",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1384",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1385",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1386",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1387",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1388",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1389",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1390",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1391",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1392",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1393",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1394",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1395",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1396",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1397",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1398",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1399",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1400",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1401",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1402",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1403",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1404",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1405",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1406",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1407",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1408",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1409",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1410",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1411",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1412",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1413",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1414",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1415",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1416",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1417",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1418",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1419",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1420",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1421",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1422",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1423",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1424",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1425",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1426",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1427",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1428",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1429",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1430",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1431",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1432",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1433",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1434",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1435",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1436",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1437",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1438",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1439",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1440",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1441",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1442",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1443",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1444",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1445",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1446",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1447",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1448",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1449",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1450",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1451",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1452",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1453",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1454",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1455",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1456",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1457",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1458",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1459",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1460",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1461",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1462",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1463",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1464",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1465",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1466",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1467",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1468",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1469",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1470",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1471",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1472",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1473",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1474",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1475",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1476",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1477",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1478",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1479",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1480",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1481",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1482",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1483",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1484",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1485",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1486",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1487",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1488",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1489",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1490",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1491",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1492",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1493",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1494",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1495",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1496",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1497",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1498",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1499",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1500",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1501",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1502",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1503",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1504",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1505",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1506",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1507",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1508",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1509",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1510",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1511",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1512",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1513",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1514",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1515",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1516",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1517",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1518",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1519",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1520",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1521",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1522",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1523",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1524",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1525",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1526",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1527",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1528",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1529",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1530",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1531",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1532",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1533",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1534",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1535",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1536",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1537",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1538",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1539",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1540",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1541",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1542",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1543",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1544",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1545",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1546",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1547",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1548",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1549",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1550",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1551",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1552",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1553",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1554",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1555",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1556",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1557",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1558",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1559",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1560",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1561",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1562",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1563",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1564",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1565",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1566",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1567",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1568",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1569",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1570",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1571",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1572",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1573",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1574",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1575",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1576",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1577",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1578",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1579",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1580",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1581",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1582",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1583",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1584",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1585",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1586",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1587",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1588",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1589",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1590",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1591",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1592",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1593",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan motivasi secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1594",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1595",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan kemandirian secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1596",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan critical thinking secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1597",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan problem solving secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1598",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1599",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menerapkan kemampuan leadership secara efektif dalam kegiatan belajar maupun kehidupan sehari-hari.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1600",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki perilaku yang menghambat perkembangan pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1601",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1602",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1603",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1604",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1605",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1606",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1607",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1608",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1609",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1610",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1611",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1612",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1613",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1614",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1615",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1616",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1617",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1618",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1619",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1620",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1621",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1622",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1623",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1624",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1625",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1626",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1627",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1628",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1629",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1630",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1631",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1632",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1633",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1634",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1635",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1636",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1637",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1638",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1639",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1640",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1641",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1642",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1643",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1644",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1645",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1646",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1647",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1648",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1649",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1650",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1651",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1652",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1653",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1654",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1655",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1656",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1657",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1658",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1659",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1660",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1661",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1662",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1663",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1664",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1665",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1666",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1667",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1668",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1669",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1670",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1671",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1672",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1673",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1674",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1675",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1676",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1677",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1678",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1679",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1680",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1681",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1682",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1683",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1684",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1685",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1686",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1687",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1688",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1689",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1690",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1691",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1692",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1693",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1694",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1695",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1696",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1697",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1698",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1699",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1700",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1701",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1702",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1703",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1704",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1705",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1706",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1707",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1708",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1709",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1710",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1711",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1712",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1713",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1714",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1715",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1716",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1717",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1718",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1719",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1720",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1721",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1722",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1723",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1724",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1725",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1726",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1727",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1728",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1729",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1730",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1731",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1732",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1733",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1734",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1735",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1736",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1737",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1738",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1739",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1740",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1741",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1742",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1743",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1744",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1745",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1746",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1747",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1748",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1749",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1750",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1751",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1752",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1753",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1754",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1755",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1756",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1757",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1758",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1759",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1760",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1761",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1762",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1763",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1764",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1765",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1766",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1767",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1768",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1769",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1770",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1771",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1772",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1773",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1774",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1775",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1776",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1777",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1778",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1779",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1780",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1781",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1782",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1783",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1784",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1785",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1786",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1787",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1788",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1789",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1790",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1791",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1792",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1793",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1794",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1795",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1796",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1797",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1798",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1799",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1800",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1801",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1802",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1803",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1804",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1805",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1806",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1807",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1808",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1809",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1810",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1811",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1812",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1813",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1814",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1815",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1816",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1817",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1818",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1819",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1820",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1821",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1822",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1823",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1824",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1825",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1826",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1827",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1828",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1829",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1830",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1831",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1832",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1833",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1834",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1835",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1836",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1837",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1838",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1839",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1840",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1841",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1842",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1843",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1844",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1845",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1846",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1847",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1848",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1849",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1850",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1851",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1852",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1853",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1854",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1855",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1856",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1857",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1858",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1859",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1860",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1861",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1862",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1863",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1864",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1865",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1866",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1867",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1868",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1869",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1870",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1871",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1872",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1873",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1874",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1875",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1876",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1877",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1878",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1879",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1880",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1881",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1882",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1883",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1884",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1885",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1886",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1887",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1888",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1889",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1890",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1891",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1892",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1893",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1894",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1895",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1896",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1897",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1898",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1899",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1900",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1901",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1902",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1903",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1904",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1905",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1906",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1907",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1908",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1909",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1910",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1911",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1912",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1913",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1914",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1915",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1916",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1917",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1918",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1919",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1920",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1921",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1922",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1923",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1924",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1925",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1926",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1927",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1928",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1929",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1930",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1931",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1932",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1933",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1934",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1935",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1936",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1937",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1938",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1939",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1940",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1941",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1942",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1943",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1944",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1945",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1946",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1947",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1948",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1949",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1950",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1951",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1952",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1953",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1954",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1955",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1956",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1957",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1958",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1959",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1960",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1961",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1962",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1963",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1964",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1965",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1966",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1967",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1968",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1969",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1970",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1971",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1972",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1973",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1974",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1975",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1976",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1977",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1978",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1979",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1980",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1981",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1982",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1983",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1984",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1985",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1986",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1987",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1988",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1989",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1990",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1991",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1992",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1993",
+    "domain": "Motivasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan motivasi untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1994",
+    "domain": "Disiplin",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1995",
+    "domain": "Kemandirian",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan kemandirian untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1996",
+    "domain": "Critical Thinking",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan critical thinking untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1997",
+    "domain": "Problem Solving",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan problem solving untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1998",
+    "domain": "Komunikasi",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-1999",
+    "domain": "Leadership",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya secara konsisten menerapkan kemampuan leadership untuk mencapai tujuan yang saya tetapkan.",
+    "type": "Positive",
+    "reverseScore": false,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  },
+  {
+    "id": "RS-2000",
+    "domain": "Emotional Resilience",
+    "subdomain": null,
+    "indicator": null,
+    "text": "Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience dalam kehidupan sehari-hari.",
+    "type": "Negative",
+    "reverseScore": true,
+    "weight": 1.0,
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "difficulty": "Medium",
+    "status": "Draft",
+    "mappingStatus": "PARTIAL"
+  }
+] as const;

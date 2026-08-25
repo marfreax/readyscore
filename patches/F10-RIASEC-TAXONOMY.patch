@@ -1,0 +1,15 @@
+*** Begin Patch
+*** Update File: lib/question-bank-taxonomy.ts
+@@
+ import taxonomy from "../data/taxonomy-v1.json";
++import riasecTaxonomy from "../data/taxonomy-riasec-v1.json";
+@@
+-export const TAXONOMY = taxonomy as { version: string; domains: TaxonomyDomain[] };
++const CORE_TAXONOMY = taxonomy as { version: string; domains: TaxonomyDomain[] };
++const RIASEC_TAXONOMY = riasecTaxonomy as { version: string; domains: TaxonomyDomain[] };
++
++export const TAXONOMY = {
++  version: "TAXONOMY_V1",
++  domains: [...CORE_TAXONOMY.domains, ...RIASEC_TAXONOMY.domains],
++};
+*** End Patch

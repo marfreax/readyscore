@@ -1,0 +1,52 @@
+{
+  "name": "readyscore-landing-page",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "import:questions": "node scripts/import-question-bank.mjs",
+    "audit:questions": "node scripts/audit-question-bank.mjs",
+    "typecheck": "tsc --noEmit",
+    "validate:questions": "node scripts/validate-question-bank.mjs",
+    "map:questions": "node scripts/map-question-bank.mjs",
+    "smoke:assessment": "node scripts/smoke-assessment-runtime.mjs",
+    "smoke:admin": "node scripts/smoke:admin-question-bank.mjs",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push",
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "db:validate": "prisma validate",
+    "db:format": "prisma format",
+    "riasec:publish": "tsx scripts/sync-riasec-production-lifecycle.mjs",
+    "riasec:review:apply": "node scripts/apply-riasec-human-review.mjs",
+    "riasec:manifest": "node scripts/generate-riasec-production-manifest.mjs",
+    "riasec:production:gate": "pnpm riasec:review:apply && pnpm riasec:manifest",
+    "e2e:riasec": "node scripts/e2e-riasec-runtime.mjs",
+    "riasec:gate": "node scripts/validate-riasec-production-gate.mjs",
+    "riasec:persistence:check": "tsx scripts/validate-riasec-runtime-persistence.mjs",
+    "riasec:start:diagnostic": "tsx scripts/diagnose-riasec-start-transaction.mjs",
+    "riasec:enum:reconcile": "tsx scripts/reconcile-assessment-type-enum.mjs",
+    "riasec:enum:check": "tsx scripts/reconcile-assessment-type-enum.mjs",
+    "riasec:result:check": "tsx scripts/validate-riasec-result-payload.mjs"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "prisma": "^6.19.0",
+    "tailwindcss": "latest",
+    "tsx": "^4.23.12",
+    "typescript": "latest"
+  }
+}

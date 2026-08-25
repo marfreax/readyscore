@@ -1,0 +1,19 @@
+{
+  "phase": "3.0-D.1-F.10-C.2-B/D",
+  "title": "RIASEC Production Approval Pipeline",
+  "status": "READY_FOR_HUMAN_REVIEW",
+  "candidatePopulation": 84,
+  "requiredProduction": 60,
+  "requiredPerDimension": 10,
+  "databaseMutation": "none_until_explicit_manifest_approval",
+  "nextVerification": [
+    "pnpm typecheck",
+    "pnpm build",
+    "human review export",
+    "pnpm riasec:review:apply",
+    "pnpm riasec:manifest",
+    "pnpm riasec:publish",
+    "pnpm e2e:riasec"
+  ],
+  "correction": "F.10-C.2-B/D import path fixed: app/admin/riasec-review/page.tsx now resolves components/admin correctly."
+}

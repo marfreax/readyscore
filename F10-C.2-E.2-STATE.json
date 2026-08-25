@@ -1,0 +1,26 @@
+{
+  "phase": "F.10-C.2-E.2",
+  "title": "AssessmentType PostgreSQL Enum Reconciliation",
+  "baseline": "F.10-C.2-E.1-FIXED",
+  "status": "READY_FOR_VERIFICATION",
+  "scope": [
+    "PostgreSQL AssessmentType enum"
+  ],
+  "forbidden_mutations": [
+    "QuestionVersion lifecycle",
+    "Question lifecycle",
+    "AssessmentAttempt",
+    "AssessmentAnswer",
+    "AssessmentResult"
+  ],
+  "commands": [
+    "rm -rf .next",
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm riasec:enum:check",
+    "pnpm riasec:enum:reconcile -- --apply",
+    "pnpm riasec:enum:check",
+    "pnpm riasec:start:diagnostic",
+    "pnpm e2e:riasec"
+  ]
+}

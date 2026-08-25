@@ -1,0 +1,16 @@
+{
+  "phase": "3.0-D.1-F.10-C.2",
+  "title": "Actual RIASEC Runtime Execution / E2E",
+  "status": "IMPLEMENTED",
+  "baseline": "RS-v2_18B_F10-C1_FIXED",
+  "http_runtime": true,
+  "database_assessment_runtime_mutation": true,
+  "question_bank_lifecycle_mutation": false,
+  "expected_question_count": 60,
+  "expected_per_dimension": 10,
+  "neutral_likert_value": 3,
+  "expected_dimension_score": 50,
+  "expected_coverage_percent": 100,
+  "expected_top_code": "RIA",
+  "next": "Execute pnpm e2e:riasec"
+}

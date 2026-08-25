@@ -1,0 +1,211 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+enum AssessmentType {
+  FREE
+  PREMIUM
+  RIASEC
+}
+
+enum AttemptStatus {
+  IN_PROGRESS
+  COMPLETED
+  ABANDONED
+  EXPIRED
+}
+
+enum QuestionDifficulty {
+  EASY
+  MEDIUM
+  HARD
+  UNSPECIFIED
+}
+
+enum QuestionStatus {
+  DRAFT
+  VALIDATED
+  MAPPED
+  REVIEW_REQUIRED
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+  REJECTED
+}
+
+enum MappingStatus {
+  UNMAPPED
+  PARTIAL
+  MAPPED
+  REVIEW_REQUIRED
+  APPROVED
+  REJECTED
+}
+
+model DatabaseHeartbeat {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+}
+
+model User {
+  id           String   @id
+  name         String
+  email        String   @unique
+  passwordHash String
+  role         UserRole @default(USER)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  sessions Session[]
+  attempts AssessmentAttempt[]
+
+  @@index([createdAt])
+}
+
+model Session {
+  id        String   @id
+  userId    String
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+/// Stable question identity. Versioned content lives in QuestionVersion.
+model Question {
+  id        String   @id
+  code      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  versions         QuestionVersion[]
+  attemptQuestions AttemptQuestion[]
+
+  @@index([createdAt])
+}
+
+/// Assessment-facing question version. Content is immutable after creation;
+/// lifecycle state may advance on the latest version before publication.
+model QuestionVersion {
+  id            String             @id @default(cuid())
+  questionId    String
+  version       String
+  text          String
+  domain        String
+  subdomain     String?
+  indicator     String?
+  type          String             @default("LIKERT")
+  answerType    String             @default("LIKERT_5")
+  reverseScore  Boolean            @default(false)
+  weight        Float              @default(1)
+  scale         Int[]
+  scoringKey    Int[]
+  difficulty    QuestionDifficulty @default(UNSPECIFIED)
+  status        QuestionStatus     @default(DRAFT)
+  mappingStatus MappingStatus      @default(UNMAPPED)
+  sourceFile    String?
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+
+  question         Question          @relation(fields: [questionId], references: [id], onDelete: Restrict)
+  attemptQuestions AttemptQuestion[]
+
+  @@unique([questionId, version])
+  @@index([status, mappingStatus])
+  @@index([domain, subdomain, indicator])
+  @@index([createdAt])
+  @@index([updatedAt])
+}
+
+model AssessmentAttempt {
+  id                             String         @id
+  userId                         String?
+  assessmentType                 AssessmentType
+  status                         AttemptStatus  @default(IN_PROGRESS)
+  assessmentConfigurationId      String
+  assessmentConfigurationVersion String
+  questionBankVersion            String
+  taxonomyVersion                String
+  scoringVersion                 String
+  selectionAlgorithmVersion      String
+  attemptSeed                    String
+  selectionSnapshot              Json
+  startedAt                      DateTime       @default(now())
+  completedAt                    DateTime?
+  abandonedAt                    DateTime?
+  lastActivityAt                 DateTime       @default(now())
+  createdAt                      DateTime       @default(now())
+  updatedAt                      DateTime       @updatedAt
+
+  user      User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
+  questions AttemptQuestion[]
+  answers   Answer[]
+  result    AssessmentResult?
+
+  @@index([userId, startedAt])
+  @@index([status, startedAt])
+  @@index([assessmentType, status])
+}
+
+/// Frozen question membership for a specific attempt.
+model AttemptQuestion {
+  id                String   @id @default(cuid())
+  attemptId         String
+  questionId        String
+  questionVersionId String
+  sequence          Int
+  required          Boolean  @default(true)
+  questionSnapshot  Json
+  createdAt         DateTime @default(now())
+
+  attempt         AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  question        Question          @relation(fields: [questionId], references: [id], onDelete: Restrict)
+  questionVersion QuestionVersion   @relation(fields: [questionVersionId], references: [id], onDelete: Restrict)
+  answer          Answer?
+
+  @@unique([attemptId, questionId])
+  @@unique([attemptId, sequence])
+  @@index([questionId])
+  @@index([questionVersionId])
+}
+
+model Answer {
+  id                String   @id @default(cuid())
+  attemptId         String
+  questionId        String
+  attemptQuestionId String   @unique
+  rawValue          Int
+  answeredAt        DateTime @default(now())
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+
+  attempt         AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  attemptQuestion AttemptQuestion   @relation(fields: [attemptQuestionId], references: [id], onDelete: Cascade)
+
+  @@unique([attemptId, questionId])
+  @@index([attemptId, answeredAt])
+}
+
+/// Persisted immutable result snapshot for a completed attempt.
+model AssessmentResult {
+  id        String   @id @default(cuid())
+  attemptId String   @unique
+  result    Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  attempt AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+}

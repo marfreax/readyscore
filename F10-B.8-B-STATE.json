@@ -1,0 +1,10 @@
+{
+  "phase": "3.0-D.1-F.10-B.8-B",
+  "status": "INTEGRATED",
+  "candidate_population": 84,
+  "source_target_population": 60,
+  "source_reserve_population": 24,
+  "production_approval": false,
+  "database_mutation": false,
+  "next": "F.10-B.9"
+}

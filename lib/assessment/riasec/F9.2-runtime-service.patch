@@ -1,0 +1,25 @@
+*** Begin Patch
+*** Update File: lib/assessment/runtime-service.ts
+@@
+-import { calculateResult } from "./scoring-engine";
++import { calculateRuntimeAssessmentResult } from "./riasec/runtime-dispatch";
+@@
+-    result = calculateResult(
++    result = calculateRuntimeAssessmentResult(
+       questions,
+       answers,
+       attempt.attempt.assessmentType,
+       {
+         attemptId: id,
++        assessmentConfigurationVersion:
++          attempt.attempt.assessmentConfigurationVersion,
+         questionBankVersion: attempt.attempt.questionBankVersion,
+         taxonomyVersion: String(
+           (attempt.raw.selectionSnapshot as Record<string, unknown>).taxonomyVersion ??
+             "TAXONOMY_V1",
+         ),
+         scoringVersion: attempt.attempt.scoringVersion,
+         completedAt: new Date().toISOString(),
+       },
+     );
+*** End Patch

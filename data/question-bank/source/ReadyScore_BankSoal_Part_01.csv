@@ -1,0 +1,26 @@
+ID,Domain,Pertanyaan,Skor,Reverse
+RS-0001,Motivasi,Saya memiliki tujuan yang jelas mengapa ingin melanjutkan pendidikan.,1-2-3-4-5,Tidak
+RS-0002,Motivasi,Saya tetap berusaha walaupun nilai saya belum sesuai harapan.,1-2-3-4-5,Tidak
+RS-0003,Motivasi,Saya mudah kehilangan semangat ketika menghadapi pelajaran yang sulit.,5-4-3-2-1,Ya
+RS-0004,Motivasi,Saya menikmati proses belajar hal-hal baru.,1-2-3-4-5,Tidak
+RS-0005,Motivasi,Saya belajar hanya jika ada ujian.,5-4-3-2-1,Ya
+RS-0006,Motivasi,Saya mencari informasi tambahan di luar materi yang diberikan guru.,1-2-3-4-5,Tidak
+RS-0007,Motivasi,Saya memiliki target akademik yang ingin dicapai setiap semester.,1-2-3-4-5,Tidak
+RS-0008,Motivasi,Saya merasa belajar tidak akan banyak mengubah masa depan saya.,5-4-3-2-1,Ya
+RS-0009,Motivasi,Saya terdorong untuk terus meningkatkan kemampuan diri.,1-2-3-4-5,Tidak
+RS-0010,Motivasi,Saya sering berhenti mencoba ketika mengalami kegagalan.,5-4-3-2-1,Ya
+RS-0011,Disiplin,Saya mengerjakan tugas sebelum batas waktu.,1-2-3-4-5,Tidak
+RS-0012,Disiplin,Saya sering menunda pekerjaan sampai saat terakhir.,5-4-3-2-1,Ya
+RS-0013,Disiplin,Saya memiliki jadwal belajar yang saya usahakan untuk dipatuhi.,1-2-3-4-5,Tidak
+RS-0014,Disiplin,Saya mudah terdistraksi oleh media sosial ketika belajar.,5-4-3-2-1,Ya
+RS-0015,Disiplin,Saya mampu menyelesaikan tugas tanpa harus diingatkan.,1-2-3-4-5,Tidak
+RS-0016,Disiplin,Saya sering terlambat mengumpulkan tugas.,5-4-3-2-1,Ya
+RS-0017,Disiplin,Saya dapat mengatur waktu antara belajar dan hiburan.,1-2-3-4-5,Tidak
+RS-0018,Disiplin,Saya sering lupa terhadap komitmen yang telah saya buat.,5-4-3-2-1,Ya
+RS-0019,Disiplin,Saya tetap menjalankan rencana belajar meskipun sedang tidak bersemangat.,1-2-3-4-5,Tidak
+RS-0020,Disiplin,Saya mudah mengabaikan tanggung jawab belajar.,5-4-3-2-1,Ya
+RS-0021,Kemandirian,Saya mampu mencari solusi sendiri sebelum meminta bantuan orang lain.,1-2-3-4-5,Tidak
+RS-0022,Kemandirian,Saya bergantung kepada orang lain untuk menyelesaikan sebagian besar tugas saya.,5-4-3-2-1,Ya
+RS-0023,Kemandirian,Saya berinisiatif mempelajari sesuatu tanpa harus diminta.,1-2-3-4-5,Tidak
+RS-0024,Kemandirian,Saya menunggu orang lain mengambil keputusan untuk saya.,5-4-3-2-1,Ya
+RS-0025,Kemandirian,Saya percaya diri mengambil keputusan setelah mempertimbangkan informasi yang ada.,1-2-3-4-5,Tidak

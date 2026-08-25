@@ -1,0 +1,201 @@
+ID,Domain,Subdomain,Indikator,Pertanyaan,Tipe,Reverse Score,Bobot,Skala,Kunci Scoring,Difficulty,Status
+RS-1601,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1602,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1603,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1604,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1605,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1606,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1607,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1608,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1609,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1610,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1611,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1612,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1613,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1614,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1615,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1616,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1617,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1618,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1619,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1620,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1621,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1622,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1623,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1624,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1625,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1626,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1627,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1628,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1629,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1630,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1631,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1632,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1633,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1634,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1635,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1636,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1637,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1638,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1639,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1640,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1641,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1642,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1643,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1644,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1645,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1646,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1647,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1648,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1649,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1650,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1651,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1652,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1653,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1654,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1655,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1656,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1657,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1658,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1659,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1660,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1661,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1662,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1663,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1664,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1665,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1666,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1667,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1668,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1669,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1670,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1671,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1672,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1673,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1674,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1675,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1676,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1677,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1678,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1679,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1680,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1681,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1682,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1683,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1684,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1685,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1686,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1687,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1688,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1689,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1690,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1691,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1692,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1693,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1694,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1695,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1696,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1697,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1698,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1699,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1700,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1701,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1702,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1703,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1704,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1705,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1706,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1707,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1708,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1709,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1710,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1711,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1712,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1713,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1714,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1715,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1716,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1717,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1718,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1719,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1720,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1721,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1722,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1723,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1724,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1725,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1726,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1727,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1728,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1729,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1730,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1731,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1732,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1733,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1734,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1735,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1736,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1737,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1738,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1739,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1740,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1741,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1742,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1743,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1744,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1745,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1746,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1747,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1748,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1749,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1750,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1751,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1752,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1753,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1754,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1755,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1756,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1757,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1758,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1759,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1760,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1761,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1762,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1763,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1764,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1765,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1766,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1767,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1768,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1769,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1770,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1771,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1772,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1773,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1774,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1775,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1776,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1777,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1778,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1779,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1780,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1781,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1782,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1783,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1784,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1785,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1786,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1787,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1788,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1789,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1790,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1791,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1792,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1793,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1794,Disiplin,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1795,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1796,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1797,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1798,Komunikasi,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1799,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai tantangan yang saya hadapi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1800,Emotional Resilience,,,Saya masih memiliki kebiasaan yang mengurangi performa saya pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft

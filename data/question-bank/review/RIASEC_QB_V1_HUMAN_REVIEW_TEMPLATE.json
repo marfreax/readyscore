@@ -1,0 +1,513 @@
+{
+  "schemaVersion": "RIASEC_HUMAN_REVIEW_DECISION_V1",
+  "assessmentType": "riasec",
+  "candidateCount": 84,
+  "requiredApprovedCount": 60,
+  "requiredPerDimension": 10,
+  "decisions": [
+    {
+      "id": "RIASEC-R-001",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-002",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-003",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-004",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-005",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-006",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-007",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-008",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-009",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-010",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-001",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-002",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-003",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-004",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-005",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-006",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-007",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-008",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-009",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-010",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-001",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-002",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-003",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-004",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-005",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-006",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-007",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-008",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-009",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-010",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-001",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-002",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-003",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-004",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-005",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-006",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-007",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-008",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-009",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-010",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-001",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-002",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-003",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-004",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-005",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-006",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-007",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-008",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-009",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-010",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-001",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-002",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-003",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-004",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-005",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-006",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-007",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-008",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-009",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-010",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-R001",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-R002",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-R003",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-R-R004",
+      "domain": "R",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-R001",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-R002",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-R003",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-I-R004",
+      "domain": "I",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-R001",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-R002",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-R003",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-A-R004",
+      "domain": "A",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-R001",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-R002",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-R003",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-S-R004",
+      "domain": "S",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-R001",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-R002",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-R003",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-E-R004",
+      "domain": "E",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-R001",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-R002",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-R003",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    },
+    {
+      "id": "RIASEC-C-R004",
+      "domain": "C",
+      "decision": "",
+      "reviewerNote": ""
+    }
+  ]
+}

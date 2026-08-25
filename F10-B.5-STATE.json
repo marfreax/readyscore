@@ -1,0 +1,18 @@
+{
+  "phase": "3.0-D.1-F.10-B.5",
+  "population": 84,
+  "target": 60,
+  "reserve": 24,
+  "per_dimension": {
+    "R": 14,
+    "I": 14,
+    "A": 14,
+    "S": 14,
+    "E": 14,
+    "C": 14
+  },
+  "database_mutation": false,
+  "approval": "NOT_APPROVED",
+  "publication": "NOT_PUBLISHED",
+  "review_status": "PENDING_REVIEW"
+}

@@ -1,0 +1,150 @@
+{
+  "version": "RIASEC_TAXONOMY_V1",
+  "testType": "RIASEC",
+  "domains": [
+    {
+      "code": "R",
+      "name": "Realistic",
+      "subdomains": [
+        {
+          "code": "R-01",
+          "name": "Realistic",
+          "indicators": [
+            {
+              "code": "hands_on"
+            },
+            {
+              "code": "tools_equipment"
+            },
+            {
+              "code": "practical_problem_solving"
+            },
+            {
+              "code": "physical_environment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "I",
+      "name": "Investigative",
+      "subdomains": [
+        {
+          "code": "I-01",
+          "name": "Investigative",
+          "indicators": [
+            {
+              "code": "curiosity"
+            },
+            {
+              "code": "analysis"
+            },
+            {
+              "code": "investigation"
+            },
+            {
+              "code": "problem_solving"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "A",
+      "name": "Artistic",
+      "subdomains": [
+        {
+          "code": "A-01",
+          "name": "Artistic",
+          "indicators": [
+            {
+              "code": "creativity"
+            },
+            {
+              "code": "expression"
+            },
+            {
+              "code": "originality"
+            },
+            {
+              "code": "aesthetics"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "S",
+      "name": "Social",
+      "subdomains": [
+        {
+          "code": "S-01",
+          "name": "Social",
+          "indicators": [
+            {
+              "code": "helping"
+            },
+            {
+              "code": "teaching"
+            },
+            {
+              "code": "communication"
+            },
+            {
+              "code": "development"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "E",
+      "name": "Enterprising",
+      "subdomains": [
+        {
+          "code": "E-01",
+          "name": "Enterprising",
+          "indicators": [
+            {
+              "code": "influence"
+            },
+            {
+              "code": "leadership"
+            },
+            {
+              "code": "initiative"
+            },
+            {
+              "code": "persuasion"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "C",
+      "name": "Conventional",
+      "subdomains": [
+        {
+          "code": "C-01",
+          "name": "Conventional",
+          "indicators": [
+            {
+              "code": "organization"
+            },
+            {
+              "code": "structure"
+            },
+            {
+              "code": "information_order"
+            },
+            {
+              "code": "accuracy"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

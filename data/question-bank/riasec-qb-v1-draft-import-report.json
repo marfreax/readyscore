@@ -1,0 +1,35 @@
+{
+  "importedAt": "2026-08-24T04:35:50.379Z",
+  "total": 84,
+  "target": 60,
+  "reserve": 24,
+  "dimensions": {
+    "R": {
+      "target": 10,
+      "reserve": 4
+    },
+    "I": {
+      "target": 10,
+      "reserve": 4
+    },
+    "A": {
+      "target": 10,
+      "reserve": 4
+    },
+    "S": {
+      "target": 10,
+      "reserve": 4
+    },
+    "E": {
+      "target": 10,
+      "reserve": 4
+    },
+    "C": {
+      "target": 10,
+      "reserve": 4
+    }
+  },
+  "status": "DRAFT",
+  "mappingStatus": "MAPPED",
+  "sourceFile": "RIASEC_QB_V1_FULL_84_CANDIDATE.csv"
+}

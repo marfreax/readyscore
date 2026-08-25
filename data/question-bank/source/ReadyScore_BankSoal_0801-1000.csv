@@ -1,0 +1,201 @@
+ID,Domain,Subdomain,Indikator,Pertanyaan,Tipe,Reverse Score,Bobot,Skala,Kunci Scoring,Difficulty,Status
+RS-0801,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0802,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0803,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0804,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0805,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0806,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0807,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0808,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0809,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0810,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0811,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0812,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0813,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0814,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0815,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0816,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0817,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0818,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0819,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0820,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0821,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0822,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0823,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0824,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0825,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0826,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0827,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0828,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0829,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0830,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0831,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0832,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0833,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0834,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0835,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0836,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0837,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0838,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0839,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0840,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0841,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0842,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0843,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0844,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0845,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0846,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0847,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0848,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0849,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0850,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0851,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0852,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0853,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0854,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0855,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0856,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0857,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0858,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0859,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0860,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0861,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0862,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0863,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0864,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0865,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0866,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0867,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0868,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0869,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0870,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0871,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0872,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0873,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0874,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0875,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0876,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0877,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0878,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0879,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0880,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0881,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0882,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0883,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0884,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0885,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0886,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0887,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0888,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0889,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0890,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0891,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0892,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0893,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0894,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0895,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0896,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0897,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0898,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0899,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0900,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0901,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0902,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0903,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0904,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0905,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0906,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0907,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0908,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0909,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0910,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0911,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0912,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0913,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0914,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0915,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0916,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0917,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0918,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0919,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0920,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0921,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0922,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0923,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0924,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0925,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0926,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0927,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0928,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0929,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0930,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0931,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0932,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0933,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0934,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0935,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0936,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0937,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0938,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0939,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0940,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0941,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0942,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0943,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0944,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0945,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0946,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0947,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0948,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0949,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0950,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0951,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0952,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0953,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0954,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0955,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0956,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0957,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0958,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0959,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0960,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0961,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0962,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0963,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0964,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0965,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0966,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0967,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0968,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0969,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0970,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0971,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0972,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0973,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0974,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0975,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0976,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0977,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0978,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0979,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0980,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0981,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0982,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0983,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0984,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0985,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0986,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0987,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0988,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0989,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0990,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0991,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0992,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0993,Motivasi,,,"Saya secara konsisten menerapkan kemampuan motivasi dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0994,Disiplin,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0995,Kemandirian,,,"Saya secara konsisten menerapkan kemampuan kemandirian dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0996,Critical Thinking,,,"Saya secara konsisten menerapkan kemampuan critical thinking dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0997,Problem Solving,,,"Saya secara konsisten menerapkan kemampuan problem solving dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0998,Komunikasi,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0999,Leadership,,,"Saya secara konsisten menerapkan kemampuan leadership dalam kegiatan belajar, organisasi, atau kehidupan sehari-hari.",Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1000,Emotional Resilience,,,Saya masih menunjukkan perilaku yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft

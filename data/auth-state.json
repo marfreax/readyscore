@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "users": [
+    {
+      "id": "usr_29325c23c1b3dcec58bb45cb",
+      "name": "Umar Ready",
+      "email": "umar@yopmail.com",
+      "passwordHash": "scrypt$c9c1a92344e533dac78bfa694a82bbc4$c8534386bada23d2a7033cb49e78e665eb7aeb2772c69625129f55124bace033848b098962b9bd2cb195600678b67e5c0a7f6a9d909323a5ea581e9af8be25af",
+      "role": "USER",
+      "createdAt": "2026-08-22T13:47:11.515Z",
+      "updatedAt": "2026-08-22T13:49:47.153Z"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "ses_9c64d842d35ab15d0afaa25567af62320f32c9d8044ce8d1",
+      "userId": "usr_29325c23c1b3dcec58bb45cb",
+      "createdAt": "2026-08-22T13:47:11.553Z",
+      "expiresAt": "2026-08-29T13:47:11.553Z"
+    }
+  ]
+}

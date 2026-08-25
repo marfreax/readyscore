@@ -1,0 +1,14 @@
+{
+  "phase": "F.10-C.2-F",
+  "title": "RIASEC Result Payload Reconciliation",
+  "baseline": "AppRS-v2_18",
+  "status": "CORRECTED_SOURCE_ALIGNED",
+  "mutation": "none",
+  "next_commands": [
+    "rm -rf .next",
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm riasec:result:check",
+    "pnpm e2e:riasec"
+  ]
+}

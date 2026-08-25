@@ -1,0 +1,201 @@
+ID,Domain,Subdomain,Indikator,Pertanyaan,Tipe,Reverse Score,Bobot,Skala,Kunci Scoring,Difficulty,Status
+RS-0401,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0402,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0403,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0404,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0405,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0406,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0407,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0408,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0409,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0410,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0411,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0412,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0413,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0414,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0415,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0416,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0417,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0418,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0419,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0420,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0421,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0422,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0423,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0424,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0425,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0426,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0427,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0428,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0429,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0430,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0431,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0432,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0433,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0434,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0435,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0436,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0437,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0438,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0439,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0440,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0441,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0442,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0443,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0444,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0445,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0446,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0447,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0448,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0449,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0450,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0451,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0452,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0453,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0454,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0455,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0456,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0457,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0458,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0459,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0460,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0461,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0462,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0463,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0464,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0465,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0466,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0467,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0468,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0469,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0470,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0471,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0472,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0473,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0474,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0475,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0476,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0477,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0478,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0479,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0480,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0481,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0482,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0483,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0484,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0485,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0486,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0487,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0488,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0489,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0490,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0491,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0492,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0493,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0494,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0495,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0496,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0497,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0498,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0499,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0500,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0501,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0502,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0503,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0504,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0505,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0506,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0507,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0508,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0509,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0510,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0511,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0512,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0513,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0514,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0515,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0516,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0517,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0518,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0519,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0520,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0521,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0522,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0523,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0524,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0525,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0526,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0527,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0528,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0529,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0530,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0531,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0532,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0533,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0534,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0535,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0536,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0537,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0538,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0539,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0540,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0541,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0542,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0543,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0544,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0545,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0546,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0547,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0548,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0549,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0550,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0551,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0552,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0553,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0554,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0555,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0556,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0557,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0558,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0559,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0560,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0561,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0562,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0563,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0564,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0565,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0566,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0567,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0568,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0569,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0570,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0571,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0572,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0573,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0574,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0575,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0576,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0577,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0578,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0579,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0580,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0581,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0582,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0583,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0584,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0585,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0586,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0587,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0588,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0589,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0590,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0591,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0592,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0593,Motivasi,,,Saya menunjukkan perilaku positif terkait motivasi secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0594,Disiplin,,,"Dalam aspek disiplin, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0595,Kemandirian,,,Saya menunjukkan perilaku positif terkait kemandirian secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0596,Critical Thinking,,,Saya menunjukkan perilaku positif terkait critical thinking secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0597,Komunikasi,,,"Dalam aspek komunikasi, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-0598,Leadership,,,Saya menunjukkan perilaku positif terkait leadership secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0599,Problem Solving,,,Saya menunjukkan perilaku positif terkait problem solving secara konsisten dalam kegiatan belajar maupun organisasi.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-0600,Emotional Resilience,,,"Dalam aspek emotional resilience, saya sering menunjukkan kebiasaan yang menghambat perkembangan diri.",Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft

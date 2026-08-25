@@ -1,0 +1,533 @@
+{
+  "version": "TAXONOMY_V1",
+  "domains": [
+    {
+      "code": "MOT",
+      "name": "Motivasi",
+      "subdomains": [
+        {
+          "code": "MOT-01",
+          "name": "Purpose & Meaning",
+          "indicators": [
+            {
+              "code": "MOT-01-01"
+            },
+            {
+              "code": "MOT-01-02"
+            },
+            {
+              "code": "MOT-01-03"
+            }
+          ]
+        },
+        {
+          "code": "MOT-02",
+          "name": "Achievement Drive",
+          "indicators": [
+            {
+              "code": "MOT-02-01"
+            },
+            {
+              "code": "MOT-02-02"
+            },
+            {
+              "code": "MOT-02-03"
+            }
+          ]
+        },
+        {
+          "code": "MOT-03",
+          "name": "Learning Drive",
+          "indicators": [
+            {
+              "code": "MOT-03-01"
+            },
+            {
+              "code": "MOT-03-02"
+            },
+            {
+              "code": "MOT-03-03"
+            }
+          ]
+        },
+        {
+          "code": "MOT-04",
+          "name": "Persistence of Motivation",
+          "indicators": [
+            {
+              "code": "MOT-04-01"
+            },
+            {
+              "code": "MOT-04-02"
+            },
+            {
+              "code": "MOT-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "DIS",
+      "name": "Disiplin",
+      "subdomains": [
+        {
+          "code": "DIS-01",
+          "name": "Consistency",
+          "indicators": [
+            {
+              "code": "DIS-01-01"
+            },
+            {
+              "code": "DIS-01-02"
+            },
+            {
+              "code": "DIS-01-03"
+            }
+          ]
+        },
+        {
+          "code": "DIS-02",
+          "name": "Time & Priority Management",
+          "indicators": [
+            {
+              "code": "DIS-02-01"
+            },
+            {
+              "code": "DIS-02-02"
+            },
+            {
+              "code": "DIS-02-03"
+            }
+          ]
+        },
+        {
+          "code": "DIS-03",
+          "name": "Self-Control",
+          "indicators": [
+            {
+              "code": "DIS-03-01"
+            },
+            {
+              "code": "DIS-03-02"
+            },
+            {
+              "code": "DIS-03-03"
+            }
+          ]
+        },
+        {
+          "code": "DIS-04",
+          "name": "Responsibility",
+          "indicators": [
+            {
+              "code": "DIS-04-01"
+            },
+            {
+              "code": "DIS-04-02"
+            },
+            {
+              "code": "DIS-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "IND",
+      "name": "Kemandirian",
+      "subdomains": [
+        {
+          "code": "IND-01",
+          "name": "Self-Management",
+          "indicators": [
+            {
+              "code": "IND-01-01"
+            },
+            {
+              "code": "IND-01-02"
+            },
+            {
+              "code": "IND-01-03"
+            }
+          ]
+        },
+        {
+          "code": "IND-02",
+          "name": "Decision Independence",
+          "indicators": [
+            {
+              "code": "IND-02-01"
+            },
+            {
+              "code": "IND-02-02"
+            },
+            {
+              "code": "IND-02-03"
+            }
+          ]
+        },
+        {
+          "code": "IND-03",
+          "name": "Initiative",
+          "indicators": [
+            {
+              "code": "IND-03-01"
+            },
+            {
+              "code": "IND-03-02"
+            },
+            {
+              "code": "IND-03-03"
+            }
+          ]
+        },
+        {
+          "code": "IND-04",
+          "name": "Resourcefulness",
+          "indicators": [
+            {
+              "code": "IND-04-01"
+            },
+            {
+              "code": "IND-04-02"
+            },
+            {
+              "code": "IND-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "CRT",
+      "name": "Berpikir Kritis",
+      "subdomains": [
+        {
+          "code": "CRT-01",
+          "name": "Information Evaluation",
+          "indicators": [
+            {
+              "code": "CRT-01-01"
+            },
+            {
+              "code": "CRT-01-02"
+            },
+            {
+              "code": "CRT-01-03"
+            }
+          ]
+        },
+        {
+          "code": "CRT-02",
+          "name": "Reasoning",
+          "indicators": [
+            {
+              "code": "CRT-02-01"
+            },
+            {
+              "code": "CRT-02-02"
+            },
+            {
+              "code": "CRT-02-03"
+            }
+          ]
+        },
+        {
+          "code": "CRT-03",
+          "name": "Assumption & Bias Awareness",
+          "indicators": [
+            {
+              "code": "CRT-03-01"
+            },
+            {
+              "code": "CRT-03-02"
+            },
+            {
+              "code": "CRT-03-03"
+            }
+          ]
+        },
+        {
+          "code": "CRT-04",
+          "name": "Judgment",
+          "indicators": [
+            {
+              "code": "CRT-04-01"
+            },
+            {
+              "code": "CRT-04-02"
+            },
+            {
+              "code": "CRT-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "PRS",
+      "name": "Pemecahan Masalah",
+      "subdomains": [
+        {
+          "code": "PRS-01",
+          "name": "Problem Definition",
+          "indicators": [
+            {
+              "code": "PRS-01-01"
+            },
+            {
+              "code": "PRS-01-02"
+            },
+            {
+              "code": "PRS-01-03"
+            }
+          ]
+        },
+        {
+          "code": "PRS-02",
+          "name": "Solution Generation",
+          "indicators": [
+            {
+              "code": "PRS-02-01"
+            },
+            {
+              "code": "PRS-02-02"
+            },
+            {
+              "code": "PRS-02-03"
+            }
+          ]
+        },
+        {
+          "code": "PRS-03",
+          "name": "Decision & Execution",
+          "indicators": [
+            {
+              "code": "PRS-03-01"
+            },
+            {
+              "code": "PRS-03-02"
+            },
+            {
+              "code": "PRS-03-03"
+            }
+          ]
+        },
+        {
+          "code": "PRS-04",
+          "name": "Evaluation & Adaptation",
+          "indicators": [
+            {
+              "code": "PRS-04-01"
+            },
+            {
+              "code": "PRS-04-02"
+            },
+            {
+              "code": "PRS-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "COM",
+      "name": "Komunikasi",
+      "subdomains": [
+        {
+          "code": "COM-01",
+          "name": "Clarity",
+          "indicators": [
+            {
+              "code": "COM-01-01"
+            },
+            {
+              "code": "COM-01-02"
+            },
+            {
+              "code": "COM-01-03"
+            }
+          ]
+        },
+        {
+          "code": "COM-02",
+          "name": "Listening & Understanding",
+          "indicators": [
+            {
+              "code": "COM-02-01"
+            },
+            {
+              "code": "COM-02-02"
+            },
+            {
+              "code": "COM-02-03"
+            }
+          ]
+        },
+        {
+          "code": "COM-03",
+          "name": "Adaptability",
+          "indicators": [
+            {
+              "code": "COM-03-01"
+            },
+            {
+              "code": "COM-03-02"
+            },
+            {
+              "code": "COM-03-03"
+            }
+          ]
+        },
+        {
+          "code": "COM-04",
+          "name": "Interpersonal Communication",
+          "indicators": [
+            {
+              "code": "COM-04-01"
+            },
+            {
+              "code": "COM-04-02"
+            },
+            {
+              "code": "COM-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "LED",
+      "name": "Kepemimpinan",
+      "subdomains": [
+        {
+          "code": "LED-01",
+          "name": "Initiative & Ownership",
+          "indicators": [
+            {
+              "code": "LED-01-01"
+            },
+            {
+              "code": "LED-01-02"
+            },
+            {
+              "code": "LED-01-03"
+            }
+          ]
+        },
+        {
+          "code": "LED-02",
+          "name": "Influence",
+          "indicators": [
+            {
+              "code": "LED-02-01"
+            },
+            {
+              "code": "LED-02-02"
+            },
+            {
+              "code": "LED-02-03"
+            }
+          ]
+        },
+        {
+          "code": "LED-03",
+          "name": "Collaboration",
+          "indicators": [
+            {
+              "code": "LED-03-01"
+            },
+            {
+              "code": "LED-03-02"
+            },
+            {
+              "code": "LED-03-03"
+            }
+          ]
+        },
+        {
+          "code": "LED-04",
+          "name": "Leadership Judgment",
+          "indicators": [
+            {
+              "code": "LED-04-01"
+            },
+            {
+              "code": "LED-04-02"
+            },
+            {
+              "code": "LED-04-03"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "code": "ERS",
+      "name": "Ketahanan Emosional",
+      "subdomains": [
+        {
+          "code": "ERS-01",
+          "name": "Emotional Awareness",
+          "indicators": [
+            {
+              "code": "ERS-01-01"
+            },
+            {
+              "code": "ERS-01-02"
+            },
+            {
+              "code": "ERS-01-03"
+            }
+          ]
+        },
+        {
+          "code": "ERS-02",
+          "name": "Emotional Regulation",
+          "indicators": [
+            {
+              "code": "ERS-02-01"
+            },
+            {
+              "code": "ERS-02-02"
+            },
+            {
+              "code": "ERS-02-03"
+            }
+          ]
+        },
+        {
+          "code": "ERS-03",
+          "name": "Adaptability",
+          "indicators": [
+            {
+              "code": "ERS-03-01"
+            },
+            {
+              "code": "ERS-03-02"
+            },
+            {
+              "code": "ERS-03-03"
+            }
+          ]
+        },
+        {
+          "code": "ERS-04",
+          "name": "Resilience",
+          "indicators": [
+            {
+              "code": "ERS-04-01"
+            },
+            {
+              "code": "ERS-04-02"
+            },
+            {
+              "code": "ERS-04-03"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

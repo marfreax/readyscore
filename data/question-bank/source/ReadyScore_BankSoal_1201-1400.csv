@@ -1,0 +1,201 @@
+ID,Domain,Subdomain,Indikator,Pertanyaan,Tipe,Reverse Score,Bobot,Skala,Kunci Scoring,Difficulty,Status
+RS-1201,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1202,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1203,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1204,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1205,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1206,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1207,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1208,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1209,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1210,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1211,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1212,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1213,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1214,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1215,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1216,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1217,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1218,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1219,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1220,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1221,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1222,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1223,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1224,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1225,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1226,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1227,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1228,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1229,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1230,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1231,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1232,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1233,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1234,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1235,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1236,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1237,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1238,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1239,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1240,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1241,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1242,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1243,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1244,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1245,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1246,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1247,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1248,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1249,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1250,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1251,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1252,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1253,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1254,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1255,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1256,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1257,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1258,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1259,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1260,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1261,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1262,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1263,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1264,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1265,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1266,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1267,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1268,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1269,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1270,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1271,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1272,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1273,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1274,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1275,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1276,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1277,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1278,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1279,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1280,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1281,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1282,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1283,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1284,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1285,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1286,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1287,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1288,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1289,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1290,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1291,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1292,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1293,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1294,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1295,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1296,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1297,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1298,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1299,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1300,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1301,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1302,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1303,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1304,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1305,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1306,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1307,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1308,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1309,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1310,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1311,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1312,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1313,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1314,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1315,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1316,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1317,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1318,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1319,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1320,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1321,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1322,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1323,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1324,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1325,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1326,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1327,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1328,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1329,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1330,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1331,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1332,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1333,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1334,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1335,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1336,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1337,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1338,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1339,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1340,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1341,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1342,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1343,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1344,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1345,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1346,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1347,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1348,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1349,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1350,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1351,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1352,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1353,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1354,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1355,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1356,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1357,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1358,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1359,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1360,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1361,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1362,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1363,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1364,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1365,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1366,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1367,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1368,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1369,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1370,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1371,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1372,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1373,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1374,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1375,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1376,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1377,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1378,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1379,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1380,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1381,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1382,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1383,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1384,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1385,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1386,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1387,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1388,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1389,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1390,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1391,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1392,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1393,Motivasi,,,Saya mampu menunjukkan kemampuan motivasi secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1394,Disiplin,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek disiplin.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1395,Kemandirian,,,Saya mampu menunjukkan kemampuan kemandirian secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1396,Critical Thinking,,,Saya mampu menunjukkan kemampuan critical thinking secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1397,Problem Solving,,,Saya mampu menunjukkan kemampuan problem solving secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1398,Komunikasi,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek komunikasi.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft
+RS-1399,Leadership,,,Saya mampu menunjukkan kemampuan leadership secara konsisten dalam berbagai aktivitas.,Positive,Tidak,1.0,Likert 1-5,1-2-3-4-5,Medium,Draft
+RS-1400,Emotional Resilience,,,Saya masih menunjukkan kebiasaan yang menghambat perkembangan pada aspek emotional resilience.,Negative,Ya,1.0,Likert 1-5,5-4-3-2-1,Medium,Draft

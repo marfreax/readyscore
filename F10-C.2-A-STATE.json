@@ -1,0 +1,15 @@
+{
+  "phase": "3.0-D.1-F.10-C.2-A",
+  "title": "RIASEC Production Lifecycle Synchronization",
+  "baseline": "F.10-C.1-FIXED",
+  "mutation_scope": "explicit manifest 60 IDs only",
+  "requires_explicit_human_review": true,
+  "required_count": 60,
+  "required_per_dimension": 10,
+  "precondition": "APPROVED_FOR_PUBLICATION manifest",
+  "transition": [
+    "MAPPED -> APPROVED",
+    "APPROVED -> PUBLISHED"
+  ],
+  "next": "F.10-C.2 Actual Runtime E2E"
+}

@@ -1,0 +1,9 @@
+{
+  "phase": "3.0-D.1-F.10-B.8-A.1",
+  "status": "INTEGRATED",
+  "baseline": "RS-2_10B.zip",
+  "candidate_population": 84,
+  "manifest_empty": true,
+  "database_mutation": false,
+  "next": "F.10-B.8-B"
+}

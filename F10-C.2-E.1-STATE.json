@@ -1,0 +1,15 @@
+{
+  "phase": "F.10-C.2-E.1",
+  "title": "Runtime Start Transaction Diagnostics & Reconciliation",
+  "baseline": "F.10-C.2-E4",
+  "status": "READY_FOR_VERIFICATION",
+  "mutation": "none",
+  "next_commands": [
+    "rm -rf .next",
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm riasec:start:diagnostic",
+    "pnpm e2e:riasec"
+  ],
+  "correction": "Diagnostic route import paths and Prisma relation query corrected; CLI now exercises the exact createAttempt transaction shape and always rolls back."
+}

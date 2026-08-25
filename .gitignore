@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Environment / secrets
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# macOS Finder / metadata
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Local archives / ZIP workspace
+zip/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+
+# Local PostgreSQL database backups
+*.backup
+
+# ZIP delivery / historical artifacts
+*.zip
