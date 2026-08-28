@@ -40,3 +40,8 @@ yarn-debug.log*
 
 # ZIP delivery / historical artifacts
 *.zip
+
+# SSH private keys
+*.pem
+# SSH private keys
+*.pem
