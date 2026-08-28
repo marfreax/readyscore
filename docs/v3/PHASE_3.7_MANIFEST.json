@@ -1,0 +1,17 @@
+{
+  "phase": "3.7",
+  "title": "Study Direction Engine \u2014 Architectural / Specification Reconciliation",
+  "baseline": "F.10-C.2-F + 3.1 + 3.2 + 3.3 + 3.4 + 3.5 + 3.6",
+  "implementation_status": "DESIGN_RECONCILIATION",
+  "output_folder": "phase-3.7-output",
+  "source_zip": "AppRS-v3.6(1).zip",
+  "docs": [
+    "ReadyScore_v3_Phase_3.7_Architectural_Specification_Reconciliation.md",
+    "ReadyScore_v3_Phase_3.7_Decision_Log.md",
+    "ReadyScore_v3_Phase_3.7_Direction_Contract.md",
+    "ReadyScore_v3_Phase_3.7_Regression_Matrix.md",
+    "ReadyScore_v3_Phase_3.7_Source_Audit.md"
+  ],
+  "source_changes": false,
+  "database_migration": false
+}

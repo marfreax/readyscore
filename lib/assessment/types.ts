@@ -30,9 +30,54 @@ export interface AssessmentAnswer { attemptId:string; questionId:string; rawValu
 export interface IndicatorScore { domainId:string; subdomainId:string; indicatorId:string; score:number; questionCount:number; weightTotal:number; }
 export interface SubdomainScore { domainId:string; subdomainId:string; score:number; scoredIndicatorCount:number; totalIndicatorCount:number; sufficient:boolean; }
 export interface DomainScore { domainId:string; score:number; questionCount:number; weightTotal:number; scoredSubdomainCount:number; totalSubdomainCount:number; sufficient:boolean; }
+import type { RiasecPersistableResult } from "./riasec/result-contract";
+
 export interface AssessmentResult {
   attemptId:string; assessmentType:string; assessmentConfigurationVersion:string; questionBankVersion:string; taxonomyVersion:string; scoringVersion:string;
   overallScore:number; band:ScoreBand; status:ResultStatus; domainScores:DomainScore[]; subdomainScores:SubdomainScore[]; indicatorScores:IndicatorScore[];
   coverage:Array<{domainId:string;answeredIndicators:number;totalIndicators:number;percentage:number}>;
   dataSufficiency:{scoredDomains:number;totalDomains:number;requiredDomains:number;percentage:number}; completedAt:string;
+  riasec?: RiasecPersistableResult;
+  eq?: {
+    contractVersion: "EQ_RESULT_V1";
+    measurement: {
+      testType: "EQ";
+      scoringVersion: "EQ_SCORE_V1";
+      dimensionScores: Array<{ dimension: "EMOTION_AWARENESS"|"EMOTION_REGULATION"|"EMPATHY_SOCIAL_AWARENESS"|"RELATIONSHIP_SOCIAL_RESPONSE"; score: number; answeredCount: number; questionCount: number }>;
+      overallScore: number;
+    };
+  };
+  cognitive?: {
+    contractVersion: "COGNITIVE_RESULT_V1";
+    measurement: {
+      testType: "COGNITIVE";
+      scoringVersion: "COGNITIVE_SCORE_V1";
+      dimensionScores: Array<{
+        dimension: "VERBAL_REASONING"|"NUMERICAL_REASONING"|"LOGICAL_REASONING"|"ABSTRACT_REASONING";
+        score: number;
+        answeredCount: number;
+        questionCount: number;
+      }>;
+      overallScore: number;
+    };
+  };
+  disc?: {
+    contractVersion: "DISC_RESULT_V1";
+    measurement: {
+      testType: "DISC";
+      scoringVersion: "DISC_SCORE_V1";
+      primaryPattern: "D"|"I"|"S"|"C";
+      secondaryPattern: "D"|"I"|"S"|"C";
+      dimensionScores: Array<{ dimension: "D"|"I"|"S"|"C"; score: number; answeredCount: number; questionCount: number }>;
+    };
+  };
+  interpretation?: {
+    contractVersion:string;
+    interpretationVersion:string;
+    status:"COMPLETE"|"PARTIAL"|"INSUFFICIENT";
+    summary:string;
+    confidence:"HIGH"|"MODERATE"|"LIMITED";
+    claims:{allowed:string[];restricted:string[];prohibited:string[]};
+    [key:string]:unknown;
+  };
 }

@@ -1,13 +1,22 @@
 import { ASSESSMENT_CONFIG, type AssessmentType } from "../assessment-config";
 import { getPublishedEligibleQuestions } from "../question-bank-repository";
+import { getPublishedQuestionBank } from "../catalog/question-bank";
 import { getAssessmentReadyQuestions } from "./question-bank";
 import type { Question } from "./types";
+import type { ScoringKey } from "../question-bank-types";
 
 export class SelectionError extends Error {
   constructor(public readonly code: string, message: string) {
     super(message);
     this.name = "SelectionError";
   }
+}
+
+function normalizeScoringKey(value: number[]): ScoringKey {
+  if (value.length === 5 && value.every((v, i) => v === [5, 4, 3, 2, 1][i])) {
+    return [5, 4, 3, 2, 1] as const;
+  }
+  return [1, 2, 3, 4, 5] as const;
 }
 
 export type SelectedQuestion = Question & {
@@ -42,15 +51,39 @@ const PREMIUM_DOMAIN_QUOTAS: Array<{ label: string; aliases: string[]; quota: nu
 
 export async function selectQuestions(type: AssessmentType, seed?: string): Promise<SelectedQuestion[]> {
   const config = ASSESSMENT_CONFIG[type];
-  const eligible = await getPublishedEligibleQuestions();
-  if (eligible.length < config.questionCount) {
+  const eligible = type === "riasec" || type === "disc" || type === "eq" || type === "cognitive"
+    ? (await getPublishedQuestionBank(type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE")).map((q) => ({
+        id: q.questionCode,
+        domain: q.domain,
+        subdomain: q.subdomain,
+        indicator: q.indicator,
+        text: q.text,
+        type: q.type,
+        reverseScore: q.reverseScore,
+        weight: q.weight,
+        scale: [1, 2, 3, 4, 5] as const,
+        scoringKey: normalizeScoringKey(q.scoringKey),
+        difficulty: q.difficulty,
+        status: q.status,
+        mappingStatus: q.mappingStatus,
+        sourceFile: undefined,
+        questionRecordId: q.questionRecordId,
+        questionVersionId: q.questionVersionId,
+      }))
+    : await getPublishedEligibleQuestions();
+
+  const scopedEligible = type === "free" || type === "premium"
+    ? eligible.filter((q) => !q.id.toUpperCase().startsWith("DISC-"))
+    : eligible;
+
+  if (scopedEligible.length < config.questionCount) {
     throw new SelectionError(
       "INSUFFICIENT_ELIGIBLE_QUESTIONS",
       `Membutuhkan ${config.questionCount} question eligible, tersedia ${eligible.length}.`,
     );
   }
 
-  const runtimeQuestions: SelectedQuestion[] = eligible.map((q) => {
+  const runtimeQuestions: SelectedQuestion[] = scopedEligible.map((q) => {
     const difficulty = String(q.difficulty).toUpperCase();
     return {
       id: q.id,
@@ -101,6 +134,67 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
     }
 
     selected = seededShuffle(selected, `${s}:RIASEC`);
+  } else if (type === "disc") {
+    const dimensions = ["D", "I", "S", "C"] as const;
+    const quota = 6;
+    for (const dimension of dimensions) {
+      const candidates = seededShuffle(
+        runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === dimension),
+        `${s}:DISC:${dimension}`,
+      );
+      if (candidates.length < quota) {
+        throw new SelectionError(
+          "INSUFFICIENT_DISC_DIMENSION_QUESTIONS",
+          `DISC dimension "${dimension}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`,
+        );
+      }
+      selected.push(...candidates.slice(0, quota));
+    }
+    selected = seededShuffle(selected, `${s}:DISC`);
+  } else if (type === "eq") {
+    const dimensions = [
+      "EMOTION_AWARENESS",
+      "EMOTION_REGULATION",
+      "EMPATHY_SOCIAL_AWARENESS",
+      "RELATIONSHIP_SOCIAL_RESPONSE",
+    ] as const;
+    const quota = 6;
+    for (const dimension of dimensions) {
+      const candidates = seededShuffle(
+        runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === dimension),
+        `${s}:EQ:${dimension}`,
+      );
+      if (candidates.length < quota) {
+        throw new SelectionError(
+          "INSUFFICIENT_EQ_DIMENSION_QUESTIONS",
+          `EQ dimension "${dimension}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`,
+        );
+      }
+      selected.push(...candidates.slice(0, quota));
+    }
+    selected = seededShuffle(selected, `${s}:EQ`);
+  } else if (type === "cognitive") {
+    const dimensions = [
+      "VERBAL_REASONING",
+      "NUMERICAL_REASONING",
+      "LOGICAL_REASONING",
+      "ABSTRACT_REASONING",
+    ] as const;
+    const quota = 6;
+    for (const dimension of dimensions) {
+      const candidates = seededShuffle(
+        runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === dimension),
+        `${s}:COGNITIVE:${dimension}`,
+      );
+      if (candidates.length < quota) {
+        throw new SelectionError(
+          "INSUFFICIENT_COGNITIVE_DIMENSION_QUESTIONS",
+          `Cognitive dimension "${dimension}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`,
+        );
+      }
+      selected.push(...candidates.slice(0, quota));
+    }
+    selected = seededShuffle(selected, `${s}:COGNITIVE`);
   } else if (type === "free") {
     selected = seededShuffle(runtimeQuestions, s).slice(0, config.questionCount);
   } else {
@@ -147,7 +241,7 @@ export function snapshotFromSelection(
     assessmentType: type,
     assessmentConfigurationVersion: config.version,
     questionBankVersion: args.questionBankVersion,
-    taxonomyVersion: "TAXONOMY_V1",
+    taxonomyVersion: type === "disc" ? "DISC_TAXONOMY_V1" : type === "eq" ? "EQ_TAXONOMY_V1" : type === "cognitive" ? "COGNITIVE_TAXONOMY_V1" : "TAXONOMY_V1",
     scoringVersion: config.scoringVersion,
     selectionAlgorithmVersion: config.selectionAlgorithmVersion,
     attemptSeed: args.attemptSeed,

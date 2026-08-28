@@ -1,0 +1,28 @@
+{
+  "phase": "3.4",
+  "title": "Scoring Engine Architecture V2",
+  "baseline": "F.10-C.2-F PASS + F.3.1 PASS + F.3.2 PASS + F.3.3 PASS",
+  "status": "IMPLEMENTED_PENDING_VERIFICATION",
+  "scope": [
+    "Test-Type-specific scoring engine boundary",
+    "Scoring model identity and version contract",
+    "Pluggable scoring engine registry",
+    "RIASEC scorer retained as test-specific implementation",
+    "Legacy FREE/PREMIUM scoring preserved behind explicit compatibility engines",
+    "Runtime dispatch routed through Scoring Engine V2",
+    "Assessment configuration/scoring version provenance preserved"
+  ],
+  "forbidden_scope": [
+    "changing frozen RIASEC 60-item production set",
+    "changing RIASEC scoring semantics",
+    "changing RIASEC_RESULT_V1 semantics",
+    "generic cross-test scoring formula",
+    "result interpretation engine",
+    "cross-test profile",
+    "psychometric calibration"
+  ],
+  "databaseMigration": "NO",
+  "regressionBaseline": "F.10-C.2-F PASS",
+  "gate": "pnpm scoring:gate",
+  "next": "Phase 3.5 Result & Interpretation Engine"
+}

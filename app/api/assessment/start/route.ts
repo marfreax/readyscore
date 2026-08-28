@@ -4,10 +4,14 @@ import type { AssessmentType } from "../../../../lib/assessment-config";
 import { getCurrentSession } from "../../../../lib/auth/session";
 import { syncUserToDatabase } from "../../../../lib/auth/database-sync";
 
+// Explicit runtime declaration keeps the Prisma-backed API route on the Node.js runtime.
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 export async function POST(request: Request) {
   try {
     const body = (await request.json().catch(() => ({}))) as { type?: AssessmentType };
-    if (body.type !== "free" && body.type !== "premium" && body.type !== "riasec") {
+    if (body.type !== "free" && body.type !== "premium" && body.type !== "riasec" && body.type !== "disc" && body.type !== "eq" && body.type !== "cognitive") {
       return NextResponse.json(
         { ok: false, error: { code: "INVALID_ASSESSMENT_TYPE", message: "Tipe assessment tidak valid." } },
         { status: 400 },

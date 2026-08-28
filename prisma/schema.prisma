@@ -16,6 +16,73 @@ enum AssessmentType {
   FREE
   PREMIUM
   RIASEC
+  DISC
+  EQ
+  COGNITIVE
+}
+
+enum ReassessmentCreditStatus {
+  AVAILABLE
+  CONSUMED
+  EXPIRED
+}
+
+enum ReassessmentTestType {
+  RIASEC
+  DISC
+  EQ
+  COGNITIVE
+}
+
+enum CommercialTier {
+  FREE
+  BASIC
+  MEDIUM
+  ADVANCE
+}
+
+enum ProductStatus {
+  DRAFT
+  ACTIVE
+  RETIRED
+}
+
+
+enum ScalevWebhookEventStatus {
+  RECEIVED
+  PROCESSED
+  IGNORED
+  FAILED
+}
+
+enum ScalevPurchaseStatus {
+  PAID
+  FULFILLED
+  UNMAPPED
+  FAILED
+}
+
+enum EntitlementType {
+  TEST_ACCESS
+  RESULT_ACCESS
+  PROFILE_ACCESS
+  REPORT_ACCESS
+  DIRECTION_ACCESS
+  MAJOR_FIT_ACCESS
+  CAREER_ACCESS
+  REASSESSMENT_CREDIT
+}
+
+enum EntitlementStatus {
+  ACTIVE
+  REVOKED
+  EXPIRED
+}
+
+enum EntitlementResourceType {
+  TEST_TYPE
+  ASSESSMENT_CONFIGURATION
+  FEATURE
 }
 
 enum AttemptStatus {
@@ -52,6 +119,25 @@ enum MappingStatus {
   REJECTED
 }
 
+/// Immutable audit trail for material admin content/configuration operations.
+model AdminContentAuditEvent {
+  id           String   @id @default(cuid())
+  entityType   String
+  entityId     String
+  action       String
+  fromStatus   String?
+  toStatus     String?
+  actorUserId  String
+  metadata     Json?
+  createdAt    DateTime @default(now())
+
+  actor User @relation(fields: [actorUserId], references: [id], onDelete: Restrict)
+
+  @@index([entityType, entityId, createdAt])
+  @@index([actorUserId, createdAt])
+  @@index([action, createdAt])
+}
+
 model DatabaseHeartbeat {
   id        String   @id @default(cuid())
   createdAt DateTime @default(now())
@@ -68,6 +154,13 @@ model User {
 
   sessions Session[]
   attempts AssessmentAttempt[]
+  entitlements UserEntitlement[]
+  scalevPurchases ScalevPurchase[]
+  scalevAddOnPurchases ScalevAddOnPurchase[]
+  addOnEntitlements UserAddOnEntitlement[]
+  reassessmentCredits ReassessmentCredit[]
+  institutionMemberships InstitutionMembership[]
+  contentAuditEvents AdminContentAuditEvent[]
 
   @@index([createdAt])
 }
@@ -82,6 +175,423 @@ model Session {
 
   @@index([userId])
   @@index([expiresAt])
+}
+
+
+/// Commercial product catalog. Product tier is commercial packaging,
+/// not measurement identity.
+
+enum TestTypeCatalogStatus {
+  CANDIDATE
+  ACTIVE
+  RETIRED
+}
+enum TaxonomyStatus {
+  DRAFT
+  ACTIVE
+  RETIRED
+}
+
+
+enum InstitutionStatus {
+  DRAFT
+  ACTIVE
+  SUSPENDED
+  RETIRED
+}
+
+enum InstitutionMembershipStatus {
+  INVITED
+  ACTIVE
+  SUSPENDED
+  LEFT
+}
+
+enum InstitutionMemberRole {
+  OWNER
+  ADMIN
+  COUNSELOR
+  TEACHER
+  STUDENT
+  PARENT
+}
+
+enum InstitutionEntitlementStatus {
+  ACTIVE
+  REVOKED
+  EXPIRED
+}
+
+/// Phase 3.13 institutional boundary.
+/// Institution is an organizational owner/context and does not replace User,
+/// TestType, AssessmentAttempt, or any measurement identity.
+model Institution {
+  id          String            @id
+  code        String            @unique
+  name        String
+  status      InstitutionStatus @default(DRAFT)
+  description String?
+  metadata    Json?
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
+
+  memberships  InstitutionMembership[]
+  entitlements InstitutionEntitlement[]
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+/// A user may belong to multiple institutions. Membership is authorization
+/// context only; it does not grant measurement claims by itself.
+model InstitutionMembership {
+  id            String                     @id @default(cuid())
+  institutionId String
+  userId        String
+  role          InstitutionMemberRole
+  status        InstitutionMembershipStatus @default(ACTIVE)
+  startsAt      DateTime                   @default(now())
+  endsAt        DateTime?
+  createdAt     DateTime                   @default(now())
+  updatedAt     DateTime                   @updatedAt
+
+  institution Institution @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([institutionId, userId])
+  @@index([userId, status])
+  @@index([institutionId, status])
+}
+
+/// Institutional access is explicit and resource-based, parallel to the
+/// canonical commercial entitlement boundary. It is not a Product Tier.
+model InstitutionEntitlement {
+  id            String                       @id @default(cuid())
+  institutionId String
+  type          EntitlementType
+  resourceType  EntitlementResourceType
+  resourceKey   String
+  status        InstitutionEntitlementStatus @default(ACTIVE)
+  source        String                       @default("MANUAL_INSTITUTION")
+  startsAt      DateTime                     @default(now())
+  endsAt        DateTime?
+  metadata      Json?
+  createdAt     DateTime                     @default(now())
+  updatedAt     DateTime                     @updatedAt
+
+  institution Institution @relation(fields: [institutionId], references: [id], onDelete: Cascade)
+
+  @@unique([institutionId, type, resourceType, resourceKey])
+  @@index([institutionId, status])
+  @@index([resourceType, resourceKey, status])
+}
+
+model TestType {
+  id String @id
+  code String @unique
+  name String
+  category String
+  status TestTypeCatalogStatus @default(CANDIDATE)
+  description String
+  runtimeKey String? @unique
+  metadata Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  taxonomies TaxonomyVersion[]
+  questionVersions QuestionVersion[]
+  @@index([status])
+  @@index([category])
+}
+
+model TaxonomyVersion {
+  id String @id
+  testTypeId String
+  version String
+  status TaxonomyStatus @default(DRAFT)
+  sourceVersion String?
+  metadata Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  testType TestType @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
+  nodes TaxonomyNode[]
+  @@unique([testTypeId, version])
+  @@index([testTypeId, status])
+}
+
+model TaxonomyNode {
+  id String @id
+  taxonomyId String
+  code String
+  name String
+  nodeType String
+  level Int
+  parentId String?
+  metadata Json?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  taxonomy TaxonomyVersion @relation(fields: [taxonomyId], references: [id], onDelete: Cascade)
+  @@unique([taxonomyId, code])
+  @@index([taxonomyId, level])
+  @@index([taxonomyId, parentId])
+}
+
+
+
+enum AddOnProductStatus {
+  DRAFT
+  ACTIVE
+  RETIRED
+}
+
+/// Phase 3.12 B2C add-on catalog.
+/// Add-ons extend commercial access without redefining Product/Tier or measurement identity.
+model AddOnProduct {
+  id                String            @id
+  code              String            @unique
+  name              String
+  description       String
+  priceIdr          Int?
+  status            AddOnProductStatus @default(DRAFT)
+  sortOrder         Int               @default(0)
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  entitlements        AddOnProductEntitlement[]
+  userEntitlements    UserAddOnEntitlement[]
+  reassessmentCredits ReassessmentCredit[]
+  scalevAddOnPurchases ScalevAddOnPurchase[]
+
+  @@index([status, sortOrder])
+}
+
+/// Explicit access bundle owned by an add-on product.
+model AddOnProductEntitlement {
+  id           String                   @id @default(cuid())
+  addOnProductId String
+  type         EntitlementType
+  resourceType EntitlementResourceType
+  resourceKey  String
+  metadata     Json?
+  createdAt    DateTime                 @default(now())
+
+  addOnProduct AddOnProduct @relation(fields: [addOnProductId], references: [id], onDelete: Cascade)
+
+  @@unique([addOnProductId, type, resourceType, resourceKey])
+  @@index([type, resourceType, resourceKey])
+}
+
+/// User access granted by an add-on.
+/// No checkout/payment automation is implemented in Phase 3.12.
+model UserAddOnEntitlement {
+  id             String                   @id @default(cuid())
+  userId         String
+  addOnProductId String
+  type           EntitlementType
+  resourceType   EntitlementResourceType
+  resourceKey    String
+  status         EntitlementStatus        @default(ACTIVE)
+  source         String                   @default("MANUAL")
+  startsAt       DateTime                 @default(now())
+  endsAt         DateTime?
+  createdAt      DateTime                 @default(now())
+  updatedAt      DateTime                 @updatedAt
+
+  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  addOnProduct AddOnProduct @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
+
+  @@unique([userId, type, resourceType, resourceKey])
+  @@index([userId, status])
+  @@index([resourceType, resourceKey, status])
+}
+
+
+/// V4 L2 — Durable Scalev webhook receipt and idempotency record.
+/// The unique Scalev event ID is the primary delivery deduplication boundary.
+model ScalevWebhookEvent {
+  id          String                    @id @default(cuid())
+  uniqueId    String                    @unique
+  event       String
+  orderId     String?
+  eventTime   DateTime?
+  status      ScalevWebhookEventStatus @default(RECEIVED)
+  payload     Json
+  errorCode   String?
+  errorMessage String?
+  processedAt DateTime?
+  createdAt   DateTime                  @default(now())
+  updatedAt   DateTime                  @updatedAt
+
+  purchases ScalevPurchase[]
+  addOnPurchases ScalevAddOnPurchase[]
+
+  @@index([orderId, event])
+  @@index([status, createdAt])
+}
+
+/// V4 L2 — ReadyScore-side purchase ledger for Scalev-originated paid orders.
+/// Scalev remains the commerce/order system; ReadyScore stores only the
+/// integration transaction needed for entitlement and access delivery.
+model ScalevPurchase {
+  id              String               @id @default(cuid())
+  scalevOrderId   String               @unique
+  scalevCustomerId String?
+  customerName    String
+  customerEmail   String
+  customerPhone   String?
+  productSku      String
+  productTier     CommercialTier
+  selectedTestType String?
+  productId       String
+  userId          String
+  paymentStatus   String
+  status          ScalevPurchaseStatus  @default(PAID)
+  paidAt          DateTime?
+  sourceEventId   String?
+  orderPayload    Json
+  createdAt       DateTime             @default(now())
+  updatedAt       DateTime             @updatedAt
+
+  user          User               @relation(fields: [userId], references: [id], onDelete: Restrict)
+  product       Product            @relation(fields: [productId], references: [id], onDelete: Restrict)
+  sourceEvent   ScalevWebhookEvent? @relation(fields: [sourceEventId], references: [id], onDelete: SetNull)
+  handoff       ScalevHandoff?
+
+  @@index([userId, createdAt])
+  @@index([customerEmail, createdAt])
+  @@index([status, createdAt])
+  @@index([productSku])
+}
+
+/// V6 L11 — Scalev-originated add-on purchase ledger.
+/// Used for paid Reassessment Credit fulfillment without conflating an add-on
+/// with a core Product/Tier purchase.
+model ScalevAddOnPurchase {
+  id              String                @id @default(cuid())
+  scalevOrderId   String                @unique
+  scalevCustomerId String?
+  customerName    String
+  customerEmail   String
+  customerPhone   String?
+  productSku      String
+  addOnProductId  String
+  userId          String
+  paymentStatus   String
+  status          ScalevPurchaseStatus  @default(PAID)
+  paidAt          DateTime?
+  sourceEventId   String?
+  orderPayload    Json
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+
+  user        User               @relation(fields: [userId], references: [id], onDelete: Restrict)
+  addOnProduct AddOnProduct      @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
+  sourceEvent ScalevWebhookEvent? @relation(fields: [sourceEventId], references: [id], onDelete: SetNull)
+  handoff     ScalevHandoff?
+
+  @@index([userId, createdAt])
+  @@index([customerEmail, createdAt])
+  @@index([status, createdAt])
+  @@index([productSku])
+}
+
+/// V4 L2 / V6 L11 — Single-use customer handoff token.
+/// The raw token is never persisted; only its SHA-256 hash is stored.
+model ScalevHandoff {
+  id              String                @id @default(cuid())
+  purchaseId      String?               @unique
+  addOnPurchaseId String?               @unique
+  tokenHash       String                @unique
+  expiresAt       DateTime
+  consumedAt      DateTime?
+  createdAt       DateTime              @default(now())
+
+  purchase      ScalevPurchase?      @relation(fields: [purchaseId], references: [id], onDelete: Cascade)
+  addOnPurchase ScalevAddOnPurchase? @relation(fields: [addOnPurchaseId], references: [id], onDelete: Cascade)
+
+  @@index([expiresAt, consumedAt])
+}
+
+/// V5 L8 — Consumable reassessment credit ledger.
+/// A credit is a separate commercial/access artifact from the assessment
+/// measurement event. Consumption never mutates an existing result.
+model ReassessmentCredit {
+  id                String                    @id @default(cuid())
+  userId            String
+  addOnProductId    String?
+  testType          ReassessmentTestType
+  status          ReassessmentCreditStatus  @default(AVAILABLE)
+  source          String                    @default("MANUAL")
+  purchasedAt     DateTime                  @default(now())
+  consumedAt      DateTime?
+  consumedAttemptId String?
+  createdAt       DateTime                  @default(now())
+  updatedAt       DateTime                  @updatedAt
+
+  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  addOnProduct AddOnProduct? @relation(fields: [addOnProductId], references: [id], onDelete: SetNull)
+
+  @@index([userId, testType, status])
+  @@index([addOnProductId])
+  @@index([userId, consumedAt])
+  @@unique([consumedAttemptId])
+}
+
+model Product {
+  id          String         @id
+  tier        CommercialTier @unique
+  name        String
+  description String
+  priceIdr    Int?
+  status      ProductStatus  @default(DRAFT)
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  entitlements     ProductEntitlement[]
+  userEntitlements UserEntitlement[]
+  scalevPurchases ScalevPurchase[]
+
+  @@index([status])
+}
+
+/// Explicit entitlement definitions attached to a commercial product.
+/// resourceType/resourceKey keep measurement identity separate from tier.
+model ProductEntitlement {
+  id           String                   @id @default(cuid())
+  productId    String
+  type         EntitlementType
+  resourceType EntitlementResourceType
+  resourceKey  String
+  metadata     Json?
+  createdAt    DateTime                 @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, type, resourceType, resourceKey])
+  @@index([type, resourceType, resourceKey])
+}
+
+/// Concrete entitlement granted to a user. V4 L2 payment integrations may
+/// fulfill this record only after a verified paid transaction.
+model UserEntitlement {
+  id           String                   @id @default(cuid())
+  userId       String
+  productId    String?
+  type         EntitlementType
+  resourceType EntitlementResourceType
+  resourceKey  String
+  status       EntitlementStatus        @default(ACTIVE)
+  source       String                   @default("MANUAL")
+  startsAt     DateTime                 @default(now())
+  endsAt       DateTime?
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @updatedAt
+
+  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+
+  @@unique([userId, type, resourceType, resourceKey])
+  @@index([userId, status])
+  @@index([resourceType, resourceKey, status])
 }
 
 /// Stable question identity. Versioned content lives in QuestionVersion.
@@ -102,6 +612,8 @@ model Question {
 model QuestionVersion {
   id            String             @id @default(cuid())
   questionId    String
+  testTypeId    String?
+  taxonomyVersion String?
   version       String
   text          String
   domain        String
@@ -121,13 +633,59 @@ model QuestionVersion {
   updatedAt     DateTime           @updatedAt
 
   question         Question          @relation(fields: [questionId], references: [id], onDelete: Restrict)
+  testType         TestType?          @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
   attemptQuestions AttemptQuestion[]
 
   @@unique([questionId, version])
   @@index([status, mappingStatus])
+  @@index([testTypeId, status, mappingStatus])
   @@index([domain, subdomain, indicator])
   @@index([createdAt])
   @@index([updatedAt])
+}
+
+
+enum AssessmentConfigurationStatus {
+  DRAFT
+  REVIEW
+  APPROVED
+  ACTIVE
+  ARCHIVED
+}
+
+model AssessmentConfiguration {
+  id             String   @id
+  assessmentType AssessmentType
+  code           String   @unique
+  name           String
+  description    String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  versions AssessmentConfigurationVersion[]
+
+  @@index([assessmentType])
+}
+
+model AssessmentConfigurationVersion {
+  id                         String   @id @default(cuid())
+  configurationId            String
+  version                    String
+  questionBankVersion        String
+  taxonomyVersion            String
+  scoringVersion             String
+  selectionAlgorithmVersion String
+  questionCount              Int
+  status                     AssessmentConfigurationStatus @default(DRAFT)
+  metadata                   Json?
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+
+  configuration AssessmentConfiguration @relation(fields: [configurationId], references: [id], onDelete: Restrict)
+
+  @@unique([configurationId, version])
+  @@index([configurationId, status])
+  @@index([status, updatedAt])
 }
 
 model AssessmentAttempt {

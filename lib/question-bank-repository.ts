@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import {
   MappingStatus,
   Prisma,
@@ -6,6 +7,7 @@ import {
 } from "@prisma/client";
 import { prisma } from "./db/prisma";
 import { validateMapping } from "./question-bank-taxonomy";
+import { auditContentOperation, validateQuestionMetadata, findQuestionDuplicate } from "./admin-content-operations";
 import type { ScoringKey } from "./question-bank-types";
 
 export type AdminQuestion = {
@@ -27,10 +29,15 @@ export type AdminQuestion = {
   approvedAt?: string;
   publishedAt?: string;
   mappingApprovedAt?: string;
+  questionId: string;
+  questionVersionId: string;
+  version: string;
+  testTypeCode: string | null;
+  testTypeName: string | null;
 };
 
 type DbQuestionVersion = Prisma.QuestionVersionGetPayload<{
-  include: { question: true };
+  include: { question: true; testType: true };
 }>;
 
 export type QuestionBankListParams = {
@@ -115,6 +122,11 @@ function toAdminQuestion(row: DbQuestionVersion): AdminQuestion {
     status: v.status,
     mappingStatus: v.mappingStatus,
     sourceFile: v.sourceFile ?? undefined,
+    questionId: row.question.id,
+    questionVersionId: v.id,
+    version: v.version,
+    testTypeCode: v.testType?.code ?? null,
+    testTypeName: v.testType?.name ?? null,
     uploadedAt: v.createdAt.toISOString(),
     approvedAt: v.status === QuestionStatus.APPROVED || v.status === QuestionStatus.PUBLISHED
       ? v.updatedAt.toISOString()
@@ -126,7 +138,16 @@ function toAdminQuestion(row: DbQuestionVersion): AdminQuestion {
 
 async function loadLatestVersions() {
   const rows = await prisma.questionVersion.findMany({
-    include: { question: true },
+    include: { question: true, testType: true },
+    orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+  });
+  return latestVersionMap(rows);
+}
+
+async function loadLatestPublishedVersions() {
+  const rows = await prisma.questionVersion.findMany({
+    where: { status: QuestionStatus.PUBLISHED },
+    include: { question: true, testType: true },
     orderBy: [{ createdAt: "desc" }, { id: "desc" }],
   });
   return latestVersionMap(rows);
@@ -135,7 +156,7 @@ async function loadLatestVersions() {
 async function loadLatestVersionById(questionId: string) {
   const row = await prisma.questionVersion.findFirst({
     where: { questionId },
-    include: { question: true },
+    include: { question: true, testType: true },
     orderBy: [{ createdAt: "desc" }, { id: "desc" }],
   });
   if (!row) throw new Error("QUESTION_NOT_FOUND");
@@ -240,9 +261,19 @@ export async function getQuestionBankStats() {
   };
 }
 
-export async function getPublishedEligibleQuestions() {
-  const latest = await loadLatestVersions();
-  return [...latest.values()]
+export async function getPublishedEligibleQuestions(testTypeCode?: string) {
+  const latest = await loadLatestPublishedVersions();
+  let candidates = [...latest.values()];
+
+  if (testTypeCode) {
+    const testType = await prisma.testType.findUnique({
+      where: { code: testTypeCode.trim().toUpperCase() },
+      select: { id: true },
+    });
+    if (!testType) throw new Error(`TEST_TYPE_NOT_FOUND:${testTypeCode}`);
+    candidates = candidates.filter((v) => v.testTypeId === testType.id);
+  }
+  return candidates
     .filter(
       (v) =>
         v.status === QuestionStatus.PUBLISHED &&
@@ -377,6 +408,8 @@ export async function updateQuestionMapping(
     await tx.questionVersion.create({
       data: {
         questionId,
+        testTypeId: current.testTypeId,
+        taxonomyVersion: current.taxonomyVersion,
         ...versionData(next, version),
         status: QuestionStatus.DRAFT,
         mappingStatus: mapping.subdomain && mapping.indicator ? MappingStatus.MAPPED : MappingStatus.PARTIAL,
@@ -451,4 +484,241 @@ export async function bulkQuestionBankAction(input: {
   }
 
   return { results, errors };
+}
+
+
+export async function getQuestionBankTestTypes() {
+  return prisma.testType.findMany({
+    where: { status: "ACTIVE" },
+    select: { id: true, code: true, name: true, category: true, runtimeKey: true },
+    orderBy: [{ category: "asc" }, { code: "asc" }],
+  });
+}
+
+function assertEditable(current: DbQuestionVersion) {
+  if (current.status === QuestionStatus.ARCHIVED) throw new Error("QUESTION_ARCHIVED");
+}
+
+export type QuestionVersionInput = {
+  text: string;
+  domain: string;
+  subdomain: string | null;
+  indicator: string | null;
+  difficulty: string;
+};
+
+export async function createQuestionVersion(
+  questionId: string,
+  input: QuestionVersionInput,
+) {
+  const current = await loadLatestVersionById(questionId);
+  assertEditable(current);
+  const mapping = { domain: input.domain.trim(), subdomain: input.subdomain?.trim() || null, indicator: input.indicator?.trim() || null };
+  if (!mapping.domain) throw new Error("INVALID_DOMAIN");
+  const next: AdminQuestion = {
+    ...toAdminQuestion(current),
+    text: input.text,
+    domain: mapping.domain,
+    subdomain: mapping.subdomain,
+    indicator: mapping.indicator,
+    difficulty: input.difficulty,
+    status: "DRAFT",
+    mappingStatus: mapping.subdomain && mapping.indicator ? "MAPPED" : "PARTIAL",
+  };
+  await prisma.$transaction(async (tx) => {
+    const version = await nextVersion(tx, questionId);
+    await tx.questionVersion.create({
+      data: {
+        questionId,
+        testTypeId: current.testTypeId,
+        taxonomyVersion: current.taxonomyVersion,
+        ...versionData(next, version),
+        status: QuestionStatus.DRAFT,
+        mappingStatus: mapping.subdomain && mapping.indicator ? MappingStatus.MAPPED : MappingStatus.PARTIAL,
+      },
+    });
+  });
+  return getQuestionById(questionId);
+}
+
+export async function createLogicalQuestion(input: {
+  code: string;
+  text: string;
+  testTypeId: string;
+  domain: string;
+  subdomain: string | null;
+  indicator: string | null;
+  difficulty: string;
+}) {
+  const code = input.code.trim();
+  if (!/^[A-Za-z0-9._-]{2,80}$/.test(code)) throw new Error("INVALID_QUESTION_CODE");
+  const exists = await prisma.question.findUnique({ where: { code }, select: { id: true } });
+  if (exists) throw new Error("QUESTION_CODE_ALREADY_EXISTS");
+  const testType = await prisma.testType.findFirst({
+    where: { id: input.testTypeId, status: "ACTIVE" },
+    select: { id: true },
+  });
+  if (!testType) throw new Error("TEST_TYPE_NOT_FOUND");
+  const taxonomy = await prisma.taxonomyVersion.findFirst({
+    where: { testTypeId: testType.id, status: "ACTIVE" },
+    orderBy: [{ updatedAt: "desc" }, { id: "desc" }],
+    select: { version: true },
+  });
+  const mapping = { domain: input.domain.trim(), subdomain: input.subdomain?.trim() || null, indicator: input.indicator?.trim() || null };
+  if (!mapping.domain) throw new Error("INVALID_DOMAIN");
+  await prisma.question.create({
+    data: {
+      id: `q_${crypto.randomUUID()}`,
+      code,
+      versions: {
+        create: {
+          version: "v1",
+          testTypeId: testType.id,
+          taxonomyVersion: taxonomy?.version ?? null,
+          text: input.text.trim(),
+          domain: mapping.domain,
+          subdomain: mapping.subdomain,
+          indicator: mapping.indicator,
+          type: "LIKERT",
+          answerType: "LIKERT_5",
+          reverseScore: false,
+          weight: 1,
+          scale: [1,2,3,4,5],
+          scoringKey: [1,2,3,4,5],
+          difficulty: normalizeDifficulty(input.difficulty),
+          status: QuestionStatus.DRAFT,
+          mappingStatus: mapping.subdomain && mapping.indicator ? MappingStatus.MAPPED : MappingStatus.PARTIAL,
+          sourceFile: null,
+        },
+      },
+    },
+  });
+  const created = await prisma.question.findUnique({ where: { code }, select: { id: true } });
+  if (!created) throw new Error("QUESTION_NOT_FOUND");
+  return getQuestionById(created.id);
+}
+
+export async function duplicateQuestion(questionId: string, newCode: string) {
+  const current = await loadLatestVersionById(questionId);
+  const code = newCode.trim();
+  if (!/^[A-Za-z0-9._-]{2,80}$/.test(code)) throw new Error("INVALID_QUESTION_CODE");
+  const exists = await prisma.question.findUnique({ where: { code }, select: { id: true } });
+  if (exists) throw new Error("QUESTION_CODE_ALREADY_EXISTS");
+  const id = `q_${crypto.randomUUID()}`;
+  await prisma.question.create({
+    data: {
+      id,
+      code,
+      versions: {
+        create: {
+          ...versionData({ ...toAdminQuestion(current), status: "DRAFT" }, "v1"),
+          testTypeId: current.testTypeId,
+          taxonomyVersion: current.taxonomyVersion,
+        },
+      },
+    },
+  });
+  return getQuestionById(id);
+}
+
+export async function activateQuestion(questionId: string) {
+  const current = await loadLatestVersionById(questionId);
+  if (current.mappingStatus !== MappingStatus.APPROVED) throw new Error("MAPPING_NOT_APPROVED");
+  if (current.status !== QuestionStatus.APPROVED) throw new Error("QUESTION_NOT_APPROVED");
+  return publishQuestion(questionId);
+}
+
+export async function archiveQuestion(questionId: string) {
+  const current = await loadLatestVersionById(questionId);
+  if (current.status === QuestionStatus.ARCHIVED) return getQuestionById(questionId);
+  await prisma.questionVersion.update({
+    where: { id: current.id },
+    data: { status: QuestionStatus.ARCHIVED },
+  });
+  return getQuestionById(questionId);
+}
+
+
+export async function getQuestionVersionHistory(questionId: string) {
+  return prisma.questionVersion.findMany({
+    where: { questionId },
+    include: { testType: true },
+    orderBy: [{ createdAt: "desc" }, { id: "desc" }],
+  });
+}
+
+export async function getQuestionAuditTrail(questionId: string) {
+  const versions = await prisma.questionVersion.findMany({ where: { questionId }, select: { id: true } });
+  const ids = versions.map(v => v.id);
+  return prisma.adminContentAuditEvent.findMany({
+    where: { entityType: "QUESTION_VERSION", entityId: { in: ids } },
+    orderBy: [{ createdAt: "desc" }],
+    take: 100,
+  });
+}
+
+export async function validateQuestionForReview(questionId: string, actorUserId: string) {
+  const current = await loadLatestVersionById(questionId);
+  const errors = validateQuestionMetadata(current);
+  if (errors.length) throw new Error(`CONTENT_VALIDATION_FAILED:${errors.join(",")}`);
+  const duplicate = await findQuestionDuplicate(current.id, current.text);
+  if (duplicate) throw new Error(`DUPLICATE_CONTENT:${duplicate.questionId}`);
+  if (current.status === QuestionStatus.ARCHIVED) throw new Error("QUESTION_ARCHIVED");
+  const from = current.status;
+  await prisma.questionVersion.update({ where: { id: current.id }, data: { status: QuestionStatus.VALIDATED } });
+  await auditContentOperation({ entityType:"QUESTION_VERSION", entityId:current.id, action:"VALIDATE", fromStatus:from, toStatus:QuestionStatus.VALIDATED, actorUserId });
+  return getQuestionById(questionId);
+}
+
+export async function submitQuestionForReview(questionId: string, actorUserId: string) {
+  const current = await loadLatestVersionById(questionId);
+  if (current.status !== QuestionStatus.VALIDATED && current.status !== QuestionStatus.MAPPED && current.status !== QuestionStatus.REJECTED) throw new Error("QUESTION_NOT_READY_FOR_REVIEW");
+  const from = current.status;
+  await prisma.questionVersion.update({ where:{id:current.id}, data:{status:QuestionStatus.REVIEW_REQUIRED} });
+  await auditContentOperation({ entityType:"QUESTION_VERSION",entityId:current.id,action:"SUBMIT_REVIEW",fromStatus:from,toStatus:QuestionStatus.REVIEW_REQUIRED,actorUserId });
+  return getQuestionById(questionId);
+}
+
+export async function approveQuestionForReview(questionId: string, actorUserId: string) {
+  const current = await loadLatestVersionById(questionId);
+  if (current.status !== QuestionStatus.REVIEW_REQUIRED) throw new Error("QUESTION_NOT_IN_REVIEW");
+  if (current.mappingStatus !== MappingStatus.APPROVED) throw new Error("MAPPING_NOT_APPROVED");
+  const errors = validateQuestionMetadata(current);
+  if (errors.length) throw new Error(`CONTENT_VALIDATION_FAILED:${errors.join(",")}`);
+  const from=current.status;
+  await prisma.questionVersion.update({where:{id:current.id},data:{status:QuestionStatus.APPROVED}});
+  await auditContentOperation({entityType:"QUESTION_VERSION",entityId:current.id,action:"APPROVE",fromStatus:from,toStatus:QuestionStatus.APPROVED,actorUserId});
+  return getQuestionById(questionId);
+}
+
+export async function publishQuestionForOperations(questionId: string, actorUserId: string) {
+  const current = await loadLatestVersionById(questionId);
+  if (current.status !== QuestionStatus.APPROVED) throw new Error("QUESTION_NOT_APPROVED");
+  if (current.mappingStatus !== MappingStatus.APPROVED) throw new Error("MAPPING_NOT_APPROVED");
+  const errors=validateQuestionMetadata(current);
+  if(errors.length) throw new Error(`CONTENT_VALIDATION_FAILED:${errors.join(",")}`);
+  const from=current.status;
+  await prisma.questionVersion.update({where:{id:current.id},data:{status:QuestionStatus.PUBLISHED}});
+  await auditContentOperation({entityType:"QUESTION_VERSION",entityId:current.id,action:"PUBLISH",fromStatus:from,toStatus:QuestionStatus.PUBLISHED,actorUserId});
+  return getQuestionById(questionId);
+}
+
+export async function activateQuestionForOperations(questionId: string, actorUserId: string) {
+  const current=await loadLatestVersionById(questionId);
+  if(current.status!==QuestionStatus.PUBLISHED) throw new Error("QUESTION_NOT_PUBLISHED");
+  const from=current.status;
+  // The existing runtime represents active production questions as PUBLISHED.
+  // L17 records the operational activation without changing measurement semantics.
+  await auditContentOperation({entityType:"QUESTION_VERSION",entityId:current.id,action:"ACTIVATE",fromStatus:from,toStatus:QuestionStatus.PUBLISHED,actorUserId,metadata:{runtimeStatus:"PUBLISHED"}});
+  return getQuestionById(questionId);
+}
+
+export async function archiveQuestionForOperations(questionId: string, actorUserId: string) {
+  const current=await loadLatestVersionById(questionId);
+  if(current.status===QuestionStatus.PUBLISHED) throw new Error("ACTIVE_CONTENT_REQUIRES_REPLACEMENT");
+  if(current.status!==QuestionStatus.APPROVED && current.status!==QuestionStatus.REVIEW_REQUIRED) throw new Error("QUESTION_NOT_ARCHIVABLE");
+  const from=current.status;
+  await prisma.questionVersion.update({where:{id:current.id},data:{status:QuestionStatus.ARCHIVED}});
+  await auditContentOperation({entityType:"QUESTION_VERSION",entityId:current.id,action:"ARCHIVE",fromStatus:from,toStatus:QuestionStatus.ARCHIVED,actorUserId});
+  return getQuestionById(questionId);
 }

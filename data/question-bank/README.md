@@ -25,3 +25,21 @@ CSV adalah source import; JSON adalah generated artifact.
 ## Admin Runtime
 
 Phase 2.8 introduces an admin-managed runtime repository at `data/question-bank/admin-question-bank.json`. The CSV remains the import source; publishing is controlled through `/admin/question-bank`.
+
+## V3 Test-Specific Ownership
+
+The physical question repository remains shared. Runtime assessment reads are logically scoped by `TestType`.
+
+For an active instrument, the assessment-facing boundary is:
+
+```text
+TestType
+  ↓
+QuestionVersion.testTypeId
+  ↓
+QuestionVersion.taxonomyVersion
+  ↓
+published + mapping-approved QuestionVersion
+```
+
+`Question.id` remains the stable logical identity and `QuestionVersion.id` remains the immutable assessment-facing version identity.

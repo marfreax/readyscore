@@ -1,0 +1,5 @@
+ReadyScore V7 L15 FIXED5 package manifest
+Root phase document: V7_L15_UNIFIED_QUESTION_BANK.md
+Architecture copy: architecture/phase-7.15/ReadyScore_V7_L15_Unified_Question_Bank.md
+No database migration.
+No measurement/scoring semantics mutation.

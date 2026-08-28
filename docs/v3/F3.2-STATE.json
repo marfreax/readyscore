@@ -1,0 +1,14 @@
+{
+  "phase": "3.2",
+  "title": "Test Catalog & Taxonomy V2",
+  "baseline": "F3.1 PASS + F.10-C.2-F frozen baseline",
+  "status": "READY_FOR_VERIFICATION",
+  "catalog": ["COGNITIVE", "EQ", "AQ", "DISC", "RIASEC", "STRENGTH", "LEARNING"],
+  "activeTestType": "RIASEC",
+  "taxonomyArchitectureVersion": "V3_TEST_CATALOG_TAXONOMY_V2",
+  "activeRiasecTaxonomy": "RIASEC_TAXONOMY_V1",
+  "questionVersionOwnership": "TEST_TYPE + TAXONOMY_VERSION",
+  "assessmentLifecycleMutation": false,
+  "riaSecProductionSetChanged": false,
+  "next": "Phase 3.3 Test-Specific Question Bank Architecture"
+}

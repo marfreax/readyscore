@@ -1,0 +1,27 @@
+{
+  "phase": "3.3",
+  "title": "Test-Specific Question Bank Architecture",
+  "baseline": "F3.2 PASS + F.10-C.2-F frozen baseline",
+  "status": "IMPLEMENTED_PENDING_VERIFICATION",
+  "scope": [
+    "Logical Question Bank boundary by TestType",
+    "Published QuestionVersion read boundary",
+    "Question.id stable logical identity",
+    "QuestionVersion.id immutable assessment-facing identity",
+    "QuestionVersion TestType ownership",
+    "QuestionVersion taxonomy ownership",
+    "RIASEC runtime selection scoped to RIASEC Question Bank",
+    "Cross-test ownership isolation gate"
+  ],
+  "forbidden_scope": [
+    "changing the frozen RIASEC 60-item production set",
+    "changing RIASEC scoring semantics",
+    "changing RIASEC result contract",
+    "generic cross-test scoring",
+    "interpretation engine",
+    "psychometric calibration"
+  ],
+  "databaseMigration": "NO",
+  "regressionBaseline": "F.10-C.2-F PASS",
+  "next": "Phase 3.4 Scoring Engine Architecture V2"
+}

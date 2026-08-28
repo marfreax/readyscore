@@ -3,7 +3,7 @@ import { prisma } from "../db/prisma";
 
 export type DashboardAttempt = {
   id: string;
-  assessmentType: "free" | "premium";
+  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: string;
   completedAt: string | null;

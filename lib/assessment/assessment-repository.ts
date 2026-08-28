@@ -1,11 +1,11 @@
-import type { Prisma } from "@prisma/client";
+import { AssessmentType, type Prisma } from "@prisma/client";
 import { prisma } from "../db/prisma";
 import type { AssessmentResult, Answer, LikertValue, Question } from "./types";
 import type { SelectedQuestion } from "./question-engine";
 
 export type PersistedAttempt = {
   id: string;
-  assessmentType: "free" | "premium" | "riasec";
+  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: string;
   completedAt?: string;
@@ -17,7 +17,7 @@ export type PersistedAttempt = {
 
 function toAttempt(row: {
   id: string;
-  assessmentType: "FREE" | "PREMIUM" | "RIASEC";
+  assessmentType: "FREE" | "PREMIUM" | "RIASEC" | "DISC" | "EQ" | "COGNITIVE";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: Date;
   completedAt: Date | null;
@@ -28,7 +28,7 @@ function toAttempt(row: {
 }): PersistedAttempt {
   return {
     id: row.id,
-    assessmentType: row.assessmentType.toLowerCase() as "free" | "premium",
+    assessmentType: row.assessmentType.toLowerCase() as "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive",
     status: row.status,
     startedAt: row.startedAt.toISOString(),
     completedAt: row.completedAt?.toISOString(),
@@ -87,10 +87,112 @@ function questionSnapshot(question: SelectedQuestion, sequence: number) {
   };
 }
 
+export async function createReassessmentAttempt(input: {
+  id: string;
+  userId: string;
+  type: "riasec" | "disc" | "eq" | "cognitive";
+  assessmentConfigurationId: string;
+  assessmentConfigurationVersion: string;
+  questionBankVersion: string;
+  taxonomyVersion: string;
+  scoringVersion: string;
+  selectionAlgorithmVersion: string;
+  attemptSeed: string;
+  selectionSnapshot: Record<string, unknown>;
+  selectedQuestions: SelectedQuestion[];
+  startedAt: Date;
+  creditId: string;
+}) {
+  await prisma.$transaction(async (tx) => {
+    const testType = input.type.toUpperCase() as "RIASEC" | "DISC" | "EQ" | "COGNITIVE";
+
+    const { start, end } = (() => {
+      const start = new Date(input.startedAt);
+      start.setHours(0, 0, 0, 0);
+      const end = new Date(start);
+      end.setDate(end.getDate() + 1);
+      return { start, end };
+    })();
+
+    const prior = await tx.assessmentAttempt.findFirst({
+      where: {
+        userId: input.userId,
+        assessmentType: testType,
+        status: "COMPLETED",
+        result: { isNot: null },
+      },
+      select: { id: true },
+      orderBy: { completedAt: "desc" },
+    });
+    if (!prior) throw new Error("INITIAL_ASSESSMENT_REQUIRED");
+
+    const dailyCount = await tx.assessmentAttempt.count({
+      where: {
+        userId: input.userId,
+        assessmentType: testType,
+        status: "COMPLETED",
+        startedAt: { gte: start, lt: end },
+        selectionSnapshot: { path: ["reassessment"], equals: true },
+      },
+    });
+    if (dailyCount >= 1) throw new Error("REASSESSMENT_DAILY_LIMIT");
+
+    const credit = await tx.reassessmentCredit.findUnique({ where: { id: input.creditId } });
+    if (!credit || credit.userId !== input.userId) throw new Error("REASSESSMENT_CREDIT_NOT_FOUND");
+    if (credit.status !== "AVAILABLE") throw new Error("REASSESSMENT_CREDIT_NOT_AVAILABLE");
+    if (credit.testType !== testType) throw new Error("REASSESSMENT_CREDIT_TYPE_MISMATCH");
+
+    await tx.assessmentAttempt.create({
+      data: {
+        id: input.id,
+        userId: input.userId,
+        assessmentType: testType,
+        status: "IN_PROGRESS",
+        assessmentConfigurationId: input.assessmentConfigurationId,
+        assessmentConfigurationVersion: input.assessmentConfigurationVersion,
+        questionBankVersion: input.questionBankVersion,
+        taxonomyVersion: input.taxonomyVersion,
+        scoringVersion: input.scoringVersion,
+        selectionAlgorithmVersion: input.selectionAlgorithmVersion,
+        attemptSeed: input.attemptSeed,
+        selectionSnapshot: input.selectionSnapshot as Prisma.InputJsonValue,
+        startedAt: input.startedAt,
+        lastActivityAt: input.startedAt,
+        questions: {
+          create: input.selectedQuestions.map((question, index) => ({
+            questionId: question.questionRecordId,
+            questionVersionId: question.questionVersionId,
+            sequence: index + 1,
+            required: true,
+            questionSnapshot: questionSnapshot(question, index + 1) as Prisma.InputJsonValue,
+          })),
+        },
+      },
+    });
+
+    const consumed = await tx.reassessmentCredit.updateMany({
+      where: {
+        id: input.creditId,
+        userId: input.userId,
+        status: "AVAILABLE",
+        testType,
+      },
+      data: {
+        status: "CONSUMED",
+        consumedAt: input.startedAt,
+        consumedAttemptId: input.id,
+      },
+    });
+    if (consumed.count !== 1) throw new Error("REASSESSMENT_CREDIT_RACE");
+  });
+
+  return getAttempt(input.id);
+}
+
 export async function createAttempt(input: {
   id: string;
   userId?: string;
-  type: "free" | "premium" | "riasec";
+  type: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   assessmentConfigurationId: string;
   assessmentConfigurationVersion: string;
   questionBankVersion: string;
@@ -107,7 +209,7 @@ export async function createAttempt(input: {
       data: {
         id: input.id,
         userId: input.userId,
-        assessmentType: input.type.toUpperCase() as "FREE" | "PREMIUM" | "RIASEC",
+        assessmentType: input.type.toUpperCase() as AssessmentType,
         status: "IN_PROGRESS",
         assessmentConfigurationId: input.assessmentConfigurationId,
         assessmentConfigurationVersion: input.assessmentConfigurationVersion,

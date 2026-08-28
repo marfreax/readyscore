@@ -1,4 +1,5 @@
 import { randomBytes } from "node:crypto";
+import { prisma } from "../db/prisma";
 import { ASSESSMENT_CONFIG, type AssessmentType } from "../assessment-config";
 import { getQuestionBankStats } from "../question-bank-repository";
 import {
@@ -9,13 +10,16 @@ import {
   getPersistedResult,
   persistCompletedResult,
   saveAnswer as persistAnswer,
+  createReassessmentAttempt,
 } from "./assessment-repository";
 import { selectQuestions, snapshotFromSelection, SelectionError } from "./question-engine";
-import { calculateResult } from "./scoring-engine";
-import { scoreRiasec } from "./riasec/scoring";
-import { toAssessmentResult } from "./riasec/result-adapter";
-import type { RiasecAnswer, RiasecQuestion } from "./riasec/types";
+import { calculateRuntimeAssessmentResult } from "./scoring/engine-v2";
+import { interpretAssessmentResult } from "./result/engine-v1";
 import type { Answer, AssessmentResult, LikertValue, Question } from "./types";
+import {
+  getReassessmentEligibility,
+  isReassessmentTestType,
+} from "./reassessment";
 
 export class RuntimeError extends Error {
   constructor(public readonly code: string, message: string) {
@@ -27,7 +31,11 @@ export class RuntimeError extends Error {
 const newId = (type: AssessmentType) => `${type}-${Date.now()}-${randomBytes(6).toString("hex")}`;
 const newSeed = () => randomBytes(16).toString("hex");
 
-export async function startAssessment(type: AssessmentType, userId?: string) {
+export async function startAssessment(
+  type: AssessmentType,
+  userId?: string,
+  options?: { reassessment?: boolean; reassessmentPriorAttemptId?: string },
+) {
   const config = ASSESSMENT_CONFIG[type];
   if (config.status !== "PUBLISHED") {
     throw new RuntimeError("ASSESSMENT_NOT_AVAILABLE", "Assessment belum tersedia.");
@@ -61,6 +69,11 @@ export async function startAssessment(type: AssessmentType, userId?: string) {
     },
     selected,
   );
+  if (options?.reassessment) {
+    (snapshot as Record<string, unknown>).reassessment = true;
+    (snapshot as Record<string, unknown>).reassessmentPriorAttemptId =
+      options.reassessmentPriorAttemptId ?? null;
+  }
 
   const persisted = await createAttempt({
     id: attemptId,
@@ -77,6 +90,79 @@ export async function startAssessment(type: AssessmentType, userId?: string) {
     selectedQuestions: selected,
     startedAt: new Date(),
   });
+
+  if (!persisted) throw new RuntimeError("ATTEMPT_CREATE_FAILED", "Assessment attempt gagal dibuat.");
+  return buildRuntimeView(persisted);
+}
+
+export async function startReassessment(
+  type: "riasec" | "disc" | "eq" | "cognitive",
+  userId: string,
+) {
+  if (!isReassessmentTestType(type)) {
+    throw new RuntimeError("INVALID_ASSESSMENT_TYPE", "Tipe assessment reassessment tidak valid.");
+  }
+
+  const eligibility = await getReassessmentEligibility(userId, type);
+  if (!eligibility.eligible) {
+    throw new RuntimeError(eligibility.code, eligibility.message);
+  }
+
+  const config = ASSESSMENT_CONFIG[type];
+  const stats = await getQuestionBankStats();
+  const attemptId = newId(type);
+  const attemptSeed = newSeed();
+
+  let selected;
+  try {
+    selected = await selectQuestions(type, attemptSeed);
+  } catch (error) {
+    if (error instanceof SelectionError) throw new RuntimeError(error.code, error.message);
+    throw error;
+  }
+
+  if (selected.length !== config.questionCount) {
+    throw new RuntimeError("SELECTION_COUNT_MISMATCH", "Jumlah question hasil selection tidak sesuai konfigurasi.");
+  }
+
+  const snapshot = snapshotFromSelection(
+    type,
+    { attemptId, attemptSeed, questionBankVersion: stats.questionBankVersion },
+    selected,
+  );
+  (snapshot as Record<string, unknown>).reassessment = true;
+  (snapshot as Record<string, unknown>).reassessmentPriorAttemptId = eligibility.priorAttemptId;
+
+  let persisted;
+  try {
+    persisted = await createReassessmentAttempt({
+      id: attemptId,
+      userId,
+      type,
+      assessmentConfigurationId: config.id,
+      assessmentConfigurationVersion: config.version,
+      questionBankVersion: stats.questionBankVersion,
+      taxonomyVersion: snapshot.taxonomyVersion,
+      scoringVersion: config.scoringVersion,
+      selectionAlgorithmVersion: config.selectionAlgorithmVersion,
+      attemptSeed,
+      selectionSnapshot: snapshot,
+      selectedQuestions: selected,
+      startedAt: new Date(),
+      creditId: eligibility.creditId,
+    });
+  } catch (error) {
+    const code = error instanceof Error ? error.message : "REASSESSMENT_START_FAILED";
+    const messages: Record<string, string> = {
+      INITIAL_ASSESSMENT_REQUIRED: "Reassessment hanya tersedia setelah assessment awal selesai.",
+      REASSESSMENT_DAILY_LIMIT: "Maksimum 1 reassessment untuk test ini per hari.",
+      REASSESSMENT_CREDIT_NOT_FOUND: "Reassessment Credit tidak tersedia.",
+      REASSESSMENT_CREDIT_NOT_AVAILABLE: "Reassessment Credit tidak tersedia.",
+      REASSESSMENT_CREDIT_TYPE_MISMATCH: "Reassessment Credit tidak sesuai dengan test.",
+      REASSESSMENT_CREDIT_RACE: "Reassessment Credit baru saja digunakan. Silakan coba lagi.",
+    };
+    throw new RuntimeError(code, messages[code] ?? "Reassessment gagal dimulai.");
+  }
 
   if (!persisted) throw new RuntimeError("ATTEMPT_CREATE_FAILED", "Assessment attempt gagal dibuat.");
   return buildRuntimeView(persisted);
@@ -131,6 +217,18 @@ export async function getAttemptResult(id: string) {
   return persisted;
 }
 
+export async function getAttemptResultForUser(userId: string, attemptId: string) {
+  const owned = await prisma.assessmentAttempt.findFirst({
+    where: { id: attemptId, userId },
+    select: { id: true },
+  });
+  if (!owned) throw new RuntimeError("RESULT_NOT_AVAILABLE", "Hasil assessment tidak tersedia untuk akun ini.");
+
+  const persisted = await getPersistedResult(attemptId);
+  if (!persisted) throw new RuntimeError("RESULT_NOT_AVAILABLE", "Hasil assessment belum tersedia.");
+  return persisted;
+}
+
 export async function saveAnswer(id: string, questionId: string, value: unknown) {
   const attempt = await getAttempt(id);
   if (attempt.attempt.status !== "IN_PROGRESS") {
@@ -177,32 +275,11 @@ export async function submitAssessment(id: string) {
 
   let result: AssessmentResult;
   try {
-    if (attempt.attempt.assessmentType === "riasec") {
-      const riasecQuestions: RiasecQuestion[] = questions.map((question) => {
-        const dimension = question.domain.trim().toUpperCase();
-        if (!["R", "I", "A", "S", "E", "C"].includes(dimension)) {
-          throw new Error(
-            `RIASEC question ${question.id} memiliki dimension tidak valid: ${question.domain}`,
-          );
-        }
-
-        return {
-          id: question.id,
-          code: question.code,
-          dimension: dimension as RiasecQuestion["dimension"],
-          reverseScore: question.reverseScore,
-          weight: question.weight,
-        };
-      });
-
-      const riasecAnswers: RiasecAnswer[] = answers.map((answer) => ({
-        questionId: answer.questionId,
-        value: answer.value,
-      }));
-
-      const measurement = scoreRiasec(riasecQuestions, riasecAnswers);
-
-      result = toAssessmentResult(measurement, {
+    result = calculateRuntimeAssessmentResult(
+      attempt.attempt.assessmentType,
+      questions,
+      answers,
+      {
         attemptId: id,
         assessmentConfigurationVersion:
           attempt.attempt.assessmentConfigurationVersion,
@@ -210,32 +287,8 @@ export async function submitAssessment(id: string) {
         taxonomyVersion,
         scoringVersion: attempt.attempt.scoringVersion,
         completedAt,
-      });
-
-      // Preserve the complete test-specific RIASEC contract inside the
-      // existing JSON result column. The generic v2 TypeScript contract
-      // remains unchanged.
-      result = {
-        ...result,
-        riasec: {
-          contractVersion: "RIASEC_RESULT_V1",
-          measurement,
-        },
-      } as AssessmentResult;
-    } else {
-      result = calculateResult(
-        questions,
-        answers,
-        attempt.attempt.assessmentType,
-        {
-          attemptId: id,
-          questionBankVersion: attempt.attempt.questionBankVersion,
-          taxonomyVersion,
-          scoringVersion: attempt.attempt.scoringVersion,
-          completedAt,
-        },
-      );
-    }
+      },
+    );
   } catch (error) {
     throw new RuntimeError(
       "SCORING_FAILED",
@@ -243,7 +296,17 @@ export async function submitAssessment(id: string) {
     );
   }
 
-  return persistCompletedResult(id, result);
+  let interpretedResult = result;
+  if (attempt.attempt.assessmentType === "riasec" || attempt.attempt.assessmentType === "disc" || attempt.attempt.assessmentType === "eq" || attempt.attempt.assessmentType === "cognitive") {
+    interpretedResult = interpretAssessmentResult(
+      result,
+      (result as AssessmentResult & { riasec?: unknown; disc?: unknown; eq?: unknown; cognitive?: unknown })[
+        attempt.attempt.assessmentType
+      ],
+    );
+  }
+
+  return persistCompletedResult(id, interpretedResult);
 }
 
 export async function abandonAssessment(id: string) {

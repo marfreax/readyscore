@@ -26,6 +26,7 @@ type ScoringAnswer = Answer & {
 
 type ResultMetadata = {
   attemptId: string;
+  assessmentConfigurationVersion: string;
   questionBankVersion: string;
   taxonomyVersion: string;
   scoringVersion: string;
@@ -325,7 +326,7 @@ export function calculateResult(
     assessmentType,
 
     assessmentConfigurationVersion:
-      metadata.taxonomyVersion,
+      metadata.assessmentConfigurationVersion,
 
     questionBankVersion: metadata.questionBankVersion,
     taxonomyVersion: metadata.taxonomyVersion,

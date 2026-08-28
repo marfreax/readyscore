@@ -5,7 +5,7 @@ import { randomBytes } from "node:crypto";
 export type AttemptHistoryRecord = {
   id: string;
   userId: string;
-  assessmentType: "free" | "premium";
+  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED";
   startedAt: string;
   completedAt?: string;
@@ -39,7 +39,7 @@ function save(state: OwnershipState) {
 
 export function createOwnedAttempt(input: {
   userId: string;
-  assessmentType: "free" | "premium";
+  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   runtimeAttemptId?: string;
 }) {
   const state = load();
@@ -58,7 +58,7 @@ export function createOwnedAttempt(input: {
 
 export function bindRuntimeAttempt(
   runtimeAttemptId: string,
-  input: { userId: string; assessmentType: "free" | "premium"; startedAt?: string },
+  input: { userId: string; assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive"; startedAt?: string },
 ) {
   const state = load();
   const existing = state.attempts.find((item) => item.id === runtimeAttemptId);

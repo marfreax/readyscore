@@ -2,7 +2,7 @@ import type { Question, LikertValue, AssessmentResult } from "./types";
 
 export interface AssessmentSnapshot {
   attemptId: string;
-  assessmentType: "free" | "premium";
+  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   assessmentConfigurationVersion: string;
   questionBankVersion: string;
   taxonomyVersion: string;
@@ -14,7 +14,7 @@ export interface AssessmentSnapshot {
   selectionMetadata: Record<string, unknown>;
 }
 export interface RuntimeAttempt {
-  attempt: { id:string; assessmentType:"free"|"premium"; status:"IN_PROGRESS"|"COMPLETED"|"ABANDONED"|"EXPIRED"; startedAt:string; completedAt?:string; assessmentConfigurationId:string; assessmentConfigurationVersion:string; questionBankVersion:string; scoringVersion:string };
+  attempt: { id:string; assessmentType:"free"|"premium"|"riasec"|"disc"|"eq"|"cognitive"; status:"IN_PROGRESS"|"COMPLETED"|"ABANDONED"|"EXPIRED"; startedAt:string; completedAt?:string; assessmentConfigurationId:string; assessmentConfigurationVersion:string; questionBankVersion:string; scoringVersion:string };
   snapshot: AssessmentSnapshot;
   questions: Question[];
   answers: Map<string,LikertValue>;

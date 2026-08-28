@@ -1,0 +1,31 @@
+{
+  "phase": "3.1",
+  "title": "Commercial Product & Entitlement Architecture",
+  "baseline": "F.10-C.2-F",
+  "status": "PASS_VERIFIED",
+  "scope": [
+    "CommercialTier catalog FREE/BASIC/MEDIUM/ADVANCE",
+    "Product catalog persistence",
+    "Explicit ProductEntitlement boundary",
+    "Explicit UserEntitlement boundary",
+    "Read-only commercial catalog API"
+  ],
+  "forbidden_scope": [
+    "payment",
+    "subscription billing",
+    "automatic entitlement assignment",
+    "hard-coded tier-to-test mapping",
+    "RIASEC question lifecycle mutation",
+    "scoring mutation"
+  ],
+  "pricing_status": "PLANNING_HYPOTHESIS",
+  "regression_baseline": "F.10-C.2-F PASS",
+  "verifiedAt": "2026-08-25",
+  "verification": [
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm db:migrate:deploy",
+    "pnpm commercial:gate",
+    "pnpm e2e:riasec"
+  ]
+}

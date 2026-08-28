@@ -2,21 +2,348 @@
   "version": 1,
   "users": [
     {
-      "id": "usr_29325c23c1b3dcec58bb45cb",
-      "name": "Umar Ready",
-      "email": "umar@yopmail.com",
-      "passwordHash": "scrypt$c9c1a92344e533dac78bfa694a82bbc4$c8534386bada23d2a7033cb49e78e665eb7aeb2772c69625129f55124bace033848b098962b9bd2cb195600678b67e5c0a7f6a9d909323a5ea581e9af8be25af",
+      "id": "usr_287657cd7a6ab3055a6ac191",
+      "name": "ReadyScore L15 Admin E2E",
+      "email": "e2e_l15_1787883429121@example.test",
+      "passwordHash": "scrypt$cb783c41ae0d8ec6c79236508db4df70$e5ec757e16197f75706d2ffbccf3439163d74f1e4ef071096c1df2a57ce821385c89b4661a7dd05986d63e03e9b2a178df321ef7869aa4426424d9a5460c04a1",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T02:17:09.671Z",
+      "updatedAt": "2026-08-28T02:17:09.671Z"
+    },
+    {
+      "id": "usr_642547827e6a62f3d98e7bef",
+      "name": "ReadyScore L15 Admin E2E",
+      "email": "e2e_l15_1787884690374@example.test",
+      "passwordHash": "scrypt$65650e7961a896d8c927a1837e0c75b3$f3715094f16e3d6cb620e17199830f4129dd5a9b79a2bb0c1f92a3a544ea9cba26f64e99cc320bd9826c4187dd54e3c53d151020f057a41337dfa23e46ce96c2",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T02:38:10.952Z",
+      "updatedAt": "2026-08-28T02:38:10.952Z"
+    },
+    {
+      "id": "usr_c777991f0abb39e7fd9569a3",
+      "name": "ReadyScore L15 Admin E2E",
+      "email": "e2e_l15_1787885738242@example.test",
+      "passwordHash": "scrypt$8c9522e0445aa3da604dcedc2f6f4f4c$9cfc981be4c478e8f762701bf425ca951235adbcf465e167b98e539fc0f29a22425e76cf8046d0bed6e70f70168075f9f6343d1b6427cfdd89048fb4727b32d5",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T02:55:38.689Z",
+      "updatedAt": "2026-08-28T02:55:38.689Z"
+    },
+    {
+      "id": "usr_90dd825cb90b2e444872783b",
+      "name": "ReadyScore L16 Admin E2E",
+      "email": "e2e_l16_1787889628933@example.test",
+      "passwordHash": "scrypt$8188896d6444ec83455ca15464b25b79$497047c69b4e73c5532b439e77d9eb4a33d49b27c154344bec90d892d6be789e3c85d1972692fffe12681b8d02a9795184550be2429a1a97fb8cdcac21188602",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T04:00:29.454Z",
+      "updatedAt": "2026-08-28T04:00:29.454Z"
+    },
+    {
+      "id": "usr_840f2704755d9774241723ec",
+      "name": "ReadyScore L16 Admin E2E",
+      "email": "e2e_l16_1787889764818@example.test",
+      "passwordHash": "scrypt$44cd48f3752d9150d8732342ac87ede3$8237ba6ce8603a4a075340c0c38efbc05d14b327eb604753d0fff393c442afbbb052afc65e446be3aec8c28193f82ebebcae8ebe1399f55c83dfab19a16b5e0d",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T04:02:45.571Z",
+      "updatedAt": "2026-08-28T04:02:45.571Z"
+    },
+    {
+      "id": "usr_42a1d8adbc2c2b2ba0ed0bc3",
+      "name": "ReadyScore L16 Admin E2E",
+      "email": "e2e_l16_1787890600926@example.test",
+      "passwordHash": "scrypt$773ddfb5dd2568b8d5aae21f56eef18e$35eb93bf112c7b1042691fcae50a03ede883848c17f99e71282355de0371dfaa6b13f36ab1e10256f2cefb3b1ee8e98463cde13c5b8490c8fb40434e3139a896",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T04:16:41.455Z",
+      "updatedAt": "2026-08-28T04:16:41.455Z"
+    },
+    {
+      "id": "usr_bef555bd217ff67df81ac408",
+      "name": "ReadyScore L17 Admin E2E",
+      "email": "e2e_l17_1787891191619@example.test",
+      "passwordHash": "scrypt$f65f3d72661612edd3794c2bf9e5aacc$c50afd6f2941169c4fce8cfbab9ff0c3000f8b77414904b1f473a3d77ed40f2e55b247d7dc26c4af91b0831b4e9ce4b3f15a769ed28f874e4a095d7bc7e08aa9",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T04:26:32.178Z",
+      "updatedAt": "2026-08-28T04:26:32.178Z"
+    },
+    {
+      "id": "usr_46751ef715690279152d77e3",
+      "name": "ReadyScore L17 Admin E2E",
+      "email": "e2e_l17_1787891264102@example.test",
+      "passwordHash": "scrypt$bf85382a6df447a21a2fe1ac798c3d9b$0da801208287c33d4a9c4f3d927052ccea0038a5b26e22dc548279cc60ed3b0ef007db7885fa0f666a74597728a2dcf42de102e0dfaeeacbc68d3cfafb921519",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T04:27:44.631Z",
+      "updatedAt": "2026-08-28T04:27:44.631Z"
+    },
+    {
+      "id": "usr_9c46d7089619c85e252b1896",
+      "name": "ReadyScore L17 Admin E2E",
+      "email": "e2e_l17_1787892661197@example.test",
+      "passwordHash": "scrypt$296ddf551c262a3ca6ead8766374c502$a89d39a7c20ac1a64f3c1785efcd5037b9be2df82dae272bf1c6992a7c89c2e4eb33342d9e523e592ad6014f691b7c2af1cd5b77f34d590d2c36c294e7b5a223",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T04:51:01.737Z",
+      "updatedAt": "2026-08-28T04:51:01.737Z"
+    },
+    {
+      "id": "usr_fb2d6f90f2771532e04f9dfe",
+      "name": "ReadyScore L17 Admin E2E",
+      "email": "e2e_l17_1787896130060@example.test",
+      "passwordHash": "scrypt$7566fedb80cd67bf783c793cf231ce19$37c217160a357989e00ada5404458dd4c9112190f37d76a6ca49997cafa2d9093d8badeb9d6e139d1c90a0ed2f248b22ada894a7873cbdfed24100eb06becb8f",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T05:48:50.581Z",
+      "updatedAt": "2026-08-28T05:48:50.581Z"
+    },
+    {
+      "id": "usr_0aed7abe6431de21f95fab07",
+      "name": "ReadyScore L17 Admin E2E",
+      "email": "e2e_l17_1787896692769@example.test",
+      "passwordHash": "scrypt$ab630072728b46b6c6eb6a5406a32387$e524eddad00a3ac5494abf91432b577585406d01ca52848fa0a617fff9acdc26b9e3e69ce5ad2b557df8312fb811ced33871c38a8293a339e26552046a3ef787",
+      "role": "ADMIN",
+      "createdAt": "2026-08-28T05:58:13.314Z",
+      "updatedAt": "2026-08-28T05:58:13.314Z"
+    },
+    {
+      "id": "usr_1ae1d0535d7152f4220caf12",
+      "name": "Dian Wulan",
+      "email": "dian@yopmail.com",
+      "passwordHash": "scrypt$3e80bd2ee83cb39d0a36d6c48e21801e$d15646699c4ea12c7fac032f97ff3065de72424ddc9baa7e3e0df99c376d08d8ab612aba439adb56bc2fa9cfd6a4d881469c89df1b95bf24164b3bd36b567d44",
       "role": "USER",
-      "createdAt": "2026-08-22T13:47:11.515Z",
-      "updatedAt": "2026-08-22T13:49:47.153Z"
+      "createdAt": "2026-08-28T06:02:20.302Z",
+      "updatedAt": "2026-08-28T06:02:20.302Z"
+    },
+    {
+      "id": "usr_7a295ccc7c6b57401b70680a",
+      "name": "ReadyScore L18 Customer",
+      "email": "e2e_l18_1787920159067@example.test",
+      "passwordHash": "scrypt$7f315543b079cf797afe931e0925cc4e$3c91a654bfafb4a9813d0038f7e3d1d4eb8b302867fa9f66a2b792130a3bfef228dd00104ba5a5345f4e79f7b48797d179495d18b1f45aaaa6e136ce8bdcb418",
+      "role": "USER",
+      "createdAt": "2026-08-28T12:29:19.230Z",
+      "updatedAt": "2026-08-28T12:29:19.230Z"
+    },
+    {
+      "id": "usr_ade93e26d98cb1a3a8d89694",
+      "name": "Other L18 Customer",
+      "email": "e2e_l18_other_1787920160445@example.test",
+      "passwordHash": "scrypt$64fc9eeb5c7f163eef52eb57428b154d$ce49bb5b4a83b5affb2ae0a4bc0547c78c1c2dbe98edcf1d9095801d1509542464c1e10964c07b8b2cb830f02a6b7309e0481da3f09c52aad4483bd5359cf0af",
+      "role": "USER",
+      "createdAt": "2026-08-28T12:29:20.448Z",
+      "updatedAt": "2026-08-28T12:29:20.448Z"
+    },
+    {
+      "id": "usr_6a0c0766d14bae4344aa3a5e",
+      "name": "ReadyScore L18 Result",
+      "email": "e2e_result_1787920160553@example.test",
+      "passwordHash": "scrypt$27eca5df694ec5783ab480630a55104c$c9087221f3c63b96e4bca0a6d2d1b1693f23ea37b2ad0e73d332f6475bb2604526590547c35e263422d3a757ab382ad325aefdbfdc063090b914be008d5d28e5",
+      "role": "USER",
+      "createdAt": "2026-08-28T12:29:20.590Z",
+      "updatedAt": "2026-08-28T12:29:20.590Z"
+    },
+    {
+      "id": "usr_8fa0698823259e445bb0445a",
+      "name": "Other L18 User",
+      "email": "e2e_result_other_1787920160553@example.test",
+      "passwordHash": "scrypt$d721c25e02b8efeae54af75539f1f507$e7b224e1b4044d5dcefc6ccf3e310d12902bf19a431a306410a9388e60fb1c15e07f346b976450f7b964ac1c12391bbbebe22529bffc66aa0a165dde472d41bf",
+      "role": "USER",
+      "createdAt": "2026-08-28T12:29:22.599Z",
+      "updatedAt": "2026-08-28T12:29:22.599Z"
+    },
+    {
+      "id": "usr_f41239366917231197a211d8",
+      "name": "ReadyScore L19 Customer",
+      "email": "e2e_l19_1787920809810@example.test",
+      "passwordHash": "scrypt$506abeecc60e1636220610f08702f69d$6706fd9d8d865f832b02abbf5ab28075fa1613db0f327cb6529afc1c3ae3e642ae5f79fe0d80911614f5c146cfb743d099c4a737587d7abfb28f8cb9dc264ed8",
+      "role": "USER",
+      "createdAt": "2026-08-28T12:40:09.863Z",
+      "updatedAt": "2026-08-28T12:40:09.863Z"
+    },
+    {
+      "id": "usr_f26c2b34de558dd055e2654f",
+      "name": "ReadyScore L19A",
+      "email": "e2e_l19a_1787922974380@example.test",
+      "passwordHash": "scrypt$ef0a35a67325a181f6d16c3262684230$2d92f9ad2aa24093c8b064f4415dbb5743bf4914ba011d3fb317eda0c0d587daed5dc386c5ca01e532fc50d411a27911a527c48ab7bd63c7041010f7b03bddf5",
+      "role": "USER",
+      "createdAt": "2026-08-28T13:16:14.520Z",
+      "updatedAt": "2026-08-28T13:16:14.520Z"
     }
   ],
   "sessions": [
     {
-      "id": "ses_9c64d842d35ab15d0afaa25567af62320f32c9d8044ce8d1",
+      "id": "ses_de4c86256adba693c6f6baeaeccd4b4873c6d8f8eda4f0d8",
+      "userId": "usr_287657cd7a6ab3055a6ac191",
+      "createdAt": "2026-08-28T02:17:09.717Z",
+      "expiresAt": "2026-09-04T02:17:09.717Z"
+    },
+    {
+      "id": "ses_045ccb1ed2757c2883c028b46ab0333a685df41f9202b2ce",
+      "userId": "usr_287657cd7a6ab3055a6ac191",
+      "createdAt": "2026-08-28T02:17:09.821Z",
+      "expiresAt": "2026-09-04T02:17:09.821Z"
+    },
+    {
+      "id": "ses_38868038f22828217121c59e7997d82d855d65db0e3a990d",
+      "userId": "usr_642547827e6a62f3d98e7bef",
+      "createdAt": "2026-08-28T02:38:11.002Z",
+      "expiresAt": "2026-09-04T02:38:11.002Z"
+    },
+    {
+      "id": "ses_d229d2d19d6dae315b152a919857ad98ce920a69089b0441",
+      "userId": "usr_642547827e6a62f3d98e7bef",
+      "createdAt": "2026-08-28T02:38:11.110Z",
+      "expiresAt": "2026-09-04T02:38:11.110Z"
+    },
+    {
+      "id": "ses_41da6beddeb7aa0a194784b17140c010f326b2af6945bfe5",
+      "userId": "usr_c777991f0abb39e7fd9569a3",
+      "createdAt": "2026-08-28T02:55:38.742Z",
+      "expiresAt": "2026-09-04T02:55:38.742Z"
+    },
+    {
+      "id": "ses_6842b54b6f299d294eba3d3a6680edb32e9cbb213b7420f3",
+      "userId": "usr_c777991f0abb39e7fd9569a3",
+      "createdAt": "2026-08-28T02:55:38.794Z",
+      "expiresAt": "2026-09-04T02:55:38.794Z"
+    },
+    {
+      "id": "ses_7d9d83343394745143317a55a55ce75127ad4a818dbf3449",
+      "userId": "usr_90dd825cb90b2e444872783b",
+      "createdAt": "2026-08-28T04:00:29.497Z",
+      "expiresAt": "2026-09-04T04:00:29.497Z"
+    },
+    {
+      "id": "ses_d16cf435ae99b36dcda3d2f39c29bd2f1e8ebc1fe878e68d",
+      "userId": "usr_90dd825cb90b2e444872783b",
+      "createdAt": "2026-08-28T04:00:29.612Z",
+      "expiresAt": "2026-09-04T04:00:29.612Z"
+    },
+    {
+      "id": "ses_991bc4aa2f799c9026f2fd65182067d692d73a8eaa0c2169",
+      "userId": "usr_840f2704755d9774241723ec",
+      "createdAt": "2026-08-28T04:02:45.618Z",
+      "expiresAt": "2026-09-04T04:02:45.618Z"
+    },
+    {
+      "id": "ses_6183afd1b46c2294647e20cc1f33aed6ef4bcce6af17fac9",
+      "userId": "usr_840f2704755d9774241723ec",
+      "createdAt": "2026-08-28T04:02:45.745Z",
+      "expiresAt": "2026-09-04T04:02:45.745Z"
+    },
+    {
+      "id": "ses_8b57e8cc4d973b1ec7dcf9393b849a977fbcd6aa9d100e9b",
+      "userId": "usr_42a1d8adbc2c2b2ba0ed0bc3",
+      "createdAt": "2026-08-28T04:16:41.497Z",
+      "expiresAt": "2026-09-04T04:16:41.497Z"
+    },
+    {
+      "id": "ses_b46cc8930a7a1b581d1ac1f835810102f03a8c92d82088a2",
+      "userId": "usr_42a1d8adbc2c2b2ba0ed0bc3",
+      "createdAt": "2026-08-28T04:16:41.605Z",
+      "expiresAt": "2026-09-04T04:16:41.605Z"
+    },
+    {
+      "id": "ses_fec3fe90a27fa62f6e6f8934a725bc5e75fc795123d7f0a5",
+      "userId": "usr_bef555bd217ff67df81ac408",
+      "createdAt": "2026-08-28T04:26:32.223Z",
+      "expiresAt": "2026-09-04T04:26:32.223Z"
+    },
+    {
+      "id": "ses_fa5ff1e8443de61095b26a300b4cd63804b1969e422a87be",
+      "userId": "usr_bef555bd217ff67df81ac408",
+      "createdAt": "2026-08-28T04:26:32.355Z",
+      "expiresAt": "2026-09-04T04:26:32.355Z"
+    },
+    {
+      "id": "ses_a873b72914d44db47b25400eefd17c038f12dedda0e0afe3",
+      "userId": "usr_46751ef715690279152d77e3",
+      "createdAt": "2026-08-28T04:27:44.672Z",
+      "expiresAt": "2026-09-04T04:27:44.672Z"
+    },
+    {
+      "id": "ses_b5c3419f515e6ab9fc389976bd9d8df0500bfa4a9f6c4445",
+      "userId": "usr_46751ef715690279152d77e3",
+      "createdAt": "2026-08-28T04:27:44.777Z",
+      "expiresAt": "2026-09-04T04:27:44.777Z"
+    },
+    {
+      "id": "ses_cc159c1e79e9cb9f3907ca1519453be385a3fabb0611d6b1",
+      "userId": "usr_9c46d7089619c85e252b1896",
+      "createdAt": "2026-08-28T04:51:01.788Z",
+      "expiresAt": "2026-09-04T04:51:01.788Z"
+    },
+    {
+      "id": "ses_e4337becbd34aed4b86ca751fe980f8c75f59137d8c0506f",
+      "userId": "usr_9c46d7089619c85e252b1896",
+      "createdAt": "2026-08-28T04:51:01.899Z",
+      "expiresAt": "2026-09-04T04:51:01.899Z"
+    },
+    {
+      "id": "ses_cb936f104f262e920cfcd5f474f53bb56750c6487b1c9666",
+      "userId": "usr_fb2d6f90f2771532e04f9dfe",
+      "createdAt": "2026-08-28T05:48:50.630Z",
+      "expiresAt": "2026-09-04T05:48:50.630Z"
+    },
+    {
+      "id": "ses_dac235ce71ed022e157828e11ef50e33a219bc774c11ad55",
+      "userId": "usr_fb2d6f90f2771532e04f9dfe",
+      "createdAt": "2026-08-28T05:48:50.738Z",
+      "expiresAt": "2026-09-04T05:48:50.738Z"
+    },
+    {
+      "id": "ses_965ac7e0e586ae86ff94814125c13955db0a95314b8b29a6",
+      "userId": "usr_0aed7abe6431de21f95fab07",
+      "createdAt": "2026-08-28T05:58:13.365Z",
+      "expiresAt": "2026-09-04T05:58:13.365Z"
+    },
+    {
+      "id": "ses_f960e49e17e518bfb82f38e569c4599fd09520ac2e54105a",
+      "userId": "usr_0aed7abe6431de21f95fab07",
+      "createdAt": "2026-08-28T05:58:13.486Z",
+      "expiresAt": "2026-09-04T05:58:13.486Z"
+    },
+    {
+      "id": "ses_6281201d0910834bd4856195a49802f52005bf5f441b6cdd",
       "userId": "usr_29325c23c1b3dcec58bb45cb",
-      "createdAt": "2026-08-22T13:47:11.553Z",
-      "expiresAt": "2026-08-29T13:47:11.553Z"
+      "createdAt": "2026-08-28T06:01:38.297Z",
+      "expiresAt": "2026-09-04T06:01:38.297Z"
+    },
+    {
+      "id": "ses_97bd5c5780b50fbf206099d53ae3f44998bda4d117dd74ce",
+      "userId": "usr_1ae1d0535d7152f4220caf12",
+      "createdAt": "2026-08-28T06:02:20.377Z",
+      "expiresAt": "2026-09-04T06:02:20.377Z"
+    },
+    {
+      "id": "ses_5ae37e6b35822731f67d4be7128c57e5effd1118203d298d",
+      "userId": "usr_7a295ccc7c6b57401b70680a",
+      "createdAt": "2026-08-28T12:29:19.286Z",
+      "expiresAt": "2026-09-04T12:29:19.286Z"
+    },
+    {
+      "id": "ses_16a97cc8989a892fc8029f9e2a95ef4572c7d1af140ca947",
+      "userId": "usr_ade93e26d98cb1a3a8d89694",
+      "createdAt": "2026-08-28T12:29:20.486Z",
+      "expiresAt": "2026-09-04T12:29:20.486Z"
+    },
+    {
+      "id": "ses_3c9abf0127c4b24e605c15836b934d00ea79710f2546d533",
+      "userId": "usr_6a0c0766d14bae4344aa3a5e",
+      "createdAt": "2026-08-28T12:29:20.627Z",
+      "expiresAt": "2026-09-04T12:29:20.627Z"
+    },
+    {
+      "id": "ses_4c441cd4c956b5579a58a1dc722a1e7c88e5bb38289fcd8c",
+      "userId": "usr_8fa0698823259e445bb0445a",
+      "createdAt": "2026-08-28T12:29:22.633Z",
+      "expiresAt": "2026-09-04T12:29:22.633Z"
+    },
+    {
+      "id": "ses_9e9811817f4e79b9701beff2f661493a7d9092d87d022b4e",
+      "userId": "usr_f41239366917231197a211d8",
+      "createdAt": "2026-08-28T12:40:09.922Z",
+      "expiresAt": "2026-09-04T12:40:09.922Z"
+    },
+    {
+      "id": "ses_ca21e54ba0dacf5cfc8aa65de3ca5474791d75efc38996b9",
+      "userId": "usr_f26c2b34de558dd055e2654f",
+      "createdAt": "2026-08-28T13:16:14.580Z",
+      "expiresAt": "2026-09-04T13:16:14.580Z"
     }
   ]
 }
