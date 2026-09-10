@@ -31,7 +31,7 @@ export const cognitiveProfileAdapter: ProfileSignalAdapter = {
           scoringVersion: input.result.scoringVersion,
           interpretationVersion: input.result.interpretation?.interpretationVersion,
           excludedSignalCount: 0,
-          exclusionReasons: ["COGNITIVE_RESULT_V1 measurement payload is missing or invalid."],
+          exclusionReasons: ["COGNITIVE_RESULT_V2 measurement payload is missing or invalid."],
         },
       };
     }
@@ -50,7 +50,7 @@ export const cognitiveProfileAdapter: ProfileSignalAdapter = {
       confidence,
       sourceTestType: "COGNITIVE",
       sourceResultAttemptId: input.result.attemptId,
-      sourceResultContractVersion: input.result.interpretation?.contractVersion ?? "COGNITIVE_RESULT_V1",
+      sourceResultContractVersion: input.result.interpretation?.contractVersion ?? "COGNITIVE_RESULT_V2",
       sourceScoringVersion: measurement.scoringVersion,
       sourceInterpretationVersion: input.result.interpretation?.interpretationVersion,
     }));
@@ -62,7 +62,7 @@ export const cognitiveProfileAdapter: ProfileSignalAdapter = {
         attemptId: input.result.attemptId,
         status: "AVAILABLE",
         confidence,
-        resultContractVersion: input.result.interpretation?.contractVersion ?? "COGNITIVE_RESULT_V1",
+        resultContractVersion: input.result.interpretation?.contractVersion ?? "COGNITIVE_RESULT_V2",
         scoringVersion: measurement.scoringVersion,
         interpretationVersion: input.result.interpretation?.interpretationVersion,
         excludedSignalCount: 0,

@@ -1,13 +1,13 @@
 import { prisma } from "../lib/db/prisma.ts";
 
 function fail(code, message) {
-  console.error("F.10-C.2-F RESULT PAYLOAD RECONCILIATION: FAIL");
+  console.error("RIASEC ACTIVE V2 RESULT PAYLOAD RECONCILIATION: FAIL");
   console.error(`${code}: ${message}`);
   process.exitCode = 1;
 }
 
 try {
-  console.log("=== RIASEC F.10-C.2-F RESULT PAYLOAD RECONCILIATION ===");
+  console.log("=== RIASEC RIASEC ACTIVE V2 RESULT PAYLOAD RECONCILIATION ===");
   console.log("Mode     : READ-ONLY");
   console.log("Mutation : NONE");
 
@@ -43,10 +43,10 @@ try {
   console.log(`Completed RIASEC attempts : ${rows.length}`);
   console.log(`Result snapshot keys      : ${Object.keys(result).join(", ")}`);
 
-  if (!riasec || riasec.contractVersion !== "RIASEC_RESULT_V1") {
+  if (!riasec || riasec.contractVersion !== "RIASEC_RESULT_V2") {
     fail(
       "RIASEC_CONTRACT_MISSING",
-      "Persisted result snapshot does not contain riasec.contractVersion=RIASEC_RESULT_V1.",
+      "Persisted result snapshot does not contain riasec.contractVersion=RIASEC_RESULT_V2.",
     );
     process.exit();
   }
@@ -81,8 +81,8 @@ try {
     }
   }
 
-  if (measurement.scoringVersion !== "RIASEC_SCORE_V1") {
-    fail("RIASEC_SCORING_VERSION_MISMATCH", `Expected RIASEC_SCORE_V1, found ${measurement.scoringVersion}.`);
+  if (measurement.scoringVersion !== "RIASEC_SCORE_V2") {
+    fail("RIASEC_SCORING_VERSION_MISMATCH", `Expected RIASEC_SCORE_V2, found ${measurement.scoringVersion}.`);
     process.exit();
   }
 
@@ -91,13 +91,13 @@ try {
     process.exit();
   }
 
-  console.log("RIASEC_RESULT_V1 contract  : PASS");
+  console.log("RIASEC_RESULT_V2 contract  : PASS");
   console.log("Six dimensions             : PASS");
   console.log("Numeric dimension scores   : PASS");
   console.log("Scoring version            : PASS");
   console.log(`Top code                   : ${measurement.topCode}`);
   console.log("Database mutation          : NONE");
-  console.log("F.10-C.2-F RESULT PAYLOAD RECONCILIATION: PASS");
+  console.log("RIASEC ACTIVE V2 RESULT PAYLOAD RECONCILIATION: PASS");
 } catch (error) {
   fail(
     "RESULT_PAYLOAD_QUERY_FAILED",

@@ -1,0 +1,11 @@
+{
+  "version": "V9.8",
+  "status": "IMPLEMENTED",
+  "delivery": "FULL",
+  "excludedPaths": ["docs/", "node_modules/", ".next/"],
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "universalScore": false,
+  "crossTestSynthesis": false
+}

@@ -13,15 +13,7 @@ export class ReportAccessError extends Error {
   }
 }
 
-export async function getUserReport(userId: string): Promise<ReportSummary> {
-  const allowed = await hasFeatureAccess(userId, "REPORT_ACCESS", "ADVANCED_REPORT_V1");
-  if (!allowed) {
-    throw new ReportAccessError(
-      "REPORT_ACCESS_REQUIRED",
-      "Report belum tersedia untuk entitlement akun ini.",
-    );
-  }
-
+async function buildUserReport(userId: string, statusOverride?: ReportSummary["status"]): Promise<ReportSummary> {
   const attempts = await prisma.assessmentAttempt.findMany({
     where: { userId },
     orderBy: { createdAt: "desc" },
@@ -34,7 +26,7 @@ export async function getUserReport(userId: string): Promise<ReportSummary> {
     },
   });
 
-  return buildReportSummary({
+  const report = buildReportSummary({
     ownerUserId: userId,
     attempts: attempts.map((attempt) => ({
       id: attempt.id,
@@ -44,6 +36,29 @@ export async function getUserReport(userId: string): Promise<ReportSummary> {
       result: attempt.result?.result ?? null,
     })),
   });
+
+  return statusOverride ? { ...report, status: statusOverride } : report;
+}
+
+export async function getUserReport(userId: string): Promise<ReportSummary> {
+  const allowed = await hasFeatureAccess(userId, "REPORT_ACCESS", "ADVANCED_REPORT_V1");
+  if (!allowed) {
+    throw new ReportAccessError(
+      "REPORT_ACCESS_REQUIRED",
+      "Report belum tersedia untuk entitlement akun ini.",
+    );
+  }
+
+  return buildUserReport(userId);
+}
+
+export async function getUserReportOverview(userId: string): Promise<{
+  report: ReportSummary;
+  reportAccess: boolean;
+}> {
+  const allowed = await hasFeatureAccess(userId, "REPORT_ACCESS", "ADVANCED_REPORT_V1");
+  const report = await buildUserReport(userId, allowed ? "AVAILABLE" : "LIMITED");
+  return { report, reportAccess: allowed };
 }
 
 export async function getParentReport(userId: string, attemptId: string) {

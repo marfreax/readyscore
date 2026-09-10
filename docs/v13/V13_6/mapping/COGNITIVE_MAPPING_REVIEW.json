@@ -1,0 +1,332 @@
+[
+  {
+    "questionId": "Cognitive-V-01",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-V-02",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-V-03",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-V-04",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-V-05",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-V-06",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-041",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-042",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-043",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-044",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "VERBAL_REASONING",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-N-01",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-N-02",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-N-03",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-N-04",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-N-05",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-N-06",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-001",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-002",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-003",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-004",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "NUMERICAL_REASONING",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-L-01",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-L-02",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-L-03",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-L-04",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-L-05",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-L-06",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "COG-021",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "LOGICAL_REASONING",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-A-01",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "ABSTRACT_REASONING",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-A-02",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "ABSTRACT_REASONING",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-A-03",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "ABSTRACT_REASONING",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-A-04",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "ABSTRACT_REASONING",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-A-05",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "ABSTRACT_REASONING",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "Cognitive-A-06",
+    "assessment": "COGNITIVE",
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "domain": "ABSTRACT_REASONING",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  }
+]

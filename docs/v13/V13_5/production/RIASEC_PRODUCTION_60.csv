@@ -1,0 +1,61 @@
+id,domain,subdomain,indicator,text,type,answerType,scale,scoringKey,reverseScore,weight,difficulty
+RIASEC-V2-001,R,Realistic,hands_on,Saya merasa tertarik pada membuat atau memperbaiki benda dengan menggunakan tangan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-002,R,Realistic,hands_on,Saya cenderung menikmati kegiatan yang hasilnya dapat saya lihat atau gunakan secara langsung.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-003,R,Realistic,hands_on,Saya cenderung lebih tertarik mencoba melakukan sesuatu secara langsung daripada hanya membahasnya.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-004,R,Realistic,tools_equipment,Saya merasa tertarik pada mempelajari cara menggunakan alat atau peralatan tertentu.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-005,R,Realistic,tools_equipment,"Saya cenderung menikmati kegiatan yang melibatkan mesin, perangkat, atau peralatan kerja.",PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-006,R,Realistic,practical_problem_solving,Saya merasa tertarik pada mencari cara praktis untuk memperbaiki sesuatu yang tidak berfungsi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-007,R,Realistic,practical_problem_solving,Saya cenderung menikmati menyelesaikan masalah yang membutuhkan tindakan langsung.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-008,R,Realistic,practical_problem_solving,Saya merasa tertarik pada memahami cara kerja benda agar dapat menggunakannya dengan lebih baik.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-009,R,Realistic,physical_environment,Saya merasa tertarik pada melakukan kegiatan di lingkungan yang banyak melibatkan objek atau pekerjaan nyata.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-010,R,Realistic,physical_environment,Saya cenderung menikmati aktivitas yang membuat saya banyak berinteraksi dengan lingkungan fisik.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-011,I,Investigative,curiosity,Saya merasa tertarik pada mencari tahu mengapa suatu hal dapat terjadi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-012,I,Investigative,curiosity,Saya cenderung menikmati menemukan penjelasan di balik sesuatu yang belum saya pahami.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-013,I,Investigative,curiosity,Saya cukup tertarik pada pada pertanyaan yang belum memiliki jawaban sederhana.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-014,I,Investigative,analysis,Saya cenderung menikmati membandingkan informasi untuk menemukan pola atau perbedaan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-015,I,Investigative,analysis,Saya merasa tertarik pada menganalisis informasi sebelum menarik kesimpulan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-016,I,Investigative,analysis,Saya cenderung menikmati memahami hubungan antara berbagai fakta atau informasi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-017,I,Investigative,investigation,Saya merasa tertarik pada melakukan pencarian informasi untuk menguji dugaan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-018,I,Investigative,investigation,Saya cenderung menikmati menyelidiki suatu masalah sampai menemukan penjelasan yang masuk akal.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-019,I,Investigative,problem_solving,Saya merasa tertarik pada menggunakan logika untuk menemukan solusi atas masalah yang rumit.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-020,I,Investigative,problem_solving,Saya cenderung menikmati memecah masalah menjadi bagian-bagian yang lebih kecil untuk dipahami.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-021,A,Artistic,creativity,Saya merasa tertarik pada menciptakan sesuatu dengan cara yang berbeda dari biasanya.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-022,A,Artistic,creativity,Saya cenderung menikmati mencoba ide baru ketika membuat sesuatu.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-023,A,Artistic,creativity,Saya merasa tertarik pada menemukan berbagai kemungkinan sebelum memilih satu cara untuk berkarya.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-024,A,Artistic,expression,"Saya cenderung menikmati menyampaikan gagasan melalui tulisan, gambar, musik, atau bentuk ekspresi lainnya.",PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-025,A,Artistic,expression,Saya merasa tertarik pada menggunakan cara yang kreatif untuk menyampaikan apa yang saya pikirkan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-026,A,Artistic,originality,Saya cenderung senang menghasilkan ide atau karya yang memiliki ciri khas saya sendiri.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-027,A,Artistic,originality,Saya merasa tertarik pada mencoba pendekatan yang tidak biasa untuk menghasilkan sesuatu.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-028,A,Artistic,originality,Saya cenderung menikmati mengembangkan konsep yang berbeda dari contoh yang sudah ada.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-029,A,Artistic,aesthetics,"Saya merasa tertarik pada memperhatikan komposisi, bentuk, warna, atau tampilan ketika membuat sesuatu.",PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-030,A,Artistic,aesthetics,Saya cenderung menikmati kegiatan yang memberi kesempatan untuk memperhatikan dan mengolah unsur keindahan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-031,S,Social,helping,Saya merasa tertarik pada membantu orang lain mengatasi kesulitan yang mereka hadapi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-032,S,Social,helping,Saya cenderung menikmati kegiatan yang membuat orang lain merasa terbantu.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-033,S,Social,helping,Saya merasa tertarik pada memahami kebutuhan seseorang agar dapat memberikan bantuan yang sesuai.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-034,S,Social,teaching,Saya cenderung menikmati menjelaskan sesuatu kepada orang yang sedang belajar.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-035,S,Social,teaching,Saya merasa tertarik pada membantu orang lain memahami keterampilan atau pengetahuan baru.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-036,S,Social,communication,Saya cenderung menikmati berdiskusi untuk memahami cara berpikir orang lain.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-037,S,Social,communication,Saya merasa tertarik pada mendengarkan pengalaman orang lain dan menanggapinya dengan baik.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-038,S,Social,communication,Saya cenderung menikmati kegiatan yang banyak melibatkan interaksi dengan orang lain.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-039,S,Social,development,Saya merasa tertarik pada membantu seseorang mengembangkan kemampuan yang dimilikinya.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-040,S,Social,development,Saya cenderung menikmati kegiatan yang mendorong orang lain menjadi lebih berkembang.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-041,E,Enterprising,influence,Saya merasa tertarik pada menyampaikan gagasan agar orang lain tertarik mempertimbangkannya.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-042,E,Enterprising,influence,Saya cenderung menikmati situasi ketika saya perlu meyakinkan orang lain tentang sebuah ide.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-043,E,Enterprising,influence,Saya merasa tertarik pada memengaruhi arah suatu kegiatan melalui gagasan atau keputusan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-044,E,Enterprising,leadership,Saya merasa tertarik pada mengambil peran untuk mengarahkan sebuah kegiatan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-045,E,Enterprising,leadership,Saya cenderung menikmati kesempatan untuk mengoordinasikan orang lain menuju suatu tujuan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-046,E,Enterprising,initiative,Saya merasa tertarik pada memulai kegiatan atau proyek tanpa harus selalu menunggu instruksi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-047,E,Enterprising,initiative,Saya cenderung menikmati mencari peluang baru untuk membuat sesuatu dapat berjalan lebih baik.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-048,E,Enterprising,initiative,Saya merasa tertarik pada mengambil langkah pertama ketika melihat sebuah peluang.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-049,E,Enterprising,persuasion,Saya cenderung menikmati kegiatan yang melibatkan negosiasi atau membangun kesepakatan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-050,E,Enterprising,persuasion,Saya merasa tertarik pada menyusun cara penyampaian yang membuat orang lain bersedia bekerja sama.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-051,C,Conventional,organization,Saya cenderung menikmati mengatur informasi agar mudah ditemukan kembali.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-052,C,Conventional,organization,"Saya merasa tertarik pada menyusun dokumen, catatan, atau data secara teratur.",PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-053,C,Conventional,organization,Saya cenderung menikmati membuat sistem sederhana agar pekerjaan tersusun rapi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-054,C,Conventional,structure,Saya merasa tertarik pada bekerja dengan prosedur yang jelas dan teratur.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-055,C,Conventional,structure,Saya cenderung menikmati mengikuti langkah kerja yang sudah tersusun dengan baik.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-056,C,Conventional,information_order,Saya merasa tertarik pada mengelompokkan informasi berdasarkan kategori yang jelas.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-057,C,Conventional,information_order,Saya cenderung menikmati membuat daftar atau susunan informasi agar lebih mudah digunakan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-058,C,Conventional,information_order,Saya merasa tertarik pada memastikan informasi tersimpan dalam urutan yang mudah dipahami.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-059,C,Conventional,accuracy,Saya cenderung menikmati kegiatan yang membutuhkan ketelitian dalam memeriksa detail.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM
+RIASEC-V2-060,C,Conventional,accuracy,Saya merasa tertarik pada memastikan data atau dokumen tersusun dengan benar sebelum digunakan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1,MEDIUM

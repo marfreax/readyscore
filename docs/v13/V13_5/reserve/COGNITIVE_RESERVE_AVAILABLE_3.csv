@@ -1,0 +1,4 @@
+id,domain,subdomain,indicator,text,type,answerType,options,correctOption,scoringKey,weight,difficulty
+COG-045,VERBAL_REASONING,VERBAL_REASONING,OBJECTIVE_REASONING,Hubungan kata yang paling mirip dengan pasangan 'Awal : Akhir' adalah...,SINGLE_CHOICE,SINGLE_CHOICE_4,Air : Gelas||Jalan : Kendaraan||Panjang : Pendek||Buku : Meja,3,1,1.0,EASY
+COG-005,NUMERICAL_REASONING,NUMERICAL_REASONING,OBJECTIVE_REASONING,"Jika pola penjumlahan berikut mengikuti aturan yang sama: 8 + 15 = ?, berapakah hasilnya?",SINGLE_CHOICE,SINGLE_CHOICE_4,23||25||21||28,1,1,1.0,EASY
+COG-006,NUMERICAL_REASONING,NUMERICAL_REASONING,OBJECTIVE_REASONING,"Jika pola penjumlahan berikut mengikuti aturan yang sama: 9 + 17 = ?, berapakah hasilnya?",SINGLE_CHOICE,SINGLE_CHOICE_4,28||24||31||26,4,1,1.0,MEDIUM

@@ -1,0 +1,39 @@
+{
+  "phase": "V11.6.7",
+  "title": "Review Pagination",
+  "status": "READY_FOR_VERIFICATION",
+  "baseline": "V11.6.6",
+  "baseline_archive": "AppRS-v11.6.6.zip",
+  "scope": [
+    "database-level Review pagination",
+    "canonical pagination metadata",
+    "deterministic ordering",
+    "existing Review search/status server parameters",
+    "reusable AdminPagination integration",
+    "runtime E2E harness"
+  ],
+  "files_changed": [
+    "lib/admin-review-repository.ts",
+    "app/api/admin/review/route.ts",
+    "app/admin/review/page.tsx",
+    "components/admin/AdminReviewContentOperations.tsx",
+    "package.json",
+    "scripts/validate-v11-6-7-review-pagination.mjs",
+    "scripts/e2e-v11-6-7-review-pagination.mjs",
+    "V11_6_7_ARCHITECTURE.md",
+    "V11_6_7_DELIVERY_NOTES.md",
+    "V11_6_7_DELIVERY_MANIFEST.json"
+  ],
+  "database_migration": false,
+  "customer_semantics_changed": false,
+  "historical_data_changed": false,
+  "validation": {
+    "static_gate": "PASS"
+  },
+  "commands": [
+    "pnpm v11:6:7:gate",
+    "pnpm typecheck",
+    "pnpm build",
+    "ADMIN_EMAIL=\"email-admin-anda\" ADMIN_PASSWORD=\"password-admin-anda\" pnpm e2e:v11:6:7:review-pagination"
+  ]
+}

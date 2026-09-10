@@ -1,0 +1,8 @@
+{
+  "phase":"V13.3",
+  "title":"Timed Attempt & Resilience",
+  "status":"IMPLEMENTATION",
+  "migration":"20260907140000_v13_3_timed_attempt_resilience",
+  "artifacts":["prisma/schema.prisma","prisma/migrations/20260907140000_v13_3_timed_attempt_resilience/migration.sql","lib/assessment/assessment-repository.ts","lib/assessment/runtime-service.ts","lib/assessment/runtime-contract.ts","lib/assessment/scoring/types.ts","lib/assessment/scoring/engine-v2.ts","components/assessment/AssessmentRunner.tsx","scripts/finalize-expired-attempts.ts","scripts/validate-v13-3-timed-attempt-resilience.mjs","scripts/e2e-v13-3-timed-attempt-resilience.mjs"],
+  "boundaries":["server authoritative timer","incremental answer persistence","resume","timeout finalization","unanswered answers are not fabricated","historical attempts immutable"]
+}

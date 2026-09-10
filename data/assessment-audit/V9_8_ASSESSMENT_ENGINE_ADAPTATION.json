@@ -1,0 +1,29 @@
+{
+  "version": "V9.8",
+  "status": "IMPLEMENTED",
+  "scope": "Assessment engine adaptation for approved V9 assessment-specific response contracts and runtime boundaries",
+  "implementation": {
+    "databaseMigration": false,
+    "measurementRedesign": false,
+    "scoringRedesign": false,
+    "universalScore": false,
+    "crossTestSynthesis": false,
+    "orchestrationOnly": true
+  },
+  "runtimeContracts": {
+    "cognitive": { "questionCount": 24, "answerType": "SINGLE_CHOICE_4", "options": 4, "internalCorrectOption": true },
+    "eq": { "questionCount": 24, "answerType": "SINGLE_CHOICE_4", "options": 4, "internalScoringKey": true },
+    "disc": { "questionCount": 24, "answerType": "SINGLE_CHOICE_4", "forcedChoice": true, "internalPositionMapping": true },
+    "riasec": { "questionCount": 60, "answerType": "LIKERT_5", "scale": [1,2,3,4,5], "identityScoringKey": true }
+  },
+  "publicRuntimeBoundary": {
+    "scoringKeyExposed": false,
+    "reverseScoreExposed": false,
+    "weightsExposed": false,
+    "correctOptionExposed": false,
+    "questionVersionIdExposed": false,
+    "internalDimensionMappingExposed": false
+  },
+  "historicalBoundary": "Persisted attempt snapshots remain authoritative and immutable; public snapshots are sanitized projections.",
+  "scoringBoundary": "Assessment-specific scoring engines remain authoritative and versioned."
+}

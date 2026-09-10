@@ -1,0 +1,34 @@
+import fs from "node:fs";
+const repo = fs.readFileSync("lib/question-bank-repository.ts", "utf8");
+const api = fs.readFileSync("app/api/admin/question-bank/route.ts", "utf8");
+const workspace = fs.readFileSync("components/admin/UnifiedQuestionBankWorkspace.tsx", "utf8");
+const script = fs.readFileSync("scripts/e2e-v11-7-12-search-filter-sort-runtime.mjs", "utf8");
+const pkg = JSON.parse(fs.readFileSync("package.json", "utf8"));
+const migrations = fs.readdirSync("prisma/migrations");
+for (const doc of ["V11_7_12_ARCHITECTURE.md","V11_7_12_DELIVERY_NOTES.md","V11_7_12_MANIFEST.md"]) check(fs.existsSync(doc), `${doc} present`);
+let failures = 0;
+function check(ok,label){ if(ok) console.log(`PASS: ${label}`); else { console.error(`FAIL: ${label}`); failures++; } }
+check(fs.existsSync("lib/question-bank-repository.ts"),"repository artifact");
+check(fs.existsSync("app/api/admin/question-bank/route.ts"),"Question Bank API artifact");
+check(fs.existsSync("components/admin/UnifiedQuestionBankWorkspace.tsx"),"Question Bank workspace artifact");
+check(fs.existsSync("scripts/e2e-v11-7-12-search-filter-sort-runtime.mjs"),"runtime E2E artifact");
+check(pkg.scripts?.["v11:7:12:gate"] === "node scripts/validate-v11-7-12-search-filter-sort-runtime.mjs","static gate package script");
+check(pkg.scripts?.["e2e:v11:7:12:search-filter-sort"] === "node scripts/e2e-v11-7-12-search-filter-sort-runtime.mjs","runtime E2E package script");
+check(repo.includes("getAdminQuestionsPaginated"),"server-side Question Bank repository query");
+check(repo.includes("QUESTION_BANK_SEARCH_CONTRACT") && repo.includes("ILIKE"),"server-side search contract and matching");
+check(repo.includes("QUESTION_BANK_FILTER_CONTRACT") && repo.includes("testTypeCode"),"server-side group filter");
+check(repo.includes("latest.\"status\"::text") && repo.includes("mappingStatus"),"latest-version status filter");
+check(repo.includes("QUESTION_BANK_SORT_CONTRACT") && repo.includes('questionCode:') && repo.includes('updatedAt:') && repo.includes('createdAt:') && repo.includes('status:'),"bounded sort dimensions");
+check(repo.includes('latest."questionVersionId" ${sortDirection}') && repo.includes("LIMIT ${pagination.limit} OFFSET ${pagination.offset}"),"deterministic sort tie-breaker before pagination");
+check(api.includes('getAdminQuestionsPaginated({') && api.includes('search:') && api.includes('group:') && api.includes('status:') && api.includes('sort:') && api.includes('direction:') && api.includes('page:') && api.includes('pageSize:'),"API forwards bounded workspace context");
+check(workspace.includes("setSearch") && workspace.includes("setGroup") && workspace.includes("setStatus") && workspace.includes("setSort") && workspace.includes("setDirection"),"workspace search/filter/sort controls");
+check(workspace.includes("AbortController") && workspace.includes("requestSequence"),"stale-response protection remains active");
+for (const field of ["questionCode","updatedAt","createdAt","status"]) check(repo.includes(field),`sort field ${field}`);
+for (const group of ["DISC","RIASEC","COGNITIVE","EQ"]) check(script.includes(`"${group}"`),`runtime group ${group}`);
+check(script.includes("case-insensitive") && script.includes("whitespace search"),"runtime search coverage");
+check(script.includes("assertDeterministicOrder") && script.includes("deterministic ordering changed"),"runtime deterministic tie-break coverage");
+check(script.includes("concurrent search requests"),"runtime concurrent search coverage");
+check(script.includes("sort + pagination boundary"),"runtime sort + pagination coverage");
+check(!migrations.some(name => name.includes("v11_7_12")),"no V11.7.12 Prisma migration");
+if(failures){ console.error(`V11.7.12 STATIC GATE: FAIL (${failures} failure${failures===1?"":"s"})`); process.exit(1); }
+console.log("V11.7.12 STATIC GATE: PASS");

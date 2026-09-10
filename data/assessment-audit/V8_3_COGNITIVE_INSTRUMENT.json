@@ -1,0 +1,20 @@
+{
+  "version": "V8.3",
+  "status": "IMPLEMENTED",
+  "instrument": "COGNITIVE",
+  "questionCount": 24,
+  "dimensions": {
+    "VERBAL_REASONING": 6,
+    "NUMERICAL_REASONING": 6,
+    "LOGICAL_REASONING": 6,
+    "ABSTRACT_REASONING": 6
+  },
+  "questionType": "SINGLE_CHOICE_4",
+  "scoring": "objective_correct_incorrect",
+  "scoringVersion": "COGNITIVE_SCORE_V2",
+  "resultContract": "COGNITIVE_RESULT_V2",
+  "iqClaimAllowed": false,
+  "databaseMigration": true,
+  "migration": "20260830133000_v8_3_cognitive_objective_items",
+  "seed": "scripts/seed-v8-3-cognitive.ts"
+}

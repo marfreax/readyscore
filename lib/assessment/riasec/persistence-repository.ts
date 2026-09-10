@@ -5,7 +5,7 @@ import type { RiasecPersistableResult } from "./result-contract";
 /**
  * PHASE 3.0-D.1-F.8 / F.9
  *
- * Persistence boundary for RIASEC_RESULT_V1.
+ * Persistence boundary for RIASEC_RESULT_V2.
  *
  * The Prisma client lives at:
  *   lib/db/prisma
@@ -54,7 +54,7 @@ export async function getRiasecResult(
   const payload = row.result as unknown as Partial<RiasecPersistableResult>;
 
   if (
-    payload.contractVersion !== "RIASEC_RESULT_V1" ||
+    payload.contractVersion !== "RIASEC_RESULT_V2" ||
     !payload.provenance ||
     payload.provenance.testType !== "RIASEC" ||
     !payload.measurement ||

@@ -1,0 +1,22 @@
+{
+  "version": "V10.11",
+  "status": "FINAL_ACCEPTANCE_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "FINAL_ACCEPTANCE_FREEZE",
+  "baseline": "V10.10",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "ACCEPTANCE_ONLY",
+  "runtimeMode": "FINAL_ACCEPTANCE_FREEZE"
+}

@@ -1,0 +1,292 @@
+[
+  {
+    "questionId": "EQ-V2-001",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "EA-001",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-002",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "EA-002",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-003",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "EA-003",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-004",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "EA-004",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-005",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "EA-005",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-006",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "EA-006",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-007",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_REGULATION",
+    "subdomain": "",
+    "indicator": "ER-007",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-008",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_REGULATION",
+    "subdomain": "",
+    "indicator": "ER-008",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-009",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_REGULATION",
+    "subdomain": "",
+    "indicator": "ER-009",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-010",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_REGULATION",
+    "subdomain": "",
+    "indicator": "ER-010",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-011",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_REGULATION",
+    "subdomain": "",
+    "indicator": "ER-011",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-012",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_REGULATION",
+    "subdomain": "",
+    "indicator": "ER-012",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-013",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMPATHY_SOCIAL_AWARENESS",
+    "subdomain": "",
+    "indicator": "EM-013",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-014",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMPATHY_SOCIAL_AWARENESS",
+    "subdomain": "",
+    "indicator": "EM-014",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-015",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMPATHY_SOCIAL_AWARENESS",
+    "subdomain": "",
+    "indicator": "EM-015",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-016",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMPATHY_SOCIAL_AWARENESS",
+    "subdomain": "",
+    "indicator": "EM-016",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-017",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMPATHY_SOCIAL_AWARENESS",
+    "subdomain": "",
+    "indicator": "EM-017",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-018",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMPATHY_SOCIAL_AWARENESS",
+    "subdomain": "",
+    "indicator": "EM-018",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-019",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "subdomain": "",
+    "indicator": "RS-019",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-020",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "subdomain": "",
+    "indicator": "RS-020",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-021",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "subdomain": "",
+    "indicator": "RS-021",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-022",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "subdomain": "",
+    "indicator": "RS-022",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-023",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "subdomain": "",
+    "indicator": "RS-023",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-V2-024",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "subdomain": "",
+    "indicator": "RS-024",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-001",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "Recognizing Emotions",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-002",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "Emotional Triggers",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-003",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "Strength Awareness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-004",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "Limitation Awareness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "EQ-005",
+    "assessment": "EQ",
+    "taxonomyVersion": "EQ_TAXONOMY_V2",
+    "domain": "EMOTION_AWARENESS",
+    "subdomain": "",
+    "indicator": "Values Awareness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  }
+]

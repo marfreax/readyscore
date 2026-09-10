@@ -1,0 +1,117 @@
+{
+  "phase": "V13.5",
+  "title": "Production Question Pool",
+  "date": "2026-09-07",
+  "status": "BLOCKED_PENDING_SOURCE_COMPLETION",
+  "assessments": {
+    "RIASEC": {
+      "targetItems": 60,
+      "minimumReserve": 12,
+      "productionCount": 60,
+      "reserveCount": 12,
+      "requiredCandidateTotal": 72,
+      "compositionTarget": {
+        "R": 10,
+        "I": 10,
+        "A": 10,
+        "S": 10,
+        "E": 10,
+        "C": 10
+      },
+      "productionComposition": {
+        "R": 10,
+        "I": 10,
+        "A": 10,
+        "S": 10,
+        "E": 10,
+        "C": 10
+      },
+      "reserveComposition": {
+        "R": 2,
+        "I": 2,
+        "A": 2,
+        "S": 2,
+        "E": 2,
+        "C": 2
+      },
+      "status": "PASS"
+    },
+    "DISC": {
+      "targetItems": 80,
+      "minimumReserve": 16,
+      "productionCount": 80,
+      "reserveCount": 16,
+      "requiredCandidateTotal": 96,
+      "compositionTarget": {
+        "TARGET_D": 20,
+        "TARGET_I": 20,
+        "TARGET_S": 20,
+        "TARGET_C": 20
+      },
+      "productionComposition": {
+        "TARGET_D": 20,
+        "TARGET_I": 20,
+        "TARGET_S": 20,
+        "TARGET_C": 20
+      },
+      "reserveComposition": {
+        "TARGET_D": 4,
+        "TARGET_I": 4,
+        "TARGET_S": 4,
+        "TARGET_C": 4
+      },
+      "status": "PASS"
+    },
+    "EQ": {
+      "targetItems": 50,
+      "minimumReserve": 10,
+      "productionCount": 29,
+      "reserveCount": 0,
+      "requiredCandidateTotal": 60,
+      "compositionTarget": {
+        "EMOTION_AWARENESS": 13,
+        "EMOTION_REGULATION": 13,
+        "EMPATHY_SOCIAL_AWARENESS": 12,
+        "RELATIONSHIP_SOCIAL_RESPONSE": 12
+      },
+      "productionComposition": {
+        "EMOTION_AWARENESS": 11,
+        "EMOTION_REGULATION": 6,
+        "EMPATHY_SOCIAL_AWARENESS": 6,
+        "RELATIONSHIP_SOCIAL_RESPONSE": 6
+      },
+      "reserveComposition": {},
+      "status": "BLOCKED"
+    },
+    "COGNITIVE": {
+      "targetItems": 40,
+      "minimumReserve": 8,
+      "productionCount": 33,
+      "reserveCount": 3,
+      "requiredCandidateTotal": 48,
+      "compositionTarget": {
+        "VERBAL_REASONING": 10,
+        "NUMERICAL_REASONING": 10,
+        "LOGICAL_REASONING": 10,
+        "ABSTRACT_REASONING": 10
+      },
+      "productionComposition": {
+        "VERBAL_REASONING": 10,
+        "NUMERICAL_REASONING": 10,
+        "LOGICAL_REASONING": 7,
+        "ABSTRACT_REASONING": 6
+      },
+      "reserveComposition": {
+        "VERBAL_REASONING": 1,
+        "NUMERICAL_REASONING": 2
+      },
+      "status": "BLOCKED"
+    }
+  },
+  "notes": [
+    "V13.5 intentionally does not fabricate missing items.",
+    "EQ source has substantial duplication and a scoring-contract mismatch with the current importer.",
+    "Cognitive source has no sample Abstract Reasoning items and insufficient unique Logical Reasoning items.",
+    "These blockers are carried forward explicitly rather than hidden."
+  ]
+}

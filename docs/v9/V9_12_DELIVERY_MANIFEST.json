@@ -1,0 +1,27 @@
+{
+  "version": "V9.12",
+  "status": "IMPLEMENTED",
+  "delivery": "FULL",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlans": true,
+  "conversionUx": true,
+  "commercialCatalogVersion": "V4_COMMERCIAL_MATRIX_1",
+  "upgradeConversionVersion": "V5_L9_UPGRADE_CONVERSION_V1",
+  "b2cConversionVersion": "V3_B2C_CONVERSION_3.12",
+  "checkoutBoundary": "SCALEV_CHECKOUT_REDIRECT_ONLY",
+  "entitlementBoundary": "CANONICAL_ENTITLEMENT_SERVICE",
+  "excludedPaths": [
+    "docs/",
+    "node_modules/",
+    ".next/",
+    "__MACOSX/"
+  ]
+}

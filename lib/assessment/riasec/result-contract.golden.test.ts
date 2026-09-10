@@ -6,7 +6,7 @@ import type { RiasecResult } from "./types";
 
 const measurement: RiasecResult = {
   testType: "RIASEC",
-  scoringVersion: "RIASEC_SCORE_V1",
+  scoringVersion: "RIASEC_SCORE_V2",
   totalQuestions: 60,
   answeredQuestions: 60,
 
@@ -45,9 +45,9 @@ const measurement: RiasecResult = {
 const persisted = createRiasecPersistableResult(measurement, {
   attemptId: "attempt-test",
   testType: "RIASEC",
-  assessmentConfigurationVersion: "RIASEC_CONFIG_V1",
-  questionBankVersion: "RIASEC_QB_V1",
-  scoringVersion: "RIASEC_SCORE_V1",
+  assessmentConfigurationVersion: "RIASEC_CONFIG_V2",
+  questionBankVersion: "RIASEC_QB_V2",
+  scoringVersion: "RIASEC_SCORE_V2",
   completedAt: "2026-08-22T00:00:00.000Z",
 });
 
@@ -59,7 +59,7 @@ if (persisted.provenance.testType !== "RIASEC") {
   throw new Error("Result provenance test type mismatch.");
 }
 
-if (persisted.provenance.scoringVersion !== "RIASEC_SCORE_V1") {
+if (persisted.provenance.scoringVersion !== "RIASEC_SCORE_V2") {
   throw new Error("Result provenance scoring version mismatch.");
 }
 

@@ -22,7 +22,7 @@ export default async function ParentReportPage({ params }: { params: Promise<{ a
         description="Ringkasan yang dirancang sebagai bahan percakapan orang tua dan peserta. Nilai dan interpretasi tetap mengikuti semantic contract assessment asal."
       >
         <section className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm sm:p-8">
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             <div className="rounded-2xl bg-slate-50 p-5"><p className="text-xs font-bold text-slate-500">Assessment</p><p className="mt-2 text-xl font-black">{assessment.assessmentType}</p></div>
             <div className="rounded-2xl bg-slate-50 p-5"><p className="text-xs font-bold text-slate-500">Status</p><p className="mt-2 text-xl font-black">{assessment.status}</p></div>
             <div className="rounded-2xl bg-slate-50 p-5"><p className="text-xs font-bold text-slate-500">Result Contract</p><p className="mt-2 text-sm font-black">{assessment.resultContractVersion ?? "—"}</p></div>

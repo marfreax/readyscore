@@ -1,15 +1,16 @@
-FIXED9 — V7 L16 Assessment Configuration correction
+# FIXED9 — V7 L17 Admin Review & Content Operations
 
-Root cause of the previous L16 E2E failure:
-The CREATE operation created the first configuration version as DRAFT. The L16 runtime E2E then explicitly activated the second version and correctly expected the previously active version to become ARCHIVED. Because v1 was never ACTIVE, the assertion failed.
+Replacement for the previous L17 package.
 
-Correction:
-- createConfiguration() now creates the initial configuration version as ACTIVE.
-- createConfigurationVersion() continues to create subsequent versions as DRAFT.
-- activateConfigurationVersion() archives the current ACTIVE version before activating the requested version.
-- archiveConfigurationVersion() continues to reject ACTIVE versions.
+Fixes:
+- TypeScript enum `.includes()` narrowing errors in review/content lifecycle guards.
+- Static L17 gate metadata-validation contract marker.
+- Server-rendered L17 admin page markers for runtime E2E detection.
+- Preserves the existing L17 migration and frozen measurement/runtime semantics.
 
-Canonical documentation path:
-docs/v7/V7_L16_ASSESSMENT_ADMINISTRATION.md
-
-No new migration is introduced by this correction. The existing L16 migration remains the migration to deploy.
+Expected validation:
+rm -rf .next
+pnpm typecheck
+pnpm build
+pnpm v7:l17:gate
+pnpm e2e:l17

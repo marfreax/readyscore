@@ -10,11 +10,11 @@ export function AppShell({ children, userName }: { children: ReactNode; userName
       <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/95 backdrop-blur">
         <div className="rs-container flex h-16 items-center justify-between gap-4">
           <Link href="/app" className="rs-brand" aria-label="ReadyScore dashboard">
-            <span className="rs-brand-mark">R</span>
-            <span>
-              <span className="rs-brand-name">ReadyScore</span>
-              <span className="rs-brand-meta">Personal workspace</span>
-            </span>
+            <img
+              src="/readyscore-logo.png"
+              alt="ReadyScore Personality Assessment"
+              className="rs-brand-logo"
+            />
           </Link>
 
           <CustomerHeaderActions userName={userName} />

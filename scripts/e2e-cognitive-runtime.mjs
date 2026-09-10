@@ -11,7 +11,7 @@ async function request(path, options={}, retries=path==="/api/assessment/start"?
     throw error;
   }
 }
-console.log("=== READY SCORE V4 L6 COGNITIVE ACTUAL RUNTIME E2E ===");
+console.log("=== READY SCORE V8.3 COGNITIVE ACTUAL RUNTIME E2E ===");
 console.log(`Base URL : ${baseUrl}`);
 console.log("Mode     : REAL HTTP + REAL PostgreSQL runtime");
 console.log("Mutation : Cognitive assessment attempt / answers / result only");
@@ -25,7 +25,15 @@ if(!attemptId)fail("Start response did not return attemptId.");
 if(questions.length!==24)fail(`Cognitive runtime returned ${questions.length} questions; expected exactly 24.`);
 const dims=["VERBAL_REASONING","NUMERICAL_REASONING","LOGICAL_REASONING","ABSTRACT_REASONING"];
 const counts=Object.fromEntries(dims.map(d=>[d,0]));
-for(const q of questions){const d=String(q.domain??"").trim().toUpperCase();if(!(d in counts))fail(`Invalid Cognitive dimension in runtime question ${q.id}: ${d}`);counts[d]++;if(!q.id)fail("Runtime question missing id.");}
+for(const q of questions){
+  const d=String(q.domain??"").trim().toUpperCase();
+  if(!(d in counts))fail(`Invalid Cognitive dimension in runtime question ${q.id}: ${d}`);
+  counts[d]++;
+  if(!q.id)fail("Runtime question missing id.");
+  if(q.answerType!=="SINGLE_CHOICE_4")fail(`Cognitive question ${q.id} has unexpected answerType.`);
+  if(!Array.isArray(q.options)||q.options.length!==4)fail(`Cognitive question ${q.id} must expose exactly four options.`);
+  if("correctOption" in q)fail(`Cognitive runtime leaked correctOption for ${q.id}.`);
+}
 for(const d of dims)if(counts[d]!==6)fail(`${d} runtime count is ${counts[d]}; expected 6.`);
 console.log("Question selection        : PASS");
 console.log("Dimension distribution    : PASS (6/6/6/6)");
@@ -49,16 +57,16 @@ console.log("Submit + scoring          : PASS");
 
 const cognitive=result.cognitive;
 const measurement=cognitive?.measurement;
-if(!cognitive||cognitive.contractVersion!=="COGNITIVE_RESULT_V1")fail("Result does not expose COGNITIVE_RESULT_V1.");
+if(!cognitive||cognitive.contractVersion!=="COGNITIVE_RESULT_V2")fail("Result does not expose COGNITIVE_RESULT_V2.");
 if(!measurement)fail("Result does not expose Cognitive measurement.");
 if(measurement.testType!=="COGNITIVE")fail(`Unexpected Cognitive testType: ${measurement.testType}`);
-if(measurement.scoringVersion!=="COGNITIVE_SCORE_V1")fail(`Unexpected Cognitive scoring version: ${measurement.scoringVersion}`);
+if(measurement.scoringVersion!=="COGNITIVE_SCORE_V2")fail(`Unexpected Cognitive scoring version: ${measurement.scoringVersion}`);
 if(!Array.isArray(measurement.dimensionScores)||measurement.dimensionScores.length!==4)fail("Cognitive result does not expose exactly four dimension scores.");
 for(const d of dims){const item=measurement.dimensionScores.find(x=>x.dimension===d);if(!item)fail(`Missing Cognitive dimension ${d}.`);if(typeof item.score!=="number")fail(`Cognitive dimension ${d} score is not numeric.`);if(item.answeredCount!==6||item.questionCount!==6)fail(`Cognitive dimension ${d} coverage mismatch.`);}
 if(typeof measurement.overallScore!=="number")fail("Cognitive overall score is not numeric.");
-if(result.interpretation?.interpretationVersion!=="COGNITIVE_INTERPRETATION_V1")fail(`Unexpected Cognitive interpretation version: ${result.interpretation?.interpretationVersion}`);
+if(result.interpretation?.interpretationVersion!=="COGNITIVE_INTERPRETATION_V2")fail(`Unexpected Cognitive interpretation version: ${result.interpretation?.interpretationVersion}`);
 console.log("Result payload            : PASS");
 console.log("Cognitive measurement     : PASS (4 dimensions + overall + scoring version)");
-console.log("Cognitive interpretation  : PASS (COGNITIVE_INTERPRETATION_V1)");
-console.log("V4 L6 COGNITIVE ACTUAL RUNTIME E2E: PASS");
+console.log("Cognitive interpretation  : PASS (COGNITIVE_INTERPRETATION_V2)");
+console.log("V8.3 COGNITIVE ACTUAL RUNTIME E2E: PASS");
 console.log(`Attempt ID                : ${attemptId}`);

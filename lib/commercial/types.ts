@@ -116,7 +116,7 @@ export const COMMERCIAL_PRODUCT_CATALOG: readonly ProductDefinition[] = [
     id: "product-advance",
     tier: "ADVANCE",
     name: "All Tests + Profiling",
-    description: "All core tests plus Cross-Test Profiling.",
+    description: "All core tests plus Cross-Test Profiling and the personalized V15 report.",
     planningPriceIdr: 249_000,
     mode: "ALL_TESTS_PROFILING",
     customerFacing: true,

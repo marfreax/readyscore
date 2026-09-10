@@ -41,7 +41,9 @@ export const eqProfileAdapter: ProfileSignalAdapter = {
     const measurement =
       payload && "dimensionScores" in payload
         ? payload
-        : payload?.measurement;
+        : payload && "measurement" in payload
+          ? payload.measurement
+          : undefined;
 
     if (!measurement || !Array.isArray(measurement.dimensionScores)) {
       return {

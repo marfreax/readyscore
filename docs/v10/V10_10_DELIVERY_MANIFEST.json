@@ -1,0 +1,22 @@
+{
+  "version": "V10.10",
+  "status": "IMPLEMENTATION_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "FULL_CUSTOMER_UX_REGRESSION",
+  "baseline": "V10.9",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "REGRESSION_ONLY",
+  "runtimeMode": "FULL_CUSTOMER_UX_REGRESSION"
+}

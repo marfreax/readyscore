@@ -1,0 +1,65 @@
+{
+  "phase": "V13.5",
+  "title": "Production Question Pool",
+  "version": "1.0",
+  "date": "2026-09-07",
+  "status": "IMPLEMENTATION_WITH_SOURCE_COMPLETION_BLOCKERS",
+  "baseline": "V13.4 Production Assessment Blueprint",
+  "principles": [
+    "candidate pools are separated from reserve pools",
+    "all import artifacts are DRAFT-oriented",
+    "no direct publish",
+    "legacy general-readiness content excluded",
+    "provenance preserved",
+    "V13.6 review remains mandatory"
+  ],
+  "targets": {
+    "RIASEC": {
+      "production": 60,
+      "reserve": 12,
+      "total": 72
+    },
+    "DISC": {
+      "production": 80,
+      "reserve": 16,
+      "total": 96
+    },
+    "EQ": {
+      "production": 50,
+      "reserve": 10,
+      "total": 60
+    },
+    "COGNITIVE": {
+      "production": 40,
+      "reserve": 8,
+      "total": 48
+    }
+  },
+  "artifacts": [
+    "V13_5/production/RIASEC_PRODUCTION_60.csv",
+    "V13_5/reserve/RIASEC_RESERVE_12.csv",
+    "V13_5/production/DISC_PRODUCTION_80.csv",
+    "V13_5/reserve/DISC_RESERVE_16.csv",
+    "V13_5/reports/V13_5_POOL_VALIDATION_REPORT.json",
+    "V13_5/V13_5_IMPLEMENTATION_VERIFICATION.md",
+    "V13_5/production/EQ_PRODUCTION_AVAILABLE_29.csv",
+    "V13_5/production/COGNITIVE_PRODUCTION_AVAILABLE_33.csv",
+    "V13_5/reserve/COGNITIVE_RESERVE_AVAILABLE_3.csv",
+    "V13_5/V13_5_DELIVERY_NOTES.md",
+    "V13_5/README.md",
+    "V13_5/V13_5_MANIFEST.json",
+    "scripts/validate-v13-5-production-question-pool.mjs"
+  ],
+  "sourcePolicy": {
+    "RIASEC": "60 V2 production items + 12 sample reserve items",
+    "DISC": "24 V2 production items expanded with sample items to 80 production + 16 reserve",
+    "EQ": "24 V2 production items expanded with sample items to 50 production + 10 reserve",
+    "COGNITIVE": "24 V2 production items expanded where source permits; six required abstract-reasoning items for target/reserve expansion are unavailable in supplied source set"
+  },
+  "blockers": [
+    "EQ: source set yields only 29 unique eligible content items (24 V2 + 5 unique sample texts), below 50 production + 10 reserve.",
+    "EQ: current Question Bank CSV importer expects EQ scoringKey length 1 plus correctOption, while the V2 EQ production bank uses a 4-value scoringKey and no correctOption. This scoring-contract mismatch must be resolved in V13.7; no scoring metadata is fabricated in V13.5.",
+    "Cognitive: unique eligible content supports only 33 target-shaped production items (10 Verbal, 10 Numerical, 7 Logical, 6 Abstract) and 3 reserve items. Additional unique content is required, especially Logical and Abstract Reasoning.",
+    "No duplicated text, unrelated legacy content, or construct reclassification is used to pad quantities."
+  ]
+}

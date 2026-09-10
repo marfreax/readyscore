@@ -1,0 +1,95 @@
+{
+  "version": "V8.8",
+  "status": "IMPLEMENTED",
+  "scope": "result_semantics_and_interpretation",
+  "databaseMigration": false,
+  "measurementMutation": false,
+  "scoringMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "assessments": {
+    "COGNITIVE": {
+      "mode": "ABILITY_PROFILE",
+      "mainResult": "Cognitive Score",
+      "resultContract": "COGNITIVE_RESULT_V2",
+      "scoringVersion": "COGNITIVE_SCORE_V2",
+      "interpretationVersion": "COGNITIVE_INTERPRETATION_V2",
+      "dimensions": [
+        "VERBAL_REASONING",
+        "NUMERICAL_REASONING",
+        "LOGICAL_REASONING",
+        "ABSTRACT_REASONING"
+      ],
+      "prohibited": [
+        "IQ",
+        "clinical diagnosis",
+        "deterministic academic or career decision"
+      ]
+    },
+    "EQ": {
+      "mode": "CONSTRUCT_SCORE",
+      "mainResult": "EQ Score",
+      "resultContract": "EQ_RESULT_V2",
+      "scoringVersion": "EQ_SCORE_V2",
+      "interpretationVersion": "EQ_INTERPRETATION_V2",
+      "dimensions": [
+        "EMOTION_AWARENESS",
+        "EMOTION_REGULATION",
+        "EMPATHY_SOCIAL_AWARENESS",
+        "RELATIONSHIP_SOCIAL_RESPONSE"
+      ],
+      "prohibited": [
+        "clinical diagnosis",
+        "standardized population EQ norm",
+        "deterministic academic or career decision"
+      ]
+    },
+    "DISC": {
+      "mode": "IPSATIVE_PROFILE",
+      "mainResult": "Primary Behavioral Pattern",
+      "resultContract": "DISC_RESULT_V2",
+      "scoringVersion": "DISC_SCORE_V2",
+      "interpretationVersion": "DISC_INTERPRETATION_V2",
+      "dimensions": [
+        "D",
+        "I",
+        "S",
+        "C"
+      ],
+      "prohibited": [
+        "aptitude",
+        "intelligence",
+        "clinical diagnosis",
+        "deterministic career or major decision",
+        "universal score"
+      ]
+    },
+    "RIASEC": {
+      "mode": "INTEREST_PROFILE",
+      "mainResult": "RIASEC Interest Profile",
+      "resultContract": "RIASEC_RESULT_V2",
+      "scoringVersion": "RIASEC_SCORE_V2",
+      "interpretationVersion": "RIASEC_INTERPRETATION_V2",
+      "dimensions": [
+        "R",
+        "I",
+        "A",
+        "S",
+        "E",
+        "C"
+      ],
+      "prohibited": [
+        "ability",
+        "intelligence",
+        "guaranteed career fit",
+        "guaranteed major suitability",
+        "universal score"
+      ]
+    }
+  },
+  "implementation": {
+    "registry": "lib/assessment/result/semantics-v1.ts",
+    "interpretationEnginesRemainAssessmentSpecific": true,
+    "noRescoring": true
+  }
+}

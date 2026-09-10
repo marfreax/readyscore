@@ -1,0 +1,22 @@
+{
+  "version": "V10.9",
+  "status": "IMPLEMENTATION_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "RESPONSIVE_ACCESSIBILITY_HARDENING",
+  "baseline": "V10.8",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "PRESENTATION_ONLY",
+  "runtimeMode": "CUSTOMER_RESPONSIVE_ACCESSIBILITY_HARDENING"
+}

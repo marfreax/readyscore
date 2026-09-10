@@ -1,0 +1,47 @@
+{
+  "version": "V8.4",
+  "status": "IMPLEMENTED",
+  "implementation_status": "PRODUCTION_INSTRUMENT_IMPLEMENTATION",
+  "baseline": "V8.3 Cognitive Instrument PASS",
+  "scope": "EQ situational-judgment instrument, keyed ordinal scoring, interpretation and runtime response boundary",
+  "construct": "emotional and social response capability as operationalized by ReadyScore EQ",
+  "intended_use": "self-exploration of relative response patterns across four EQ dimensions; not diagnosis or standardized psychometric EQ norm",
+  "domains": [
+    "EMOTION_AWARENESS",
+    "EMOTION_REGULATION",
+    "EMPATHY_SOCIAL_AWARENESS",
+    "RELATIONSHIP_SOCIAL_RESPONSE"
+  ],
+  "target_items": 24,
+  "items_per_dimension": 6,
+  "question_type": "SCENARIO_SINGLE_CHOICE",
+  "response_model": "situational_judgment",
+  "item_scoring": {
+    "model": "item-specific keyed ordinal",
+    "values": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "mapping": "selected option position -> hidden scoringKey[position-1]"
+  },
+  "dimension_score": "weighted mean keyed ordinal normalized from [1,4] to [0,100]",
+  "overall": "arithmetic mean of four dimension scores when all 24 responses are present",
+  "versions": {
+    "configuration": "EQ_CONFIG_V2",
+    "scoring": "EQ_SCORE_V2",
+    "interpretation": "EQ_INTERPRETATION_V2",
+    "selection": "EQ_SELECTION_V2",
+    "taxonomy": "EQ_TAXONOMY_V2",
+    "result": "EQ_RESULT_V2"
+  },
+  "safety": {
+    "clinical_claim_allowed": false,
+    "universal_score": false,
+    "iq_claim": false,
+    "correct_answer_exposed": false
+  },
+  "historical_boundary": "EQ V1 question versions remain immutable; V2 uses new logical question identities and active taxonomy boundary.",
+  "content_status": "Product SJT candidates; keyed scoring is a product measurement rule and is not presented as psychometrically validated."
+}

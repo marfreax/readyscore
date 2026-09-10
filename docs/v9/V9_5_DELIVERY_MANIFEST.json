@@ -1,0 +1,10 @@
+{
+  "phase": "V9.5",
+  "artifact": "DISC Question Bank",
+  "status": "IMPLEMENTED",
+  "excludedPaths": [
+    "docs/"
+  ],
+  "databaseMigration": false,
+  "note": "The V9.5 delivery artifact does not introduce or require a docs/ directory. Existing local docs/ content is outside the V9.5 delivery boundary."
+}

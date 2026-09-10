@@ -1,0 +1,16 @@
+{
+  "version": "V9.9",
+  "title": "Result Experience",
+  "status": "IMPLEMENTED",
+  "delivery": "FULL",
+  "excludedPaths": ["docs/", "node_modules/", ".next/"],
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "universalScore": false,
+  "crossTestSynthesis": false,
+  "resultSemanticsMutation": false,
+  "contractArtifact": "lib/result-experience-v9.ts",
+  "gate": "scripts/validate-v9-9-result-experience.mjs"
+}

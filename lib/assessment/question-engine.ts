@@ -3,7 +3,6 @@ import { getPublishedEligibleQuestions } from "../question-bank-repository";
 import { getPublishedQuestionBank } from "../catalog/question-bank";
 import { getAssessmentReadyQuestions } from "./question-bank";
 import type { Question } from "./types";
-import type { ScoringKey } from "../question-bank-types";
 
 export class SelectionError extends Error {
   constructor(public readonly code: string, message: string) {
@@ -12,7 +11,10 @@ export class SelectionError extends Error {
   }
 }
 
-function normalizeScoringKey(value: number[]): ScoringKey {
+function normalizeScoringKey(value: number[], answerType: string): readonly number[] {
+  if (answerType === "SINGLE_CHOICE_4") {
+    return value.map(Number);
+  }
   if (value.length === 5 && value.every((v, i) => v === [5, 4, 3, 2, 1][i])) {
     return [5, 4, 3, 2, 1] as const;
   }
@@ -20,6 +22,8 @@ function normalizeScoringKey(value: number[]): ScoringKey {
 }
 
 export type SelectedQuestion = Question & {
+  /** Logical taxonomy boundary captured from the published QuestionVersion. */
+  taxonomyVersion?: string | null;
   /** Canonical PostgreSQL Question.id used only at persistence boundary. */
   questionRecordId: string;
   /** Immutable PostgreSQL QuestionVersion.id captured in the attempt snapshot. */
@@ -52,21 +56,27 @@ const PREMIUM_DOMAIN_QUOTAS: Array<{ label: string; aliases: string[]; quota: nu
 export async function selectQuestions(type: AssessmentType, seed?: string): Promise<SelectedQuestion[]> {
   const config = ASSESSMENT_CONFIG[type];
   const eligible = type === "riasec" || type === "disc" || type === "eq" || type === "cognitive"
-    ? (await getPublishedQuestionBank(type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE")).map((q) => ({
+    ? (await getPublishedQuestionBank(type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE"))
+        .filter((q) => type !== "riasec" || q.taxonomyVersion === "RIASEC_TAXONOMY_V2")
+        .map((q) => ({
         id: q.questionCode,
         domain: q.domain,
         subdomain: q.subdomain,
         indicator: q.indicator,
         text: q.text,
         type: q.type,
+        answerType: q.answerType as Question["answerType"],
         reverseScore: q.reverseScore,
         weight: q.weight,
-        scale: [1, 2, 3, 4, 5] as const,
-        scoringKey: normalizeScoringKey(q.scoringKey),
+        scale: q.scale.map(Number),
+        scoringKey: normalizeScoringKey(q.scoringKey, q.answerType),
+        options: q.options ?? undefined,
+        correctOption: q.correctOption ?? undefined,
         difficulty: q.difficulty,
         status: q.status,
         mappingStatus: q.mappingStatus,
         sourceFile: undefined,
+        taxonomyVersion: q.taxonomyVersion,
         questionRecordId: q.questionRecordId,
         questionVersionId: q.questionVersionId,
       }))
@@ -93,8 +103,10 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
       subdomain: q.subdomain,
       indicator: q.indicator,
       type: q.type,
-      answerType: "LIKERT_5",
-      scale: [1, 2, 3, 4, 5] as const,
+      answerType: q.answerType,
+      scale: q.scale,
+      options: q.options ?? undefined,
+      correctOption: q.correctOption ?? undefined,
       reverseScore: q.reverseScore,
       scoringKey: q.scoringKey,
       weight: q.weight,
@@ -103,6 +115,7 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
       mappingStatus: q.mappingStatus.toUpperCase() as Question["mappingStatus"],
       version: "POSTGRESQL_RUNTIME",
       source: q.sourceFile ?? "POSTGRESQL",
+      taxonomyVersion: q.taxonomyVersion,
       questionRecordId: q.questionRecordId,
       questionVersionId: q.questionVersionId,
     };
@@ -135,22 +148,11 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
 
     selected = seededShuffle(selected, `${s}:RIASEC`);
   } else if (type === "disc") {
-    const dimensions = ["D", "I", "S", "C"] as const;
-    const quota = 6;
-    for (const dimension of dimensions) {
-      const candidates = seededShuffle(
-        runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === dimension),
-        `${s}:DISC:${dimension}`,
-      );
-      if (candidates.length < quota) {
-        throw new SelectionError(
-          "INSUFFICIENT_DISC_DIMENSION_QUESTIONS",
-          `DISC dimension "${dimension}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`,
-        );
-      }
-      selected.push(...candidates.slice(0, quota));
-    }
-    selected = seededShuffle(selected, `${s}:DISC`);
+    // DISC V2 is a situational forced-choice instrument. Each item contains
+    // four plausible behavioral responses, one keyed to each DISC dimension.
+    // Selection is therefore across the 24-item V2 bank, not six questions
+    // pre-assigned to a single dimension.
+    selected = seededShuffle(runtimeQuestions, `${s}:DISC`).slice(0, config.questionCount);
   } else if (type === "eq") {
     const dimensions = [
       "EMOTION_AWARENESS",
@@ -241,7 +243,16 @@ export function snapshotFromSelection(
     assessmentType: type,
     assessmentConfigurationVersion: config.version,
     questionBankVersion: args.questionBankVersion,
-    taxonomyVersion: type === "disc" ? "DISC_TAXONOMY_V1" : type === "eq" ? "EQ_TAXONOMY_V1" : type === "cognitive" ? "COGNITIVE_TAXONOMY_V1" : "TAXONOMY_V1",
+    taxonomyVersion:
+      type === "cognitive"
+        ? (selected[0]?.taxonomyVersion ?? "COGNITIVE_TAXONOMY_V2")
+        : type === "disc"
+          ? (selected[0]?.taxonomyVersion ?? "DISC_TAXONOMY_V2")
+          : type === "eq"
+            ? "EQ_TAXONOMY_V2"
+            : type === "riasec"
+              ? (selected[0]?.taxonomyVersion ?? "RIASEC_TAXONOMY_V2")
+              : "TAXONOMY_V1",
     scoringVersion: config.scoringVersion,
     selectionAlgorithmVersion: config.selectionAlgorithmVersion,
     attemptSeed: args.attemptSeed,
@@ -256,6 +267,16 @@ export function snapshotFromSelection(
           selected.filter((q) => q.domain === domain).length,
         ]),
       ),
+      ...(type === "disc"
+        ? {
+            blueprintDistribution: Object.fromEntries(
+              [...new Set(selected.map((q) => q.subdomain ?? "UNSPECIFIED"))].map((subdomain) => [
+                subdomain,
+                selected.filter((q) => (q.subdomain ?? "UNSPECIFIED") === subdomain).length,
+              ]),
+            ),
+          }
+        : {}),
     },
   };
 }

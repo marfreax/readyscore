@@ -45,3 +45,11 @@ yarn-debug.log*
 *.pem
 # SSH private keys
 *.pem
+
+# Local auth/runtime state
+data/auth-state.json
+
+# Generated report / QA artifacts
+data/v15/ReadyScore.pdf
+docs/v15/Phase-B-Visual-QA.pdf
+docs/v15/Phase-B-Visual-QA-Montage.jpg

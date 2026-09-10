@@ -1,0 +1,45 @@
+{
+  "version": "V8.7",
+  "status": "IMPLEMENTED",
+  "scope": "Unified orchestration, assessment-specific dispatch, provenance and response-model boundaries",
+  "protection": "Orchestration-only; measurement semantics remain assessment-specific and versioned",
+  "databaseMigration": false,
+  "measurementMutation": false,
+  "scoringMutation": false,
+  "universalScore": false,
+  "crossTestSynthesis": false,
+  "architecture": {
+    "adapter": "UnifiedAssessmentAdapter",
+    "entryPoint": "calculateUnifiedAssessmentResult",
+    "dispatch": "getScoringEngine",
+    "scoringIdentity": "scoringEngine: { ...engine.identity }",
+    "unknownAssessment": "No unified assessment adapter registered",
+    "responseModels": {
+      "free": "LIKERT_5",
+      "premium": "LIKERT_5",
+      "cognitive": "SINGLE_CHOICE_4",
+      "eq": "SINGLE_CHOICE_4",
+      "disc": "FORCED_CHOICE_4",
+      "riasec": "LIKERT_5"
+    },
+    "questionCounts": {
+      "free": 60,
+      "premium": 100,
+      "cognitive": 24,
+      "eq": 24,
+      "disc": 24,
+      "riasec": 60
+    },
+    "runtime": "calculateUnifiedAssessmentResult",
+    "scoringRegistry": "const ENGINES",
+    "historicalSemantics": "Assessment-specific scoring engines remain authoritative and versioned"
+  },
+  "safetyRules": [
+    "No universal score or cross-test synthesis",
+    "Response models remain assessment-specific",
+    "Scoring identity/version is validated at the unified boundary",
+    "No V8.7 database migration",
+    "Unified orchestration must not rescore or reinterpret assessment semantics"
+  ],
+  "implementationBoundary": "V8.7 is orchestration-only; measurement and scoring semantics remain in assessment-specific modules"
+}

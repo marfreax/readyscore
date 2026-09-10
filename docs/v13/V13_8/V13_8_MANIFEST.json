@@ -1,0 +1,14 @@
+{
+  "phase":"V13.8",
+  "name":"Package Configuration",
+  "status":"IMPLEMENTED_STATIC_CONTRACT_READY",
+  "files":[
+    "V13_8/PRODUCTION_PACKAGE_CONFIGURATIONS.json",
+    "V13_8/README.md",
+    "V13_8/V13_8_DELIVERY_NOTES.md",
+    "V13_8/V13_8_IMPLEMENTATION_VERIFICATION.md",
+    "V13_8/V13_8_MANIFEST.json",
+    "scripts/validate-v13-8-package-configuration.mjs"
+  ],
+  "databaseMigration":false
+}

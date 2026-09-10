@@ -45,7 +45,7 @@ assertMarkers(result.text, [
   "Your assessments",
   "Recent activity",
   "Access &amp; plans",
-  "IQ / Cognitive",
+  "Cognitive",
   "Emotional Intelligence",
   "DISC",
   "RIASEC",

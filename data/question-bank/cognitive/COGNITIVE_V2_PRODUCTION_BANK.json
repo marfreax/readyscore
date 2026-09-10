@@ -1,0 +1,482 @@
+[
+  {
+    "id": "Cognitive-V-01",
+    "code": "Cognitive-V-01",
+    "dimension": "VERBAL_REASONING",
+    "text": "Pilih kata yang paling tepat melengkapi hubungan: Buku : Membaca = Garpu : ...",
+    "options": [
+      "Makan",
+      "Memotong",
+      "Memasak",
+      "Menulis"
+    ],
+    "correctOption": 1,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-V-02",
+    "code": "Cognitive-V-02",
+    "dimension": "VERBAL_REASONING",
+    "text": "Manakah pasangan kata yang memiliki hubungan paling mirip dengan PANAS : DINGIN?",
+    "options": [
+      "Tinggi : Besar",
+      "Cepat : Lambat",
+      "Keras : Kuat",
+      "Terang : Cahaya"
+    ],
+    "correctOption": 2,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-V-03",
+    "code": "Cognitive-V-03",
+    "dimension": "VERBAL_REASONING",
+    "text": "Semua dokter di klinik A memakai kartu identitas. Rina adalah dokter di klinik A. Kesimpulan yang paling tepat adalah...",
+    "options": [
+      "Rina mungkin memakai kartu identitas",
+      "Semua pemakai kartu identitas adalah dokter",
+      "Rina memakai kartu identitas",
+      "Rina bukan dokter"
+    ],
+    "correctOption": 3,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-V-04",
+    "code": "Cognitive-V-04",
+    "dimension": "VERBAL_REASONING",
+    "text": "Kata manakah yang paling berbeda dari yang lain?",
+    "options": [
+      "Apel",
+      "Mangga",
+      "Jeruk",
+      "Wortel"
+    ],
+    "correctOption": 4,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-V-05",
+    "code": "Cognitive-V-05",
+    "dimension": "VERBAL_REASONING",
+    "text": "Jika 'transparan' berarti dapat ditembus cahaya, lawan kata yang paling tepat adalah...",
+    "options": [
+      "Buram",
+      "Terang",
+      "Bening",
+      "Tipis"
+    ],
+    "correctOption": 1,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-V-06",
+    "code": "Cognitive-V-06",
+    "dimension": "VERBAL_REASONING",
+    "text": "Pilih kesimpulan yang paling kuat: Tidak ada peserta yang terlambat mengumpulkan formulir. Budi adalah peserta.",
+    "options": [
+      "Budi terlambat",
+      "Budi tidak terlambat mengumpulkan formulir",
+      "Budi tidak mengumpulkan formulir",
+      "Budi adalah panitia"
+    ],
+    "correctOption": 2,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "VERBAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-N-01",
+    "code": "Cognitive-N-01",
+    "dimension": "NUMERICAL_REASONING",
+    "text": "Lanjutkan deret: 2, 5, 10, 17, 26, ...",
+    "options": [
+      "35",
+      "36",
+      "37",
+      "38"
+    ],
+    "correctOption": 3,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-N-02",
+    "code": "Cognitive-N-02",
+    "dimension": "NUMERICAL_REASONING",
+    "text": "Sebuah harga Rp80.000 naik 25%. Harga barunya adalah...",
+    "options": [
+      "Rp90.000",
+      "Rp95.000",
+      "Rp105.000",
+      "Rp100.000"
+    ],
+    "correctOption": 4,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-N-03",
+    "code": "Cognitive-N-03",
+    "dimension": "NUMERICAL_REASONING",
+    "text": "Jika 3 mesin menghasilkan 120 unit dalam 4 jam dengan laju sama, berapa unit yang dihasilkan 1 mesin dalam 4 jam?",
+    "options": [
+      "40",
+      "30",
+      "60",
+      "90"
+    ],
+    "correctOption": 1,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-N-04",
+    "code": "Cognitive-N-04",
+    "dimension": "NUMERICAL_REASONING",
+    "text": "Lanjutkan pola: 81, 27, 9, 3, ...",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "6"
+    ],
+    "correctOption": 2,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-N-05",
+    "code": "Cognitive-N-05",
+    "dimension": "NUMERICAL_REASONING",
+    "text": "Rasio A:B adalah 3:5. Jika jumlah A dan B adalah 64, nilai B adalah...",
+    "options": [
+      "24",
+      "32",
+      "40",
+      "48"
+    ],
+    "correctOption": 3,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-N-06",
+    "code": "Cognitive-N-06",
+    "dimension": "NUMERICAL_REASONING",
+    "text": "Sebuah perjalanan 150 km ditempuh dalam 3 jam. Dengan kecepatan rata-rata sama, jarak dalam 5 jam adalah...",
+    "options": [
+      "200 km",
+      "225 km",
+      "300 km",
+      "250 km"
+    ],
+    "correctOption": 4,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "NUMERICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-L-01",
+    "code": "Cognitive-L-01",
+    "dimension": "LOGICAL_REASONING",
+    "text": "Jika semua X adalah Y, dan sebagian Y adalah Z, manakah yang pasti benar?",
+    "options": [
+      "X selalu termasuk Y",
+      "Semua X adalah Z",
+      "Sebagian X pasti Z",
+      "Tidak ada X yang Z"
+    ],
+    "correctOption": 1,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-L-02",
+    "code": "Cognitive-L-02",
+    "dimension": "LOGICAL_REASONING",
+    "text": "Urutan A, B, C, dan D harus memenuhi: A sebelum B, C setelah B, dan D sebelum C. Mana urutan yang mungkin?",
+    "options": [
+      "B-A-D-C",
+      "A-B-C-D",
+      "A-D-B-C",
+      "D-C-A-B"
+    ],
+    "correctOption": 2,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-L-03",
+    "code": "Cognitive-L-03",
+    "dimension": "LOGICAL_REASONING",
+    "text": "Jika lampu merah berarti berhenti dan lampu tidak merah berarti tidak wajib berhenti, saat lampu merah menyala maka...",
+    "options": [
+      "Boleh terus",
+      "Harus berbelok",
+      "Harus berhenti",
+      "Tidak dapat ditentukan"
+    ],
+    "correctOption": 3,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-L-04",
+    "code": "Cognitive-L-04",
+    "dimension": "LOGICAL_REASONING",
+    "text": "Tiga orang K, L, M duduk berurutan. K tidak di tengah. L berada di sebelah kanan K. Siapa yang mungkin berada di tengah?",
+    "options": [
+      "K",
+      "M",
+      "Tidak mungkin",
+      "L"
+    ],
+    "correctOption": 4,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-L-05",
+    "code": "Cognitive-L-05",
+    "dimension": "LOGICAL_REASONING",
+    "text": "Semua arsip lama disimpan di ruang A. Dokumen X tidak berada di ruang A. Kesimpulan yang paling tepat adalah...",
+    "options": [
+      "X bukan arsip lama",
+      "X pasti arsip lama",
+      "X pasti baru",
+      "X tidak boleh disimpan"
+    ],
+    "correctOption": 1,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-L-06",
+    "code": "Cognitive-L-06",
+    "dimension": "LOGICAL_REASONING",
+    "text": "Jika aturan menyatakan: setiap tugas A harus selesai sebelum tugas B, dan B sebelum C, maka...",
+    "options": [
+      "C selesai sebelum A",
+      "A selesai sebelum C",
+      "B selesai setelah C",
+      "A dan C selalu bersamaan"
+    ],
+    "correctOption": 2,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "LOGICAL_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-A-01",
+    "code": "Cognitive-A-01",
+    "dimension": "ABSTRACT_REASONING",
+    "text": "Pola simbol: ▲, ▲▲, ▲▲▲, ... Bentuk berikutnya adalah...",
+    "options": [
+      "▲",
+      "▲▲",
+      "▲▲▲▲",
+      "■■■■"
+    ],
+    "correctOption": 3,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-A-02",
+    "code": "Cognitive-A-02",
+    "dimension": "ABSTRACT_REASONING",
+    "text": "Pola: AB, BC, CD, DE, ... pasangan berikutnya adalah...",
+    "options": [
+      "DF",
+      "EE",
+      "FG",
+      "EF"
+    ],
+    "correctOption": 4,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-A-03",
+    "code": "Cognitive-A-03",
+    "dimension": "ABSTRACT_REASONING",
+    "text": "Jika setiap langkah menggeser posisi huruf satu tingkat: A→B, B→C, C→D, maka D→...",
+    "options": [
+      "E",
+      "C",
+      "D",
+      "F"
+    ],
+    "correctOption": 1,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-A-04",
+    "code": "Cognitive-A-04",
+    "dimension": "ABSTRACT_REASONING",
+    "text": "Urutan bentuk mengikuti jumlah sisi: segitiga, persegi, segilima, ... bentuk berikutnya adalah...",
+    "options": [
+      "Lingkaran",
+      "Segienam",
+      "Segitiga",
+      "Persegi"
+    ],
+    "correctOption": 2,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-A-05",
+    "code": "Cognitive-A-05",
+    "dimension": "ABSTRACT_REASONING",
+    "text": "Pola angka visual: 1 titik, 2 titik, 4 titik, 8 titik. Tahap berikutnya mengikuti aturan yang sama menjadi...",
+    "options": [
+      "10 titik",
+      "12 titik",
+      "16 titik",
+      "14 titik"
+    ],
+    "correctOption": 3,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  },
+  {
+    "id": "Cognitive-A-06",
+    "code": "Cognitive-A-06",
+    "dimension": "ABSTRACT_REASONING",
+    "text": "Pola pasangan: AZ, BY, CX, ... pasangan berikutnya adalah...",
+    "options": [
+      "EV",
+      "DU",
+      "EX",
+      "DW"
+    ],
+    "correctOption": 4,
+    "weight": 1,
+    "type": "SINGLE_CHOICE",
+    "answerType": "SINGLE_CHOICE_4",
+    "version": "v1",
+    "status": "PUBLISHED",
+    "subdomain": "ABSTRACT_REASONING",
+    "indicator": "OBJECTIVE_REASONING"
+  }
+]

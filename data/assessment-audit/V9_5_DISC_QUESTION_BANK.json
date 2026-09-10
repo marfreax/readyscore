@@ -1,0 +1,50 @@
+{
+  "version": "V9.5",
+  "status": "IMPLEMENTED",
+  "phase": "DISC Question Bank",
+  "scope": "Customer-facing DISC situational forced-choice question bank implementation over the protected V8.5 instrument contract",
+  "measurementBoundary": {
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "questionBankVersion": "DISC_V2",
+    "questionType": "SCENARIO_SINGLE_CHOICE",
+    "responseModel": "situational_forced_choice",
+    "scoringVersion": "DISC_SCORE_V2",
+    "resultContract": "DISC_RESULT_V2",
+    "overallScoreSubstantive": false
+  },
+  "bank": {
+    "source": "data/question-bank/disc/DISC_V2_SITUATIONAL_FORCED_CHOICE_PRODUCTION_BANK.json",
+    "questionCount": 24,
+    "targetScenarioCoverage": {
+      "TARGET_D": 6,
+      "TARGET_I": 6,
+      "TARGET_S": 6,
+      "TARGET_C": 6
+    },
+    "optionsPerQuestion": 4,
+    "dimensionSet": ["D", "I", "S", "C"],
+    "mappingModel": "item_specific_permutation",
+    "equalItemWeight": 1,
+    "status": "PRODUCTION"
+  },
+  "implementation": {
+    "databaseMigration": false,
+    "historicalQuestionVersionsImmutable": true,
+    "customerScoringKeysExposed": false,
+    "customerDimensionMappingsExposed": false,
+    "assessmentSpecificResponseModelPreserved": true,
+    "adminQuestionBankCompatibility": true,
+    "runtimeCompatibility": "V9.3",
+    "measurementContractSource": "V8.5_DISC_INSTRUMENT"
+  },
+  "nonGoals": [
+    "DISC measurement redesign",
+    "DISC scoring redesign",
+    "substantive overall DISC score",
+    "IQ/EQ/ability claims",
+    "universal score",
+    "raw-average synthesis",
+    "historical QuestionVersion mutation",
+    "database schema migration"
+  ]
+}

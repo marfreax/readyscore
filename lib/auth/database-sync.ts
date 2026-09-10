@@ -17,6 +17,7 @@ export async function syncUserToDatabase(userId: string) {
       email: user.email,
       passwordHash: user.passwordHash,
       role: user.role,
+      status: user.status,
       createdAt: new Date(user.createdAt),
       updatedAt: new Date(user.updatedAt),
     },
@@ -25,6 +26,7 @@ export async function syncUserToDatabase(userId: string) {
       email: user.email,
       passwordHash: user.passwordHash,
       role: user.role,
+      status: user.status,
       updatedAt: new Date(user.updatedAt),
     },
   });

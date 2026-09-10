@@ -1,0 +1,30 @@
+{
+  "phase": "V13.4",
+  "title": "Production Assessment Blueprint",
+  "status": "IMPLEMENTATION",
+  "artifacts": [
+    "V13_4/PRODUCTION_ASSESSMENT_BLUEPRINT.json",
+    "V13_4/PRODUCTION_ASSESSMENT_BLUEPRINT.md",
+    "V13_4/README.md",
+    "V13_4/V13_4_MANIFEST.json",
+    "scripts/validate-v13-4-production-assessment-blueprint.mjs"
+  ],
+  "databaseMigration": null,
+  "runtimeCodeChange": false,
+  "boundaries": [
+    "explicit four-assessment production blueprint",
+    "20-minute maximum timer target",
+    "20-percent operational reserve policy",
+    "explicit taxonomy and scoring version dependencies",
+    "DISC/EQ/Cognitive non-24-item scoring constraints remain deferred to V13.7",
+    "legacy general-readiness content remains outside production instrument pools"
+  ],
+  "downstream": [
+    "V13.5 Production Question Pool",
+    "V13.6 Mapping & Content Review",
+    "V13.7 Scoring Validation",
+    "V13.8 Package Configuration",
+    "V13.9 Publish & Production Eligibility",
+    "V13.10 Production E2E & Customer Readiness"
+  ]
+}

@@ -43,6 +43,7 @@ export default function LoginPage() {
             {error && <p role="alert" className="rs-form-error">{error}</p>}
             <button disabled={busy} className="rs-button rs-button-primary w-full">{busy ? "Memproses..." : "Masuk"}</button>
           </form>
+          <p className="mt-4 text-center text-sm"><Link href="/forgot-password" className="font-black text-indigo-600">Lupa password?</Link></p>
           <p className="mt-6 text-center text-sm text-slate-500">Belum punya akun? <Link href="/register" className="font-black text-indigo-600">Daftar</Link></p>
           <Link href="/" className="rs-button rs-button-ghost mt-3 w-full">Kembali ke beranda</Link>
         </section>

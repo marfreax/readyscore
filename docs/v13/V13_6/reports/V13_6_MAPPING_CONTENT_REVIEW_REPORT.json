@@ -1,0 +1,66 @@
+{
+  "phase": "V13.6",
+  "phaseName": "Mapping & Content Review",
+  "version": "1.0",
+  "date": "2026-09-07",
+  "status": "IMPLEMENTATION_COMPLETE_WITH_UPSTREAM_CONTENT_BLOCKERS",
+  "sourceBaseline": "ReadyScore_V13.4_Production_Assessment_Blueprint.zip + V13.5 candidate pool artifacts",
+  "sourceGrounding": "Only supplied V13.5 candidate pools are reviewed; no legacy padding, duplication, reclassification, or scoring mutation.",
+  "lifecycleTarget": [
+    "DRAFT",
+    "VALIDATED",
+    "REVIEW_REQUIRED",
+    "APPROVED",
+    "PUBLISHED",
+    "ACTIVE"
+  ],
+  "mappingPolicy": "Existing supplied domain/subdomain/indicator fields are preserved verbatim. No mapping is promoted to APPROVED solely by this artifact.",
+  "contentReviewPolicy": "V13.6 records review readiness and blockers; it does not fabricate reviewer approval or publish content.",
+  "assessments": {
+    "RIASEC": {
+      "candidateCount": 60,
+      "mappingRows": 60,
+      "reviewRows": 60
+    },
+    "DISC": {
+      "candidateCount": 80,
+      "mappingRows": 80,
+      "reviewRows": 80
+    },
+    "EQ": {
+      "candidateCount": 29,
+      "mappingRows": 29,
+      "reviewRows": 29
+    },
+    "COGNITIVE": {
+      "candidateCount": 33,
+      "mappingRows": 33,
+      "reviewRows": 33
+    }
+  },
+  "blockingFindings": {
+    "RIASEC": [],
+    "DISC": [
+      "80-item DISC scoring compatibility remains explicitly deferred to V13.7; candidate mappings/review artifacts are review-ready but not publish-authorized."
+    ],
+    "EQ": [
+      "Only 29 unique eligible candidates exist vs 50 production + 10 reserve.",
+      "Composition is incomplete (11/13, 6/13, 6/12, 6/12).",
+      "EQ scoring/import contract mismatch remains unresolved: V2 source uses 4-value scoringKey without correctOption while current importer expects 1-value scoringKey + correctOption."
+    ],
+    "COGNITIVE": [
+      "Only 33 unique eligible candidates exist vs 40 production + 8 reserve.",
+      "Logical composition is 7/10; Abstract is 6/10.",
+      "Reserve is 3/8.",
+      "Supplied source lacks six required unique Abstract Reasoning items."
+    ]
+  },
+  "acceptanceStatus": {
+    "requiredProductionQuestionsHaveApprovedMappings": "BLOCKED_BY_INCOMPLETE_UPSTREAM_POOL",
+    "contentReviewComplete": "NOT_COMPLETE",
+    "lifecycleStatesCorrect": "NOT_APPLIED_TO_DATABASE",
+    "noUnresolvedBlockingFindings": "FAIL",
+    "publishedEligibilityDeterministic": "NOT_ESTABLISHED_FOR_BLOCKED_ASSESSMENTS"
+  },
+  "gate": "V13.6 FAIL / NOT FROZEN"
+}

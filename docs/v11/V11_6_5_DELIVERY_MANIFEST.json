@@ -1,0 +1,20 @@
+{
+  "phase": "11.6.5",
+  "name": "Admin Audit Workspace Page",
+  "baseline": "V11.6.4",
+  "status": "READY_FOR_USER_VERIFICATION",
+  "route": "/admin/audit",
+  "migration": false,
+  "readOnly": true,
+  "customerSemanticsChanged": false,
+  "historicalDataChanged": false,
+  "auditMutationIntroduced": false,
+  "includes": [
+    "app/admin/audit/page.tsx",
+    "components/admin/AdminAuditWorkspace.tsx",
+    "components/admin/AdminShell.tsx navigation entry",
+    "scripts/validate-v11-6-5-admin-audit-workspace.mjs",
+    "V11_6_5_DELIVERY_NOTES.md",
+    "V11_6_5_DELIVERY_MANIFEST.json"
+  ]
+}

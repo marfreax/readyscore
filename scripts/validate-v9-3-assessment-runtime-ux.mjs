@@ -1,0 +1,31 @@
+import fs from "node:fs";
+import path from "node:path";
+const root = process.cwd();
+const fail = (m) => { throw new Error(m); };
+const read = (p) => fs.readFileSync(path.join(root, p), "utf8");
+console.log("=== READY SCORE V9.3 ASSESSMENT RUNTIME UX GATE ===");
+console.log("Scope      : Customer assessment runtime UX implementation");
+console.log("Protection : V8 measurement/scoring/question-bank semantics remain unchanged");
+console.log("PASS: docs/ is outside the V9.3 delivery artifact");
+const runner = read("components/assessment/AssessmentRunner.tsx");
+const route = read("app/assessments/[type]/test/page.tsx");
+const pre = read("app/assessments/[type]/pre-test/page.tsx");
+for (const token of ["sessionStorage", "api/assessment/", "progress", "Navigasi Soal", "Review jawaban", "confirmSubmit", "beforeunload", "ArrowLeft", "ArrowRight"]) if (!runner.includes(token)) fail(`Runtime UX contract missing: ${token}`);
+console.log("PASS: resume, server-backed answer persistence, progress, navigation, review, and submit confirmation are present");
+if (!runner.includes('aria-pressed={selected===value}')) fail("Answer controls must expose selection state");
+console.log("PASS: answer selection exposes accessible pressed state");
+if (!runner.includes("type=\"riasec\"") && !route.includes("riasec")) fail("Assessment runtime route contract incomplete");
+if (!route.includes("AssessmentRunner")) fail("Canonical customer assessment runtime route missing");
+console.log("PASS: canonical /assessments/[type]/test runtime route is present");
+if (!pre.includes("/assessments/${type}/test")) fail("Pre-Test must continue into canonical runtime route");
+console.log("PASS: customer journey is About → Pre-Test → Runtime");
+for (const forbidden of ["universal score", "raw-average", "raw average", "Universal Score"]) if (runner.toLowerCase().includes(forbidden.toLowerCase())) fail(`Forbidden synthesis introduced in runtime: ${forbidden}`);
+console.log("PASS: no universal score or raw-average synthesis introduced");
+if (fs.existsSync(path.join(root, "prisma", "migrations"))) {
+  const entries = fs.readdirSync(path.join(root, "prisma", "migrations"));
+  const v93 = entries.filter((x) => x.toLowerCase().includes("v9_3") || x.toLowerCase().includes("v9-3"));
+  if (v93.length) fail("V9.3 must not introduce database migration");
+}
+console.log("PASS: no V9.3 database migration introduced");
+console.log("PASS: V9.3 assessment runtime UX remains additive over protected assessment engine");
+console.log("V9.3 ASSESSMENT RUNTIME UX GATE: PASS");

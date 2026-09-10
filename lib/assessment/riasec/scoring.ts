@@ -1,3 +1,4 @@
+// Active V8.6 scoring semantics: RIASEC_SCORE_V2.
 import {
   RIASEC_DIMENSIONS,
   RIASEC_MIN_COVERAGE_PERCENT,
@@ -8,7 +9,7 @@ import {
   type RiasecDimension,
   type RiasecDimensionScore,
   type RiasecQuestion,
-  type RiasecResult,
+  type RiasecResultV2,
 } from "./types";
 
 const MIN_LIKERT = 1;
@@ -59,7 +60,7 @@ function rankDimensions(
 export function scoreRiasec(
   questions: RiasecQuestion[],
   answers: RiasecAnswer[],
-): RiasecResult {
+): RiasecResultV2 {
   const answerMap = new Map<string, RiasecAnswer>();
 
   for (const answer of answers) {

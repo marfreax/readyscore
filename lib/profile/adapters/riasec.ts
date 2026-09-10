@@ -33,7 +33,7 @@ export const riasecProfileAdapter: ProfileSignalAdapter = {
           scoringVersion: input.result.scoringVersion,
           interpretationVersion: input.result.interpretation?.interpretationVersion,
           excludedSignalCount: 0,
-          exclusionReasons: ["RIASEC_RESULT_V1 measurement payload is missing or invalid."],
+          exclusionReasons: ["RIASEC_RESULT_V2 measurement payload is missing or invalid."],
         },
       };
     }
@@ -52,7 +52,7 @@ export const riasecProfileAdapter: ProfileSignalAdapter = {
       confidence,
       sourceTestType: "RIASEC",
       sourceResultAttemptId: input.result.attemptId,
-      sourceResultContractVersion: input.result.interpretation?.contractVersion ?? "RIASEC_RESULT_V1",
+      sourceResultContractVersion: input.result.interpretation?.contractVersion ?? "RIASEC_RESULT_V2",
       sourceScoringVersion: measurement.scoringVersion,
       sourceInterpretationVersion: input.result.interpretation?.interpretationVersion,
     }));
@@ -64,7 +64,7 @@ export const riasecProfileAdapter: ProfileSignalAdapter = {
         attemptId: input.result.attemptId,
         status: measurement.isComplete ? "AVAILABLE" : measurement.measuredDimensionCount > 0 ? "PARTIAL" : "INSUFFICIENT",
         confidence,
-        resultContractVersion: input.result.interpretation?.contractVersion ?? "RIASEC_RESULT_V1",
+        resultContractVersion: input.result.interpretation?.contractVersion ?? "RIASEC_RESULT_V2",
         scoringVersion: measurement.scoringVersion,
         interpretationVersion: input.result.interpretation?.interpretationVersion,
         excludedSignalCount: 0,

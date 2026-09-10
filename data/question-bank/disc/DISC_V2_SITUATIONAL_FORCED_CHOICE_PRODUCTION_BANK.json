@@ -1,0 +1,746 @@
+[
+  {
+    "id": "DISC-V2-001",
+    "code": "DISC-V2-001",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_001",
+    "text": "Saat proyek tim mulai terlambat dari jadwal, apa yang paling mungkin kamu lakukan lebih dulu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menetapkan langkah yang harus segera dilakukan agar pekerjaan kembali bergerak.",
+      "Mengajak tim melihat sisi positif situasi agar energi tetap terjaga.",
+      "Mengecek kondisi anggota tim dan membantu menjaga kerja sama tetap tenang.",
+      "Menelusuri penyebab keterlambatan dan memastikan detail rencana sebelum bertindak."
+    ],
+    "optionDimensions": [
+      "D",
+      "I",
+      "S",
+      "C"
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-002",
+    "code": "DISC-V2-002",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_002",
+    "text": "Ketika suasana rapat terasa kaku dan orang-orang pasif, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Membuka percakapan dengan cara yang membuat orang lebih bersemangat.",
+      "Memberi ruang agar peserta yang pendiam merasa nyaman ikut berbicara.",
+      "Mengamati dulu pola diskusi dan merapikan poin-poin yang belum jelas.",
+      "Mengambil alih arah diskusi dan meminta keputusan yang jelas."
+    ],
+    "optionDimensions": [
+      "I",
+      "S",
+      "C",
+      "D"
+    ],
+    "scoringKey": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-003",
+    "code": "DISC-V2-003",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_003",
+    "text": "Seorang rekan baru terlihat kesulitan mengikuti ritme kerja tim. Apa yang paling mungkin kamu lakukan?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mendampinginya secara bertahap sampai ia merasa lebih nyaman dengan ritme tim.",
+      "Menjelaskan alur kerja dan memeriksa detail yang perlu ia pahami.",
+      "Menentukan tindakan praktis agar ia segera bisa mengejar target.",
+      "Mengajaknya berinteraksi dengan anggota tim agar cepat merasa diterima."
+    ],
+    "optionDimensions": [
+      "S",
+      "C",
+      "D",
+      "I"
+    ],
+    "scoringKey": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-004",
+    "code": "DISC-V2-004",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_004",
+    "text": "Kamu menerima laporan dengan banyak angka tetapi beberapa bagian tampak tidak konsisten. Kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memeriksa sumber angka dan mencocokkan setiap bagian yang tidak konsisten.",
+      "Meminta koreksi segera agar laporan dapat dipakai untuk keputusan.",
+      "Mengajak penulis laporan membahasnya secara terbuka dan ringan.",
+      "Memberi waktu untuk memperbaiki laporan tanpa membuat situasi menjadi tegang."
+    ],
+    "optionDimensions": [
+      "C",
+      "D",
+      "I",
+      "S"
+    ],
+    "scoringKey": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-005",
+    "code": "DISC-V2-005",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_005",
+    "text": "Dalam sebuah kegiatan, pembagian tugas belum jelas sementara waktu terus berjalan. Kamu lebih mungkin...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menetapkan siapa mengerjakan apa dan langsung memulai.",
+      "Mendorong semua orang bergerak dengan suasana yang antusias.",
+      "Membantu menyusun pembagian yang terasa nyaman bagi semua anggota.",
+      "Memastikan dulu rincian tugas dan urutan kerja agar tidak ada yang terlewat."
+    ],
+    "optionDimensions": [
+      "D",
+      "I",
+      "S",
+      "C"
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-006",
+    "code": "DISC-V2-006",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_006",
+    "text": "Kamu bertemu banyak orang baru dalam sebuah acara profesional. Kamu biasanya...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Dengan mudah membuka obrolan dan membuat percakapan terasa hidup.",
+      "Lebih suka mengenal beberapa orang secara perlahan dan nyaman.",
+      "Memperhatikan konteks dan informasi orang-orang tersebut sebelum banyak berbicara.",
+      "Mencari orang yang tepat untuk diajak membahas tujuan atau peluang konkret."
+    ],
+    "optionDimensions": [
+      "I",
+      "S",
+      "C",
+      "D"
+    ],
+    "scoringKey": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-007",
+    "code": "DISC-V2-007",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_007",
+    "text": "Ketika terjadi perbedaan pendapat yang mulai membuat suasana tim tegang, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mencoba memahami masing-masing pihak dan menurunkan ketegangan.",
+      "Mengurai persoalan secara sistematis untuk menemukan titik perbedaannya.",
+      "Menghentikan perdebatan dan mengarahkan tim pada keputusan.",
+      "Menggunakan komunikasi yang ringan agar suasana tidak semakin panas."
+    ],
+    "optionDimensions": [
+      "S",
+      "C",
+      "D",
+      "I"
+    ],
+    "scoringKey": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-008",
+    "code": "DISC-V2-008",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_008",
+    "text": "Atasan meminta kamu mengerjakan tugas baru dengan instruksi yang masih umum. Respons yang paling mewakili dirimu adalah...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Meminta kriteria, batasan, dan standar hasil agar pekerjaan dapat dilakukan dengan tepat.",
+      "Menentukan arah kerja yang paling masuk akal lalu segera mulai.",
+      "Mengajak atasan berdiskusi sambil menggali gambaran hasil yang diinginkan.",
+      "Memastikan ekspektasi bersama cukup jelas sebelum menjalankan tugas."
+    ],
+    "optionDimensions": [
+      "C",
+      "D",
+      "I",
+      "S"
+    ],
+    "scoringKey": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-009",
+    "code": "DISC-V2-009",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_009",
+    "text": "Jika kamu menemukan masalah penting tepat sebelum presentasi dimulai, kamu lebih mungkin...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memutuskan tindakan cepat untuk memastikan presentasi tetap berjalan.",
+      "Menjaga semangat tim dan membuat situasi terasa terkendali.",
+      "Membantu anggota tim tetap tenang sambil mencari cara yang aman.",
+      "Mengecek sumber masalah dan memilih perbaikan yang paling akurat."
+    ],
+    "optionDimensions": [
+      "D",
+      "I",
+      "S",
+      "C"
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-010",
+    "code": "DISC-V2-010",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_010",
+    "text": "Saat ide yang kamu sampaikan mendapat respons datar dari kelompok, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mencari cara lain untuk membuat ide tersebut menarik bagi mereka.",
+      "Mendengarkan keberatan mereka dan memberi ruang untuk mempertimbangkannya.",
+      "Menjelaskan alasan dan bukti pendukung agar ide dapat dinilai dengan jelas.",
+      "Mendorong kelompok menentukan apakah ide itu akan dijalankan atau tidak."
+    ],
+    "optionDimensions": [
+      "I",
+      "S",
+      "C",
+      "D"
+    ],
+    "scoringKey": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-011",
+    "code": "DISC-V2-011",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_011",
+    "text": "Ketika rencana kerja tim tiba-tiba berubah, kamu biasanya...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Membantu anggota tim beradaptasi tanpa membuat perubahan terasa mendadak.",
+      "Memastikan rincian perubahan, dampaknya, dan prosedur baru dipahami dengan benar.",
+      "Menentukan penyesuaian utama dan meminta semua orang segera bergerak.",
+      "Membantu tim melihat perubahan sebagai kesempatan baru."
+    ],
+    "optionDimensions": [
+      "S",
+      "C",
+      "D",
+      "I"
+    ],
+    "scoringKey": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-012",
+    "code": "DISC-V2-012",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_012",
+    "text": "Kamu diminta memeriksa hasil pekerjaan orang lain sebelum dikirim ke klien. Kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memeriksa ketepatan isi, konsistensi format, dan kesesuaian dengan standar.",
+      "Fokus pada hal yang paling penting agar hasil bisa segera dikirim.",
+      "Menyampaikan temuan dengan cara yang tetap membuat rekan nyaman menerimanya.",
+      "Membantu memperbaiki bagian yang bermasalah tanpa membuat rekan merasa disalahkan."
+    ],
+    "optionDimensions": [
+      "C",
+      "D",
+      "I",
+      "S"
+    ],
+    "scoringKey": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-013",
+    "code": "DISC-V2-013",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_013",
+    "text": "Dalam keadaan darurat kecil di kantor, kamu lebih mungkin...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengambil peran mengatur tindakan sampai situasi kembali terkendali.",
+      "Mengajak orang tetap tenang dengan komunikasi yang positif.",
+      "Memastikan orang-orang di sekitar saling membantu dan tidak panik.",
+      "Mencari informasi faktual tentang apa yang terjadi sebelum menentukan tindakan."
+    ],
+    "optionDimensions": [
+      "D",
+      "I",
+      "S",
+      "C"
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-014",
+    "code": "DISC-V2-014",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_014",
+    "text": "Ketika harus menyampaikan ide kepada orang yang belum mengenalmu, kamu biasanya...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menggunakan cerita dan contoh agar mereka tertarik mengikuti ide.",
+      "Membangun rasa nyaman terlebih dahulu sebelum masuk ke pokok pembahasan.",
+      "Menyiapkan penjelasan terstruktur agar pertanyaan dapat dijawab dengan tepat.",
+      "Menyampaikan inti keputusan atau manfaat yang perlu segera dipahami."
+    ],
+    "optionDimensions": [
+      "I",
+      "S",
+      "C",
+      "D"
+    ],
+    "scoringKey": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-015",
+    "code": "DISC-V2-015",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_015",
+    "text": "Seorang teman kerja sedang kecewa karena hasil kerjanya tidak sesuai harapan. Kamu lebih mungkin...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mendengarkan ceritanya dan menemaninya sampai emosinya lebih stabil.",
+      "Membantunya meninjau apa yang terjadi agar dapat memahami bagian yang perlu diperbaiki.",
+      "Membantunya menentukan langkah berikutnya agar masalah tidak berlarut.",
+      "Mengangkat kembali semangatnya dengan mengingatkan hal-hal yang sudah ia lakukan dengan baik."
+    ],
+    "optionDimensions": [
+      "S",
+      "C",
+      "D",
+      "I"
+    ],
+    "scoringKey": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-016",
+    "code": "DISC-V2-016",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_016",
+    "text": "Sebelum mengambil keputusan yang berdampak pada banyak orang, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengumpulkan informasi dan membandingkan konsekuensi setiap pilihan secara rinci.",
+      "Menentukan pilihan yang paling tegas dan dapat segera dijalankan.",
+      "Membahas pilihan dengan orang lain untuk melihat respons dan dukungan mereka.",
+      "Mempertimbangkan dampaknya terhadap orang-orang yang akan menjalankannya."
+    ],
+    "optionDimensions": [
+      "C",
+      "D",
+      "I",
+      "S"
+    ],
+    "scoringKey": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-017",
+    "code": "DISC-V2-017",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_017",
+    "text": "Jika anggota tim berulang kali menunda tugas penting, respons yang paling mungkin kamu ambil adalah...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menetapkan batas waktu yang tegas dan meminta komitmen tindakan.",
+      "Mengajak berbicara dengan cara yang membangkitkan motivasinya.",
+      "Mencari tahu hambatan yang ia hadapi dan membantu membuat langkah yang realistis.",
+      "Meninjau detail tugas untuk memastikan tidak ada instruksi atau kriteria yang membingungkan."
+    ],
+    "optionDimensions": [
+      "D",
+      "I",
+      "S",
+      "C"
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-018",
+    "code": "DISC-V2-018",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_018",
+    "text": "Dalam diskusi kelompok, kamu paling nyaman ketika bisa...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Membangun pertukaran ide yang hidup dan membuat banyak orang terlibat.",
+      "Membuat setiap orang merasa didengar sebelum keputusan dibuat.",
+      "Menyusun argumen berdasarkan informasi yang jelas dan terstruktur.",
+      "Mendorong diskusi menuju keputusan yang konkret."
+    ],
+    "optionDimensions": [
+      "I",
+      "S",
+      "C",
+      "D"
+    ],
+    "scoringKey": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-019",
+    "code": "DISC-V2-019",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_019",
+    "text": "Ketika harus bekerja sama dengan orang yang gaya kerjanya sangat berbeda darimu, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menyesuaikan ritme dan mencari pola kerja yang dapat dijalankan bersama.",
+      "Menyepakati aturan, peran, dan standar kerja secara jelas sejak awal.",
+      "Menetapkan cara kerja yang menurutmu paling efektif agar tujuan tercapai.",
+      "Mencari pendekatan komunikasi yang membuat kolaborasi terasa menyenangkan."
+    ],
+    "optionDimensions": [
+      "S",
+      "C",
+      "D",
+      "I"
+    ],
+    "scoringKey": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-020",
+    "code": "DISC-V2-020",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_020",
+    "text": "Jika sebuah keputusan terasa terlalu cepat dibuat tanpa data yang cukup, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Meminta data tambahan dan menguji asumsi sebelum keputusan ditetapkan.",
+      "Tetap menentukan keputusan sementara agar pekerjaan tidak berhenti.",
+      "Mengajak pihak terkait membahas pilihan sambil menjaga suasana tetap terbuka.",
+      "Meminta waktu yang wajar agar semua pihak dapat memahami dampaknya."
+    ],
+    "optionDimensions": [
+      "C",
+      "D",
+      "I",
+      "S"
+    ],
+    "scoringKey": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-021",
+    "code": "DISC-V2-021",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_021",
+    "text": "Kamu dipercaya memimpin kegiatan yang melibatkan banyak orang. Hal yang paling mungkin menjadi fokus awalmu adalah...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menetapkan tujuan, prioritas, dan siapa yang bertanggung jawab atas tiap bagian.",
+      "Membangun antusiasme agar orang-orang bersemangat berkontribusi.",
+      "Memastikan koordinasi berjalan nyaman dan tidak ada anggota yang tertinggal.",
+      "Menetapkan prosedur dan detail pelaksanaan agar kualitas tetap terjaga."
+    ],
+    "optionDimensions": [
+      "D",
+      "I",
+      "S",
+      "C"
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-022",
+    "code": "DISC-V2-022",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_022",
+    "text": "Ketika sebuah acara komunitas mulai kehilangan peserta, kamu cenderung...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menghidupkan kembali interaksi dan mencari cara menarik perhatian peserta.",
+      "Mendekati peserta dan mencari tahu apa yang membuat mereka kurang nyaman.",
+      "Melihat data kehadiran dan pola kegiatan sebelum menentukan perubahan.",
+      "Mengubah prioritas kegiatan agar tujuan utama tetap tercapai."
+    ],
+    "optionDimensions": [
+      "I",
+      "S",
+      "C",
+      "D"
+    ],
+    "scoringKey": [
+      2,
+      3,
+      4,
+      1
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-023",
+    "code": "DISC-V2-023",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_023",
+    "text": "Saat menerima masukan keras dari seseorang, kamu biasanya...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mendengarkan sampai selesai dan memberi waktu untuk memahami maksudnya.",
+      "Memilah fakta, contoh, dan standar yang digunakan dalam masukan tersebut.",
+      "Mengambil inti masalah dan menentukan tindakan perbaikan.",
+      "Menanggapi secara terbuka dan menjaga hubungan tetap positif."
+    ],
+    "optionDimensions": [
+      "S",
+      "C",
+      "D",
+      "I"
+    ],
+    "scoringKey": [
+      3,
+      4,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-V2-024",
+    "code": "DISC-V2-024",
+    "version": "DISC_V2",
+    "dimension": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_024",
+    "text": "Dalam menyusun rencana untuk pekerjaan yang kompleks, kamu paling mungkin...",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memecah pekerjaan menjadi langkah rinci, kriteria, dan pemeriksaan yang jelas.",
+      "Menentukan hasil akhir dan mendorong tim segera memulai bagian terpenting.",
+      "Mengajak orang bertukar ide agar rencana terasa menarik dan mudah dijalankan.",
+      "Menyusun ritme kerja yang stabil agar semua pihak dapat mengikuti prosesnya."
+    ],
+    "optionDimensions": [
+      "C",
+      "D",
+      "I",
+      "S"
+    ],
+    "scoringKey": [
+      4,
+      1,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  }
+]

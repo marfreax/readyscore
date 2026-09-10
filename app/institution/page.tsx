@@ -55,7 +55,7 @@ export default async function InstitutionPage() {
               Belum ada active institution membership pada akun ini.
             </div>
           ) : (
-            <div className="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {institutions.map((item) => (
                 <Link
                   key={item.institutionId}

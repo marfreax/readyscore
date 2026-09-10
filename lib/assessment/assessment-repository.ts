@@ -1,6 +1,6 @@
 import { AssessmentType, type Prisma } from "@prisma/client";
 import { prisma } from "../db/prisma";
-import type { AssessmentResult, Answer, LikertValue, Question } from "./types";
+import type { AssessmentResult, Answer, Question } from "./types";
 import type { SelectedQuestion } from "./question-engine";
 
 export type PersistedAttempt = {
@@ -8,6 +8,7 @@ export type PersistedAttempt = {
   assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: string;
+  expiresAt?: string;
   completedAt?: string;
   assessmentConfigurationId: string;
   assessmentConfigurationVersion: string;
@@ -20,6 +21,7 @@ function toAttempt(row: {
   assessmentType: "FREE" | "PREMIUM" | "RIASEC" | "DISC" | "EQ" | "COGNITIVE";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: Date;
+  expiresAt: Date | null;
   completedAt: Date | null;
   assessmentConfigurationId: string;
   assessmentConfigurationVersion: string;
@@ -31,6 +33,7 @@ function toAttempt(row: {
     assessmentType: row.assessmentType.toLowerCase() as "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive",
     status: row.status,
     startedAt: row.startedAt.toISOString(),
+    expiresAt: row.expiresAt?.toISOString(),
     completedAt: row.completedAt?.toISOString(),
     assessmentConfigurationId: row.assessmentConfigurationId,
     assessmentConfigurationVersion: row.assessmentConfigurationVersion,
@@ -49,12 +52,16 @@ function snapshotToQuestion(value: Prisma.JsonValue): Question {
     subdomain: snapshot.subdomain ? String(snapshot.subdomain) : null,
     indicator: snapshot.indicator ? String(snapshot.indicator) : null,
     type: String(snapshot.type ?? "LIKERT"),
-    answerType: "LIKERT_5",
-    scale: [1, 2, 3, 4, 5],
+    answerType: String(snapshot.answerType ?? "LIKERT_5") as Question["answerType"],
+    scale: Array.isArray(snapshot.scale) ? snapshot.scale.map(Number) : [1, 2, 3, 4, 5],
+    options: Array.isArray(snapshot.options) ? snapshot.options.map(String) : undefined,
+    correctOption: typeof snapshot.correctOption === "number" ? snapshot.correctOption : undefined,
     reverseScore: Boolean(snapshot.reverseScore),
-    scoringKey: Array.isArray(snapshot.scoringKey) && snapshot.scoringKey[0] === 5
-      ? [5, 4, 3, 2, 1]
-      : [1, 2, 3, 4, 5],
+    scoringKey: Array.isArray(snapshot.scoringKey)
+  ? snapshot.scoringKey.map(Number)
+  : snapshot.answerType === "SINGLE_CHOICE_4"
+    ? [1, 2, 3, 4]
+    : [1, 2, 3, 4, 5],
     weight: Number(snapshot.weight ?? 1),
     difficulty: String(snapshot.difficulty ?? "MEDIUM").toUpperCase() as Question["difficulty"],
     status: String(snapshot.status ?? "PUBLISHED").toUpperCase() as Question["status"],
@@ -73,9 +80,11 @@ function questionSnapshot(question: SelectedQuestion, sequence: number) {
     subdomain: question.subdomain ?? null,
     indicator: question.indicator ?? null,
     type: question.type ?? "LIKERT",
-    answerType: "LIKERT_5",
+    answerType: question.answerType,
     scale: [...question.scale],
     scoringKey: [...question.scoringKey],
+    options: question.options ? [...question.options] : undefined,
+    correctOption: question.correctOption ?? undefined,
     reverseScore: question.reverseScore,
     weight: question.weight,
     difficulty: question.difficulty,
@@ -101,6 +110,7 @@ export async function createReassessmentAttempt(input: {
   selectionSnapshot: Record<string, unknown>;
   selectedQuestions: SelectedQuestion[];
   startedAt: Date;
+  expiresAt: Date;
   creditId: string;
 }) {
   await prisma.$transaction(async (tx) => {
@@ -157,6 +167,7 @@ export async function createReassessmentAttempt(input: {
         attemptSeed: input.attemptSeed,
         selectionSnapshot: input.selectionSnapshot as Prisma.InputJsonValue,
         startedAt: input.startedAt,
+        expiresAt: input.expiresAt,
         lastActivityAt: input.startedAt,
         questions: {
           create: input.selectedQuestions.map((question, index) => ({
@@ -203,6 +214,8 @@ export async function createAttempt(input: {
   selectionSnapshot: Record<string, unknown>;
   selectedQuestions: SelectedQuestion[];
   startedAt: Date;
+  expiresAt?: Date | null;
+  commercialAccessClaim?: { entitlementId: string; userId: string; testType: string; expectedUsageConsumed: number; sourceOrderId?: string | null };
 }) {
   await prisma.$transaction(async (tx) => {
     await tx.assessmentAttempt.create({
@@ -220,6 +233,7 @@ export async function createAttempt(input: {
         attemptSeed: input.attemptSeed,
         selectionSnapshot: input.selectionSnapshot as Prisma.InputJsonValue,
         startedAt: input.startedAt,
+        expiresAt: input.expiresAt,
         lastActivityAt: input.startedAt,
         questions: {
           create: input.selectedQuestions.map((question, index) => ({
@@ -232,9 +246,75 @@ export async function createAttempt(input: {
         },
       },
     });
+
+    if (input.commercialAccessClaim) {
+      const claim = input.commercialAccessClaim;
+      const resourceKey = claim.testType.trim().toUpperCase();
+      const updated = await tx.userEntitlement.updateMany({
+        where: {
+          id: claim.entitlementId,
+          userId: claim.userId,
+          type: "TEST_ACCESS",
+          resourceType: "TEST_TYPE",
+          resourceKey,
+          status: "ACTIVE",
+          usageConsumed: claim.expectedUsageConsumed,
+        },
+        data: { usageConsumed: { increment: 1 } },
+      });
+      if (updated.count !== 1) throw new Error("ASSESSMENT_ACCESS_RACE");
+      if (claim.sourceOrderId) {
+        await tx.commercialAuditEvent.create({
+          data: {
+            orderId: claim.sourceOrderId,
+            action: "ACCESS_CONSUMED",
+            fromState: String(claim.expectedUsageConsumed),
+            toState: String(claim.expectedUsageConsumed + 1),
+            source: "ASSESSMENT_ACCESS",
+            reference: input.id,
+            metadata: { entitlementId: claim.entitlementId, testType: resourceKey },
+          },
+        });
+      }
+    }
   });
 
   return getAttempt(input.id);
+}
+
+export async function expireAttemptIfNeeded(attemptId: string, now = new Date()) {
+  const updated = await prisma.assessmentAttempt.updateMany({
+    where: { id: attemptId, status: "IN_PROGRESS", expiresAt: { lte: now } },
+    data: { status: "EXPIRED", completedAt: now, lastActivityAt: now },
+  });
+  return updated.count === 1;
+}
+
+export async function claimExpiredAttempts(now = new Date(), limit = 100) {
+  const rows = await prisma.assessmentAttempt.findMany({
+    where: { status: "IN_PROGRESS", expiresAt: { lte: now } },
+    select: { id: true },
+    orderBy: [{ expiresAt: "asc" }, { id: "asc" }],
+    take: Math.max(1, Math.min(limit, 500)),
+  });
+  const claimed: string[] = [];
+  for (const row of rows) {
+    if (await expireAttemptIfNeeded(row.id, now)) claimed.push(row.id);
+  }
+  return claimed;
+}
+
+export async function persistExpiredResult(attemptId: string, result: AssessmentResult) {
+  return prisma.$transaction(async (tx) => {
+    const existing = await tx.assessmentResult.findUnique({ where: { attemptId } });
+    if (existing) return existing.result as unknown as AssessmentResult;
+    const attempt = await tx.assessmentAttempt.findUnique({ where: { id: attemptId } });
+    if (!attempt) throw new Error("ATTEMPT_NOT_FOUND");
+    if (attempt.status !== "EXPIRED") throw new Error("ATTEMPT_NOT_EXPIRED");
+    await tx.assessmentResult.create({ data: { attemptId, result: result as unknown as Prisma.InputJsonValue } });
+    await tx.assessmentAttempt.update({ where: { id: attemptId }, data: { completedAt: attempt.completedAt ?? new Date(), lastActivityAt: new Date() } });
+    return result;
+  });
 }
 
 export async function getAttempt(attemptId: string) {
@@ -266,7 +346,7 @@ export async function getAttempt(attemptId: string) {
           : answer.questionId;
       return {
         questionId: publicQuestionId,
-        value: answer.rawValue as LikertValue,
+        value: answer.rawValue,
         answeredAt: answer.answeredAt.toISOString(),
       };
     }),
@@ -274,7 +354,7 @@ export async function getAttempt(attemptId: string) {
   };
 }
 
-export async function saveAnswer(attemptId: string, questionId: string, value: LikertValue) {
+export async function saveAnswer(attemptId: string, questionId: string, value: number) {
   const attempt = await prisma.assessmentAttempt.findUnique({
     where: { id: attemptId },
     include: { questions: true },

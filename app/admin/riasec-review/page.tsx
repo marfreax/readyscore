@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { requireAdmin } from "../../../lib/auth/admin";
 import RiasecHumanReviewWorkspace from "../../../components/admin/RiasecHumanReviewWorkspace";
 
 type Candidate = {
@@ -20,8 +21,9 @@ function parseCsv(text: string): Candidate[] {
   return rows.map(v=>Object.fromEntries(headers.map((h,i)=>[h,(v[i]??"").trim()])) as Candidate);
 }
 
-export default function RiasecReviewPage() {
+export default async function RiasecReviewPage() {
+  await requireAdmin();
   const file=path.join(process.cwd(),"data/question-bank/source/RIASEC_QB_V1_FULL_84_CANDIDATE.csv");
   const candidates=parseCsv(fs.readFileSync(file,"utf8"));
-  return <RiasecHumanReviewWorkspace candidates={candidates} />;
+  return <section className="rs-container py-8 sm:py-10"><div className="mb-8"><p className="rs-eyebrow">Content · Review</p><h1 className="rs-section-title mt-1 text-3xl">RIASEC Human Review</h1><p className="rs-subtitle mt-2">Specialized review workspace for the RIASEC candidate set.</p></div><RiasecHumanReviewWorkspace candidates={candidates} /></section>;
 }

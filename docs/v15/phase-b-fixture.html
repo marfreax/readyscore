@@ -1,0 +1,374 @@
+<!doctype html><html><head><meta charset="utf-8"><style>@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --rs-bg: #f7f8fc;
+  --rs-surface: #ffffff;
+  --rs-surface-muted: #f8fafc;
+  --rs-text: #0f172a;
+  --rs-text-muted: #64748b;
+  --rs-text-subtle: #94a3b8;
+  --rs-border: #e2e8f0;
+  --rs-border-strong: #cbd5e1;
+  --rs-primary: #4f46e5;
+  --rs-primary-strong: #3730a3;
+  --rs-primary-soft: #eef2ff;
+  --rs-success: #047857;
+  --rs-success-soft: #ecfdf5;
+  --rs-warning: #b45309;
+  --rs-warning-soft: #fffbeb;
+  --rs-danger: #b91c1c;
+  --rs-danger-soft: #fef2f2;
+  --rs-radius-sm: 10px;
+  --rs-radius-md: 14px;
+  --rs-radius-lg: 20px;
+  --rs-radius-xl: 28px;
+  --rs-shadow-sm: 0 1px 2px rgba(15, 23, 42, .04);
+  --rs-shadow-md: 0 8px 30px rgba(15, 23, 42, .07);
+  --rs-content: 1200px;
+}
+
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--rs-bg);
+  color: var(--rs-text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+::selection { background: #c7d2fe; color: #1e1b4b; }
+:focus-visible { outline: 3px solid rgba(79, 70, 229, .35); outline-offset: 2px; }
+
+.rs-container { width: min(100% - 32px, var(--rs-content)); margin-inline: auto; }
+.rs-page { min-height: 100vh; background: var(--rs-bg); color: var(--rs-text); }
+.rs-surface { background: var(--rs-surface); border: 1px solid var(--rs-border); }
+.rs-card { border: 1px solid var(--rs-border); border-radius: var(--rs-radius-lg); background: var(--rs-surface); box-shadow: var(--rs-shadow-sm); }
+.rs-card-muted { background: var(--rs-surface-muted); }
+.rs-card-accent { border-color: #c7d2fe; background: var(--rs-primary-soft); }
+.rs-card-danger { border-color: #fecaca; background: var(--rs-danger-soft); }
+
+.rs-brand { display: inline-flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; }
+.rs-brand-logo { display: block; width: 184px; height: auto; max-height: 54px; object-fit: contain; }
+.rs-brand-mark { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: #0f172a; color: white; font-weight: 900; }
+.rs-brand-name { display: block; font-size: 14px; font-weight: 900; letter-spacing: -.02em; }
+.rs-brand-meta { display: block; margin-top: 1px; color: var(--rs-text-subtle); font-size: 10px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+
+.rs-nav { display: flex; align-items: center; gap: 4px; }
+.rs-nav-link { border-radius: 10px; padding: 9px 12px; color: var(--rs-text-muted); font-size: 13px; font-weight: 800; text-decoration: none; transition: background .18s ease, color .18s ease; }
+.rs-nav-link:hover, .rs-nav-link[aria-current="page"] { background: #f1f5f9; color: var(--rs-text); }
+.rs-mobile-nav { overflow-x: auto; scrollbar-width: none; }
+.rs-mobile-nav::-webkit-scrollbar { display: none; }
+
+.rs-eyebrow { margin: 0; color: var(--rs-primary); font-size: 11px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+.rs-title { margin: 0; font-size: clamp(28px, 4vw, 42px); line-height: 1.08; font-weight: 900; letter-spacing: -.035em; }
+.rs-subtitle { margin: 0; color: var(--rs-text-muted); font-size: 14px; line-height: 1.7; }
+.rs-section-title { margin: 0; font-size: 18px; font-weight: 900; letter-spacing: -.02em; }
+
+.rs-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; gap: 8px; border: 1px solid transparent; border-radius: var(--rs-radius-sm); padding: 9px 15px; cursor: pointer; font-size: 13px; font-weight: 900; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease, background .15s ease, border-color .15s ease; }
+.rs-button:hover:not(:disabled) { transform: translateY(-1px); }
+.rs-button:disabled { cursor: not-allowed; opacity: .55; }
+.rs-button-primary { background: #0f172a; color: white; box-shadow: var(--rs-shadow-sm); }
+.rs-button-primary:hover:not(:disabled) { background: #1e293b; }
+.rs-button-secondary { border-color: var(--rs-border); background: white; color: var(--rs-text); }
+.rs-button-secondary:hover:not(:disabled) { border-color: var(--rs-border-strong); background: #f8fafc; }
+.rs-button-ghost { color: var(--rs-text-muted); background: transparent; }
+.rs-button-ghost:hover:not(:disabled) { background: #f1f5f9; color: var(--rs-text); }
+.rs-button-danger { background: #b91c1c; color: white; }
+
+.rs-badge { display: inline-flex; align-items: center; min-height: 24px; border-radius: 999px; padding: 4px 9px; font-size: 10px; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+.rs-badge-neutral { background: #f1f5f9; color: #475569; }
+.rs-badge-accent { background: var(--rs-primary-soft); color: var(--rs-primary-strong); }
+.rs-badge-success { background: var(--rs-success-soft); color: var(--rs-success); }
+.rs-badge-warning { background: var(--rs-warning-soft); color: var(--rs-warning); }
+.rs-badge-danger { background: var(--rs-danger-soft); color: var(--rs-danger); }
+
+.rs-input, .rs-form input, .rs-form select, .rs-form textarea { min-height: 44px; width: 100%; border: 1px solid var(--rs-border); border-radius: var(--rs-radius-sm); background: white; color: var(--rs-text); padding: 11px 13px; font-size: 14px; outline: none; transition: border-color .15s ease, box-shadow .15s ease; }
+.rs-input:focus, .rs-form input:focus, .rs-form select:focus, .rs-form textarea:focus { border-color: #818cf8; box-shadow: 0 0 0 3px rgba(99, 102, 241, .12); }
+.rs-form { display: grid; gap: 16px; }
+.rs-form label { display: grid; gap: 7px; color: var(--rs-text); font-size: 13px; font-weight: 800; }
+.rs-form-help { color: var(--rs-text-subtle); font-size: 12px; font-weight: 500; }
+.rs-form-error { border-radius: var(--rs-radius-sm); background: var(--rs-danger-soft); padding: 11px 13px; color: var(--rs-danger); font-size: 13px; font-weight: 700; }
+
+.rs-table-wrap { overflow: auto; border: 1px solid var(--rs-border); border-radius: var(--rs-radius-md); background: white; }
+.rs-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+.rs-table th { background: #f8fafc; color: #64748b; font-size: 10px; font-weight: 900; letter-spacing: .08em; text-transform: uppercase; }
+.rs-table th, .rs-table td { padding: 12px 14px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+.rs-table tbody tr:hover { background: #fafbff; }
+.rs-table tbody tr:last-child td { border-bottom: 0; }
+
+.rs-tabs { display: flex; gap: 4px; overflow-x: auto; border-bottom: 1px solid var(--rs-border); }
+.rs-tab { min-height: 44px; flex: 0 0 auto; border: 0; border-bottom: 2px solid transparent; background: transparent; padding: 10px 12px; color: var(--rs-text-muted); font-size: 13px; font-weight: 900; cursor: pointer; }
+.rs-tab:hover, .rs-tab[aria-selected="true"] { border-bottom-color: var(--rs-primary); color: var(--rs-primary-strong); }
+
+.rs-modal-backdrop { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; background: rgba(15, 23, 42, .48); padding: 20px; }
+.rs-modal { width: min(100%, 640px); max-height: min(90vh, 760px); overflow: auto; border: 1px solid var(--rs-border); border-radius: var(--rs-radius-xl); background: white; box-shadow: 0 24px 80px rgba(15, 23, 42, .22); }
+.rs-modal-header, .rs-modal-footer { padding: 18px 22px; }
+.rs-modal-header { border-bottom: 1px solid var(--rs-border); }
+.rs-modal-footer { border-top: 1px solid var(--rs-border); display: flex; justify-content: flex-end; gap: 8px; }
+.rs-modal-body { padding: 22px; }
+
+.rs-state { display: grid; justify-items: center; gap: 8px; padding: 48px 24px; border: 1px dashed var(--rs-border-strong); border-radius: var(--rs-radius-lg); text-align: center; background: white; color: var(--rs-text-muted); }
+.rs-state h3 { margin: 0; color: var(--rs-text); font-size: 16px; font-weight: 900; }
+.rs-state p { max-width: 520px; margin: 0; font-size: 13px; line-height: 1.6; }
+.rs-state-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: #f1f5f9; color: var(--rs-text-muted); font-weight: 900; }
+.rs-loading { display: flex; justify-content: center; min-height: 120px; border-style: solid; }
+.rs-spinner { width: 18px; height: 18px; border: 2px solid #cbd5e1; border-top-color: var(--rs-primary); border-radius: 50%; animation: rs-spin .8s linear infinite; }
+.rs-error { border-color: #fecaca; background: var(--rs-danger-soft); color: var(--rs-danger); }
+.rs-error .rs-state-icon { background: #fee2e2; color: var(--rs-danger); }
+.rs-toast { position: fixed; right: 20px; bottom: 20px; z-index: 70; max-width: min(420px, calc(100vw - 40px)); border: 1px solid var(--rs-border); border-radius: 14px; background: white; padding: 12px 15px; box-shadow: var(--rs-shadow-md); font-size: 13px; font-weight: 800; }
+.rs-toast-success { border-color: #a7f3d0; background: var(--rs-success-soft); color: var(--rs-success); }
+.rs-toast-warning { border-color: #fde68a; background: var(--rs-warning-soft); color: var(--rs-warning); }
+.rs-toast-danger { border-color: #fecaca; background: var(--rs-danger-soft); color: var(--rs-danger); }
+
+.rs-skip-link { position: fixed; left: 12px; top: 12px; z-index: 100; transform: translateY(-160%); border-radius: 10px; background: #0f172a; color: white; padding: 10px 14px; font-size: 13px; font-weight: 900; }
+.rs-skip-link:focus { transform: translateY(0); }
+
+@keyframes rs-spin { to { transform: rotate(360deg); } }
+@media (max-width: 640px) {
+  .rs-container { width: min(100% - 24px, var(--rs-content)); }
+  .rs-title { font-size: 30px; }
+  .rs-button { min-height: 44px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+.rs-workspace-link {
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 9px 12px;
+  color: var(--rs-text-muted);
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background .18s ease, color .18s ease, box-shadow .18s ease;
+}
+.rs-workspace-link:hover {
+  background: #f8fafc;
+  color: var(--rs-text);
+}
+.rs-workspace-link-active {
+  background: var(--rs-primary-soft);
+  color: var(--rs-primary-strong);
+  box-shadow: inset 3px 0 0 var(--rs-primary);
+}
+.rs-workspace-link-active:hover {
+  background: var(--rs-primary-soft);
+  color: var(--rs-primary-strong);
+}
+
+/* V9.13 Responsive & Accessibility hardening */
+.rs-a11y-target { min-width: 44px; min-height: 44px; }
+.rs-touch-target { min-height: 44px; }
+.rs-overflow-safe { min-width: 0; overflow-wrap: anywhere; }
+.rs-responsive-table { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.rs-focus-within:focus-within { outline: 3px solid rgba(79,70,229,.18); outline-offset: 2px; }
+
+@media (max-width: 767px) {
+  .rs-brand-logo { width: 158px; max-height: 48px; }
+  .rs-container { width: min(100% - 24px, var(--rs-content)); }
+  .rs-page h1 { overflow-wrap: anywhere; }
+  .rs-card { border-radius: 16px; }
+  .rs-modal-backdrop { align-items: flex-end; padding: 12px; }
+  .rs-modal { max-height: 92vh; border-radius: 20px; }
+  .rs-modal-header, .rs-modal-body, .rs-modal-footer { padding-left: 16px; padding-right: 16px; }
+  .rs-modal-footer { flex-direction: column-reverse; }
+  .rs-modal-footer .rs-button { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .rs-button { width: 100%; }
+  .rs-nav-link { min-height: 44px; display: inline-flex; align-items: center; }
+  .rs-mobile-nav { padding-bottom: 2px; }
+}
+
+@media (prefers-contrast: more) {
+  :root { --rs-border: #94a3b8; --rs-border-strong: #64748b; --rs-text-muted: #334155; }
+  .rs-button-secondary { border-width: 2px; }
+  .rs-workspace-link-active { box-shadow: inset 4px 0 0 var(--rs-primary); }
+}
+
+@media (forced-colors: active) {
+  .rs-button, .rs-card, .rs-input, .rs-workspace-link, .rs-tab { forced-color-adjust: auto; }
+  :focus-visible { outline: 3px solid CanvasText; }
+}
+
+/* V10.4 Reports & PDF Export — presentation-only print boundary */
+@media print {
+  @page { size: A4; margin: 14mm; }
+  html, body { background: white !important; color: #0f172a !important; }
+  body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .print-hidden, .rs-workspace-link, header, aside, nav, footer { display: none !important; }
+  .rs-report-document { width: 100% !important; max-width: none !important; }
+  .rs-report-document, .rs-report-document * { box-shadow: none !important; }
+  .rs-report-document article, .rs-report-document section { break-inside: avoid; }
+  .rs-report-document a { color: inherit !important; text-decoration: none !important; }
+}
+
+
+/* V10.9 Responsive & Accessibility Hardening */
+html { overflow-x: hidden; }
+img, svg, video, canvas { max-width: 100%; }
+button, a, input, select, textarea { touch-action: manipulation; }
+.rs-page a:focus-visible, .rs-page button:focus-visible, .rs-page input:focus-visible, .rs-page select:focus-visible, .rs-page textarea:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 3px;
+}
+.rs-page :disabled { cursor: not-allowed; }
+.rs-page table { max-width: 100%; }
+.rs-page pre { max-width: 100%; overflow-x: auto; }
+.rs-workspace-link { min-height: 44px; }
+.rs-mobile-nav { max-width: 100%; }
+.rs-button { white-space: normal; text-align: center; }
+
+@media (max-width: 1024px) {
+  .rs-container { width: min(100% - 28px, var(--rs-content)); }
+}
+
+@media (max-width: 767px) {
+  .rs-container { width: min(100% - 24px, var(--rs-content)); }
+  .rs-title { line-height: 1.12; }
+  .rs-subtitle { font-size: 14px; }
+  .rs-table-wrap { max-width: 100%; }
+  .rs-table { min-width: 620px; }
+  .rs-page main { min-width: 0; }
+}
+
+@media (max-width: 480px) {
+  .rs-container { width: min(100% - 20px, var(--rs-content)); }
+  .rs-card { max-width: 100%; }
+  .rs-modal-backdrop { padding: 8px; }
+  .rs-modal { max-width: 100%; }
+}
+
+@media (forced-colors: active) {
+  .rs-button-primary, .rs-button-danger { border: 1px solid ButtonText; }
+  .rs-button-secondary, .rs-button-ghost, .rs-workspace-link { border-color: ButtonText; }
+  .rs-badge { border: 1px solid ButtonText; }
+}
+
+@media print {
+  .print-hidden { display: none !important; }
+}
+
+/* V15.2 Customer Personalized Report */
+.rs-v15-page { scroll-margin-top: 24px; }
+@media print {
+  .rs-v15-report-document { width: 100% !important; max-width: none !important; }
+  .rs-v15-page { min-height: 250mm; break-after: page; page-break-after: always; border: 0 !important; border-radius: 0 !important; padding: 0 !important; }
+  .rs-v15-page:last-of-type { break-after: auto; page-break-after: auto; }
+  .rs-v15-page a { color: inherit !important; text-decoration: none !important; }
+}
+
+/* V15.2 report content hardening: customer-facing narrative stays readable in print. */
+.rs-v15-page { orphans: 3; widows: 3; }
+@media print {
+  .rs-v15-page { min-height: 0 !important; height: auto !important; margin: 0 !important; background: white !important; }
+  .rs-v15-page > div:first-child { padding-bottom: 4mm; }
+  .rs-v15-page h2 { font-size: 22px !important; line-height: 1.12 !important; }
+  .rs-v15-page p, .rs-v15-page li { font-size: 10.5pt !important; line-height: 1.48 !important; }
+  .rs-v15-page h3 { font-size: 8.5pt !important; line-height: 1.2 !important; }
+  .rs-v15-page > div:last-child { margin-top: 5mm !important; }
+}
+
+/* V15.2 Phase A — Presentation Layer V1 */
+.rs-v15-report-document { --report-ink: #172554; --report-muted: #64748b; --report-line: #dbe4f0; --report-soft: #f6f8fc; --report-accent: #2563eb; --report-accent-soft: #eef4ff; }
+.rs-report-toolbar { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:18px; padding:14px 16px; border:1px solid var(--report-line); border-radius:18px; background:#fff; color:var(--report-muted); font-size:13px; font-weight:700; }
+.rs-report-toolbar > div:first-child { display:flex; align-items:center; gap:10px; }
+.rs-report-toc { margin-bottom:24px; padding:22px; border:1px solid var(--report-line); border-radius:22px; background:#fff; }
+.rs-report-toc > div { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:8px 18px; margin-top:14px; }
+.rs-report-toc a { display:flex; gap:10px; align-items:baseline; padding:7px 0; color:#334155; font-size:12px; font-weight:700; text-decoration:none; border-bottom:1px solid #edf1f6; }
+.rs-report-toc a span { color:#94a3b8; font-variant-numeric:tabular-nums; }
+.rs-report-pages { display:grid; gap:24px; }
+.rs-v15-page { position:relative; min-height:760px; overflow:hidden; background:#fff; border:1px solid var(--report-line); border-radius:24px; color:var(--report-ink); box-shadow:0 14px 35px rgba(15,23,42,.06); }
+.rs-report-page-inner { min-height:760px; padding:46px 54px 68px; }
+.rs-report-page-top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding-bottom:15px; border-bottom:1px solid var(--report-line); }
+.rs-report-page-top > span { color:#94a3b8; font-size:11px; font-weight:800; font-variant-numeric:tabular-nums; }
+.rs-report-section,.rs-report-label { margin:0; color:#2563eb; font-size:9px; line-height:1.2; font-weight:900; letter-spacing:.18em; text-transform:uppercase; }
+.rs-report-page-heading { padding:24px 0 22px; }
+.rs-report-page-heading h2 { margin:0; max-width:700px; color:#0f172a; font-size:31px; line-height:1.08; letter-spacing:-.025em; font-weight:900; }
+.rs-report-page-content { display:grid; gap:18px; max-width:850px; }
+.rs-report-lead { margin:0; max-width:760px; color:#334155; font-size:17px; line-height:1.58; font-weight:600; }
+.rs-report-paragraph { margin:0; color:#475569; font-size:14px; line-height:1.7; }
+.rs-report-callout { padding:18px 20px; border:1px solid #dbe7ff; border-radius:17px; background:var(--report-accent-soft); }
+.rs-report-callout > p:last-child { margin:7px 0 0; color:#334155; font-size:14px; line-height:1.65; }
+.rs-report-list { padding-top:2px; }
+.rs-report-list ul,.rs-report-recommendation ul,.rs-report-week ul { margin:9px 0 0; padding-left:20px; }
+.rs-report-list li,.rs-report-recommendation li,.rs-report-week li { margin:0 0 8px; color:#334155; font-size:14px; line-height:1.55; }
+.rs-report-recommendation { padding:24px; border:1px solid var(--report-line); border-radius:22px; background:#fff; box-shadow:0 10px 25px rgba(15,23,42,.045); }
+.rs-report-rec-heading { display:flex; gap:15px; align-items:center; margin-bottom:18px; }
+.rs-report-rank { display:grid; width:42px; height:42px; place-items:center; flex:0 0 auto; border-radius:14px; background:#172554; color:#fff; font-size:18px; font-weight:900; }
+.rs-report-rec-heading h3 { margin:5px 0 0; color:#0f172a; font-size:24px; line-height:1.1; font-weight:900; }
+.rs-report-rec-fit { padding:15px 17px; border-left:3px solid #2563eb; background:#f8fbff; }
+.rs-report-rec-fit p:last-child { margin:5px 0 0; color:#334155; font-size:14px; line-height:1.55; }
+.rs-report-rec-description { margin:18px 0 0; color:#334155; font-size:14px; line-height:1.65; }
+.rs-report-rec-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:20px; padding-top:18px; border-top:1px solid #edf1f6; }
+.rs-report-rec-grid > div > p:not(.rs-report-label) { margin:8px 0 0; color:#334155; font-size:13px; line-height:1.55; }
+.rs-report-week { display:grid; grid-template-columns:76px 1fr; gap:22px; padding:25px; border:1px solid var(--report-line); border-radius:22px; background:#fff; }
+.rs-report-week-number { color:#dbe5f5; font-size:42px; line-height:1; font-weight:900; }
+.rs-report-week-main h3 { margin:5px 0 9px; color:#0f172a; font-size:25px; line-height:1.1; font-weight:900; }
+.rs-report-week-objective { margin:0; color:#475569; font-size:14px; line-height:1.6; }
+.rs-report-linked { margin:20px 0 0; padding-top:15px; border-top:1px solid #edf1f6; color:#475569; font-size:12px; line-height:1.55; }
+.rs-report-page-footer { position:absolute; left:54px; right:54px; bottom:26px; display:flex; justify-content:space-between; padding-top:10px; border-top:1px solid #edf1f6; color:#94a3b8; font-size:8px; font-weight:900; letter-spacing:.16em; }
+.rs-v15-cover { min-height:760px; background:linear-gradient(145deg,#ffffff 0%,#f7faff 100%); }
+.rs-v15-cover .rs-report-page-inner { min-height:760px; padding:0; }
+.rs-report-cover-content { min-height:760px; display:flex; flex-direction:column; justify-content:center; padding:70px 70px 64px; }
+.rs-report-cover-brand { width:min(520px,78%); margin-bottom:48px; }
+.rs-report-cover-brand img { display:block; width:100%; height:auto; }
+.rs-report-cover-content > .rs-report-section { font-size:10px; }
+.rs-report-cover-content h2 { max-width:760px; margin:10px 0 0; color:#0f172a; font-size:50px; line-height:1.02; letter-spacing:-.035em; font-weight:900; }
+.rs-report-cover-subtitle { max-width:620px; margin:18px 0 0; color:#475569; font-size:18px; line-height:1.55; }
+.rs-report-cover-rule { width:90px; height:4px; margin:28px 0 24px; border-radius:99px; background:#2563eb; }
+.rs-report-cover-content .rs-report-lead { max-width:700px; font-size:15px; }
+.rs-report-cover-content .rs-report-callout { max-width:700px; margin-top:18px; }
+.rs-report-cover-foot { margin-top:auto; padding-top:40px; color:#94a3b8; font-size:9px; font-weight:900; letter-spacing:.16em; text-transform:uppercase; }
+.rs-report-bottom-actions { display:flex; gap:10px; margin-top:18px; }
+
+@media (max-width: 800px) {
+  .rs-report-toc > div { grid-template-columns:1fr 1fr; }
+  .rs-report-page-inner { padding:32px 28px 60px; }
+  .rs-report-page-footer { left:28px; right:28px; }
+  .rs-report-rec-grid { grid-template-columns:1fr; gap:18px; }
+  .rs-report-cover-content { padding:42px 34px 52px; }
+  .rs-report-cover-content h2 { font-size:39px; }
+}
+
+@media print {
+  @page { size:A4 portrait; margin:0; }
+  html, body { width:210mm; margin:0 !important; padding:0 !important; background:#fff !important; }
+  body { -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important; }
+  .rs-print-report-shell { padding:0 !important; }
+  .rs-print-report-shell > .mx-auto { max-width:none !important; width:210mm !important; margin:0 !important; }
+  .rs-v15-report-document { width:210mm !important; max-width:none !important; margin:0 !important; }
+  .rs-report-toolbar,.rs-report-toc,.rs-report-bottom-actions { display:none !important; }
+  .rs-report-pages { display:block !important; }
+  .rs-v15-page { width:210mm !important; height:297mm !important; min-height:297mm !important; margin:0 !important; padding:0 !important; overflow:hidden !important; border:0 !important; border-radius:0 !important; box-shadow:none !important; break-after:page !important; page-break-after:always !important; }
+  .rs-v15-page:last-child { break-after:auto !important; page-break-after:auto !important; }
+  .rs-report-page-inner { width:210mm !important; height:297mm !important; min-height:297mm !important; box-sizing:border-box !important; padding:17mm 17mm 22mm !important; }
+  .rs-report-page-top { padding-bottom:4mm; }
+  .rs-report-page-heading { padding:6mm 0 5mm; }
+  .rs-report-page-heading h2 { font-size:24pt !important; }
+  .rs-report-page-content { gap:4mm; max-width:none; }
+  .rs-report-lead { font-size:12.5pt !important; line-height:1.48 !important; }
+  .rs-report-paragraph,.rs-report-callout > p:last-child,.rs-report-list li,.rs-report-recommendation li,.rs-report-week li,.rs-report-rec-description,.rs-report-rec-fit p:last-child,.rs-report-rec-grid > div > p:not(.rs-report-label),.rs-report-week-objective { font-size:10.5pt !important; line-height:1.42 !important; }
+  .rs-report-callout { padding:4mm !important; }
+  .rs-report-recommendation { padding:5mm !important; box-shadow:none !important; }
+  .rs-report-rec-grid { margin-top:4mm; padding-top:3mm; gap:8mm; }
+  .rs-report-week { padding:5mm !important; }
+  .rs-report-page-footer { left:17mm; right:17mm; bottom:10mm; }
+  .rs-v15-cover .rs-report-page-inner,.rs-report-cover-content { width:210mm !important; height:297mm !important; min-height:297mm !important; }
+  .rs-report-cover-content { box-sizing:border-box !important; padding:28mm 24mm 20mm !important; }
+  .rs-report-cover-brand { width:145mm; max-width:none; margin-bottom:22mm; }
+  .rs-report-cover-content h2 { font-size:31pt !important; }
+  .rs-report-cover-subtitle { font-size:13pt !important; }
+  .rs-report-cover-content .rs-report-lead { font-size:11pt !important; }
+}
+</style><style>body{margin:0;background:#eef2f7} .fixture{width:210mm;margin:10mm auto} .rs-v15-page{margin-bottom:10mm}</style></head><body><main class="fixture"><div class="rs-v15-report-document"><div class="rs-report-pages"><article class="rs-v15-page rs-v15-cover"><div class="rs-report-page-inner"><div class="rs-report-cover-content"><div class="rs-report-cover-brand"><img src="file:///mnt/data/phaseb/public/readyscore-logo.png" alt="ReadyScore"></div><p class="rs-report-section">PERSONALIZED REPORT</p><h2>Profil & Arah Pengembangan Anak</h2><p class="rs-report-cover-subtitle">Memahami pola diri, mengeksplorasi pilihan, dan menyusun langkah berikutnya.</p><div class="rs-report-cover-rule"></div><p class="rs-report-lead">Laporan personal ReadyScore untuk membantu orang tua dan anak membaca pola diri, mengeksplorasi pilihan, dan menyusun langkah 30 hari.</p><section class="rs-report-callout"><p class="rs-report-label">CARA MENGGUNAKAN LAPORAN</p><p>Baca rekomendasi sebagai hipotesis yang perlu divalidasi melalui pengalaman nyata. Assessment membantu memberi arah; keputusan tetap dibuat berdasarkan pengalaman, minat, prestasi, dan kondisi nyata anak.</p></section><p class="rs-report-cover-foot">ReadyScore · Personalized Assessment</p></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>01</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Guide</p><span>02 / 29</span></div><div class="rs-report-page-heading"><h2>Cara membaca laporan</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Laporan ini menggabungkan empat assessment menjadi cerita yang lebih mudah digunakan untuk refleksi dan eksplorasi.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>02</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Summary</p><span>03 / 29</span></div><div class="rs-report-page-heading"><h2>Executive summary</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Empat area berikut memberi petunjuk tentang pola yang terlihat saat ini dan pengalaman yang layak dieksplorasi berikutnya.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>03</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Profile</p><span>04 / 29</span></div><div class="rs-report-page-heading"><h2>Personal profile snapshot</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Empat area berikut memberi gambaran ringkas tentang pola yang terlihat saat ini.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>04</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Profile</p><span>05 / 29</span></div><div class="rs-report-page-heading"><h2>Minat & Arah Aktivitas</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Minat memberi petunjuk tentang jenis aktivitas yang cenderung terasa menarik dan layak dieksplorasi.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>05</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Profile</p><span>06 / 29</span></div><div class="rs-report-page-heading"><h2>Gaya Kerja & Interaksi</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Pola perilaku membantu memahami bagaimana anak cenderung bekerja, berkomunikasi, dan merespons tuntutan situasi.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>06</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Profile</p><span>07 / 29</span></div><div class="rs-report-page-heading"><h2>Respons Emosional & Sosial</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Profil emosional memberi konteks tentang bagaimana anak dapat merespons emosi, orang lain, dan dinamika sosial.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>07</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Profile</p><span>08 / 29</span></div><div class="rs-report-page-heading"><h2>Penalaran & Cara Belajar</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Profil penalaran menunjukkan pola relatif dalam memahami informasi dan menyelesaikan jenis masalah tertentu.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>08</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Profile</p><span>09 / 29</span></div><div class="rs-report-page-heading"><h2>Integrated four-dimension profile</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Profil ini sebaiknya dibaca sebagai pola lintas empat area, bukan sebagai satu skor universal.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>09</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Strengths</p><span>10 / 29</span></div><div class="rs-report-page-heading"><h2>Kekuatan yang terlihat</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Beberapa sinyal tampak relatif kuat dalam evidence yang tersedia. Kekuatan ini paling berguna ketika diterjemahkan menjadi aktivitas nyata.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>10</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Growth</p><span>11 / 29</span></div><div class="rs-report-page-heading"><h2>Area pengembangan</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Area pengembangan bukan label kekurangan. Bagian ini menunjukkan hal yang layak dilatih atau divalidasi lebih lanjut.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>11</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Environment</p><span>12 / 29</span></div><div class="rs-report-page-heading"><h2>Panduan lingkungan belajar & kerja</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Lingkungan yang tepat membantu kekuatan profil muncul secara lebih konsisten.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>12</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendations</p><span>13 / 29</span></div><div class="rs-report-page-heading"><h2>Ringkasan rekomendasi</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Tujuh opsi teratas di bawah ini bukan ranking keberhasilan. Urutan menunjukkan seberapa kuat pola evidence yang tersedia mendukung eksplorasi masing-masing bidang.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>13</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>14 / 29</span></div><div class="rs-report-page-heading"><h2>1. Ilmu Komunikasi</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">1</span><div><p class="rs-report-label">REKOMENDASI 1</p><h3>Ilmu Komunikasi</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>14</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>15 / 29</span></div><div class="rs-report-page-heading"><h2>2. Manajemen</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">2</span><div><p class="rs-report-label">REKOMENDASI 2</p><h3>Manajemen</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>15</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>16 / 29</span></div><div class="rs-report-page-heading"><h2>3. Desain Komunikasi Visual</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">3</span><div><p class="rs-report-label">REKOMENDASI 3</p><h3>Desain Komunikasi Visual</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>16</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>17 / 29</span></div><div class="rs-report-page-heading"><h2>4. Teknik Industri</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">4</span><div><p class="rs-report-label">REKOMENDASI 4</p><h3>Teknik Industri</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>17</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>18 / 29</span></div><div class="rs-report-page-heading"><h2>5. Informatika</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">5</span><div><p class="rs-report-label">REKOMENDASI 5</p><h3>Informatika</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>18</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>19 / 29</span></div><div class="rs-report-page-heading"><h2>6. Akuntansi</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">6</span><div><p class="rs-report-label">REKOMENDASI 6</p><h3>Akuntansi</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>19</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Recommendation</p><span>20 / 29</span></div><div class="rs-report-page-heading"><h2>7. Psikologi</h2></div><div class="rs-report-page-content"><div class="rs-report-recommendation"><div class="rs-report-rec-heading"><span class="rs-report-rank">7</span><div><p class="rs-report-label">REKOMENDASI 7</p><h3>Psikologi</h3></div></div><div class="rs-report-rec-fit"><p class="rs-report-label">MENGAPA BIDANG INI MUNCUL</p><p>Ada beberapa sinyal yang mendukung bidang ini dan layak divalidasi melalui eksplorasi.</p></div><p class="rs-report-rec-description">Bidang ini menggabungkan pengetahuan, keterampilan, dan pemecahan masalah yang dapat diuji melalui aktivitas sederhana.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">SINYAL YANG MENDUKUNG</p><ul><li>Verbal Reasoning (100)</li><li>Realistic (75)</li><li>Investigative (75)</li></ul></div><div><p class="rs-report-label">YANG PERLU DIVALIDASI</p><ul><li>Minat terhadap aktivitas bidang ini</li><li>Kenyamanan menghadapi tuntutannya</li></ul></div></div><div class="rs-report-rec-grid"><div><p class="rs-report-label">ARAH KARIER UNTUK DIEKSPLORASI</p><p>Contoh jalur karier · Contoh jalur lain · Jalur terkait</p></div><div><p class="rs-report-label">COBA SEKARANG</p><ul><li>Coba satu aktivitas kecil.</li><li>Catat pengalaman dan feedback.</li></ul></div></div></div></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>20</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Exploration</p><span>21 / 29</span></div><div class="rs-report-page-heading"><h2>Arah karier terkait</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Bidang ini muncul karena beberapa pola dalam hasil assessment layak diuji melalui pengalaman nyata. Gunakan halaman ini sebagai panduan eksplorasi, bukan keputusan final.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>21</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Exploration</p><span>22 / 29</span></div><div class="rs-report-page-heading"><h2>Panduan eksplorasi</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Bidang ini muncul karena beberapa pola dalam hasil assessment layak diuji melalui pengalaman nyata. Gunakan halaman ini sebagai panduan eksplorasi, bukan keputusan final.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>22</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Parents</p><span>23 / 29</span></div><div class="rs-report-page-heading"><h2>Panduan diskusi orang tua</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Bidang ini muncul karena beberapa pola dalam hasil assessment layak diuji melalui pengalaman nyata. Gunakan halaman ini sebagai panduan eksplorasi, bukan keputusan final.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>23</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Action Plan</p><span>24 / 29</span></div><div class="rs-report-page-heading"><h2>Minggu 1 — Kenali Diri & Pilihan</h2></div><div class="rs-report-page-content"><section class="rs-report-week"><div class="rs-report-week-number">01</div><div class="rs-report-week-main"><p class="rs-report-label">MINGGU 1</p><h3>Kenali Diri & Pilihan</h3><p class="rs-report-week-objective">Fokus minggu ini adalah menghubungkan pola diri dengan pengalaman nyata.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">LANGKAH YANG DISARANKAN</p><ul><li>Coba satu aktivitas yang relevan.</li><li>Catat respons dan pengalaman anak.</li><li>Bandingkan dengan pilihan lain.</li></ul></div><div><p class="rs-report-label">PERAN ORANG TUA</p><ul><li>Ajukan pertanyaan tanpa mengarahkan jawaban.</li><li>Bantu mencari pengalaman atau sumber yang relevan.</li></ul></div></div><p class="rs-report-linked"><strong>Pilihan yang sedang divalidasi:</strong> Ilmu Komunikasi · Manajemen · Desain Komunikasi Visual</p></div></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>24</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Action Plan</p><span>25 / 29</span></div><div class="rs-report-page-heading"><h2>Minggu 2 — Validasi Jurusan</h2></div><div class="rs-report-page-content"><section class="rs-report-week"><div class="rs-report-week-number">02</div><div class="rs-report-week-main"><p class="rs-report-label">MINGGU 2</p><h3>Validasi Jurusan</h3><p class="rs-report-week-objective">Fokus minggu ini adalah menghubungkan pola diri dengan pengalaman nyata.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">LANGKAH YANG DISARANKAN</p><ul><li>Coba satu aktivitas yang relevan.</li><li>Catat respons dan pengalaman anak.</li><li>Bandingkan dengan pilihan lain.</li></ul></div><div><p class="rs-report-label">PERAN ORANG TUA</p><ul><li>Ajukan pertanyaan tanpa mengarahkan jawaban.</li><li>Bantu mencari pengalaman atau sumber yang relevan.</li></ul></div></div><p class="rs-report-linked"><strong>Pilihan yang sedang divalidasi:</strong> Ilmu Komunikasi · Manajemen · Desain Komunikasi Visual</p></div></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>25</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Action Plan</p><span>26 / 29</span></div><div class="rs-report-page-heading"><h2>Minggu 3 — Bandingkan & Eksplor</h2></div><div class="rs-report-page-content"><section class="rs-report-week"><div class="rs-report-week-number">03</div><div class="rs-report-week-main"><p class="rs-report-label">MINGGU 3</p><h3>Bandingkan & Eksplor</h3><p class="rs-report-week-objective">Fokus minggu ini adalah menghubungkan pola diri dengan pengalaman nyata.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">LANGKAH YANG DISARANKAN</p><ul><li>Coba satu aktivitas yang relevan.</li><li>Catat respons dan pengalaman anak.</li><li>Bandingkan dengan pilihan lain.</li></ul></div><div><p class="rs-report-label">PERAN ORANG TUA</p><ul><li>Ajukan pertanyaan tanpa mengarahkan jawaban.</li><li>Bantu mencari pengalaman atau sumber yang relevan.</li></ul></div></div><p class="rs-report-linked"><strong>Pilihan yang sedang divalidasi:</strong> Ilmu Komunikasi · Manajemen · Desain Komunikasi Visual</p></div></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>26</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Action Plan</p><span>27 / 29</span></div><div class="rs-report-page-heading"><h2>Minggu 4 — Shortlist & Next Step</h2></div><div class="rs-report-page-content"><section class="rs-report-week"><div class="rs-report-week-number">04</div><div class="rs-report-week-main"><p class="rs-report-label">MINGGU 4</p><h3>Shortlist & Next Step</h3><p class="rs-report-week-objective">Fokus minggu ini adalah menghubungkan pola diri dengan pengalaman nyata.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">LANGKAH YANG DISARANKAN</p><ul><li>Coba satu aktivitas yang relevan.</li><li>Catat respons dan pengalaman anak.</li><li>Bandingkan dengan pilihan lain.</li></ul></div><div><p class="rs-report-label">PERAN ORANG TUA</p><ul><li>Ajukan pertanyaan tanpa mengarahkan jawaban.</li><li>Bantu mencari pengalaman atau sumber yang relevan.</li></ul></div></div><p class="rs-report-linked"><strong>Pilihan yang sedang divalidasi:</strong> Ilmu Komunikasi · Manajemen · Desain Komunikasi Visual</p></div></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>27</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Action Plan</p><span>28 / 29</span></div><div class="rs-report-page-heading"><h2>Indikator keberhasilan 30 hari</h2></div><div class="rs-report-page-content"><section class="rs-report-week"><div class="rs-report-week-number">05</div><div class="rs-report-week-main"><p class="rs-report-label">MINGGU 5</p><h3>Indikator keberhasilan 30 hari</h3><p class="rs-report-week-objective">Fokus minggu ini adalah menghubungkan pola diri dengan pengalaman nyata.</p><div class="rs-report-rec-grid"><div><p class="rs-report-label">LANGKAH YANG DISARANKAN</p><ul><li>Coba satu aktivitas yang relevan.</li><li>Catat respons dan pengalaman anak.</li><li>Bandingkan dengan pilihan lain.</li></ul></div><div><p class="rs-report-label">PERAN ORANG TUA</p><ul><li>Ajukan pertanyaan tanpa mengarahkan jawaban.</li><li>Bantu mencari pengalaman atau sumber yang relevan.</li></ul></div></div><p class="rs-report-linked"><strong>Pilihan yang sedang divalidasi:</strong> Ilmu Komunikasi · Manajemen · Desain Komunikasi Visual</p></div></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>28</span></div></article><article class="rs-v15-page"><div class="rs-report-page-inner"><div class="rs-report-page-top"><p class="rs-report-section">Closing</p><span>29 / 29</span></div><div class="rs-report-page-heading"><h2>Penutup</h2></div><div class="rs-report-page-content"><p class="rs-report-lead">Bidang ini muncul karena beberapa pola dalam hasil assessment layak diuji melalui pengalaman nyata. Gunakan halaman ini sebagai panduan eksplorasi, bukan keputusan final.</p><section class="rs-report-callout"><p class="rs-report-label">POIN UTAMA</p><p>Gunakan informasi ini sebagai bahan refleksi dan titik awal untuk memilih pengalaman yang dapat dicoba.</p></section><section class="rs-report-list"><p class="rs-report-label">YANG BISA DILAKUKAN</p><ul><li>Perhatikan pola yang muncul berulang.</li><li>Bandingkan dengan pengalaman nyata anak.</li><li>Catat hal yang menarik dan hal yang terasa berat.</li></ul></section></div></div><div class="rs-report-page-footer"><span>READY SCORE</span><span>29</span></div></article></div></div></main></body></html>

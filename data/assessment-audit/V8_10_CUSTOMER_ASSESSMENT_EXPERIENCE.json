@@ -1,0 +1,172 @@
+{
+  "version": "V8.10",
+  "status": "IMPLEMENTED",
+  "scope": "customer_assessment_experience",
+  "databaseMigration": false,
+  "measurementMutation": false,
+  "scoringMutation": false,
+  "resultSemanticsMutation": false,
+  "sourceOfTruth": "V8.9 Assessment UX Specification and V8.8 Result Semantics & Interpretation",
+  "implementationBoundary": {
+    "V8_10": "customer assessment catalog, about, pre-test, and test experience",
+    "V8_11": "customer result and profile experience",
+    "V8_12": "full customer regression",
+    "V8_13": "final acceptance and freeze"
+  },
+  "journey": [
+    "ASSESSMENTS",
+    "ASSESSMENT_CARD",
+    "ABOUT_ASSESSMENT",
+    "PRE_TEST",
+    "TEST"
+  ],
+  "surfaces": {
+    "catalog": {
+      "implemented": true,
+      "route": "/assessments",
+      "requirements": [
+        "assessment identity",
+        "what it measures",
+        "why take it",
+        "what user gets",
+        "duration",
+        "question count",
+        "access state",
+        "about link",
+        "start/resume action"
+      ]
+    },
+    "about": {
+      "implemented": true,
+      "route": "/assessments/[type]",
+      "requirements": [
+        "construct",
+        "intended use",
+        "what is measured",
+        "what is not measured",
+        "response method",
+        "result meaning",
+        "known limitations",
+        "assessment-specific instructions",
+        "start action"
+      ]
+    },
+    "preTest": {
+      "implemented": true,
+      "route": "/trial/[type]",
+      "requirements": [
+        "purpose",
+        "what will be measured",
+        "response method",
+        "duration",
+        "question count",
+        "preparation/instructions",
+        "assessment-specific claim boundaries"
+      ]
+    },
+    "test": {
+      "implemented": true,
+      "component": "components/assessment/AssessmentRunner.tsx",
+      "requirements": [
+        "assessment-specific response controls",
+        "persistent answers",
+        "resume active attempt",
+        "progress",
+        "question navigation",
+        "review",
+        "submit confirmation",
+        "keyboard operation",
+        "screen-reader status",
+        "no internal scoring metadata"
+      ]
+    }
+  },
+  "assessmentExperience": {
+    "COGNITIVE": {
+      "responseModel": "OBJECTIVE_SINGLE_CHOICE_4",
+      "resultMain": "Cognitive Score",
+      "questionCount": 24,
+      "duration": "10–15 menit",
+      "preferredTerminology": [
+        "Cognitive",
+        "Cognitive Score",
+        "Cognitive Profile"
+      ],
+      "prohibitedTerminology": [
+        "IQ"
+      ]
+    },
+    "EQ": {
+      "responseModel": "SCENARIO_SINGLE_CHOICE_4",
+      "resultMain": "EQ Score",
+      "questionCount": 24,
+      "duration": "5–10 menit",
+      "preferredTerminology": [
+        "EQ",
+        "Emotional Intelligence",
+        "EQ Score",
+        "EQ Dimensions"
+      ],
+      "prohibitedTerminology": [
+        "clinical diagnosis",
+        "standardized population EQ norm"
+      ]
+    },
+    "DISC": {
+      "responseModel": "SITUATIONAL_FORCED_CHOICE_4",
+      "resultMain": "Primary Behavioral Pattern",
+      "questionCount": 24,
+      "duration": "5–10 menit",
+      "preferredTerminology": [
+        "DISC",
+        "Behavioral Pattern",
+        "Behavioral Profile"
+      ],
+      "prohibitedTerminology": [
+        "aptitude",
+        "intelligence",
+        "universal score"
+      ]
+    },
+    "RIASEC": {
+      "responseModel": "PREFERENCE_LIKERT_5",
+      "resultMain": "RIASEC Interest Profile",
+      "questionCount": 60,
+      "duration": "10–15 menit",
+      "preferredTerminology": [
+        "RIASEC",
+        "Interest Profile",
+        "Interest Dimensions",
+        "Top Code"
+      ],
+      "prohibitedTerminology": [
+        "guaranteed career fit",
+        "guaranteed major suitability"
+      ]
+    }
+  },
+  "safety": {
+    "internalScoringMetadataHidden": true,
+    "noUniversalScore": true,
+    "noRawAverageSynthesis": true,
+    "historicalQuestionVersionsImmutable": true,
+    "customerCopyCannotChangeMeasurementMeaning": true,
+    "noUnsupportedPsychometricClaims": true,
+    "measurementNotOptimizedForUi": true
+  },
+  "accessibility": {
+    "keyboardOperable": true,
+    "visibleFocus": true,
+    "semanticControls": true,
+    "screenReaderLabels": true,
+    "statusAndProgressAnnounced": true,
+    "colorNotSoleIndicator": true,
+    "touchTargetAdequate": true
+  },
+  "responsive": {
+    "mobileFirst": true,
+    "desktopSupported": true,
+    "noHorizontalOverflow": true,
+    "preserveAssessmentContext": true
+  }
+}

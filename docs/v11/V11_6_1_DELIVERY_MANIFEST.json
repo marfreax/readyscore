@@ -1,0 +1,31 @@
+{
+  "version": "11.6.1",
+  "phase": "11.6",
+  "title": "Audit Repository Contract",
+  "baseline": "V11.5 FROZEN",
+  "implementationMode": "ADMIN_OPERATIONS_ONLY",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "resultSemanticsMutation": false,
+  "customerUxRedesign": false,
+  "entitlementMutation": false,
+  "historicalContentMutation": false,
+  "historicalResultRecalculation": false,
+  "status": "READY_FOR_RUNTIME_VERIFICATION",
+  "scope": [
+    "canonical audit repository boundary",
+    "typed audit repository contract",
+    "V11.5-compatible bounded audit read",
+    "deterministic audit ordering",
+    "Review repository delegation"
+  ],
+  "nonGoals": [
+    "pagination implementation",
+    "audit workspace UI",
+    "search/filter UI",
+    "bulk operations",
+    "customer behavior changes",
+    "historical recalculation"
+  ]
+}

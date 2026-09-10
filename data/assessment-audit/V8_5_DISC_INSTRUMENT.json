@@ -1,0 +1,72 @@
+{
+  "version": "V8.5",
+  "status": "IMPLEMENTED",
+  "instrument": "DISC",
+  "title": "DISC V2 Situational Forced-Choice Instrument",
+  "purpose": "Replace the legacy Likert-by-dimension DISC item structure with situational forced-choice items whose four plausible responses map item-specifically to D/I/S/C.",
+  "measurement": {
+    "construct": "Behavioral response tendencies associated with Dominance, Influence, Steadiness, and Conscientiousness.",
+    "intendedUse": "Descriptive behavioral profile for self-understanding and development.",
+    "responseModel": "situational_forced_choice",
+    "questionType": "SCENARIO_SINGLE_CHOICE",
+    "questionCount": 24,
+    "blueprint": {
+      "targetScenarioCoverage": {
+        "D": 6,
+        "I": 6,
+        "S": 6,
+        "C": 6
+      },
+      "note": "Target coverage is a content blueprint; every item presents one option for each DISC dimension and every response contributes to exactly one dimension."
+    },
+    "scoring": "Ipsative forced-choice count. Each selected option is mapped through the item-specific scoringKey to one DISC dimension. Dimension score = selected choices / 24 × 100.",
+    "overallRule": "No substantive overall DISC score. The legacy generic overallScore field is retained only as a compatibility envelope and must not be presented as an overall ability score.",
+    "tieRule": "If primary or secondary dimensions tie, D/I/S/C canonical order is used only as a deterministic display tie-breaker; the underlying dimension scores remain unchanged.",
+    "normalization": "Dimension scores are percentages of forced choices and are ipsative: their four percentages sum to 100.",
+    "missingResponse": "Assessment submission requires all 24 responses; partial scoring is not accepted by the V2 runtime."
+  },
+  "customerTerminology": {
+    "allowed": [
+      "DISC profile",
+      "behavioral tendencies",
+      "primary behavioral pattern",
+      "secondary behavioral pattern"
+    ],
+    "restricted": [
+      "fixed personality type",
+      "guaranteed behavior",
+      "career fit"
+    ],
+    "prohibited": [
+      "IQ",
+      "aptitude",
+      "clinical diagnosis",
+      "deterministic career or major decision",
+      "universal score"
+    ]
+  },
+  "safety": {
+    "universal_score": false,
+    "ability_claim_allowed": false,
+    "clinical_claim_allowed": false,
+    "deterministic_career_claim_allowed": false
+  },
+  "versioning": {
+    "configurationVersion": "DISC_CONFIG_V2",
+    "questionBankVersion": "DISC_V2",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "scoringVersion": "DISC_SCORE_V2",
+    "selectionAlgorithmVersion": "DISC_SELECTION_V2",
+    "interpretationVersion": "DISC_INTERPRETATION_V2",
+    "historicalConfigurationVersion": "DISC_CONFIG_V1",
+    "historicalScoringVersion": "DISC_SCORE_V1",
+    "historicalSelectionAlgorithmVersion": "DISC_SELECTION_V1",
+    "historicalTaxonomyVersion": "DISC_TAXONOMY_V1"
+  },
+  "implementationBoundaries": {
+    "questionIdentity": "New V2 logical question identities are additive; historical V1 QuestionVersions remain immutable.",
+    "positionMapping": "Option position must never globally imply D/I/S/C. Each V2 item carries an item-specific permutation.",
+    "customerExposure": "scoringKey and dimension mapping metadata must never be returned by customer runtime.",
+    "database": "Additive taxonomy lifecycle migration only; no schema mutation and no destructive table operation."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "phase": "V13.7",
+  "phaseName": "Scoring Validation",
+  "version": "1.0",
+  "date": "2026-09-07",
+  "status": "IMPLEMENTATION_COMPLETE_WITH_UPSTREAM_CONTENT_BLOCKERS",
+  "base": "ReadyScore_V13.4_Production_Assessment_Blueprint.zip",
+  "carriedForward": [
+    "V13.5 production candidate pools",
+    "V13.6 mapping/content review artifacts"
+  ],
+  "changes": [
+    "DISC V2 scoring supports legacy 24-item and production 80-item forms.",
+    "EQ V2 scoring runtime supports legacy 24-item and production 50-item composition.",
+    "Cognitive V2 scoring supports legacy 24-item and production 40-item composition.",
+    "Timeout scoring preserves unanswered items as unanswered rather than synthesizing incorrect responses.",
+    "Question CSV importer accepts V2 EQ ordinal scoringKey (four-value permutation) without correctOption while retaining legacy EQ objective compatibility."
+  ],
+  "noMigration": true,
+  "gate": "FAIL / NOT FROZEN",
+  "blockers": [
+    "V13.5 EQ pool remains 29/50 production and 0/10 reserve.",
+    "V13.5 Cognitive pool remains 33/40 production and 3/8 reserve.",
+    "V13.6 mapping/content review cannot be complete while upstream candidate pools remain incomplete.",
+    "Real DB/HTTP scoring E2E must be executed after complete approved production pools are available."
+  ]
+}

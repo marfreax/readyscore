@@ -1,0 +1,241 @@
+{
+  "version": "V8.9",
+  "status": "LOCKED",
+  "scope": "assessment_ux_specification",
+  "databaseMigration": false,
+  "measurementMutation": false,
+  "scoringMutation": false,
+  "resultSemanticsMutation": false,
+  "implementationPhase": "V8.9 specification only; customer implementation begins in V8.10",
+  "sourceOfTruth": "V8.8 result semantics and the V8-V9 development reference",
+  "globalPrinciples": {
+    "assessmentSpecificUx": true,
+    "doNotForceCommonResponseModel": true,
+    "doNotExposeInternalScoringMetadata": true,
+    "doNotCreateUniversalScore": true,
+    "doNotUseRawAverageSynthesis": true,
+    "historicalQuestionVersionsRemainImmutable": true,
+    "measurementIsNotOptimizedForUi": true
+  },
+  "journey": [
+    "ASSESSMENTS",
+    "ASSESSMENT_CARD",
+    "ABOUT_ASSESSMENT",
+    "PRE_TEST",
+    "TEST",
+    "RESULT",
+    "PROFILE_REPORT_NEXT_ACTION"
+  ],
+  "surfaces": {
+    "catalog": {
+      "purpose": "Assessment discovery and access state",
+      "requiredContent": [
+        "what_this_assessment_is",
+        "what_it_measures",
+        "why_take_it",
+        "what_user_gets",
+        "duration",
+        "question_count",
+        "access_state"
+      ],
+      "mustNot": [
+        "internal_scoring_keys",
+        "dimension_mapping_metadata",
+        "objective_answer_keys",
+        "unsupported_claims"
+      ]
+    },
+    "about": {
+      "purpose": "Deeper explanation without overloading the catalog",
+      "requiredContent": [
+        "construct",
+        "intended_use",
+        "what_is_measured",
+        "what_is_not_measured",
+        "response_method",
+        "result_meaning",
+        "known_limitations"
+      ]
+    },
+    "preTest": {
+      "purpose": "Set expectations before the first item",
+      "requiredContent": [
+        "purpose",
+        "what_will_be_measured",
+        "what_to_expect",
+        "response_method",
+        "duration",
+        "question_count",
+        "preparation_or_instructions"
+      ],
+      "assessmentSpecificInstruction": true
+    },
+    "test": {
+      "purpose": "Collect responses using the active assessment response model",
+      "rules": [
+        "render assessment-specific response controls",
+        "never expose scoring keys",
+        "preserve progress and answer persistence",
+        "provide clear completion state",
+        "support keyboard and screen-reader interaction"
+      ]
+    },
+    "result": {
+      "purpose": "Explain the completed assessment without rescoring",
+      "requiredQuestions": [
+        "what_is_my_result",
+        "what_does_it_mean",
+        "what_contributes_to_it",
+        "what_should_i_do_next"
+      ],
+      "rules": [
+        "use V8.8 result semantics",
+        "interpretation is post-scoring",
+        "do not create universal score",
+        "do not average unrelated test scores"
+      ]
+    },
+    "profileReportNextAction": {
+      "purpose": "Continue from an assessment result into report/profile/action surfaces",
+      "rules": [
+        "keep individual result separate from cross-test profile",
+        "cross-test visualization must not imply interchangeable scores",
+        "next actions must remain consistent with assessment meaning"
+      ]
+    }
+  },
+  "assessmentUx": {
+    "COGNITIVE": {
+      "responseModel": "OBJECTIVE_SINGLE_CHOICE_4",
+      "resultMain": "Cognitive Score",
+      "resultContract": "COGNITIVE_RESULT_V2",
+      "scoringVersion": "COGNITIVE_SCORE_V2",
+      "interpretationVersion": "COGNITIVE_INTERPRETATION_V2",
+      "dimensions": [
+        "VERBAL_REASONING",
+        "NUMERICAL_REASONING",
+        "LOGICAL_REASONING",
+        "ABSTRACT_REASONING"
+      ],
+      "customerTerminology": {
+        "preferred": [
+          "Cognitive",
+          "Cognitive Score",
+          "Cognitive Profile"
+        ],
+        "prohibited": [
+          "IQ"
+        ]
+      },
+      "testInstruction": "Pilih satu jawaban yang paling tepat berdasarkan soal. Setiap item memiliki satu jawaban yang benar."
+    },
+    "EQ": {
+      "responseModel": "SCENARIO_SINGLE_CHOICE_4",
+      "resultMain": "EQ Score",
+      "resultContract": "EQ_RESULT_V2",
+      "scoringVersion": "EQ_SCORE_V2",
+      "interpretationVersion": "EQ_INTERPRETATION_V2",
+      "dimensions": [
+        "EMOTION_AWARENESS",
+        "EMOTION_REGULATION",
+        "EMPATHY_SOCIAL_AWARENESS",
+        "RELATIONSHIP_SOCIAL_RESPONSE"
+      ],
+      "customerTerminology": {
+        "preferred": [
+          "EQ",
+          "Emotional Intelligence",
+          "EQ Score",
+          "EQ Dimensions"
+        ],
+        "prohibited": [
+          "clinical diagnosis",
+          "standardized population EQ norm"
+        ]
+      },
+      "testInstruction": "Pilih satu respons yang paling tepat untuk situasi yang diberikan."
+    },
+    "DISC": {
+      "responseModel": "SITUATIONAL_FORCED_CHOICE_4",
+      "resultMain": "Primary Behavioral Pattern",
+      "resultContract": "DISC_RESULT_V2",
+      "scoringVersion": "DISC_SCORE_V2",
+      "interpretationVersion": "DISC_INTERPRETATION_V2",
+      "dimensions": [
+        "D",
+        "I",
+        "S",
+        "C"
+      ],
+      "customerTerminology": {
+        "preferred": [
+          "DISC",
+          "Behavioral Pattern",
+          "Behavioral Profile"
+        ],
+        "prohibited": [
+          "aptitude",
+          "intelligence",
+          "universal score"
+        ]
+      },
+      "testInstruction": "Pilih satu respons yang paling menggambarkan kecenderungan perilaku Anda."
+    },
+    "RIASEC": {
+      "responseModel": "PREFERENCE_LIKERT_5",
+      "resultMain": "RIASEC Interest Profile",
+      "resultContract": "RIASEC_RESULT_V2",
+      "scoringVersion": "RIASEC_SCORE_V2",
+      "interpretationVersion": "RIASEC_INTERPRETATION_V2",
+      "dimensions": [
+        "R",
+        "I",
+        "A",
+        "S",
+        "E",
+        "C"
+      ],
+      "customerTerminology": {
+        "preferred": [
+          "RIASEC",
+          "Interest Profile",
+          "Interest Dimensions",
+          "Top Code"
+        ],
+        "prohibited": [
+          "guaranteed career fit",
+          "guaranteed major suitability"
+        ]
+      },
+      "testInstruction": "Pilih jawaban yang paling menggambarkan ketertarikan Anda saat ini. Tidak ada jawaban benar atau salah."
+    }
+  },
+  "accessibility": {
+    "keyboardOperable": true,
+    "visibleFocus": true,
+    "semanticControls": true,
+    "screenReaderLabels": true,
+    "statusAndProgressAnnounced": true,
+    "colorNotSoleIndicator": true,
+    "touchTargetAdequate": true
+  },
+  "responsive": {
+    "mobileFirst": true,
+    "desktopSupported": true,
+    "noHorizontalOverflow": true,
+    "preserveAssessmentContext": true
+  },
+  "contentGovernance": {
+    "claimsMustFollowV8_8": true,
+    "internalMetadataHidden": true,
+    "customerCopyCannotChangeMeasurementMeaning": true,
+    "noUnsupportedPsychometricClaims": true
+  },
+  "implementationBoundary": {
+    "V8_9": "specification and contract gate only",
+    "V8_10": "customer assessment experience implementation",
+    "V8_11": "customer result and profile experience",
+    "V8_12": "full customer regression",
+    "V8_13": "final acceptance and freeze"
+  }
+}

@@ -1,0 +1,13 @@
+id,domain,subdomain,indicator,text,type,answerType,scale,scoringKey,reverseScore,weight,difficulty
+RIASEC-001,R,Hands-on Activities,Hands-on Activities,Saya menikmati menggunakan alat untuk memperbaiki atau membuat sesuatu.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,EASY
+RIASEC-002,R,Hands-on Activities,Hands-on Activities,Saya tertarik melakukan pekerjaan yang menghasilkan benda atau hasil yang dapat dilihat.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,MEDIUM
+RIASEC-018,I,Analysis & Inquiry,Analysis & Inquiry,Saya menikmati mencari tahu mengapa suatu masalah terjadi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,EASY
+RIASEC-019,I,Analysis & Inquiry,Analysis & Inquiry,Saya tertarik menguji dugaan dengan data atau bukti.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,MEDIUM
+RIASEC-035,A,Creative Expression,Creative Expression,"Saya menikmati membuat ide baru melalui tulisan, gambar, atau bentuk kreatif lain.",PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,EASY
+RIASEC-036,A,Creative Expression,Creative Expression,Saya tertarik mencari cara yang unik untuk menyampaikan sebuah gagasan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,MEDIUM
+RIASEC-052,S,Helping & Teaching,Helping & Teaching,Saya menikmati membantu orang memahami sesuatu yang sulit.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,EASY
+RIASEC-053,S,Helping & Teaching,Helping & Teaching,Saya tertarik mendengarkan masalah orang lain dan membantu mencari solusi.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,MEDIUM
+RIASEC-069,E,Leadership & Persuasion,Leadership & Persuasion,Saya menikmati mengajak orang lain mendukung sebuah ide.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,EASY
+RIASEC-070,E,Leadership & Persuasion,Leadership & Persuasion,Saya tertarik memimpin kegiatan untuk mencapai target.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,MEDIUM
+RIASEC-085,C,Organization & Detail,Organization & Detail,Saya menikmati menyusun data agar mudah ditemukan dan digunakan.,PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,EASY
+RIASEC-086,C,Organization & Detail,Organization & Detail,"Saya nyaman bekerja dengan aturan, prosedur, dan format yang jelas.",PREFERENCE,LIKERT_5,"1,2,3,4,5","1,2,3,4,5",False,1.0,MEDIUM

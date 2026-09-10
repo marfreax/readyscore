@@ -1,7 +1,7 @@
 import type { ReactNode, ButtonHTMLAttributes, InputHTMLAttributes } from "react";
 
-export function Card({ children, className = "", tone = "default" }: { children: ReactNode; className?: string; tone?: "default" | "muted" | "accent" | "danger" }) {
-  return <section className={`rs-card rs-card-${tone} ${className}`}>{children}</section>;
+export function Card({ children, id, className = "", tone = "default" }: { children: ReactNode; id?: string; className?: string; tone?: "default" | "muted" | "accent" | "danger" }) {
+  return <section id={id} className={`rs-card rs-card-${tone} ${className}`}>{children}</section>;
 }
 
 export function Badge({ children, tone = "neutral" }: { children: ReactNode; tone?: "neutral" | "accent" | "success" | "warning" | "danger" }) {

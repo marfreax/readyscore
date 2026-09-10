@@ -1,0 +1,28 @@
+{
+  "version": "V9.15",
+  "status": "FINAL_ACCEPTANCE_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "FINAL_ACCEPTANCE_FREEZE",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "responsiveAccessibilityMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "baseline": "V9.14",
+  "runtimeMode": "REAL_HTTP_REGRESSION",
+  "freezePolicy": "NO_CODE_OR_MEASUREMENT_MUTATION",
+  "requiredAcceptanceEvidence": [
+    "pnpm typecheck",
+    "pnpm build",
+    "pnpm v9:0:gate through pnpm v9:14:gate",
+    "pnpm e2e:v9:14:full-customer",
+    "pnpm e2e:v9:15:final-acceptance"
+  ],
+  "excludedPaths": ["docs/", "node_modules/", ".next/", "__MACOSX/"]
+}

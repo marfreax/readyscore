@@ -1,0 +1,86 @@
+{
+  "version": "V8.1",
+  "status": "LOCKED",
+  "implementation_status": "SPECIFICATION_ONLY",
+  "baseline": "V8.0 Assessment Instrument Audit PASS",
+  "global_rules": {
+    "no_universal_score": true,
+    "historical_content_immutable": true,
+    "assessment_specific_measurement": true
+  },
+  "assessments": {
+    "cognitive": {
+      "construct": "cognitive reasoning performance",
+      "domains": [
+        "VERBAL_REASONING",
+        "NUMERICAL_REASONING",
+        "LOGICAL_REASONING",
+        "ABSTRACT_REASONING"
+      ],
+      "target_items": 24,
+      "items_per_domain": 6,
+      "question_type": "SINGLE_CHOICE",
+      "response_model": "objective_keyed",
+      "item_scoring": "correct=1, incorrect=0, no_response=unscored",
+      "dimension_score": "correct/answered_scored * 100",
+      "overall": "mean of four dimension scores when completion thresholds are met",
+      "customer_term": "Cognitive Reasoning Score",
+      "iq_claim_allowed": false
+    },
+    "eq": {
+      "construct": "emotional and social response capability as operationalized by ReadyScore EQ",
+      "domains": [
+        "EMOTION_AWARENESS",
+        "EMOTION_REGULATION",
+        "EMPATHY_SOCIAL_AWARENESS",
+        "RELATIONSHIP_SOCIAL_RESPONSE"
+      ],
+      "target_items": 24,
+      "items_per_dimension": 6,
+      "question_type": "SCENARIO_SINGLE_CHOICE",
+      "response_model": "situational_judgment",
+      "item_scoring": "documented keyed ordinal scoring; exact key values frozen in implementation phase",
+      "dimension_score": "normalized 0-100",
+      "overall": "mean of four dimension scores when completion requirements are met",
+      "customer_term": "EQ Score / Emotional & Social Dimensions",
+      "clinical_claim_allowed": false
+    },
+    "disc": {
+      "construct": "behavioral style/tendency profile",
+      "domains": [
+        "D",
+        "I",
+        "S",
+        "C"
+      ],
+      "target_items": 24,
+      "options_per_item": 4,
+      "question_type": "SCENARIO_FORCED_CHOICE",
+      "response_model": "one_most_representative_option",
+      "item_scoring": "selected option maps to hidden D/I/S/C dimension",
+      "dimension_score": "selection proportion normalized to 0-100",
+      "overall": "no universal overall ability score; profile only",
+      "primary_secondary": "highest and second-highest dimension with deterministic tie rule",
+      "customer_term": "DISC Profile / Behavioral Style"
+    },
+    "riasec": {
+      "construct": "vocational interest/preference",
+      "domains": [
+        "R",
+        "I",
+        "A",
+        "S",
+        "E",
+        "C"
+      ],
+      "target_items": 60,
+      "items_per_dimension": 10,
+      "question_type": "LIKERT_5_PREFERENCE",
+      "response_model": "preference",
+      "item_scoring": "1-5 preference with explicit reverse scoring only when justified",
+      "dimension_score": "weighted mean normalized 0-100",
+      "top_code": "top 3 dimensions after deterministic ranking when complete",
+      "customer_term": "RIASEC Interest Profile / Top Code"
+    }
+  }
+}

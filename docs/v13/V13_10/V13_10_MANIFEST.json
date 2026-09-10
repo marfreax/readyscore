@@ -1,0 +1,76 @@
+{
+  "phase": "V13.10",
+  "title": "Production E2E & Customer Readiness",
+  "status": "IMPLEMENTED_STATIC_PENDING_RUNTIME",
+  "productionTargets": {
+    "riasec": {
+      "questions": 60,
+      "timeLimitSeconds": 1200,
+      "scoringVersion": "RIASEC_SCORE_V2"
+    },
+    "disc": {
+      "questions": 80,
+      "timeLimitSeconds": 1200,
+      "scoringVersion": "DISC_SCORE_V2"
+    },
+    "eq": {
+      "questions": 50,
+      "timeLimitSeconds": 1200,
+      "scoringVersion": "EQ_SCORE_V2"
+    },
+    "cognitive": {
+      "questions": 40,
+      "timeLimitSeconds": 1200,
+      "scoringVersion": "COGNITIVE_SCORE_V2"
+    }
+  },
+  "runtimeEvidenceRequired": [
+    "REAL_DB_HTTP_E2E",
+    "ADMIN_UI_E2E",
+    "REGRESSION"
+  ],
+  "migration": null,
+  "revision": "FIX14",
+  "remediation": {
+    "typecheckBlockersFixed": [
+      "V13_7 fixture relative imports",
+      "V13_7 fixture literal dimension/answer types and canonical AssessmentType values",
+      "V13_7 fixture assertions aligned with AssessmentResult contract",
+      "QuestionPackageWorkspace detail.version narrowing"
+    ],
+    "productionContractChanged": false,
+    "migration": null
+  },
+  "fix2": {
+    "reason": "real DB/HTTP E2E exposed production timer mismatch",
+    "change": "enforce 1200-second timer at package validation, eligibility, and runtime selection; improve E2E diagnostic"
+  },
+  "fix3": {
+    "reason": "real-environment typecheck exposed stale V13.7 fixture typings and one remaining UI nullability access",
+    "change": "compile-time fixture/type narrowing remediation plus restoration of DISC production adapter acceptance for 80-item forms; no scoring formula or runtime measurement semantics changed"
+  },
+  "latestRemediation": "FIX13: type-safe taxonomy observability enrichment and production E2E readiness; no measurement, scoring formula, schema, or runtime semantics changed.",
+  "fixes": [
+    {
+      "revision": "FIX11",
+      "scope": "Admin taxonomy/composition observability",
+      "details": [
+        "Question Bank list exposes resolved Taxonomy Node code and name",
+        "Review & Publishing list exposes resolved Taxonomy Node code and name",
+        "Review content inspector exposes resolved Taxonomy Node",
+        "Resolution uses the existing taxonomy version, test type, and domain/subdomain/indicator mapping used by production eligibility",
+        "No Prisma migration, database schema, measurement, scoring, package selection, question selection, randomization, timing, or customer runtime behavior changed"
+      ]
+    },
+    {
+      "revision": "FIX13",
+      "scope": "Typecheck/build and E2E execution readiness",
+      "details": [
+        "attachTaxonomyNodeDisplay now accepts optional taxonomyVersion and preserves the full AdminQuestion row type while enriching taxonomy node display fields",
+        "Static gate reports taxonomy-node observability as PASS using the same pass/fail contract as all other checks",
+        "Production scoring adapter already accepts DISC 80-item forms; no scoring formula changed",
+        "Real E2E must be run against a freshly restarted application server so the running process loads the patched source/build"
+      ]
+    }
+  ]
+}

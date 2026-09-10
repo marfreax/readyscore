@@ -1,18 +1,9 @@
-import type { RiasecResult } from "./types";
+import type { RiasecResult, RiasecResultV1, RiasecResultV2 } from "./types";
 
-/**
- * PHASE 3.0-D.1-F.7
- *
- * RIASEC-specific result contract.
- *
- * IMPORTANT:
- * This contract is intentionally independent from the legacy/generic
- * AssessmentResult type. It prevents test-specific measurement fields from
- * being forced into the v2 result contract before the v3 result architecture
- * is formally introduced.
- */
-
-export const RIASEC_RESULT_CONTRACT_VERSION = "RIASEC_RESULT_V1";
+/** Active V8.6 result contract. */
+export const RIASEC_RESULT_CONTRACT_VERSION = "RIASEC_RESULT_V2" as const;
+/** Historical V1 result contract; retained for immutable legacy payloads. */
+export const RIASEC_RESULT_CONTRACT_VERSION_V1 = "RIASEC_RESULT_V1" as const;
 
 export type RiasecResultProvenance = {
   attemptId: string;
@@ -23,12 +14,30 @@ export type RiasecResultProvenance = {
   completedAt: string;
 };
 
-export type RiasecPersistableResult = {
-  contractVersion: typeof RIASEC_RESULT_CONTRACT_VERSION;
-  provenance: RiasecResultProvenance;
-  measurement: RiasecResult;
+export type RiasecPersistableResultV1 = {
+  contractVersion: typeof RIASEC_RESULT_CONTRACT_VERSION_V1;
+  provenance: RiasecResultProvenance & { scoringVersion: "RIASEC_SCORE_V1" };
+  measurement: RiasecResultV1;
 };
 
+export type RiasecPersistableResultV2 = {
+  contractVersion: typeof RIASEC_RESULT_CONTRACT_VERSION;
+  provenance: RiasecResultProvenance & { scoringVersion: "RIASEC_SCORE_V2" };
+  measurement: RiasecResultV2;
+};
+
+export type RiasecPersistableResult =
+  | RiasecPersistableResultV1
+  | RiasecPersistableResultV2;
+
+export function createRiasecPersistableResult(
+  measurement: RiasecResultV1,
+  provenance: RiasecResultProvenance & { scoringVersion: "RIASEC_SCORE_V1" },
+): RiasecPersistableResultV1;
+export function createRiasecPersistableResult(
+  measurement: RiasecResultV2,
+  provenance: RiasecResultProvenance & { scoringVersion: "RIASEC_SCORE_V2" },
+): RiasecPersistableResultV2;
 export function createRiasecPersistableResult(
   measurement: RiasecResult,
   provenance: RiasecResultProvenance,
@@ -51,9 +60,17 @@ export function createRiasecPersistableResult(
     throw new Error("RIASEC result provenance requires attemptId.");
   }
 
+  if (measurement.scoringVersion === "RIASEC_SCORE_V1") {
+    return {
+      contractVersion: RIASEC_RESULT_CONTRACT_VERSION_V1,
+      provenance: provenance as RiasecPersistableResultV1["provenance"],
+      measurement,
+    };
+  }
+
   return {
     contractVersion: RIASEC_RESULT_CONTRACT_VERSION,
-    provenance,
+    provenance: provenance as RiasecPersistableResultV2["provenance"],
     measurement,
   };
 }

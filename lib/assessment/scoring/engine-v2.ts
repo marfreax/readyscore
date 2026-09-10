@@ -39,6 +39,9 @@ type EqRuntimeQuestion = {
   dimension: EqDimension;
   reverseScore: boolean;
   weight: number;
+  answerType: "SINGLE_CHOICE_4";
+  options: readonly string[];
+  scoringKey: readonly number[];
 };
 
 function createRiasecEngine(): TestScoringEngine {
@@ -93,10 +96,10 @@ function createRiasecEngine(): TestScoringEngine {
         if (![1, 2, 3, 4, 5].includes(answer.value)) {
           throw new Error(`Invalid RIASEC answer for question ${answer.questionId}.`);
         }
-        return { questionId: answer.questionId, value: answer.value };
+        return { questionId: answer.questionId, value: answer.value as RiasecAnswer["value"] };
       });
 
-      if (answers.length !== questions.length) {
+      if (answers.length !== questions.length && context.metadata.completionMode !== "TIMEOUT") {
         throw new Error(
           `RIASEC requires ${questions.length} answers; received ${answers.length}.`,
         );
@@ -119,7 +122,7 @@ function createRiasecEngine(): TestScoringEngine {
         assessmentConfigurationVersion:
           context.metadata.assessmentConfigurationVersion,
         questionBankVersion: context.metadata.questionBankVersion,
-        scoringVersion: context.metadata.scoringVersion,
+        scoringVersion: RIASEC_SCORING_VERSION,
         completedAt: context.metadata.completedAt,
       });
 
@@ -147,32 +150,33 @@ function createDiscEngine(): TestScoringEngine {
           `DISC scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`,
         );
       }
-      if (context.questions.length !== 24) {
-        throw new Error(`DISC requires exactly 24 questions; received ${context.questions.length}.`);
+      if (context.questions.length !== 24 && context.questions.length !== 80) {
+        throw new Error(`DISC V2 supports 24-item legacy and 80-item production forms; received ${context.questions.length}.`);
       }
-      const dimensions = new Set(["D", "I", "S", "C"]);
-      const questions = context.questions.map((question) => {
-        const dimension = String(question.domain ?? "").trim().toUpperCase();
-        if (!dimensions.has(dimension)) {
-          throw new Error(`DISC question ${question.id} has invalid dimension "${question.domain}".`);
-        }
-        return {
-          id: question.id,
-          code: question.code,
-          dimension: dimension as "D"|"I"|"S"|"C",
-          reverseScore: Boolean(question.reverseScore),
-          weight: Number(question.weight) > 0 ? Number(question.weight) : 1,
-        };
-      });
-      for (const dimension of ["D","I","S","C"] as const) {
-        const count = questions.filter((q) => q.dimension === dimension).length;
-        if (count !== 6) throw new Error(`DISC dimension "${dimension}" requires exactly 6 questions; received ${count}.`);
+
+      const questions = context.questions.map((question) => ({
+        id: question.id,
+        code: question.code,
+        dimension: String(question.domain ?? "").trim().toUpperCase() as "DISC",
+        subdomain: question.subdomain,
+        reverseScore: Boolean(question.reverseScore),
+        weight: Number(question.weight) > 0 ? Number(question.weight) : 1,
+        answerType: question.answerType,
+        options: question.options,
+        scoringKey: question.scoringKey,
+      }));
+
+      if (questions.some((question) => question.dimension !== "DISC")) {
+        throw new Error("DISC V2 requires domain DISC on every active item.");
       }
-      const answers = context.answers.map((answer) => ({ questionId: answer.questionId, value: answer.value }));
-      if (answers.length !== questions.length) {
-        throw new Error(`DISC requires ${questions.length} answers; received ${answers.length}.`);
-      }
+
+      const answers = context.answers.map((answer) => ({
+        questionId: answer.questionId,
+        value: answer.value as 1 | 2 | 3 | 4,
+      }));
+
       const measurement = scoreDisc(questions, answers);
+
       const genericResult = {
         attemptId: context.metadata.attemptId,
         assessmentType: "DISC",
@@ -180,186 +184,21 @@ function createDiscEngine(): TestScoringEngine {
         questionBankVersion: context.metadata.questionBankVersion,
         taxonomyVersion: context.metadata.taxonomyVersion,
         scoringVersion: context.metadata.scoringVersion,
+
+        // Compatibility envelope only. Customer semantics must use the DISC
+        // profile below rather than treating this as an overall ability score.
         overallScore: measurement.overallScore,
         score: measurement.overallScore,
-        totalQuestions: 24,
+
+        totalQuestions: context.questions.length,
         answeredQuestions: answers.length,
         domainCount: 4,
         measuredDomainCount: 4,
-        coverage: 100,
-        coveragePercent: 100,
-        isComplete: true,
+        coverage: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+        coveragePercent: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+        isComplete: context.metadata.completionMode !== "TIMEOUT",
         minimumCompleteDomains: 4,
-        domainScores: measurement.dimensionScores.map((d) => ({ domainId: d.dimension, score: d.score, questionCount: d.questionCount, weightTotal: d.questionCount, scoredSubdomainCount: 0, totalSubdomainCount: 0, sufficient: true })),
-        domains: measurement.dimensionScores.map((d) => ({ domainId: d.dimension, score: d.score, questionCount: d.questionCount, weightTotal: d.questionCount, sufficient: true })),
-        subdomainScores: [],
-        indicatorScores: [],
-        strongestDomains: measurement.dimensionScores.slice(0,2).map((d) => d.dimension),
-        developmentDomains: measurement.dimensionScores.slice(-2).map((d) => d.dimension),
-        quality: { scoreableQuestions: answers.length, measuredDomains: 4, totalDomains: 4, coveragePercent: 100, complete: true },
-        completedAt: context.metadata.completedAt,
-        disc: createDiscPersistableResult(measurement),
-      } as unknown as AssessmentResult;
-      return genericResult;
-    },
-  };
-}
 
-function createEqEngine(): TestScoringEngine {
-  const identity: ScoringModelIdentity = {
-    testType: "EQ",
-    modelId: "EQ_SCORE",
-    version: EQ_SCORING_VERSION,
-  };
-
-  return {
-    identity,
-    score(context) {
-      if (context.metadata.scoringVersion !== identity.version) {
-        throw new ScoringEngineConfigurationError(
-          `EQ scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`,
-        );
-      }
-      if (context.questions.length !== 24) {
-        throw new Error(`EQ requires exactly 24 questions; received ${context.questions.length}.`);
-      }
-
-      const questions: EqRuntimeQuestion[] = context.questions.map((question): EqRuntimeQuestion => {
-        const dimension = String(question.domain ?? "").trim().toUpperCase();
-        if (!EQ_DIMENSIONS.includes(dimension as EqDimension)) {
-          throw new Error(`EQ question ${question.id} has invalid dimension "${question.domain}".`);
-        }
-        return {
-          id: question.id,
-          code: question.code,
-          dimension: dimension as EqDimension,
-          reverseScore: Boolean(question.reverseScore),
-          weight: Number(question.weight) > 0 ? Number(question.weight) : 1,
-        };
-      });
-
-      for (const dimension of EQ_DIMENSIONS) {
-        const count = questions.filter((q) => q.dimension === dimension).length;
-        if (count !== 6) throw new Error(`EQ dimension "${dimension}" requires exactly 6 questions; received ${count}.`);
-      }
-
-      const answers: EqAnswer[] = context.answers.map((answer) => {
-        if (![1,2,3,4,5].includes(answer.value)) {
-          throw new Error(`Invalid EQ answer for question ${answer.questionId}.`);
-        }
-        return { questionId: answer.questionId, value: answer.value };
-      });
-      if (answers.length !== questions.length) {
-        throw new Error(`EQ requires ${questions.length} answers; received ${answers.length}.`);
-      }
-
-      const measurement = scoreEq(questions as EqQuestion[], answers);
-      const genericResult = {
-        attemptId: context.metadata.attemptId,
-        assessmentType: "EQ",
-        assessmentConfigurationVersion: context.metadata.assessmentConfigurationVersion,
-        questionBankVersion: context.metadata.questionBankVersion,
-        taxonomyVersion: context.metadata.taxonomyVersion,
-        scoringVersion: context.metadata.scoringVersion,
-        overallScore: measurement.overallScore,
-        score: measurement.overallScore,
-        totalQuestions: 24,
-        answeredQuestions: answers.length,
-        domainCount: 4,
-        measuredDomainCount: 4,
-        coverage: 100,
-        coveragePercent: 100,
-        isComplete: true,
-        minimumCompleteDomains: 4,
-        domainScores: measurement.dimensionScores.map((d) => ({
-          domainId: d.dimension, score: d.score, questionCount: d.questionCount,
-          weightTotal: d.questionCount, scoredSubdomainCount: 0, totalSubdomainCount: 0, sufficient: true,
-        })),
-        domains: measurement.dimensionScores.map((d) => ({
-          domainId: d.dimension, score: d.score, questionCount: d.questionCount, weightTotal: d.questionCount, sufficient: true,
-        })),
-        subdomainScores: [],
-        indicatorScores: [],
-        strongestDomains: measurement.dimensionScores.slice().sort((a,b)=>b.score-a.score).slice(0,2).map((d)=>d.dimension),
-        developmentDomains: measurement.dimensionScores.slice().sort((a,b)=>a.score-b.score).slice(0,2).map((d)=>d.dimension),
-        quality: { scoreableQuestions: answers.length, measuredDomains: 4, totalDomains: 4, coveragePercent: 100, complete: true },
-        completedAt: context.metadata.completedAt,
-        eq: createEqPersistableResult(measurement),
-      } as unknown as AssessmentResult;
-      return genericResult;
-    },
-  };
-}
-
-function createCognitiveEngine(): TestScoringEngine {
-  const identity: ScoringModelIdentity = {
-    testType: "COGNITIVE",
-    modelId: "COGNITIVE_SCORE",
-    version: COGNITIVE_SCORING_VERSION,
-  };
-
-  return {
-    identity,
-    score(context) {
-      if (context.metadata.scoringVersion !== identity.version) {
-        throw new ScoringEngineConfigurationError(
-          `COGNITIVE scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`,
-        );
-      }
-      if (context.questions.length !== 24) {
-        throw new Error(`Cognitive requires exactly 24 questions; received ${context.questions.length}.`);
-      }
-
-      const questions: CognitiveQuestion[] = context.questions.map((question) => {
-        const dimension = String(question.domain ?? "").trim().toUpperCase();
-        if (!COGNITIVE_DIMENSIONS.includes(dimension as CognitiveDimension)) {
-          throw new Error(`Cognitive question ${question.id} has invalid dimension "${question.domain}".`);
-        }
-        return {
-          id: question.id,
-          code: question.code,
-          dimension: dimension as CognitiveDimension,
-          reverseScore: Boolean(question.reverseScore),
-          weight: Number(question.weight) > 0 ? Number(question.weight) : 1,
-        };
-      });
-
-      for (const dimension of COGNITIVE_DIMENSIONS) {
-        const count = questions.filter((q) => q.dimension === dimension).length;
-        if (count !== 6) {
-          throw new Error(`Cognitive dimension "${dimension}" requires exactly 6 questions; received ${count}.`);
-        }
-      }
-
-      const answers: CognitiveAnswer[] = context.answers.map((answer) => {
-        if (![1, 2, 3, 4, 5].includes(answer.value)) {
-          throw new Error(`Invalid Cognitive answer for question ${answer.questionId}.`);
-        }
-        return { questionId: answer.questionId, value: answer.value };
-      });
-
-      if (answers.length !== questions.length) {
-        throw new Error(`Cognitive requires ${questions.length} answers; received ${answers.length}.`);
-      }
-
-      const measurement = scoreCognitive(questions, answers);
-      return {
-        attemptId: context.metadata.attemptId,
-        assessmentType: "COGNITIVE",
-        assessmentConfigurationVersion: context.metadata.assessmentConfigurationVersion,
-        questionBankVersion: context.metadata.questionBankVersion,
-        taxonomyVersion: context.metadata.taxonomyVersion,
-        scoringVersion: context.metadata.scoringVersion,
-        overallScore: measurement.overallScore,
-        score: measurement.overallScore,
-        totalQuestions: 24,
-        answeredQuestions: answers.length,
-        domainCount: 4,
-        measuredDomainCount: 4,
-        coverage: 100,
-        coveragePercent: 100,
-        isComplete: true,
-        minimumCompleteDomains: 4,
         domainScores: measurement.dimensionScores.map((d) => ({
           domainId: d.dimension,
           score: d.score,
@@ -378,9 +217,209 @@ function createCognitiveEngine(): TestScoringEngine {
         })),
         subdomainScores: [],
         indicatorScores: [],
-        strongestDomains: measurement.dimensionScores.slice().sort((a, b) => b.score - a.score).slice(0, 2).map((d) => d.dimension),
-        developmentDomains: measurement.dimensionScores.slice().sort((a, b) => a.score - b.score).slice(0, 2).map((d) => d.dimension),
-        quality: { scoreableQuestions: answers.length, measuredDomains: 4, totalDomains: 4, coveragePercent: 100, complete: true },
+        strongestDomains: [measurement.primaryPattern, measurement.secondaryPattern],
+        developmentDomains: measurement.dimensionScores
+          .filter((d) => d.dimension !== measurement.primaryPattern && d.dimension !== measurement.secondaryPattern)
+          .sort((a, b) => a.score - b.score)
+          .map((d) => d.dimension),
+        quality: {
+          scoreableQuestions: answers.length,
+          measuredDomains: 4,
+          totalDomains: 4,
+          coveragePercent: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+          complete: context.metadata.completionMode !== "TIMEOUT",
+        },
+        completedAt: context.metadata.completedAt,
+        disc: createDiscPersistableResult(measurement),
+      } as unknown as AssessmentResult;
+
+      return genericResult;
+    },
+  };
+}
+
+
+function createEqEngine(): TestScoringEngine {
+  const identity: ScoringModelIdentity = {
+    testType: "EQ",
+    modelId: "EQ_SCORE",
+    version: EQ_SCORING_VERSION,
+  };
+
+  return {
+    identity,
+    score(context) {
+      if (context.metadata.scoringVersion !== identity.version) {
+        throw new ScoringEngineConfigurationError(
+          `EQ scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`,
+        );
+      }
+      if (context.questions.length !== 24 && context.questions.length !== 50) {
+        throw new Error(`EQ supports 24-item legacy and 50-item production forms; received ${context.questions.length}.`);
+      }
+
+      const questions: EqRuntimeQuestion[] = context.questions.map((question): EqRuntimeQuestion => {
+        const dimension = String(question.domain ?? "").trim().toUpperCase();
+        if (!EQ_DIMENSIONS.includes(dimension as EqDimension)) {
+          throw new Error(`EQ question ${question.id} has invalid dimension "${question.domain}".`);
+        }
+        if (question.answerType !== "SINGLE_CHOICE_4" || !Array.isArray(question.options) || question.options.length !== 4) {
+          throw new Error(`EQ question ${question.id} must use SINGLE_CHOICE_4 with four options.`);
+        }
+        if (!Array.isArray(question.scoringKey) || question.scoringKey.length !== 4 ||
+            !question.scoringKey.every((value) => Number.isInteger(value) && value >= 1 && value <= 4) ||
+            new Set(question.scoringKey).size !== 4) {
+          throw new Error(`EQ question ${question.id} requires a valid explicit ordinal scoring key.`);
+        }
+        return {
+          id: question.id,
+          code: question.code,
+          dimension: dimension as EqDimension,
+          reverseScore: false,
+          weight: Number(question.weight) > 0 ? Number(question.weight) : 1,
+          answerType: "SINGLE_CHOICE_4",
+          options: question.options,
+          scoringKey: question.scoringKey,
+        };
+      });
+
+      for (const dimension of EQ_DIMENSIONS) {
+        const count = questions.filter((q) => q.dimension === dimension).length;
+        const requiredCount = context.questions.length === 50
+          ? ({ EMOTION_AWARENESS: 13, EMOTION_REGULATION: 13, EMPATHY_SOCIAL_AWARENESS: 12, RELATIONSHIP_SOCIAL_RESPONSE: 12 } as Record<EqDimension, number>)[dimension as EqDimension]
+          : 6;
+        if (count !== requiredCount) throw new Error(`EQ dimension "${dimension}" requires exactly ${requiredCount} questions; received ${count}.`);
+      }
+
+      const answers: EqAnswer[] = context.answers.map((answer) => {
+        if (![1,2,3,4].includes(answer.value)) {
+          throw new Error(`Invalid EQ answer for question ${answer.questionId}.`);
+        }
+        return { questionId: answer.questionId, value: answer.value as 1|2|3|4 };
+      });
+      if (answers.length !== questions.length && context.metadata.completionMode !== "TIMEOUT") {
+        throw new Error(`EQ requires ${questions.length} answers; received ${answers.length}.`);
+      }
+
+      const measurement = scoreEq(questions as EqQuestion[], answers);
+      const genericResult = {
+        attemptId: context.metadata.attemptId,
+        assessmentType: "EQ",
+        assessmentConfigurationVersion: context.metadata.assessmentConfigurationVersion,
+        questionBankVersion: context.metadata.questionBankVersion,
+        taxonomyVersion: context.metadata.taxonomyVersion,
+        scoringVersion: context.metadata.scoringVersion,
+        overallScore: measurement.overallScore,
+        score: measurement.overallScore,
+        totalQuestions: context.questions.length,
+        answeredQuestions: answers.length,
+        domainCount: 4,
+        measuredDomainCount: 4,
+        coverage: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+        coveragePercent: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+        isComplete: context.metadata.completionMode !== "TIMEOUT",
+        minimumCompleteDomains: 4,
+        domainScores: measurement.dimensionScores.map((d) => ({
+          domainId: d.dimension, score: d.score, questionCount: d.questionCount,
+          weightTotal: d.questionCount, scoredSubdomainCount: 0, totalSubdomainCount: 0, sufficient: true,
+        })),
+        domains: measurement.dimensionScores.map((d) => ({
+          domainId: d.dimension, score: d.score, questionCount: d.questionCount, weightTotal: d.questionCount, sufficient: true,
+        })),
+        subdomainScores: [],
+        indicatorScores: [],
+        strongestDomains: measurement.dimensionScores.slice().sort((a,b)=>b.score-a.score).slice(0,2).map((d)=>d.dimension),
+        developmentDomains: measurement.dimensionScores.slice().sort((a,b)=>a.score-b.score).slice(0,2).map((d)=>d.dimension),
+        quality: { scoreableQuestions: answers.length, measuredDomains: 4, totalDomains: 4, coveragePercent: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100, complete: context.metadata.completionMode !== "TIMEOUT" },
+        completedAt: context.metadata.completedAt,
+        eq: createEqPersistableResult(measurement),
+      } as unknown as AssessmentResult;
+      return genericResult;
+    },
+  };
+}
+
+function createCognitiveEngine(): TestScoringEngine {
+  const identity: ScoringModelIdentity = {
+    testType: "COGNITIVE",
+    modelId: "COGNITIVE_OBJECTIVE_SCORE",
+    version: COGNITIVE_SCORING_VERSION,
+  };
+
+  return {
+    identity,
+    score(context) {
+      if (context.metadata.scoringVersion !== identity.version) {
+        throw new ScoringEngineConfigurationError(
+          `Cognitive scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`,
+        );
+      }
+      if (context.questions.length !== 24 && context.questions.length !== 40) {
+        throw new Error(`Cognitive supports 24-item legacy and 40-item production forms; received ${context.questions.length}.`);
+      }
+      const questions: CognitiveQuestion[] = context.questions.map((question): CognitiveQuestion => {
+        const dimension = String(question.domain ?? "").trim().toUpperCase();
+        if (!COGNITIVE_DIMENSIONS.includes(dimension as CognitiveDimension)) {
+          throw new Error(`Cognitive question ${question.id} has invalid dimension "${question.domain}".`);
+        }
+        if (question.answerType !== "SINGLE_CHOICE_4" || !Array.isArray(question.options) || question.options.length !== 4) {
+          throw new Error(`Cognitive question ${question.id} must use SINGLE_CHOICE_4 with four options.`);
+        }
+        const correctOption = question.correctOption;
+        if (typeof correctOption !== "number" || !Number.isInteger(correctOption) || correctOption < 1 || correctOption > 4) {
+          throw new Error(`Cognitive question ${question.id} requires a valid objective answer key.`);
+        }
+        return {
+          id: question.id,
+          code: question.code,
+          dimension: dimension as CognitiveDimension,
+          answerType: "SINGLE_CHOICE_4",
+          options: question.options,
+          correctOption: correctOption as 1|2|3|4,
+          weight: Number(question.weight) > 0 ? Number(question.weight) : 1,
+        };
+      });
+      for (const dimension of COGNITIVE_DIMENSIONS) {
+        const count = questions.filter((q) => q.dimension === dimension).length;
+        const requiredCount = context.questions.length === 40 ? 10 : 6;
+        if (count !== requiredCount) {
+          throw new Error(`Cognitive dimension "${dimension}" requires exactly ${requiredCount} questions; received ${count}.`);
+        }
+      }
+      const answers: CognitiveAnswer[] = context.answers.map((answer) => {
+        if (![1,2,3,4].includes(answer.value)) {
+          throw new Error(`Invalid Cognitive answer for question ${answer.questionId}.`);
+        }
+        return { questionId: answer.questionId, value: answer.value as 1|2|3|4 };
+      });
+      if (answers.length !== questions.length && context.metadata.completionMode !== "TIMEOUT") {
+        throw new Error(`Cognitive requires ${questions.length} answers; received ${answers.length}.`);
+      }
+      const measurement = scoreCognitive(questions, answers);
+      return {
+        attemptId: context.metadata.attemptId,
+        assessmentType: "COGNITIVE",
+        assessmentConfigurationVersion: context.metadata.assessmentConfigurationVersion,
+        questionBankVersion: context.metadata.questionBankVersion,
+        taxonomyVersion: context.metadata.taxonomyVersion,
+        scoringVersion: context.metadata.scoringVersion,
+        overallScore: measurement.overallScore,
+        score: measurement.overallScore,
+        totalQuestions: context.questions.length,
+        answeredQuestions: answers.length,
+        domainCount: 4,
+        measuredDomainCount: 4,
+        coverage: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+        coveragePercent: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100,
+        isComplete: context.metadata.completionMode !== "TIMEOUT",
+        minimumCompleteDomains: 4,
+        domainScores: measurement.dimensionScores.map((d) => ({ domainId: d.dimension, score: d.score, questionCount: d.questionCount, weightTotal: d.questionCount, scoredSubdomainCount: 0, totalSubdomainCount: 0, sufficient: true })),
+        domains: measurement.dimensionScores.map((d) => ({ domainId: d.dimension, score: d.score, questionCount: d.questionCount, weightTotal: d.questionCount, sufficient: true })),
+        subdomainScores: [],
+        indicatorScores: [],
+        strongestDomains: measurement.dimensionScores.slice().sort((a,b)=>b.score-a.score).slice(0,2).map(d=>d.dimension),
+        developmentDomains: measurement.dimensionScores.slice().sort((a,b)=>a.score-b.score).slice(0,2).map(d=>d.dimension),
+        quality: { scoreableQuestions: answers.length, measuredDomains: 4, totalDomains: 4, coveragePercent: context.metadata.completionMode === "TIMEOUT" ? Number(((answers.length / context.questions.length) * 100).toFixed(2)) : 100, complete: context.metadata.completionMode !== "TIMEOUT" },
         completedAt: context.metadata.completedAt,
         cognitive: createCognitivePersistableResult(measurement),
       } as unknown as AssessmentResult;

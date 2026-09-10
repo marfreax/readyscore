@@ -1,0 +1,48 @@
+{
+  "version": "V9.4",
+  "status": "IMPLEMENTED",
+  "phase": "Cognitive Question Bank",
+  "scope": "Customer-facing Cognitive objective question bank implementation over the protected V8.3 instrument contract",
+  "measurementBoundary": {
+    "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+    "questionType": "SINGLE_CHOICE_4",
+    "responseModel": "objective_keyed",
+    "scoringVersion": "COGNITIVE_SCORE_V2",
+    "resultContract": "COGNITIVE_RESULT_V2",
+    "iqClaimAllowed": false
+  },
+  "bank": {
+    "source": "data/question-bank/cognitive/COGNITIVE_V2_PRODUCTION_BANK.json",
+    "questionCount": 24,
+    "dimensions": {
+      "VERBAL_REASONING": 6,
+      "NUMERICAL_REASONING": 6,
+      "LOGICAL_REASONING": 6,
+      "ABSTRACT_REASONING": 6
+    },
+    "optionsPerQuestion": 4,
+    "correctOptionDistribution": {
+      "1": 6,
+      "2": 6,
+      "3": 6,
+      "4": 6
+    },
+    "status": "PUBLISHED"
+  },
+  "implementation": {
+    "databaseMigration": false,
+    "historicalQuestionVersionsImmutable": true,
+    "customerScoringKeysExposed": false,
+    "assessmentSpecificResponseModelPreserved": true,
+    "adminQuestionBankCompatibility": true,
+    "runtimeCompatibility": "V9.3"
+  },
+  "nonGoals": [
+    "Cognitive measurement redesign",
+    "scoring redesign",
+    "IQ claim authorization",
+    "universal score",
+    "raw-average synthesis",
+    "historical QuestionVersion mutation"
+  ]
+}

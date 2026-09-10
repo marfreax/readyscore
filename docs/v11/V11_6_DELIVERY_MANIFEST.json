@@ -1,0 +1,18 @@
+{
+  "version": "V11.6",
+  "baseline": "V11.5",
+  "implementationMode": "FULL_INTEGRATED_REGRESSION",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "resultSemanticsMutation": false,
+  "customerUxRedesign": false,
+  "entitlementMutation": false,
+  "historicalContentMutation": false,
+  "historicalResultRecalculation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "assessmentRuntimeMutation": false,
+  "status": "LOCKED_FOR_DEVELOPMENT",
+  "regressionHarnessRepair": "V11.6.2: customer regression is V11-native; authenticated access-page marker checks normalize HTML entities so the existing V11.5 'Access & Plans' UI is verified without changing product behavior."
+}

@@ -27,6 +27,7 @@ export async function POST(request: Request) {
       attemptId: attempt.attempt.id,
       status: attempt.attempt.status,
       progress: attempt.progress,
+      timer: attempt.snapshot.timer ?? null,
       snapshot: attempt.snapshot,
       questions: attempt.questions.map((question) => ({
         id: question.id,
@@ -35,6 +36,9 @@ export async function POST(request: Request) {
         domain: question.domain,
         subdomain: question.subdomain ?? null,
         indicator: question.indicator ?? null,
+        answerType: question.answerType,
+        scale: [...question.scale],
+        options: question.options ?? undefined,
         difficulty: question.difficulty,
         sequence: question.sequence,
       })),

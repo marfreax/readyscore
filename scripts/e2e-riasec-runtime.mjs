@@ -87,8 +87,8 @@ console.log("Submit + scoring          : PASS");
 
 const riasec = result.riasec;
 const measurement = riasec?.measurement;
-if (!riasec || riasec.contractVersion !== "RIASEC_RESULT_V1") {
-  fail("Result does not expose the canonical RIASEC_RESULT_V1 payload.");
+if (!riasec || riasec.contractVersion !== "RIASEC_RESULT_V2") {
+  fail("Result does not expose the canonical RIASEC_RESULT_V2 payload.");
 }
 
 if (!measurement || measurement.testType !== "RIASEC") {
@@ -111,7 +111,7 @@ for (const d of ["R","I","A","S","E","C"]) {
   if (typeof item.score !== "number") fail(`RIASEC result dimension ${d} has no numeric score.`);
 }
 
-if (measurement.scoringVersion !== "RIASEC_SCORE_V1") {
+if (measurement.scoringVersion !== "RIASEC_SCORE_V2") {
   fail(`Unexpected RIASEC scoring version: ${measurement.scoringVersion}`);
 }
 
@@ -121,6 +121,6 @@ if (typeof measurement.topCode !== "string" || measurement.topCode.length !== 3)
 
 console.log("Result payload            : PASS");
 console.log("RIASEC measurement        : PASS (6 dimensions + topCode + scoring version)");
-console.log("F.10-C.2-F RIASEC RESULT PAYLOAD E2E: PASS");
+console.log("V8.6 RIASEC RESULT PAYLOAD E2E: PASS");
 console.log(`Attempt ID                : ${attemptId}`);
 console.log(`Attempt ID                : ${attemptId}`);

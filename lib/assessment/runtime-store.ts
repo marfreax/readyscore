@@ -1,4 +1,4 @@
-import type { Question, LikertValue, AssessmentResult } from "./types";
+import type { Question, AssessmentResult } from "./types";
 
 export interface AssessmentSnapshot {
   attemptId: string;
@@ -17,7 +17,7 @@ export interface RuntimeAttempt {
   attempt: { id:string; assessmentType:"free"|"premium"|"riasec"|"disc"|"eq"|"cognitive"; status:"IN_PROGRESS"|"COMPLETED"|"ABANDONED"|"EXPIRED"; startedAt:string; completedAt?:string; assessmentConfigurationId:string; assessmentConfigurationVersion:string; questionBankVersion:string; scoringVersion:string };
   snapshot: AssessmentSnapshot;
   questions: Question[];
-  answers: Map<string,LikertValue>;
+  answers: Map<string,number>;
   result?: AssessmentResult;
 }
 const KEY="__readyscore_runtime_attempts_v1";

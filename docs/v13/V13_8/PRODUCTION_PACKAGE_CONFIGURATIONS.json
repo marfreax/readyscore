@@ -1,0 +1,24 @@
+{
+  "phase": "V13.8",
+  "phaseName": "Package Configuration",
+  "version": "1.0",
+  "status": "IMPLEMENTED_CONFIGURATION_TARGETS",
+  "date": "2026-09-07",
+  "timerSeconds": 1200,
+  "sourceOfTruth": "V13_4/PRODUCTION_ASSESSMENT_BLUEPRINT.json",
+  "packages": [
+    {"testType":"RIASEC","code":"RIASEC_PRODUCTION_V2","name":"RIASEC Production","version":"v1","totalQuestions":60,"timeLimitSeconds":1200,"taxonomyVersion":"RIASEC_TAXONOMY_V2","composition":{"R":10,"I":10,"A":10,"S":10,"E":10,"C":10}},
+    {"testType":"DISC","code":"DISC_PRODUCTION_V2","name":"DISC Production","version":"v1","totalQuestions":80,"timeLimitSeconds":1200,"taxonomyVersion":"DISC_TAXONOMY_V2","composition":{"TARGET_D":20,"TARGET_I":20,"TARGET_S":20,"TARGET_C":20}},
+    {"testType":"EQ","code":"EQ_PRODUCTION_V2","name":"EQ Production","version":"v1","totalQuestions":50,"timeLimitSeconds":1200,"taxonomyVersion":"EQ_TAXONOMY_V2","composition":{"EMOTION_AWARENESS":13,"EMOTION_REGULATION":13,"EMPATHY_SOCIAL_AWARENESS":12,"RELATIONSHIP_SOCIAL_RESPONSE":12}},
+    {"testType":"COGNITIVE","code":"COGNITIVE_PRODUCTION_V2","name":"Cognitive Production","version":"v1","totalQuestions":40,"timeLimitSeconds":1200,"taxonomyVersion":"COGNITIVE_TAXONOMY_V2","composition":{"VERBAL_REASONING":10,"NUMERICAL_REASONING":10,"LOGICAL_REASONING":10,"ABSTRACT_REASONING":10}}
+  ],
+  "rules": [
+    "Package configuration is delivery configuration only; it does not redefine scoring.",
+    "Every composition total must equal totalQuestions.",
+    "Every composition node must belong to the selected V2 taxonomy and TestType.",
+    "Production timer target is 1200 seconds.",
+    "Saving a configuration creates DRAFT package versions; publication remains an explicit action.",
+    "Actual eligible published question availability is verified later by V13.9.",
+    "Incomplete V13.5 content pools must not be padded or silently substituted by package configuration."
+  ]
+}

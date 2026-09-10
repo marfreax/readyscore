@@ -1,0 +1,181 @@
+{
+  "phase": "V13.4",
+  "phaseName": "Production Assessment Blueprint",
+  "version": "1.0",
+  "status": "BLUEPRINT_FROZEN_FOR_V13.4_IMPLEMENTATION",
+  "date": "2026-09-07",
+  "designStatus": "PRODUCTION_DESIGN_TARGET_NOT_PSYCHOMETRICALLY_VALIDATED",
+  "timerPolicy": {
+    "maxTimeMinutes": 20,
+    "maxTimeSeconds": 1200,
+    "semantics": "maximum_allowed_time",
+    "completionExpectation": "Do not require every participant to consume the full 20 minutes; timeout remains server-authoritative."
+  },
+  "reservePolicy": {
+    "minimumReservePercent": 20,
+    "rounding": "ceil",
+    "purpose": "Operational reserve for future content rotation, retirement, review findings, and package resilience; reserve items are not runtime-eligible until separately approved/published.",
+    "psychometricClaim": "This is an operational content-governance policy, not a psychometric sufficiency standard."
+  },
+  "assessments": {
+    "RIASEC": {
+      "displayName": "RIASEC Interest Profile",
+      "testType": "RIASEC",
+      "construct": "vocational_interest",
+      "intendedUse": "interest exploration and relative RIASEC profile",
+      "totalItems": 60,
+      "productionPoolMinimum": 72,
+      "reserveMinimum": 12,
+      "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+      "questionBankVersion": "RIASEC_QB_V2",
+      "scoringVersion": "RIASEC_SCORE_V2",
+      "resultContract": "RIASEC_RESULT_V2",
+      "interpretationVersion": "RIASEC_INTERPRETATION_V2",
+      "responseModel": "preference",
+      "questionType": "LIKERT_5_PREFERENCE",
+      "composition": {
+        "R": 10,
+        "I": 10,
+        "A": 10,
+        "S": 10,
+        "E": 10,
+        "C": 10
+      },
+      "scoringCompatibilityStatus": "COMPATIBLE_WITH_CURRENT_V2_60_ITEM_ENGINE",
+      "scoringNotes": [
+        "Six dimensions are scored as relative interest dimensions.",
+        "Top code is descriptive and must not be presented as a universal score.",
+        "Production 60-item scoring remains the existing RIASEC V2 contract."
+      ],
+      "claims": {
+        "universalScore": false,
+        "abilityClaim": false,
+        "careerGuarantee": false
+      }
+    },
+    "DISC": {
+      "displayName": "DISC Behavioral Profile",
+      "testType": "DISC",
+      "construct": "behavioral_response_tendencies",
+      "intendedUse": "descriptive behavioral profile for self-understanding and development",
+      "totalItems": 80,
+      "productionPoolMinimum": 96,
+      "reserveMinimum": 16,
+      "taxonomyVersion": "DISC_TAXONOMY_V2",
+      "questionBankVersion": "DISC_V2",
+      "scoringVersion": "DISC_SCORE_V2",
+      "resultContract": "DISC_RESULT_V2",
+      "interpretationVersion": "DISC_INTERPRETATION_V2",
+      "responseModel": "situational_forced_choice",
+      "questionType": "SCENARIO_SINGLE_CHOICE",
+      "composition": {
+        "TARGET_D": 20,
+        "TARGET_I": 20,
+        "TARGET_S": 20,
+        "TARGET_C": 20
+      },
+      "scoringCompatibilityStatus": "REQUIRES_V13_7_SCORING_VALIDATION_AND_ENGINE_ADAPTATION",
+      "currentEngineConstraint": "Current DISC V2 scoring engine requires exactly 24 questions. V13.4 does not change the scoring engine.",
+      "scoringNotes": [
+        "Each item must retain item-specific four-option scoringKey mapping to D/I/S/C.",
+        "Target composition is content/taxonomy coverage; it must not be interpreted as four independently scored item pools unless the scoring model explicitly supports that interpretation.",
+        "80-item scoring semantics, normalization, missing-response behavior, and result compatibility must be resolved in V13.7 before publication."
+      ],
+      "claims": {
+        "universalScore": false,
+        "abilityClaim": false,
+        "clinicalClaim": false,
+        "deterministicCareerClaim": false
+      }
+    },
+    "EQ": {
+      "displayName": "EQ Situational Judgment Profile",
+      "testType": "EQ",
+      "construct": "emotional_and_social_response_capability",
+      "intendedUse": "self-exploration of relative response patterns across four EQ dimensions",
+      "totalItems": 50,
+      "productionPoolMinimum": 60,
+      "reserveMinimum": 10,
+      "taxonomyVersion": "EQ_TAXONOMY_V2",
+      "questionBankVersion": "EQ_V2",
+      "scoringVersion": "EQ_SCORE_V2",
+      "resultContract": "EQ_RESULT_V2",
+      "interpretationVersion": "EQ_INTERPRETATION_V2",
+      "responseModel": "situational_judgment",
+      "questionType": "SCENARIO_SINGLE_CHOICE",
+      "composition": {
+        "EMOTION_AWARENESS": 13,
+        "EMOTION_REGULATION": 13,
+        "EMPATHY_SOCIAL_AWARENESS": 12,
+        "RELATIONSHIP_SOCIAL_RESPONSE": 12
+      },
+      "scoringCompatibilityStatus": "REQUIRES_V13_7_SCORING_VALIDATION_AND_ENGINE_ADAPTATION",
+      "currentEngineConstraint": "Current EQ V2 scoring engine requires exactly 24 questions. V13.4 does not change the scoring engine.",
+      "scoringNotes": [
+        "Each item uses SINGLE_CHOICE_4 with an explicit item-specific four-value scoring key.",
+        "Dimension scores use keyed ordinal scoring normalized to 0-100 under the existing V2 model.",
+        "The 50-item composition is a production design target and must be validated for score semantics and result interpretation in V13.7."
+      ],
+      "claims": {
+        "universalScore": false,
+        "clinicalClaim": false,
+        "diagnosticClaim": false,
+        "iqClaim": false
+      }
+    },
+    "COGNITIVE": {
+      "displayName": "Cognitive Reasoning Profile",
+      "testType": "COGNITIVE",
+      "construct": "cognitive_reasoning_performance",
+      "intendedUse": "descriptive reasoning performance profile; not a clinical IQ test",
+      "totalItems": 40,
+      "productionPoolMinimum": 48,
+      "reserveMinimum": 8,
+      "taxonomyVersion": "COGNITIVE_TAXONOMY_V2",
+      "questionBankVersion": "COGNITIVE_V2",
+      "scoringVersion": "COGNITIVE_SCORE_V2",
+      "resultContract": "COGNITIVE_RESULT_V2",
+      "interpretationVersion": "COGNITIVE_INTERPRETATION_V2",
+      "responseModel": "objective_single_choice",
+      "questionType": "SINGLE_CHOICE_4",
+      "composition": {
+        "VERBAL_REASONING": 10,
+        "NUMERICAL_REASONING": 10,
+        "LOGICAL_REASONING": 10,
+        "ABSTRACT_REASONING": 10
+      },
+      "scoringCompatibilityStatus": "REQUIRES_V13_7_SCORING_VALIDATION_AND_ENGINE_ADAPTATION",
+      "currentEngineConstraint": "Current Cognitive V2 scoring engine requires exactly 24 questions and six questions per dimension. V13.4 does not change the scoring engine.",
+      "scoringNotes": [
+        "Each item uses SINGLE_CHOICE_4 and one correct option.",
+        "Difficulty distribution must be defined and validated during production content work without changing the objective scoring contract implicitly.",
+        "40-item scoring, dimension normalization, timeout behavior, and result compatibility must be resolved in V13.7 before publication."
+      ],
+      "claims": {
+        "universalScore": false,
+        "clinicalClaim": false,
+        "iqClaim": false,
+        "diagnosticClaim": false
+      }
+    }
+  },
+  "crossAssessmentRules": [
+    "No assessment may be published merely because its package reaches the target item count.",
+    "Blueprint composition must equal totalItems exactly.",
+    "All referenced taxonomy nodes must belong to the assessment's V2 taxonomy.",
+    "Production pool minimum is target plus the operational reserve minimum.",
+    "Reserve questions are not runtime-eligible until they pass the same review, mapping, approval, and publication controls.",
+    "Scoring version is an explicit blueprint dependency and may not be silently changed by package configuration.",
+    "The 20-minute timer is a maximum allowed time and remains server-authoritative.",
+    "No blueprint grants clinical, diagnostic, universal-score, IQ, or guaranteed-career claims where prohibited by the existing instrument contracts.",
+    "Legacy general-readiness questions are outside these production instrument pools unless explicitly authorized by a later specification."
+  ],
+  "phaseDependencies": {
+    "V13.5": "Build production candidate pools to these quantities and composition targets.",
+    "V13.6": "Approve taxonomy mappings and content against this blueprint.",
+    "V13.7": "Validate scoring compatibility, especially the non-24-item DISC/EQ/Cognitive targets.",
+    "V13.8": "Translate the frozen composition and timer into Question Package configuration.",
+    "V13.9": "Establish production eligibility and package publication boundary.",
+    "V13.10": "Prove complete Admin-to-Customer production flow."
+  }
+}

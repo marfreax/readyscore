@@ -1,0 +1,22 @@
+{
+  "version": "V10.8",
+  "status": "IMPLEMENTATION_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "NAVIGATION_WORKSPACE_CONSISTENCY",
+  "baseline": "V10.7",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "PRESENTATION_ONLY",
+  "runtimeMode": "CUSTOMER_NAVIGATION_WORKSPACE_CONSISTENCY"
+}

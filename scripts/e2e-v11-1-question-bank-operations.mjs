@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=process.cwd(); let failed=false; const ok=(c,m)=>{if(c)console.log('PASS:',m);else{console.error('FAIL:',m);failed=true}};
+console.log('=== V11.1 QUESTION BANK OPERATIONS RUNTIME SMOKE ===');
+const csv=fs.readFileSync(path.join(root,'lib/question-bank-csv.ts'),'utf8');
+const groups=fs.readFileSync(path.join(root,'lib/question-bank-v11.ts'),'utf8');
+const api=fs.readFileSync(path.join(root,'app/api/admin/question-bank/route.ts'),'utf8');
+const ui=fs.readFileSync(path.join(root,'components/admin/UnifiedQuestionBankWorkspace.tsx'),'utf8');
+ok(groups.includes('IQ_COGNITIVE'),'IQ & Cognitive is a first-class Question Group');
+ok(csv.includes('DISC_MUST_NOT_HAVE_CORRECT_OPTION'),'DISC forced-choice safety');
+ok(csv.includes('CORRECT_OPTION_REQUIRED'),'objective correct-answer validation');
+ok(csv.includes('OPTIONS_REQUIRED_4'),'four-option validation');
+ok(api.includes('Import as Draft')===false,'server API does not trust UI copy for import state');
+ok(api.includes('action === "PREVIEW"'),'preview path exists');
+ok(api.includes('action !== "IMPORT"'),'import action is explicit');
+ok(ui.includes('Import never publishes directly'),'customer-facing publication is not coupled to import');
+ok(fs.existsSync(path.join(root,'prisma/schema.prisma')),'schema remains present');
+if(failed)process.exitCode=1;else console.log('V11.1 Question Bank Operations runtime smoke: PASS');

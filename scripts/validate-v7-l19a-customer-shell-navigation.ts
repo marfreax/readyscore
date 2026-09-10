@@ -26,16 +26,22 @@ for (const marker of [
   'href: "/app"',
   'href: "/profile"',
   'href: "/reports"',
-  'href: "/app#assessments"',
-  'href: "/app#recent"',
-  'href: "/app#access"',
   'aria-current={isActive ? "page" : undefined}',
   'aria-expanded={open}',
   'aria-controls="customer-mobile-navigation"',
 ]) {
   if (!nav.includes(marker)) fail(`Navigation marker missing: ${marker}`);
 }
+const hasDedicatedAssessmentDestination = nav.includes('href: "/assessments"');
+const hasLegacyAssessmentAnchor = nav.includes('href: "/app#assessments"');
+const hasDedicatedActivityDestination = nav.includes('href: "/activity"');
+const hasLegacyActivityAnchor = nav.includes('href: "/app#recent"');
+if (!hasDedicatedAssessmentDestination && !hasLegacyAssessmentAnchor) fail("Assessments destination missing");
+if (!hasDedicatedActivityDestination && !hasLegacyActivityAnchor) fail("Recent activity destination missing");
+if (!nav.includes('href: "/access"') && !nav.includes('href: "/app#access"')) fail("Access & plans destination missing");
 console.log("PASS: Canonical customer navigation present");
+console.log(hasDedicatedAssessmentDestination ? "PASS: Assessments uses dedicated destination" : "INFO: Assessments uses legacy Overview anchor");
+console.log(hasDedicatedActivityDestination ? "PASS: Recent activity uses dedicated destination" : "INFO: Recent activity uses legacy Overview anchor");
 
 if (shell.includes("Main navigation") || shell.includes("rs-nav-link")) fail("Legacy duplicate header navigation remains in AppShell");
 if (nav.includes("rs-nav-link")) fail("Legacy navigation primitive remains in CustomerNavigation");

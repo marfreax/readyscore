@@ -4,6 +4,7 @@ import {
   createUser,
   findUserByEmail,
   getUserRecord,
+  upsertUserRecord,
   hashPassword,
   toPublicUser,
   verifyPassword,
@@ -52,21 +53,24 @@ export async function loginUser(input: { email: string; password: string }): Pro
   if (!dbUser || !verifyPassword(password, dbUser.passwordHash)) {
     throw new Error("INVALID_CREDENTIALS");
   }
+  if (dbUser.status !== "ACTIVE") throw new Error("ACCOUNT_INACTIVE");
 
-  const localUser = getUserRecord(dbUser.id);
-  if (!localUser) {
-    // Keep the database as a valid authentication source for accounts created by
-    // a verified external handoff or an earlier migration.
-    return toPublicUser({
-      id: dbUser.id,
-      name: dbUser.name,
-      email: dbUser.email,
-      passwordHash: dbUser.passwordHash,
-      role: dbUser.role,
-      createdAt: dbUser.createdAt.toISOString(),
-      updatedAt: dbUser.updatedAt.toISOString(),
-    });
-  }
+  const dbRecord = {
+    id: dbUser.id,
+    name: dbUser.name,
+    email: dbUser.email,
+    passwordHash: dbUser.passwordHash,
+    role: dbUser.role,
+    status: dbUser.status,
+    createdAt: dbUser.createdAt.toISOString(),
+    updatedAt: dbUser.updatedAt.toISOString(),
+  } as const;
 
-  return toPublicUser(localUser);
+  // The database is an authoritative authentication source for accounts that
+  // may have been provisioned outside the local auth-state store. Hydrate the
+  // exact verified DB identity into the session store before startSession().
+  // This keeps DB-backed accounts loginable without changing password, role, or
+  // entitlement semantics.
+  upsertUserRecord(dbRecord);
+  return toPublicUser(dbRecord);
 }

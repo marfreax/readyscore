@@ -1,0 +1,12 @@
+{
+  "phase": "V9.7",
+  "title": "RIASEC Question Bank",
+  "status": "IMPLEMENTED",
+  "deliveryType": "FULL_PROJECT",
+  "excludedPaths": ["docs/"],
+  "contractArtifact": "data/assessment-audit/V9_7_RIASEC_QUESTION_BANK.json",
+  "architectureArtifact": "architecture/phase-9.7/ReadyScore_V9_7_RIASEC_Question_Bank.md",
+  "productionBank": "data/question-bank/riasec/RIASEC_V2_PREFERENCE_PRODUCTION_BANK.json",
+  "gate": "scripts/validate-v9-7-riasec-question-bank.ts",
+  "databaseMigration": false
+}

@@ -18,6 +18,7 @@ export type ScoringContext = {
     taxonomyVersion: string;
     scoringVersion: string;
     completedAt: string;
+    completionMode?: "SUBMITTED" | "TIMEOUT";
   };
 };
 

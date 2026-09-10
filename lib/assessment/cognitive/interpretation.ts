@@ -2,7 +2,7 @@ import { TEST_RESULT_CONTRACT_VERSION } from "../result/types";
 import type { AssessmentResult } from "../types";
 import { COGNITIVE_DIMENSIONS, type CognitiveDimension } from "./scoring";
 
-export const COGNITIVE_INTERPRETATION_VERSION = "COGNITIVE_INTERPRETATION_V1" as const;
+export const COGNITIVE_INTERPRETATION_VERSION = "COGNITIVE_INTERPRETATION_V2" as const;
 
 const LABELS: Record<CognitiveDimension, string> = {
   VERBAL_REASONING: "Verbal Reasoning",
@@ -12,10 +12,10 @@ const LABELS: Record<CognitiveDimension, string> = {
 };
 
 const DESCRIPTIONS: Record<CognitiveDimension, string> = {
-  VERBAL_REASONING: "Kecenderungan menggunakan bahasa, makna, dan hubungan antar-gagasan untuk memahami informasi.",
-  NUMERICAL_REASONING: "Kecenderungan menggunakan angka, besaran, dan hubungan kuantitatif saat memahami informasi.",
-  LOGICAL_REASONING: "Kecenderungan menyusun hubungan sebab-akibat, aturan, dan pola penalaran secara terstruktur.",
-  ABSTRACT_REASONING: "Kecenderungan mengenali pola, hubungan, dan struktur ketika informasi tidak disajikan secara langsung.",
+  VERBAL_REASONING: "Kemampuan menalar menggunakan bahasa, makna, dan hubungan antar-gagasan.",
+  NUMERICAL_REASONING: "Kemampuan menalar menggunakan angka, besaran, dan hubungan kuantitatif.",
+  LOGICAL_REASONING: "Kemampuan menyusun hubungan sebab-akibat, aturan, dan pola penalaran secara terstruktur.",
+  ABSTRACT_REASONING: "Kemampuan mengenali pola, hubungan, dan struktur ketika informasi tidak disajikan secara langsung.",
 };
 
 export function interpretCognitive(
@@ -34,7 +34,7 @@ export function interpretCognitive(
   },
 ) {
   const measurement = result.cognitive?.measurement;
-  if (!measurement) throw new Error("Cognitive interpretation requires COGNITIVE_RESULT_V1 measurement.");
+  if (!measurement) throw new Error("Cognitive interpretation requires COGNITIVE_RESULT_V2 measurement.");
   const dimensions = measurement.dimensionScores;
   if (!dimensions || dimensions.length !== COGNITIVE_DIMENSIONS.length) {
     throw new Error("Cognitive interpretation requires four dimension scores.");
@@ -49,7 +49,7 @@ export function interpretCognitive(
     interpretationVersion: COGNITIVE_INTERPRETATION_VERSION,
     status: "COMPLETE" as const,
     confidence: "MODERATE" as const,
-    summary: `Profil kognitif Anda menunjukkan variasi relatif pada empat dimensi penalaran. ${LABELS[strongest.dimension]} merupakan dimensi dengan skor relatif paling tinggi, sementara ${LABELS[developing.dimension]} merupakan area yang dapat dieksplorasi lebih lanjut. Hasil ini adalah profil berbasis assessment dan bukan skor IQ atau diagnosis kemampuan kognitif.`,
+    summary: `Hasil Anda menunjukkan performa relatif pada empat dimensi penalaran. ${LABELS[strongest.dimension]} merupakan dimensi dengan skor relatif paling tinggi, sementara ${LABELS[developing.dimension]} merupakan area yang dapat dieksplorasi lebih lanjut. Hasil ini adalah profil berbasis assessment dan bukan skor IQ atau diagnosis kemampuan kognitif.`,
     dimensions: dimensions.map((item) => ({
       dimension: item.dimension,
       name: LABELS[item.dimension],

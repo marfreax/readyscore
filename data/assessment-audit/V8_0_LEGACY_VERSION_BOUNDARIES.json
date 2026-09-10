@@ -1,0 +1,36 @@
+{
+  "version": "V8.0",
+  "status": "LOCKED_HISTORICAL_EVIDENCE",
+  "purpose": "Preserve pre-V8 assessment configuration and scoring identities while later instrument phases introduce versioned replacements.",
+  "assessments": {
+    "cognitive": {
+      "id": "cognitive-v1",
+      "version": "COGNITIVE_CONFIG_V1",
+      "questionCount": 24,
+      "scoringVersion": "COGNITIVE_SCORE_V1",
+      "selectionAlgorithmVersion": "COGNITIVE_SELECTION_V1"
+    },
+    "eq": {
+      "id": "eq-v1",
+      "version": "EQ_CONFIG_V1",
+      "questionCount": 24,
+      "scoringVersion": "EQ_SCORE_V1",
+      "selectionAlgorithmVersion": "EQ_SELECTION_V1"
+    },
+    "disc": {
+      "id": "disc-v1",
+      "version": "DISC_CONFIG_V1",
+      "questionCount": 24,
+      "scoringVersion": "DISC_SCORE_V1",
+      "selectionAlgorithmVersion": "DISC_SELECTION_V1"
+    },
+    "riasec": {
+      "id": "riasec-v1",
+      "version": "RIASEC_CONFIG_V1",
+      "questionCount": 60,
+      "scoringVersion": "RIASEC_SCORE_V1",
+      "selectionAlgorithmVersion": "RIASEC_SELECTION_V1"
+    }
+  },
+  "runtimeRule": "Historical identities are audit evidence only; they must not override the active versioned configuration."
+}

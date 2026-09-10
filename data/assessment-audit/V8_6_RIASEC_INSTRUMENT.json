@@ -1,0 +1,60 @@
+{
+  "version": "V8.6",
+  "status": "IMPLEMENTED",
+  "baseline": "V8.5 DISC Instrument PASS",
+  "measurement": {
+    "construct": "vocational_interest",
+    "intendedUse": "interest exploration and relative RIASEC profile",
+    "itemBlueprint": {
+      "totalItems": 60,
+      "dimensions": [
+        "R",
+        "I",
+        "A",
+        "S",
+        "E",
+        "C"
+      ],
+      "itemsPerDimension": 10
+    },
+    "questionType": "LIKERT_5_PREFERENCE",
+    "responseModel": "preference",
+    "scoring": "Likert preference scoring; dimension score is the weighted mean normalized to 0-100.",
+    "topCode": "Top 3 dimensions after deterministic ranking when all six dimensions meet completion thresholds.",
+    "overallRule": "Profile of six interest dimensions; topCode is descriptive and not a universal score.",
+    "interpretation": "Relative interest pattern across RIASEC dimensions."
+  },
+  "customerTerminology": {
+    "preferred": [
+      "RIASEC Interest Profile",
+      "Interest Dimension",
+      "Top Interest Code"
+    ],
+    "prohibited": [
+      "IQ",
+      "ability score",
+      "personality score",
+      "guaranteed career fit",
+      "guaranteed career suitability"
+    ]
+  },
+  "safety": {
+    "universal_score": false,
+    "ability_claim_allowed": false,
+    "career_guarantee_allowed": false
+  },
+  "versioning": {
+    "configuration": "RIASEC_CONFIG_V2",
+    "questionBank": "RIASEC_QB_V2",
+    "taxonomy": "RIASEC_TAXONOMY_V2",
+    "scoring": "RIASEC_SCORE_V2",
+    "selection": "RIASEC_SELECTION_V2",
+    "interpretation": "RIASEC_INTERPRETATION_V2",
+    "resultContract": "RIASEC_RESULT_V2"
+  },
+  "implementation": {
+    "databaseMigration": true,
+    "questionVersionSchemaMutation": false,
+    "historicalV1Immutable": true
+  }
+}

@@ -1,0 +1,602 @@
+[
+  {
+    "questionId": "RIASEC-V2-001",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "hands_on",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-002",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "hands_on",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-003",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "hands_on",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-004",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "tools_equipment",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-005",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "tools_equipment",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-006",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "practical_problem_solving",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-007",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "practical_problem_solving",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-008",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "practical_problem_solving",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-009",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "physical_environment",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-010",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "R",
+    "subdomain": "Realistic",
+    "indicator": "physical_environment",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-011",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "curiosity",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-012",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "curiosity",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-013",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "curiosity",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-014",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "analysis",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-015",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "analysis",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-016",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "analysis",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-017",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "investigation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-018",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "investigation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-019",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "problem_solving",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-020",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "I",
+    "subdomain": "Investigative",
+    "indicator": "problem_solving",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-021",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "creativity",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-022",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "creativity",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-023",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "creativity",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-024",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "expression",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-025",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "expression",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-026",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "originality",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-027",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "originality",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-028",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "originality",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-029",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "aesthetics",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-030",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "A",
+    "subdomain": "Artistic",
+    "indicator": "aesthetics",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-031",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "helping",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-032",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "helping",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-033",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "helping",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-034",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "teaching",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-035",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "teaching",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-036",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "communication",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-037",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "communication",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-038",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "communication",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-039",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "development",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-040",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "S",
+    "subdomain": "Social",
+    "indicator": "development",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-041",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "influence",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-042",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "influence",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-043",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "influence",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-044",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "leadership",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-045",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "leadership",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-046",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "initiative",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-047",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "initiative",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-048",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "initiative",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-049",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "persuasion",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-050",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "E",
+    "subdomain": "Enterprising",
+    "indicator": "persuasion",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-051",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "organization",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-052",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "organization",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-053",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "organization",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-054",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "structure",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-055",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "structure",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-056",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "information_order",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-057",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "information_order",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-058",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "information_order",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-059",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "accuracy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "RIASEC-V2-060",
+    "assessment": "RIASEC",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "domain": "C",
+    "subdomain": "Conventional",
+    "indicator": "accuracy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  }
+]

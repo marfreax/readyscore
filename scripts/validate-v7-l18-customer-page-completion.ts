@@ -13,6 +13,7 @@ const reassessment = read("app/reassessment/[type]/page.tsx");
 const reports = read("app/reports/page.tsx");
 const parentReport = read("app/reports/[attemptId]/parent/page.tsx");
 const shell = read("components/app/AppShell.tsx");
+const navigation = read("components/app/CustomerNavigation.tsx");
 const pageShell = read("components/app/CustomerPageShell.tsx");
 const runtime = read("lib/assessment/runtime-service.ts");
 const profileService = read("lib/profile/service.ts");
@@ -40,7 +41,7 @@ const checks: [string, boolean][] = [
   ["Reassessment route is customer-facing", reassessment.includes("Customer reassessment") && reassessment.includes("AssessmentRunner") && reassessment.includes('mode="reassessment"')],
   ["Dashboard result access action present", app.includes('href={`/result/${attempt.id}`}') && app.includes("Lihat hasil")],
   ["Dashboard reassessment action present", app.includes('href={`/reassessment/${test.reassessmentType}`}') && app.includes("Retake")],
-  ["Customer navigation routes are valid", shell.includes('href="/app#assessments"') && shell.includes('href="/app#recent"') && shell.includes('href="/app#access"')],
+  ["Customer navigation routes are valid", (navigation.includes('href: "/assessments"') || navigation.includes('href: "/app#assessments"')) && (navigation.includes('href: "/activity"') || navigation.includes('href: "/app#recent"')) && (navigation.includes('href: "/access"') || navigation.includes('href: "/app#access"'))],
   ["Responsive customer layout present", pageShell.includes("sm:") && pageShell.includes("lg:") && app.includes("md:grid-cols-2") && reports.includes("sm:flex-row")],
   ["No universal score introduced", !profile.toLowerCase().includes("universal overall score") || profile.includes("Tidak ada universal overall score"),],
   ["Measurement engine not mutated", !runtime.includes("L18") && !runtime.includes("CustomerPageShell")],

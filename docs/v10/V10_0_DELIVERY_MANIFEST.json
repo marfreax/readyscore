@@ -1,0 +1,22 @@
+{
+  "version": "V10.0",
+  "status": "IMPLEMENTATION_CONTRACT",
+  "delivery": "FULL",
+  "scope": "UX_FOUNDATION_INFORMATION_ARCHITECTURE",
+  "baseline": "V9.15",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "CONTRACT_FIRST",
+  "runtimeMode": "NOT_APPLICABLE_FOUNDATION_PHASE"
+}

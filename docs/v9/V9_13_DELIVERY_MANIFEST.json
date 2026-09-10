@@ -1,0 +1,20 @@
+{
+  "version": "V9.13",
+  "status": "IMPLEMENTED",
+  "delivery": "FULL",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "responsiveMobile": true,
+  "accessibility": true,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "baseline": "V9.12",
+  "scope": "CUSTOMER_RESPONSIVE_ACCESSIBILITY",
+  "excludedPaths": ["docs/", "node_modules/", ".next/", "__MACOSX/"]
+}

@@ -142,7 +142,7 @@ export async function listUserEntitlements(
     prisma.userEntitlement.findMany({
       where: { userId, ...activeWindow(now) },
       orderBy: [{ type: "asc" }, { resourceType: "asc" }, { resourceKey: "asc" }],
-      select: { id: true, productId: true, type: true, resourceType: true, resourceKey: true, source: true, startsAt: true, endsAt: true },
+      select: { id: true, productId: true, type: true, resourceType: true, resourceKey: true, source: true, sourceOrderId: true, usageLimit: true, usageConsumed: true, startsAt: true, endsAt: true },
     }),
     prisma.userAddOnEntitlement.findMany({
       where: { userId, ...activeWindow(now) },

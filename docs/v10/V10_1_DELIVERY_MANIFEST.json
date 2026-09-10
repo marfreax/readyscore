@@ -1,0 +1,22 @@
+{
+  "version": "V10.1",
+  "status": "IMPLEMENTATION_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "OVERVIEW_CUSTOMER_DASHBOARD",
+  "baseline": "V10.0",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "PRESENTATION_ONLY",
+  "runtimeMode": "CUSTOMER_OVERVIEW"
+}

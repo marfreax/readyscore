@@ -47,7 +47,7 @@ console.log("Authenticated customer session : PASS");
 
 const app = await request("/app", {}, cookie);
 if (app.response.status !== 200) fail(`/app expected 200, got ${app.response.status}`);
-assertMarkers(app.text, ["Your workspace", "Your assessments", "Recent activity", "Access &amp; plans", "IQ / Cognitive", "Emotional Intelligence", "DISC", "RIASEC"], "/app");
+assertMarkers(app.text, ["Your workspace", "Your assessments", "Recent activity", "Access &amp; plans", "Cognitive", "Emotional Intelligence", "DISC", "RIASEC"], "/app");
 console.log("Customer dashboard             : PASS");
 
 const profile = await request("/profile", {}, cookie);

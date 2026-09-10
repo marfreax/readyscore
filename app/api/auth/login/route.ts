@@ -12,7 +12,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true, user });
   } catch (error) {
     const code = error instanceof Error ? error.message : "LOGIN_FAILED";
-    const status = code === "INVALID_CREDENTIALS" ? 401 : 400;
+    const status = code === "INVALID_CREDENTIALS" || code === "ACCOUNT_INACTIVE" ? 401 : 400;
     return NextResponse.json({ ok: false, error: { code } }, { status });
   }
 }

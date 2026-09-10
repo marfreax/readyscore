@@ -3,6 +3,7 @@ import type {
   RiasecAnswer,
   RiasecQuestion,
   RiasecResult,
+  RiasecResultV2,
 } from "./types";
 
 /**
@@ -20,7 +21,7 @@ import type {
  *
  * Its responsibility is only to:
  * 1. validate/normalize the RIASEC scoring input;
- * 2. invoke RIASEC_SCORE_V1;
+ * 2. invoke RIASEC_SCORE_V2;
  * 3. return the test-specific measurement result.
  */
 
@@ -31,8 +32,8 @@ export type RiasecScoringInput = {
 
 export type RiasecScoringIntegrationResult = {
   testType: "RIASEC";
-  scoringVersion: "RIASEC_SCORE_V1";
-  result: RiasecResult;
+  scoringVersion: "RIASEC_SCORE_V2";
+  result: RiasecResultV2;
 };
 
 export function calculateRiasecResult(
@@ -68,7 +69,7 @@ export function calculateRiasecResult(
 
   return {
     testType: "RIASEC",
-    scoringVersion: "RIASEC_SCORE_V1",
+    scoringVersion: "RIASEC_SCORE_V2",
     result,
   };
 }

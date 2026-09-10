@@ -1,0 +1,22 @@
+{
+  "version": "V10.5",
+  "status": "IMPLEMENTATION_CANDIDATE",
+  "delivery": "FULL",
+  "scope": "ASSESSMENT_WORKSPACE",
+  "baseline": "V10.4",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "PRESENTATION_ONLY",
+  "runtimeMode": "CUSTOMER_ASSESSMENT_WORKSPACE"
+}

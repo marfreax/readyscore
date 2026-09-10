@@ -1,0 +1,46 @@
+{
+  "version": "READYScore_V8_0_AUDIT_SCOPE_V1",
+  "phase": "V8.0",
+  "status": "AUDIT_ONLY",
+  "baseline": "V7_FINAL_L20_PASS",
+  "assessmentTypes": [
+    {
+      "code": "COGNITIVE",
+      "configVersion": "COGNITIVE_CONFIG_V1",
+      "scoringVersion": "COGNITIVE_SCORE_V1",
+      "questionCount": 24,
+      "dimensions": ["VERBAL_REASONING", "NUMERICAL_REASONING", "LOGICAL_REASONING", "ABSTRACT_REASONING"],
+      "currentResponseModel": "LIKERT_5",
+      "preliminaryDecision": "REDESIGN_CANDIDATE"
+    },
+    {
+      "code": "EQ",
+      "configVersion": "EQ_CONFIG_V1",
+      "scoringVersion": "EQ_SCORE_V1",
+      "questionCount": 24,
+      "dimensions": ["EMOTION_AWARENESS", "EMOTION_REGULATION", "EMPATHY_SOCIAL_AWARENESS", "RELATIONSHIP_SOCIAL_RESPONSE"],
+      "currentResponseModel": "LIKERT_5",
+      "preliminaryDecision": "REFINE_OR_REDESIGN_CANDIDATE"
+    },
+    {
+      "code": "DISC",
+      "configVersion": "DISC_CONFIG_V1",
+      "scoringVersion": "DISC_SCORE_V1",
+      "questionCount": 24,
+      "dimensions": ["D", "I", "S", "C"],
+      "currentResponseModel": "LIKERT_5",
+      "preliminaryDecision": "REDESIGN_CANDIDATE"
+    },
+    {
+      "code": "RIASEC",
+      "configVersion": "RIASEC_CONFIG_V1",
+      "scoringVersion": "RIASEC_SCORE_V1",
+      "questionCount": 60,
+      "dimensions": ["R", "I", "A", "S", "E", "C"],
+      "currentResponseModel": "LIKERT_5",
+      "preliminaryDecision": "KEEP_OR_REFINE_CANDIDATE"
+    }
+  ],
+  "noDatabaseMigration": true,
+  "noProductionSemanticMutation": true
+}

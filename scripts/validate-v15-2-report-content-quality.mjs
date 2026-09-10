@@ -1,0 +1,31 @@
+import fs from "node:fs";
+import { buildCrossTestProfile } from "../lib/profile/engine-v1.ts";
+import { buildIntegratedProfile } from "../lib/v15/interpretation/engine-v1.ts";
+import { rankMajors } from "../lib/v15/major-matching/engine-v1.ts";
+import { buildActionPlan } from "../lib/v15/action-plan/engine-v1.ts";
+import { buildV15Report } from "../lib/v15/report/engine-v1.ts";
+
+const base=(type,id,specific)=>({result:{attemptId:id,assessmentType:type,scoringVersion:type+"_SCORE_V1",status:"COMPLETED",interpretation:{contractVersion:type+"_RESULT_V1",interpretationVersion:type+"_INTERPRETATION_V2",status:"COMPLETE",confidence:"HIGH"}},testSpecific:specific});
+const riasec={measurement:{testType:"RIASEC",scoringVersion:"RIASEC_SCORE_V1",isComplete:true,coveragePercent:100,measuredDimensionCount:6,dimensionScores:["R","I","A","S","E","C"].map((dimension,i)=>({dimension,score:[75,75,75,75,75,75][i],answeredCount:10,questionCount:10,sufficient:true}))}};
+const disc={measurement:{testType:"DISC",scoringVersion:"DISC_SCORE_V1",dimensionScores:["D","I","S","C"].map((dimension,i)=>({dimension,score:[29,28,20,24][i],answeredCount:20,questionCount:20}))}};
+const eq={measurement:{dimensionScores:["EMOTION_AWARENESS","EMOTION_REGULATION","EMPATHY_SOCIAL_AWARENESS","RELATIONSHIP_SOCIAL_RESPONSE"].map((dimension,i)=>({dimension,score:[35,46,36,50][i],answeredCount:12,questionCount:12}))}};
+const cognitive={measurement:{testType:"COGNITIVE",scoringVersion:"COGNITIVE_SCORE_V2",dimensionScores:["VERBAL_REASONING","NUMERICAL_REASONING","LOGICAL_REASONING","ABSTRACT_REASONING"].map((dimension,i)=>({dimension,score:[100,100,70,90][i],answeredCount:10,questionCount:10}))}};
+const profile=buildCrossTestProfile([base("RIASEC","r",riasec),base("DISC","d",disc),base("EQ","e",eq),base("COGNITIVE","c",cognitive)],"2026-09-09T00:00:00.000Z");
+const integrated=buildIntegratedProfile(profile); const signals=profile.domains.flatMap(d=>d.signals); const recs=rankMajors(integrated,signals); const action=buildActionPlan(integrated,recs); const report=buildV15Report({resultVersions:["RIASEC_RESULT_V1","DISC_RESULT_V2","EQ_RESULT_V1","COGNITIVE_RESULT_V2"],profile:integrated,recommendations:recs,actionPlan:action,signals,generatedAt:"2026-09-09T00:00:00.000Z"});
+function fail(m){console.error(`V15.2 CONTENT QUALITY: FAIL — ${m}`);process.exit(1)}
+if(report.status!=="READY")fail("report is not READY");
+if(report.pageCount<=20)fail(`page count ${report.pageCount} <= 20`);
+if(report.pages.some(p=>p.section!=="Cover" && (p.body.length<2 || p.body.join(" ").trim().length<120)))fail("a non-cover report page has insufficient substantive content");
+if(report.pages.find(p=>p.section==="Cover")?.body.length<2)fail("cover has insufficient substantive content");
+if(report.pages.some(p=>p.body.some(x=>/\b(?:riasec|disc|eq|cognitive):[^\s]+/i.test(x)||/\b(?:from|dari)\s+(?:COGNITIVE|DISC|EQ|RIASEC)\b/i.test(x))))fail("technical signal identifiers leaked into customer content");
+if(report.pages.some(p=>p.body.some(x=>/Cakupan bukti:\s*100%|coverage\s*:\s*100%/i.test(x))))fail("misleading 100% evidence coverage remains in customer content");
+if(report.pages.filter(p=>/^(Recommendation|Rekomendasi)$/i.test(p.section)).length<5)fail("fewer than five recommendation pages");
+if(report.pages.filter(p=>p.section==="Rencana 30 hari" || p.section==="Action Plan").length<5)fail("action plan is not substantively represented");
+if(report.pages.some(p=>p.body.some(x=>/\bperlu\s+perlu\b|\.\s*perlu\s+/i.test(x))))fail("obvious fragment-join copy defect remains");
+if(report.pages.filter(p=>p.personalized).length!==report.pageCount)fail("not all report pages marked personalized");
+console.log("V15.2 report content quality : PASS");
+console.log(`pages                      : ${report.pageCount}`);
+console.log(`recommendation pages       : ${report.pages.filter(p=>/^(Recommendation|Rekomendasi)$/i.test(p.section)).length}`);
+console.log(`action-plan pages          : ${report.pages.filter(p=>p.section==="Rencana 30 hari" || p.section==="Action Plan").length}`);
+console.log("technical IDs in customer content: 0");
+console.log("misleading 100% coverage labels  : 0");

@@ -1,126 +1,98 @@
- "use client";
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import { normalizeAdminPagination } from "../../lib/admin-pagination";
+import { AdminPagination, type AdminPaginationPageSize } from "./AdminPagination";
 
-import { useEffect, useMemo, useState } from "react";
-
-type Q = {
-  id: string; questionId: string; questionVersionId: string; version: string;
-  testTypeCode: string | null; testTypeName: string | null;
-  domain: string; subdomain: string | null; indicator: string | null; text: string;
-  difficulty: string; status: string; mappingStatus: string;
-};
-type T = { id: string; code: string; name: string; category: string; runtimeKey: string | null };
-type Stats = { total:number; draft:number; validated:number; mapped:number; mappingReview:number; partial:number; approved:number; published:number; eligible:number; questionBankVersion:string; };
-
-const empty = { code:"", text:"", testTypeId:"", domain:"", subdomain:"", indicator:"", difficulty:"UNSPECIFIED" };
-
-export default function UnifiedQuestionBankWorkspace({
-  initialQuestions, initialStats, testTypes,
-}: { initialQuestions: Q[]; initialStats: Stats; testTypes: T[] }) {
-  const [questions,setQuestions]=useState(initialQuestions);
-  const [stats,setStats]=useState(initialStats);
-  const [search,setSearch]=useState("");
-  const [testFilter,setTestFilter]=useState("ALL");
-  const [status,setStatus]=useState("ALL");
-  const [selected,setSelected]=useState<Q|null>(null);
-  const [mode,setMode]=useState<"create"|"edit"|null>(null);
-  const [form,setForm]=useState({...empty});
-  const [busy,setBusy]=useState(false);
-  const [message,setMessage]=useState("");
-
-  const visible=useMemo(()=>questions.filter(q=>
-    (testFilter==="ALL"||q.testTypeCode===testFilter) &&
-    (status==="ALL"||q.status===status||q.mappingStatus===status) &&
-    (!search||`${q.id} ${q.text} ${q.domain} ${q.subdomain??""} ${q.indicator??""}`.toLowerCase().includes(search.toLowerCase()))
-  ),[questions,testFilter,status,search]);
-
-  async function refresh() {
-    const r=await fetch("/api/admin/question-bank",{cache:"no-store"});
-    const j=await r.json(); if(j.ok){setQuestions(j.questions);setStats(j.stats)}
-  }
-  async function act(payload: Record<string,unknown>) {
-    setBusy(true); setMessage("");
-    try {
-      const r=await fetch("/api/admin/question-bank",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload)});
-      const j=await r.json();
-      if(!r.ok) throw new Error(j.error?.code||"Action failed");
-      setMessage("Saved.");
-      await refresh();
-      if(j.question) setSelected(j.question);
-      setMode(null);
-    } catch(e) { setMessage(e instanceof Error?e.message:"Action failed"); }
-    finally { setBusy(false); }
-  }
-  function openEdit(q:Q) {
-    setSelected(q); setMode("edit");
-    setForm({code:q.id,text:q.text,testTypeId:testTypes.find(t=>t.code===q.testTypeCode)?.id??"",domain:q.domain,subdomain:q.subdomain??"",indicator:q.indicator??"",difficulty:q.difficulty});
-  }
-  function openCreate() { setSelected(null);setMode("create");setForm({...empty,testTypeId:testTypes[0]?.id??""}); }
-
-  return <div className="space-y-6">
-    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-      {[["Total",stats.total],["Draft",stats.draft],["Mapped",stats.mapped],["Approved",stats.approved],["Published",stats.published]].map(([l,v])=>
-        <div key={String(l)} className="rounded-2xl border bg-white p-5 shadow-sm"><p className="text-xs font-bold text-slate-500">{l}</p><p className="mt-2 text-2xl font-black">{v}</p></div>)}
-    </div>
-
-    <div className="rounded-3xl border bg-white p-5 shadow-sm">
-      <div className="flex flex-wrap gap-3">
-        <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search code, question, taxonomy..." className="min-w-[260px] flex-1 rounded-xl border px-4 py-2.5 text-sm outline-none focus:border-indigo-500"/>
-        <select value={testFilter} onChange={e=>setTestFilter(e.target.value)} className="rounded-xl border px-3 py-2.5 text-sm">
-          <option value="ALL">All tests</option>{testTypes.map(t=><option key={t.id} value={t.code}>{t.code} — {t.name}</option>)}
-        </select>
-        <select value={status} onChange={e=>setStatus(e.target.value)} className="rounded-xl border px-3 py-2.5 text-sm">
-          {["ALL","DRAFT","MAPPED","APPROVED","PUBLISHED","ARCHIVED","REVIEW_REQUIRED"].map(s=><option key={s}>{s}</option>)}
-        </select>
-        <button onClick={openCreate} className="rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-bold text-white">+ New question</button>
-      </div>
-      <div className="mt-4 text-xs text-slate-500">{visible.length} questions shown · {stats.questionBankVersion}</div>
-
-      <div className="mt-4 overflow-x-auto rounded-2xl border">
-        <table className="w-full min-w-[1200px] text-left text-sm">
-          <thead className="bg-slate-50 text-xs font-bold uppercase tracking-wide text-slate-500"><tr>
-            <th className="px-4 py-3">Code</th><th className="px-4 py-3">Test</th><th className="px-4 py-3">Version</th>
-            <th className="px-4 py-3">Domain</th><th className="px-4 py-3">Question</th><th className="px-4 py-3">Status</th><th className="px-4 py-3">Actions</th>
-          </tr></thead>
-          <tbody className="divide-y divide-slate-100">{visible.map(q=><tr key={q.questionVersionId} className="align-top hover:bg-slate-50">
-            <td className="px-4 py-4 font-mono text-xs font-bold">{q.id}</td>
-            <td className="px-4 py-4 font-bold">{q.testTypeCode??"—"}</td>
-            <td className="px-4 py-4 font-mono text-xs">{q.version}</td>
-            <td className="px-4 py-4 text-xs">{q.domain}<br/><span className="text-slate-500">{q.subdomain??"—"} · {q.indicator??"—"}</span></td>
-            <td className="max-w-lg px-4 py-4 leading-6">{q.text}</td>
-            <td className="px-4 py-4"><span className="rounded-full bg-slate-100 px-2.5 py-1 text-xs font-bold">{q.status}</span><div className="mt-2 text-[11px] text-indigo-700">{q.mappingStatus}</div></td>
-            <td className="px-4 py-4"><div className="flex flex-wrap gap-2">
-              <button onClick={()=>setSelected(q)} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold">Inspect</button>
-              <button onClick={()=>openEdit(q)} disabled={q.status==="ARCHIVED"} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold disabled:opacity-40">Edit / version</button>
-              <button onClick={()=>{const c=prompt("New logical question code:",`${q.id}-COPY`);if(c)act({action:"DUPLICATE",questionId:q.questionId,newCode:c})}} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold">Duplicate</button>
-              {q.mappingStatus==="MAPPED"&&<button onClick={()=>act({action:"APPROVE_MAPPING",questionId:q.questionId})} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold">Approve mapping</button>}
-              {q.status==="DRAFT"&&q.mappingStatus==="APPROVED"&&<button onClick={()=>act({action:"APPROVE",questionId:q.questionId})} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold">Approve</button>}
-              {q.status==="APPROVED"&&q.mappingStatus==="APPROVED"&&<button onClick={()=>act({action:"ACTIVATE",questionId:q.questionId})} className="rounded-lg bg-indigo-600 px-2.5 py-1.5 text-xs font-bold text-white">Activate</button>}
-              {q.status!=="ARCHIVED"&&<button onClick={()=>act({action:"ARCHIVE",questionId:q.questionId})} className="rounded-lg border border-rose-200 px-2.5 py-1.5 text-xs font-bold text-rose-700">Archive</button>}
-            </div></td>
-          </tr>)}</tbody>
-        </table>
-      </div>
-    </div>
-
-    {selected&&<div className="rounded-3xl border bg-white p-6 shadow-sm">
-      <div className="flex items-start justify-between gap-4"><div><p className="text-xs font-bold uppercase tracking-widest text-indigo-600">Question inspector</p><h2 className="mt-1 text-xl font-black">{selected.id} · {selected.version}</h2></div><button onClick={()=>setSelected(null)} className="rounded-lg border px-3 py-1.5 text-xs font-bold">Close</button></div>
-      <div className="mt-5 grid gap-4 md:grid-cols-3 text-sm"><div><b>Logical ID</b><p className="font-mono">{selected.questionId}</p></div><div><b>Version ID</b><p className="font-mono break-all">{selected.questionVersionId}</p></div><div><b>Test</b><p>{selected.testTypeCode??"—"} — {selected.testTypeName??"—"}</p></div></div>
-      <div className="mt-5 rounded-2xl bg-slate-50 p-5 leading-7">{selected.text}</div>
-      <p className="mt-4 text-xs text-slate-500">Historical assessment-facing versions remain immutable. Edit creates a new version.</p>
-    </div>}
-
-    {mode&&<div className="rounded-3xl border-2 border-indigo-100 bg-white p-6 shadow-sm">
-      <div className="flex items-center justify-between"><h2 className="text-xl font-black">{mode==="create"?"Create logical question":"Create new question version"}</h2><button onClick={()=>setMode(null)} className="text-sm font-bold">Cancel</button></div>
-      <div className="mt-5 grid gap-4 md:grid-cols-2">
-        {mode==="create"&&<label className="text-sm font-bold">Question code<input value={form.code} onChange={e=>setForm({...form,code:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-mono font-normal"/></label>}
-        {mode==="create"&&<label className="text-sm font-bold">Test type<select value={form.testTypeId} onChange={e=>setForm({...form,testTypeId:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal">{testTypes.map(t=><option key={t.id} value={t.id}>{t.code} — {t.name}</option>)}</select></label>}
-        <label className="text-sm font-bold md:col-span-2">Question text<textarea rows={4} value={form.text} onChange={e=>setForm({...form,text:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label>
-        <label className="text-sm font-bold">Domain<input value={form.domain} onChange={e=>setForm({...form,domain:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label>
-        <label className="text-sm font-bold">Subdomain<input value={form.subdomain} onChange={e=>setForm({...form,subdomain:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label>
-        <label className="text-sm font-bold">Indicator<input value={form.indicator} onChange={e=>setForm({...form,indicator:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label>
-        <label className="text-sm font-bold">Difficulty<select value={form.difficulty} onChange={e=>setForm({...form,difficulty:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"><option>UNSPECIFIED</option><option>EASY</option><option>MEDIUM</option><option>HARD</option></select></label>
-      </div>
-      <div className="mt-5 flex items-center gap-3"><button disabled={busy} onClick={()=>mode==="create"?act({action:"CREATE",input:form}):act({action:"EDIT",questionId:selected?.questionId,input:form})} className="rounded-xl bg-indigo-600 px-5 py-3 text-sm font-bold text-white disabled:opacity-50">{busy?"Saving...":"Save"}</button>{message&&<span className="text-sm font-bold text-slate-600">{message}</span>}</div>
-    </div>}
-  </div>;
+type Group = "DISC" | "RIASEC" | "IQ_COGNITIVE" | "EQ";
+type Q = { id:string; questionId:string; questionVersionId:string; version:string; testTypeCode:string|null; testTypeName:string|null; questionGroup:Group|null; domain:string; subdomain:string|null; indicator:string|null; text:string; type:string; answerType:"LIKERT_5"|"SINGLE_CHOICE_4"; reverseScore:boolean; weight:number; scale:number[]; scoringKey:number[]; options?:string[]|null; correctOption?:number|null; difficulty:string; status:string; mappingStatus:string; taxonomyNodeCode:string|null; taxonomyNodeName:string|null; taxonomyNodeType:string|null };
+type T = { id:string; code:string; name:string; category:string; runtimeKey:string|null };
+type Stats = { total:number; draft:number; mapped:number; approved:number; published:number; questionBankVersion:string };
+type DuplicateAnalysis = { totalRows:number; uniqueQuestionIds:number; duplicateExistingIds:string[]; duplicateExistingCount:number; duplicateInFileIds:string[]; duplicateInFileCount:number; duplicateInFileExtraRows:number; readyRows:number; importBlocked:boolean };
+type Pagination = { page:number; pageSize:AdminPaginationPageSize; totalItems:number; totalPages:number; hasNextPage:boolean; hasPreviousPage:boolean };
+type WorkspaceState = { group: Group; search: string; status: string; sort: string; direction: string; page: number; pageSize: AdminPaginationPageSize };
+const GROUPS: {key:Group;label:string;code:string}[]=[{key:"DISC",label:"DISC",code:"DISC"},{key:"RIASEC",label:"RIASEC",code:"RIASEC"},{key:"IQ_COGNITIVE",label:"IQ & Cognitive",code:"COGNITIVE"},{key:"EQ",label:"EQ",code:"EQ"}];
+const empty={code:"",text:"",testTypeId:"",domain:"",subdomain:"",indicator:"",difficulty:"UNSPECIFIED",type:"",answerType:"",options:"",correctOption:"",scoringKey:"",scale:"",weight:"1",reverseScore:false};
+export default function UnifiedQuestionBankWorkspace({initialQuestions,initialPagination,initialStats,testTypes,initialWorkspaceState}:{initialQuestions:Q[];initialPagination:Pagination;initialStats:Stats;testTypes:T[];initialWorkspaceState:WorkspaceState}){
+ const searchParams=useSearchParams();
+ const [questions,setQuestions]=useState(initialQuestions),[pagination,setPagination]=useState(initialPagination),[stats,setStats]=useState(initialStats),[group,setGroup]=useState<Group>(initialWorkspaceState.group),[search,setSearch]=useState(initialWorkspaceState.search),[status,setStatus]=useState(initialWorkspaceState.status),[sort,setSort]=useState(initialWorkspaceState.sort),[direction,setDirection]=useState(initialWorkspaceState.direction),[selected,setSelected]=useState<Q|null>(null),[mode,setMode]=useState<"create"|"edit"|null>(null),[form,setForm]=useState({...empty}),[busy,setBusy]=useState(false),[message,setMessage]=useState(""),[preview,setPreview]=useState<Q[]|null>(null),[previewAnalysis,setPreviewAnalysis]=useState<DuplicateAnalysis|null>(null),[file,setFile]=useState<File|null>(null),[loading,setLoading]=useState(false);
+ const searchDebounceRef=useRef<ReturnType<typeof setTimeout>|null>(null);
+ const appliedUrlRef=useRef("");
+ const requestSequenceRef=useRef(0);
+ const activeControllerRef=useRef<AbortController|null>(null);
+ function cancelPendingQuestionBankRequest(){if(searchDebounceRef.current){clearTimeout(searchDebounceRef.current);searchDebounceRef.current=null}activeControllerRef.current?.abort();activeControllerRef.current=null}
+ async function refresh(g=group,nextPage=1,nextPageSize=pagination.pageSize,nextSearch=search,nextStatus=status,nextSort=sort,nextDirection=direction){const requestSequence=++requestSequenceRef.current;activeControllerRef.current?.abort();const controller=new AbortController();activeControllerRef.current=controller;setLoading(true);try{const params=new URLSearchParams({group:g,page:String(nextPage),pageSize:String(nextPageSize)});if(nextSearch.trim())params.set("search",nextSearch.trim());if(nextStatus!=="ALL")params.set("status",nextStatus);params.set("sort",nextSort);params.set("direction",nextDirection);const r=await fetch(`/api/admin/question-bank?${params.toString()}`,{cache:"no-store",signal:controller.signal});const j=await r.json();if(!r.ok||!j.ok)throw new Error(j.error?.code||"Question Bank load failed");if(requestSequence!==requestSequenceRef.current)return;setQuestions(j.questions);setPagination(j.pagination);setStats(j.stats)}catch(e){if(controller.signal.aborted||requestSequence!==requestSequenceRef.current)return;setMessage(e instanceof Error?e.message:"Question Bank load failed")}finally{if(requestSequence===requestSequenceRef.current){setLoading(false);if(activeControllerRef.current===controller)activeControllerRef.current=null}}}
+ function readWorkspaceState(params:URLSearchParams):WorkspaceState{
+  const rawGroup=(params.get("group")??"DISC").trim().toUpperCase();
+  const safeGroup=(GROUPS.some(g=>g.code===rawGroup)||rawGroup==="IQ_COGNITIVE")?GROUPS.find(g=>g.code===rawGroup)?.key??"IQ_COGNITIVE":"DISC";
+  const rawStatus=(params.get("status")??"ALL").trim().toUpperCase();
+  const safeStatuses=["ALL","DRAFT","MAPPED","APPROVED","PUBLISHED","ARCHIVED","REVIEW_REQUIRED"];
+  const safeStatus=safeStatuses.includes(rawStatus)?rawStatus:"ALL";
+  const safeSort=["questionCode","updatedAt","createdAt","status"].includes(params.get("sort")??"")?params.get("sort")!:"questionCode";
+  const safeDirection=params.get("direction")==="desc"?"desc":"asc";
+  const normalized=normalizeAdminPagination({page:Number(params.get("page")??1),pageSize:Number(params.get("pageSize")??25)});
+  return {group:safeGroup,search:(params.get("search")??"").trim().replace(/\s+/g," ").slice(0,120),status:safeStatus,sort:safeSort,direction:safeDirection,page:normalized.page,pageSize:normalized.pageSize as AdminPaginationPageSize};
+ }
+ function writeWorkspaceUrl(next:WorkspaceState,push=true){
+  const params=new URLSearchParams();
+  if(next.group!=="DISC")params.set("group",next.group==="IQ_COGNITIVE"?"COGNITIVE":next.group);
+  if(next.status!=="ALL")params.set("status",next.status);
+  if(next.search.trim())params.set("search",next.search.trim());
+  if(next.sort!=="questionCode")params.set("sort",next.sort);
+  if(next.direction!=="asc")params.set("direction",next.direction);
+  if(next.page!==1)params.set("page",String(next.page));
+  if(next.pageSize!==25)params.set("pageSize",String(next.pageSize));
+  const query=params.toString();
+  const url=query?`/admin/question-bank?${query}`:"/admin/question-bank";
+  const method=push?"pushState":"replaceState";
+  window.history[method]({readyScoreQuestionBankState:true},"",url);
+  appliedUrlRef.current=query;
+ }
+ function applyWorkspaceState(next:WorkspaceState,shouldRefresh=true){
+  setGroup(next.group);setSearch(next.search);setStatus(next.status);setSort(next.sort);setDirection(next.direction);
+  if(shouldRefresh){cancelPendingQuestionBankRequest();refresh(next.group,next.page,next.pageSize,next.search,next.status,next.sort,next.direction);}
+ }
+ useEffect(()=>{
+  const query=searchParams.toString();
+  if(appliedUrlRef.current===query)return;
+  const next=readWorkspaceState(new URLSearchParams(query));
+  const canonicalParams=new URLSearchParams();
+  if(next.group!=="DISC")canonicalParams.set("group",next.group==="IQ_COGNITIVE"?"COGNITIVE":next.group);
+  if(next.status!=="ALL")canonicalParams.set("status",next.status);
+  if(next.search)canonicalParams.set("search",next.search);
+  if(next.sort!=="questionCode")canonicalParams.set("sort",next.sort);
+  if(next.direction!=="asc")canonicalParams.set("direction",next.direction);
+  if(next.page!==1)canonicalParams.set("page",String(next.page));
+  if(next.pageSize!==25)canonicalParams.set("pageSize",String(next.pageSize));
+  const canonicalQuery=canonicalParams.toString();
+  if(canonicalQuery!==query){const canonicalUrl=canonicalQuery?`/admin/question-bank?${canonicalQuery}`:"/admin/question-bank";window.history.replaceState({readyScoreQuestionBankState:true},"",canonicalUrl);}
+  appliedUrlRef.current=canonicalQuery;
+  applyWorkspaceState(next);
+ },[searchParams]);
+ useEffect(()=>()=>{cancelPendingQuestionBankRequest();requestSequenceRef.current+=1},[]);
+ async function act(payload:Record<string,unknown>){setBusy(true);setMessage("");try{cancelPendingQuestionBankRequest();const r=await fetch("/api/admin/question-bank",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify(payload)});const j=await r.json();if(!r.ok)throw new Error(j.error?.code||"Action failed");setMessage("Saved.");await refresh();if(j.question)setSelected(j.question);setMode(null)}catch(e){setMessage(e instanceof Error?e.message:"Action failed")}finally{setBusy(false)}}
+ function nextState(overrides:Partial<WorkspaceState>):WorkspaceState{return {group,search,status,sort,direction,page:pagination.page,pageSize:pagination.pageSize,...overrides}}
+ function setGroupAndReset(g:Group){cancelPendingQuestionBankRequest();setSelected(null);setPreview(null);setPreviewAnalysis(null);setMessage("");const next=nextState({group:g,search:"",page:1});setSearch("");setGroup(g);writeWorkspaceUrl(next);refresh(g,1,pagination.pageSize,"",status,sort,direction)}
+ function setSearchAndReset(value:string){setSearch(value);if(searchDebounceRef.current)clearTimeout(searchDebounceRef.current);searchDebounceRef.current=setTimeout(()=>{searchDebounceRef.current=null;const next=nextState({search:value.trim().replace(/\s+/g," ").slice(0,120),page:1});writeWorkspaceUrl(next);refresh(group,1,pagination.pageSize,value,status,sort,direction)},350)}
+ function setStatusAndReset(value:string){cancelPendingQuestionBankRequest();const next=nextState({status,page:1});setStatus(value);writeWorkspaceUrl(next);refresh(group,1,pagination.pageSize,search,value,sort,direction)}
+ function setSortAndReset(value:string){cancelPendingQuestionBankRequest();const next=nextState({sort: ["questionCode","updatedAt","createdAt","status"].includes(value)?value:"questionCode",page:1});setSort(next.sort);writeWorkspaceUrl(next);refresh(group,1,pagination.pageSize,search,status,next.sort,direction)}
+ function setDirectionAndReset(value:string){cancelPendingQuestionBankRequest();const safe=value==="desc"?"desc":"asc";const next=nextState({direction:safe,page:1});setDirection(safe);writeWorkspaceUrl(next);refresh(group,1,pagination.pageSize,search,status,sort,safe)}
+ function changePage(page:number){cancelPendingQuestionBankRequest();const normalized=normalizeAdminPagination({page,pageSize:pagination.pageSize}).page;const next=nextState({page:normalized});writeWorkspaceUrl(next);refresh(group,normalized,pagination.pageSize,search,status,sort,direction)}
+ function changePageSize(pageSize:AdminPaginationPageSize){cancelPendingQuestionBankRequest();const normalized=normalizeAdminPagination({page:1,pageSize}).pageSize as AdminPaginationPageSize;const next=nextState({page:1,pageSize:normalized});writeWorkspaceUrl(next);refresh(group,1,normalized,search,status,sort,direction)}
+ function openCreate(){const tt=testTypes.find(t=>t.code===GROUPS.find(g=>g.key===group)?.code);const objective=group!=="RIASEC";setMode("create");setSelected(null);setForm({...empty,testTypeId:tt?.id??"",type:group==="RIASEC"?"PREFERENCE":group==="DISC"||group==="EQ"?"SCENARIO":"SINGLE_CHOICE",answerType:objective?"SINGLE_CHOICE_4":"LIKERT_5",scale:objective?"1,2,3,4":"1,2,3,4,5",scoringKey:group==="DISC"?"1,2,3,4":group==="RIASEC"?"1,2,3,4,5":"1"})}
+ function openEdit(q:Q){setSelected(q);setMode("edit");setForm({code:q.id,text:q.text,testTypeId:testTypes.find(t=>t.code===q.testTypeCode)?.id??"",domain:q.domain,subdomain:q.subdomain??"",indicator:q.indicator??"",difficulty:q.difficulty,type:q.type,answerType:q.answerType,options:q.options?.join("||")??"",correctOption:q.correctOption?.toString()??"",scoringKey:q.scoringKey.join(","),scale:q.scale.join(","),weight:String(q.weight),reverseScore:q.reverseScore})}
+ async function submitForm(){const input={text:form.text,domain:form.domain,subdomain:form.subdomain||null,indicator:form.indicator||null,difficulty:form.difficulty,type:form.type,answerType:form.answerType,options:form.options?form.options.split("||").map(x=>x.trim()).filter(Boolean):null,correctOption:form.correctOption?Number(form.correctOption):null,scoringKey:form.scoringKey?form.scoringKey.split(",").map(Number):undefined,scale:form.scale?form.scale.split(",").map(Number):undefined,weight:Number(form.weight),reverseScore:form.reverseScore};if(mode==="create")await act({action:"CREATE",input:{...input,code:form.code,testTypeId:form.testTypeId}});else if(selected)await act({action:"EDIT",questionId:selected.questionId,input})}
+ async function upload(action:"PREVIEW"|"IMPORT"){if(!file)return;if(action==="IMPORT"&&previewAnalysis?.importBlocked){setMessage("IMPORT BLOCKED: resolve duplicate Question IDs before importing.");return}setBusy(true);setMessage("");try{const fd=new FormData();fd.set("action",action);fd.set("group",group);fd.set("file",file);const r=await fetch("/api/admin/question-bank",{method:"POST",body:fd});const j=await r.json();if(!r.ok)throw new Error(j.error?.code||"Upload failed");if(action==="PREVIEW"){setPreview(j.preview);setPreviewAnalysis(j.duplicateAnalysis);setMessage(j.duplicateAnalysis?.importBlocked?`CSV parsed: ${j.count} rows. Import blocked by duplicate Question IDs.`:`CSV parsed: ${j.count} rows. Import readiness: ${j.duplicateAnalysis?.readyRows??j.count} rows.`)}else{setPreview(null);setPreviewAnalysis(null);setFile(null);setMessage(`Imported ${j.imported.imported} rows as draft.`);await refresh()}}catch(e){setMessage(e instanceof Error?e.message:"Upload failed")}finally{setBusy(false)}}
+ return <div className="space-y-6">
+  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">{GROUPS.map(g=><button key={g.key} onClick={()=>setGroupAndReset(g.key)} className={`rounded-2xl border p-5 text-left shadow-sm ${group===g.key?"border-indigo-400 bg-indigo-50":"bg-white"}`}><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Question Group</p><p className="mt-1 text-xl font-black">{g.label}</p><p className="mt-2 text-xs text-slate-500">{g.code}</p></button>)}</div>
+  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">{[["Total",stats.total],["Draft",stats.draft],["Mapped",stats.mapped],["Approved",stats.approved],["Published",stats.published]].map(([l,v])=><div key={String(l)} className="rounded-2xl border bg-white p-5 shadow-sm"><p className="text-xs font-bold text-slate-500">{l}</p><p className="mt-2 text-2xl font-black">{v}</p></div>)}</div>
+  <div className="rounded-3xl border bg-white p-5 shadow-sm"><div className="flex flex-wrap items-center gap-3"><input value={search} onChange={e=>setSearchAndReset(e.target.value)} placeholder="Search code, question, taxonomy..." className="min-w-[260px] flex-1 rounded-xl border px-4 py-2.5 text-sm"/><select value={status} onChange={e=>setStatusAndReset(e.target.value)} className="rounded-xl border px-3 py-2.5 text-sm">{["ALL","DRAFT","MAPPED","APPROVED","PUBLISHED","ARCHIVED","REVIEW_REQUIRED"].map(s=><option key={s}>{s}</option>)}</select><select value={sort} onChange={e=>setSortAndReset(e.target.value)} className="rounded-xl border px-3 py-2.5 text-sm"><option value="questionCode">Question Code</option><option value="updatedAt">Updated At</option><option value="createdAt">Created At</option><option value="status">Status</option></select><select value={direction} onChange={e=>setDirectionAndReset(e.target.value)} className="rounded-xl border px-3 py-2.5 text-sm"><option value="asc">Ascending</option><option value="desc">Descending</option></select><a href={`/api/admin/question-bank/template?group=${group}`} className="rounded-xl border px-4 py-2.5 text-sm font-bold">Download template</a><button onClick={openCreate} className="rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-bold text-white">+ New question</button></div>
+   <div className="mt-5 rounded-2xl border border-dashed p-5"><div className="flex flex-wrap items-center gap-3"><input type="file" accept=".csv,text/csv" onChange={e=>{setFile(e.target.files?.[0]??null);setPreview(null);setPreviewAnalysis(null);setMessage("")}} className="text-sm"/><button disabled={!file||busy} onClick={()=>upload("PREVIEW")} className="rounded-xl border px-4 py-2 text-sm font-bold disabled:opacity-40">Preview CSV</button><button disabled={!preview||busy||!!previewAnalysis?.importBlocked} onClick={()=>upload("IMPORT")} className="rounded-xl bg-indigo-600 px-4 py-2 text-sm font-bold text-white disabled:opacity-40">Import as Draft</button></div><p className="mt-2 text-xs text-slate-500">Group: <b>{GROUPS.find(g=>g.key===group)?.label}</b>. Import never publishes directly.</p></div>
+   {message&&<div className="mt-4 rounded-xl bg-slate-50 p-3 text-sm">{message}</div>}
+   {preview&&<div className="mt-4 overflow-x-auto rounded-2xl border"><div className="p-4 text-sm font-bold">Import preview — {preview.length} rows</div>{previewAnalysis&&<div className={`mx-4 mb-4 rounded-2xl border p-4 text-sm ${previewAnalysis.importBlocked?"border-red-200 bg-red-50":"border-emerald-200 bg-emerald-50"}`}><div className="grid gap-3 sm:grid-cols-3"><div><p className="text-xs font-bold uppercase tracking-wide text-slate-500">CSV parsing</p><p className="mt-1 font-bold">{previewAnalysis.totalRows} rows parsed</p></div><div><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Import readiness</p><p className="mt-1 font-bold">{previewAnalysis.readyRows} rows ready</p></div><div><p className="text-xs font-bold uppercase tracking-wide text-slate-500">Existing duplicates</p><p className="mt-1 font-bold">{previewAnalysis.duplicateExistingCount}</p></div></div>{previewAnalysis.duplicateInFileCount>0&&<p className="mt-3"><b>Duplicate IDs inside CSV:</b> {previewAnalysis.duplicateInFileIds.join(", ")}{previewAnalysis.duplicateInFileCount>previewAnalysis.duplicateInFileIds.length?" …":""}</p>}{previewAnalysis.duplicateExistingCount>0&&<p className="mt-2"><b>Existing Question IDs:</b> {previewAnalysis.duplicateExistingIds.join(", ")}{previewAnalysis.duplicateExistingCount>previewAnalysis.duplicateExistingIds.length?" …":""}</p>}{previewAnalysis.importBlocked&&<p className="mt-3 font-bold text-red-700">IMPORT BLOCKED — resolve duplicate Question IDs before importing. Existing Questions are never silently overwritten.</p>}</div>}<table className="w-full min-w-[900px] text-left text-xs"><thead className="bg-slate-50"><tr><th className="p-3">ID</th><th className="p-3">Type</th><th className="p-3">Domain</th><th className="p-3">Taxonomy Node</th><th className="p-3">Question</th><th className="p-3">Mapping</th></tr></thead><tbody className="divide-y">{preview.slice(0,20).map((q,i)=><tr key={`${q.id}-${i}`}><td className="p-3 font-mono">{q.id}</td><td className="p-3">{q.type}/{q.answerType}</td><td className="p-3">{q.domain}</td><td className="p-3">{q.text}</td><td className="p-3">{q.mappingStatus}</td></tr>)}</tbody></table>{preview.length>20&&<p className="p-3 text-xs text-slate-500">Showing first 20 rows.</p>}</div>}
+   <div className="mt-4 text-xs text-slate-500">{pagination.totalItems} questions · {stats.questionBankVersion}</div><div className="mt-4 overflow-x-auto rounded-2xl border"><table className="w-full min-w-[1200px] text-left text-sm"><thead className="bg-slate-50 text-xs font-bold uppercase tracking-wide text-slate-500"><tr><th className="p-3">Code</th><th className="p-3">Version</th><th className="p-3">Type</th><th className="p-3">Domain</th><th className="p-3">Taxonomy Node</th><th className="p-3">Question</th><th className="p-3">Status</th><th className="p-3">Actions</th></tr></thead><tbody className="divide-y">{questions.map(q=><tr key={q.questionVersionId} className="align-top hover:bg-slate-50"><td className="p-4 font-mono text-xs font-bold">{q.id}</td><td className="p-4 font-mono text-xs">{q.version}</td><td className="p-4 text-xs">{q.type}<br/>{q.answerType}</td><td className="p-4 text-xs">{q.domain}<br/><span className="text-slate-500">{q.subdomain??"—"} · {q.indicator??"—"}</span></td><td className="p-4 text-xs"><b>{q.taxonomyNodeCode??"—"}</b><br/><span className="text-slate-500">{q.taxonomyNodeName??"No taxonomy node resolved"}</span></td><td className="max-w-lg p-4 leading-6">{q.text}</td><td className="p-4"><b>{q.status}</b><div className="mt-1 text-[11px] text-indigo-700">{q.mappingStatus}</div></td><td className="p-4"><div className="flex flex-wrap gap-2"><button onClick={()=>setSelected(q)} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold">Inspect</button><button onClick={()=>openEdit(q)} disabled={q.status==="ARCHIVED"} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold disabled:opacity-40">Edit / version</button><button onClick={()=>{const c=prompt("New logical question code:",`${q.id}-COPY`);if(c)act({action:"DUPLICATE",questionId:q.questionId,newCode:c})}} className="rounded-lg border px-2.5 py-1.5 text-xs font-bold">Duplicate</button></div></td></tr>)}</tbody></table></div><div className="mt-4"><AdminPagination page={pagination.page} pageSize={pagination.pageSize} totalItems={pagination.totalItems} totalPages={pagination.totalPages} hasNextPage={pagination.hasNextPage} hasPreviousPage={pagination.hasPreviousPage} onPageChange={changePage} onPageSizeChange={changePageSize} disabled={busy||loading}/></div>
+  </div>
+  {selected&&<div className="rounded-3xl border bg-white p-6 shadow-sm"><div className="flex items-start justify-between"><div><p className="text-xs font-bold uppercase tracking-widest text-indigo-600">Question inspector</p><h2 className="mt-1 text-xl font-black">{selected.id} · {selected.version}</h2></div><button onClick={()=>setSelected(null)} className="rounded-lg border px-3 py-1.5 text-xs font-bold">Close</button></div><div className="mt-5 grid gap-4 md:grid-cols-4 text-sm"><div><b>Group</b><p>{GROUPS.find(g=>g.key===selected.questionGroup)?.label}</p></div><div><b>Logical ID</b><p className="font-mono">{selected.questionId}</p></div><div><b>Version ID</b><p className="font-mono break-all">{selected.questionVersionId}</p></div><div><b>Response</b><p>{selected.answerType}</p></div></div><div className="mt-5 rounded-2xl bg-slate-50 p-5 leading-7">{selected.text}</div><p className="mt-4 text-xs text-slate-500">Question Version is immutable after creation; editing creates a new version.</p></div>}
+  {mode&&<div className="rounded-3xl border-2 border-indigo-100 bg-white p-6 shadow-sm"><div className="flex items-center justify-between"><h2 className="text-xl font-black">{mode==="create"?`Create ${GROUPS.find(g=>g.key===group)?.label} question`:`Create new ${GROUPS.find(g=>g.key===group)?.label} version`}</h2><button onClick={()=>setMode(null)} className="text-sm font-bold">Cancel</button></div><div className="mt-5 grid gap-4 md:grid-cols-2">{mode==="create"&&<label className="text-sm font-bold">Question code<input value={form.code} onChange={e=>setForm({...form,code:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-mono font-normal"/></label>}<label className="text-sm font-bold">Question type<input value={form.type} onChange={e=>setForm({...form,type:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label><label className="text-sm font-bold md:col-span-2">Question text<textarea rows={4} value={form.text} onChange={e=>setForm({...form,text:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label><label className="text-sm font-bold">Domain / dimension<input value={form.domain} onChange={e=>setForm({...form,domain:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label><label className="text-sm font-bold">Subdomain<input value={form.subdomain} onChange={e=>setForm({...form,subdomain:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label><label className="text-sm font-bold">Indicator<input value={form.indicator} onChange={e=>setForm({...form,indicator:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label><label className="text-sm font-bold">Difficulty<select value={form.difficulty} onChange={e=>setForm({...form,difficulty:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"><option>UNSPECIFIED</option><option>EASY</option><option>MEDIUM</option><option>HARD</option></select></label><label className="text-sm font-bold">Scale<input value={form.scale} onChange={e=>setForm({...form,scale:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-mono font-normal"/></label><label className="text-sm font-bold">Scoring key<input value={form.scoringKey} onChange={e=>setForm({...form,scoringKey:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-mono font-normal"/></label>{group!=="RIASEC"&&<label className="text-sm font-bold md:col-span-2">Options <span className="font-normal text-slate-500">(pisahkan dengan ||)</span><input value={form.options} onChange={e=>setForm({...form,options:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label>}{group!=="RIASEC"&&group!=="DISC"&&group!=="EQ"&&<label className="text-sm font-bold">Correct option<input type="number" min="1" max="4" value={form.correctOption} onChange={e=>setForm({...form,correctOption:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label>}<label className="text-sm font-bold">Weight<input type="number" min="0.01" step="0.01" value={form.weight} onChange={e=>setForm({...form,weight:e.target.value})} className="mt-2 w-full rounded-xl border p-3 font-normal"/></label></div><button disabled={busy} onClick={submitForm} className="mt-5 rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white disabled:opacity-40">{busy?"Saving…":mode==="create"?"Create draft":"Create version"}</button></div>}
+ </div>
 }

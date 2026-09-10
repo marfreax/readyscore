@@ -1,0 +1,27 @@
+{
+  "version": "V8.2",
+  "status": "LOCKED",
+  "implementation_status": "ARCHITECTURE_ONLY",
+  "baseline": "V8.1 Measurement Specification Lock PASS",
+  "global_rules": {
+    "no_universal_score": true,
+    "assessment_specific_response_models": true,
+    "historical_question_versions_immutable": true,
+    "scoring_semantics_versioned": true,
+    "no_database_migration": true,
+    "no_production_measurement_mutation": true
+  },
+  "question_architecture": {
+    "logical_identity": "stable Question identity",
+    "assessment_version": "immutable QuestionVersion",
+    "required_metadata": ["assessmentType", "questionType", "stimulus", "options", "dimensionMapping", "scoringMetadata", "version"]
+  },
+  "assessments": {
+    "cognitive": {"question_type":"SINGLE_CHOICE","response_model":"objective_keyed","target_items":24,"dimensions":4,"items_per_dimension":6,"item_scoring":{"correct":1,"incorrect":0,"no_response":"unscored"},"dimension_score":"correct / answered scored * 100","overall_rule":"mean of four dimension scores when completion thresholds are satisfied","customer_term":"Cognitive Reasoning Score","iq_claim_allowed":false},
+    "eq": {"question_type":"SCENARIO_SINGLE_CHOICE","response_model":"situational_judgment","target_items":24,"dimensions":4,"items_per_dimension":6,"item_scoring":"item-specific explicit ordinal key","dimension_score":"normalized 0-100","overall_rule":"mean of four dimensions when completion requirements are met","key_values_finalized_in":"V8.4"},
+    "disc": {"question_type":"SCENARIO_FORCED_CHOICE","response_model":"one_most_representative_option","target_items":24,"options_per_item":4,"dimensions":["D","I","S","C"],"item_scoring":"selected option maps through item-specific hidden dimension mapping","dimension_score":"selection proportion normalized to 0-100","overall_rule":"profile only; no universal ability score","global_positional_mapping_forbidden":true},
+    "riasec": {"question_type":"LIKERT_5_PREFERENCE","response_model":"preference","target_items":60,"dimensions":["R","I","A","S","E","C"],"items_per_dimension":10,"item_scoring":"1-5 preference; reverse only when explicitly justified","dimension_score":"weighted mean normalized 0-100","top_code":"top 3 dimensions after deterministic ranking when complete"}
+  },
+  "result_boundaries": {"assessment_result":["main_result","dimension_profile","classification_if_authorized","interpretation"],"cross_test_profile":"separate synthesis; no universal score; no raw-average synthesis"},
+  "v8_2_scope": {"database_migration":false,"production_measurement_mutation":false,"production_question_bank_replacement":false,"customer_ui_implementation":false}
+}

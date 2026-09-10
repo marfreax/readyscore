@@ -31,7 +31,7 @@ export const discProfileAdapter: ProfileSignalAdapter = {
           scoringVersion: input.result.scoringVersion,
           interpretationVersion: input.result.interpretation?.interpretationVersion,
           excludedSignalCount: 0,
-          exclusionReasons: ["DISC_RESULT_V1 measurement payload is missing or invalid."],
+          exclusionReasons: ["DISC_RESULT_V2 measurement payload is missing or invalid."],
         },
       };
     }
@@ -50,7 +50,7 @@ export const discProfileAdapter: ProfileSignalAdapter = {
       confidence,
       sourceTestType: "DISC",
       sourceResultAttemptId: input.result.attemptId,
-      sourceResultContractVersion: input.result.interpretation?.contractVersion ?? "DISC_RESULT_V1",
+      sourceResultContractVersion: input.result.interpretation?.contractVersion ?? "DISC_RESULT_V2",
       sourceScoringVersion: measurement.scoringVersion,
       sourceInterpretationVersion: input.result.interpretation?.interpretationVersion,
     }));
@@ -62,7 +62,7 @@ export const discProfileAdapter: ProfileSignalAdapter = {
         attemptId: input.result.attemptId,
         status: "AVAILABLE",
         confidence,
-        resultContractVersion: input.result.interpretation?.contractVersion ?? "DISC_RESULT_V1",
+        resultContractVersion: input.result.interpretation?.contractVersion ?? "DISC_RESULT_V2",
         scoringVersion: measurement.scoringVersion,
         interpretationVersion: input.result.interpretation?.interpretationVersion,
         excludedSignalCount: 0,

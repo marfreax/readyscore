@@ -1,5 +1,7 @@
 export const REPORT_CONTRACT_VERSION = "REPORT_V1" as const;
 export const REPORT_ENGINE_VERSION = "REPORT_ENGINE_V1" as const;
+export const REPORTS_ACTIVITY_CONTRACT_VERSION = "REPORTS_ACTIVITY_V1" as const;
+export const REPORTS_ACTIVITY_ENGINE_VERSION = "REPORTS_ACTIVITY_ENGINE_V1" as const;
 
 export type ReportStatus = "AVAILABLE" | "LIMITED";
 

@@ -25,6 +25,8 @@ export type TestSpecificQuestionVersion = {
   weight: number;
   scale: number[];
   scoringKey: number[];
+  options: string[] | null;
+  correctOption: number | null;
   difficulty: string;
   status: string;
   mappingStatus: string;
@@ -64,10 +66,12 @@ export async function getQuestionBankIdentity(
 
   if (!testType) throw new Error(`TEST_TYPE_NOT_FOUND:${code}`);
 
+  const activeTaxonomyVersion = testType.taxonomies[0]?.version ?? null;
   const latest = await prisma.questionVersion.findFirst({
     where: {
       testTypeId: testType.id,
       status: QuestionStatus.PUBLISHED,
+      ...(activeTaxonomyVersion ? { taxonomyVersion: activeTaxonomyVersion } : {}),
     },
     orderBy: [{ updatedAt: "desc" }, { id: "desc" }],
     select: { updatedAt: true },
@@ -77,13 +81,14 @@ export async function getQuestionBankIdentity(
     where: {
       testTypeId: testType.id,
       status: QuestionStatus.PUBLISHED,
+      ...(activeTaxonomyVersion ? { taxonomyVersion: activeTaxonomyVersion } : {}),
     },
   });
 
   return {
     testTypeCode: testType.code,
     testTypeId: testType.id,
-    taxonomyVersion: testType.taxonomies[0]?.version ?? null,
+    taxonomyVersion: activeTaxonomyVersion,
     questionBankVersion: deriveQuestionBankVersion(
       testType.code,
       latest?.updatedAt ?? null,
@@ -105,6 +110,7 @@ export async function getPublishedQuestionBank(
     where: {
       testTypeId: identity.testTypeId,
       status: QuestionStatus.PUBLISHED,
+      ...(identity.taxonomyVersion ? { taxonomyVersion: identity.taxonomyVersion } : {}),
       mappingStatus: MappingStatus.APPROVED,
       text: { not: "" },
     },
@@ -137,6 +143,8 @@ export async function getPublishedQuestionBank(
     weight: row.weight,
     scale: row.scale,
     scoringKey: row.scoringKey,
+    options: Array.isArray(row.options) ? row.options.map(String) : null,
+    correctOption: typeof row.correctOption === "number" ? row.correctOption : null,
     difficulty: row.difficulty,
     status: row.status,
     mappingStatus: row.mappingStatus,

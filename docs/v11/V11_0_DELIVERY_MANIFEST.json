@@ -1,0 +1,19 @@
+{
+  "version": "V11.0",
+  "baseline": "V10.11.3",
+  "phase": "ADMIN_ARCHITECTURE_SAFETY_CONTRACT",
+  "implementationMode": "ARCHITECTURE_CONTRACT",
+  "questionGroups": ["DISC", "RIASEC", "IQ & Cognitive", "EQ"],
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "resultSemanticsMutation": false,
+  "customerUxRedesign": false,
+  "entitlementMutation": false,
+  "historicalContentMutation": false,
+  "historicalResultRecalculation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "assessmentRuntimeMutation": false,
+  "status": "LOCKED_FOR_DEVELOPMENT"
+}

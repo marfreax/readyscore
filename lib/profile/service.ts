@@ -4,7 +4,7 @@ import { buildCrossTestProfile } from "./engine-v1";
 import type { CrossTestProfileInput } from "./types";
 
 export const PROFILE_TYPES = ["RIASEC", "DISC", "EQ", "COGNITIVE"] as const;
-export const CROSS_TEST_PROFILE_SERVICE_VERSION = "V5_L10_CROSS_TEST_PROFILING_V1" as const;
+export const CROSS_TEST_PROFILE_SERVICE_VERSION = "V9.10_CROSS_TEST_PROFILE_SERVICE_V1" as const;
 
 export class CrossTestProfileAccessError extends Error {
   constructor(public readonly code: "AUTH_REQUIRED" | "PROFILE_ACCESS_REQUIRED") {
@@ -78,9 +78,10 @@ export async function getCrossTestProfile(userId: string) {
 
   const latest = new Map<string, CrossTestProfileInput>();
   for (const attempt of attempts) {
-    if (latest.has(attempt.assessmentType)) continue;
+    const assessmentKey = attempt.assessmentType.trim().toUpperCase();
+    if (latest.has(assessmentKey)) continue;
     const normalized = normalizeInput(attempt);
-    if (normalized) latest.set(attempt.assessmentType, normalized);
+    if (normalized) latest.set(assessmentKey, normalized);
   }
 
   const profile = buildCrossTestProfile([...latest.values()]);

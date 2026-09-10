@@ -1,0 +1,578 @@
+[
+  {
+    "id": "EQ-V2-001",
+    "code": "EQ-V2-001",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_AWARENESS",
+    "indicator": "EA-001",
+    "text": "Saat rapat, rekan Anda menyampaikan kritik yang cukup tajam terhadap ide Anda. Anda mulai merasa tersinggung. Apa respons yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengabaikan perasaan itu dan langsung membalas kritiknya.",
+      "Menyadari bahwa Anda tersinggung sebelum memutuskan respons.",
+      "Menghentikan rapat karena kritik tersebut tidak menyenangkan.",
+      "Menganggap kritik itu pasti merupakan serangan pribadi."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-002",
+    "code": "EQ-V2-002",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_AWARENESS",
+    "indicator": "EA-002",
+    "text": "Anda tiba-tiba kehilangan semangat mengerjakan tugas setelah menerima pesan singkat dari seseorang. Apa langkah yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Langsung menyimpulkan bahwa orang tersebut sedang marah.",
+      "Membalas pesan dengan nada yang sama agar perasaan Anda tersalurkan.",
+      "Memperhatikan perubahan emosi Anda dan mencari kemungkinan pemicunya.",
+      "Mengabaikan perubahan perasaan sampai tugas selesai."
+    ],
+    "scoringKey": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-003",
+    "code": "EQ-V2-003",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_AWARENESS",
+    "indicator": "EA-003",
+    "text": "Menjelang presentasi penting, Anda merasa gelisah dan sulit berkonsentrasi. Apa yang paling menunjukkan kesadaran emosi?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengenali kegelisahan dan mempertimbangkan bagaimana hal itu memengaruhi fokus Anda.",
+      "Berpura-pura tidak gugup agar terlihat percaya diri.",
+      "Membatalkan presentasi agar tidak merasakan tekanan.",
+      "Meminta orang lain mengambil alih tanpa memahami penyebabnya."
+    ],
+    "scoringKey": [
+      4,
+      3,
+      1,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-004",
+    "code": "EQ-V2-004",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_AWARENESS",
+    "indicator": "EA-004",
+    "text": "Setelah berdiskusi dengan teman, Anda merasa kesal tetapi tidak yakin penyebabnya. Apa respons terbaik?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Segera mengatakan bahwa teman Anda pasti salah.",
+      "Mencoba mengidentifikasi bagian percakapan yang memicu rasa kesal.",
+      "Menghindari teman tersebut tanpa memikirkan perasaan Anda.",
+      "Menyalahkan suasana hati tanpa mencari konteksnya."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-005",
+    "code": "EQ-V2-005",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_AWARENESS",
+    "indicator": "EA-005",
+    "text": "Anda mendapat kabar baik, tetapi tetap merasa tegang karena memikirkan pekerjaan lain. Apa yang paling tepat?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menganggap rasa tegang berarti kabar baik itu tidak berarti.",
+      "Menyembunyikan rasa tegang dan memaksa diri merasa senang.",
+      "Mengenali bahwa beberapa emosi dapat muncul bersamaan dan memengaruhi perilaku.",
+      "Mengabaikan semua perasaan dan langsung kembali bekerja."
+    ],
+    "scoringKey": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-006",
+    "code": "EQ-V2-006",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_AWARENESS",
+    "indicator": "EA-006",
+    "text": "Anda menyadari diri menjadi lebih mudah tersinggung selama beberapa hari terakhir. Apa langkah yang paling berguna?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menganggap orang lain memang semakin mengganggu.",
+      "Memperhatikan pola perubahan emosi dan situasi yang menyertainya.",
+      "Mengurangi komunikasi dengan semua orang tanpa evaluasi.",
+      "Menunggu sampai emosi tersebut hilang sendiri."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-007",
+    "code": "EQ-V2-007",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_REGULATION",
+    "indicator": "ER-007",
+    "text": "Dalam diskusi, seseorang memotong pembicaraan Anda berulang kali. Anda mulai marah. Apa respons paling konstruktif?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Meninggikan suara agar orang tersebut berhenti.",
+      "Menghentikan pembicaraan dan pergi tanpa penjelasan.",
+      "Mengambil jeda singkat lalu menyampaikan keberatan dengan tenang.",
+      "Membalas dengan memotong pembicaraannya."
+    ],
+    "scoringKey": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-008",
+    "code": "EQ-V2-008",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_REGULATION",
+    "indicator": "ER-008",
+    "text": "Anda menerima kritik yang membuat Anda kecewa tepat sebelum harus menyelesaikan tugas. Apa yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Membiarkan kekecewaan menentukan keputusan berikutnya.",
+      "Mengambil waktu singkat untuk menenangkan diri lalu kembali ke tugas.",
+      "Menolak semua kritik karena sedang kecewa.",
+      "Menunda semua pekerjaan sampai perasaan benar-benar hilang."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-009",
+    "code": "EQ-V2-009",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_REGULATION",
+    "indicator": "ER-009",
+    "text": "Seorang pelanggan berbicara dengan nada tinggi karena masalah yang bukan sepenuhnya kesalahan Anda. Apa respons terbaik?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Membalas dengan nada tinggi agar posisi Anda jelas.",
+      "Mengakhiri percakapan seketika.",
+      "Menahan emosi, memahami masalah, lalu merespons bagian yang dapat Anda tangani.",
+      "Menyalahkan pelanggan karena tidak memahami proses."
+    ],
+    "scoringKey": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-010",
+    "code": "EQ-V2-010",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_REGULATION",
+    "indicator": "ER-010",
+    "text": "Anda sangat ingin mengirim pesan saat sedang marah kepada rekan kerja. Apa pilihan yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengirim segera agar perasaan tersampaikan.",
+      "Menulis pesan, memberi jeda, lalu meninjaunya kembali sebelum mengirim.",
+      "Meminta rekan lain mengirim pesan tersebut.",
+      "Tidak pernah membicarakan masalah itu lagi."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-011",
+    "code": "EQ-V2-011",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_REGULATION",
+    "indicator": "ER-011",
+    "text": "Setelah mengalami kegagalan, Anda merasa ingin menyerah. Apa respons yang paling adaptif?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengakui kekecewaan, mengambil jeda, kemudian menentukan langkah berikutnya.",
+      "Memaksa diri langsung bekerja seolah tidak terjadi apa-apa.",
+      "Menyalahkan orang lain agar merasa lebih baik.",
+      "Menghindari situasi serupa selamanya."
+    ],
+    "scoringKey": [
+      4,
+      2,
+      1,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-012",
+    "code": "EQ-V2-012",
+    "version": "EQ_V2",
+    "dimension": "EMOTION_REGULATION",
+    "indicator": "ER-012",
+    "text": "Dalam situasi yang menegangkan, Anda harus membuat keputusan dalam waktu terbatas. Apa yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memilih hal pertama yang muncul karena Anda sedang tertekan.",
+      "Mengikuti emosi sepenuhnya agar keputusan terasa tegas.",
+      "Mengambil napas/jeda singkat dan memusatkan perhatian pada informasi yang relevan.",
+      "Menyerahkan semua keputusan kepada orang lain."
+    ],
+    "scoringKey": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-013",
+    "code": "EQ-V2-013",
+    "version": "EQ_V2",
+    "dimension": "EMPATHY_SOCIAL_AWARENESS",
+    "indicator": "EM-013",
+    "text": "Teman Anda menjadi lebih pendiam setelah menerima hasil ujian yang buruk. Apa respons paling tepat?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Langsung memberi nasihat agar ia tidak terlalu memikirkan masalah.",
+      "Menganggap ia hanya sedang mencari perhatian.",
+      "Memperhatikan perubahan sikap dan memberi ruang untuk bercerita jika ia mau.",
+      "Mengajak bercanda agar ia lupa tanpa menanyakan keadaannya."
+    ],
+    "scoringKey": [
+      3,
+      1,
+      4,
+      2
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-014",
+    "code": "EQ-V2-014",
+    "version": "EQ_V2",
+    "dimension": "EMPATHY_SOCIAL_AWARENESS",
+    "indicator": "EM-014",
+    "text": "Dalam diskusi, rekan Anda tampak tidak nyaman ketika topik tertentu dibahas. Apa yang paling tepat?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Terus membahasnya agar ia terbiasa.",
+      "Mengamati reaksinya dan mempertimbangkan apakah perlu memberi ruang atau mengubah pendekatan.",
+      "Menganggap ketidaknyamanan itu bukan urusan Anda.",
+      "Menanyakan di depan semua orang mengapa ia terlihat aneh."
+    ],
+    "scoringKey": [
+      2,
+      4,
+      1,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-015",
+    "code": "EQ-V2-015",
+    "version": "EQ_V2",
+    "dimension": "EMPATHY_SOCIAL_AWARENESS",
+    "indicator": "EM-015",
+    "text": "Seorang anggota tim terlambat menyelesaikan pekerjaan yang biasanya ia kuasai. Apa langkah terbaik sebelum menilai?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Langsung menyimpulkan ia tidak bertanggung jawab.",
+      "Mencari tahu konteksnya dan mendengarkan penjelasannya sebelum memberi penilaian.",
+      "Membandingkannya dengan anggota tim lain.",
+      "Mengambil alih pekerjaannya tanpa berbicara dengannya."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-016",
+    "code": "EQ-V2-016",
+    "version": "EQ_V2",
+    "dimension": "EMPATHY_SOCIAL_AWARENESS",
+    "indicator": "EM-016",
+    "text": "Anda tidak setuju dengan pendapat seseorang yang sedang menjelaskan masalah pribadi. Apa respons yang paling tepat?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memotong pembicaraan untuk menjelaskan bahwa ia salah.",
+      "Mendengarkan sudut pandangnya sebelum menyampaikan pendapat Anda.",
+      "Menghindari percakapan agar tidak berbeda pendapat.",
+      "Mengatakan bahwa masalahnya tidak seberapa dibanding masalah Anda."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-017",
+    "code": "EQ-V2-017",
+    "version": "EQ_V2",
+    "dimension": "EMPATHY_SOCIAL_AWARENESS",
+    "indicator": "EM-017",
+    "text": "Teman Anda mengatakan ia baik-baik saja, tetapi nada bicaranya terdengar berbeda dari biasanya. Apa yang paling tepat?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memaksa ia menceritakan masalahnya.",
+      "Mengabaikan perbedaan itu karena ia sudah mengatakan baik-baik saja.",
+      "Menawarkan kesempatan untuk bercerita tanpa memaksanya.",
+      "Memberi tahu orang lain bahwa teman Anda sedang bermasalah."
+    ],
+    "scoringKey": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-018",
+    "code": "EQ-V2-018",
+    "version": "EQ_V2",
+    "dimension": "EMPATHY_SOCIAL_AWARENESS",
+    "indicator": "EM-018",
+    "text": "Saat bekerja dengan orang yang memiliki cara komunikasi berbeda, apa pendekatan yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengharapkan orang tersebut mengikuti cara Anda.",
+      "Mencoba memahami kebutuhannya dan menyesuaikan komunikasi bila diperlukan.",
+      "Mengurangi komunikasi agar tidak terjadi salah paham.",
+      "Menilai bahwa gaya komunikasi Anda lebih efektif."
+    ],
+    "scoringKey": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-019",
+    "code": "EQ-V2-019",
+    "version": "EQ_V2",
+    "dimension": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "indicator": "RS-019",
+    "text": "Anda dan rekan kerja berbeda pendapat tentang cara menyelesaikan tugas. Apa respons paling konstruktif?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memaksakan cara Anda karena Anda lebih yakin.",
+      "Menghindari pembahasan agar tidak terjadi konflik.",
+      "Membahas alasan masing-masing dan mencari titik temu berdasarkan tujuan tugas.",
+      "Meminta pihak lain memilih tanpa menjelaskan alasan."
+    ],
+    "scoringKey": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-020",
+    "code": "EQ-V2-020",
+    "version": "EQ_V2",
+    "dimension": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "indicator": "RS-020",
+    "text": "Seorang teman menyampaikan bahwa komentar Anda sebelumnya membuatnya tidak nyaman. Apa respons terbaik?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menjelaskan bahwa ia terlalu sensitif.",
+      "Mendengarkan dampak yang ia rasakan dan mempertimbangkan bagaimana memperbaiki respons Anda.",
+      "Menghindarinya agar masalah tidak berlanjut.",
+      "Membalas dengan menyebut kesalahannya juga."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-021",
+    "code": "EQ-V2-021",
+    "version": "EQ_V2",
+    "dimension": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "indicator": "RS-021",
+    "text": "Dalam kelompok, dua anggota mulai saling menyalahkan. Apa yang paling membantu?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Memihak orang yang paling dekat dengan Anda.",
+      "Membiarkan mereka menyelesaikan sendiri meski pekerjaan terhenti.",
+      "Mengembalikan pembicaraan pada masalah dan langkah yang dapat disepakati bersama.",
+      "Menghentikan diskusi agar konflik tidak terlihat."
+    ],
+    "scoringKey": [
+      2,
+      1,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-022",
+    "code": "EQ-V2-022",
+    "version": "EQ_V2",
+    "dimension": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "indicator": "RS-022",
+    "text": "Anda perlu memberikan umpan balik yang mungkin sulit diterima rekan. Bagaimana sebaiknya?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menyampaikan semuanya secara langsung tanpa memikirkan dampaknya.",
+      "Menghindari umpan balik agar hubungan tetap nyaman.",
+      "Menyampaikan contoh yang jelas dengan fokus pada perilaku dan perbaikan yang dapat dilakukan.",
+      "Meminta orang lain menyampaikan kritik tersebut."
+    ],
+    "scoringKey": [
+      1,
+      2,
+      4,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-023",
+    "code": "EQ-V2-023",
+    "version": "EQ_V2",
+    "dimension": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "indicator": "RS-023",
+    "text": "Anda menyadari ada kesalahpahaman dalam percakapan dengan rekan. Apa langkah terbaik?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Menunggu sampai rekan tersebut menyadarinya sendiri.",
+      "Mengklarifikasi maksud dan mendengarkan bagaimana pesan Anda dipahami.",
+      "Mengakhiri percakapan agar tidak semakin rumit.",
+      "Menganggap kesalahpahaman adalah sepenuhnya kesalahan lawan bicara."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "EQ-V2-024",
+    "code": "EQ-V2-024",
+    "version": "EQ_V2",
+    "dimension": "RELATIONSHIP_SOCIAL_RESPONSE",
+    "indicator": "RS-024",
+    "text": "Dalam kerja tim, seseorang memiliki kebutuhan yang berbeda dari anggota lain. Apa pendekatan yang paling sehat?",
+    "type": "SCENARIO",
+    "answerType": "SINGLE_CHOICE_4",
+    "options": [
+      "Mengabaikan kebutuhan tersebut demi keseragaman.",
+      "Mencari cara kerja yang tetap memenuhi tujuan bersama sambil mempertimbangkan kebutuhan yang relevan.",
+      "Meminta orang tersebut menyesuaikan diri sepenuhnya.",
+      "Memisahkan orang tersebut dari kelompok agar pekerjaan cepat selesai."
+    ],
+    "scoringKey": [
+      1,
+      4,
+      2,
+      3
+    ],
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  }
+]

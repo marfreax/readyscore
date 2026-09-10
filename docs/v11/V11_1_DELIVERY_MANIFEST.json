@@ -1,0 +1,20 @@
+{
+  "version": "V11.1",
+  "name": "Question Bank Operations",
+  "baseline": "V11.0 Admin Architecture & Safety Contract",
+  "status": "IMPLEMENTATION",
+  "implementationMode": "QUESTION_BANK_OPERATIONS",
+  "databaseMigration": false,
+  "questionGroups": ["DISC", "RIASEC", "IQ & Cognitive", "EQ"],
+  "historicalContentMutation": false,
+  "historicalResultRecalculation": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "resultSemanticsMutation": false,
+  "customerUxRedesign": false,
+  "entitlementMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "assessmentRuntimeMutation": "COMPATIBILITY_FIX_ONLY",
+  "notes": "V11.1 adds Admin Question Bank operations, group-specific import/template flows, assessment-specific item metadata, and preserves historical version boundaries. No Prisma migration is introduced."
+}

@@ -39,8 +39,8 @@ if (integrated.testType !== "RIASEC") {
   throw new Error("Expected RIASEC test type.");
 }
 
-if (integrated.scoringVersion !== "RIASEC_SCORE_V1") {
-  throw new Error("Expected RIASEC_SCORE_V1.");
+if (integrated.scoringVersion !== "RIASEC_SCORE_V2") {
+  throw new Error("Expected RIASEC_SCORE_V2.");
 }
 
 if (integrated.result.topCode !== "IRE") {

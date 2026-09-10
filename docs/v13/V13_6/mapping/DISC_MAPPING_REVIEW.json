@@ -1,0 +1,802 @@
+[
+  {
+    "questionId": "DISC-V2-001",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_001",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-005",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_005",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-009",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_009",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-013",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_013",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-017",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_017",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-021",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "BEHAVIORAL_SCENARIO_021",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-001",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Decisiveness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-002",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Results Orientation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-003",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Challenge Seeking",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-004",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Assertiveness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-005",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Autonomy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-006",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Decisiveness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-007",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Results Orientation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-008",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Challenge Seeking",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-009",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Assertiveness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-010",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Autonomy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-011",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Decisiveness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-012",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Results Orientation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-013",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Challenge Seeking",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-014",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_D",
+    "indicator": "Assertiveness",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-002",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_002",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-006",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_006",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-010",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_010",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-014",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_014",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-018",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_018",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-022",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "BEHAVIORAL_SCENARIO_022",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-026",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Persuasion",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-027",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Enthusiasm",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-028",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Social Interaction",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-029",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Optimism",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-030",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Recognition",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-031",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Persuasion",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-032",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Enthusiasm",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-033",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Social Interaction",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-034",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Optimism",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-035",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Recognition",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-036",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Persuasion",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-037",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Enthusiasm",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-038",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Social Interaction",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-039",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_I",
+    "indicator": "Optimism",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-003",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_003",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-007",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_007",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-011",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_011",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-015",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_015",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-019",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_019",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-023",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "BEHAVIORAL_SCENARIO_023",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-051",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Patience",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-052",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Consistency",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-053",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Team Support",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-054",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Listening",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-055",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Change Adaptation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-056",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Patience",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-057",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Consistency",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-058",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Team Support",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-059",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Listening",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-060",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Change Adaptation",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-061",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Patience",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-062",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Consistency",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-063",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Team Support",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-064",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_S",
+    "indicator": "Listening",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-004",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_004",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-008",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_008",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-012",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_012",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-016",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_016",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-020",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_020",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-V2-024",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "BEHAVIORAL_SCENARIO_024",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-076",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Accuracy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-077",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Standards",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-078",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Analysis",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-079",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Planning",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-080",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Rule Adherence",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-081",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Accuracy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-082",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Standards",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-083",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Analysis",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-084",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Planning",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-085",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Rule Adherence",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-086",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Accuracy",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-087",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Standards",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-088",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Analysis",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  },
+  {
+    "questionId": "DISC-089",
+    "assessment": "DISC",
+    "taxonomyVersion": "DISC_TAXONOMY_V2",
+    "domain": "DISC",
+    "subdomain": "TARGET_C",
+    "indicator": "Planning",
+    "mappingDecision": "CANDIDATE_MAPPING_REVIEW",
+    "mappingSource": "V13_5 production candidate CSV; no taxonomy reclassification performed"
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "version": "V11.5",
+  "name": "Users & Access Operations",
+  "baseline": "V11.4",
+  "status": "IMPLEMENTED",
+  "migration": "20260905100000_v11_5_users_access_operations",
+  "features": [
+    "persistent user status ACTIVE/INACTIVE",
+    "safe USER/ADMIN role administration",
+    "server-side authorization",
+    "server-enforced confirmation",
+    "self-deactivation protection",
+    "last-active-admin protection",
+    "user audit trail",
+    "inactive login/session protection",
+    "historical-data preservation"
+  ],
+  "scripts": [
+    "v11:5:gate",
+    "e2e:v11:5:users-access"
+  ]
+}

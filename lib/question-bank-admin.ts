@@ -5,6 +5,7 @@ import {
   getQuestionBankStats,
   getQuestionById,
   getQuestions,
+  getAdminQuestionsPaginated,
   importAdminQuestions,
   publishQuestion,
   unpublishQuestion,
@@ -27,6 +28,8 @@ export async function getAdminQuestionBank() {
 export async function getAdminQuestions() {
   return getQuestions({ limit: 5000 });
 }
+
+export { getAdminQuestionsPaginated };
 
 export { getQuestionBankStats as getAdminQuestionBankStats };
 export { getQuestionById };

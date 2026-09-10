@@ -1,0 +1,1682 @@
+[
+  {
+    "id": "RIASEC-V2-001",
+    "code": "RIASEC-V2-001",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "hands_on",
+    "text": "Saya merasa tertarik pada membuat atau memperbaiki benda dengan menggunakan tangan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-002",
+    "code": "RIASEC-V2-002",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "hands_on",
+    "text": "Saya cenderung menikmati kegiatan yang hasilnya dapat saya lihat atau gunakan secara langsung.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-003",
+    "code": "RIASEC-V2-003",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "hands_on",
+    "text": "Saya cenderung lebih tertarik mencoba melakukan sesuatu secara langsung daripada hanya membahasnya.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-004",
+    "code": "RIASEC-V2-004",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "tools_equipment",
+    "text": "Saya merasa tertarik pada mempelajari cara menggunakan alat atau peralatan tertentu.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-005",
+    "code": "RIASEC-V2-005",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "tools_equipment",
+    "text": "Saya cenderung menikmati kegiatan yang melibatkan mesin, perangkat, atau peralatan kerja.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-006",
+    "code": "RIASEC-V2-006",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "practical_problem_solving",
+    "text": "Saya merasa tertarik pada mencari cara praktis untuk memperbaiki sesuatu yang tidak berfungsi.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-007",
+    "code": "RIASEC-V2-007",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "practical_problem_solving",
+    "text": "Saya cenderung menikmati menyelesaikan masalah yang membutuhkan tindakan langsung.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-008",
+    "code": "RIASEC-V2-008",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "practical_problem_solving",
+    "text": "Saya merasa tertarik pada memahami cara kerja benda agar dapat menggunakannya dengan lebih baik.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-009",
+    "code": "RIASEC-V2-009",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "physical_environment",
+    "text": "Saya merasa tertarik pada melakukan kegiatan di lingkungan yang banyak melibatkan objek atau pekerjaan nyata.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-010",
+    "code": "RIASEC-V2-010",
+    "version": "RIASEC_V2",
+    "dimension": "R",
+    "subdomain": "Realistic",
+    "indicator": "physical_environment",
+    "text": "Saya cenderung menikmati aktivitas yang membuat saya banyak berinteraksi dengan lingkungan fisik.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-011",
+    "code": "RIASEC-V2-011",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "curiosity",
+    "text": "Saya merasa tertarik pada mencari tahu mengapa suatu hal dapat terjadi.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-012",
+    "code": "RIASEC-V2-012",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "curiosity",
+    "text": "Saya cenderung menikmati menemukan penjelasan di balik sesuatu yang belum saya pahami.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-013",
+    "code": "RIASEC-V2-013",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "curiosity",
+    "text": "Saya cukup tertarik pada pada pertanyaan yang belum memiliki jawaban sederhana.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-014",
+    "code": "RIASEC-V2-014",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "analysis",
+    "text": "Saya cenderung menikmati membandingkan informasi untuk menemukan pola atau perbedaan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-015",
+    "code": "RIASEC-V2-015",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "analysis",
+    "text": "Saya merasa tertarik pada menganalisis informasi sebelum menarik kesimpulan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-016",
+    "code": "RIASEC-V2-016",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "analysis",
+    "text": "Saya cenderung menikmati memahami hubungan antara berbagai fakta atau informasi.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-017",
+    "code": "RIASEC-V2-017",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "investigation",
+    "text": "Saya merasa tertarik pada melakukan pencarian informasi untuk menguji dugaan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-018",
+    "code": "RIASEC-V2-018",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "investigation",
+    "text": "Saya cenderung menikmati menyelidiki suatu masalah sampai menemukan penjelasan yang masuk akal.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-019",
+    "code": "RIASEC-V2-019",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "problem_solving",
+    "text": "Saya merasa tertarik pada menggunakan logika untuk menemukan solusi atas masalah yang rumit.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-020",
+    "code": "RIASEC-V2-020",
+    "version": "RIASEC_V2",
+    "dimension": "I",
+    "subdomain": "Investigative",
+    "indicator": "problem_solving",
+    "text": "Saya cenderung menikmati memecah masalah menjadi bagian-bagian yang lebih kecil untuk dipahami.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-021",
+    "code": "RIASEC-V2-021",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "creativity",
+    "text": "Saya merasa tertarik pada menciptakan sesuatu dengan cara yang berbeda dari biasanya.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-022",
+    "code": "RIASEC-V2-022",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "creativity",
+    "text": "Saya cenderung menikmati mencoba ide baru ketika membuat sesuatu.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-023",
+    "code": "RIASEC-V2-023",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "creativity",
+    "text": "Saya merasa tertarik pada menemukan berbagai kemungkinan sebelum memilih satu cara untuk berkarya.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-024",
+    "code": "RIASEC-V2-024",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "expression",
+    "text": "Saya cenderung menikmati menyampaikan gagasan melalui tulisan, gambar, musik, atau bentuk ekspresi lainnya.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-025",
+    "code": "RIASEC-V2-025",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "expression",
+    "text": "Saya merasa tertarik pada menggunakan cara yang kreatif untuk menyampaikan apa yang saya pikirkan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-026",
+    "code": "RIASEC-V2-026",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "originality",
+    "text": "Saya cenderung senang menghasilkan ide atau karya yang memiliki ciri khas saya sendiri.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-027",
+    "code": "RIASEC-V2-027",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "originality",
+    "text": "Saya merasa tertarik pada mencoba pendekatan yang tidak biasa untuk menghasilkan sesuatu.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-028",
+    "code": "RIASEC-V2-028",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "originality",
+    "text": "Saya cenderung menikmati mengembangkan konsep yang berbeda dari contoh yang sudah ada.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-029",
+    "code": "RIASEC-V2-029",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "aesthetics",
+    "text": "Saya merasa tertarik pada memperhatikan komposisi, bentuk, warna, atau tampilan ketika membuat sesuatu.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-030",
+    "code": "RIASEC-V2-030",
+    "version": "RIASEC_V2",
+    "dimension": "A",
+    "subdomain": "Artistic",
+    "indicator": "aesthetics",
+    "text": "Saya cenderung menikmati kegiatan yang memberi kesempatan untuk memperhatikan dan mengolah unsur keindahan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-031",
+    "code": "RIASEC-V2-031",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "helping",
+    "text": "Saya merasa tertarik pada membantu orang lain mengatasi kesulitan yang mereka hadapi.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-032",
+    "code": "RIASEC-V2-032",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "helping",
+    "text": "Saya cenderung menikmati kegiatan yang membuat orang lain merasa terbantu.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-033",
+    "code": "RIASEC-V2-033",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "helping",
+    "text": "Saya merasa tertarik pada memahami kebutuhan seseorang agar dapat memberikan bantuan yang sesuai.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-034",
+    "code": "RIASEC-V2-034",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "teaching",
+    "text": "Saya cenderung menikmati menjelaskan sesuatu kepada orang yang sedang belajar.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-035",
+    "code": "RIASEC-V2-035",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "teaching",
+    "text": "Saya merasa tertarik pada membantu orang lain memahami keterampilan atau pengetahuan baru.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-036",
+    "code": "RIASEC-V2-036",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "communication",
+    "text": "Saya cenderung menikmati berdiskusi untuk memahami cara berpikir orang lain.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-037",
+    "code": "RIASEC-V2-037",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "communication",
+    "text": "Saya merasa tertarik pada mendengarkan pengalaman orang lain dan menanggapinya dengan baik.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-038",
+    "code": "RIASEC-V2-038",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "communication",
+    "text": "Saya cenderung menikmati kegiatan yang banyak melibatkan interaksi dengan orang lain.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-039",
+    "code": "RIASEC-V2-039",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "development",
+    "text": "Saya merasa tertarik pada membantu seseorang mengembangkan kemampuan yang dimilikinya.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-040",
+    "code": "RIASEC-V2-040",
+    "version": "RIASEC_V2",
+    "dimension": "S",
+    "subdomain": "Social",
+    "indicator": "development",
+    "text": "Saya cenderung menikmati kegiatan yang mendorong orang lain menjadi lebih berkembang.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-041",
+    "code": "RIASEC-V2-041",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "influence",
+    "text": "Saya merasa tertarik pada menyampaikan gagasan agar orang lain tertarik mempertimbangkannya.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-042",
+    "code": "RIASEC-V2-042",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "influence",
+    "text": "Saya cenderung menikmati situasi ketika saya perlu meyakinkan orang lain tentang sebuah ide.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-043",
+    "code": "RIASEC-V2-043",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "influence",
+    "text": "Saya merasa tertarik pada memengaruhi arah suatu kegiatan melalui gagasan atau keputusan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-044",
+    "code": "RIASEC-V2-044",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "leadership",
+    "text": "Saya merasa tertarik pada mengambil peran untuk mengarahkan sebuah kegiatan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-045",
+    "code": "RIASEC-V2-045",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "leadership",
+    "text": "Saya cenderung menikmati kesempatan untuk mengoordinasikan orang lain menuju suatu tujuan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-046",
+    "code": "RIASEC-V2-046",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "initiative",
+    "text": "Saya merasa tertarik pada memulai kegiatan atau proyek tanpa harus selalu menunggu instruksi.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-047",
+    "code": "RIASEC-V2-047",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "initiative",
+    "text": "Saya cenderung menikmati mencari peluang baru untuk membuat sesuatu dapat berjalan lebih baik.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-048",
+    "code": "RIASEC-V2-048",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "initiative",
+    "text": "Saya merasa tertarik pada mengambil langkah pertama ketika melihat sebuah peluang.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-049",
+    "code": "RIASEC-V2-049",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "persuasion",
+    "text": "Saya cenderung menikmati kegiatan yang melibatkan negosiasi atau membangun kesepakatan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-050",
+    "code": "RIASEC-V2-050",
+    "version": "RIASEC_V2",
+    "dimension": "E",
+    "subdomain": "Enterprising",
+    "indicator": "persuasion",
+    "text": "Saya merasa tertarik pada menyusun cara penyampaian yang membuat orang lain bersedia bekerja sama.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-051",
+    "code": "RIASEC-V2-051",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "organization",
+    "text": "Saya cenderung menikmati mengatur informasi agar mudah ditemukan kembali.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-052",
+    "code": "RIASEC-V2-052",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "organization",
+    "text": "Saya merasa tertarik pada menyusun dokumen, catatan, atau data secara teratur.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-053",
+    "code": "RIASEC-V2-053",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "organization",
+    "text": "Saya cenderung menikmati membuat sistem sederhana agar pekerjaan tersusun rapi.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-054",
+    "code": "RIASEC-V2-054",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "structure",
+    "text": "Saya merasa tertarik pada bekerja dengan prosedur yang jelas dan teratur.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-055",
+    "code": "RIASEC-V2-055",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "structure",
+    "text": "Saya cenderung menikmati mengikuti langkah kerja yang sudah tersusun dengan baik.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-056",
+    "code": "RIASEC-V2-056",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "information_order",
+    "text": "Saya merasa tertarik pada mengelompokkan informasi berdasarkan kategori yang jelas.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-057",
+    "code": "RIASEC-V2-057",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "information_order",
+    "text": "Saya cenderung menikmati membuat daftar atau susunan informasi agar lebih mudah digunakan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-058",
+    "code": "RIASEC-V2-058",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "information_order",
+    "text": "Saya merasa tertarik pada memastikan informasi tersimpan dalam urutan yang mudah dipahami.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-059",
+    "code": "RIASEC-V2-059",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "accuracy",
+    "text": "Saya cenderung menikmati kegiatan yang membutuhkan ketelitian dalam memeriksa detail.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  },
+  {
+    "id": "RIASEC-V2-060",
+    "code": "RIASEC-V2-060",
+    "version": "RIASEC_V2",
+    "dimension": "C",
+    "subdomain": "Conventional",
+    "indicator": "accuracy",
+    "text": "Saya merasa tertarik pada memastikan data atau dokumen tersusun dengan benar sebelum digunakan.",
+    "type": "PREFERENCE",
+    "answerType": "LIKERT_5",
+    "scale": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "scoringKey": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "reverseScore": false,
+    "weight": 1,
+    "difficulty": "MEDIUM"
+  }
+]

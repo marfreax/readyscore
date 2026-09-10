@@ -1,0 +1,43 @@
+{
+  "version": "V9.10",
+  "status": "IMPLEMENTED",
+  "delivery": "FULL",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "crossTestSynthesis": true,
+  "resultSemanticsMutation": false,
+  "contractVersion": "CROSS_TEST_PROFILE_V1",
+  "engineVersion": "CROSS_TEST_PROFILE_ENGINE_V1",
+  "serviceVersion": "V9.10_CROSS_TEST_PROFILE_SERVICE_V1",
+  "domains": [
+    "ABILITY",
+    "EMOTIONAL",
+    "RESILIENCE",
+    "BEHAVIOR",
+    "INTEREST",
+    "STRENGTH",
+    "LEARNING"
+  ],
+  "activeEvidenceDomains": [
+    "ABILITY",
+    "EMOTIONAL",
+    "BEHAVIOR",
+    "INTEREST"
+  ],
+  "sourceAssessments": [
+    "COGNITIVE",
+    "EQ",
+    "DISC",
+    "RIASEC"
+  ],
+  "excludedPaths": [
+    "docs/",
+    "node_modules/",
+    ".next/",
+    "__MACOSX/"
+  ]
+}

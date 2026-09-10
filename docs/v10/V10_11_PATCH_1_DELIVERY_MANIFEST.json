@@ -1,0 +1,23 @@
+{
+  "version": "V10.11-PATCH.1",
+  "status": "POST_FREEZE_PRESENTATION_PATCH",
+  "delivery": "FULL",
+  "baseline": "V10.11_FINAL_ACCEPTANCE_FREEZE",
+  "scope": "CUSTOMER_HEADER_BRANDING_AND_ACTIVITY_COPY_CLEANUP",
+  "databaseMigration": false,
+  "measurementRedesign": false,
+  "scoringRedesign": false,
+  "questionBankMutation": false,
+  "resultSemanticsMutation": false,
+  "entitlementMutation": false,
+  "assessmentRuntimeMutation": false,
+  "reportsMutation": false,
+  "activityDataMutation": false,
+  "accessPlansMutation": false,
+  "universalScore": false,
+  "rawAverageSynthesis": false,
+  "historicalContentMutation": false,
+  "implementationMode": "PRESENTATION_ONLY",
+  "runtimeMode": "CUSTOMER_HEADER_AND_ACTIVITY_COPY_CLEANUP",
+  "freezeStatus": "V10.11 remains the acceptance baseline; this package is a post-freeze presentation patch."
+}

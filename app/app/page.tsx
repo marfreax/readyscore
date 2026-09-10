@@ -3,45 +3,214 @@ import { redirect } from "next/navigation";
 import { AppShell } from "../../components/app/AppShell";
 import { getCurrentSession } from "../../lib/auth/session";
 import { getActiveProductsForUser, listUserEntitlements } from "../../lib/commercial/entitlement-service";
-import { getCommercialCatalog } from "../../lib/commercial/catalog";
-import { getB2CAddOnCatalog } from "../../lib/commercial/add-on-catalog";
-import { getReassessmentEligibility } from "../../lib/assessment/reassessment";
-import { getUpgradeQuote } from "../../lib/commercial/upgrade-service";
-import { getUserHistory } from "../../lib/assessment/dashboard-repository";
+import { getUserDashboard } from "../../lib/assessment/dashboard-repository";
 
-type TestKey="COGNITIVE"|"EQ"|"DISC"|"RIASEC";
-type Entitlement={type:string;resourceType:string;resourceKey:string};
-const TESTS:Array<{key:TestKey;customerName:string;description:string;href:string;icon:string;reassessmentType:"cognitive"|"eq"|"disc"|"riasec"}>=[
-{key:"COGNITIVE",customerName:"IQ / Cognitive",description:"Reasoning profile untuk melihat pola kemampuan kognitif Anda.",href:"/trial/cognitive",icon:"IQ",reassessmentType:"cognitive"},
-{key:"EQ",customerName:"Emotional Intelligence",description:"Profil empat dimensi respons emosional dan sosial.",href:"/trial/eq",icon:"EQ",reassessmentType:"eq"},
-{key:"DISC",customerName:"DISC",description:"Kecenderungan pola perilaku D, I, S, dan C.",href:"/trial/disc",icon:"D",reassessmentType:"disc"},
-{key:"RIASEC",customerName:"RIASEC",description:"Profil minat pada enam dimensi RIASEC.",href:"/trial/riasec",icon:"R",reassessmentType:"riasec"}];
-const TEST_LABELS:Record<TestKey,string>={COGNITIVE:"IQ / Cognitive",EQ:"Emotional Intelligence",DISC:"DISC",RIASEC:"RIASEC"};
-function entitlementKey(item:Entitlement){return `${item.type}:${item.resourceType}:${item.resourceKey}`}
-function testAccessKey(test:TestKey){return entitlementKey({type:"TEST_ACCESS",resourceType:"TEST_TYPE",resourceKey:test})}
-function resultAccessKey(test:TestKey){return entitlementKey({type:"RESULT_ACCESS",resourceType:"TEST_TYPE",resourceKey:test})}
-function formatDate(value:string|null){return value?new Intl.DateTimeFormat("id-ID",{day:"numeric",month:"short",year:"numeric"}).format(new Date(value)):"—"}
-function statusForTest(test:TestKey,history:Awaited<ReturnType<typeof getUserHistory>>,unlocked:boolean){const latest=history.find(a=>a.assessmentType===test.toLowerCase());if(latest?.status==="IN_PROGRESS")return {label:"In progress",tone:"amber",attempt:latest};if(latest?.status==="COMPLETED")return {label:"Completed",tone:"emerald",attempt:latest};if(latest?.status==="ABANDONED"||latest?.status==="EXPIRED")return {label:"Available",tone:"indigo",attempt:latest};if(unlocked)return {label:"Available",tone:"indigo",attempt:latest};return {label:"Locked",tone:"slate",attempt:latest}}
-function StatusBadge({label,tone}:{label:string;tone:string}){const c:Record<string,string>={emerald:"bg-emerald-50 text-emerald-700 ring-emerald-100",amber:"bg-amber-50 text-amber-700 ring-amber-100",indigo:"bg-indigo-50 text-indigo-700 ring-indigo-100",slate:"bg-slate-100 text-slate-500 ring-slate-200"};return <span className={`rounded-full px-2.5 py-1 text-[10px] font-black uppercase tracking-wide ring-1 ${c[tone]}`}>{label}</span>}
-export default async function AppHomePage(){const session=await getCurrentSession();if(!session)redirect("/login?next=/app");const [catalog,addOnCatalog,products,entitlements,history,upgradeQuote,reassessment]=await Promise.all([getCommercialCatalog(),getB2CAddOnCatalog(),getActiveProductsForUser(session.user.id),listUserEntitlements(session.user.id),getUserHistory(session.user.id),getUpgradeQuote(session.user.id),Promise.all(TESTS.map(test=>getReassessmentEligibility(session.user.id,test.reassessmentType)))]);const keys=new Set(entitlements.map(entitlementKey));const completed=history.filter(a=>a.status==="COMPLETED");const inProgress=history.filter(a=>a.status==="IN_PROGRESS");const profileUnlocked=keys.has(entitlementKey({type:"PROFILE_ACCESS",resourceType:"FEATURE",resourceKey:"CROSS_TEST_PROFILE_V1"}));return <AppShell userName={session.user.name}><div className="px-4 py-6 sm:px-6 lg:px-8 lg:py-8"><div className="mx-auto max-w-6xl"><section className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm"><div className="relative px-6 py-7 sm:px-8 sm:py-8"><div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-indigo-50 blur-2xl" aria-hidden="true"/><div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"><div><p className="text-xs font-black uppercase tracking-[0.18em] text-indigo-600">Your workspace</p><h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Halo, {session.user.name}.</h1><p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">Kelola assessment, lihat hasil, dan lanjutkan perjalanan Anda dari satu tempat.</p></div><div className="flex flex-wrap gap-2"><a href="#assessments" className="rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-black text-white shadow-sm transition hover:bg-slate-800">Lihat assessment</a><Link href="/profile" className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-black text-slate-700 transition hover:bg-slate-50">Buka profile</Link></div></div></div><div className="grid border-t border-slate-100 sm:grid-cols-3"><div className="border-b border-slate-100 px-6 py-5 sm:border-b-0 sm:border-r"><p className="text-xs font-bold text-slate-500">Assessment selesai</p><p className="mt-1 text-2xl font-black">{completed.length}</p></div><div className="border-b border-slate-100 px-6 py-5 sm:border-b-0 sm:border-r"><p className="text-xs font-bold text-slate-500">Sedang dikerjakan</p><p className="mt-1 text-2xl font-black">{inProgress.length}</p></div><div className="px-6 py-5"><p className="text-xs font-bold text-slate-500">Profil lintas assessment</p><p className="mt-1 text-2xl font-black">{profileUnlocked?"Available":"Not active"}</p></div></div></section>
-<section id="assessments" className="scroll-mt-24 pt-8"><div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between"><div><p className="text-xs font-black uppercase tracking-[0.16em] text-slate-400">Assessment</p><h2 className="mt-1 text-2xl font-black tracking-tight">Your assessments</h2></div><p className="text-xs font-semibold text-slate-500">Status berdasarkan aktivitas dan entitlement akun.</p></div><div className="mt-4 grid gap-4 md:grid-cols-2">{TESTS.map(test=>{const access=keys.has(testAccessKey(test.key));const resultAccess=keys.has(resultAccessKey(test.key));const status=statusForTest(test.key,history,access);const attempt=status.attempt;const canOpen=status.label!=="Locked";return <article key={test.key} className="group rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:border-slate-300 hover:shadow-md"><div className="flex items-start justify-between gap-4"><div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-slate-950 text-xs font-black text-white">{test.icon}</div><StatusBadge label={status.label} tone={status.tone}/></div><h3 className="mt-5 text-lg font-black">{test.customerName}</h3><p className="mt-2 min-h-12 text-sm leading-6 text-slate-600">{test.description}</p>{attempt&&<p className="mt-3 text-xs font-semibold text-slate-400">Aktivitas terakhir · {formatDate(attempt.completedAt??attempt.startedAt)}</p>}<div className="mt-5 flex items-center justify-between gap-3 border-t border-slate-100 pt-4"><p className="text-xs font-bold text-slate-500">{status.label==="Completed"?(resultAccess?"Hasil tersedia":"Hasil memerlukan akses"):status.label==="Locked"?"Belum termasuk paket Anda":"Siap dilanjutkan"}</p>{canOpen ? (
-  <div className="flex flex-wrap justify-end gap-2">
-    {status.label === "Completed" && resultAccess && attempt ? (
-      <Link href={`/result/${attempt.id}`} className="rounded-xl border border-slate-200 px-3.5 py-2 text-xs font-black text-slate-700 transition hover:bg-slate-50">Lihat hasil</Link>
-    ) : null}
-    <Link href={test.href} className="rounded-xl bg-slate-950 px-3.5 py-2 text-xs font-black text-white transition hover:bg-slate-800">{status.label==="In progress"?"Lanjutkan":status.label==="Completed"?"Mulai lagi":"Mulai"} →</Link>
-  </div>
-) : <a href="#access" className="rounded-xl border border-slate-200 px-3.5 py-2 text-xs font-black text-slate-600">Lihat akses</a>}</div></article>})}</div></section>
-<section id="recent" className="scroll-mt-24 pt-8"><div className="rounded-3xl border border-slate-200 bg-white shadow-sm"><div className="flex items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 sm:px-6"><div><p className="text-xs font-black uppercase tracking-[0.16em] text-slate-400">Activity</p><h2 className="mt-1 text-xl font-black">Recent activity</h2></div><span className="text-xs font-bold text-slate-400">{history.length} recorded</span></div>{history.length===0?<div className="px-6 py-12 text-center"><p className="font-black">Belum ada aktivitas assessment.</p><p className="mt-2 text-sm text-slate-500">Pilih salah satu assessment di atas untuk memulai.</p></div>:<div className="divide-y divide-slate-100">{history.slice(0,5).map(attempt=>{const key=attempt.assessmentType.toUpperCase() as TestKey;return <div key={attempt.id} className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6"><div className="flex items-center gap-3"><div className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-[10px] font-black text-slate-700">{TEST_LABELS[key]?TEST_LABELS[key].slice(0,2).toUpperCase():"AS"}</div><div><p className="text-sm font-black">{TEST_LABELS[key]??attempt.assessmentType}</p><p className="text-xs font-semibold text-slate-400">{formatDate(attempt.completedAt??attempt.startedAt)} · {attempt.answered}/{attempt.total} answered</p></div></div><div className="flex items-center gap-3"><StatusBadge label={attempt.status==="COMPLETED"?"Completed":attempt.status==="IN_PROGRESS"?"In progress":attempt.status==="ABANDONED"?"Abandoned":"Expired"} tone={attempt.status==="COMPLETED"?"emerald":attempt.status==="IN_PROGRESS"?"amber":"slate"}/>{attempt.status==="COMPLETED"&&<Link href={`/result/${attempt.id}`} className="text-xs font-black text-indigo-600 hover:text-indigo-700">Lihat hasil →</Link>}</div></div>})}</div>}</div></section>
-<section id="access" className="scroll-mt-24 pt-8 pb-10"><div className="rounded-3xl border border-indigo-100 bg-indigo-50 p-6 sm:p-7"><div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between"><div><p className="text-xs font-black uppercase tracking-[0.16em] text-indigo-700">Access & plans</p><h2 className="mt-1 text-2xl font-black">Akses Anda</h2><p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">Paket menentukan capability yang tersedia. Identity assessment dan hasil yang sudah tersimpan tetap terpisah dari packaging komersial.</p></div><div className="rounded-2xl bg-white px-5 py-4 shadow-sm"><p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-400">Current access</p><p className="mt-1 text-lg font-black">{products.length?products.map(p=>p.name).join(", "):"Belum ada paket aktif"}</p></div></div><div className="mt-5 grid gap-4 lg:grid-cols-3">{catalog.filter(p=>p.customerFacing).map(product=>{const current=upgradeQuote?.currentTier===product.tier;const option=upgradeQuote?.options?.find(item=>item.targetTier===product.tier);return <article key={product.id} className={`rounded-2xl border p-5 ${current?"border-indigo-300 bg-white shadow-sm":"border-indigo-100 bg-white/80"}`}><div className="flex items-start justify-between gap-3"><div><p className="text-[10px] font-black uppercase tracking-[0.14em] text-indigo-600">{product.tier}</p><h3 className="mt-2 text-lg font-black">{product.name}</h3></div><span className="text-sm font-black">Rp{product.priceIdr?.toLocaleString("id-ID")}</span></div><p className="mt-3 text-sm leading-6 text-slate-600">{product.description}</p><p className="mt-4 text-xs font-bold text-slate-500">{current?"Paket aktif":option?.differentialIdr!==null&&option?.differentialIdr!==undefined?`Upgrade differential: +Rp${option.differentialIdr.toLocaleString("id-ID")}`:"Tersedia sesuai commercial flow"}</p></article>})}</div><div className="mt-4 grid gap-4 lg:grid-cols-2"><article className="rounded-2xl border border-emerald-100 bg-white p-5"><p className="text-[10px] font-black uppercase tracking-[0.14em] text-emerald-700">Reassessment</p><h3 className="mt-2 text-lg font-black">Retest dengan result baru</h3><p className="mt-2 text-sm leading-6 text-slate-600">Reassessment tetap membuat attempt baru dan tidak mengubah result sebelumnya.</p><div className="mt-4 grid gap-2 sm:grid-cols-2">
-  {reassessment.map((item,index) => {
-    const test = TESTS[index];
-    const label = item.eligible ? "Eligible" : item.code==="REASSESSMENT_CREDIT_REQUIRED" ? "Credit needed" : item.code==="REASSESSMENT_DAILY_LIMIT" ? "Daily limit" : "Not available";
-    return (
-      <div key={test.key} className="flex items-center justify-between gap-3 rounded-2xl bg-slate-50 px-3 py-3">
-        <div><p className="text-xs font-black text-slate-700">{TEST_LABELS[test.key]}</p><p className="mt-0.5 text-[11px] font-semibold text-slate-400">{label}</p></div>
-        {item.eligible ? <Link href={`/reassessment/${test.reassessmentType}`} className="rounded-xl bg-slate-950 px-3 py-2 text-[11px] font-black text-white">Retake →</Link> : null}
+const TESTS = [
+  { key: "cognitive", name: "Cognitive", description: "Reasoning profile untuk melihat pola kemampuan kognitif Anda.", accessKey: "TEST_ACCESS:TEST_TYPE:COGNITIVE" },
+  { key: "eq", name: "Emotional Intelligence", description: "Profil empat dimensi respons emosional dan sosial.", accessKey: "TEST_ACCESS:TEST_TYPE:EQ" },
+  { key: "disc", name: "DISC", description: "Kecenderungan pola perilaku D, I, S, dan C.", accessKey: "TEST_ACCESS:TEST_TYPE:DISC" },
+  { key: "riasec", name: "RIASEC", description: "Profil minat pada enam dimensi RIASEC.", accessKey: "TEST_ACCESS:TEST_TYPE:RIASEC" },
+] as const;
+
+function formatDate(value: string | null) {
+  return value
+    ? new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "short", year: "numeric" }).format(new Date(value))
+    : "—";
+}
+
+function labelForType(type: string) {
+  return TESTS.find((test) => test.key === type)?.name ?? type;
+}
+
+function initials(name: string) {
+  return name
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() ?? "")
+    .join("");
+}
+
+export default async function AppHomePage() {
+  const session = await getCurrentSession();
+  if (!session) redirect("/login?next=/app");
+
+  const [dashboard, products, entitlements] = await Promise.all([
+    getUserDashboard(session.user.id),
+    getActiveProductsForUser(session.user.id),
+    listUserEntitlements(session.user.id),
+  ]);
+
+  const entitlementKeys = new Set(entitlements.map((item) => `${item.type}:${item.resourceType}:${item.resourceKey}`));
+  const latestByType = new Map<string, (typeof dashboard.attempts)[number]>();
+  for (const attempt of dashboard.attempts) {
+    if (!latestByType.has(attempt.assessmentType)) latestByType.set(attempt.assessmentType, attempt);
+  }
+
+  const completedTypes = new Set(
+    dashboard.attempts.filter((attempt) => attempt.status === "COMPLETED").map((attempt) => attempt.assessmentType),
+  );
+  const inProgress = dashboard.attempts.find((attempt) => attempt.status === "IN_PROGRESS") ?? null;
+  const latestCompleted = dashboard.latestCompleted;
+  const availableCount = TESTS.filter((test) => entitlementKeys.has(test.accessKey) && !completedTypes.has(test.key)).length;
+  const profileUnlocked = entitlementKeys.has("PROFILE_ACCESS:FEATURE:CROSS_TEST_PROFILE_V1");
+
+  return (
+    <AppShell userName={session.user.name}>
+      <div className="px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+        <div className="mx-auto max-w-6xl space-y-6">
+          <section className="overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm">
+            <div className="relative px-6 py-7 sm:px-8 sm:py-8">
+              <div className="absolute -right-20 -top-24 h-64 w-64 rounded-full bg-indigo-50 blur-2xl" aria-hidden="true" />
+              <div className="relative flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+                <div className="flex items-start gap-4">
+                  <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-white" aria-hidden="true">
+                    {initials(session.user.name)}
+                  </div>
+                  <div>
+                    <p className="text-xs font-black uppercase tracking-[0.18em] text-indigo-600">Overview</p>
+                    <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Halo, {session.user.name}.</h1>
+                    <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
+                      Ini ringkasan perjalanan Anda di ReadyScore. Mulai dari yang sedang berjalan, lalu lanjutkan ke hasil dan profil Anda.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {inProgress ? (
+                    <Link href={`/assessments/${inProgress.assessmentType}/test`} className="rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-black text-white shadow-sm transition hover:bg-slate-800">
+                      Lanjutkan assessment
+                    </Link>
+                  ) : (
+                    <Link href="/assessments" className="rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-black text-white shadow-sm transition hover:bg-slate-800">
+                      Mulai assessment
+                    </Link>
+                  )}
+                  <Link href="/reports" className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-black text-slate-700 transition hover:bg-slate-50">
+                    Lihat hasil
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section aria-labelledby="progress-heading" className="grid gap-4 sm:grid-cols-3">
+            <h2 id="progress-heading" className="sr-only">Progress Anda</h2>
+            <article className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p className="text-xs font-bold text-slate-500">Assessment selesai</p>
+              <p className="mt-1 text-3xl font-black">{completedTypes.size}</p>
+              <p className="mt-1 text-xs font-semibold text-slate-400">dari {TESTS.length} assessment</p>
+            </article>
+            <article className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p className="text-xs font-bold text-slate-500">Sedang dikerjakan</p>
+              <p className="mt-1 text-3xl font-black">{dashboard.stats.inProgressAssessments}</p>
+              <p className="mt-1 text-xs font-semibold text-slate-400">assessment yang belum selesai</p>
+            </article>
+            <article className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+              <p className="text-xs font-bold text-slate-500">Assessment tersedia</p>
+              <p className="mt-1 text-3xl font-black">{availableCount}</p>
+              <p className="mt-1 text-xs font-semibold text-slate-400">berdasarkan akses akun Anda</p>
+            </article>
+          </section>
+
+          {inProgress ? (
+            <section aria-labelledby="continue-heading" className="rounded-3xl border border-amber-200 bg-amber-50 p-6 sm:p-7">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-amber-700">Continue</p>
+                  <h2 id="continue-heading" className="mt-1 text-xl font-black">Lanjutkan {labelForType(inProgress.assessmentType)}</h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">Anda sudah menjawab {inProgress.answered} dari {inProgress.total} pertanyaan.</p>
+                </div>
+                <Link href={`/assessments/${inProgress.assessmentType}/test`} className="inline-flex shrink-0 items-center justify-center rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-black text-white hover:bg-slate-800">
+                  Lanjutkan →
+                </Link>
+              </div>
+            </section>
+          ) : null}
+
+          <div className="grid gap-6 lg:grid-cols-[1.35fr_0.65fr]">
+            <section aria-labelledby="latest-result-heading" className="rounded-3xl border border-slate-200 bg-white shadow-sm">
+              <div className="flex items-center justify-between gap-4 border-b border-slate-100 px-5 py-5 sm:px-6">
+                <div>
+                  <p className="text-xs font-black uppercase tracking-[0.16em] text-slate-400">Latest result</p>
+                  <h2 id="latest-result-heading" className="mt-1 text-xl font-black">Hasil terbaru</h2>
+                </div>
+                <Link href="/reports" className="text-xs font-black text-indigo-600 hover:text-indigo-700">Semua hasil →</Link>
+              </div>
+              {latestCompleted ? (
+                <div className="flex flex-col gap-4 px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+                  <div className="flex items-center gap-3">
+                    <div className="grid h-10 w-10 place-items-center rounded-xl bg-slate-100 text-[10px] font-black text-slate-700" aria-hidden="true">RS</div>
+                    <div>
+                      <p className="text-sm font-black">{labelForType(latestCompleted.assessmentType)}</p>
+                      <p className="mt-1 text-xs font-semibold text-slate-400">Selesai {formatDate(latestCompleted.completedAt)}</p>
+                    </div>
+                  </div>
+                  <Link href={`/result/${latestCompleted.id}`} className="rounded-xl border border-slate-200 px-3.5 py-2 text-xs font-black text-slate-700 hover:bg-slate-50">
+                    Lihat hasil
+                  </Link>
+                </div>
+              ) : (
+                <div className="px-6 py-10">
+                  <p className="font-black">Belum ada hasil assessment.</p>
+                  <p className="mt-2 text-sm leading-6 text-slate-500">Setelah Anda menyelesaikan assessment, hasil terbaru akan muncul di sini.</p>
+                  <Link href="/assessments" className="mt-4 inline-flex rounded-xl bg-slate-950 px-4 py-2.5 text-xs font-black text-white">Mulai assessment →</Link>
+                </div>
+              )}
+            </section>
+
+            <section aria-labelledby="profile-summary-heading" className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-indigo-600">My Profile</p>
+              <h2 id="profile-summary-heading" className="mt-1 text-xl font-black">Gambaran diri Anda</h2>
+              <p className="mt-3 text-sm leading-6 text-slate-600">
+                {profileUnlocked
+                  ? completedTypes.size > 0
+                    ? "Profil lintas assessment tersedia berdasarkan evidence yang sudah Anda miliki."
+                    : "Akses profil tersedia; selesaikan assessment untuk mulai membentuk evidence."
+                  : "Profil lintas assessment belum termasuk akses akun Anda."}
+              </p>
+              <div className="mt-5 rounded-2xl bg-slate-50 px-4 py-3">
+                <p className="text-xs font-bold text-slate-500">Status</p>
+                <p className="mt-1 text-sm font-black text-slate-800">{profileUnlocked ? "Available" : "Not available"}</p>
+              </div>
+              <Link href="/profile" className="mt-4 inline-flex text-xs font-black text-indigo-600 hover:text-indigo-700">Buka My Profile →</Link>
+            </section>
+          </div>
+
+          <section aria-labelledby="access-summary-heading" className="rounded-3xl border border-indigo-100 bg-indigo-50 p-6 sm:p-7">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-xs font-black uppercase tracking-[0.16em] text-indigo-700">Access & plans</p>
+                <h2 id="access-summary-heading" className="mt-1 text-xl font-black">Akses Anda</h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">Ringkasan akses saat ini. Pengaturan paket dan pembelian tetap dilakukan di halaman Access & Plans.</p>
+              </div>
+              <Link href="/access" className="inline-flex shrink-0 rounded-xl border border-indigo-200 bg-white px-4 py-2.5 text-xs font-black text-indigo-700 hover:bg-indigo-50">Kelola akses →</Link>
+            </div>
+            <div className="mt-5 rounded-2xl bg-white px-5 py-4 shadow-sm">
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-slate-400">Current access</p>
+              <p className="mt-1 text-lg font-black">{products.length ? products.map((product) => product.name).join(", ") : "Belum ada paket aktif"}</p>
+              <p className="mt-1 text-xs font-semibold text-slate-400">Assessment tersedia: {availableCount}</p>
+            </div>
+          </section>
+
+          <section aria-labelledby="next-step-heading" className="pb-4">
+            <div className="rounded-3xl border border-slate-200 bg-slate-950 p-6 text-white sm:p-7">
+              <p className="text-xs font-black uppercase tracking-[0.16em] text-slate-400">Next step</p>
+              <h2 id="next-step-heading" className="mt-1 text-xl font-black">
+                {inProgress ? "Selesaikan assessment yang sedang berjalan." : availableCount > 0 ? "Lanjutkan perjalanan assessment Anda." : latestCompleted ? "Lihat hasil dan pahami profile Anda." : "Mulai perjalanan Anda di ReadyScore."}
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
+                {inProgress ? "Kembali ke assessment terakhir agar progress Anda tetap tersimpan." : latestCompleted ? "Gunakan hasil individual sebagai dasar untuk memahami evidence yang sudah tersedia." : "Pilih assessment yang tersedia untuk mulai membangun evidence Anda."}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <Link href={inProgress ? `/assessments/${inProgress.assessmentType}/test` : latestCompleted ? `/result/${latestCompleted.id}` : "/assessments"} className="rounded-xl bg-white px-4 py-2.5 text-xs font-black text-slate-950 hover:bg-slate-100">
+                  {inProgress ? "Lanjutkan" : latestCompleted ? "Lihat hasil" : "Lihat assessments"} →
+                </Link>
+                <Link href="/profile" className="rounded-xl border border-slate-700 px-4 py-2.5 text-xs font-black text-white hover:bg-slate-800">My Profile</Link>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    );
-  })}
-</div></article><article className="rounded-2xl border border-amber-100 bg-white p-5"><p className="text-[10px] font-black uppercase tracking-[0.14em] text-amber-700">Add-ons</p><h3 className="mt-2 text-lg font-black">Capability extensions</h3><div className="mt-3 space-y-2">{addOnCatalog.slice(0,3).map(addOn=><div key={addOn.id} className="flex items-center justify-between gap-3 rounded-xl bg-slate-50 px-3 py-2.5"><span className="text-xs font-bold text-slate-700">{addOn.name}</span><span className="text-xs font-black text-slate-500">{addOn.priceIdr===0?"Rp0":addOn.priceIdr?`Rp${addOn.priceIdr.toLocaleString("id-ID")}`:"—"}</span></div>)}</div></article></div></div></section></div></div></AppShell>}
+    </AppShell>
+  );
+}

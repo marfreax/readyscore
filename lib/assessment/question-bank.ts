@@ -9,14 +9,17 @@ function toQuestion(q: {
   indicator: string | null;
   text: string;
   type: string;
+  answerType: "LIKERT_5" | "SINGLE_CHOICE_4";
   reverseScore: boolean;
   weight: number;
-  scale: readonly [1, 2, 3, 4, 5];
-  scoringKey: readonly [1, 2, 3, 4, 5] | readonly [5, 4, 3, 2, 1];
+  scale: readonly number[];
+  scoringKey: readonly number[];
   difficulty: string;
   status: string;
   mappingStatus: string;
   sourceFile?: string;
+  options?: string[] | null;
+  correctOption?: number | null;
 }): Question {
   const difficulty = String(q.difficulty).toUpperCase();
   return {
@@ -27,10 +30,12 @@ function toQuestion(q: {
     subdomain: q.subdomain,
     indicator: q.indicator,
     type: q.type,
-    answerType: "LIKERT_5",
-    scale: [1, 2, 3, 4, 5] as const,
+    answerType: q.answerType,
+    scale: [...q.scale],
     reverseScore: q.reverseScore,
     scoringKey: q.scoringKey,
+    options: q.options ?? undefined,
+    correctOption: q.correctOption ?? undefined,
     weight: q.weight,
     difficulty: difficulty === "EASY" || difficulty === "HARD" || difficulty === "UNSPECIFIED" ? difficulty : "MEDIUM",
     status: q.status.toUpperCase() as Question["status"],

@@ -1,0 +1,137 @@
+{
+  "artifact": "ReadyScore V13.1 Question Package Configuration",
+  "status": "MIGRATION_SOURCE_RECONCILED",
+  "date": "2026-09-07",
+  "migration_count": 27,
+  "restored_historical_migrations": [
+    {
+      "name": "20260822120013_foundation",
+      "sha256": "cbfdb59a3a4bbea6da893972c5af7229b64d9d02ea1f910c084fc3444aa6083e",
+      "source": "2.15.2 AppRS_Phase2_15_2_Core_Assessment_Database_Schema_v1.1.zip"
+    },
+    {
+      "name": "20260822120935_core_assessment_schema",
+      "sha256": "0d11556e2f6bb366b8b5cd9d85917a41acd92156d499dc8eed5f32df5fa08ccd",
+      "source": "ReadyScore_PHASE_2_15_3_FULL_REPAIRED.zip"
+    },
+    {
+      "name": "20260822131500_question_bank_runtime",
+      "sha256": "7e7f0142e4621a695e4cb1a5c2cc25d3d7b2924eee6aeaeaf789936611dca492",
+      "source": "ReadyScore_PHASE_2_15_3_FULL_REPAIRED.zip"
+    }
+  ],
+  "v13_1_migration": {
+    "name": "20260907100000_v13_1_question_package_configuration",
+    "sha256": "acffb6a82316201221b3bf8235ff507c07045e1dfa64c1d6d4f369f4b2fc68db"
+  },
+  "all_migrations": [
+    {
+      "name": "20260822120013_foundation",
+      "sha256": "cbfdb59a3a4bbea6da893972c5af7229b64d9d02ea1f910c084fc3444aa6083e"
+    },
+    {
+      "name": "20260822120935_core_assessment_schema",
+      "sha256": "0d11556e2f6bb366b8b5cd9d85917a41acd92156d499dc8eed5f32df5fa08ccd"
+    },
+    {
+      "name": "20260822131500_question_bank_runtime",
+      "sha256": "7e7f0142e4621a695e4cb1a5c2cc25d3d7b2924eee6aeaeaf789936611dca492"
+    },
+    {
+      "name": "20260822180000_riasec_assessment_type",
+      "sha256": "99161868d4ac6f655a28d5964d7777cc19236d51403ce0c4e16a387d936fd10b"
+    },
+    {
+      "name": "20260825090000_v3_commercial_product_entitlement_architecture",
+      "sha256": "bf41b997d89c151f54814083cd0fd62f7665978c70e21b16642aa8edc7280daf"
+    },
+    {
+      "name": "20260825170000_v3_test_catalog_taxonomy_v2",
+      "sha256": "88453f25dd609ff751e0806e8d1325c22d8f7b31bf11e293d5022b354269f967"
+    },
+    {
+      "name": "20260826090000_v3_1_lock_commercial_entitlement_matrix",
+      "sha256": "748feb0ddc644f12fd5108f98c353b79863c301fe7b83efd29bf829342a25107"
+    },
+    {
+      "name": "20260826100000_v3_12_b2c_conversion_add_on_products",
+      "sha256": "30a42f20c79d61139c8c98a0d2684fcdc4a739ebe8ee100258d03e88bf4fecb2"
+    },
+    {
+      "name": "20260826113000_v3_13_b2b_school_institution",
+      "sha256": "84b436b2b1cef09dd175dfaa5145c590805a79cb1ae79e6c1da708c641149d8b"
+    },
+    {
+      "name": "20260827090000_v4_l1_commercial_runtime",
+      "sha256": "3a61544a288f3dbea6e670489a4de5c56e9a8eec944c479e5c1942fc51e2551c"
+    },
+    {
+      "name": "20260827100000_v4_l2_scalev_integration",
+      "sha256": "8f81c70992e6f8e317dc62e7f381fa0daec3a64d28e921eb9065725981f4b67a"
+    },
+    {
+      "name": "20260827110000_v4_l4_disc_mvp",
+      "sha256": "2e05ab775d10956480758f6784c97d669501a8a46e380d84804fc44e265ee129"
+    },
+    {
+      "name": "20260827130000_v4_l5_eq_mvp",
+      "sha256": "2d8dff7bde4fbcd1ee95f45ee0950e762d03d1239fb3cafe0978499062a82a92"
+    },
+    {
+      "name": "20260827140000_v4_l6_cognitive_mvp",
+      "sha256": "aaaf329ceb1fdd0d739c0b6858127d5b929a61a019b0a33449e7ae9f9f5298cb"
+    },
+    {
+      "name": "20260827150000_v5_l8_reassessment_entitlement",
+      "sha256": "b5e0cc0504f4862be9275579c388fa274b949e86aa05281db98a57386ad64004"
+    },
+    {
+      "name": "20260827151000_v5_l8_reassessment",
+      "sha256": "b97eab61cf777cbee8b21d5147be5b3fa36990c6b104f510fc0682812b55b731"
+    },
+    {
+      "name": "20260827170000_v6_l11_paid_customer_e2e",
+      "sha256": "8d92404249a91cb375a21d65ade10a9f498ab99cc3450fc509e7979914821413"
+    },
+    {
+      "name": "20260828030000_v7_l16_assessment_configuration",
+      "sha256": "beab7ebec2581d21307e1dfeccd74446a72c65f76b91387c529c3d563695b92d"
+    },
+    {
+      "name": "20260828050000_v7_l17_admin_review_content_operations",
+      "sha256": "d6c5fb6d8c595c4604e720f329faf0be573cf50f7d0e21d24090f9657772cac4"
+    },
+    {
+      "name": "20260830133000_v8_3_cognitive_objective_items",
+      "sha256": "bfb1e0b52e6d871f0be36c8ef3afce400a6f11eb2c0d66df68cce7e3888165e4"
+    },
+    {
+      "name": "20260830150000_v8_4_eq_sjt_instrument",
+      "sha256": "5c6a7b5221a6a5094a4b6986beec3ae64010003a98ea10d70d93c4a48899026c"
+    },
+    {
+      "name": "20260830160000_v8_5_disc_forced_choice_instrument",
+      "sha256": "6f19ed86bc16ee3ff2cf8e15c8c839a78f27055f5262d2cc88dd66a27e1f6de0"
+    },
+    {
+      "name": "20260831080000_v8_6_riasec_preference_instrument",
+      "sha256": "f540d5dc1a758791b5381853e301064ab172591d506eb9017a11b4c95d7bac23"
+    },
+    {
+      "name": "20260905100000_v11_5_users_access_operations",
+      "sha256": "2e7e02ad03dcc39f560d7b4dc3d74c635d90bcb0cfbc8ecd8e81b8eced4c7d27"
+    },
+    {
+      "name": "20260906122000_v12_1_password_recovery_foundation",
+      "sha256": "7289b6cdc41a713aaf3db0b46641d1f3a3f0454aa104d881c56243b071eaaa34"
+    },
+    {
+      "name": "20260906133000_v12_4_security_abuse_audit",
+      "sha256": "758913617f266bf1d8c18e304a4e0cbade6b390588742fd9ee91fed7f66c433b"
+    },
+    {
+      "name": "20260907100000_v13_1_question_package_configuration",
+      "sha256": "acffb6a82316201221b3bf8235ff507c07045e1dfa64c1d6d4f369f4b2fc68db"
+    }
+  ]
+}

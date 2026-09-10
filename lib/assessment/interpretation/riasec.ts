@@ -7,7 +7,7 @@ import {
 import type { InterpretationContext, TestInterpretationEngine } from "./types";
 import type { RiasecResult } from "../riasec/types";
 
-export const RIASEC_INTERPRETATION_VERSION = "RIASEC_INTERPRETATION_V1" as const;
+export const RIASEC_INTERPRETATION_VERSION = "RIASEC_INTERPRETATION_V2" as const;
 
 const DIMENSIONS = {
   R: {
@@ -62,7 +62,7 @@ function getMeasurement(context: InterpretationContext): RiasecResult {
   const result = context.testSpecific as { measurement?: RiasecResult } | undefined;
   const measurement = result?.measurement;
   if (!measurement || measurement.testType !== "RIASEC") {
-    throw new Error("RIASEC interpretation requires the RIASEC_RESULT_V1 measurement payload.");
+    throw new Error("RIASEC interpretation requires the RIASEC_RESULT_V2 measurement payload.");
   }
   return measurement;
 }
@@ -134,8 +134,8 @@ export const riasecInterpretationEngine: TestInterpretationEngine = {
           "major/career suitability claims without downstream synthesis",
         ],
         prohibited: [
-          "guaranteed career success",
-          "guaranteed major suitability",
+          "career outcome certainty claims",
+          "major suitability certainty claims",
           "ability or intelligence claims from RIASEC scores",
         ],
       },

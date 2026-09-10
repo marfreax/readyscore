@@ -1,0 +1,22 @@
+{
+  "phase": "V13.6",
+  "name": "Mapping & Content Review",
+  "status": "BLOCKED",
+  "date": "2026-09-07",
+  "artifacts": [
+    "V13_6/mapping/RIASEC_MAPPING_REVIEW.json",
+    "V13_6/mapping/DISC_MAPPING_REVIEW.json",
+    "V13_6/mapping/EQ_MAPPING_REVIEW.json",
+    "V13_6/mapping/COGNITIVE_MAPPING_REVIEW.json",
+    "V13_6/review/RIASEC_CONTENT_REVIEW.json",
+    "V13_6/review/DISC_CONTENT_REVIEW.json",
+    "V13_6/review/EQ_CONTENT_REVIEW.json",
+    "V13_6/review/COGNITIVE_CONTENT_REVIEW.json",
+    "V13_6/reports/V13_6_MAPPING_CONTENT_REVIEW_REPORT.json",
+    "scripts/validate-v13-6-mapping-content-review.mjs",
+    "V13_6/README.md",
+    "V13_6/V13_6_DELIVERY_NOTES.md",
+    "V13_6/V13_6_IMPLEMENTATION_VERIFICATION.md"
+  ],
+  "principle": "Do not claim approval/publication where the upstream V13.5 pool is incomplete or scoring compatibility is unresolved."
+}

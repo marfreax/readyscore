@@ -1,0 +1,53 @@
+{
+  "version": "V9.7",
+  "status": "IMPLEMENTED",
+  "scope": "RIASEC question bank quality and runtime hardening",
+  "baseline": "V8.6 RIASEC Instrument",
+  "measurementBoundary": {
+    "construct": "vocational_interest",
+    "questionBankVersion": "RIASEC_QB_V2",
+    "taxonomyVersion": "RIASEC_TAXONOMY_V2",
+    "configurationVersion": "RIASEC_CONFIG_V2",
+    "scoringVersion": "RIASEC_SCORE_V2",
+    "selectionVersion": "RIASEC_SELECTION_V2",
+    "interpretationVersion": "RIASEC_INTERPRETATION_V2",
+    "resultContract": "RIASEC_RESULT_V2",
+    "questionCount": 60,
+    "itemsPerDimension": 10,
+    "responseModel": "preference",
+    "answerType": "LIKERT_5",
+    "overallScoreSubstantive": false,
+    "topCodeLength": 3
+  },
+  "quality": {
+    "dimensions": ["R", "I", "A", "S", "E", "C"],
+    "dimensionCoverage": 10,
+    "scale": [1, 2, 3, 4, 5],
+    "scoringKey": [1, 2, 3, 4, 5],
+    "reverseScoring": false,
+    "weight": 1,
+    "indicatorPatternPerDimension": [3, 2, 3, 2]
+  },
+  "runtimeBoundary": {
+    "customerScoringKeysExposed": false,
+    "customerReverseScoringExposed": false,
+    "customerWeightsExposed": false,
+    "customerQuestionVersionIdsExposed": false
+  },
+  "safety": {
+    "universal_score": false,
+    "raw_average_synthesis": false,
+    "ability_claim_allowed": false,
+    "guaranteed_career_fit_allowed": false,
+    "guaranteed_career_suitability_allowed": false
+  },
+  "versioning": {
+    "historicalRIASECV1Immutable": true,
+    "materialChangesRequireNewQuestionVersion": true
+  },
+  "implementation": {
+    "databaseMigration": false,
+    "measurementRedesign": false,
+    "scoringRedesign": false
+  }
+}
