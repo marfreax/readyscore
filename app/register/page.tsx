@@ -22,7 +22,8 @@ export default function RegisterPage() {
       });
       const data = await response.json();
       if (!response.ok) throw new Error(data?.error?.code ?? "REGISTER_FAILED");
-      window.location.assign("/app");
+      const next = new URLSearchParams(window.location.search).get("next");
+      window.location.assign(next?.startsWith("/") ? next : "/app");
     } catch (err) {
       const code = err instanceof Error ? err.message : "REGISTER_FAILED";
       setError(code === "EMAIL_ALREADY_EXISTS" ? "Email tersebut sudah terdaftar." : code === "PASSWORD_TOO_SHORT" ? "Password minimal 8 karakter." : "Registrasi tidak dapat diproses.");

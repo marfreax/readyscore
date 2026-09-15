@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Test - ReadyScore | Tes 1 Menit Cegah Salah Jurusan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif}</style>
+</head>
+<body class="bg-[#F8FAFF] text-[#0B1D3A]">
+<!-- HEADER -->
+<div class="max-w-[720px] mx-auto px-4 py-6">
+<div class="flex justify-between items-center">
+<div class="flex items-center gap-2 font-extrabold text-xl"><div class="w-8 h-8 bg-[#0A4C9A] text-white grid place-items-center rounded-lg">R</div>ReadyScore</div>
+<span class="text-[11px] bg-[#FFC300] px-3 py-1 rounded-full font-bold">FREE LITE • 1 MENIT</span>
+</div>
+
+<!-- STEP 1: QUIZ -->
+<div id="quizBox" class="mt-8 bg-white rounded-[24px] border border-black/5 p-6 md:p-8 shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h1 class="font-extrabold text-[22px] leading-tight">Tes RIASEC 10 Soal<br><span class="text-[#0A4C9A]">Cek Tipe Jurusanmu</span></h1>
+<div id="progressText" class="text-[12px] font-bold text-black/40">1 / 10</div>
+</div>
+<div class="w-full h-2 bg-black/5 rounded-full mb-8"><div id="progressBar" class="h-2 bg-[#0A4C9A] rounded-full transition-all" style="width:10%"></div></div>
+
+<div id="questionArea"></div>
+
+<div class="mt-6 flex justify-between">
+<button id="prevBtn" class="px-5 py-3 rounded-full border text-[13px] font-bold hidden">Kembali</button>
+<button id="nextBtn" class="ml-auto px-8 py-3 rounded-full bg-[#0B1D3A] text-white font-bold text-[13px]">Lanjut →</button>
+</div>
+<p class="text-[11px] text-black/40 mt-4 text-center">Tanpa AI • Tanpa V15 • Rule-based • Cost Rp0 / user</p>
+</div>
+
+<!-- STEP 2: INSTANT RESULT -->
+<div id="resultBox" class="hidden mt-8">
+<div class="bg-white rounded-[24px] border border-black/5 p-6 md:p-8 shadow-sm">
+<div class="inline-flex px-3 py-1 rounded-full bg-[#1BB5B0]/10 text-[#1BB5B0] text-[11px] font-bold tracking-widest">HASIL INSTANT</div>
+<h2 class="font-extrabold text-[28px] mt-4 leading-tight">Kamu Tipe <span id="resultType" class="text-[#0A4C9A]">INVESTIGATIVE</span></h2>
+<p id="resultDesc" class="text-[14px] leading-relaxed text-black/70 mt-3"></p>
+
+<div class="mt-6 bg-[#F8FAFF] rounded-2xl p-5 border border-[#0A4C9A]/10">
+<p class="font-bold text-[13px]">🔓 Jurusan yang cocok (preview):</p>
+<p id="resultMajor" class="text-[13px] mt-2 leading-relaxed"></p>
+<div class="mt-3 p-3 bg-white rounded-xl border border-dashed text-[12px] text-black/50">
+<span class="blur-[4px] select-none">2 jurusan lainnya + analisa kekuatan & kelemahan + gaya belajar — buka di PDF lengkap</span>
+</div>
+</div>
+
+<!-- GATE -->
+<div class="mt-8 bg-[#0B1D3A] rounded-[20px] p-6 text-white">
+<h3 class="font-bold text-[15px]">Kirim PDF Lengkap Ke WA Kamu?</h3>
+<p class="text-white/60 text-[12px] mt-1">Hasil lengkap 4 halaman + 2 jurusan yang masih di-blur. Gratis, langsung dikirim via WA (bukan cuma email).</p>
+<div class="mt-4 flex flex-col md:flex-row gap-3">
+<input id="waInput" placeholder="No WA cth: 0812xxxx" class="flex-1 px-4 py-3 rounded-full text-[#0B1D3A] text-[13px] font-bold outline-none" />
+<input id="nameInput" placeholder="Nama panggilan" class="flex-1 px-4 py-3 rounded-full text-[#0B1D3A] text-[13px] font-bold outline-none" />
+</div>
+<button id="downloadPdfBtn" class="mt-4 w-full py-3 rounded-full bg-[#FFC300] text-[#0B1D3A] font-extrabold text-[13px]">Lihat PDF + Download →</button>
+<p class="text-[10px] text-white/40 mt-2 text-center">Dengan klik, kamu setuju dihubungi via WA. Data aman.</p>
+</div>
+
+<!-- UPSELL -->
+<div id="upsellBox" class="hidden mt-6 bg-[#FFF7D6] border border-[#FFC300]/30 rounded-[20px] p-6">
+<p class="font-extrabold text-[14px]">Mau buka semua? 🚀</p>
+<p class="text-[12px] text-black/60 mt-1">PDF gratis cuma RIASEC. Laporan premium buka 4 pilar (Cognitive+EQ+DISC+RIASEC) + Cross-Test + 3 jurusan + rekomendasi kampus LN + AI Advisor.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-4">
+<div class="bg-white rounded-xl p-4 border"><p class="text-[11px] font-bold opacity-60">SINGLE TEST</p><p class="font-extrabold">Rp99.000</p><a href="https://app.readyscore.id/register" class="mt-2 block text-center py-2 rounded-full bg-black text-white text-[12px] font-bold">Ambil</a></div>
+<div class="bg-white rounded-xl p-4 border-2 border-[#0A4C9A]"><p class="text-[11px] font-bold text-[#0A4C9A]">ALL TESTS • POPULER</p><p class="font-extrabold">Rp199.000</p><a href="https://app.readyscore.id/register" class="mt-2 block text-center py-2 rounded-full bg-[#0A4C9A] text-white text-[12px] font-bold">Ambil</a></div>
+<div class="bg-white rounded-xl p-4 border"><p class="text-[11px] font-bold opacity-60">FULL INSIGHT + AI</p><p class="font-extrabold">Rp249.000</p><a href="https://app.readyscore.id/register" class="mt-2 block text-center py-2 rounded-full bg-black text-white text-[12px] font-bold">Ambil + AI</a></div>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<script>
+const questions = [
+{q:"Saya suka memperbaiki barang, otomotif, atau kerja pakai tangan / alat.", type:"R"},
+{q:"Saya suka menganalisis data, riset, bereksperimen, memecahkan teka-teki logika.", type:"I"},
+{q:"Saya suka menggambar, desain, menulis, musik, atau ide-ide kreatif.", type:"A"},
+{q:"Saya suka membantu, mengajar, atau mendengarkan curhat orang lain.", type:"S"},
+{q:"Saya suka memimpin tim, jualan, negosiasi, atau mempengaruhi orang.", type:"E"},
+{q:"Saya suka kerapian: mengatur file, data, angka, sistem yang teratur.", type:"C"},
+{q:"Saya betah bekerja di bengkel, lapangan, atau lab daripada di belakang meja terus.", type:"R"},
+{q:"Saya suka kerja yang butuh imajinasi dan bebas mengekspresikan diri.", type:"A"},
+{q:"Saya energinya naik kalau ngobrol dan kerja bareng banyak orang.", type:"S"},
+{q:"Saya suka ditarget dan mengelola proyek sampai selesai.", type:"E"},
+];
+
+const typeInfo = {
+R:{name:"REALISTIC", desc:"Kamu praktis, suka kerja nyata pakai tangan dan alat. Gak suka teori muter-muter. Cocok di lapangan, teknik, atau operasional.", major:"Teknik Mesin, Teknik Sipil, IT Hardware, Agroteknologi. Kamu puas kalau lihat hasil fisik yang kamu buat."},
+I:{name:"INVESTIGATIVE", desc:"Kamu analitis, penasaran, suka bongkar 'kenapa' di balik sesuatu. Kuat di logika dan riset, gak gampang percaya tanpa data.", major:"Psikologi, Data Science, Kedokteran, Statistik, Hubungan Internasional riset. Kamu cocok di jurusan yang butuh mikir dalam."},
+A:{name:"ARTISTIC", desc:"Kamu kreatif, imajinatif, gak suka dikekang aturan kaku. Ide liar adalah bahan bakar kamu.", major:"Desain Komunikasi Visual, Arsitektur, Film, Sastra, Musik. Kamu butuh jurusan yang kasih ruang ekspresi."},
+S:{name:"SOCIAL", desc:"Kamu empatik, suka bantu orang tumbuh. Energi kamu naik kalau bisa ngaruh positif ke orang lain.", major:"Pendidikan, Psikologi, Komunikasi, Keperawatan, Social Work. Jurusan yang ketemu orang banyak cocok buat kamu."},
+E:{name:"ENTERPRISING", desc:"Kamu ambisius, persuasif, suka tantangan bisnis dan leadership. Gak takut ambil risiko.", major:"Manajemen Bisnis, Marketing, Hukum, Entrepreneurship, Ilmu Politik. Kamu cocok jadi penggerak, bukan pengikut."},
+C:{name:"CONVENTIONAL", desc:"Kamu detail, terstruktur, suka keteraturan. Data dan sistem adalah teman kamu.", major:"Akuntansi, Manajemen Keuangan, Sistem Informasi, Administrasi. Kamu unggul di jurusan yang butuh ketelitian tinggi."},
+};
+
+let answers = Array(questions.length).fill(3);
+let current = 0;
+
+const qArea = document.getElementById('questionArea');
+const progressBar = document.getElementById('progressBar');
+const progressText = document.getElementById('progressText');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+function render(){
+const q = questions[current];
+progressBar.style.width = ((current+1)/questions.length*100)+'%';
+progressText.innerText = (current+1)+' / '+questions.length;
+prevBtn.classList.toggle('hidden', current===0);
+nextBtn.innerText = current===questions.length-1 ? 'Lihat Hasil →' : 'Lanjut →';
+qArea.innerHTML = `
+<p class="font-bold text-[14px]">${current+1}. ${q.q}</p>
+<div class="mt-4 grid grid-cols-5 gap-2">
+${[1,2,3,4,5].map(v=>`
+<button onclick="setAns(${v})" class="py-3 rounded-full border text-[12px] font-bold ${answers[current]===v?'bg-[#0A4C9A] text-white border-[#0A4C9A]':'bg-white'}">
+${v===1?'😕<br>1':v===2?'😐<br>2':v===3?'🙂<br>3':v===4?'😊<br>4':'🤩<br>5'}
+</button>`).join('')}
+</div>
+<div class="flex justify-between text-[10px] text-black/40 mt-2"><span>Tidak suka</span><span>Sangat suka</span></div>
+`;
+}
+window.setAns = (v)=>{answers[current]=v; render();}
+
+nextBtn.onclick = ()=>{
+if(current < questions.length-1){current++; render();}
+else{showResult();}
+};
+prevBtn.onclick = ()=>{if(current>0){current--; render();}};
+
+function showResult(){
+let scores = {R:0,I:0,A:0,S:0,E:0,C:0};
+answers.forEach((val,i)=>{ scores[questions[i].type]+=val; });
+let top = Object.entries(scores).sort((a,b)=>b[1]-a[1])[0][0];
+let info = typeInfo[top];
+document.getElementById('quizBox').classList.add('hidden');
+document.getElementById('resultBox').classList.remove('hidden');
+document.getElementById('resultType').innerText = info.name;
+document.getElementById('resultDesc').innerText = info.desc;
+document.getElementById('resultMajor').innerText = info.major;
+window._result = {top, info, scores, answers};
+}
+
+document.getElementById('downloadPdfBtn').onclick = ()=>{
+const wa = document.getElementById('waInput').value.trim();
+const name = document.getElementById('nameInput').value.trim() || 'Kamu';
+if(wa.length < 9){alert('Masukkan No WA yang valid ya'); return;}
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+doc.setFontSize(18);
+doc.text('ReadyScore - Free RIASEC Report', 15, 20);
+doc.setFontSize(12);
+doc.text(`Nama: ${name}`, 15, 30);
+doc.text(`Tipe Dominan: ${window._result.info.name}`, 15, 38);
+doc.setFontSize(10);
+let y=50;
+doc.text(doc.splitTextToSize(window._result.info.desc, 180), 15, y); y+=20;
+doc.text(doc.splitTextToSize('Jurusan Preview: '+window._result.info.major, 180), 15, y); y+=20;
+doc.setFontSize(11);
+doc.text('--- Bagian Premium (blur) ---', 15, y); y+=8;
+doc.setFontSize(9);
+doc.text('2 Jurusan lain yang 89% cocok: [Terkunci - Upgrade ke All Tests Rp199k]', 15, y); y+=8;
+doc.text('Analisa Kekuatan & Kelemahan + Gaya Belajar: [Terkunci - Full Insight Rp249k + AI Advisor]', 15, y); y+=8;
+doc.text('Kode Diskon 24 jam: READY20', 15, y+10);
+doc.text('Upgrade: https://app.readyscore.id/register', 15, y+18);
+doc.save(`ReadyScore-Free-${window._result.info.name}.pdf`);
+
+// Show upsell
+document.getElementById('upsellBox').classList.remove('hidden');
+// Open WA for follow-up (optional)
+let waClean = wa.replace(/[^0-9]/g,''); if(waClean.startsWith('0')) waClean='62'+waClean.slice(1);
+let msg = encodeURIComponent(`Halo ${name}, ini PDF Free RIASEC kamu tipe ${window._result.info.name}. Mau gue jelasin 10 menit gratis biar gak salah pilih paket Rp99k/199k/249k?`);
+window.open(`https://wa.me/${waClean}?text=${msg}`,'_blank');
+};
+
+render();
+</script>
+</body>
+</html>

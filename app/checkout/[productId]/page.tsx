@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { trackFunnelEvent } from "../../../lib/client-funnel";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 
 type CatalogProduct = {
@@ -28,6 +29,7 @@ export default function CheckoutPage() {
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState("");
   const requestedTestType = (searchParams.get("testType") ?? "").trim().toUpperCase();
+  const couponCode = (searchParams.get("coupon") ?? "").trim().toUpperCase();
 
   const selectedTestType = useMemo(
     () => (requestedTestType && ["IQ", "EQ", "DISC", "RIASEC"].includes(requestedTestType) ? requestedTestType : ""),
@@ -41,6 +43,7 @@ export default function CheckoutPage() {
     startedRef.current = true;
 
     async function startPayment() {
+      trackFunnelEvent("checkout_started");
       try {
         const response = await fetch("/api/commercial/catalog", { cache: "no-store" });
         const body = await response.json();
@@ -61,6 +64,7 @@ export default function CheckoutPage() {
             productId: found.id,
             quantity: 1,
             ...(found.tier === "BASIC" ? { testType: selectedTestType } : {}),
+            ...(couponCode ? { couponCode } : {}),
           }),
         });
         const checkoutBody = await checkoutResponse.json();

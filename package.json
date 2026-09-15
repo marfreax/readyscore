@@ -251,7 +251,14 @@
     "e2e:v15.2:customer": "node scripts/e2e-v15-2-customer-report-runtime.mjs",
     "v15.2:content-quality": "tsx scripts/validate-v15-2-report-content-quality.mjs",
     "v15.2:phase-c": "pnpm v15.2:gate && node scripts/validate-v15-2-phase-c-integration.mjs && pnpm e2e:v15.2:customer",
-    "v15.2:phase-c:auth-help": "node scripts/validate-v15-2-phase-c-auth-help.mjs"
+    "v15.2:phase-c:auth-help": "node scripts/validate-v15-2-phase-c-auth-help.mjs",
+    "v16:phase1:gate": "node scripts/validate-v16-phase1.mjs",
+    "v16:phase2:gate": "node scripts/validate-v16-phase2.mjs",
+    "e2e:v16:phase2": "pnpm db:migrate:deploy && node scripts/e2e-v16-phase2-runtime.mjs",
+    "v16:phase3:gate": "node scripts/validate-v16-phase3.mjs",
+    "e2e:v16:phase3": "pnpm db:migrate:deploy && node scripts/e2e-v16-phase3-runtime.mjs",
+    "v16:phase4:gate": "node scripts/validate-v16-phase4.mjs",
+    "e2e:v16:phase4": "pnpm db:migrate:deploy && node scripts/e2e-v16-phase4-runtime.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

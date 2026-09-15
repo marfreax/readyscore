@@ -4,9 +4,9 @@ export const ASSESSMENT_CONFIG = {
   free: {
     id: "free-v1",
     version: "FREE_V1",
-    questionCount: 20,
-    scoringVersion: "SCORING_V1",
-    selectionAlgorithmVersion: "SELECTION_V1",
+    questionCount: 10,
+    scoringVersion: "RIASEC_FREE_SCORE_V1",
+    selectionAlgorithmVersion: "RIASEC_FREE_SELECTION_V1",
     status: "PUBLISHED" as const,
   },
   premium: {

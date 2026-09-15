@@ -55,9 +55,9 @@ const PREMIUM_DOMAIN_QUOTAS: Array<{ label: string; aliases: string[]; quota: nu
 
 export async function selectQuestions(type: AssessmentType, seed?: string): Promise<SelectedQuestion[]> {
   const config = ASSESSMENT_CONFIG[type];
-  const eligible = type === "riasec" || type === "disc" || type === "eq" || type === "cognitive"
-    ? (await getPublishedQuestionBank(type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE"))
-        .filter((q) => type !== "riasec" || q.taxonomyVersion === "RIASEC_TAXONOMY_V2")
+  const eligible = type === "free" || type === "riasec" || type === "disc" || type === "eq" || type === "cognitive"
+    ? (await getPublishedQuestionBank(type === "free" || type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE"))
+        .filter((q) => (type === "free" || type === "riasec") ? q.taxonomyVersion === "RIASEC_TAXONOMY_V2" : true)
         .map((q) => ({
         id: q.questionCode,
         domain: q.domain,
@@ -82,9 +82,11 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
       }))
     : await getPublishedEligibleQuestions();
 
-  const scopedEligible = type === "free" || type === "premium"
-    ? eligible.filter((q) => !q.id.toUpperCase().startsWith("DISC-"))
-    : eligible;
+  const scopedEligible = type === "free"
+    ? eligible.filter((q) => q.domain.trim().toUpperCase().match(/^[RIASEC]$/))
+    : type === "premium"
+      ? eligible.filter((q) => !q.id.toUpperCase().startsWith("DISC-"))
+      : eligible;
 
   if (scopedEligible.length < config.questionCount) {
     throw new SelectionError(
@@ -198,7 +200,23 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
     }
     selected = seededShuffle(selected, `${s}:COGNITIVE`);
   } else if (type === "free") {
-    selected = seededShuffle(runtimeQuestions, s).slice(0, config.questionCount);
+    // V16 free acquisition form: 10 RIASEC items with intentional coverage
+    // across all six dimensions. Quotas are 2/2/2/2/1/1 (R/I/A/S/E/C).
+    const quotas: Array<[string, number]> = [["R", 2], ["I", 2], ["A", 2], ["S", 2], ["E", 1], ["C", 1]];
+    for (const [dimension, quota] of quotas) {
+      const candidates = seededShuffle(
+        runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === dimension),
+        `${s}:FREE:${dimension}`,
+      );
+      if (candidates.length < quota) {
+        throw new SelectionError(
+          "INSUFFICIENT_FREE_RIASEC_DIMENSION_QUESTIONS",
+          `Free RIASEC dimension "${dimension}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`,
+        );
+      }
+      selected.push(...candidates.slice(0, quota));
+    }
+    selected = seededShuffle(selected, `${s}:FREE`);
   } else {
     for (const domain of PREMIUM_DOMAIN_QUOTAS) {
       const candidates = seededShuffle(

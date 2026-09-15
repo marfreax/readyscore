@@ -1,3 +1,4 @@
+import FunnelPageTracker from "../../../components/free/FunnelPageTracker";
 import Link from "next/link";
 import { PaymentSuccessRefresh } from "../../../components/commercial/PaymentSuccessRefresh";
 import { redirect } from "next/navigation";
@@ -71,6 +72,9 @@ export default async function CheckoutSuccessPage({
       : "ReadyScore belum menerima status pembayaran final. Status akan diverifikasi dari Midtrans.";
 
   return (
+    <>
+    {paymentPaid ? <FunnelPageTracker event="checkout_completed" /> : null}
+    {paymentPaid && accessReady ? <FunnelPageTracker event="premium_unlocked" /> : null}
     <CustomerPageShell
       userName={session.user.name}
       eyebrow="Payment"
@@ -166,5 +170,6 @@ export default async function CheckoutSuccessPage({
         </Card>
       </div>
     </CustomerPageShell>
+    </>
   );
 }

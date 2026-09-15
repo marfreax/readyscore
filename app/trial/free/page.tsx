@@ -1,5 +1,5 @@
-import AssessmentRunner from "../../../components/assessment/AssessmentRunner";
+import { redirect } from "next/navigation";
 
-export default function FreeAssessmentPage() {
-  return <AssessmentRunner type="free" />;
+export default function LegacyFreeAssessmentPage() {
+  redirect("/free");
 }

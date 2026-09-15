@@ -2,6 +2,7 @@ import { randomBytes } from "node:crypto";
 import { prisma } from "../db/prisma";
 import { getCurrentSession } from "../auth/session";
 import { SINGLE_TEST_TYPES, type SingleTestType } from "./types";
+import { validateV16Offer } from "./offer";
 
 const ACTIVE_PRODUCT_STATUS = "ACTIVE" as const;
 
@@ -14,13 +15,14 @@ function resolveAssessmentType(entitlements: Array<{ type: string; resourceType:
   return item?.resourceKey ?? null;
 }
 
-export async function createCheckoutOrder(input: { productId: string; quantity?: number; testType?: string }) {
+export async function createCheckoutOrder(input: { productId: string; quantity?: number; testType?: string; couponCode?: string }) {
   const session = await getCurrentSession();
   if (!session) throw new Error("UNAUTHENTICATED");
 
   const productId = input.productId?.trim();
   const quantity = input.quantity ?? 1;
   const requestedTestType = input.testType?.trim().toUpperCase() || null;
+  const couponCode = input.couponCode?.trim().toUpperCase() || null;
   if (!productId || !Number.isInteger(quantity) || quantity !== 1) throw new Error("INVALID_CHECKOUT");
   if (requestedTestType && !SINGLE_TEST_TYPES.includes(requestedTestType as SingleTestType)) {
     throw new Error("INVALID_SINGLE_TEST_TYPE");
@@ -37,7 +39,11 @@ export async function createCheckoutOrder(input: { productId: string; quantity?:
     throw new Error("PRODUCT_PRICE_NOT_CONFIGURED");
   }
 
-  const totalAmount = unitPriceIdr * quantity;
+  const subtotalAmount = unitPriceIdr * quantity;
+  const offer = couponCode ? validateV16Offer(couponCode) : { valid: false as const, code: "NO_OFFER" as const };
+  if (couponCode && !offer.valid) throw new Error(offer.code);
+  const discountAmount = offer.valid ? Math.floor(subtotalAmount * offer.percent / 100) : 0;
+  const totalAmount = Math.max(1, subtotalAmount - discountAmount);
   const catalogAssessmentType = resolveAssessmentType(product.entitlements);
   const assessmentType = product.tier === "BASIC"
     ? requestedTestType === "IQ"
@@ -69,6 +75,7 @@ export async function createCheckoutOrder(input: { productId: string; quantity?:
           source: "V14.1_CHECKOUT",
           productTier: product.tier,
           entitlementKeys: product.entitlements.map((e) => `${e.type}:${e.resourceType}:${e.resourceKey}`),
+          pricing: { subtotalAmountIdr: subtotalAmount, discountAmountIdr: discountAmount, couponCode: offer.valid ? offer.code : null, discountPercent: offer.valid ? offer.percent : 0, offerExpiresAt: offer.valid ? offer.expiresAt.toISOString() : null },
         },
         status: "CREATED",
         paymentStatus: "PENDING",
@@ -120,6 +127,9 @@ export async function createCheckoutOrder(input: { productId: string; quantity?:
       quantity: order.quantity,
       unitPriceIdr: order.unitPriceIdrSnapshot,
       totalAmountIdr: order.totalAmountIdr,
+      subtotalAmountIdr: subtotalAmount,
+      discountAmountIdr: discountAmount,
+      couponCode: offer.valid ? offer.code : null,
       currency: order.currency,
       createdAt: order.createdAt.toISOString(),
     };

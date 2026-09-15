@@ -30,7 +30,7 @@ const RESPONSE_MODELS: Record<AssessmentType, UnifiedAssessmentAdapter["response
 };
 
 const QUESTION_COUNTS: Record<AssessmentType, number> = {
-  free: 60,
+  free: 10,
   premium: 100,
   cognitive: 40,
   eq: 50,

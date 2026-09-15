@@ -427,6 +427,73 @@ function createCognitiveEngine(): TestScoringEngine {
   };
 }
 
+function createFreeEngine(): TestScoringEngine {
+  const identity: ScoringModelIdentity = {
+    testType: "FREE",
+    modelId: "RIASEC_FREE_SCORE",
+    version: "RIASEC_FREE_SCORE_V1",
+  };
+  const dimensions = ["R", "I", "A", "S", "E", "C"] as const;
+
+  return {
+    identity,
+    score(context) {
+      if (context.metadata.scoringVersion !== identity.version) {
+        throw new ScoringEngineConfigurationError(
+          `Free scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`,
+        );
+      }
+      if (context.questions.length !== 10) {
+        throw new Error(`Free RIASEC requires exactly 10 questions; received ${context.questions.length}.`);
+      }
+
+      const answerMap = new Map(context.answers.map((answer) => [answer.questionId, Number(answer.value)]));
+      const domainScores = dimensions.map((dimension) => {
+        const qs = context.questions.filter((question) => String(question.domain).trim().toUpperCase() === dimension);
+        if (!qs.length) throw new Error(`Free RIASEC is missing dimension ${dimension}.`);
+        const values = qs.map((question) => answerMap.get(question.id)).filter((value): value is number => typeof value === "number" && Number.isInteger(value) && value >= 1 && value <= 5);
+        if (context.metadata.completionMode !== "TIMEOUT" && values.length !== qs.length) {
+          throw new Error(`Free RIASEC dimension ${dimension} is incomplete.`);
+        }
+        const score = values.length ? Number((((values.reduce((sum, value) => sum + value, 0) / values.length - 1) / 4) * 100).toFixed(2)) : 0;
+        return { domainId: dimension, score, questionCount: qs.length, weightTotal: qs.length, scoredSubdomainCount: 0, totalSubdomainCount: 0, sufficient: values.length === qs.length };
+      });
+
+      const strongest = [...domainScores].sort((a, b) => b.score - a.score);
+      const overallScore = Number((domainScores.reduce((sum, item) => sum + item.score, 0) / domainScores.length).toFixed(2));
+      const answeredQuestions = context.answers.length;
+      const coveragePercent = Number(((answeredQuestions / context.questions.length) * 100).toFixed(2));
+
+      return {
+        attemptId: context.metadata.attemptId,
+        assessmentType: "FREE",
+        assessmentConfigurationVersion: context.metadata.assessmentConfigurationVersion,
+        questionBankVersion: context.metadata.questionBankVersion,
+        taxonomyVersion: context.metadata.taxonomyVersion,
+        scoringVersion: context.metadata.scoringVersion,
+        score: overallScore,
+        overallScore,
+        totalQuestions: 10,
+        answeredQuestions,
+        domainCount: 6,
+        measuredDomainCount: domainScores.filter((item) => item.sufficient).length,
+        coverage: coveragePercent,
+        coveragePercent,
+        isComplete: context.metadata.completionMode !== "TIMEOUT",
+        minimumCompleteDomains: 6,
+        domainScores,
+        domains: domainScores,
+        subdomainScores: [],
+        indicatorScores: [],
+        strongestDomains: strongest.slice(0, 3).map((item) => item.domainId),
+        developmentDomains: [...domainScores].sort((a, b) => a.score - b.score).slice(0, 3).map((item) => item.domainId),
+        quality: { scoreableQuestions: answeredQuestions, measuredDomains: domainScores.filter((item) => item.sufficient).length, totalDomains: 6, coveragePercent, complete: context.metadata.completionMode !== "TIMEOUT" },
+        status: context.metadata.completionMode === "TIMEOUT" ? "PARTIAL" : "COMPLETE",
+      } as unknown as AssessmentResult;
+    },
+  };
+}
+
 function createLegacyEngine(testType: "free" | "premium"): TestScoringEngine {
   const identity: ScoringModelIdentity = {
     testType: testType.toUpperCase(),
@@ -454,7 +521,7 @@ function createLegacyEngine(testType: "free" | "premium"): TestScoringEngine {
 }
 
 const ENGINES = [
-  createLegacyEngine("free"),
+  createFreeEngine(),
   createLegacyEngine("premium"),
   createDiscEngine(),
   createEqEngine(),

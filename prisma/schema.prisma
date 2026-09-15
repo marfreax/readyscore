@@ -986,6 +986,9 @@ model AssessmentAttempt {
   questions AttemptQuestion[]
   answers   Answer[]
   result    AssessmentResult?
+  freeLead  FreeLeadCapture?
+  freeReportDelivery FreeReportDelivery?
+  funnelEvents FunnelEvent[]
 
   @@index([userId, startedAt])
   @@index([status, startedAt])
@@ -1041,6 +1044,64 @@ model AssessmentResult {
   updatedAt DateTime @updatedAt
 
   attempt AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+}
+
+model FreeLeadCapture {
+  id               String   @id @default(cuid())
+  attemptId        String   @unique
+  name             String
+  whatsapp         String
+  email            String?
+  consent          Boolean
+  consentAt        DateTime
+  source           String?
+  reportUnlockedAt DateTime @default(now())
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  attempt  AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+
+  @@index([whatsapp])
+  @@index([createdAt])
+}
+
+/// V16.3 durable free-report generation and channel-delivery ledger.
+/// Delivery failures never revoke the already-unlocked web report.
+model FreeReportDelivery {
+  id               String   @id @default(cuid())
+  attemptId        String   @unique
+  pdfStatus        String   @default("NOT_GENERATED")
+  pdfContent       Bytes?
+  pdfFileName      String?
+  pdfGeneratedAt   DateTime?
+  whatsappStatus   String   @default("NOT_ATTEMPTED")
+  whatsappError    String?
+  emailStatus      String   @default("NOT_ATTEMPTED")
+  emailError       String?
+  lastAttemptAt    DateTime?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  attempt AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+
+  @@index([pdfStatus, updatedAt])
+  @@index([whatsappStatus, updatedAt])
+  @@index([emailStatus, updatedAt])
+}
+
+
+/// V16.4 server-recorded acquisition funnel event. Payload is intentionally limited to non-sensitive analytics metadata.
+model FunnelEvent {
+  id        String   @id @default(cuid())
+  event     String
+  attemptId String?
+  metadata  Json?
+  createdAt DateTime @default(now())
+
+  attempt AssessmentAttempt? @relation(fields: [attemptId], references: [id], onDelete: SetNull)
+
+  @@index([event, createdAt])
+  @@index([attemptId, createdAt])
 }
 
 model V15Report {

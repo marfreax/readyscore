@@ -11,7 +11,7 @@ export type AssessmentRuntimeContract = {
 };
 
 const CONTRACTS: Record<AssessmentType, AssessmentRuntimeContract> = {
-  free: { assessmentType: "free", answerType: "LIKERT_5", questionCount: 60, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "LEGACY" },
+  free: { assessmentType: "free", answerType: "LIKERT_5", questionCount: 10, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "RIASEC" },
   premium: { assessmentType: "premium", answerType: "LIKERT_5", questionCount: 100, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "LEGACY" },
   cognitive: { assessmentType: "cognitive", answerType: "SINGLE_CHOICE_4", questionCount: 40, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "COGNITIVE" },
   eq: { assessmentType: "eq", answerType: "SINGLE_CHOICE_4", questionCount: 50, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "EQ" },
