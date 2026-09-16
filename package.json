@@ -258,7 +258,14 @@
     "v16:phase3:gate": "node scripts/validate-v16-phase3.mjs",
     "e2e:v16:phase3": "pnpm db:migrate:deploy && node scripts/e2e-v16-phase3-runtime.mjs",
     "v16:phase4:gate": "node scripts/validate-v16-phase4.mjs",
-    "e2e:v16:phase4": "pnpm db:migrate:deploy && node scripts/e2e-v16-phase4-runtime.mjs"
+    "e2e:v16:phase4": "pnpm db:migrate:deploy && node scripts/e2e-v16-phase4-runtime.mjs",
+    "v16:5:gate": "node scripts/validate-v16-5-pdf-delivery.mjs",
+    "v16:6:gate": "node scripts/validate-v16-6-delivery.mjs",
+    "v16:7:gate": "node scripts/validate-v16-7-business-lead.mjs",
+    "v16:8:gate": "node scripts/validate-v16-8-production-certification.mjs",
+    "e2e:v16:8:full-funnel": "node scripts/e2e-v16-8-full-funnel-runtime.mjs",
+    "e2e:v16:5-8:certification": "node scripts/e2e-v16-5-8-comprehensive-certification.mjs",
+    "v16:8:4:gate": "node scripts/validate-v16-8-4-whatsapp-copy.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

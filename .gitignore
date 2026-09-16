@@ -53,3 +53,6 @@ data/auth-state.json
 data/v15/ReadyScore.pdf
 docs/v15/Phase-B-Visual-QA.pdf
 docs/v15/Phase-B-Visual-QA-Montage.jpg
+
+# Local VPS notes / deployment credentials
+docs/VPS/catatanvps.md

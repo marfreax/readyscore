@@ -987,6 +987,7 @@ model AssessmentAttempt {
   answers   Answer[]
   result    AssessmentResult?
   freeLead  FreeLeadCapture?
+  businessLead BusinessLead?
   freeReportDelivery FreeReportDelivery?
   funnelEvents FunnelEvent[]
 
@@ -1060,8 +1061,34 @@ model FreeLeadCapture {
   updatedAt        DateTime @updatedAt
 
   attempt  AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  businessLead BusinessLead? @relation(fields: [businessLeadId], references: [id], onDelete: SetNull)
+  businessLeadId String?
 
   @@index([whatsapp])
+  @@index([businessLeadId])
+  @@index([createdAt])
+}
+
+/// V16.7 canonical acquisition business lead. This is intentionally minimal;
+/// it is not a replacement CRM or sales pipeline.
+model BusinessLead {
+  id                  String   @id @default(cuid())
+  name                String
+  whatsapp            String   @unique
+  email               String?  @unique
+  source              String   @default("FREE_ASSESSMENT")
+  status              String   @default("NEW")
+  consent             Boolean
+  consentAt           DateTime
+  assessmentAttemptId String?  @unique
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  assessmentAttempt AssessmentAttempt? @relation(fields: [assessmentAttemptId], references: [id], onDelete: SetNull)
+  freeLeadCaptures  FreeLeadCapture[]
+
+  @@index([source, createdAt])
+  @@index([status, updatedAt])
   @@index([createdAt])
 }
 
@@ -1079,6 +1106,8 @@ model FreeReportDelivery {
   emailStatus      String   @default("NOT_ATTEMPTED")
   emailError       String?
   lastAttemptAt    DateTime?
+  processingUntil  DateTime?
+  processingToken  String?
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
@@ -1087,6 +1116,7 @@ model FreeReportDelivery {
   @@index([pdfStatus, updatedAt])
   @@index([whatsappStatus, updatedAt])
   @@index([emailStatus, updatedAt])
+  @@index([processingUntil])
 }
 
 

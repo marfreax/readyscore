@@ -1,3 +1,4 @@
+import "./lib-e2e-env.mjs";
 import { PrismaClient } from "@prisma/client";
 const baseUrl = process.env.BASE_URL ?? "http://localhost:3000";
 import { getAuthenticatedCookie } from "./lib-v15-customer-auth.mjs";

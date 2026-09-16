@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { prisma } from "../../../../lib/db/prisma";
 import { buildFreeReport } from "../../../../lib/free-report";
 import type { AssessmentResult } from "../../../../lib/assessment/types";
+import { createOrUpdateBusinessLead, BUSINESS_LEAD_SOURCE } from "../../../../lib/business-lead";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -74,10 +75,51 @@ export async function POST(request: Request) {
       update: { name, whatsapp, email, consent: true, consentAt: now, source, reportUnlockedAt: now },
     });
 
+    let businessLead: Awaited<ReturnType<typeof createOrUpdateBusinessLead>> | null = null;
+    let businessLeadError: string | null = null;
+    try {
+      businessLead = await createOrUpdateBusinessLead({
+        name,
+        whatsapp,
+        email,
+        consent: true,
+        consentAt: lead.consentAt,
+        assessmentAttemptId: attemptId,
+      });
+      await prisma.freeLeadCapture.update({
+        where: { id: lead.id },
+        data: { businessLeadId: businessLead.lead.id },
+      });
+      await prisma.funnelEvent.create({
+        data: {
+          event: businessLead.action === "CREATED" ? "business_lead_created" : "business_lead_reused",
+          attemptId,
+          metadata: { source: BUSINESS_LEAD_SOURCE },
+        },
+      });
+    } catch (error) {
+      businessLeadError = error instanceof Error ? error.message : "BUSINESS_LEAD_FAILED";
+      console.error(`[free-unlock] business lead failed code=${businessLeadError} attemptId=${attemptId}`);
+      try {
+        await prisma.funnelEvent.create({
+          data: {
+            event: "business_lead_failed",
+            attemptId,
+            metadata: { source: BUSINESS_LEAD_SOURCE, code: businessLeadError },
+          },
+        });
+      } catch {
+        // Analytics are best-effort and must never block Free Report access.
+      }
+    }
+
     return NextResponse.json({
       ok: true,
       unlocked: true,
       report: buildFreeReport(attempt.result.result as unknown as AssessmentResult),
+      businessLead: businessLead
+        ? { id: businessLead.lead.id, action: businessLead.action, status: businessLead.lead.status, source: businessLead.lead.source }
+        : { status: "FAILED", source: BUSINESS_LEAD_SOURCE, error: businessLeadError },
     });
   } catch (error) {
     console.error(error);

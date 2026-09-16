@@ -1,3 +1,5 @@
+import "./lib-e2e-env.mjs";
+
 export async function getAuthenticatedCookie(baseUrl) {
   const existing = process.env.READYSCORE_SESSION_COOKIE?.trim();
   if (existing) return existing;

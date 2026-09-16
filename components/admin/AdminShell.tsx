@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import {
   ClipboardList,
+  UserRoundPlus,
   FileCheck2,
   History,
   LayoutDashboard,
@@ -36,6 +37,10 @@ const groups = [
   {
     label: "AUDITABILITY",
     items: [{ key: "audit", href: "/admin/audit", label: "Audit Trail", icon: History }],
+  },
+  {
+    label: "ACQUISITION",
+    items: [{ key: "leads", href: "/admin/leads", label: "Business Leads", icon: UserRoundPlus }],
   },
   {
     label: "USERS & ACCESS",

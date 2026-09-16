@@ -26,7 +26,6 @@ export default function FreeLeadGate({ attemptId }: { attemptId: string }) {
       if (!response.ok) throw new Error(data?.error?.message ?? "Free Report gagal dibuka.");
       trackFunnelEvent("lead_submitted", attemptId);
       trackFunnelEvent("free_report_unlocked", attemptId);
-      void fetch("/api/free/delivery", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ attemptId }) });
       router.refresh();
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Free Report gagal dibuka.");
