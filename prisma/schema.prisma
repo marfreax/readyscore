@@ -52,6 +52,38 @@ enum ProductStatus {
   RETIRED
 }
 
+enum WhatsAppConversationStatus {
+  OPEN
+  CLOSED
+}
+
+enum WhatsAppMessageDirection {
+  INBOUND
+  OUTBOUND
+}
+
+enum WhatsAppMessageType {
+  TEXT
+  DOCUMENT
+  IMAGE
+  VIDEO
+  AUDIO
+  UNKNOWN
+}
+
+enum WhatsAppMessageStatus {
+  RECEIVED
+  SENDING
+  SENT
+  DELIVERED
+  READ
+  FAILED
+}
+
+enum WhatsAppChannel {
+  WHATSAPP
+}
+
 
 enum ScalevWebhookEventStatus {
   RECEIVED
@@ -1071,6 +1103,58 @@ model FreeLeadCapture {
 
 /// V16.7 canonical acquisition business lead. This is intentionally minimal;
 /// it is not a replacement CRM or sales pipeline.
+model WhatsAppConversation {
+  id             String   @id @default(cuid())
+  businessLeadId String?
+  channel        WhatsAppChannel @default(WHATSAPP)
+  phoneNumber    String
+  displayName    String?
+  status         WhatsAppConversationStatus @default(OPEN)
+  unreadCount    Int      @default(0)
+  lastMessageAt  DateTime?
+  lastInboundAt  DateTime?
+  lastOutboundAt DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  businessLead BusinessLead? @relation(fields: [businessLeadId], references: [id], onDelete: SetNull)
+  messages     WhatsAppMessage[]
+
+  @@unique([phoneNumber, channel])
+  @@index([status, lastMessageAt])
+  @@index([businessLeadId])
+  @@index([phoneNumber])
+  @@index([lastMessageAt])
+}
+
+model WhatsAppMessage {
+  id                  String   @id @default(cuid())
+  conversationId      String
+  direction           WhatsAppMessageDirection
+  messageType         WhatsAppMessageType
+  externalMessageId   String?  @unique
+  text                String?
+  mediaId             String?
+  mediaMimeType       String?
+  mediaFilename       String?
+  status              WhatsAppMessageStatus
+  providerErrorCode   String?
+  providerErrorMessage String?
+  metadata            Json?
+  sentAt              DateTime?
+  deliveredAt         DateTime?
+  readAt              DateTime?
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+
+  conversation WhatsAppConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+
+  @@index([conversationId, createdAt])
+  @@index([conversationId, sentAt])
+  @@index([status, updatedAt])
+  @@index([direction, createdAt])
+}
+
 model BusinessLead {
   id                  String   @id @default(cuid())
   name                String
@@ -1086,6 +1170,7 @@ model BusinessLead {
 
   assessmentAttempt AssessmentAttempt? @relation(fields: [assessmentAttemptId], references: [id], onDelete: SetNull)
   freeLeadCaptures  FreeLeadCapture[]
+  whatsappConversations WhatsAppConversation[]
 
   @@index([source, createdAt])
   @@index([status, updatedAt])

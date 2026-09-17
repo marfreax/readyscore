@@ -17,6 +17,7 @@ import {
   X,
   Menu,
   Package,
+  MessageCircle,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -37,6 +38,10 @@ const groups = [
   {
     label: "AUDITABILITY",
     items: [{ key: "audit", href: "/admin/audit", label: "Audit Trail", icon: History }],
+  },
+  {
+    label: "CONVERSATION",
+    items: [{ key: "whatsapp", href: "/admin/whatsapp", label: "WhatsApp Inbox", icon: MessageCircle }],
   },
   {
     label: "ACQUISITION",
