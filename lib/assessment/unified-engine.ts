@@ -14,7 +14,7 @@ import { validateAssessmentRuntimeAnswers, validateAssessmentRuntimeQuestions, t
 export type UnifiedAssessmentAdapter = {
   readonly assessmentType: AssessmentType;
   readonly responseModel: "LIKERT_5" | "SINGLE_CHOICE_4" | "FORCED_CHOICE_4";
-  readonly questionCount: number;
+  readonly questionCount: number | null;
   readonly scoringEngine: ScoringModelIdentity;
   readonly runtimeContract: AssessmentRuntimeContract;
   readonly score: (context: ScoringContext) => AssessmentResult;
@@ -22,20 +22,10 @@ export type UnifiedAssessmentAdapter = {
 
 const RESPONSE_MODELS: Record<AssessmentType, UnifiedAssessmentAdapter["responseModel"]> = {
   free: "LIKERT_5",
-  premium: "LIKERT_5",
   cognitive: "SINGLE_CHOICE_4",
   eq: "SINGLE_CHOICE_4",
   disc: "FORCED_CHOICE_4",
   riasec: "LIKERT_5",
-};
-
-const QUESTION_COUNTS: Record<AssessmentType, number> = {
-  free: 10,
-  premium: 100,
-  cognitive: 40,
-  eq: 50,
-  disc: 80,
-  riasec: 60,
 };
 
 function assertRuntimeContract(context: ScoringContext, adapter: UnifiedAssessmentAdapter): void {
@@ -44,9 +34,9 @@ function assertRuntimeContract(context: ScoringContext, adapter: UnifiedAssessme
       `Unified assessment type mismatch: context=${context.assessmentType}, adapter=${adapter.assessmentType}`,
     );
   }
-  if (context.questions.length !== adapter.questionCount) {
+  if (context.questions.length !== context.metadata.questionCount) {
     throw new Error(
-      `${adapter.assessmentType} requires exactly ${adapter.questionCount} questions; received ${context.questions.length}.`,
+      `${adapter.assessmentType} requires exactly ${context.metadata.questionCount} questions from the frozen configuration; received ${context.questions.length}.`,
     );
   }
   if (context.metadata.scoringVersion !== adapter.scoringEngine.version) {
@@ -61,14 +51,14 @@ function buildAdapter(assessmentType: AssessmentType): UnifiedAssessmentAdapter 
   const adapter: UnifiedAssessmentAdapter = {
     assessmentType,
     responseModel: RESPONSE_MODELS[assessmentType],
-    questionCount: QUESTION_COUNTS[assessmentType],
+    questionCount: getAssessmentRuntimeContract(assessmentType).questionCount,
     scoringEngine: { ...engine.identity },
     runtimeContract: getAssessmentRuntimeContract(assessmentType),
     score(context) {
       assertRuntimeContract(context, adapter);
-      validateAssessmentRuntimeQuestions(assessmentType, context.questions);
+      validateAssessmentRuntimeQuestions(assessmentType, context.questions, context.metadata.questionCount);
       if (context.metadata.completionMode !== "TIMEOUT") {
-        validateAssessmentRuntimeAnswers(assessmentType, context.questions, context.answers);
+        validateAssessmentRuntimeAnswers(assessmentType, context.questions, context.answers, context.metadata.questionCount);
       }
       return engine.score(context);
     },
@@ -77,7 +67,7 @@ function buildAdapter(assessmentType: AssessmentType): UnifiedAssessmentAdapter 
 }
 
 const ADAPTERS: ReadonlyMap<AssessmentType, UnifiedAssessmentAdapter> = new Map(
-  (["free", "premium", "cognitive", "eq", "disc", "riasec"] as AssessmentType[]).map((type) => [
+  (["free", "cognitive", "eq", "disc", "riasec"] as AssessmentType[]).map((type) => [
     type,
     buildAdapter(type),
   ]),
@@ -102,7 +92,7 @@ export function calculateUnifiedAssessmentResult(
 export function listUnifiedAssessmentAdapters(): Array<{
   assessmentType: AssessmentType;
   responseModel: UnifiedAssessmentAdapter["responseModel"];
-  questionCount: number;
+  questionCount: number | null;
   scoringEngine: ScoringModelIdentity;
   runtimeContract: AssessmentRuntimeContract;
 }> {

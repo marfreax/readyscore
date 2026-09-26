@@ -935,6 +935,8 @@ model QuestionPackageVersion {
   package       QuestionPackage  @relation(fields: [packageId], references: [id], onDelete: Restrict)
   taxonomy      TaxonomyVersion? @relation(fields: [taxonomyVersionId], references: [id], onDelete: Restrict)
   compositionRules QuestionPackageCompositionRule[]
+  assessmentConfigurations AssessmentConfigurationVersion[]
+  assessmentAttempts AssessmentAttempt[]
 
   @@unique([packageId, version])
   @@index([packageId, status])
@@ -983,10 +985,12 @@ model AssessmentConfigurationVersion {
   questionCount              Int
   status                     AssessmentConfigurationStatus @default(DRAFT)
   metadata                   Json?
+  questionPackageVersionId   String?
   createdAt                  DateTime @default(now())
   updatedAt                  DateTime @updatedAt
 
   configuration AssessmentConfiguration @relation(fields: [configurationId], references: [id], onDelete: Restrict)
+  questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
 
   @@unique([configurationId, version])
   @@index([configurationId, status])
@@ -1006,6 +1010,7 @@ model AssessmentAttempt {
   selectionAlgorithmVersion      String
   attemptSeed                    String
   selectionSnapshot              Json
+  questionPackageVersionId       String?
   startedAt                      DateTime       @default(now())
   expiresAt                      DateTime?
   completedAt                    DateTime?
@@ -1016,6 +1021,7 @@ model AssessmentAttempt {
 
   user      User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
   questions AttemptQuestion[]
+  questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
   answers   Answer[]
   result    AssessmentResult?
   freeLead  FreeLeadCapture?
@@ -1133,6 +1139,7 @@ model WhatsAppMessage {
   direction           WhatsAppMessageDirection
   messageType         WhatsAppMessageType
   externalMessageId   String?  @unique
+  clientRequestId     String?  @unique
   text                String?
   mediaId             String?
   mediaMimeType       String?

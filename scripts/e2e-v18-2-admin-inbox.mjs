@@ -1,0 +1,25 @@
+import { spawn } from "node:child_process";
+import { PrismaClient } from "@prisma/client";
+const port=3192, base=`http://127.0.0.1:${port}`;
+const email=process.env.ADMIN_EMAIL||"radmin@yopmail.com", password=process.env.ADMIN_PASSWORD||"12345678";
+const prisma=new PrismaClient(); let child; let conversationId; let leadId;
+const request=(path,options={})=>fetch(`${base}${path}`,{redirect:"manual",...options});
+const assert=(ok,msg)=>{if(!ok)throw new Error(msg)};
+async function waitForServer(){for(let i=0;i<60;i++){try{const r=await request("/api/admin/whatsapp/conversations");if([401,403].includes(r.status))return;}catch{}await new Promise(r=>setTimeout(r,200));}throw new Error("Next server did not become ready")}
+try{
+ const phone=`62813${Date.now().toString().slice(-8)}`;
+ const lead=await prisma.businessLead.create({data:{name:"V18.2 Inbox Test Lead",whatsapp:phone,source:"V18.2_E2E",status:"NEW",consent:true,consentAt:new Date()}}); leadId=lead.id;
+ const messageFixtures=Array.from({length:11},(_,index)=>({direction:index%2===0?"INBOUND":"OUTBOUND",messageType:"TEXT",status:index%2===0?"RECEIVED":"SENT",text:index===0?"Halo V18.2":index===1?"Balasan V18.2":`Fixture message ${index+1}`}));
+ const fixture=await prisma.whatsAppConversation.create({data:{phoneNumber:phone,displayName:"V18.2 Inbox Test",unreadCount:2,lastMessageAt:new Date(),lastInboundAt:new Date(),messages:{createMany:{data:messageFixtures}}}}); conversationId=fixture.id;
+ child=spawn("pnpm",["exec","next","start","--port",String(port)],{cwd:process.cwd(),env:{...process.env,PORT:String(port)},stdio:["ignore","pipe","pipe"]}); child.stdout.on("data",()=>{}); child.stderr.on("data",()=>{}); await waitForServer();
+ let r=await request("/admin/whatsapp"); assert([307,308].includes(r.status),`unauthenticated page expected redirect, got ${r.status}`);
+ r=await request("/api/admin/whatsapp/conversations"); assert([401,403].includes(r.status),`unauthenticated API expected 401/403, got ${r.status}`); console.log("authorization boundary: PASS");
+ r=await request("/api/auth/login",{method:"POST",headers:{"content-type":"application/json",accept:"application/json"},body:JSON.stringify({email,password})}); assert(r.ok,`admin login failed: ${r.status}`); const cookie=(r.headers.get("set-cookie")||"").split(";")[0]; assert(cookie,"session cookie missing");
+ r=await request("/admin/whatsapp",{headers:{cookie,accept:"text/html"}}); assert(r.ok,"inbox page failed"); const html=await r.text(); assert(html.includes("WhatsApp Inbox"),"inbox page shell missing"); console.log("authorized inbox page: PASS");
+ r=await request(`/api/admin/whatsapp/conversations?page=1&pageSize=50&search=V18.2%20Inbox%20Test`,{headers:{cookie,accept:"application/json"}}); assert(r.ok,"conversation list failed"); let body=await r.json(); assert(body.ok&&body.items.some(x=>x.id===conversationId)&&body.pagination,"conversation list/pagination invalid"); console.log("conversation list + search + pagination: PASS");
+ r=await request(`/api/admin/whatsapp/conversations/${conversationId}`,{headers:{cookie,accept:"application/json"}}); assert(r.ok,"conversation detail failed"); body=await r.json(); assert(body.conversation?.context?.customer?.whatsapp===phone,"customer context invalid"); assert(body.conversation?.context?.businessLead?.id===leadId,"automatic BusinessLead context matching failed"); assert(body.conversation?.messages?.length===11,"message timeline invalid"); console.log("message timeline + customer context: PASS");
+ r=await request(`/api/admin/whatsapp/conversations/${conversationId}/messages?page=1&pageSize=10`,{headers:{cookie,accept:"application/json"}}); assert(r.ok,"message pagination failed"); body=await r.json(); assert(body.pagination?.totalItems===11&&body.pagination?.totalPages===2,"message pagination contract invalid"); console.log("message pagination: PASS");
+ r=await request(`/api/admin/whatsapp/conversations/${conversationId}/read`,{method:"POST",headers:{cookie,accept:"application/json"}}); assert(r.ok,"mark read failed"); body=await r.json(); assert(body.conversation?.unreadCount===0,"read state failed"); const refreshed=await prisma.whatsAppConversation.findUnique({where:{id:conversationId},select:{unreadCount:true}}); assert(refreshed?.unreadCount===0,"read state not persisted"); console.log("read state + audit boundary: PASS");
+ r=await request(`/api/admin/whatsapp/conversations/${conversationId}/link-lead`,{method:"POST",headers:{cookie,"content-type":"application/json"},body:JSON.stringify({businessLeadId:leadId})}); assert(r.ok,"explicit BusinessLead link failed"); body=await r.json(); assert(body.businessLeadId===leadId,"explicit link payload invalid"); console.log("BusinessLead explicit link: PASS");
+ console.log("customer context: PASS"); console.log("=== READY SCORE V18.2 ADMIN INBOX & CUSTOMER CONTEXT E2E — PASS ===");
+}finally{if(conversationId)await prisma.whatsAppConversation.delete({where:{id:conversationId}}).catch(()=>{});if(leadId)await prisma.businessLead.delete({where:{id:leadId}}).catch(()=>{});await prisma.$disconnect();if(child&&!child.killed)child.kill("SIGTERM")}

@@ -53,7 +53,7 @@ assert(discScoringSource.includes("scoringVersion: measurement.scoringVersion"),
   const result = calculateRuntimeAssessmentResult("disc", questions, answers, {
     attemptId:"v4-l4-gate", assessmentConfigurationVersion:"DISC_CONFIG_V1",
     questionBankVersion:"DISC_QB_V1", taxonomyVersion:"DISC_TAXONOMY_V1",
-    scoringVersion:"DISC_SCORE_V1", completedAt:new Date(0).toISOString(),
+    scoringVersion:"DISC_SCORE_V1", selectionAlgorithmVersion:"DISC_SELECTION_V1", questionCount:questions.length, completedAt:new Date(0).toISOString(),
   }) as {
     assessmentType: string;
     disc?: {

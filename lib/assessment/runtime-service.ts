@@ -1,6 +1,8 @@
 import { randomBytes } from "node:crypto";
 import { prisma } from "../db/prisma";
-import { ASSESSMENT_CONFIG, type AssessmentType } from "../assessment-config";
+import { type AssessmentType } from "../assessment-config";
+import { AssessmentType as PrismaAssessmentType } from "@prisma/client";
+import { resolveActiveAssessmentConfiguration } from "./runtime-configuration";
 import { getQuestionBankStats } from "../question-bank-repository";
 import {
   abandonAttempt,
@@ -14,13 +16,18 @@ import {
   expireAttemptIfNeeded,
   persistExpiredResult,
 } from "./assessment-repository";
-import { selectQuestions, snapshotFromSelection, SelectionError } from "./question-engine";
+import { snapshotFromSelection, SelectionError } from "./question-engine";
 import { packageSnapshotMetadata, selectPackageAndQuestions, PackageSelectionError } from "../question-package-runtime";
 import { calculateUnifiedAssessmentResult } from "./unified-engine";
 import { interpretAssessmentResult } from "./result/engine-v1";
 import { validateResultSemantics } from "./result/semantics-v1";
 import type { Answer, AssessmentResult, CognitiveOptionValue, LikertValue, Question } from "./types";
 import { getAssessmentRuntimeContract, toPublicRuntimeQuestion, toPublicRuntimeSnapshot } from "./runtime-contract";
+
+function requireSupportedAssessmentType(type: string): AssessmentType {
+  if (type === "free" || type === "riasec" || type === "disc" || type === "eq" || type === "cognitive") return type;
+  throw new RuntimeError("ASSESSMENT_TYPE_NOT_SUPPORTED", `Assessment type ${type} is no longer an active runtime assessment.`);
+}
 import {
   getReassessmentEligibility,
   isReassessmentTestType,
@@ -42,9 +49,10 @@ export async function startAssessment(
   userId?: string,
   options?: { reassessment?: boolean; reassessmentPriorAttemptId?: string },
 ) {
-  const config = ASSESSMENT_CONFIG[type];
-  if (config.status !== "PUBLISHED") {
-    throw new RuntimeError("ASSESSMENT_NOT_AVAILABLE", "Assessment belum tersedia.");
+  let config;
+  try { config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType); } catch (error) {
+    const code = error instanceof Error ? error.message : "ASSESSMENT_CONFIGURATION_NOT_READY";
+    throw new RuntimeError(code.split(":")[0], "Assessment belum tersedia.");
   }
 
   let commercialAccessClaim: Awaited<ReturnType<typeof findConsumableTestEntitlement>> = null;
@@ -64,14 +72,10 @@ export async function startAssessment(
   let selected;
   let packageSelection: Awaited<ReturnType<typeof selectPackageAndQuestions>> | null = null;
   try {
-    if (type === "riasec" || type === "disc" || type === "eq" || type === "cognitive") {
-      packageSelection = await selectPackageAndQuestions(type, attemptSeed);
-      selected = packageSelection.questions;
-      if (selected.length !== packageSelection.package.totalQuestions) {
-        throw new RuntimeError("SELECTION_COUNT_MISMATCH", "Jumlah question hasil package selection tidak sesuai konfigurasi.");
-      }
-    } else {
-      selected = await selectQuestions(type, attemptSeed);
+    packageSelection = await selectPackageAndQuestions(type, attemptSeed);
+    selected = packageSelection.questions;
+    if (selected.length !== packageSelection.package.totalQuestions) {
+      throw new RuntimeError("SELECTION_COUNT_MISMATCH", "Jumlah question hasil package selection tidak sesuai konfigurasi.");
     }
   } catch (error) {
     if (error instanceof PackageSelectionError) throw new RuntimeError(error.code, error.message);
@@ -96,6 +100,10 @@ export async function startAssessment(
       attemptId,
       attemptSeed,
       questionBankVersion: stats.questionBankVersion,
+      assessmentConfigurationVersion: config.version,
+      taxonomyVersion: config.taxonomyVersion,
+      scoringVersion: config.scoringVersion,
+      selectionAlgorithmVersion: config.selectionAlgorithmVersion,
     },
     selected,
   );
@@ -121,7 +129,7 @@ export async function startAssessment(
       id: attemptId,
       userId,
       type,
-      assessmentConfigurationId: config.id,
+      assessmentConfigurationId: config.configuration.id,
       assessmentConfigurationVersion: config.version,
       questionBankVersion: stats.questionBankVersion,
       taxonomyVersion: snapshot.taxonomyVersion,
@@ -129,6 +137,7 @@ export async function startAssessment(
       selectionAlgorithmVersion: packageSelection?.package.selectionAlgorithmVersion ?? config.selectionAlgorithmVersion,
       attemptSeed,
       selectionSnapshot: snapshot,
+      questionPackageVersionId: packageSelection?.package.packageVersionId ?? null,
       selectedQuestions: selected,
       startedAt,
       expiresAt,
@@ -173,7 +182,8 @@ export async function startReassessment(
     throw new RuntimeError(eligibility.code, eligibility.message);
   }
 
-  const config = ASSESSMENT_CONFIG[type];
+  let config;
+  try { config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType); } catch { throw new RuntimeError("ASSESSMENT_CONFIGURATION_NOT_READY", "Assessment belum tersedia."); }
   const stats = await getQuestionBankStats();
   const attemptId = newId(type);
   const attemptSeed = newSeed();
@@ -197,7 +207,7 @@ export async function startReassessment(
   const expiresAt = new Date(startedAt.getTime() + packageSelection.package.timeLimitSeconds * 1000);
   const snapshot = snapshotFromSelection(
     type,
-    { attemptId, attemptSeed, questionBankVersion: stats.questionBankVersion },
+    { attemptId, attemptSeed, questionBankVersion: stats.questionBankVersion, assessmentConfigurationVersion: config.version, taxonomyVersion: config.taxonomyVersion, scoringVersion: config.scoringVersion, selectionAlgorithmVersion: config.selectionAlgorithmVersion },
     selected,
   );
   Object.assign(
@@ -217,7 +227,7 @@ export async function startReassessment(
       id: attemptId,
       userId,
       type,
-      assessmentConfigurationId: config.id,
+      assessmentConfigurationId: config.configuration.id,
       assessmentConfigurationVersion: config.version,
       questionBankVersion: stats.questionBankVersion,
       taxonomyVersion: snapshot.taxonomyVersion,
@@ -225,6 +235,7 @@ export async function startReassessment(
       selectionAlgorithmVersion: packageSelection.package.selectionAlgorithmVersion,
       attemptSeed,
       selectionSnapshot: snapshot,
+      questionPackageVersionId: packageSelection.package.packageVersionId,
       selectedQuestions: selected,
       startedAt,
       expiresAt,
@@ -330,7 +341,7 @@ export async function saveAnswer(id: string, questionId: string, value: unknown)
   }
   const targetQuestion = attempt.questions.find((item) => item.question.id === questionId)?.question;
   if (!targetQuestion) throw new RuntimeError("QUESTION_NOT_IN_ATTEMPT", "Question tidak termasuk snapshot.");
-  const contract = getAssessmentRuntimeContract(attempt.attempt.assessmentType);
+  const contract = getAssessmentRuntimeContract(requireSupportedAssessmentType(attempt.attempt.assessmentType));
   const numericValue = Number(value);
   if (!Number.isInteger(numericValue) || !contract.scale.includes(numericValue)) {
     throw new RuntimeError("INVALID_ANSWER", `Jawaban harus menggunakan skala ${contract.scale.join("-")}.`);
@@ -357,9 +368,10 @@ async function scoreAttempt(id: string, completionMode: "SUBMITTED" | "TIMEOUT")
   const taxonomyVersion = String((attempt.raw.selectionSnapshot as Record<string, unknown>).taxonomyVersion ?? "TAXONOMY_V1");
   let result: AssessmentResult;
   try {
+    const assessmentType = requireSupportedAssessmentType(attempt.attempt.assessmentType);
     result = calculateUnifiedAssessmentResult(
-      attempt.attempt.assessmentType, questions, answers,
-      { attemptId: id, assessmentConfigurationVersion: attempt.attempt.assessmentConfigurationVersion, questionBankVersion: attempt.attempt.questionBankVersion, taxonomyVersion, scoringVersion: attempt.attempt.scoringVersion, completedAt, completionMode },
+      assessmentType, questions, answers,
+      { attemptId: id, assessmentConfigurationVersion: attempt.attempt.assessmentConfigurationVersion, questionBankVersion: attempt.attempt.questionBankVersion, taxonomyVersion, scoringVersion: attempt.attempt.scoringVersion, selectionAlgorithmVersion: attempt.attempt.selectionAlgorithmVersion, questionCount: attempt.questions.length, completedAt, completionMode },
     );
   } catch (error) {
     throw new RuntimeError("SCORING_FAILED", error instanceof Error ? error.message : "Scoring gagal.");

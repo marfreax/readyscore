@@ -1,19 +1,15 @@
-import { QuestionStatus, MappingStatus } from "@prisma/client";
+import { QuestionStatus, MappingStatus, AssessmentType as PrismaAssessmentType } from "@prisma/client";
 import { prisma } from "./db/prisma";
-import { ASSESSMENT_CONFIG, type AssessmentType } from "./assessment-config";
+import { type AssessmentType } from "./assessment-config";
+import { resolveActiveAssessmentConfiguration } from "./assessment/runtime-configuration";
 import type { SelectedQuestion } from "./assessment/question-engine";
 
 export const V13_2_SELECTION_ALGORITHM_VERSION = "V13.2_COMPOSITION_SELECTION_V1";
 
-const SUPPORTED_TYPES = ["riasec", "disc", "eq", "cognitive"] as const;
+const SUPPORTED_TYPES = ["free", "riasec", "disc", "eq", "cognitive"] as const;
 type SupportedAssessmentType = typeof SUPPORTED_TYPES[number];
 
-const TEST_TYPE_BY_ASSESSMENT: Record<SupportedAssessmentType, string> = {
-  riasec: "RIASEC",
-  disc: "DISC",
-  eq: "EQ",
-  cognitive: "COGNITIVE",
-};
+const TEST_TYPE_BY_ASSESSMENT: Record<SupportedAssessmentType, string> = { free: "RIASEC", riasec: "RIASEC", disc: "DISC", eq: "EQ", cognitive: "COGNITIVE" };
 
 export type RuntimePackageReadiness = {
   packageId: string;
@@ -60,12 +56,24 @@ function seededShuffle<T>(items: T[], seed: string): T[] {
   return result;
 }
 
-function nodeMatchesQuestion(node: { code: string; nodeType: string }, question: {
+function nodeMatchesQuestion(node: { code: string; name?: string; nodeType: string; metadata?: unknown }, question: {
   domain: string;
   subdomain: string | null;
   indicator: string | null;
 }) {
   const code = node.code.trim().toUpperCase();
+  const name = String(node.name ?? "").trim().toUpperCase();
+  const metadata = node.metadata && typeof node.metadata === "object" && !Array.isArray(node.metadata)
+    ? node.metadata as Record<string, unknown>
+    : {};
+  const aliases = Array.isArray(metadata.aliases)
+    ? metadata.aliases.map(String).map((value) => value.trim().toUpperCase())
+    : [];
+  const matches = (value: string | null | undefined) => {
+    const normalized = value?.trim().toUpperCase();
+    return Boolean(normalized && (normalized === code || normalized === name || aliases.includes(normalized)));
+  };
+
   const fields =
     node.nodeType.toUpperCase() === "DOMAIN"
       ? [question.domain]
@@ -75,7 +83,7 @@ function nodeMatchesQuestion(node: { code: string; nodeType: string }, question:
           ? [question.indicator]
           : [question.domain, question.subdomain, question.indicator];
 
-  return fields.some((value) => value?.trim().toUpperCase() === code);
+  return fields.some(matches);
 }
 
 async function loadEligibleQuestions(
@@ -102,78 +110,47 @@ async function loadEligibleQuestions(
   return [...latest.values()];
 }
 
-async function validatePublishedPackage(versionId: string, expectedTestTypeCode: string) {
+async function validatePublishedPackage(versionId: string, expectedAssessmentType: SupportedAssessmentType) {
   const version = await prisma.questionPackageVersion.findUnique({
     where: { id: versionId },
-    include: {
-      package: { include: { testType: true } },
-      taxonomy: true,
-      compositionRules: { include: { taxonomyNode: true } },
-    },
+    include: { package: { include: { testType: true } }, taxonomy: true, compositionRules: { include: { taxonomyNode: true } } },
   });
-
   if (!version) throw new PackageSelectionError("PACKAGE_VERSION_NOT_FOUND", "Question Package version tidak ditemukan.");
-  if (version.status !== "PUBLISHED") {
-    throw new PackageSelectionError("PACKAGE_NOT_PUBLISHED", "Question Package belum berstatus PUBLISHED.");
+  if (version.status !== "PUBLISHED") throw new PackageSelectionError("PACKAGE_NOT_PUBLISHED", "Question Package belum berstatus PUBLISHED.");
+  const metadata = version.metadata && typeof version.metadata === "object" && !Array.isArray(version.metadata) ? version.metadata as Record<string, unknown> : {};
+  const expectedPackageTestType = TEST_TYPE_BY_ASSESSMENT[expectedAssessmentType];
+  if (version.package.testType.code !== expectedPackageTestType) {
+    throw new PackageSelectionError("PACKAGE_ASSESSMENT_TYPE_MISMATCH", `Question Package TestType ${version.package.testType.code} tidak sesuai ${expectedPackageTestType}.`);
   }
-  if (version.package.testType.code !== expectedTestTypeCode) {
-    throw new PackageSelectionError("PACKAGE_TEST_TYPE_MISMATCH", "Question Package tidak sesuai Test Type.");
-  }
-  if (!version.taxonomy || version.taxonomy.status !== "ACTIVE") {
-    throw new PackageSelectionError("PACKAGE_TAXONOMY_NOT_ACTIVE", "Taxonomy package tidak aktif.");
-  }
-  if (version.taxonomy.testTypeId !== version.package.testTypeId) {
-    throw new PackageSelectionError("PACKAGE_TAXONOMY_TEST_TYPE_MISMATCH", "Taxonomy package tidak sesuai Test Type.");
-  }
-  const expectedScoringVersion = ASSESSMENT_CONFIG[
-    expectedTestTypeCode === "RIASEC" ? "riasec" :
-    expectedTestTypeCode === "DISC" ? "disc" :
-    expectedTestTypeCode === "EQ" ? "eq" : "cognitive"
-  ].scoringVersion;
-  const taxonomyMetadata =
-    version.taxonomy.metadata &&
-    typeof version.taxonomy.metadata === "object" &&
-    !Array.isArray(version.taxonomy.metadata)
-      ? version.taxonomy.metadata as Record<string, unknown>
-      : {};
-  if (typeof taxonomyMetadata.scoringVersion === "string" && taxonomyMetadata.scoringVersion !== expectedScoringVersion) {
-    throw new PackageSelectionError("PACKAGE_SCORING_MISMATCH", "Taxonomy package tidak kompatibel dengan scoring configuration aktif.");
-  }
-  if (!Number.isInteger(version.totalQuestions) || version.totalQuestions <= 0) {
-    throw new PackageSelectionError("INVALID_PACKAGE_TOTAL", "Total question package tidak valid.");
-  }
-  const expectedQuestionCount = ASSESSMENT_CONFIG[
-    expectedTestTypeCode === "RIASEC" ? "riasec" :
-    expectedTestTypeCode === "DISC" ? "disc" :
-    expectedTestTypeCode === "EQ" ? "eq" : "cognitive"
-  ].questionCount;
-  if (version.totalQuestions !== expectedQuestionCount) {
-    throw new PackageSelectionError("PACKAGE_QUESTION_COUNT_MISMATCH", "Total question package tidak kompatibel dengan assessment configuration aktif.");
-  }
-  if (!Number.isInteger(version.timeLimitSeconds) || version.timeLimitSeconds <= 0) {
-    throw new PackageSelectionError("INVALID_PACKAGE_TIMER", "Timer package tidak valid.");
-  }
-  if (version.timeLimitSeconds !== 1200) {
-    throw new PackageSelectionError("PACKAGE_PRODUCTION_TIMER_MISMATCH", "Production package harus menggunakan timer 1200 detik.");
-  }
-  if (!version.compositionRules.length) {
-    throw new PackageSelectionError("PACKAGE_COMPOSITION_MISSING", "Composition package belum dikonfigurasi.");
-  }
+  if (!version.taxonomy || version.taxonomy.status !== "ACTIVE") throw new PackageSelectionError("PACKAGE_TAXONOMY_NOT_ACTIVE", "Taxonomy package tidak aktif.");
+  if (version.taxonomy.testTypeId !== version.package.testTypeId) throw new PackageSelectionError("PACKAGE_TAXONOMY_TEST_TYPE_MISMATCH", "Taxonomy package tidak sesuai Test Type.");
+  if (!Number.isInteger(version.totalQuestions) || version.totalQuestions <= 0) throw new PackageSelectionError("INVALID_PACKAGE_TOTAL", "Total question package tidak valid.");
+  if (!Number.isInteger(version.timeLimitSeconds) || version.timeLimitSeconds < 0) throw new PackageSelectionError("INVALID_PACKAGE_TIMER", "Timer package tidak valid.");
+  if (!version.compositionRules.length) throw new PackageSelectionError("PACKAGE_COMPOSITION_MISSING", "Composition package belum dikonfigurasi.");
   const sum = version.compositionRules.reduce((n, rule) => n + rule.requiredCount, 0);
-  if (sum !== version.totalQuestions) {
-    throw new PackageSelectionError("PACKAGE_COMPOSITION_TOTAL_MISMATCH", "Composition package tidak sama dengan total question.");
-  }
-  if (version.compositionRules.some((rule) => !Number.isInteger(rule.requiredCount) || rule.requiredCount <= 0)) {
-    throw new PackageSelectionError("PACKAGE_COMPOSITION_INVALID", "Composition package memiliki count tidak valid.");
-  }
-  if (new Set(version.compositionRules.map((rule) => rule.taxonomyNodeId)).size !== version.compositionRules.length) {
-    throw new PackageSelectionError("PACKAGE_COMPOSITION_DUPLICATE", "Composition package memiliki taxonomy node duplikat.");
-  }
-  if (version.compositionRules.some((rule) => rule.taxonomyNode.taxonomyId !== version.taxonomyVersionId)) {
-    throw new PackageSelectionError("PACKAGE_COMPOSITION_TAXONOMY_MISMATCH", "Composition node tidak berada pada taxonomy package.");
-  }
-
+  if (sum !== version.totalQuestions) throw new PackageSelectionError("PACKAGE_COMPOSITION_TOTAL_MISMATCH", "Composition package tidak sama dengan total question.");
+  if (version.compositionRules.some((rule) => !Number.isInteger(rule.requiredCount) || rule.requiredCount <= 0)) throw new PackageSelectionError("PACKAGE_COMPOSITION_INVALID", "Composition package memiliki count tidak valid.");
+  if (new Set(version.compositionRules.map((rule) => rule.taxonomyNodeId)).size !== version.compositionRules.length) throw new PackageSelectionError("PACKAGE_COMPOSITION_DUPLICATE", "Composition package memiliki taxonomy node duplikat.");
+  if (version.compositionRules.some((rule) => rule.taxonomyNode.taxonomyId !== version.taxonomyVersionId)) throw new PackageSelectionError("PACKAGE_COMPOSITION_TAXONOMY_MISMATCH", "Composition node tidak berada pada taxonomy package.");
   return version;
+}
+
+async function loadEligibleQuestionsForPackage(version: Awaited<ReturnType<typeof validatePublishedPackage>>) {
+  const metadata = version.metadata && typeof version.metadata === "object" && !Array.isArray(version.metadata) ? version.metadata as Record<string, unknown> : {};
+  const scope = String(metadata.selectionScope ?? (metadata.runtimeAssessmentType === "FREE" ? "RIASEC_FREE" : "TEST_TYPE"));
+  if (scope === "RIASEC_FREE") {
+    const rows = await prisma.questionVersion.findMany({
+      where: { status: QuestionStatus.PUBLISHED, mappingStatus: MappingStatus.APPROVED, text: { not: "" } },
+      include: { question: true, testType: true },
+      orderBy: [{ questionId: "asc" }, { createdAt: "desc" }, { id: "desc" }],
+    });
+    const latest = new Map<string, (typeof rows)[number]>();
+    for (const row of rows) if (!latest.has(row.questionId)) latest.set(row.questionId, row);
+    return [...latest.values()].filter((row) => {
+      return row.testType?.code === "RIASEC" && row.taxonomyVersion === "RIASEC_TAXONOMY_V2" && /^[RIASEC]$/.test(row.domain.trim().toUpperCase());
+    });
+  }
+  return loadEligibleQuestions(version.package.testTypeId, version.taxonomy!.version);
 }
 
 
@@ -291,77 +268,20 @@ function buildCompositionSelection(
 }
 
 async function findRuntimeEligiblePackages(type: SupportedAssessmentType) {
-  const expectedCode = TEST_TYPE_BY_ASSESSMENT[type];
-  const versions = await prisma.questionPackageVersion.findMany({
-    where: {
-      status: "PUBLISHED",
-      package: { testType: { code: expectedCode } },
-      taxonomy: { status: "ACTIVE" },
-    },
-    include: {
-      package: { include: { testType: true } },
-      taxonomy: true,
-      compositionRules: { include: { taxonomyNode: true } },
-    },
-    orderBy: [{ packageId: "asc" }, { updatedAt: "desc" }, { id: "desc" }],
-  });
-
-  // One published version per logical package is the runtime boundary.
-  const latestPublished = new Map<string, (typeof versions)[number]>();
-  for (const version of versions) {
-    if (!latestPublished.has(version.packageId)) latestPublished.set(version.packageId, version);
-  }
-
-  const candidates: RuntimePackageReadiness[] = [];
-  for (const raw of latestPublished.values()) {
-    let version;
-    try {
-      version = await validatePublishedPackage(raw.id, expectedCode);
-    } catch {
-      continue;
-    }
-
-    const eligible = await loadEligibleQuestions(version.package.testTypeId, version.taxonomy!.version);
-    const composition = version.compositionRules.map((rule) => {
-      const availableCount = eligible.filter((q) => nodeMatchesQuestion(rule.taxonomyNode, q)).length;
-      return {
-        taxonomyNodeId: rule.taxonomyNodeId,
-        taxonomyNodeCode: rule.taxonomyNode.code,
-        taxonomyNodeName: rule.taxonomyNode.name,
-        nodeType: rule.taxonomyNode.nodeType,
-        requiredCount: rule.requiredCount,
-        availableCount,
-      };
-    });
-
-    if (composition.some((item) => item.availableCount < item.requiredCount)) continue;
-    if (!buildCompositionSelection(eligible, version.compositionRules, `READINESS:${version.id}`)) continue;
-
-    const selectionAlgorithmVersion =
-      version.metadata &&
-      typeof version.metadata === "object" &&
-      !Array.isArray(version.metadata) &&
-      typeof (version.metadata as Record<string, unknown>).selectionAlgorithmVersion === "string"
-        ? String((version.metadata as Record<string, unknown>).selectionAlgorithmVersion)
-        : V13_2_SELECTION_ALGORITHM_VERSION;
-
-    candidates.push({
-      packageId: version.packageId,
-      packageCode: version.package.code,
-      packageVersionId: version.id,
-      packageVersion: version.version,
-      testTypeId: version.package.testTypeId,
-      testTypeCode: version.package.testType.code,
-      taxonomyVersionId: version.taxonomyVersionId!,
-      taxonomyVersion: version.taxonomy!.version,
-      totalQuestions: version.totalQuestions,
-      timeLimitSeconds: version.timeLimitSeconds,
-      selectionAlgorithmVersion,
-      composition,
-    });
-  }
-
-  return candidates;
+  const config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType);
+  const raw = config.questionPackageVersion;
+  if (!raw) return [];
+  let version;
+  try { version = await validatePublishedPackage(raw.id, type); } catch { return []; }
+  const eligible = await loadEligibleQuestionsForPackage(version);
+  const composition = version.compositionRules.map((rule) => ({
+    taxonomyNodeId: rule.taxonomyNodeId, taxonomyNodeCode: rule.taxonomyNode.code, taxonomyNodeName: rule.taxonomyNode.name, nodeType: rule.taxonomyNode.nodeType, requiredCount: rule.requiredCount, availableCount: eligible.filter((q) => nodeMatchesQuestion(rule.taxonomyNode, q)).length,
+  }));
+  if (composition.some((item) => item.availableCount < item.requiredCount)) return [];
+  if (!buildCompositionSelection(eligible, version.compositionRules, `READINESS:${version.id}`)) return [];
+  const metadata = version.metadata && typeof version.metadata === "object" && !Array.isArray(version.metadata) ? version.metadata as Record<string, unknown> : {};
+  const selectionAlgorithmVersion = typeof metadata.selectionAlgorithmVersion === "string" ? metadata.selectionAlgorithmVersion : config.selectionAlgorithmVersion;
+  return [{ packageId: version.packageId, packageCode: version.package.code, packageVersionId: version.id, packageVersion: version.version, testTypeId: version.package.testTypeId, testTypeCode: version.package.testType.code, taxonomyVersionId: version.taxonomyVersionId!, taxonomyVersion: version.taxonomy!.version, totalQuestions: version.totalQuestions, timeLimitSeconds: version.timeLimitSeconds, selectionAlgorithmVersion, composition }];
 }
 
 export async function getRuntimeEligibleQuestionPackages(type: AssessmentType) {
@@ -385,13 +305,10 @@ export async function selectPackageAndQuestions(type: SupportedAssessmentType, s
 
   const packageVersion = await validatePublishedPackage(
     selectedPackage.packageVersionId,
-    TEST_TYPE_BY_ASSESSMENT[type],
+    type,
   );
 
-  const eligible = await loadEligibleQuestions(
-    selectedPackage.testTypeId,
-    selectedPackage.taxonomyVersion,
-  );
+  const eligible = await loadEligibleQuestionsForPackage(packageVersion);
 
   const selectedRows = buildCompositionSelection(
     eligible,

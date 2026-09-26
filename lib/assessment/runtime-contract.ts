@@ -4,19 +4,19 @@ import type { Answer, Question, QuestionAnswerType } from "./types";
 export type AssessmentRuntimeContract = {
   readonly assessmentType: AssessmentType;
   readonly answerType: QuestionAnswerType;
-  readonly questionCount: number;
+  /** Runtime count is owned by the active DB AssessmentConfigurationVersion. */
+  readonly questionCount: number | null;
   readonly scale: readonly number[];
   readonly optionsRequired: boolean;
   readonly scoringMetadataRequired: "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "LEGACY";
 };
 
 const CONTRACTS: Record<AssessmentType, AssessmentRuntimeContract> = {
-  free: { assessmentType: "free", answerType: "LIKERT_5", questionCount: 10, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "RIASEC" },
-  premium: { assessmentType: "premium", answerType: "LIKERT_5", questionCount: 100, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "LEGACY" },
-  cognitive: { assessmentType: "cognitive", answerType: "SINGLE_CHOICE_4", questionCount: 40, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "COGNITIVE" },
-  eq: { assessmentType: "eq", answerType: "SINGLE_CHOICE_4", questionCount: 50, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "EQ" },
-  disc: { assessmentType: "disc", answerType: "SINGLE_CHOICE_4", questionCount: 80, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "DISC" },
-  riasec: { assessmentType: "riasec", answerType: "LIKERT_5", questionCount: 60, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "RIASEC" },
+  free: { assessmentType: "free", answerType: "LIKERT_5", questionCount: null, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "RIASEC" },
+  cognitive: { assessmentType: "cognitive", answerType: "SINGLE_CHOICE_4", questionCount: null, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "COGNITIVE" },
+  eq: { assessmentType: "eq", answerType: "SINGLE_CHOICE_4", questionCount: null, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "EQ" },
+  disc: { assessmentType: "disc", answerType: "SINGLE_CHOICE_4", questionCount: null, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "DISC" },
+  riasec: { assessmentType: "riasec", answerType: "LIKERT_5", questionCount: null, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "RIASEC" },
 };
 
 export function getAssessmentRuntimeContract(type: AssessmentType): AssessmentRuntimeContract {
@@ -72,10 +72,14 @@ function assertQuestionSemantics(type: AssessmentType, question: Question) {
   }
 }
 
-export function validateAssessmentRuntimeQuestions(type: AssessmentType, questions: Question[]): void {
+export function validateAssessmentRuntimeQuestions(
+  type: AssessmentType,
+  questions: Question[],
+  expectedQuestionCount?: number,
+): void {
   const contract = CONTRACTS[type];
-  if (questions.length !== contract.questionCount) {
-    throw new Error(`${type} requires exactly ${contract.questionCount} questions; received ${questions.length}.`);
+  if (expectedQuestionCount !== undefined && questions.length !== expectedQuestionCount) {
+    throw new Error(`${type} requires exactly ${expectedQuestionCount} questions from the active configuration; received ${questions.length}.`);
   }
   const ids = new Set<string>();
   for (const question of questions) {
@@ -85,8 +89,13 @@ export function validateAssessmentRuntimeQuestions(type: AssessmentType, questio
   }
 }
 
-export function validateAssessmentRuntimeAnswers(type: AssessmentType, questions: Question[], answers: Answer[]): void {
-  validateAssessmentRuntimeQuestions(type, questions);
+export function validateAssessmentRuntimeAnswers(
+  type: AssessmentType,
+  questions: Question[],
+  answers: Answer[],
+  expectedQuestionCount?: number,
+): void {
+  validateAssessmentRuntimeQuestions(type, questions, expectedQuestionCount);
   if (answers.length !== questions.length) {
     throw new Error(`${type} requires ${questions.length} answers; received ${answers.length}.`);
   }

@@ -117,11 +117,20 @@ function leadContext(lead: {
   };
 }
 
-async function resolveExactBusinessLead(phoneNumber: string) {
+function whatsappIdentityVariants(phoneNumber: string): string[] {
   const normalized = normalizeWhatsAppPhone(phoneNumber);
-  if (!normalized) return null;
-  return prisma.businessLead.findUnique({
-    where: { whatsapp: normalized },
+  if (!normalized) return [];
+  const national = `0${normalized.slice(3)}`;
+  const international = normalized.slice(1);
+  return Array.from(new Set([normalized, international, national]));
+}
+
+async function resolveExactBusinessLead(phoneNumber: string) {
+  const variants = whatsappIdentityVariants(phoneNumber);
+  if (!variants.length) return null;
+  return prisma.businessLead.findFirst({
+    where: { whatsapp: { in: variants } },
+    orderBy: [{ updatedAt: "desc" }, { id: "desc" }],
     select: { id: true },
   });
 }
@@ -236,7 +245,7 @@ export async function getAdminWhatsAppConversation(id: string) {
       } : null,
       matching: {
         strategy: "EXACT_WHATSAPP_THEN_EXPLICIT_LINK",
-        matchedBy: lead ? (lead.whatsapp === conversation.phoneNumber ? "WHATSAPP" : "EXPLICIT_ADMIN_LINK") : null,
+        matchedBy: lead ? (whatsappIdentityVariants(conversation.phoneNumber).includes(lead.whatsapp) ? "WHATSAPP" : "EXPLICIT_ADMIN_LINK") : null,
       },
     },
   };
@@ -289,7 +298,7 @@ export async function searchAdminWhatsAppLeadCandidates(conversationId: string, 
     items: leads.map((lead) => ({
       id: lead.id, name: lead.name, whatsapp: lead.whatsapp, email: lead.email,
       source: lead.source, status: lead.status, assessmentAttemptId: lead.assessmentAttemptId,
-      exactWhatsAppMatch: lead.whatsapp === conversation.phoneNumber,
+      exactWhatsAppMatch: whatsappIdentityVariants(conversation.phoneNumber).includes(lead.whatsapp),
     })),
   };
 }

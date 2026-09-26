@@ -17,6 +17,8 @@ export type ScoringContext = {
     questionBankVersion: string;
     taxonomyVersion: string;
     scoringVersion: string;
+    selectionAlgorithmVersion: string;
+    questionCount: number;
     completedAt: string;
     completionMode?: "SUBMITTED" | "TIMEOUT";
   };

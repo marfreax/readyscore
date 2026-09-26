@@ -1,4 +1,5 @@
-export type AssessmentType = "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
+export type AssessmentType = "free" | "riasec" | "disc" | "eq" | "cognitive";
+export type LegacyAssessmentType = "premium";
 
 export const ASSESSMENT_CONFIG = {
   free: {
@@ -53,7 +54,7 @@ export const ASSESSMENT_CONFIG = {
     selectionAlgorithmVersion: "RIASEC_SELECTION_V2",
     status: "PUBLISHED" as const,
   },
-} satisfies Record<AssessmentType, {
+} satisfies Record<AssessmentType | LegacyAssessmentType, {
   id: string;
   version: string;
   questionCount: number;
@@ -66,7 +67,7 @@ export const ASSESSMENT_CONFIG = {
 
 /**
  * Immutable audit evidence for the pre-V8 Cognitive/assessment configuration
- * boundary. This is historical metadata only; runtime MUST use ASSESSMENT_CONFIG.
+ * boundary. This is historical metadata only; primary runtime MUST NOT use this registry as its authority.
  */
 export const LEGACY_ASSESSMENT_CONFIG_V1 = {
   cognitive: {

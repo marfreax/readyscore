@@ -81,7 +81,6 @@ export default async function AdminOverviewPage() {
           ["Validation issues", dashboard.totals.validationIssues, "/admin/question-bank"],
           ["Mapping issues", dashboard.totals.mappingIssues, "/admin/review"],
           ["Configurations", dashboard.totals.configurations, "/admin/assessment-config"],
-          ["Question packages", "→", "/admin/question-packages"],
           ["Blocked configs", dashboard.totals.blockedConfigurations, "/admin/assessment-config"],
         ].map(([label, value, href]) => (
           <Link key={label} href={href as string} className="rounded-2xl border bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">

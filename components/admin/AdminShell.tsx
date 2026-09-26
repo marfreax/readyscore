@@ -16,7 +16,6 @@ import {
   Users,
   X,
   Menu,
-  Package,
   MessageCircle,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -30,7 +29,6 @@ const groups = [
     label: "CONTENT",
     items: [
       { key: "questions", href: "/admin/question-bank", label: "Question Bank", icon: ClipboardList },
-      { key: "packages", href: "/admin/question-packages", label: "Question Packages", icon: Package },
       { key: "review", href: "/admin/review", label: "Review & Publishing", icon: FileCheck2 },
       { key: "config", href: "/admin/assessment-config", label: "Assessment Configuration", icon: Settings2 },
     ],

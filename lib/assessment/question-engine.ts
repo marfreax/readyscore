@@ -1,7 +1,9 @@
-import { ASSESSMENT_CONFIG, type AssessmentType } from "../assessment-config";
+import { type AssessmentType } from "../assessment-config";
 import { getPublishedEligibleQuestions } from "../question-bank-repository";
 import { getPublishedQuestionBank } from "../catalog/question-bank";
 import { getAssessmentReadyQuestions } from "./question-bank";
+import { resolveActiveAssessmentConfiguration } from "./runtime-configuration";
+import { AssessmentType as PrismaAssessmentType } from "@prisma/client";
 import type { Question } from "./types";
 
 export class SelectionError extends Error {
@@ -54,7 +56,7 @@ const PREMIUM_DOMAIN_QUOTAS: Array<{ label: string; aliases: string[]; quota: nu
 ];
 
 export async function selectQuestions(type: AssessmentType, seed?: string): Promise<SelectedQuestion[]> {
-  const config = ASSESSMENT_CONFIG[type];
+  const config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType);
   const eligible = type === "free" || type === "riasec" || type === "disc" || type === "eq" || type === "cognitive"
     ? (await getPublishedQuestionBank(type === "free" || type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE"))
         .filter((q) => (type === "free" || type === "riasec") ? q.taxonomyVersion === "RIASEC_TAXONOMY_V2" : true)
@@ -84,9 +86,7 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
 
   const scopedEligible = type === "free"
     ? eligible.filter((q) => q.domain.trim().toUpperCase().match(/^[RIASEC]$/))
-    : type === "premium"
-      ? eligible.filter((q) => !q.id.toUpperCase().startsWith("DISC-"))
-      : eligible;
+    : eligible;
 
   if (scopedEligible.length < config.questionCount) {
     throw new SelectionError(
@@ -252,27 +252,17 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
 
 export function snapshotFromSelection(
   type: AssessmentType,
-  args: { attemptId: string; attemptSeed: string; questionBankVersion: string },
+  args: { attemptId: string; attemptSeed: string; questionBankVersion: string; assessmentConfigurationVersion?: string; questionBankVersionOverride?: string; taxonomyVersion?: string; scoringVersion?: string; selectionAlgorithmVersion?: string },
   selected: SelectedQuestion[],
 ) {
-  const config = ASSESSMENT_CONFIG[type];
   return {
     attemptId: args.attemptId,
     assessmentType: type,
-    assessmentConfigurationVersion: config.version,
+    assessmentConfigurationVersion: args.assessmentConfigurationVersion ?? "LEGACY_COMPAT",
     questionBankVersion: args.questionBankVersion,
-    taxonomyVersion:
-      type === "cognitive"
-        ? (selected[0]?.taxonomyVersion ?? "COGNITIVE_TAXONOMY_V2")
-        : type === "disc"
-          ? (selected[0]?.taxonomyVersion ?? "DISC_TAXONOMY_V2")
-          : type === "eq"
-            ? "EQ_TAXONOMY_V2"
-            : type === "riasec"
-              ? (selected[0]?.taxonomyVersion ?? "RIASEC_TAXONOMY_V2")
-              : "TAXONOMY_V1",
-    scoringVersion: config.scoringVersion,
-    selectionAlgorithmVersion: config.selectionAlgorithmVersion,
+    taxonomyVersion: args.taxonomyVersion ?? selected[0]?.taxonomyVersion ?? "TAXONOMY_LEGACY_COMPAT",
+    scoringVersion: args.scoringVersion ?? "LEGACY_COMPAT",
+    selectionAlgorithmVersion: args.selectionAlgorithmVersion ?? "LEGACY_COMPAT",
     attemptSeed: args.attemptSeed,
     selectedQuestionIds: selected.map((q) => q.id),
     selectedQuestionVersionIds: selected.map((q) => q.questionVersionId),

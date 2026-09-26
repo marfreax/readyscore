@@ -19,16 +19,39 @@ export function validateAdminWhatsAppText(value: unknown): string {
   return text;
 }
 
-export async function sendAdminWhatsAppText(conversationId: string, rawText: unknown, actorUserId?: string) {
+export async function sendAdminWhatsAppText(conversationId: string, rawText: unknown, actorUserId?: string, clientRequestId?: string) {
   const text = validateAdminWhatsAppText(rawText);
   const conversation = await prisma.whatsAppConversation.findUnique({ where: { id: conversationId }, select: { id: true, channel: true, phoneNumber: true } });
   if (!conversation || conversation.channel !== "WHATSAPP") throw new AdminWhatsAppReplyError("WHATSAPP_CONVERSATION_NOT_FOUND");
   const to = normalizeWhatsAppPhone(conversation.phoneNumber);
   if (!to) throw new AdminWhatsAppReplyError("WHATSAPP_RECIPIENT_INVALID");
 
-  const pending = await prisma.whatsAppMessage.create({
-    data: { conversationId, direction: "OUTBOUND", messageType: "TEXT", status: "SENDING", text },
-  });
+  const requestId = clientRequestId?.trim() || null;
+  if (requestId && requestId.length > 200) throw new AdminWhatsAppReplyError("WHATSAPP_IDEMPOTENCY_KEY_TOO_LONG");
+
+  if (requestId) {
+    const existing = await prisma.whatsAppMessage.findUnique({ where: { clientRequestId: requestId } });
+    if (existing) {
+      if (existing.conversationId !== conversationId || existing.direction !== "OUTBOUND") {
+        throw new AdminWhatsAppReplyError("WHATSAPP_IDEMPOTENCY_KEY_CONFLICT");
+      }
+      return existing;
+    }
+  }
+
+  let pending: { id: string };
+  try {
+    pending = await prisma.whatsAppMessage.create({
+      data: { conversationId, direction: "OUTBOUND", messageType: "TEXT", status: "SENDING", text, clientRequestId: requestId },
+    });
+  } catch (error) {
+    if (requestId && error && typeof error === "object" && "code" in error && (error as { code?: unknown }).code === "P2002") {
+      const existing = await prisma.whatsAppMessage.findUnique({ where: { clientRequestId: requestId } });
+      if (existing && existing.conversationId === conversationId && existing.direction === "OUTBOUND") return existing;
+      throw new AdminWhatsAppReplyError("WHATSAPP_IDEMPOTENCY_KEY_CONFLICT");
+    }
+    throw error;
+  }
 
   try {
     const result = await sendWhatsAppText(to, text);

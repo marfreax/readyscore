@@ -17,5 +17,7 @@ export type RuntimeScoringMetadata = {
   questionBankVersion: string;
   taxonomyVersion: string;
   scoringVersion: string;
+  selectionAlgorithmVersion: string;
+  questionCount: number;
   completedAt: string;
 };

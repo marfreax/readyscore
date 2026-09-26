@@ -33,6 +33,10 @@ export type PackageValidation = {
   checks: PackageValidationCheck[];
 };
 
+function ensureNonNegativeInteger(value: number, code: string) {
+  if (!Number.isInteger(value) || value < 0) throw new Error(code);
+}
+
 function ensurePositiveInteger(value: number, code: string) {
   if (!Number.isInteger(value) || value <= 0) throw new Error(code);
 }
@@ -43,7 +47,7 @@ function uniqueRules(rules: PackageCompositionInput[]) {
 
 async function validateInput(tx: Prisma.TransactionClient, input: PackageInput) {
   ensurePositiveInteger(input.totalQuestions, "INVALID_TOTAL_QUESTIONS");
-  ensurePositiveInteger(input.timeLimitSeconds, "INVALID_TIME_LIMIT");
+  ensureNonNegativeInteger(input.timeLimitSeconds, "INVALID_TIME_LIMIT");
   const configuredTestType = await tx.testType.findUnique({ where: { id: input.testTypeId }, select: { code: true } });
   if (configuredTestType && ["RIASEC", "DISC", "EQ", "COGNITIVE"].includes(configuredTestType.code) && input.timeLimitSeconds !== 1200) {
     throw new Error("PRODUCTION_TIMER_MUST_BE_1200");
@@ -96,7 +100,7 @@ export async function validateQuestionPackageVersion(versionId: string): Promise
   const checks: PackageValidationCheck[] = [];
   checks.push({ key: "total-questions", label: "Total question count", status: version.totalQuestions > 0 ? "PASS" : "BLOCK", detail: `${version.totalQuestions} questions configured` });
   const productionTestType = ["RIASEC", "DISC", "EQ", "COGNITIVE"].includes(version.package.testType.code);
-  checks.push({ key: "timer", label: "Time limit", status: version.timeLimitSeconds > 0 && (!productionTestType || version.timeLimitSeconds === 1200) ? "PASS" : "BLOCK", detail: productionTestType ? `${version.timeLimitSeconds} seconds configured / 1200 required` : `${version.timeLimitSeconds} seconds configured` });
+  checks.push({ key: "timer", label: "Time limit", status: version.timeLimitSeconds >= 0 && (!productionTestType || version.timeLimitSeconds === 1200) ? "PASS" : "BLOCK", detail: productionTestType ? `${version.timeLimitSeconds} seconds configured / 1200 required` : `${version.timeLimitSeconds} seconds configured` });
   checks.push({ key: "taxonomy", label: "Taxonomy linkage", status: version.taxonomy && version.taxonomy.testTypeId === version.package.testTypeId ? "PASS" : "BLOCK", detail: version.taxonomy ? `${version.taxonomy.version}` : "Missing taxonomy" });
 
   const rules = version.compositionRules;

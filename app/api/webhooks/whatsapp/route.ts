@@ -6,6 +6,8 @@ import { isWhatsAppWebhookPayload, normalizeWhatsAppWebhookPayload } from "../..
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
+const MAX_WEBHOOK_BODY_BYTES = 1_000_000;
+
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const mode = url.searchParams.get("hub.mode");
@@ -19,6 +21,9 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const rawBody = Buffer.from(await request.arrayBuffer());
+  if (rawBody.byteLength > MAX_WEBHOOK_BODY_BYTES) {
+    return NextResponse.json({ ok: false, error: { code: "WHATSAPP_WEBHOOK_PAYLOAD_TOO_LARGE" } }, { status: 413 });
+  }
   if (!verifyWhatsAppSignature(rawBody, request.headers.get("x-hub-signature-256"))) {
     return NextResponse.json({ ok: false, error: { code: "INVALID_WHATSAPP_SIGNATURE" } }, { status: 401 });
   }

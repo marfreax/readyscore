@@ -35,8 +35,22 @@ function mapProviderStatus(status: string) {
   }
 }
 
+function whatsappIdentityVariants(phoneNumber: string): string[] {
+  const normalized = normalizeWhatsAppPhone(phoneNumber);
+  if (!normalized) return [];
+  const national = `0${normalized.slice(3)}`;
+  const international = normalized.slice(1);
+  return Array.from(new Set([normalized, international, national]));
+}
+
 async function findBusinessLead(phoneNumber: string) {
-  return prisma.businessLead.findUnique({ where: { whatsapp: phoneNumber }, select: { id: true } });
+  const variants = whatsappIdentityVariants(phoneNumber);
+  if (!variants.length) return null;
+  return prisma.businessLead.findFirst({
+    where: { whatsapp: { in: variants } },
+    orderBy: [{ updatedAt: "desc" }, { id: "desc" }],
+    select: { id: true },
+  });
 }
 
 async function getOrCreateConversation(phoneNumber: string, displayName: string | null, at: Date) {

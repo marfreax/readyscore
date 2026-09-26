@@ -47,6 +47,8 @@ const result = calculateRuntimeAssessmentResult(
     questionBankVersion: "RIASEC_QB_V1",
     taxonomyVersion: "RIASEC_TAXONOMY_V1",
     scoringVersion: "RIASEC_SCORE_V1",
+    selectionAlgorithmVersion: "RIASEC_SELECTION_V1",
+    questionCount: questions.length,
     completedAt: "2026-08-22T00:00:00.000Z",
   },
 );

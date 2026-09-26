@@ -14,6 +14,7 @@ export type PersistedAttempt = {
   assessmentConfigurationVersion: string;
   questionBankVersion: string;
   scoringVersion: string;
+  selectionAlgorithmVersion: string;
 };
 
 function toAttempt(row: {
@@ -27,6 +28,7 @@ function toAttempt(row: {
   assessmentConfigurationVersion: string;
   questionBankVersion: string;
   scoringVersion: string;
+  selectionAlgorithmVersion: string;
 }): PersistedAttempt {
   return {
     id: row.id,
@@ -39,6 +41,7 @@ function toAttempt(row: {
     assessmentConfigurationVersion: row.assessmentConfigurationVersion,
     questionBankVersion: row.questionBankVersion,
     scoringVersion: row.scoringVersion,
+    selectionAlgorithmVersion: row.selectionAlgorithmVersion,
   };
 }
 
@@ -106,6 +109,7 @@ export async function createReassessmentAttempt(input: {
   taxonomyVersion: string;
   scoringVersion: string;
   selectionAlgorithmVersion: string;
+  questionPackageVersionId?: string | null;
   attemptSeed: string;
   selectionSnapshot: Record<string, unknown>;
   selectedQuestions: SelectedQuestion[];
@@ -164,6 +168,7 @@ export async function createReassessmentAttempt(input: {
         taxonomyVersion: input.taxonomyVersion,
         scoringVersion: input.scoringVersion,
         selectionAlgorithmVersion: input.selectionAlgorithmVersion,
+        questionPackageVersionId: input.questionPackageVersionId ?? null,
         attemptSeed: input.attemptSeed,
         selectionSnapshot: input.selectionSnapshot as Prisma.InputJsonValue,
         startedAt: input.startedAt,
@@ -210,6 +215,7 @@ export async function createAttempt(input: {
   taxonomyVersion: string;
   scoringVersion: string;
   selectionAlgorithmVersion: string;
+  questionPackageVersionId?: string | null;
   attemptSeed: string;
   selectionSnapshot: Record<string, unknown>;
   selectedQuestions: SelectedQuestion[];
@@ -230,6 +236,7 @@ export async function createAttempt(input: {
         taxonomyVersion: input.taxonomyVersion,
         scoringVersion: input.scoringVersion,
         selectionAlgorithmVersion: input.selectionAlgorithmVersion,
+        questionPackageVersionId: input.questionPackageVersionId ?? null,
         attemptSeed: input.attemptSeed,
         selectionSnapshot: input.selectionSnapshot as Prisma.InputJsonValue,
         startedAt: input.startedAt,

@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
   try {
     const body = (await request.json().catch(() => ({}))) as { type?: AssessmentType };
-    if (body.type !== "free" && body.type !== "premium" && body.type !== "riasec" && body.type !== "disc" && body.type !== "eq" && body.type !== "cognitive") {
+    if (body.type !== "free" && body.type !== "riasec" && body.type !== "disc" && body.type !== "eq" && body.type !== "cognitive") {
       return NextResponse.json(
         { ok: false, error: { code: "INVALID_ASSESSMENT_TYPE", message: "Tipe assessment tidak valid." } },
         { status: 400 },
