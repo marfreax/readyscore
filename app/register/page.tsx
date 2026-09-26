@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Script from "next/script";
 import { FormEvent, useState } from "react";
 
 export default function RegisterPage() {
@@ -33,7 +34,26 @@ export default function RegisterPage() {
 
   return (
     <main className="min-h-screen bg-slate-950 px-4 py-8 text-white sm:px-6 sm:py-12">
-      <div className="mx-auto flex min-h-[80vh] w-full max-w-md items-center">
+     <Script
+  id="meta-pixel"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1600994505022613');
+      fbq('track', 'PageView');
+    `,
+  }}
+/>
+
+       <div className="mx-auto flex min-h-[80vh] w-full max-w-md items-center">
         <section className="rs-card w-full border-white/10 bg-white p-6 text-slate-950 shadow-2xl sm:p-8">
           <p className="rs-eyebrow">ReadyScore</p>
           <h1 className="rs-title mt-3 text-3xl">Buat akun</h1>
