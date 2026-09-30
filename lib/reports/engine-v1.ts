@@ -7,6 +7,8 @@ import {
 
 export type ReportInput = {
   ownerUserId: string;
+  participantName: string;
+  accountOwnerName: string;
   attempts: Array<{
     id: string;
     assessmentType: string;
@@ -52,6 +54,9 @@ export function buildReportSummary(input: ReportInput, generatedAt = new Date().
     reportId: `report-${input.ownerUserId}`,
     generatedAt,
     ownerUserId: input.ownerUserId,
+    participantName: input.participantName,
+    accountOwnerName: input.accountOwnerName,
+    completedAt: assessments.find((item) => item.status === "COMPLETED" && item.resultAvailable)?.completedAt ?? null,
     status: completedAssessmentCount > 0 ? "AVAILABLE" : "LIMITED",
     assessmentCount: assessments.length,
     completedAssessmentCount,

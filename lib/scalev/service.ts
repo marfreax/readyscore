@@ -226,7 +226,7 @@ export async function fulfillScalevPayment(input: {
       if (existing.status !== "FULFILLED") {
         await grantReassessmentCredit({
           userId,
-          testType: mapping.reassessmentTestType.toLowerCase() as "riasec" | "disc" | "eq" | "cognitive",
+          testType: (mapping.reassessmentTestType === "IQ" ? "cognitive" : mapping.reassessmentTestType.toLowerCase().replace(/_/g, "-")) as "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference",
           source: `SCALEV:${input.orderId}`,
         });
         await prisma.scalevAddOnPurchase.update({
@@ -258,7 +258,7 @@ export async function fulfillScalevPayment(input: {
 
     await grantReassessmentCredit({
       userId,
-      testType: mapping.reassessmentTestType.toLowerCase() as "riasec" | "disc" | "eq" | "cognitive",
+      testType: (mapping.reassessmentTestType === "IQ" ? "cognitive" : mapping.reassessmentTestType.toLowerCase().replace(/_/g, "-")) as "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference",
       source: `SCALEV:${input.orderId}`,
     });
     await prisma.scalevAddOnPurchase.update({ where: { id: purchase.id }, data: { status: "FULFILLED" } });

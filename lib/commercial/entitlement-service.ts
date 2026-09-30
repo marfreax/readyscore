@@ -1,4 +1,5 @@
 import { prisma } from "../db/prisma";
+import { ensureOwnerSubject } from "../subjects/service";
 import {
   getSingleTestEntitlements,
   type CommercialTier,
@@ -9,6 +10,7 @@ import {
 
 export type EntitlementRef = {
   userId: string;
+  subjectId?: string;
   type: EntitlementType;
   resourceType: EntitlementResourceType;
   resourceKey: string;
@@ -20,6 +22,10 @@ function activeWindow(now = new Date()) {
     startsAt: { lte: now },
     OR: [{ endsAt: null }, { endsAt: { gt: now } }],
   };
+}
+
+async function resolveSubjectId(userId: string, subjectId?: string) {
+  return subjectId ?? (await ensureOwnerSubject(userId)).id;
 }
 
 /**
@@ -35,6 +41,7 @@ export async function hasEntitlement(
     prisma.userEntitlement.findFirst({
       where: {
         userId: ref.userId,
+        ...(ref.subjectId ? { subjectId: ref.subjectId } : {}),
         type: ref.type,
         resourceType: ref.resourceType,
         resourceKey: ref.resourceKey,
@@ -45,6 +52,7 @@ export async function hasEntitlement(
     prisma.userAddOnEntitlement.findFirst({
       where: {
         userId: ref.userId,
+        ...(ref.subjectId ? { subjectId: ref.subjectId } : {}),
         type: ref.type,
         resourceType: ref.resourceType,
         resourceKey: ref.resourceKey,
@@ -86,10 +94,12 @@ export async function hasTestAccess(
   userId: string,
   testType: string,
   now = new Date(),
+  subjectId?: string,
 ) {
   return hasEntitlement(
     {
       userId,
+      subjectId,
       type: "TEST_ACCESS",
       resourceType: "TEST_TYPE",
       resourceKey: testType.trim().toUpperCase(),
@@ -122,10 +132,12 @@ export async function hasFeatureAccess(
   >,
   featureKey: string,
   now = new Date(),
+  subjectId?: string,
 ) {
   return hasEntitlement(
     {
       userId,
+      subjectId,
       type,
       resourceType: "FEATURE",
       resourceKey: featureKey,
@@ -137,15 +149,16 @@ export async function hasFeatureAccess(
 export async function listUserEntitlements(
   userId: string,
   now = new Date(),
+  subjectId?: string,
 ) {
   const [base, addOns] = await Promise.all([
     prisma.userEntitlement.findMany({
-      where: { userId, ...activeWindow(now) },
+      where: { userId, ...(subjectId ? { subjectId } : {}), ...activeWindow(now) },
       orderBy: [{ type: "asc" }, { resourceType: "asc" }, { resourceKey: "asc" }],
       select: { id: true, productId: true, type: true, resourceType: true, resourceKey: true, source: true, sourceOrderId: true, usageLimit: true, usageConsumed: true, startsAt: true, endsAt: true },
     }),
     prisma.userAddOnEntitlement.findMany({
-      where: { userId, ...activeWindow(now) },
+      where: { userId, ...(subjectId ? { subjectId } : {}), ...activeWindow(now) },
       orderBy: [{ type: "asc" }, { resourceType: "asc" }, { resourceKey: "asc" }],
       select: { id: true, addOnProductId: true, type: true, resourceType: true, resourceKey: true, source: true, startsAt: true, endsAt: true },
     }),
@@ -166,11 +179,13 @@ export async function listUserEntitlements(
  */
 export async function grantProductEntitlements(input: {
   userId: string;
+  subjectId?: string;
   productId: string;
   source?: string;
   startsAt?: Date;
   endsAt?: Date;
 }) {
+  const subjectId = await resolveSubjectId(input.userId, input.subjectId);
   const product = await prisma.product.findUnique({
     where: { id: input.productId },
     include: { entitlements: true },
@@ -185,8 +200,8 @@ export async function grantProductEntitlements(input: {
     product.entitlements.map((entitlement) =>
       prisma.userEntitlement.upsert({
         where: {
-          userId_type_resourceType_resourceKey: {
-            userId: input.userId,
+          subjectId_type_resourceType_resourceKey: {
+            subjectId,
             type: entitlement.type,
             resourceType: entitlement.resourceType,
             resourceKey: entitlement.resourceKey,
@@ -194,6 +209,7 @@ export async function grantProductEntitlements(input: {
         },
         create: {
           userId: input.userId,
+          subjectId,
           productId: product.id,
           type: entitlement.type,
           resourceType: entitlement.resourceType,
@@ -228,11 +244,13 @@ export async function grantProductEntitlements(input: {
  */
 export async function grantSingleTestEntitlements(input: {
   userId: string;
+  subjectId?: string;
   testType: SingleTestType;
   source?: string;
   startsAt?: Date;
   endsAt?: Date;
 }) {
+  const subjectId = await resolveSubjectId(input.userId, input.subjectId);
   const product = await prisma.product.findUnique({
     where: { tier: "BASIC" },
   });
@@ -247,8 +265,8 @@ export async function grantSingleTestEntitlements(input: {
     entitlements.map((entitlement) =>
       prisma.userEntitlement.upsert({
         where: {
-          userId_type_resourceType_resourceKey: {
-            userId: input.userId,
+          subjectId_type_resourceType_resourceKey: {
+            subjectId,
             type: entitlement.type,
             resourceType: entitlement.resourceType,
             resourceKey: entitlement.resourceKey,
@@ -256,6 +274,7 @@ export async function grantSingleTestEntitlements(input: {
         },
         create: {
           userId: input.userId,
+          subjectId,
           productId: product.id,
           type: entitlement.type,
           resourceType: entitlement.resourceType,
@@ -285,10 +304,11 @@ export async function grantEntitlement(
     endsAt?: Date;
   },
 ) {
+  const subjectId = await resolveSubjectId(input.userId, input.subjectId);
   return prisma.userEntitlement.upsert({
     where: {
-      userId_type_resourceType_resourceKey: {
-        userId: input.userId,
+      subjectId_type_resourceType_resourceKey: {
+        subjectId,
         type: input.type,
         resourceType: input.resourceType,
         resourceKey: input.resourceKey,
@@ -296,6 +316,7 @@ export async function grantEntitlement(
     },
     create: {
       userId: input.userId,
+      subjectId,
       productId: input.productId,
       type: input.type,
       resourceType: input.resourceType,
@@ -316,10 +337,11 @@ export async function grantEntitlement(
 }
 
 export async function revokeEntitlement(ref: EntitlementRef) {
+  const subjectId = await resolveSubjectId(ref.userId, ref.subjectId);
   return prisma.userEntitlement.update({
     where: {
-      userId_type_resourceType_resourceKey: {
-        userId: ref.userId,
+      subjectId_type_resourceType_resourceKey: {
+        subjectId,
         type: ref.type,
         resourceType: ref.resourceType,
         resourceKey: ref.resourceKey,
@@ -334,10 +356,11 @@ export async function revokeEntitlement(ref: EntitlementRef) {
  * to one product. This is informational only; access decisions must continue
  * to use explicit entitlements.
  */
-export async function getActiveProductsForUser(userId: string, now = new Date()) {
+export async function getActiveProductsForUser(userId: string, subjectId?: string, now = new Date()) {
   const rows = await prisma.userEntitlement.findMany({
     where: {
       userId,
+      ...(subjectId ? { subjectId } : {}),
       ...activeWindow(now),
       productId: { not: null },
     },
@@ -370,11 +393,13 @@ export async function getActiveProductsForUser(userId: string, now = new Date())
  */
 export async function grantAddOnEntitlements(input: {
   userId: string;
+  subjectId?: string;
   addOnProductId: string;
   source?: string;
   startsAt?: Date;
   endsAt?: Date;
 }) {
+  const subjectId = await resolveSubjectId(input.userId, input.subjectId);
   const addOn = await prisma.addOnProduct.findUnique({
     where: { id: input.addOnProductId },
     include: { entitlements: true },
@@ -389,8 +414,8 @@ export async function grantAddOnEntitlements(input: {
     addOn.entitlements.map((entitlement) =>
       prisma.userAddOnEntitlement.upsert({
         where: {
-          userId_type_resourceType_resourceKey: {
-            userId: input.userId,
+          subjectId_type_resourceType_resourceKey: {
+            subjectId,
             type: entitlement.type,
             resourceType: entitlement.resourceType,
             resourceKey: entitlement.resourceKey,
@@ -398,6 +423,7 @@ export async function grantAddOnEntitlements(input: {
         },
         create: {
           userId: input.userId,
+          subjectId,
           addOnProductId: addOn.id,
           type: entitlement.type,
           resourceType: entitlement.resourceType,
@@ -417,4 +443,83 @@ export async function grantAddOnEntitlements(input: {
       }),
     ),
   );
+}
+
+/**
+ * V19.2.1 customer-result reconciliation boundary.
+ *
+ * A completed assessment owned through an active TEST_ACCESS entitlement must
+ * retain RESULT_ACCESS. This repairs historical Single Test / V19.2 data gaps
+ * without granting access to users who never had test access.
+ */
+export async function reconcileCompletedResultAccess(userId: string) {
+  const completedTypes = [
+    "COGNITIVE",
+    "EQ",
+    "DISC",
+    "RIASEC",
+    "WORK_ATTITUDE",
+    "LEARNING_PREFERENCE",
+  ] as const;
+
+  const completed = await prisma.assessmentAttempt.findMany({
+    where: {
+      userId,
+      status: "COMPLETED",
+      result: { isNot: null },
+      assessmentType: { in: [...completedTypes] },
+    },
+    select: { assessmentType: true, completedAt: true, startedAt: true, subjectId: true },
+    orderBy: [{ completedAt: "desc" }, { startedAt: "desc" }],
+  });
+
+  for (const attempt of completed) {
+    const resourceKey = attempt.assessmentType;
+    const testAccess = await prisma.userEntitlement.findUnique({
+      where: {
+        subjectId_type_resourceType_resourceKey: {
+          subjectId: attempt.subjectId!,
+          type: "TEST_ACCESS",
+          resourceType: "TEST_TYPE",
+          resourceKey,
+        },
+      },
+      select: { id: true, productId: true, source: true, sourceOrderId: true, startsAt: true, endsAt: true, status: true },
+    });
+
+    if (!testAccess || testAccess.status !== "ACTIVE") continue;
+
+    await prisma.userEntitlement.upsert({
+      where: {
+        subjectId_type_resourceType_resourceKey: {
+          subjectId: attempt.subjectId!,
+          type: "RESULT_ACCESS",
+          resourceType: "TEST_TYPE",
+          resourceKey,
+        },
+      },
+      create: {
+        userId,
+        subjectId: attempt.subjectId!,
+        productId: testAccess.productId,
+        type: "RESULT_ACCESS",
+        resourceType: "TEST_TYPE",
+        resourceKey,
+        status: "ACTIVE",
+        source: "V19.2.1_COMPLETED_RESULT_RECONCILIATION",
+        sourceOrderId: testAccess.sourceOrderId,
+        usageLimit: 1,
+        usageConsumed: 0,
+        startsAt: testAccess.startsAt,
+        endsAt: testAccess.endsAt,
+      },
+      update: {
+        status: "ACTIVE",
+        productId: testAccess.productId,
+        sourceOrderId: testAccess.sourceOrderId,
+        startsAt: testAccess.startsAt,
+        endsAt: testAccess.endsAt,
+      },
+    });
+  }
 }

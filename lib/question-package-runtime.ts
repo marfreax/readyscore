@@ -6,10 +6,10 @@ import type { SelectedQuestion } from "./assessment/question-engine";
 
 export const V13_2_SELECTION_ALGORITHM_VERSION = "V13.2_COMPOSITION_SELECTION_V1";
 
-const SUPPORTED_TYPES = ["free", "riasec", "disc", "eq", "cognitive"] as const;
+const SUPPORTED_TYPES = ["free", "riasec", "disc", "eq", "cognitive", "work-attitude", "learning-preference"] as const;
 type SupportedAssessmentType = typeof SUPPORTED_TYPES[number];
 
-const TEST_TYPE_BY_ASSESSMENT: Record<SupportedAssessmentType, string> = { free: "RIASEC", riasec: "RIASEC", disc: "DISC", eq: "EQ", cognitive: "COGNITIVE" };
+const TEST_TYPE_BY_ASSESSMENT: Record<SupportedAssessmentType, string> = { free: "RIASEC", riasec: "RIASEC", disc: "DISC", eq: "EQ", cognitive: "COGNITIVE", "work-attitude": "WORK_ATTITUDE", "learning-preference": "LEARNING_PREFERENCE" };
 
 export type RuntimePackageReadiness = {
   packageId: string;
@@ -267,8 +267,18 @@ function buildCompositionSelection(
   return selected.length === requiredTotal ? selected : null;
 }
 
+const PRISMA_TYPE_BY_RUNTIME_TYPE: Record<SupportedAssessmentType, PrismaAssessmentType> = {
+  free: "FREE",
+  riasec: "RIASEC",
+  disc: "DISC",
+  eq: "EQ",
+  cognitive: "COGNITIVE",
+  "work-attitude": "WORK_ATTITUDE",
+  "learning-preference": "LEARNING_PREFERENCE",
+};
+
 async function findRuntimeEligiblePackages(type: SupportedAssessmentType) {
-  const config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType);
+  const config = await resolveActiveAssessmentConfiguration(PRISMA_TYPE_BY_RUNTIME_TYPE[type]);
   const raw = config.questionPackageVersion;
   if (!raw) return [];
   let version;

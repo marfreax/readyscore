@@ -57,15 +57,20 @@ export default async function CheckoutSuccessPage({
   const paymentPaid = paymentStatus === "PAID";
   const paymentFailed = ["FAILED", "EXPIRED", "CANCELLED"].includes(paymentStatus);
   const accessReady = order?.fulfillmentStatus === "FULFILLED";
+  const isReassessmentCredit = Boolean(order?.productNameSnapshot?.startsWith("Reassessment Credit"));
   const startPath = assessmentPath(order?.assessmentTypeSnapshot ?? null);
   const pageTitle = paymentPaid
-    ? "Pembayaran berhasil"
+    ? isReassessmentCredit
+      ? "Credit berhasil ditambahkan"
+      : "Pembayaran berhasil"
     : paymentFailed
       ? "Pembayaran belum berhasil"
       : "Pembayaran sedang diproses";
   const pageDescription = paymentPaid
     ? accessReady
-      ? "Pembayaran sudah terverifikasi dan akses pembelian sudah tersedia pada akun Anda."
+      ? isReassessmentCredit
+        ? "Pembayaran Midtrans sudah terverifikasi dan satu Reassessment Credit sudah ditambahkan ke akun Anda."
+        : "Pembayaran sudah terverifikasi dan akses pembelian sudah tersedia pada akun Anda."
       : "Pembayaran sudah terverifikasi. ReadyScore sedang memastikan akses pembelian tersedia."
     : paymentFailed
       ? "Pembayaran belum menghasilkan akses. Anda dapat kembali ke Access & Plans untuk mencoba lagi."
@@ -142,9 +147,13 @@ export default async function CheckoutSuccessPage({
 
           {paymentPaid && accessReady ? (
             <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
-              <p className="text-sm font-black text-emerald-900">Akses pembelian sudah unlock.</p>
+              <p className="text-sm font-black text-emerald-900">
+                {isReassessmentCredit ? "Reassessment Credit sudah tersedia." : "Akses pembelian sudah unlock."}
+              </p>
               <p className="mt-1 text-sm leading-6 text-emerald-800">
-                Anda sekarang dapat melihat assessment yang dimiliki pada Access &amp; Plans.
+                {isReassessmentCredit
+                  ? "Anda dapat menggunakan credit tersebut untuk satu assessment tambahan pada jenis test yang dibeli."
+                  : "Anda sekarang dapat melihat assessment yang dimiliki pada Access &amp; Plans."}
               </p>
             </div>
           ) : null}

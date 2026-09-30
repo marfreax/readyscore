@@ -6,11 +6,11 @@ import { startReassessment, RuntimeError } from "../../../../../lib/assessment/r
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const TYPES = new Set(["riasec", "disc", "eq", "cognitive"]);
+const TYPES = new Set(["riasec", "disc", "eq", "cognitive", "work-attitude", "learning-preference"]);
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json().catch(() => ({}))) as { type?: string };
+    const body = (await request.json().catch(() => ({}))) as { type?: string; subjectId?: string };
     if (!body.type || !TYPES.has(body.type)) {
       return NextResponse.json(
         { ok: false, error: { code: "INVALID_ASSESSMENT_TYPE", message: "Tipe assessment reassessment tidak valid." } },
@@ -28,8 +28,9 @@ export async function POST(request: Request) {
 
     await syncUserToDatabase(current.user.id);
     const attempt = await startReassessment(
-      body.type as "riasec" | "disc" | "eq" | "cognitive",
+      body.type as "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference",
       current.user.id,
+      body.subjectId,
     );
 
     return NextResponse.json({

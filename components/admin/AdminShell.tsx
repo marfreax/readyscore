@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import {
   ClipboardList,
+  ShoppingCart,
   UserRoundPlus,
   FileCheck2,
   History,
@@ -14,6 +15,7 @@ import {
   Settings2,
   ShieldCheck,
   Users,
+  Trash2,
   X,
   Menu,
   MessageCircle,
@@ -31,6 +33,7 @@ const groups = [
       { key: "questions", href: "/admin/question-bank", label: "Question Bank", icon: ClipboardList },
       { key: "review", href: "/admin/review", label: "Review & Publishing", icon: FileCheck2 },
       { key: "config", href: "/admin/assessment-config", label: "Assessment Configuration", icon: Settings2 },
+      { key: "commercial", href: "/admin/commercial", label: "Commercial Catalog", icon: ShoppingCart },
     ],
   },
   {
@@ -47,7 +50,10 @@ const groups = [
   },
   {
     label: "USERS & ACCESS",
-    items: [{ key: "users", href: "/admin/users", label: "Users & Access", icon: Users }],
+    items: [
+      { key: "users", href: "/admin/users", label: "Users & Access", icon: Users },
+      { key: "data-deletion", href: "/admin/data-deletion", label: "Data Deletion", icon: Trash2 },
+    ],
   },
   {
     label: "INTEGRATIONS",

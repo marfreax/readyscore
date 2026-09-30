@@ -3,31 +3,32 @@ import { redirect } from "next/navigation";
 import { CustomerPageShell } from "../../components/app/CustomerPageShell";
 import { Badge, Card } from "../../components/ui/DesignSystem";
 import { getCurrentSession } from "../../lib/auth/session";
+import { getActiveSubject } from "../../lib/subjects/service";
 import { getCommercialCatalog } from "../../lib/commercial/catalog";
 import { getB2CAddOnCatalog } from "../../lib/commercial/add-on-catalog";
 import {
-  getActiveProductsForUser,
   listUserEntitlements,
+  reconcileCompletedResultAccess,
 } from "../../lib/commercial/entitlement-service";
 import { getUpgradeQuote } from "../../lib/commercial/upgrade-service";
 import { getReassessmentEligibility } from "../../lib/assessment/reassessment";
+import { getUserHistory } from "../../lib/assessment/dashboard-repository";
+import { deriveAccessLevel } from "../../lib/commercial/types";
 
-type TestKey = "COGNITIVE" | "EQ" | "DISC" | "RIASEC";
+type TestKey = "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
 
 const TESTS: Array<{
   key: TestKey;
   label: string;
-  type: "cognitive" | "eq" | "disc" | "riasec";
-  sku:
-    | "RS-SINGLE-IQ-V1"
-    | "RS-SINGLE-EQ-V1"
-    | "RS-SINGLE-DISC-V1"
-    | "RS-SINGLE-RIASEC-V1";
+  type: "cognitive" | "eq" | "disc" | "riasec" | "work-attitude" | "learning-preference";
+  sku: string | null;
 }> = [
   { key: "COGNITIVE", label: "Cognitive", type: "cognitive", sku: "RS-SINGLE-IQ-V1" },
   { key: "EQ", label: "Emotional Intelligence", type: "eq", sku: "RS-SINGLE-EQ-V1" },
   { key: "DISC", label: "DISC", type: "disc", sku: "RS-SINGLE-DISC-V1" },
   { key: "RIASEC", label: "RIASEC", type: "riasec", sku: "RS-SINGLE-RIASEC-V1" },
+  { key: "WORK_ATTITUDE", label: "Work Attitude", type: "work-attitude", sku: "RS-SINGLE-WORK_ATTITUDE-V1" },
+  { key: "LEARNING_PREFERENCE", label: "Learning Preference", type: "learning-preference", sku: "RS-SINGLE-LEARNING_PREFERENCE-V1" },
 ];
 
 const planOrder = ["BASIC", "MEDIUM", "ADVANCE"] as const;
@@ -52,6 +53,10 @@ function resultKey(test: TestKey) {
   );
 }
 
+function canonicalTestKey(value: string) {
+  return value.trim().toUpperCase().replace(/-/g, "_");
+}
+
 function rupiah(value: number | null | undefined) {
   return value == null ? "Harga mengikuti katalog" : `Rp${value.toLocaleString("id-ID")}`;
 }
@@ -62,7 +67,7 @@ function planCopy(tier: string) {
       eyebrow: "Single test",
       promise: "Satu assessment untuk kebutuhan yang paling spesifik.",
       bullets: [
-        "Pilih satu dari empat core assessment",
+        "Pilih satu core assessment",
         "Hasil assessment tetap tersimpan",
         "Cocok untuk kebutuhan yang terarah",
       ],
@@ -72,9 +77,9 @@ function planCopy(tier: string) {
   if (tier === "MEDIUM") {
     return {
       eyebrow: "Complete assessment",
-      promise: "Empat core assessment dalam satu paket.",
+      promise: "Enam assessment dalam satu paket.",
       bullets: [
-        "Cognitive + EQ + DISC + RIASEC",
+        "Cognitive + EQ + DISC + RIASEC + Work Attitude + Learning Preference",
         "Akses hasil untuk assessment yang tersedia",
         "Cakupan lebih lengkap dalam satu paket",
       ],
@@ -83,9 +88,9 @@ function planCopy(tier: string) {
 
   return {
     eyebrow: "Full insight",
-    promise: "Empat assessment dengan Cross-Test Profile dan personalized report.",
+    promise: "Enam assessment dengan Cross-Test Profile dan personalized report.",
     bullets: [
-      "Semua core assessment",
+      "Semua assessment yang termasuk paket",
       "Cross-Test Profile",
       "Personalized report 20+ halaman",
     ],
@@ -114,19 +119,30 @@ export default async function AccessPlansPage() {
 
   if (!session) redirect("/login?next=/access");
 
-  const [catalog, addOns, products, entitlements, quote, reassessment] =
+  const subject = await getActiveSubject(session.user.id);
+  await reconcileCompletedResultAccess(session.user.id);
+
+  const [catalog, addOns, entitlements, quote, reassessment, history] =
     await Promise.all([
       getCommercialCatalog(),
       getB2CAddOnCatalog(),
-      getActiveProductsForUser(session.user.id),
-      listUserEntitlements(session.user.id),
-      getUpgradeQuote(session.user.id),
+      listUserEntitlements(session.user.id, new Date(), subject.id),
+      getUpgradeQuote(session.user.id, undefined, subject.id),
       Promise.all(
         TESTS.map((test) =>
-          getReassessmentEligibility(session.user.id, test.type),
+          getReassessmentEligibility(session.user.id, test.type, new Date(), subject.id),
         ),
       ),
+      getUserHistory(session.user.id),
     ]);
+
+  const latestCompletedByType = new Map<string, string>();
+  for (const item of history) {
+    const canonicalType = canonicalTestKey(item.assessmentType);
+    if (item.status === "COMPLETED" && !latestCompletedByType.has(canonicalType)) {
+      latestCompletedByType.set(canonicalType, item.id);
+    }
+  }
 
   const entitlementKeys = new Set(
     entitlements.map((item) =>
@@ -134,12 +150,27 @@ export default async function AccessPlansPage() {
     ),
   );
 
-  const currentTier = quote.currentTier;
-  const currentRank = currentTier
-    ? planOrder.indexOf(currentTier as (typeof planOrder)[number])
-    : -1;
-  const hasPaidAccess = products.some((product) => product.tier !== "FREE");
-
+  const derivedAccess = deriveAccessLevel(entitlements);
+  const accessLevel = derivedAccess.level;
+  const accessPlanTier =
+    accessLevel === "SINGLE_TEST"
+      ? "BASIC"
+      : accessLevel === "ALL_TESTS"
+        ? "MEDIUM"
+        : accessLevel === "ADVANCE"
+          ? "ADVANCE"
+          : null;
+  const accessRank =
+    accessLevel === "ADVANCE"
+      ? 3
+      : accessLevel === "ALL_TESTS"
+        ? 2
+        : accessLevel === "CUSTOM_ACCESS"
+          ? 1.5
+          : accessLevel === "SINGLE_TEST"
+            ? 1
+            : 0;
+  const hasPaidAccess = derivedAccess.coreTestCount > 0;
 
   const profileAvailable = entitlementKeys.has(
     keyFor("PROFILE_ACCESS", "FEATURE", "CROSS_TEST_PROFILE_V1"),
@@ -158,6 +189,8 @@ export default async function AccessPlansPage() {
       .filter((item) => item.sourceKind === "ADD_ON")
       .map((item) => item.resourceKey),
   );
+
+  const singleTestProduct = catalog.find((product) => product.tier === "BASIC");
 
   const customerPlans = catalog
     .filter((product) => product.customerFacing)
@@ -181,14 +214,23 @@ export default async function AccessPlansPage() {
               <div>
                 <p className="rs-eyebrow">1 · Current access</p>
                 <h2 id="current-access-title" className="mt-2 text-2xl font-black">
-                  {currentTier
-                    ? products.map((product) => product.name).join(", ")
-                    : "Belum ada paket berbayar aktif"}
+                  {accessLevel === "ADVANCE"
+                    ? "ADVANCE"
+                    : accessLevel === "ALL_TESTS"
+                      ? "All Tests"
+                      : accessLevel === "CUSTOM_ACCESS"
+                        ? "Custom Access"
+                        : accessLevel === "SINGLE_TEST"
+                          ? "Single Test"
+                          : "Belum ada akses assessment aktif"}
                 </h2>
                 <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
                   Ini adalah akses yang benar-benar aktif pada akun Anda saat ini.
                   Statusnya berasal dari entitlement ReadyScore, bukan dari tampilan
                   halaman ini.
+                </p>
+                <p className="mt-2 text-xs font-semibold text-slate-500">
+                  Klasifikasi akses dihitung dari active TEST_ACCESS + PROFILE_ACCESS, bukan jumlah order/transaksi.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <Badge tone={hasPaidAccess ? "success" : "neutral"}>
@@ -205,12 +247,20 @@ export default async function AccessPlansPage() {
                   Current plan
                 </p>
                 <p className="mt-2 text-xl font-black">
-                  {currentTier ?? "Free / belum membeli"}
+                  {accessLevel === "ADVANCE"
+                    ? "ADVANCE"
+                    : accessLevel === "ALL_TESTS"
+                      ? "All Tests"
+                      : accessLevel === "CUSTOM_ACCESS"
+                        ? "Custom Access"
+                        : accessLevel === "SINGLE_TEST"
+                          ? "Single Test"
+                          : "Free / belum membeli"}
                 </p>
                 <p className="mt-2 text-xs leading-5 text-slate-500">
-                  {currentTier
-                    ? "Pilihan di bawahnya tidak perlu dibeli ulang."
-                    : "Pilih capability yang Anda perlukan untuk mulai."}
+                  {derivedAccess.coreTestCount > 0
+                    ? `${derivedAccess.coreTestCount} dari 6 core assessment aktif${derivedAccess.profiling ? " + profiling" : ""}.`
+                    : "Belum ada core assessment aktif."}
                 </p>
               </div>
             </div>
@@ -269,7 +319,7 @@ export default async function AccessPlansPage() {
           <div className="grid gap-4 md:grid-cols-2">
             {TESTS.map((test, index) => {
               const active = entitlementKeys.has(testKey(test.key));
-              const resultActive = entitlementKeys.has(resultKey(test.key));
+              const resultActive = Boolean(latestCompletedByType.get(test.key));
               const eligibility = reassessment[index];
               return (
                 <Card key={test.key} className="px-5 py-5">
@@ -292,12 +342,21 @@ export default async function AccessPlansPage() {
                   <div className="mt-4 flex flex-wrap gap-2">
                     {active ? (
                       <div className="flex flex-wrap gap-2">
-                        <Link
-                          href={`/assessments/${test.type}/pre-test`}
-                          className="rs-button rs-button-primary"
-                        >
-                          Mulai Assessment
-                        </Link>
+                        {resultActive && latestCompletedByType.get(test.key) ? (
+                          <Link
+                            href={`/result/${encodeURIComponent(latestCompletedByType.get(test.key)!)}`}
+                            className="rs-button rs-button-primary"
+                          >
+                            View Result
+                          </Link>
+                        ) : (
+                          <Link
+                            href={`/assessments/${test.type}/pre-test`}
+                            className="rs-button rs-button-primary"
+                          >
+                            Mulai Assessment
+                          </Link>
+                        )}
                         <button
                           type="button"
                           disabled
@@ -306,26 +365,43 @@ export default async function AccessPlansPage() {
                           Sudah dibeli
                         </button>
                       </div>
-                    ) : (
+                    ) : test.sku ? (
                       <Link
                         href={`/checkout/product-basic?testType=${encodeURIComponent(test.sku === "RS-SINGLE-IQ-V1" ? "IQ" : test.key)}`}
                         className="rs-button rs-button-primary"
                       >
                         Beli
                       </Link>
+                    ) : (
+                      <span className="text-sm font-semibold text-slate-500">Termasuk dalam paket yang tersedia</span>
                     )}
 
                     {active && resultActive ? (
                       <span className="rs-badge rs-badge-neutral">Hasil aktif</span>
                     ) : null}
 
-                    {active && eligibility?.eligible ? (
+                    {active && resultActive && eligibility?.eligible ? (
                       <Link
                         href={`/reassessment/${test.type}`}
                         className="rs-button rs-button-ghost"
                       >
                         Retake Assessment
                       </Link>
+                    ) : null}
+
+                    {active && resultActive && !eligibility?.eligible && eligibility?.code === "REASSESSMENT_CREDIT_REQUIRED" ? (
+                      <Link
+                        href={`/checkout/reassessment-credit?testType=${encodeURIComponent(test.key)}`}
+                        className="rs-button rs-button-ghost"
+                      >
+                        Tambah Credit · Rp49.000
+                      </Link>
+                    ) : null}
+
+                    {active && resultActive && !eligibility?.eligible && eligibility?.code === "REASSESSMENT_DAILY_LIMIT" ? (
+                      <span className="rs-button rs-button-secondary cursor-not-allowed opacity-70" title={eligibility.creditAvailable ? "Credit sudah tersedia. Retake berikutnya dapat dilakukan besok." : "Retake berikutnya dapat dilakukan besok."}>
+                        {eligibility.creditAvailable ? "Credit tersedia · Retake besok" : "Retake Besok"}
+                      </span>
                     ) : null}
                   </div>
                 </Card>
@@ -351,9 +427,9 @@ export default async function AccessPlansPage() {
               const rank = planOrder.indexOf(
                 product.tier as (typeof planOrder)[number],
               );
-              const isCurrent = currentTier === product.tier;
-              const isUpgrade = currentTier != null && rank > currentRank;
-              const isBelowCurrent = currentTier != null && rank < currentRank;
+              const isCurrent = accessPlanTier === product.tier;
+              const isUpgrade = accessRank > 0 && rank > accessRank;
+              const isBelowCurrent = accessRank > 0 && rank < accessRank;
               const copy = planCopy(product.tier);
               const option = quote.options?.find(
                 (item) => item.targetTier === product.tier,
@@ -468,6 +544,7 @@ export default async function AccessPlansPage() {
           <div className="grid gap-4 md:grid-cols-2">
             {TESTS.map((test) => {
               const active = entitlementKeys.has(testKey(test.key));
+              const resultActive = Boolean(latestCompletedByType.get(test.key));
               return (
                 <Card key={test.key} className="px-5 py-5">
                   <div className="flex items-start justify-between gap-3">
@@ -486,29 +563,35 @@ export default async function AccessPlansPage() {
                       : "Belum dimiliki. Klik Beli untuk melanjutkan pembayaran."}
                   </p>
 
+                  <p className="mt-3 text-sm font-black text-slate-800">
+                    {singleTestProduct?.priceIdr == null ? "Harga mengikuti catalog" : `Rp${singleTestProduct.priceIdr.toLocaleString("id-ID")} / test`}
+                  </p>
+
                   <div className="mt-4">
-                    {active ? (
+                    {resultActive && latestCompletedByType.get(test.key) ? (
                       <div className="flex flex-wrap gap-2">
                         <Link
-                          href={`/assessments/${test.type}/pre-test`}
+                          href={`/result/${encodeURIComponent(latestCompletedByType.get(test.key)!)}`}
                           className="rs-button rs-button-secondary"
                         >
-                          Mulai Assessment
+                          View Result
                         </Link>
-                        <span
-                          aria-disabled="true"
-                          className="rs-button rs-button-secondary cursor-not-allowed opacity-60"
+                        <Link
+                          href={`/checkout/reassessment-credit?testType=${encodeURIComponent(test.key)}`}
+                          className="rs-button rs-button-ghost"
                         >
-                          Sudah dibeli
-                        </span>
+                          Tambah Credit · Rp49.000
+                        </Link>
                       </div>
-                    ) : (
+                    ) : test.sku ? (
                       <Link
                         href={`/checkout/product-basic?testType=${encodeURIComponent(test.sku === "RS-SINGLE-IQ-V1" ? "IQ" : test.key)}`}
                         className="rs-button rs-button-primary"
                       >
                         Beli
                       </Link>
+                    ) : (
+                      <span className="text-sm font-semibold text-slate-500">Termasuk dalam paket yang tersedia</span>
                     )}
                   </div>
                 </Card>
@@ -547,6 +630,12 @@ export default async function AccessPlansPage() {
                     <p className="mt-2 text-xs leading-5 text-slate-500">
                       Pembayaran dan fulfillment diproses melalui Midtrans/commercial flow.
                     </p>
+                    <Link
+                      href={`/checkout/upgrade?tier=${encodeURIComponent(option.targetTier)}`}
+                      className="rs-button rs-button-primary mt-4 w-full"
+                    >
+                      Bayar Upgrade · {rupiah(option.differentialIdr)}
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -562,8 +651,9 @@ export default async function AccessPlansPage() {
                 Capability extensions
               </h2>
               <p className="mt-2 text-sm leading-6 text-slate-500">
-                Add-on ditampilkan sebagai extension terpisah dan tidak mengubah
-                tier utama. Status aktif hanya membaca entitlement yang sudah ada.
+                Capability extensions adalah fitur tambahan yang dibeli terpisah dari paket utama.
+                Reassessment Credit menambah satu kesempatan mengulang assessment yang sudah selesai;
+                extension lain membuka capability tambahan tanpa mengubah hasil assessment asal.
               </p>
 
               <div className="mt-4 grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
@@ -614,7 +704,7 @@ export default async function AccessPlansPage() {
               Checkout dan entitlement tetap terpisah
             </h2>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
-              Tombol Beli langsung membuka pembayaran. Akses baru aktif setelah pembayaran
+              Tombol Beli membuka commercial checkout yang otomatis membuat order dan mengarahkan ke Payment Gateway. Akses baru aktif setelah pembayaran
               dan fulfillment yang terverifikasi diproses oleh commercial flow ReadyScore.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">

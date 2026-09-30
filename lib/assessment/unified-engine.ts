@@ -26,6 +26,8 @@ const RESPONSE_MODELS: Record<AssessmentType, UnifiedAssessmentAdapter["response
   eq: "SINGLE_CHOICE_4",
   disc: "FORCED_CHOICE_4",
   riasec: "LIKERT_5",
+  "work-attitude": "LIKERT_5",
+  "learning-preference": "LIKERT_5",
 };
 
 function assertRuntimeContract(context: ScoringContext, adapter: UnifiedAssessmentAdapter): void {
@@ -67,7 +69,7 @@ function buildAdapter(assessmentType: AssessmentType): UnifiedAssessmentAdapter 
 }
 
 const ADAPTERS: ReadonlyMap<AssessmentType, UnifiedAssessmentAdapter> = new Map(
-  (["free", "cognitive", "eq", "disc", "riasec"] as AssessmentType[]).map((type) => [
+  (["free", "cognitive", "eq", "disc", "riasec", "work-attitude", "learning-preference"] as AssessmentType[]).map((type) => [
     type,
     buildAdapter(type),
   ]),

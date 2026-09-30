@@ -1,4 +1,4 @@
-export type AssessmentType = "free" | "riasec" | "disc" | "eq" | "cognitive";
+export type AssessmentType = "free" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference";
 export type LegacyAssessmentType = "premium";
 
 export const ASSESSMENT_CONFIG = {
@@ -52,6 +52,24 @@ export const ASSESSMENT_CONFIG = {
     timeLimitSeconds: 1200,
     scoringVersion: "RIASEC_SCORE_V2",
     selectionAlgorithmVersion: "RIASEC_SELECTION_V2",
+    status: "PUBLISHED" as const,
+  },
+  "work-attitude": {
+    id: "work-attitude-v1",
+    version: "WORK_ATTITUDE_CONFIG_V1",
+    questionCount: 35,
+    timeLimitSeconds: 1200,
+    scoringVersion: "WORK_ATTITUDE_SCORE_V1",
+    selectionAlgorithmVersion: "WORK_ATTITUDE_SELECTION_V1",
+    status: "PUBLISHED" as const,
+  },
+  "learning-preference": {
+    id: "learning-preference-v1",
+    version: "LEARNING_PREFERENCE_CONFIG_V1",
+    questionCount: 30,
+    timeLimitSeconds: 1200,
+    scoringVersion: "LEARNING_PREFERENCE_SCORE_V1",
+    selectionAlgorithmVersion: "LEARNING_PREFERENCE_SELECTION_V1",
     status: "PUBLISHED" as const,
   },
 } satisfies Record<AssessmentType | LegacyAssessmentType, {

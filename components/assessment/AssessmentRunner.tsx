@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, ChevronLeft, ChevronRight, CircleHelp, Clock3, ShieldCheck } from "lucide-react";
 
-type AssessmentType="free"|"premium"|"riasec"|"disc"|"eq"|"cognitive";
+type AssessmentType="free"|"premium"|"riasec"|"disc"|"eq"|"cognitive"|"work-attitude"|"learning-preference";
 type Question={id:string;code:string;text:string;domain:string;subdomain:string|null;indicator:string|null;sequence:number;answered?:boolean;answer?:number|null;answerType?:string;options?:string[]};
 type Progress={answered:number;total:number;remaining:number;percentage:number};
 type AttemptView={attempt:{id:string;assessmentType:AssessmentType;status:string;startedAt:string;expiresAt?:string};timer?:{startedAt:string;expiresAt:string;timeLimitSeconds:number;remainingSeconds:number;serverNow:string}|null;questions:Question[];progress:Progress;result?:unknown};
@@ -15,6 +15,7 @@ const RIASEC_LABELS: Record<string,string>={R:"Realistic",I:"Investigative",A:"A
 const DISC_LABELS: Record<string,string>={D:"Dominance",I:"Influence",S:"Steadiness",C:"Conscientiousness"};
 const EQ_LABELS: Record<string,string>={EMOTION_AWARENESS:"Emotion Awareness",EMOTION_REGULATION:"Emotion Regulation",EMPATHY_SOCIAL_AWARENESS:"Empathy / Social Awareness",RELATIONSHIP_SOCIAL_RESPONSE:"Relationship / Social Response"};
 const COGNITIVE_LABELS: Record<string,string>={VERBAL_REASONING:"Verbal Reasoning",NUMERICAL_REASONING:"Numerical Reasoning",LOGICAL_REASONING:"Logical Reasoning",ABSTRACT_REASONING:"Abstract Reasoning"};
+const LEARNING_PREFERENCE_LABELS: Record<string,string>={VISUAL:"Visual",AUDITORY:"Auditory",KINESTHETIC:"Kinesthetic"};
 const STORAGE_PREFIX="readyscore:active-attempt:";
 
 export default function AssessmentRunner({type,mode="standard"}:{type:AssessmentType;mode?:"standard"|"reassessment"}){
@@ -40,7 +41,10 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
   const isDisc=type==="disc";
   const isEq=type==="eq";
   const isCognitive=type==="cognitive";
-  const isSingleChoice4=(isCognitive||isEq) && question?.answerType==="SINGLE_CHOICE_4";
+  const isWorkAttitude=type==="work-attitude";
+  const isLearningPreference=type==="learning-preference";
+  const isSingleChoice4=question?.answerType==="SINGLE_CHOICE_4";
+  const isDiscForcedChoice=Boolean(isDisc && question?.answerType==="SINGLE_CHOICE_4" && Array.isArray(question.options) && question.options.length===4);
   const answeredPercent=progress.total?Math.round(answeredCount/progress.total*100):0;
 
   useEffect(()=>{
@@ -179,7 +183,7 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
     <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between gap-4">
-          <div className="min-w-0"><div className="flex items-center gap-2 text-[11px] font-bold text-slate-400"><Link href="/app" className="hover:text-slate-700">Workspace</Link><span>›</span><span className="text-indigo-600">Assessment</span></div><p className="mt-1 text-xs font-bold uppercase tracking-wide text-indigo-600">ReadyScore {isRiasec?"RIASEC":isDisc?"DISC":isEq?"EQ":isCognitive?"Cognitive":isPremium?"Premium":"Free"}</p><p className="mt-1 truncate text-sm font-semibold text-slate-900">Actual Assessment</p></div>
+          <div className="min-w-0"><div className="flex items-center gap-2 text-[11px] font-bold text-slate-400"><Link href="/app" className="hover:text-slate-700">Workspace</Link><span>›</span><span className="text-indigo-600">Assessment</span></div><p className="mt-1 text-xs font-bold uppercase tracking-wide text-indigo-600">ReadyScore {isRiasec?"RIASEC":isDisc?"DISC":isEq?"EQ":isCognitive?"Cognitive":isWorkAttitude?"Work Attitude":isLearningPreference?"Learning Preference":isPremium?"Premium":"Free"}</p><p className="mt-1 truncate text-sm font-semibold text-slate-900">Actual Assessment</p></div>
           <div className="flex items-center gap-3 text-xs font-semibold text-slate-500"><span className={timer&&timer.remainingSeconds<=60?"font-black text-rose-600":""}><Clock3 className="mr-1 inline h-4 w-4" /> {timer?formatRemaining(timer.remainingSeconds):"—"}</span><span>{current+1} / {questions.length}</span></div>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100" role="progressbar" aria-label="Progress assessment" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.percentage}><div className="h-full rounded-full bg-indigo-600 transition-all" style={{width:`${progress.percentage}%`}}/></div>
@@ -193,7 +197,7 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
       <div className="grid gap-6 lg:grid-cols-[1fr_280px]">
         <section className="rounded-[28px] border border-slate-200 bg-white p-6 shadow-sm sm:p-9" aria-labelledby="assessment-question-title">
           <div className="flex items-center justify-between gap-3"><span className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-bold text-indigo-700">
-            {isRiasec ? `${question.domain} · ${RIASEC_LABELS[question.domain]??question.domain}` : isDisc ? `${question.domain} · ${DISC_LABELS[question.domain]??question.domain}` : isEq ? `${EQ_LABELS[question.domain]??question.domain}` : isCognitive ? `${COGNITIVE_LABELS[question.domain]??question.domain}` : question.domain}
+            {isRiasec ? `${question.domain} · ${RIASEC_LABELS[question.domain]??question.domain}` : isDisc ? `${question.domain} · ${DISC_LABELS[question.domain]??question.domain}` : isEq ? `${EQ_LABELS[question.domain]??question.domain}` : isCognitive ? `${COGNITIVE_LABELS[question.domain]??question.domain}` : isLearningPreference ? `${LEARNING_PREFERENCE_LABELS[question.domain]??question.domain}` : question.domain}
           </span><span className="text-xs font-semibold text-slate-400">{question.code}</span></div>
           <h1 id="assessment-question-title" className="mt-7 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">{question.text}</h1>
           <p className="mt-3 text-sm leading-6 text-slate-500">
@@ -203,16 +207,21 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
                 ? "Pilih jawaban yang paling menggambarkan kecenderungan perilaku Anda. Tidak ada jawaban benar atau salah."
                 : isEq
                   ? "Pilih satu respons yang paling tepat untuk situasi yang diberikan. Tidak ada jawaban yang perlu Anda hitung sendiri."
+                  : isDisc
+                    ? "Pilih satu respons yang paling menggambarkan perilaku Anda dalam situasi ini. Pilihan mewakili empat kecenderungan DISC dan tidak ada jawaban benar atau salah."
                   : isSingleChoice4 && isCognitive
                     ? "Pilih satu jawaban yang paling tepat berdasarkan informasi pada soal. Setiap soal memiliki satu jawaban yang benar."
                     : isCognitive
                       ? "Pilih jawaban yang paling menggambarkan kondisi Anda saat ini."
                     : "Pilih jawaban yang paling menggambarkan kondisi Anda saat ini."}
           </p>
-          <div className="mt-8 grid gap-3">{(isSingleChoice4
-            ? (question.options ?? []).map((label,index)=>[index+1,label] as [number,string])
-            : LIKERT_OPTIONS.map(([value,label])=>[value,label] as [number,string])
+          <div className="mt-8 grid gap-3">{(isDisc
+            ? (isDiscForcedChoice ? (question.options ?? []).map((label,index)=>[index+1,label] as [number,string]) : [])
+            : isSingleChoice4
+              ? (question.options ?? []).map((label,index)=>[index+1,label] as [number,string])
+              : LIKERT_OPTIONS.map(([value,label])=>[value,label] as [number,string])
           ).map(([value,label])=><button key={value} disabled={busy} onClick={()=>answer(value)} aria-pressed={selected===value} className={`rs-a11y-target group flex items-center gap-4 rounded-2xl border p-4 text-left transition ${selected===value?"border-indigo-600 bg-indigo-50 text-indigo-800":"border-slate-200 bg-white text-slate-700 hover:border-indigo-300 hover:bg-indigo-50/40"}`}><span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-sm font-bold ${selected===value?"bg-indigo-600 text-white":"bg-slate-100 text-slate-600 group-hover:bg-indigo-100 group-hover:text-indigo-700"}`}>{value}</span><span className="text-sm font-semibold">{label}</span>{selected===value&&<Check className="ml-auto h-5 w-5 text-indigo-600"/>}</button>)}</div>
+          {isDisc && !isDiscForcedChoice && <p className="mt-5 rounded-2xl bg-amber-50 p-4 text-sm text-amber-800">Format soal DISC tidak valid untuk assessment ini. DISC harus menggunakan empat pilihan forced-choice.</p>}
           {message&&<p className="mt-5 rounded-2xl bg-amber-50 p-4 text-sm text-amber-800">{message}</p>}
           <div className="mt-8 flex items-center justify-between gap-3 border-t border-slate-100 pt-5"><button onClick={()=>setCurrent(Math.max(0,current-1))} disabled={busy||current===0} className="rs-a11y-target inline-flex items-center gap-2 rounded-xl border border-slate-200 px-4 py-2.5 text-sm font-semibold text-slate-700 disabled:opacity-35"><ChevronLeft className="h-4 w-4"/>Sebelumnya</button>{current<questions.length-1?<button onClick={()=>setCurrent(Math.min(questions.length-1,current+1))} disabled={busy||selected===null} className="rs-a11y-target inline-flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-35">Berikutnya<ChevronRight className="h-4 w-4"/></button>:<button onClick={()=>setConfirmSubmit(true)} disabled={busy||answeredCount!==questions.length} className="rs-a11y-target inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white disabled:opacity-35">Selesai & Lihat Hasil<ArrowRight className="h-4 w-4"/></button>}</div>
         </section>
@@ -240,13 +249,13 @@ function Intro({type,busy,message,onStart}:{type:AssessmentType;busy:boolean;mes
   const riasec=type==="riasec";
   const disc=type==="disc";
   const eq=type==="eq";
-  const label=riasec?"RIASEC":disc?"DISC":eq?"EQ":type==="cognitive"?"Cognitive":premium?"Premium":"Free";
-  const title=riasec?"Temukan profil minat Anda.":disc?"Kenali kecenderungan perilaku Anda.":eq?"Eksplorasi profil EQ Anda.":type==="cognitive"?"Uji kemampuan penalaran Anda melalui soal objektif.":premium?"Assessment Premium yang lebih lengkap.":"Mulai dengan assessment gratis.";
-  const description=riasec?"Ukur pola minat Anda melalui enam dimensi RIASEC dengan 60 pertanyaan terstruktur.":disc?"Eksplorasi pola perilaku melalui empat dimensi DISC: Dominance, Influence, Steadiness, dan Conscientiousness.":eq?"Eksplorasi empat dimensi EQ: Emotion Awareness, Emotion Regulation, Empathy / Social Awareness, dan Relationship / Social Response.":type==="cognitive"?"Uji penalaran verbal, numerik, logis, dan abstrak melalui 40 soal objektif. Durasi maksimal 20 menit. Hasilnya adalah Cognitive Reasoning Score, bukan skor IQ universal.":premium?"Ukur kesiapan Anda dengan cakupan yang lebih luas menggunakan Question Bank dan scoring model ReadyScore yang sama.":"Dapatkan gambaran awal kesiapan Anda melalui assessment singkat yang terstruktur.";
-  const count=riasec?"60":disc?"80":eq?"50":type==="cognitive"?"40":premium?"100":"20";
-  const duration=riasec||disc||eq||type==="cognitive"?"20 menit":premium?"15–20 menit":"5 menit";
-  const purpose=riasec?"Memahami pola minat dan area ketertarikan Anda.":disc?"Memahami kecenderungan gaya perilaku Anda.":eq?"Memahami pola respons emosional dan sosial Anda.":type==="cognitive"?"Memahami pola kemampuan penalaran Anda pada beberapa domain kognitif.":premium?"Mendapatkan gambaran kesiapan yang lebih lengkap.":"Mendapatkan gambaran awal kesiapan Anda.";
-  const button=riasec?"Mulai Assessment RIASEC":disc?"Mulai Assessment DISC":eq?"Mulai Assessment EQ":type==="cognitive"?"Mulai Assessment Cognitive":premium?"Mulai Assessment Premium":"Mulai Assessment Gratis";
+  const label=riasec?"RIASEC":disc?"DISC":eq?"EQ":type==="cognitive"?"Cognitive":type==="work-attitude"?"Work Attitude":type==="learning-preference"?"Learning Preference":premium?"Premium":"Free";
+  const title=riasec?"Temukan profil minat Anda.":disc?"Kenali kecenderungan perilaku Anda.":eq?"Eksplorasi profil EQ Anda.":type==="cognitive"?"Uji kemampuan penalaran Anda melalui soal objektif.":type==="work-attitude"?"Kenali kecenderungan sikap kerja Anda.":type==="learning-preference"?"Kenali preferensi belajar Anda.":premium?"Assessment Premium yang lebih lengkap.":"Mulai dengan assessment gratis.";
+  const description=riasec?"Ukur pola minat Anda melalui enam dimensi RIASEC dengan 60 pertanyaan terstruktur.":type==="work-attitude"?"Ukur kecenderungan sikap kerja melalui tujuh dimensi dengan 35 pertanyaan terstruktur.":type==="learning-preference"?"Ukur kecenderungan preferensi belajar melalui Visual, Auditory, dan Kinesthetic dengan 30 pertanyaan terstruktur.":disc?"Eksplorasi pola perilaku melalui empat dimensi DISC: Dominance, Influence, Steadiness, dan Conscientiousness.":eq?"Eksplorasi empat dimensi EQ: Emotion Awareness, Emotion Regulation, Empathy / Social Awareness, dan Relationship / Social Response.":type==="cognitive"?"Uji penalaran verbal, numerik, logis, dan abstrak melalui 40 soal objektif. Durasi maksimal 20 menit. Hasilnya adalah Cognitive Reasoning Score, bukan skor IQ universal.":premium?"Ukur kesiapan Anda dengan cakupan yang lebih luas menggunakan Question Bank dan scoring model ReadyScore yang sama.":"Dapatkan gambaran awal kesiapan Anda melalui assessment singkat yang terstruktur.";
+  const count=riasec?"60":disc?"80":eq?"50":type==="cognitive"?"40":type==="work-attitude"?"35":type==="learning-preference"?"30":premium?"100":"20";
+  const duration=riasec||disc||eq||type==="cognitive"||type==="work-attitude"||type==="learning-preference"?"20 menit":premium?"15–20 menit":"5 menit";
+  const purpose=riasec?"Memahami pola minat dan area ketertarikan Anda.":type==="work-attitude"?"Memahami kecenderungan sikap kerja Anda pada tujuh dimensi.":type==="learning-preference"?"Memahami kecenderungan preferensi belajar Anda pada tiga dimensi.":disc?"Memahami kecenderungan gaya perilaku Anda.":eq?"Memahami pola respons emosional dan sosial Anda.":type==="cognitive"?"Memahami pola kemampuan penalaran Anda pada beberapa domain kognitif.":premium?"Mendapatkan gambaran kesiapan yang lebih lengkap.":"Mendapatkan gambaran awal kesiapan Anda.";
+  const button=riasec?"Mulai Assessment RIASEC":type==="work-attitude"?"Mulai Assessment Work Attitude":type==="learning-preference"?"Mulai Assessment Learning Preference":disc?"Mulai Assessment DISC":eq?"Mulai Assessment EQ":type==="cognitive"?"Mulai Assessment Cognitive":premium?"Mulai Assessment Premium":"Mulai Assessment Gratis";
   return <div className="min-h-screen bg-slate-50 px-4 py-10 text-slate-950"><div className="mx-auto max-w-3xl"><div className="mb-4 flex items-center gap-2 text-xs font-bold text-slate-400"><span>Assessment</span><span>›</span><span className="text-indigo-600">Pre-Test</span></div><div className="rounded-[32px] border border-slate-200 bg-white p-7 shadow-sm sm:p-10"><div className="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1.5 text-xs font-bold text-indigo-700"><ShieldCheck className="h-4 w-4"/>ReadyScore {label}</div><p className="mt-6 text-xs font-black uppercase tracking-[0.16em] text-slate-400">Pre-Test</p><h1 className="mt-2 text-4xl font-bold tracking-tight">{title}</h1><p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">{description}</p><div className="mt-8 grid gap-3 sm:grid-cols-3">{[[count,"soal"],[duration,"durasi"],[purpose,"tujuan"]].map(([value,item])=><div key={item} className="rounded-2xl bg-slate-50 p-4"><p className="text-sm font-bold leading-5">{value}</p><p className="mt-1 text-xs text-slate-500">{item}</p></div>)}</div><div className="mt-8 rounded-2xl border border-slate-200 p-5"><p className="text-sm font-bold">Sebelum mulai</p><ul className="mt-3 space-y-2 text-sm leading-6 text-slate-600"><li>• Pastikan Anda memiliki waktu yang cukup dan koneksi internet yang stabil.</li><li>• Ikuti instruksi dan jawab berdasarkan kondisi atau respons Anda sesuai jenis assessment.</li><li>• Anda dapat kembali ke soal sebelumnya selama assessment berlangsung.</li><li>• Jawaban disimpan selama proses berlangsung agar assessment dapat dilanjutkan.</li><li>• Setelah submit, hasil dibuat sebagai snapshot dan Anda diarahkan ke halaman hasil.</li></ul></div>{type==="cognitive"&&<p className="mt-4 rounded-2xl bg-slate-50 p-4 text-xs leading-5 text-slate-600">Catatan: assessment Cognitive tidak menggunakan atau menghasilkan skor IQ universal.</p>}<button onClick={onStart} disabled={busy} className="rs-a11y-target mt-7 inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-6 py-3.5 text-sm font-bold text-white disabled:opacity-40">{busy?"Menyiapkan...":button}<ArrowRight className="h-4 w-4"/></button>{message&&<p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm text-amber-800">{message}</p>}</div></div></div>;
 }
 

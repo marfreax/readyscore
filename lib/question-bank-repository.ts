@@ -748,6 +748,7 @@ export async function getPublishedEligibleQuestions(testTypeCode?: string) {
         Boolean(v.indicator?.trim()) &&
         v.weight > 0 &&
         ((v.testType?.code === "RIASEC" && v.answerType === "LIKERT_5" && v.scale.length === 5 && v.scoringKey.length === 5) ||
+          ((v.testType?.code === "WORK_ATTITUDE" || v.testType?.code === "LEARNING_PREFERENCE") && v.answerType === "LIKERT_5" && v.scale.length === 5 && v.scoringKey.length === 5) ||
           ((v.testType?.code === "DISC" || v.testType?.code === "EQ" || v.testType?.code === "COGNITIVE") && v.answerType === "SINGLE_CHOICE_4" && v.scale.length === 4 && ((v.testType?.code === "DISC" && v.scoringKey.length === 4) || (v.testType?.code !== "DISC" && v.scoringKey.length === 1)))),
     )
     .map((v) => ({

@@ -1498,3 +1498,28 @@ Dan:
 Tujuan V18 hanya satu:
 
 > **Ketika customer membalas ReadyScore melalui WhatsApp, tim ReadyScore dapat melihat percakapan tersebut, memahami context customer, dan membalas langsung dari ReadyScore dengan aman dan dapat diaudit.**
+
+
+PHASE P0 — Production Preflight
+        ↓
+DB migration audit
+        ↓
+Schema compatibility
+        ↓
+Production data inventory
+        ↓
+Backup verification
+        ↓
+Migration decision
+        ↓
+ONLY IF SAFE
+        ↓
+PHASE P1 — Controlled Deployment
+        ↓
+PHASE P2 — Production Smoke
+        ↓
+PHASE P3 — Real WhatsApp Certification
+        ↓
+V18.3 PRODUCTION CERTIFICATION — PASS
+        ↓
+V18 COMPLETE

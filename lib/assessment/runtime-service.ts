@@ -8,6 +8,7 @@ import {
   abandonAttempt,
   createAttempt,
   getAttempt as getPersistedAttempt,
+  findActiveAttemptForUser,
   getAttemptProgress,
   getPersistedResult,
   persistCompletedResult,
@@ -23,9 +24,13 @@ import { interpretAssessmentResult } from "./result/engine-v1";
 import { validateResultSemantics } from "./result/semantics-v1";
 import type { Answer, AssessmentResult, CognitiveOptionValue, LikertValue, Question } from "./types";
 import { getAssessmentRuntimeContract, toPublicRuntimeQuestion, toPublicRuntimeSnapshot } from "./runtime-contract";
+import { getActiveSubject } from "../subjects/service";
 
 function requireSupportedAssessmentType(type: string): AssessmentType {
-  if (type === "free" || type === "riasec" || type === "disc" || type === "eq" || type === "cognitive") return type;
+  const normalized = type.trim().toLowerCase().replace(/_/g, "-");
+  if (normalized === "free" || normalized === "riasec" || normalized === "disc" || normalized === "eq" || normalized === "cognitive" || normalized === "work-attitude" || normalized === "learning-preference") {
+    return normalized;
+  }
   throw new RuntimeError("ASSESSMENT_TYPE_NOT_SUPPORTED", `Assessment type ${type} is no longer an active runtime assessment.`);
 }
 import {
@@ -44,22 +49,59 @@ export class RuntimeError extends Error {
 const newId = (type: AssessmentType) => `${type}-${Date.now()}-${randomBytes(6).toString("hex")}`;
 const newSeed = () => randomBytes(16).toString("hex");
 
+function validateSelectedQuestionPresentation(type: AssessmentType, questions: Question[]) {
+  if (type !== "disc") return;
+  const invalid = questions.find((question) =>
+    question.answerType !== "SINGLE_CHOICE_4" ||
+    !Array.isArray(question.options) ||
+    question.options.length !== 4 ||
+    new Set(question.options).size !== 4 ||
+    question.scale.length !== 4 ||
+    question.scale.some((value) => ![1, 2, 3, 4].includes(value)),
+  );
+  if (invalid) {
+    throw new RuntimeError(
+      "DISC_RESPONSE_MODEL_INVALID",
+      "Format soal DISC tidak valid. Assessment DISC harus menggunakan empat pilihan forced-choice.",
+    );
+  }
+}
+
 export async function startAssessment(
   type: AssessmentType,
   userId?: string,
-  options?: { reassessment?: boolean; reassessmentPriorAttemptId?: string },
+  options?: { reassessment?: boolean; reassessmentPriorAttemptId?: string; subjectId?: string },
 ) {
+  const runtimeTypeMap: Record<AssessmentType, PrismaAssessmentType> = {
+    free: "FREE",
+    riasec: "RIASEC",
+    disc: "DISC",
+    eq: "EQ",
+    cognitive: "COGNITIVE",
+    "work-attitude": "WORK_ATTITUDE",
+    "learning-preference": "LEARNING_PREFERENCE",
+  };
+  const subject = userId && type !== "free" ? await getActiveSubject(userId, options?.subjectId) : null;
+  const subjectId = subject?.id;
   let config;
-  try { config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType); } catch (error) {
+  try { config = await resolveActiveAssessmentConfiguration(runtimeTypeMap[type]); } catch (error) {
     const code = error instanceof Error ? error.message : "ASSESSMENT_CONFIGURATION_NOT_READY";
     throw new RuntimeError(code.split(":")[0], "Assessment belum tersedia.");
   }
 
+  // Starting the same assessment twice must resume an existing active attempt
+  // instead of consuming another TEST_ACCESS entitlement. This is important
+  // even when browser localStorage is unavailable or has been cleared.
+  if (userId && type !== "free") {
+    const activeAttempt = await findActiveAttemptForUser(userId, type, new Date(), subjectId);
+    if (activeAttempt) return buildRuntimeView(activeAttempt);
+  }
+
   let commercialAccessClaim: Awaited<ReturnType<typeof findConsumableTestEntitlement>> = null;
-  const paidTestTypes = new Set(["riasec", "disc", "eq", "cognitive"]);
+  const paidTestTypes = new Set(["riasec", "disc", "eq", "cognitive", "work-attitude", "learning-preference"]);
   if (paidTestTypes.has(type)) {
     if (!userId) throw new RuntimeError("AUTHENTICATION_REQUIRED", "Login diperlukan untuk assessment berbayar.");
-    commercialAccessClaim = await findConsumableTestEntitlement(userId, type);
+    commercialAccessClaim = await findConsumableTestEntitlement(userId, type, subjectId);
     if (!commercialAccessClaim) {
       throw new RuntimeError("TEST_ACCESS_REQUIRED", "Anda belum memiliki akses assessment ini atau akses sudah digunakan.");
     }
@@ -74,6 +116,7 @@ export async function startAssessment(
   try {
     packageSelection = await selectPackageAndQuestions(type, attemptSeed);
     selected = packageSelection.questions;
+    validateSelectedQuestionPresentation(type, selected);
     if (selected.length !== packageSelection.package.totalQuestions) {
       throw new RuntimeError("SELECTION_COUNT_MISMATCH", "Jumlah question hasil package selection tidak sesuai konfigurasi.");
     }
@@ -128,6 +171,7 @@ export async function startAssessment(
     persisted = await createAttempt({
       id: attemptId,
       userId,
+      subjectId,
       type,
       assessmentConfigurationId: config.configuration.id,
       assessmentConfigurationVersion: config.version,
@@ -145,6 +189,7 @@ export async function startAssessment(
         ? {
             entitlementId: commercialAccessClaim.id,
             userId: userId!,
+            subjectId: subjectId!,
             testType: commercialAccessClaim.resourceKey,
             expectedUsageConsumed: commercialAccessClaim.usageConsumed,
             sourceOrderId: commercialAccessClaim.sourceOrderId,
@@ -157,6 +202,14 @@ export async function startAssessment(
     // wins that race, expose the same public access-denied contract as a
     // normally exhausted entitlement instead of leaking a generic 500.
     if (error instanceof Error && error.message === "ASSESSMENT_ACCESS_RACE") {
+      // Another request may have won the entitlement compare-and-set and
+      // created the attempt milliseconds before this request. Re-read the
+      // active attempt before reporting an access denial so duplicate browser
+      // submissions are idempotent from the customer's perspective.
+      if (userId && type !== "free") {
+        const racedAttempt = await findActiveAttemptForUser(userId, type, new Date(), subjectId);
+        if (racedAttempt) return buildRuntimeView(racedAttempt);
+      }
       throw new RuntimeError(
         "TEST_ACCESS_REQUIRED",
         "Anda belum memiliki akses assessment ini atau akses sudah digunakan.",
@@ -170,20 +223,40 @@ export async function startAssessment(
 }
 
 export async function startReassessment(
-  type: "riasec" | "disc" | "eq" | "cognitive",
+  type: "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference",
   userId: string,
+  subjectId?: string,
 ) {
   if (!isReassessmentTestType(type)) {
     throw new RuntimeError("INVALID_ASSESSMENT_TYPE", "Tipe assessment reassessment tidak valid.");
   }
 
-  const eligibility = await getReassessmentEligibility(userId, type);
+  const subject = await getActiveSubject(userId, subjectId);
+  const activeSubjectId = subject.id;
+  const eligibility = await getReassessmentEligibility(userId, type, new Date(), activeSubjectId);
   if (!eligibility.eligible) {
     throw new RuntimeError(eligibility.code, eligibility.message);
   }
 
+  const reassessmentRuntimeTypeMap: Record<
+    "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference",
+    PrismaAssessmentType
+  > = {
+    riasec: "RIASEC",
+    disc: "DISC",
+    eq: "EQ",
+    cognitive: "COGNITIVE",
+    "work-attitude": "WORK_ATTITUDE",
+    "learning-preference": "LEARNING_PREFERENCE",
+  };
+
   let config;
-  try { config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType); } catch { throw new RuntimeError("ASSESSMENT_CONFIGURATION_NOT_READY", "Assessment belum tersedia."); }
+  try {
+    config = await resolveActiveAssessmentConfiguration(reassessmentRuntimeTypeMap[type]);
+  } catch (error) {
+    const code = error instanceof Error ? error.message : "ASSESSMENT_CONFIGURATION_NOT_READY";
+    throw new RuntimeError(code.split(":")[0], "Assessment belum tersedia.");
+  }
   const stats = await getQuestionBankStats();
   const attemptId = newId(type);
   const attemptSeed = newSeed();
@@ -193,6 +266,7 @@ export async function startReassessment(
   try {
     packageSelection = await selectPackageAndQuestions(type, attemptSeed);
     selected = packageSelection.questions;
+    validateSelectedQuestionPresentation(type, selected);
   } catch (error) {
     if (error instanceof PackageSelectionError) throw new RuntimeError(error.code, error.message);
     if (error instanceof SelectionError) throw new RuntimeError(error.code, error.message);
@@ -226,6 +300,7 @@ export async function startReassessment(
     persisted = await createReassessmentAttempt({
       id: attemptId,
       userId,
+      subjectId: activeSubjectId,
       type,
       assessmentConfigurationId: config.configuration.id,
       assessmentConfigurationVersion: config.version,
@@ -320,8 +395,9 @@ export async function getAttemptResult(id: string) {
 }
 
 export async function getAttemptResultForUser(userId: string, attemptId: string) {
+  const subject = await getActiveSubject(userId);
   const owned = await prisma.assessmentAttempt.findFirst({
-    where: { id: attemptId, userId },
+    where: { id: attemptId, userId, subjectId: subject.id },
     select: { id: true },
   });
   if (!owned) throw new RuntimeError("RESULT_NOT_AVAILABLE", "Hasil assessment tidak tersedia untuk akun ini.");
@@ -331,6 +407,13 @@ export async function getAttemptResultForUser(userId: string, attemptId: string)
   return persisted;
 }
 
+
+export async function assertAttemptBelongsToActiveSubject(userId: string, attemptId: string) {
+  const subject = await getActiveSubject(userId);
+  const owned = await prisma.assessmentAttempt.findFirst({ where: { id: attemptId, userId, subjectId: subject.id }, select: { id: true } });
+  if (!owned) throw new RuntimeError("ATTEMPT_NOT_AVAILABLE", "Assessment attempt tidak tersedia untuk subject aktif.");
+  return subject;
+}
 export async function saveAnswer(id: string, questionId: string, value: unknown) {
   const attempt = await getAttempt(id);
   if (attempt.attempt.status === "EXPIRED") {
@@ -377,14 +460,25 @@ async function scoreAttempt(id: string, completionMode: "SUBMITTED" | "TIMEOUT")
     throw new RuntimeError("SCORING_FAILED", error instanceof Error ? error.message : "Scoring gagal.");
   }
   let interpretedResult = result;
-  if (["riasec", "disc", "eq", "cognitive"].includes(attempt.attempt.assessmentType)) {
+  if (["riasec", "disc", "eq", "cognitive", "work-attitude", "learning-preference"].includes(attempt.attempt.assessmentType)) {
+    const resultKeyByRuntimeType: Record<string, string> = {
+      riasec: "riasec",
+      disc: "disc",
+      eq: "eq",
+      cognitive: "cognitive",
+      "work-attitude": "workAttitude",
+      "learning-preference": "learningPreference",
+    };
+    const resultKey = resultKeyByRuntimeType[attempt.attempt.assessmentType] ?? attempt.attempt.assessmentType;
     const testSpecificResult = (result as AssessmentResult & {
       riasec?: unknown;
       disc?: unknown;
       eq?: unknown;
       cognitive?: unknown;
+      workAttitude?: unknown;
+      learningPreference?: unknown;
       [key: string]: unknown;
-    })[attempt.attempt.assessmentType];
+    })[resultKey];
     interpretedResult = interpretAssessmentResult(result, testSpecificResult);
     validateResultSemantics(interpretedResult);
   }

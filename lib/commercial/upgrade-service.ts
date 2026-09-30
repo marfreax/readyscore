@@ -1,6 +1,7 @@
 import { prisma } from "../db/prisma";
 import { COMMERCIAL_PRODUCT_CATALOG, type CommercialTier } from "./types";
 import { getActiveProductsForUser, listUserEntitlements } from "./entitlement-service";
+import { getActiveSubject } from "../subjects/service";
 
 export const UPGRADE_CONVERSION_VERSION = "V5_L9_UPGRADE_CONVERSION_V1";
 export const UPGRADE_PRICING_STATUS = "PLANNING_HYPOTHESIS" as const;
@@ -30,12 +31,13 @@ function targetTier(value: unknown): UpgradeTarget | null {
   return null;
 }
 
-export async function getUpgradeQuote(userId: string, requestedTarget?: unknown) {
+export async function getUpgradeQuote(userId: string, requestedTarget?: unknown, requestedSubjectId?: string | null) {
+  const subject = await getActiveSubject(userId, requestedSubjectId);
   const [products, entitlements, reassessmentCredits] = await Promise.all([
-    getActiveProductsForUser(userId),
-    listUserEntitlements(userId),
+    getActiveProductsForUser(userId, subject.id),
+    listUserEntitlements(userId, new Date(), subject.id),
     prisma.reassessmentCredit.findMany({
-      where: { userId, status: "AVAILABLE" },
+      where: { userId, subjectId: subject.id, status: "AVAILABLE" },
       select: { id: true, testType: true, status: true },
       orderBy: { createdAt: "asc" },
     }),
@@ -55,7 +57,7 @@ export async function getUpgradeQuote(userId: string, requestedTarget?: unknown)
         (item) =>
           item.type === "TEST_ACCESS" &&
           item.resourceType === "TEST_TYPE" &&
-          ["COGNITIVE", "EQ", "DISC", "RIASEC"].includes(item.resourceKey),
+          ["COGNITIVE", "EQ", "DISC", "RIASEC", "WORK_ATTITUDE", "LEARNING_PREFERENCE"].includes(item.resourceKey),
       )
       .map((item) => item.resourceKey),
   )].sort();

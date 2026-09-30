@@ -1,5 +1,7 @@
 export const CROSS_TEST_PROFILE_CONTRACT_VERSION = "CROSS_TEST_PROFILE_V1" as const;
 export const CROSS_TEST_PROFILE_ENGINE_VERSION = "CROSS_TEST_PROFILE_ENGINE_V1" as const;
+export const CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY = "ONE_PROFILE_DOMAIN_ONLY" as const;
+export type CrossTestProfileLimitationCode = typeof CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY;
 
 export type ProfileEvidenceStatus = "AVAILABLE" | "PARTIAL" | "INSUFFICIENT";
 export type ProfileConfidence = "HIGH" | "MODERATE" | "LIMITED";
@@ -68,6 +70,7 @@ export type CrossTestProfile = {
     dominantEvidenceDomains: ProfileDomain[];
     observedPatterns: string[];
     limitations: string[];
+    limitationCodes: CrossTestProfileLimitationCode[];
   };
   claims: {
     allowed: string[];

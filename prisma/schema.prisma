@@ -17,6 +17,11 @@ enum UserStatus {
   INACTIVE
 }
 
+enum SubjectProfileType {
+  OWNER
+  CHILD
+}
+
 enum AssessmentType {
   FREE
   PREMIUM
@@ -24,6 +29,8 @@ enum AssessmentType {
   DISC
   EQ
   COGNITIVE
+  WORK_ATTITUDE
+  LEARNING_PREFERENCE
 }
 
 enum ReassessmentCreditStatus {
@@ -37,6 +44,8 @@ enum ReassessmentTestType {
   DISC
   EQ
   COGNITIVE
+  WORK_ATTITUDE
+  LEARNING_PREFERENCE
 }
 
 enum CommercialTier {
@@ -83,6 +92,14 @@ enum WhatsAppMessageStatus {
 enum WhatsAppChannel {
   WHATSAPP
 }
+
+enum DataDeletionRequestStatus {
+  REQUESTED
+  PROCESSING
+  COMPLETED
+  REJECTED
+}
+
 
 
 enum ScalevWebhookEventStatus {
@@ -231,6 +248,7 @@ model User {
   sessions Session[]
   passwordResetTokens PasswordResetToken[]
   attempts AssessmentAttempt[]
+  subjects SubjectProfile[]
   entitlements UserEntitlement[]
   scalevPurchases ScalevPurchase[]
   commercialOrders CommercialOrder[]
@@ -242,8 +260,49 @@ model User {
   v15Reports V15Report[]
   authenticationAuditEventsAsActor AuthenticationAuditEvent[] @relation("AuthenticationAuditActor")
   authenticationAuditEventsAsTarget AuthenticationAuditEvent[] @relation("AuthenticationAuditTarget")
+  dataDeletionRequests DataDeletionRequest[]
 
   @@index([createdAt])
+}
+
+model SubjectProfile {
+  id        String             @id
+  accountId String
+  name      String
+  type      SubjectProfileType @default(CHILD)
+  createdAt DateTime           @default(now())
+  updatedAt DateTime           @updatedAt
+
+  account              User                    @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  attempts             AssessmentAttempt[]
+  entitlements         UserEntitlement[]
+  addOnEntitlements    UserAddOnEntitlement[]
+  reassessmentCredits  ReassessmentCredit[]
+  commercialOrdersAsSubject CommercialOrder[]
+
+  @@unique([accountId, name])
+  @@index([accountId, type])
+}
+
+model DataDeletionRequest {
+  id              String                    @id @default(cuid())
+  userId          String?
+  emailSnapshot   String
+  nameSnapshot    String?
+  reason          String?
+  status          DataDeletionRequestStatus @default(REQUESTED)
+  requestedAt     DateTime                  @default(now())
+  processedAt     DateTime?
+  processedBy     String?
+  processingNotes String?
+  createdAt       DateTime                  @default(now())
+  updatedAt       DateTime                  @updatedAt
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([status, requestedAt])
+  @@index([userId, status])
+  @@index([emailSnapshot])
 }
 
 model AuthenticationAuditEvent {
@@ -499,6 +558,7 @@ model AddOnProductEntitlement {
 model UserAddOnEntitlement {
   id             String                   @id @default(cuid())
   userId         String
+  subjectId      String?
   addOnProductId String
   type           EntitlementType
   resourceType   EntitlementResourceType
@@ -511,10 +571,12 @@ model UserAddOnEntitlement {
   updatedAt      DateTime                 @updatedAt
 
   user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject      SubjectProfile? @relation(fields: [subjectId], references: [id], onDelete: Cascade)
   addOnProduct AddOnProduct @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
 
-  @@unique([userId, type, resourceType, resourceKey])
+  @@unique([subjectId, type, resourceType, resourceKey])
   @@index([userId, status])
+  @@index([subjectId, status])
   @@index([resourceType, resourceKey, status])
 }
 
@@ -631,6 +693,7 @@ model ScalevHandoff {
 model ReassessmentCredit {
   id                String                    @id @default(cuid())
   userId            String
+  subjectId         String?
   addOnProductId    String?
   testType          ReassessmentTestType
   status          ReassessmentCreditStatus  @default(AVAILABLE)
@@ -642,9 +705,11 @@ model ReassessmentCredit {
   updatedAt       DateTime                  @updatedAt
 
   user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject      SubjectProfile? @relation(fields: [subjectId], references: [id], onDelete: Cascade)
   addOnProduct AddOnProduct? @relation(fields: [addOnProductId], references: [id], onDelete: SetNull)
 
   @@index([userId, testType, status])
+  @@index([subjectId, testType, status])
   @@index([addOnProductId])
   @@index([userId, consumedAt])
   @@unique([consumedAttemptId])
@@ -690,6 +755,7 @@ model ProductEntitlement {
 model UserEntitlement {
   id           String                   @id @default(cuid())
   userId       String
+  subjectId    String?
   productId    String?
   type         EntitlementType
   resourceType EntitlementResourceType
@@ -705,10 +771,12 @@ model UserEntitlement {
   updatedAt    DateTime                 @updatedAt
 
   user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject SubjectProfile? @relation(fields: [subjectId], references: [id], onDelete: Cascade)
   product Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
 
-  @@unique([userId, type, resourceType, resourceKey])
+  @@unique([subjectId, type, resourceType, resourceKey])
   @@index([userId, status])
+  @@index([subjectId, status])
   @@index([resourceType, resourceKey, status])
   @@index([sourceOrderId])
 }
@@ -717,6 +785,7 @@ model UserEntitlement {
 model CommercialOrder {
   id                    String                    @id @default(cuid())
   userId                String
+  subjectId             String?
   productId             String
   orderNumber           String                    @unique
   productNameSnapshot   String
@@ -737,6 +806,7 @@ model CommercialOrder {
   updatedAt             DateTime                  @updatedAt
 
   user                  User                      @relation(fields: [userId], references: [id], onDelete: Restrict)
+  subject               SubjectProfile?           @relation(fields: [subjectId], references: [id], onDelete: SetNull)
   product               Product                   @relation(fields: [productId], references: [id], onDelete: Restrict)
   auditEvents           CommercialAuditEvent[]
   paymentAttempts       CommercialPaymentAttempt[]
@@ -744,6 +814,7 @@ model CommercialOrder {
   fulfillment            CommercialFulfillment?
 
   @@index([userId, createdAt])
+  @@index([subjectId, createdAt])
   @@index([productId, createdAt])
   @@index([paymentStatus, createdAt])
   @@index([fulfillmentStatus, createdAt])
@@ -1000,6 +1071,7 @@ model AssessmentConfigurationVersion {
 model AssessmentAttempt {
   id                             String         @id
   userId                         String?
+  subjectId                      String?
   assessmentType                 AssessmentType
   status                         AttemptStatus  @default(IN_PROGRESS)
   assessmentConfigurationId      String
@@ -1020,6 +1092,7 @@ model AssessmentAttempt {
   updatedAt                      DateTime       @updatedAt
 
   user      User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
+  subject   SubjectProfile?   @relation(fields: [subjectId], references: [id], onDelete: SetNull)
   questions AttemptQuestion[]
   questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
   answers   Answer[]
@@ -1030,6 +1103,7 @@ model AssessmentAttempt {
   funnelEvents FunnelEvent[]
 
   @@index([userId, startedAt])
+  @@index([subjectId, startedAt])
   @@index([status, startedAt])
   @@index([status, expiresAt])
   @@index([assessmentType, status])

@@ -75,7 +75,7 @@ export async function evaluateQuestionPackageProductionEligibility(versionId: st
   checks.push({ key: "package-publication-boundary", label: "Package publication boundary", status: version.status === "DRAFT" || version.status === "REVIEW" || version.status === "APPROVED" || version.status === "PUBLISHED" ? "PASS" : "BLOCK", detail: `Status ${version.status}` });
   checks.push({ key: "taxonomy-active", label: "Active taxonomy", status: taxonomyOk ? "PASS" : "BLOCK", detail: version.taxonomy ? `${version.taxonomy.version} · ${version.taxonomy.status}` : "Missing taxonomy" });
   checks.push({ key: "test-type", label: "Test Type compatibility", status: taxonomyOk ? "PASS" : "BLOCK", detail: `${version.package.testType.code}` });
-  const productionTestType = ["RIASEC", "DISC", "EQ", "COGNITIVE"].includes(version.package.testType.code);
+  const productionTestType = ["RIASEC", "DISC", "EQ", "COGNITIVE", "WORK_ATTITUDE", "LEARNING_PREFERENCE"].includes(version.package.testType.code);
   checks.push({ key: "production-timer", label: "Production timer", status: !productionTestType || version.timeLimitSeconds === 1200 ? "PASS" : "BLOCK", detail: productionTestType ? `${version.timeLimitSeconds} seconds configured / 1200 required` : `${version.timeLimitSeconds} seconds configured` });
 
   const rows = taxonomyOk ? await prisma.questionVersion.findMany({
@@ -105,7 +105,7 @@ export async function evaluateQuestionPackageProductionEligibility(versionId: st
 
 export async function listProductionEligibility() {
   const versions = await prisma.questionPackageVersion.findMany({
-    where: { package: { testType: { code: { in: ["RIASEC", "DISC", "EQ", "COGNITIVE"] } } }, status: { in: ["APPROVED", "PUBLISHED", "DRAFT", "REVIEW"] } },
+    where: { package: { testType: { code: { in: ["RIASEC", "DISC", "EQ", "COGNITIVE", "WORK_ATTITUDE", "LEARNING_PREFERENCE"] } } }, status: { in: ["APPROVED", "PUBLISHED", "DRAFT", "REVIEW"] } },
     select: { id: true }, orderBy: [{ updatedAt: "desc" }, { id: "desc" }],
   });
   return Promise.all(versions.map((version) => evaluateQuestionPackageProductionEligibility(version.id)));

@@ -42,6 +42,22 @@ const CONTENT: Record<string, Omit<AssessmentAboutPreTest, keyof CustomerAssessm
     resultSummary: "RIASEC Interest Profile dan Top Code berdasarkan pola interest Anda.",
     limitations: ["Bukan jaminan career fit.", "Bukan jaminan major suitability.", "Bukan ukuran kemampuan atau kecerdasan."],
   },
+  "learning-preference": {
+    purpose: "Memetakan kecenderungan preferensi belajar pada tiga cara pemrosesan informasi yang digunakan dalam assessment ini.",
+    whatToExpect: "Anda akan menilai seberapa sesuai setiap pernyataan dengan cara Anda biasanya menerima, memahami, atau mempraktikkan informasi saat belajar.",
+    preparation: ["Jawab berdasarkan kecenderungan Anda saat ini.", "Jangan memilih berdasarkan label gaya belajar yang menurut Anda paling ideal.", "Usahakan menjawab secara spontan dan konsisten."],
+    responseInstruction: "Pilih nilai 1–5 yang paling menggambarkan kecenderungan Anda pada setiap pernyataan.",
+    resultSummary: "Learning Preference Profile pada Visual, Auditory, dan Kinesthetic.",
+    limitations: ["Bukan label absolut tentang kemampuan belajar.", "Tidak berarti seseorang hanya dapat belajar melalui satu cara.", "Bukan diagnosis atau prediksi kemampuan belajar universal."],
+  },
+  "work-attitude": {
+    purpose: "Memetakan kecenderungan sikap kerja pada tujuh dimensi yang relevan dengan cara seseorang mengatur, berpikir, memutuskan, bekerja sama, berinteraksi, beradaptasi, dan menjaga disiplin.",
+    whatToExpect: "Anda akan menilai seberapa sesuai setiap pernyataan dengan kecenderungan Anda saat bekerja. Tidak ada jawaban benar atau salah.",
+    preparation: ["Jawab berdasarkan kecenderungan Anda saat ini.", "Jangan memilih jawaban berdasarkan citra pekerja ideal.", "Usahakan menjawab secara spontan dan konsisten."],
+    responseInstruction: "Pilih nilai 1–5 yang paling menggambarkan kecenderungan Anda pada setiap pernyataan.",
+    resultSummary: "Work Attitude Profile pada tujuh dimensi sikap kerja.",
+    limitations: ["Bukan diagnosis klinis.", "Bukan prediksi kinerja kerja.", "Bukan satu-satunya dasar keputusan karier."],
+  },
 };
 
 export function getAssessmentAboutPreTest(type: string): AssessmentAboutPreTest | null {
@@ -51,3 +67,4 @@ export function getAssessmentAboutPreTest(type: string): AssessmentAboutPreTest 
   if (!content) return null;
   return { ...base, ...content };
 }
+

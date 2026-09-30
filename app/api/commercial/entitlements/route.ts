@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "../../../../lib/auth/session";
+import { getActiveSubject } from "../../../../lib/subjects/service";
 import {
   getActiveProductsForUser,
   listUserEntitlements,
@@ -22,15 +23,17 @@ export async function GET() {
   }
 
   try {
+    const subject = await getActiveSubject(session.user.id);
     const [products, entitlements] = await Promise.all([
-      getActiveProductsForUser(session.user.id),
-      listUserEntitlements(session.user.id),
+      getActiveProductsForUser(session.user.id, subject.id),
+      listUserEntitlements(session.user.id, new Date(), subject.id),
     ]);
 
     return NextResponse.json({
       ok: true,
       architectureVersion: "V3_COMMERCIAL_3.1",
       userId: session.user.id,
+      activeSubject: subject,
       products,
       entitlements,
     });

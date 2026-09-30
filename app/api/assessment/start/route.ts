@@ -10,8 +10,8 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
-    const body = (await request.json().catch(() => ({}))) as { type?: AssessmentType };
-    if (body.type !== "free" && body.type !== "riasec" && body.type !== "disc" && body.type !== "eq" && body.type !== "cognitive") {
+    const body = (await request.json().catch(() => ({}))) as { type?: AssessmentType; subjectId?: string };
+    if (body.type !== "free" && body.type !== "riasec" && body.type !== "disc" && body.type !== "eq" && body.type !== "cognitive" && body.type !== "work-attitude" && body.type !== "learning-preference") {
       return NextResponse.json(
         { ok: false, error: { code: "INVALID_ASSESSMENT_TYPE", message: "Tipe assessment tidak valid." } },
         { status: 400 },
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     const current = await getCurrentSession();
     if (current) await syncUserToDatabase(current.user.id);
 
-    const attempt = await startAssessment(body.type, current?.user.id);
+    const attempt = await startAssessment(body.type, current?.user.id, { subjectId: body.subjectId });
     return NextResponse.json({
       ok: true,
       attemptId: attempt.attempt.id,

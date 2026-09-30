@@ -8,7 +8,7 @@ export type AssessmentRuntimeContract = {
   readonly questionCount: number | null;
   readonly scale: readonly number[];
   readonly optionsRequired: boolean;
-  readonly scoringMetadataRequired: "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "LEGACY";
+  readonly scoringMetadataRequired: "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE" | "LEGACY";
 };
 
 const CONTRACTS: Record<AssessmentType, AssessmentRuntimeContract> = {
@@ -17,6 +17,8 @@ const CONTRACTS: Record<AssessmentType, AssessmentRuntimeContract> = {
   eq: { assessmentType: "eq", answerType: "SINGLE_CHOICE_4", questionCount: null, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "EQ" },
   disc: { assessmentType: "disc", answerType: "SINGLE_CHOICE_4", questionCount: null, scale: [1, 2, 3, 4], optionsRequired: true, scoringMetadataRequired: "DISC" },
   riasec: { assessmentType: "riasec", answerType: "LIKERT_5", questionCount: null, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "RIASEC" },
+  "work-attitude": { assessmentType: "work-attitude", answerType: "LIKERT_5", questionCount: null, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "WORK_ATTITUDE" },
+  "learning-preference": { assessmentType: "learning-preference", answerType: "LIKERT_5", questionCount: null, scale: [1, 2, 3, 4, 5], optionsRequired: false, scoringMetadataRequired: "LEARNING_PREFERENCE" },
 };
 
 export function getAssessmentRuntimeContract(type: AssessmentType): AssessmentRuntimeContract {
@@ -58,6 +60,12 @@ function assertQuestionSemantics(type: AssessmentType, question: Question) {
     if (question.scoringKey.length !== 4 || new Set(question.scoringKey).size !== 4) {
       throw new Error(`EQ question ${question.id} requires an explicit four-value scoring key.`);
     }
+  }
+  if (type === "work-attitude" || type === "learning-preference") {
+    if (question.scoringKey.length !== 5 || question.scoringKey.some((value, index) => Number(value) !== index + 1)) {
+      throw new Error(`${type} question ${question.id} requires the identity 1-5 scoring key.`);
+    }
+    if (question.correctOption !== undefined && question.correctOption !== null) throw new Error(`Work Attitude question ${question.id} must not contain correctOption.`);
   }
   if (type === "riasec") {
     if (question.scoringKey.length !== 5 || question.scoringKey.some((value, index) => Number(value) !== index + 1)) {

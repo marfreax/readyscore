@@ -1,0 +1,9 @@
+import type { AssessmentResult } from "../types";
+export const WORK_ATTITUDE_INTERPRETATION_VERSION = "WORK_ATTITUDE_INTERPRETATION_V1" as const;
+const NAMES: Record<string,string> = {SYSTEMATIKA_KERJA:"Sistematika Kerja",POLA_BERPIKIR:"Pola Berpikir",PENGAMBILAN_KEPUTUSAN:"Pengambilan Keputusan",KERJASAMA:"Kerjasama",INTERAKSI_SOSIAL:"Interaksi Sosial",PENYESUAIAN_DIRI:"Penyesuaian Diri",KEDISIPLINAN:"Kedisiplinan"};
+export function interpretWorkAttitude(result: AssessmentResult) {
+  const dims = result.workAttitude?.measurement.dimensionScores ?? result.domainScores.map(d=>({dimension:d.domainId,score:d.score,answeredCount:d.questionCount,questionCount:d.questionCount}));
+  const ranked=[...dims].sort((a,b)=>b.score-a.score);
+  const summary = ranked.length ? `Profil Work Attitude menunjukkan kecenderungan relatif paling menonjol pada ${NAMES[ranked[0].dimension] ?? ranked[0].dimension}. Gunakan perbedaan antar-dimensi sebagai bahan refleksi terhadap cara Anda bekerja.` : "Data Work Attitude belum cukup untuk membentuk ringkasan.";
+  return { contractVersion:"TEST_RESULT_V1", interpretationVersion:WORK_ATTITUDE_INTERPRETATION_VERSION, status: result.status === "COMPLETE" ? "COMPLETE" : "PARTIAL", summary, confidence: result.status === "COMPLETE" ? "MODERATE" : "LIMITED", claims:{allowed:["relative work-attitude tendencies","self-reflection across seven dimensions"],restricted:["job performance prediction","career fit claims"],prohibited:["clinical diagnosis","guaranteed job performance","deterministic career decision"]}, dimensions:dims.map(d=>({code:d.dimension,name:NAMES[d.dimension] ?? d.dimension,score:d.score})), strongest:ranked.slice(0,3).map(d=>NAMES[d.dimension] ?? d.dimension), development:[...ranked].reverse().slice(0,3).map(d=>NAMES[d.dimension] ?? d.dimension)};
+}

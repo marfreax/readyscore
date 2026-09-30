@@ -3,14 +3,16 @@ import { redirect } from "next/navigation";
 import { CustomerPageShell } from "../../components/app/CustomerPageShell";
 import { Badge, Card, EmptyState } from "../../components/ui/DesignSystem";
 import { getCurrentSession } from "../../lib/auth/session";
-import { listUserEntitlements } from "../../lib/commercial/entitlement-service";
+import { getActiveSubject } from "../../lib/subjects/service";
+import { listUserEntitlements, reconcileCompletedResultAccess } from "../../lib/commercial/entitlement-service";
 import { getUserHistory } from "../../lib/assessment/dashboard-repository";
 import { CUSTOMER_ASSESSMENT_CATALOG } from "../../lib/assessment/catalog";
 
-const LABELS: Record<string, string> = { cognitive: "Cognitive", eq: "Emotional Intelligence", disc: "DISC", riasec: "RIASEC" };
+const LABELS: Record<string, string> = { cognitive: "Cognitive", eq: "Emotional Intelligence", disc: "DISC", riasec: "RIASEC", "work-attitude": "Work Attitude", "learning-preference": "Learning Preference" };
 function formatDate(value: string | null) { return value ? new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }).format(new Date(value)) : "—"; }
-function accessKey(type: string) { return `TEST_ACCESS:TEST_TYPE:${type.toUpperCase() === "COGNITIVE" ? "COGNITIVE" : type.toUpperCase()}`; }
-function resultKey(type: string) { return `RESULT_ACCESS:TEST_TYPE:${type.toUpperCase() === "COGNITIVE" ? "COGNITIVE" : type.toUpperCase()}`; }
+function canonicalTestKey(type: string) { return type.trim().toUpperCase().replace(/-/g, "_"); }
+function accessKey(type: string) { const key = canonicalTestKey(type); return `TEST_ACCESS:TEST_TYPE:${key === "COGNITIVE" ? "COGNITIVE" : key}`; }
+function resultKey(type: string) { const key = canonicalTestKey(type); return `RESULT_ACCESS:TEST_TYPE:${key === "COGNITIVE" ? "COGNITIVE" : key}`; }
 function statusFor(attempt: Awaited<ReturnType<typeof getUserHistory>>[number] | undefined, hasAccess: boolean) {
   if (attempt?.status === "IN_PROGRESS") return { label: "In Progress", tone: "warning" as const };
   if (attempt?.status === "COMPLETED") return { label: "Completed", tone: "success" as const };
@@ -19,7 +21,9 @@ function statusFor(attempt: Awaited<ReturnType<typeof getUserHistory>>[number] |
 export default async function ResultsPage() {
   const session = await getCurrentSession();
   if (!session) redirect("/login?next=/results");
-  const [history, entitlements] = await Promise.all([getUserHistory(session.user.id), listUserEntitlements(session.user.id)]);
+  const subject = await getActiveSubject(session.user.id);
+  await reconcileCompletedResultAccess(session.user.id);
+  const [history, entitlements] = await Promise.all([getUserHistory(session.user.id), listUserEntitlements(session.user.id, new Date(), subject.id)]);
   const entitlementKeys = new Set(entitlements.map((item) => `${item.type}:${item.resourceType}:${item.resourceKey}`));
   const latestByType = new Map<string, (typeof history)[number]>();
   for (const item of history) if (!latestByType.has(item.assessmentType)) latestByType.set(item.assessmentType, item);

@@ -1,0 +1,1903 @@
+{
+  "name": "ReadyScore Work Attitude & Learning Preference Question Bank V2",
+  "status": "DRAFT",
+  "sourceBaseline": "Runtime Question Bank V1",
+  "taxonomyVersion": {
+    "workAttitude": "WORK_ATTITUDE_TAXONOMY_V1",
+    "learningPreference": "LEARNING_PREFERENCE_TAXONOMY_V1"
+  },
+  "counts": {
+    "total": 65,
+    "workAttitude": 35,
+    "learningPreference": 30,
+    "unchanged": 49,
+    "revised": 16
+  },
+  "items": [
+    {
+      "id": "WA-01-01",
+      "text": "Saya mengatur pekerjaan dengan urutan langkah yang jelas.",
+      "domain": "SYSTEMATIKA_KERJA",
+      "subdomain": "SYSTEMATIKA_KERJA_CORE",
+      "indicator": "SYSTEMATIKA_KERJA_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-01-02",
+      "text": "Saya menggunakan struktur kerja yang terencana untuk menjaga pekerjaan tetap terarah.",
+      "domain": "SYSTEMATIKA_KERJA",
+      "subdomain": "SYSTEMATIKA_KERJA_CORE",
+      "indicator": "SYSTEMATIKA_KERJA_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-01-03",
+      "text": "Saya cenderung merapikan pekerjaan sebelum berpindah ke tugas berikutnya.",
+      "domain": "SYSTEMATIKA_KERJA",
+      "subdomain": "SYSTEMATIKA_KERJA_CORE",
+      "indicator": "SYSTEMATIKA_KERJA_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-01-04",
+      "text": "Saya menggunakan cara kerja yang teratur untuk menjaga pekerjaan tetap tertata.",
+      "domain": "SYSTEMATIKA_KERJA",
+      "subdomain": "SYSTEMATIKA_KERJA_CORE",
+      "indicator": "SYSTEMATIKA_KERJA_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-01-05",
+      "text": "Saya mudah menjaga pekerjaan tetap terorganisasi ketika tugas bertambah.",
+      "domain": "SYSTEMATIKA_KERJA",
+      "subdomain": "SYSTEMATIKA_KERJA_CORE",
+      "indicator": "SYSTEMATIKA_KERJA_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-02-01",
+      "text": "Saya senang mencari pola atau hubungan di balik suatu persoalan.",
+      "domain": "POLA_BERPIKIR",
+      "subdomain": "POLA_BERPIKIR_CORE",
+      "indicator": "POLA_BERPIKIR_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-02-02",
+      "text": "Saya dapat melihat persoalan dari lebih dari satu sudut pandang.",
+      "domain": "POLA_BERPIKIR",
+      "subdomain": "POLA_BERPIKIR_CORE",
+      "indicator": "POLA_BERPIKIR_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-02-03",
+      "text": "Saya nyaman menggabungkan ide untuk menemukan pendekatan baru.",
+      "domain": "POLA_BERPIKIR",
+      "subdomain": "POLA_BERPIKIR_CORE",
+      "indicator": "POLA_BERPIKIR_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-02-04",
+      "text": "Saya dapat menghubungkan konsep dengan situasi praktis.",
+      "domain": "POLA_BERPIKIR",
+      "subdomain": "POLA_BERPIKIR_CORE",
+      "indicator": "POLA_BERPIKIR_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-02-05",
+      "text": "Saya mempertimbangkan gambaran besar sebelum menentukan cara menangani suatu persoalan.",
+      "domain": "POLA_BERPIKIR",
+      "subdomain": "POLA_BERPIKIR_CORE",
+      "indicator": "POLA_BERPIKIR_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-03-01",
+      "text": "Saya mempertimbangkan fakta sebelum mengambil keputusan penting.",
+      "domain": "PENGAMBILAN_KEPUTUSAN",
+      "subdomain": "PENGAMBILAN_KEPUTUSAN_CORE",
+      "indicator": "PENGAMBILAN_KEPUTUSAN_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-03-02",
+      "text": "Saya membandingkan beberapa pilihan sebelum menentukan tindakan.",
+      "domain": "PENGAMBILAN_KEPUTUSAN",
+      "subdomain": "PENGAMBILAN_KEPUTUSAN_CORE",
+      "indicator": "PENGAMBILAN_KEPUTUSAN_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-03-03",
+      "text": "Saat mengambil keputusan, saya mempertimbangkan informasi yang mendukung maupun yang tidak sesuai dengan pilihan awal saya.",
+      "domain": "PENGAMBILAN_KEPUTUSAN",
+      "subdomain": "PENGAMBILAN_KEPUTUSAN_CORE",
+      "indicator": "PENGAMBILAN_KEPUTUSAN_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-03-04",
+      "text": "Saya nyaman mengambil keputusan setelah menilai risiko dan konsekuensinya.",
+      "domain": "PENGAMBILAN_KEPUTUSAN",
+      "subdomain": "PENGAMBILAN_KEPUTUSAN_CORE",
+      "indicator": "PENGAMBILAN_KEPUTUSAN_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-03-05",
+      "text": "Saya menggunakan alasan yang jelas untuk menjelaskan keputusan saya.",
+      "domain": "PENGAMBILAN_KEPUTUSAN",
+      "subdomain": "PENGAMBILAN_KEPUTUSAN_CORE",
+      "indicator": "PENGAMBILAN_KEPUTUSAN_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-04-01",
+      "text": "Saya aktif membantu tim mencapai tujuan bersama.",
+      "domain": "KERJASAMA",
+      "subdomain": "KERJASAMA_CORE",
+      "indicator": "KERJASAMA_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-04-02",
+      "text": "Saya nyaman membagi tanggung jawab dengan anggota tim.",
+      "domain": "KERJASAMA",
+      "subdomain": "KERJASAMA_CORE",
+      "indicator": "KERJASAMA_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-04-03",
+      "text": "Saya memperhatikan kebutuhan pekerjaan anggota tim ketika menentukan kontribusi saya.",
+      "domain": "KERJASAMA",
+      "subdomain": "KERJASAMA_CORE",
+      "indicator": "KERJASAMA_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-04-04",
+      "text": "Saya terbuka terhadap cara kerja yang berbeda dari anggota tim.",
+      "domain": "KERJASAMA",
+      "subdomain": "KERJASAMA_CORE",
+      "indicator": "KERJASAMA_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-04-05",
+      "text": "Saya dapat bekerja bersama orang lain tanpa harus selalu menjadi pengambil keputusan.",
+      "domain": "KERJASAMA",
+      "subdomain": "KERJASAMA_CORE",
+      "indicator": "KERJASAMA_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-05-01",
+      "text": "Saya berusaha menjaga komunikasi kerja tetap saling menghargai.",
+      "domain": "INTERAKSI_SOSIAL",
+      "subdomain": "INTERAKSI_SOSIAL_CORE",
+      "indicator": "INTERAKSI_SOSIAL_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-05-02",
+      "text": "Saya dapat menyesuaikan cara berkomunikasi dengan orang yang berbeda.",
+      "domain": "INTERAKSI_SOSIAL",
+      "subdomain": "INTERAKSI_SOSIAL_CORE",
+      "indicator": "INTERAKSI_SOSIAL_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-05-03",
+      "text": "Saya memperhatikan dampak cara bicara saya terhadap orang lain.",
+      "domain": "INTERAKSI_SOSIAL",
+      "subdomain": "INTERAKSI_SOSIAL_CORE",
+      "indicator": "INTERAKSI_SOSIAL_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-05-04",
+      "text": "Saya dapat memulai hubungan kerja dengan orang yang baru bekerja dengan saya.",
+      "domain": "INTERAKSI_SOSIAL",
+      "subdomain": "INTERAKSI_SOSIAL_CORE",
+      "indicator": "INTERAKSI_SOSIAL_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-05-05",
+      "text": "Saya berusaha memahami perspektif orang lain sebelum merespons.",
+      "domain": "INTERAKSI_SOSIAL",
+      "subdomain": "INTERAKSI_SOSIAL_CORE",
+      "indicator": "INTERAKSI_SOSIAL_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-06-01",
+      "text": "Saya dapat menyesuaikan cara kerja ketika situasi berubah.",
+      "domain": "PENYESUAIAN_DIRI",
+      "subdomain": "PENYESUAIAN_DIRI_CORE",
+      "indicator": "PENYESUAIAN_DIRI_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-06-02",
+      "text": "Saya relatif cepat mencoba cara baru ketika pendekatan lama tidak efektif.",
+      "domain": "PENYESUAIAN_DIRI",
+      "subdomain": "PENYESUAIAN_DIRI_CORE",
+      "indicator": "PENYESUAIAN_DIRI_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-06-03",
+      "text": "Saya dapat tetap bekerja ketika prioritas berubah.",
+      "domain": "PENYESUAIAN_DIRI",
+      "subdomain": "PENYESUAIAN_DIRI_CORE",
+      "indicator": "PENYESUAIAN_DIRI_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-06-04",
+      "text": "Saya tidak mudah terpaku pada rencana awal ketika kondisi kerja berubah.",
+      "domain": "PENYESUAIAN_DIRI",
+      "subdomain": "PENYESUAIAN_DIRI_CORE",
+      "indicator": "PENYESUAIAN_DIRI_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-06-05",
+      "text": "Saya dapat mengubah rencana tanpa kehilangan fokus pada tujuan.",
+      "domain": "PENYESUAIAN_DIRI",
+      "subdomain": "PENYESUAIAN_DIRI_CORE",
+      "indicator": "PENYESUAIAN_DIRI_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-07-01",
+      "text": "Saya menjaga komitmen terhadap pekerjaan yang sudah saya sepakati.",
+      "domain": "KEDISIPLINAN",
+      "subdomain": "KEDISIPLINAN_CORE",
+      "indicator": "KEDISIPLINAN_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-07-02",
+      "text": "Saya berusaha menyelesaikan tugas sesuai batas waktu.",
+      "domain": "KEDISIPLINAN",
+      "subdomain": "KEDISIPLINAN_CORE",
+      "indicator": "KEDISIPLINAN_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "WA-07-03",
+      "text": "Saya tetap menjalankan ketentuan kerja meskipun tidak ada yang mengingatkan saya.",
+      "domain": "KEDISIPLINAN",
+      "subdomain": "KEDISIPLINAN_CORE",
+      "indicator": "KEDISIPLINAN_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-07-04",
+      "text": "Saya konsisten menjalankan prosedur kerja yang telah disepakati.",
+      "domain": "KEDISIPLINAN",
+      "subdomain": "KEDISIPLINAN_CORE",
+      "indicator": "KEDISIPLINAN_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "WA-07-05",
+      "text": "Saya menindaklanjuti pekerjaan sampai benar-benar selesai.",
+      "domain": "KEDISIPLINAN",
+      "subdomain": "KEDISIPLINAN_CORE",
+      "indicator": "KEDISIPLINAN_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "WORK_ATTITUDE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-01",
+      "text": "Saya lebih mudah memahami materi ketika informasi disajikan dalam diagram atau gambar.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-02",
+      "text": "Saya terbantu ketika catatan menggunakan struktur visual seperti tabel atau bagan.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-03",
+      "text": "Saya sering membayangkan bentuk atau susunan informasi saat mempelajarinya.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-04",
+      "text": "Contoh visual membantu saya menangkap konsep yang baru.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-05",
+      "text": "Saya nyaman menggunakan warna atau penanda visual untuk mengorganisasi catatan.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-06",
+      "text": "Saya cenderung memahami hubungan antar-ide setelah melihat peta konsep.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_06",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-07",
+      "text": "Saya terbantu ketika langkah atau proses ditunjukkan melalui demonstrasi visual.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_07",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-01-08",
+      "text": "Saat belajar, saya suka menyusun informasi agar mudah dipindai secara visual.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_08",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-09",
+      "text": "Saya lebih cepat mengenali pola ketika informasi ditampilkan secara visual.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_09",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-01-10",
+      "text": "Saya lebih tertarik pada materi belajar yang menggunakan ilustrasi untuk menjelaskan hubungan atau proses.",
+      "domain": "VISUAL",
+      "subdomain": "VISUAL_CORE",
+      "indicator": "VISUAL_10",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-02-01",
+      "text": "Saya lebih mudah memahami materi setelah mendengar penjelasan yang runtut.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-02-02",
+      "text": "Diskusi membantu saya memperjelas pemahaman terhadap suatu konsep.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-02-03",
+      "text": "Saya sering mengingat informasi melalui kalimat atau penjelasan yang saya dengar.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-02-04",
+      "text": "Saya lebih mudah memahami materi ketika dapat menjelaskannya dengan kata-kata saya sendiri.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-02-05",
+      "text": "Saya lebih mudah menemukan pemahaman baru setelah membicarakan suatu topik.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-02-06",
+      "text": "Saya nyaman mengikuti pembelajaran yang banyak menggunakan penjelasan verbal.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_06",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-02-07",
+      "text": "Saya suka mendengarkan contoh atau cerita untuk memahami suatu gagasan.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_07",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-02-08",
+      "text": "Saya terbantu mengingat materi ketika saya mengucapkannya kembali secara lisan.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_08",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-02-09",
+      "text": "Saya lebih mudah mengikuti langkah pembelajaran ketika instruksinya disampaikan secara lisan.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_09",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-02-10",
+      "text": "Saya lebih mudah memahami materi ketika dapat mendengarkan orang lain menjelaskan suatu topik.",
+      "domain": "AUDITORY",
+      "subdomain": "AUDITORY_CORE",
+      "indicator": "AUDITORY_10",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": true
+    },
+    {
+      "id": "LP-03-01",
+      "text": "Saya lebih mudah memahami materi setelah mencoba atau mempraktikkannya.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_01",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-02",
+      "text": "Saya terbantu ketika pembelajaran melibatkan simulasi atau latihan langsung.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_02",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-03",
+      "text": "Saya suka mempelajari sesuatu dengan melakukan percobaan sendiri.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_03",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-04",
+      "text": "Saya memahami konsep dengan lebih baik ketika dapat berinteraksi langsung dengan objek atau alat.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_04",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-05",
+      "text": "Saya cenderung belajar sambil mencoba langkah demi langkah.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_05",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-06",
+      "text": "Latihan praktis membantu saya mengingat materi lebih lama.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_06",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-07",
+      "text": "Saya menikmati pembelajaran yang membuat saya aktif melakukan sesuatu.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_07",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-08",
+      "text": "Saya lebih mudah memahami prosedur setelah mempraktikkannya sendiri.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_08",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-09",
+      "text": "Saya terbantu ketika dapat menggunakan contoh nyata untuk mencoba sebuah konsep.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_09",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    },
+    {
+      "id": "LP-03-10",
+      "text": "Saya suka mengubah penjelasan menjadi aktivitas atau latihan yang dapat langsung dilakukan.",
+      "domain": "KINESTHETIC",
+      "subdomain": "KINESTHETIC_CORE",
+      "indicator": "KINESTHETIC_10",
+      "reverseScore": false,
+      "weight": 1,
+      "scale": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "scoringKey": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "difficulty": "MEDIUM",
+      "version": "v2",
+      "taxonomyVersion": "LEARNING_PREFERENCE_TAXONOMY_V1",
+      "status": "DRAFT",
+      "mappingStatus": "APPROVED",
+      "textChangedFromV1": false
+    }
+  ]
+}

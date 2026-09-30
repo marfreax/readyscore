@@ -1,9 +1,14 @@
 import { NextResponse } from "next/server";
-import { createCheckoutOrder } from "../../../../lib/commercial/v14-1";
+import { createCheckoutOrder, createUpgradeCheckoutOrder } from "../../../../lib/commercial/v14-1";
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
+    const upgradeTier = body?.upgradeTier === "MEDIUM" || body?.upgradeTier === "ADVANCE" ? body.upgradeTier : null;
+    if (upgradeTier) {
+      const result = await createUpgradeCheckoutOrder({ targetTier: upgradeTier });
+      return NextResponse.json({ ok: true, order: result }, { status: 201 });
+    }
     const result = await createCheckoutOrder({
       productId: typeof body?.productId === "string" ? body.productId : "",
       quantity: typeof body?.quantity === "number" ? body.quantity : 1,

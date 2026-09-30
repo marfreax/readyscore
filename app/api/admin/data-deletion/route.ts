@@ -1,0 +1,6 @@
+import { NextResponse } from "next/server";
+import { requireAdminApi } from "../../../../lib/auth/admin";
+import { listDataDeletionRequests, processDataDeletionRequest } from "../../../../lib/privacy/data-deletion";
+export const runtime="nodejs";
+export async function GET(){try{await requireAdminApi(); return NextResponse.json({ok:true,requests:await listDataDeletionRequests()});}catch(e){const code=e instanceof Error?e.message:"ADMIN_DATA_DELETION_FAILED";return NextResponse.json({ok:false,error:{code}},{status:code==="UNAUTHENTICATED"?401:code==="FORBIDDEN"?403:400});}}
+export async function POST(request:Request){try{const admin=await requireAdminApi();const body=await request.json() as {requestId?:string;confirmed?:boolean;notes?:string};if(!body.requestId||body.confirmed!==true)throw new Error("CONFIRMATION_REQUIRED");const result=await processDataDeletionRequest({requestId:body.requestId,adminUserId:admin.id,notes:body.notes});return NextResponse.json({ok:true,request:{id:result.id,status:result.status,processedAt:result.processedAt,processingNotes:result.processingNotes}});}catch(e){const code=e instanceof Error?e.message:"ADMIN_DATA_DELETION_FAILED";return NextResponse.json({ok:false,error:{code}},{status:code==="UNAUTHENTICATED"?401:code==="FORBIDDEN"?403:400});}}

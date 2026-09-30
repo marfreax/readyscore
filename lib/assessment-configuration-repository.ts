@@ -8,13 +8,14 @@ export type ReadinessReport = { status:"READY"|"WARNING"|"BLOCKED"; checks:Readi
 export type AdminAssessmentConfiguration = { id:string;code:string;name:string;assessmentType:AssessmentType;description:string|null;versionId:string;version:string;questionBankVersion:string;taxonomyVersion:string;scoringVersion:string;selectionAlgorithmVersion:string;questionCount:number;composition:CompositionItem[];status:AssessmentConfigurationStatus;readiness:ReadinessReport;createdAt:string;updatedAt:string };
 
 type ConfigurationRow = any;
-const SUPPORTED = new Set<SupportedAssessmentType>(["FREE","RIASEC","DISC","EQ","COGNITIVE"]);
+const SUPPORTED = new Set<SupportedAssessmentType>(["FREE","RIASEC","DISC","EQ","COGNITIVE","WORK_ATTITUDE", "LEARNING_PREFERENCE"]);
 const OPERATIONAL_CONFIG_CODES: Record<SupportedAssessmentType,string> = {
  FREE:"free-v1",
  RIASEC:"riasec-v1",
  DISC:"disc-v1",
  EQ:"eq-v1",
  COGNITIVE:"cognitive-v1",
+ WORK_ATTITUDE:"work-attitude-v1", LEARNING_PREFERENCE:"learning-preference-v1",
 };
 const OPERATIONAL_CONFIG_CODE_SET = new Set(Object.values(OPERATIONAL_CONFIG_CODES));
 function isOperationalConfiguration(row:{code?:string;assessmentType?:AssessmentType}){
@@ -22,13 +23,14 @@ function isOperationalConfiguration(row:{code?:string;assessmentType?:Assessment
  const type=row.assessmentType as SupportedAssessmentType;
  return SUPPORTED.has(type) && OPERATIONAL_CONFIG_CODE_SET.has(code) && OPERATIONAL_CONFIG_CODES[type]===code;
 }
-const groupForType:Partial<Record<AssessmentType,string>>={DISC:"DISC",RIASEC:"RIASEC",EQ:"EQ",COGNITIVE:"IQ_COGNITIVE",FREE:"RIASEC"};
+const groupForType:Partial<Record<AssessmentType,string>>={DISC:"DISC",RIASEC:"RIASEC",EQ:"EQ",COGNITIVE:"IQ_COGNITIVE",WORK_ATTITUDE:"WORK_ATTITUDE",LEARNING_PREFERENCE:"LEARNING_PREFERENCE",FREE:"RIASEC"};
 const DEFAULT_COMPOSITION:Record<SupportedAssessmentType,CompositionItem[]>={
  FREE:["R","I","A","S","E","C"].map((code,i)=>({code,requiredCount:i<4?2:1})),
  RIASEC:["R","I","A","S","E","C"].map(code=>({code,requiredCount:10})),
  DISC:["TARGET_D","TARGET_I","TARGET_S","TARGET_C"].map(code=>({code,requiredCount:20})),
  EQ:["EMOTION_AWARENESS","EMOTION_REGULATION","EMPATHY_SOCIAL_AWARENESS","RELATIONSHIP_SOCIAL_RESPONSE"].map((code,i)=>({code,requiredCount:i<2?13:12})),
  COGNITIVE:["VERBAL_REASONING","NUMERICAL_REASONING","LOGICAL_REASONING","ABSTRACT_REASONING"].map(code=>({code,requiredCount:10})),
+ WORK_ATTITUDE:["SYSTEMATIKA_KERJA","POLA_BERPIKIR","PENGAMBILAN_KEPUTUSAN","KERJASAMA","INTERAKSI_SOSIAL","PENYESUAIAN_DIRI","KEDISIPLINAN"].map(code=>({code,requiredCount:5})), LEARNING_PREFERENCE:["VISUAL","AUDITORY","KINESTHETIC"].map(code=>({code,requiredCount:10})),
 };
 
 function normalizeComposition(type:SupportedAssessmentType, value:unknown):CompositionItem[]{

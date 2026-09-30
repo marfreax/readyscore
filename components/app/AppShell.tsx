@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { CustomerMobileMenu, CustomerHeaderActions, CustomerSidebar } from "./CustomerNavigation";
+import SubjectSwitcher from "./SubjectSwitcher";
 
 export function AppShell({ children, userName }: { children: ReactNode; userName: string }) {
   return (
@@ -17,9 +18,15 @@ export function AppShell({ children, userName }: { children: ReactNode; userName
             />
           </Link>
 
-          <CustomerHeaderActions userName={userName} />
+          <div className="hidden lg:block"><SubjectSwitcher /></div><CustomerHeaderActions userName={userName} />
         </div>
       </header>
+
+      <div className="border-b border-slate-200 bg-white lg:hidden print-hidden">
+        <div className="rs-container py-2">
+          <SubjectSwitcher />
+        </div>
+      </div>
 
       <CustomerMobileMenu />
 

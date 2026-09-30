@@ -5,7 +5,7 @@ import type { SelectedQuestion } from "./question-engine";
 
 export type PersistedAttempt = {
   id: string;
-  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
+  assessmentType: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: string;
   expiresAt?: string;
@@ -19,7 +19,7 @@ export type PersistedAttempt = {
 
 function toAttempt(row: {
   id: string;
-  assessmentType: "FREE" | "PREMIUM" | "RIASEC" | "DISC" | "EQ" | "COGNITIVE";
+  assessmentType: "FREE" | "PREMIUM" | "RIASEC" | "DISC" | "EQ" | "COGNITIVE" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
   status: "IN_PROGRESS" | "COMPLETED" | "ABANDONED" | "EXPIRED";
   startedAt: Date;
   expiresAt: Date | null;
@@ -32,7 +32,9 @@ function toAttempt(row: {
 }): PersistedAttempt {
   return {
     id: row.id,
-    assessmentType: row.assessmentType.toLowerCase() as "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive",
+    // Prisma stores enum values with underscores, while runtime assessment
+    // routes use hyphenated canonical keys for the new assessment types.
+    assessmentType: row.assessmentType.toLowerCase().replace(/_/g, "-") as "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference",
     status: row.status,
     startedAt: row.startedAt.toISOString(),
     expiresAt: row.expiresAt?.toISOString(),
@@ -102,7 +104,8 @@ function questionSnapshot(question: SelectedQuestion, sequence: number) {
 export async function createReassessmentAttempt(input: {
   id: string;
   userId: string;
-  type: "riasec" | "disc" | "eq" | "cognitive";
+  subjectId: string;
+  type: "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference";
   assessmentConfigurationId: string;
   assessmentConfigurationVersion: string;
   questionBankVersion: string;
@@ -118,7 +121,7 @@ export async function createReassessmentAttempt(input: {
   creditId: string;
 }) {
   await prisma.$transaction(async (tx) => {
-    const testType = input.type.toUpperCase() as "RIASEC" | "DISC" | "EQ" | "COGNITIVE";
+    const testType = input.type.toUpperCase().replace("-", "_") as "RIASEC" | "DISC" | "EQ" | "COGNITIVE" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
 
     const { start, end } = (() => {
       const start = new Date(input.startedAt);
@@ -131,6 +134,7 @@ export async function createReassessmentAttempt(input: {
     const prior = await tx.assessmentAttempt.findFirst({
       where: {
         userId: input.userId,
+        subjectId: input.subjectId,
         assessmentType: testType,
         status: "COMPLETED",
         result: { isNot: null },
@@ -143,6 +147,7 @@ export async function createReassessmentAttempt(input: {
     const dailyCount = await tx.assessmentAttempt.count({
       where: {
         userId: input.userId,
+        subjectId: input.subjectId,
         assessmentType: testType,
         status: "COMPLETED",
         startedAt: { gte: start, lt: end },
@@ -152,7 +157,7 @@ export async function createReassessmentAttempt(input: {
     if (dailyCount >= 1) throw new Error("REASSESSMENT_DAILY_LIMIT");
 
     const credit = await tx.reassessmentCredit.findUnique({ where: { id: input.creditId } });
-    if (!credit || credit.userId !== input.userId) throw new Error("REASSESSMENT_CREDIT_NOT_FOUND");
+    if (!credit || credit.userId !== input.userId || credit.subjectId !== input.subjectId) throw new Error("REASSESSMENT_CREDIT_NOT_FOUND");
     if (credit.status !== "AVAILABLE") throw new Error("REASSESSMENT_CREDIT_NOT_AVAILABLE");
     if (credit.testType !== testType) throw new Error("REASSESSMENT_CREDIT_TYPE_MISMATCH");
 
@@ -160,6 +165,7 @@ export async function createReassessmentAttempt(input: {
       data: {
         id: input.id,
         userId: input.userId,
+        subjectId: input.subjectId,
         assessmentType: testType,
         status: "IN_PROGRESS",
         assessmentConfigurationId: input.assessmentConfigurationId,
@@ -190,6 +196,7 @@ export async function createReassessmentAttempt(input: {
       where: {
         id: input.creditId,
         userId: input.userId,
+        subjectId: input.subjectId,
         status: "AVAILABLE",
         testType,
       },
@@ -208,7 +215,8 @@ export async function createReassessmentAttempt(input: {
 export async function createAttempt(input: {
   id: string;
   userId?: string;
-  type: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
+  subjectId?: string;
+  type: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference";
   assessmentConfigurationId: string;
   assessmentConfigurationVersion: string;
   questionBankVersion: string;
@@ -221,14 +229,24 @@ export async function createAttempt(input: {
   selectedQuestions: SelectedQuestion[];
   startedAt: Date;
   expiresAt?: Date | null;
-  commercialAccessClaim?: { entitlementId: string; userId: string; testType: string; expectedUsageConsumed: number; sourceOrderId?: string | null };
+  commercialAccessClaim?: { entitlementId: string; userId: string; subjectId: string; testType: string; expectedUsageConsumed: number; sourceOrderId?: string | null };
 }) {
   await prisma.$transaction(async (tx) => {
     await tx.assessmentAttempt.create({
       data: {
         id: input.id,
         userId: input.userId,
-        assessmentType: input.type.toUpperCase() as AssessmentType,
+        subjectId: input.subjectId,
+        assessmentType: ({
+          free: "FREE",
+          premium: "PREMIUM",
+          riasec: "RIASEC",
+          disc: "DISC",
+          eq: "EQ",
+          cognitive: "COGNITIVE",
+          "work-attitude": "WORK_ATTITUDE",
+          "learning-preference": "LEARNING_PREFERENCE",
+        } as const)[input.type],
         status: "IN_PROGRESS",
         assessmentConfigurationId: input.assessmentConfigurationId,
         assessmentConfigurationVersion: input.assessmentConfigurationVersion,
@@ -261,6 +279,7 @@ export async function createAttempt(input: {
         where: {
           id: claim.entitlementId,
           userId: claim.userId,
+          subjectId: claim.subjectId,
           type: "TEST_ACCESS",
           resourceType: "TEST_TYPE",
           resourceKey,
@@ -322,6 +341,35 @@ export async function persistExpiredResult(attemptId: string, result: Assessment
     await tx.assessmentAttempt.update({ where: { id: attemptId }, data: { completedAt: attempt.completedAt ?? new Date(), lastActivityAt: new Date() } });
     return result;
   });
+}
+
+export async function findActiveAttemptForUser(userId: string, type: "free" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference", now = new Date(), subjectId?: string) {
+  const assessmentType = ({
+    free: "FREE",
+    riasec: "RIASEC",
+    disc: "DISC",
+    eq: "EQ",
+    cognitive: "COGNITIVE",
+    "work-attitude": "WORK_ATTITUDE",
+    "learning-preference": "LEARNING_PREFERENCE",
+  } as const)[type];
+
+  const row = await prisma.assessmentAttempt.findFirst({
+    where: {
+      userId,
+      ...(subjectId ? { subjectId } : {}),
+      assessmentType,
+      status: "IN_PROGRESS",
+      OR: [
+        { expiresAt: null },
+        { expiresAt: { gt: now } },
+      ],
+    },
+    orderBy: [{ startedAt: "desc" }, { id: "desc" }],
+    select: { id: true },
+  });
+
+  return row ? getAttempt(row.id) : null;
 }
 
 export async function getAttempt(attemptId: string) {

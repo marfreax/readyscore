@@ -4,13 +4,15 @@ import { getCurrentSession } from "../../../lib/auth/session";
 import AssessmentRunner from "../../../components/assessment/AssessmentRunner";
 import { AppShell } from "../../../components/app/AppShell";
 
-const TYPES = new Set(["riasec", "disc", "eq", "cognitive"]);
+const TYPES = new Set(["riasec", "disc", "eq", "cognitive", "work-attitude", "learning-preference"]);
 
 const LABELS: Record<string, string> = {
   riasec: "RIASEC",
   disc: "DISC",
   eq: "EQ",
   cognitive: "Cognitive",
+  "work-attitude": "Work Attitude",
+  "learning-preference": "Learning Preference",
 };
 
 export default async function ReassessmentPage({
@@ -36,7 +38,7 @@ export default async function ReassessmentPage({
           <Link href="/app" className="rs-button rs-button-secondary">Dashboard</Link>
         </div>
       </div>
-      <AssessmentRunner type={type as "riasec" | "disc" | "eq" | "cognitive"} mode="reassessment" />
+      <AssessmentRunner type={type as "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference"} mode="reassessment" />
     </AppShell>
   );
 }

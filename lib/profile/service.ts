@@ -1,9 +1,10 @@
 import { prisma } from "../db/prisma";
 import { hasFeatureAccess } from "../commercial/entitlement-service";
 import { buildCrossTestProfile } from "./engine-v1";
+import { getActiveSubject } from "../subjects/service";
 import type { CrossTestProfileInput } from "./types";
 
-export const PROFILE_TYPES = ["RIASEC", "DISC", "EQ", "COGNITIVE"] as const;
+export const PROFILE_TYPES = ["RIASEC", "DISC", "EQ", "COGNITIVE", "WORK_ATTITUDE", "LEARNING_PREFERENCE"] as const;
 export const CROSS_TEST_PROFILE_SERVICE_VERSION = "V9.10_CROSS_TEST_PROFILE_SERVICE_V1" as const;
 
 export class CrossTestProfileAccessError extends Error {
@@ -23,7 +24,9 @@ function normalizeInput(attempt: {
   if (!attempt.result || attempt.status !== "COMPLETED") return null;
   const persisted = attempt.result.result as Record<string, unknown>;
   const key = attempt.assessmentType.toLowerCase();
-  const testSpecific = persisted[key];
+  const camelKey = key.replace(/_([a-z])/g, (_, char: string) => char.toUpperCase());
+  const hyphenKey = key.replace(/_/g, "-");
+  const testSpecific = persisted[key] ?? persisted[camelKey] ?? persisted[hyphenKey];
   if (!testSpecific || typeof testSpecific !== "object") return null;
 
   const interpretation = persisted.interpretation;
@@ -55,13 +58,15 @@ function normalizeInput(attempt: {
   };
 }
 
-export async function getCrossTestProfile(userId: string) {
-  const hasAccess = await hasFeatureAccess(userId, "PROFILE_ACCESS", "CROSS_TEST_PROFILE_V1");
+export async function getCrossTestProfile(userId: string, requestedSubjectId?: string | null) {
+  const subject = await getActiveSubject(userId, requestedSubjectId);
+  const hasAccess = await hasFeatureAccess(userId, "PROFILE_ACCESS", "CROSS_TEST_PROFILE_V1", new Date(), subject.id);
   if (!hasAccess) throw new CrossTestProfileAccessError("PROFILE_ACCESS_REQUIRED");
 
   const attempts = await prisma.assessmentAttempt.findMany({
     where: {
       userId,
+      subjectId: subject.id,
       status: "COMPLETED",
       assessmentType: { in: [...PROFILE_TYPES] },
     },
@@ -87,6 +92,7 @@ export async function getCrossTestProfile(userId: string) {
   const profile = buildCrossTestProfile([...latest.values()]);
   return {
     serviceVersion: CROSS_TEST_PROFILE_SERVICE_VERSION,
+    subject: { id: subject.id, name: subject.name, type: subject.type },
     profile,
     sourceCount: latest.size,
     latestAttemptIds: [...latest.values()].map((item) => item.result.attemptId),

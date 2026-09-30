@@ -5,14 +5,15 @@ import { CrossTestProfileAccessError, getCrossTestProfile } from "../../../../li
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request: Request) {
   const session = await getCurrentSession();
   if (!session) {
     return NextResponse.json({ ok: false, error: { code: "AUTH_REQUIRED", message: "Login diperlukan untuk melihat Cross-Test Profile." } }, { status: 401 });
   }
 
   try {
-    return NextResponse.json({ ok: true, ...(await getCrossTestProfile(session.user.id)) });
+    const subjectId = new URL(request.url).searchParams.get("subjectId");
+    return NextResponse.json({ ok: true, ...(await getCrossTestProfile(session.user.id, subjectId)) });
   } catch (error) {
     if (error instanceof CrossTestProfileAccessError) {
       return NextResponse.json({ ok: false, error: { code: error.code, message: "Akses Cross-Test Profile belum tersedia untuk akun ini." } }, { status: 403 });

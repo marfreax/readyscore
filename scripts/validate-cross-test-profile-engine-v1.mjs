@@ -1,4 +1,5 @@
 import { buildCrossTestProfile, listProfileAdapters } from "../lib/profile/engine-v1.ts";
+import { CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY } from "../lib/profile/types.ts";
 
 console.log("=== READY SCORE V3 PHASE 3.6 CROSS-TEST PROFILE ENGINE V1 GATE ===");
 console.log("Scope      : Cross-test synthesis / profile contract / evidence governance");
@@ -36,7 +37,9 @@ if ("overallScore" in profile) throw new Error("Cross-test profile must not expo
 if (profile.claims.prohibited.some((claim) => claim.includes("averaging"))) {
   // expected governance
 } else throw new Error("Raw-average claim governance missing.");
-if (!profile.synthesis.limitations.some((item) => item.includes("one profile domain"))) throw new Error("Insufficient cross-test limitation missing.");
+if (profile.completeness.availableDomains !== 1) throw new Error("One-domain fixture must expose exactly one available profile domain.");
+if (!profile.synthesis.limitationCodes?.includes(CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY)) throw new Error("One-domain limitation contract code missing.");
+if (profile.synthesis.limitationCodes.filter((code) => code === CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY).length !== 1) throw new Error("One-domain limitation contract code must be emitted exactly once.");
 if (!listProfileAdapters().includes("RIASEC")) throw new Error("RIASEC adapter not registered.");
 
 const unknown = buildCrossTestProfile([{ result: { ...result, assessmentType: "COGNITIVE", attemptId: "unknown" } }], "2026-08-26T00:00:00.000Z");

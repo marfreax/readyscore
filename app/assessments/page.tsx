@@ -4,16 +4,17 @@ import { ArrowRight, CheckCircle2, CirclePlay, LockKeyhole, RotateCcw } from "lu
 import { CustomerPageShell } from "../../components/app/CustomerPageShell";
 import { Badge, Card, EmptyState } from "../../components/ui/DesignSystem";
 import { getCurrentSession } from "../../lib/auth/session";
+import { getActiveSubject } from "../../lib/subjects/service";
 import { listUserEntitlements } from "../../lib/commercial/entitlement-service";
 import { getUserHistory } from "../../lib/assessment/dashboard-repository";
 import { CUSTOMER_ASSESSMENT_CATALOG } from "../../lib/assessment/catalog";
 
-type TestKey = "COGNITIVE" | "EQ" | "DISC" | "RIASEC";
+type TestKey = "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
 type WorkspaceStatus = "AVAILABLE" | "IN_PROGRESS" | "COMPLETED" | "LOCKED";
 
 const TESTS = CUSTOMER_ASSESSMENT_CATALOG.map((item) => ({
   ...item,
-  key: item.type.toUpperCase() as TestKey,
+  key: item.type.toUpperCase().replace("-", "_") as TestKey,
 }));
 
 function entitlementKey(item: { type: string; resourceType: string; resourceKey: string }) {
@@ -123,8 +124,9 @@ export default async function AssessmentsPage() {
   const session = await getCurrentSession();
   if (!session) redirect("/login?next=/assessments");
 
+  const subject = await getActiveSubject(session.user.id);
   const [entitlements, history] = await Promise.all([
-    listUserEntitlements(session.user.id),
+    listUserEntitlements(session.user.id, new Date(), subject.id),
     getUserHistory(session.user.id),
   ]);
   const keys = new Set(entitlements.map(entitlementKey));

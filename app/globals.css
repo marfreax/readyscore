@@ -348,3 +348,10 @@ button, a, input, select, textarea { touch-action: manipulation; }
  .rs-report-callout{padding:4.5mm!important}.rs-report-list{padding:4mm!important}.rs-report-recommendation{padding:4.5mm!important;box-shadow:none!important}.rs-report-rec-grid{margin-top:4mm;padding-top:3mm;gap:7mm}.rs-report-week{padding:5mm!important}.rs-report-page-footer{left:18mm;right:18mm;bottom:10mm}
  .rs-v15-cover .rs-report-page-inner,.rs-report-cover-content{width:210mm!important;height:297mm!important;min-height:297mm!important}.rs-report-cover-content{box-sizing:border-box!important;padding:28mm 25mm 20mm!important}.rs-report-cover-brand{width:150mm;max-width:none;margin-bottom:22mm}.rs-report-cover-content h2{font-size:33pt!important}.rs-report-cover-subtitle{font-size:13.5pt!important}.rs-report-cover-content .rs-report-lead{font-size:11.2pt!important}
 }
+
+.rs-legal-content h2 { margin-top: 2rem; font-size: 1.25rem; line-height: 1.35; font-weight: 900; color: #0f172a; }
+.rs-legal-content h2:first-child { margin-top: 0; }
+.rs-legal-content p { margin-top: 0.85rem; line-height: 1.75; color: #475569; }
+.rs-legal-content ul, .rs-legal-content ol { margin-top: 0.85rem; padding-left: 1.35rem; color: #475569; line-height: 1.75; }
+.rs-legal-content li { margin-top: 0.35rem; }
+.rs-legal-content a { color: #4f46e5; font-weight: 700; }

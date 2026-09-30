@@ -2,7 +2,7 @@ import type { CommercialTier } from "@prisma/client";
 
 export type ScalevProductMapping =
   | { kind?: "PRODUCT"; tier: CommercialTier; testType?: "IQ" | "EQ" | "DISC" | "RIASEC" }
-  | { kind: "REASSESSMENT_CREDIT"; addOnProductId: "addon-reassessment-credit-v1"; reassessmentTestType: "IQ" | "EQ" | "DISC" | "RIASEC" };
+  | { kind: "REASSESSMENT_CREDIT"; addOnProductId: "addon-reassessment-credit-v1"; reassessmentTestType: "IQ" | "EQ" | "DISC" | "RIASEC" | "COGNITIVE" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE" };
 
 const DEFAULT_SCALEV_SKU_MAP: Record<string, ScalevProductMapping> = {
   "RS-ASSESSMENT-V1": { kind: "PRODUCT", tier: "MEDIUM" },
@@ -12,6 +12,12 @@ const DEFAULT_SCALEV_SKU_MAP: Record<string, ScalevProductMapping> = {
   "RS-SINGLE-IQ-V1": { kind: "PRODUCT", tier: "BASIC", testType: "IQ" },
   "RS-ALL-PROFILING-V1": { kind: "PRODUCT", tier: "ADVANCE" },
   "RS-REASSESSMENT-CREDIT-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "EQ" },
+  "RS-REASSESSMENT-CREDIT-COGNITIVE-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "COGNITIVE" },
+  "RS-REASSESSMENT-CREDIT-EQ-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "EQ" },
+  "RS-REASSESSMENT-CREDIT-DISC-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "DISC" },
+  "RS-REASSESSMENT-CREDIT-RIASEC-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "RIASEC" },
+  "RS-REASSESSMENT-CREDIT-WORK_ATTITUDE-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "WORK_ATTITUDE" },
+  "RS-REASSESSMENT-CREDIT-LEARNING_PREFERENCE-V1": { kind: "REASSESSMENT_CREDIT", addOnProductId: "addon-reassessment-credit-v1", reassessmentTestType: "LEARNING_PREFERENCE" },
 };
 
 export function getScalevProductSkuMap(): Record<string, ScalevProductMapping> {
@@ -39,8 +45,8 @@ export function getScalevProductSkuMap(): Record<string, ScalevProductMapping> {
       const addOnProductId = (value as { addOnProductId?: unknown }).addOnProductId;
       const reassessmentTestType = (value as { reassessmentTestType?: unknown }).reassessmentTestType;
       if (addOnProductId !== "addon-reassessment-credit-v1") throw new Error(`SCALEV_ADDON_PRODUCT_INVALID:${sku}`);
-      if (!["IQ", "EQ", "DISC", "RIASEC"].includes(String(reassessmentTestType))) throw new Error(`SCALEV_REASSESSMENT_TEST_TYPE_INVALID:${sku}`);
-      result[sku.trim()] = { kind: "REASSESSMENT_CREDIT", addOnProductId, reassessmentTestType: reassessmentTestType as "IQ" | "EQ" | "DISC" | "RIASEC" };
+      if (!["IQ", "COGNITIVE", "EQ", "DISC", "RIASEC", "WORK_ATTITUDE", "LEARNING_PREFERENCE"].includes(String(reassessmentTestType))) throw new Error(`SCALEV_REASSESSMENT_TEST_TYPE_INVALID:${sku}`);
+      result[sku.trim()] = { kind: "REASSESSMENT_CREDIT", addOnProductId, reassessmentTestType: reassessmentTestType as "IQ" | "EQ" | "DISC" | "RIASEC" | "COGNITIVE" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE" };
       continue;
     }
     if (kind !== "PRODUCT") throw new Error(`SCALEV_PRODUCT_KIND_INVALID:${sku}`);

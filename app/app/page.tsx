@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { AppShell } from "../../components/app/AppShell";
 import { getCurrentSession } from "../../lib/auth/session";
+import { getActiveSubject } from "../../lib/subjects/service";
 import { getActiveProductsForUser, listUserEntitlements } from "../../lib/commercial/entitlement-service";
 import { getUserDashboard } from "../../lib/assessment/dashboard-repository";
 
@@ -10,6 +11,8 @@ const TESTS = [
   { key: "eq", name: "Emotional Intelligence", description: "Profil empat dimensi respons emosional dan sosial.", accessKey: "TEST_ACCESS:TEST_TYPE:EQ" },
   { key: "disc", name: "DISC", description: "Kecenderungan pola perilaku D, I, S, dan C.", accessKey: "TEST_ACCESS:TEST_TYPE:DISC" },
   { key: "riasec", name: "RIASEC", description: "Profil minat pada enam dimensi RIASEC.", accessKey: "TEST_ACCESS:TEST_TYPE:RIASEC" },
+  { key: "work-attitude", name: "Work Attitude", description: "Kecenderungan sikap kerja pada tujuh dimensi perilaku kerja.", accessKey: "TEST_ACCESS:TEST_TYPE:WORK_ATTITUDE" },
+  { key: "learning-preference", name: "Learning Preference", description: "Kecenderungan preferensi belajar pada Visual, Auditory, dan Kinesthetic.", accessKey: "TEST_ACCESS:TEST_TYPE:LEARNING_PREFERENCE" },
 ] as const;
 
 function formatDate(value: string | null) {
@@ -35,10 +38,11 @@ export default async function AppHomePage() {
   const session = await getCurrentSession();
   if (!session) redirect("/login?next=/app");
 
+  const subject = await getActiveSubject(session.user.id);
   const [dashboard, products, entitlements] = await Promise.all([
     getUserDashboard(session.user.id),
     getActiveProductsForUser(session.user.id),
-    listUserEntitlements(session.user.id),
+    listUserEntitlements(session.user.id, new Date(), subject.id),
   ]);
 
   const entitlementKeys = new Set(entitlements.map((item) => `${item.type}:${item.resourceType}:${item.resourceKey}`));
@@ -69,7 +73,7 @@ export default async function AppHomePage() {
                   </div>
                   <div>
                     <p className="text-xs font-black uppercase tracking-[0.18em] text-indigo-600">Overview</p>
-                    <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Halo, {session.user.name}.</h1>
+                    <h1 className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Halo, {subject.name}.</h1>
                     <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
                       Ini ringkasan perjalanan Anda di ReadyScore. Mulai dari yang sedang berjalan, lalu lanjutkan ke hasil dan profil Anda.
                     </p>

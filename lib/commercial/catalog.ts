@@ -11,7 +11,7 @@ import {
 
 export const COMMERCIAL_ARCHITECTURE_VERSION = "V4_COMMERCIAL_L1";
 export const COMMERCIAL_MATRIX_VERSION = "V4_COMMERCIAL_MATRIX_1";
-export const COMMERCIAL_PRICING_STATUS = "PLANNING_HYPOTHESIS" as const;
+export const COMMERCIAL_PRICING_STATUS = "LOCKED_V19_5" as const;
 
 export async function getCommercialCatalog() {
   const products = await prisma.product.findMany({

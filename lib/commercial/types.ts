@@ -20,6 +20,8 @@ export const SINGLE_TEST_TYPES = [
   "EQ",
   "DISC",
   "RIASEC",
+  "WORK_ATTITUDE",
+  "LEARNING_PREFERENCE",
 ] as const;
 
 export type SingleTestType = (typeof SINGLE_TEST_TYPES)[number];
@@ -34,6 +36,8 @@ export const SINGLE_TEST_TYPE_RESOURCE_MAP = {
   EQ: "EQ",
   DISC: "DISC",
   RIASEC: "RIASEC",
+  WORK_ATTITUDE: "WORK_ATTITUDE",
+  LEARNING_PREFERENCE: "LEARNING_PREFERENCE",
 } as const;
 
 export type CommercialProductMode =
@@ -55,6 +59,72 @@ export const ENTITLEMENT_TYPES = {
 
 export type EntitlementType =
   (typeof ENTITLEMENT_TYPES)[keyof typeof ENTITLEMENT_TYPES];
+
+export const CORE_TEST_ENTITLEMENT_KEYS = [
+  "COGNITIVE",
+  "EQ",
+  "DISC",
+  "RIASEC",
+  "WORK_ATTITUDE",
+  "LEARNING_PREFERENCE",
+] as const;
+
+export type CoreTestEntitlementKey = (typeof CORE_TEST_ENTITLEMENT_KEYS)[number];
+
+export const ACCESS_LEVELS = {
+  FREE: "FREE",
+  SINGLE_TEST: "SINGLE_TEST",
+  CUSTOM_ACCESS: "CUSTOM_ACCESS",
+  ALL_TESTS: "ALL_TESTS",
+  ADVANCE: "ADVANCE",
+} as const;
+
+export type AccessLevel = (typeof ACCESS_LEVELS)[keyof typeof ACCESS_LEVELS];
+
+type ActiveEntitlementLike = {
+  type: string;
+  resourceType: string;
+  resourceKey: string;
+};
+
+/**
+ * Canonical V19.2.1 access classification.
+ *
+ * IMPORTANT: this is derived from the user's currently active TEST_ACCESS
+ * entitlements plus the active Cross-Test Profile entitlement. It must never
+ * be inferred from order count, transaction count, or product purchase history.
+ */
+export function deriveAccessLevel(entitlements: readonly ActiveEntitlementLike[]): {
+  level: AccessLevel;
+  coreTestCount: number;
+  coreTests: CoreTestEntitlementKey[];
+  profiling: boolean;
+} {
+  const coreTests = CORE_TEST_ENTITLEMENT_KEYS.filter((resourceKey) =>
+    entitlements.some(
+      (item) =>
+        item.type === "TEST_ACCESS" &&
+        item.resourceType === "TEST_TYPE" &&
+        item.resourceKey === resourceKey,
+    ),
+  );
+  const coreTestCount = coreTests.length;
+  const profiling = entitlements.some(
+    (item) =>
+      item.type === "PROFILE_ACCESS" &&
+      item.resourceType === "FEATURE" &&
+      item.resourceKey === "CROSS_TEST_PROFILE_V1",
+  );
+
+  let level: AccessLevel;
+  if (coreTestCount === 0) level = ACCESS_LEVELS.FREE;
+  else if (coreTestCount === 1) level = ACCESS_LEVELS.SINGLE_TEST;
+  else if (coreTestCount < CORE_TEST_ENTITLEMENT_KEYS.length) level = ACCESS_LEVELS.CUSTOM_ACCESS;
+  else if (profiling) level = ACCESS_LEVELS.ADVANCE;
+  else level = ACCESS_LEVELS.ALL_TESTS;
+
+  return { level, coreTestCount, coreTests, profiling };
+}
 
 export const ENTITLEMENT_RESOURCE_TYPES = {
   TEST_TYPE: "TEST_TYPE",
@@ -97,7 +167,7 @@ export const COMMERCIAL_PRODUCT_CATALOG: readonly ProductDefinition[] = [
     id: "product-basic",
     tier: "BASIC",
     name: "Single Test",
-    description: "Choose exactly one core assessment: IQ, EQ, DISC, or RIASEC.",
+    description: "Choose exactly one core assessment: IQ, EQ, DISC, RIASEC, Work Attitude, or Learning Preference.",
     planningPriceIdr: 99_000,
     mode: "SINGLE_TEST",
     customerFacing: true,
@@ -107,7 +177,7 @@ export const COMMERCIAL_PRODUCT_CATALOG: readonly ProductDefinition[] = [
     id: "product-medium",
     tier: "MEDIUM",
     name: "All Tests",
-    description: "IQ + EQ + DISC + RIASEC with the initial assessment entitlement for each.",
+    description: "IQ + EQ + DISC + RIASEC + Work Attitude + Learning Preference with the initial assessment entitlement for each.",
     planningPriceIdr: 199_000,
     mode: "ALL_TESTS",
     customerFacing: true,
@@ -116,7 +186,7 @@ export const COMMERCIAL_PRODUCT_CATALOG: readonly ProductDefinition[] = [
     id: "product-advance",
     tier: "ADVANCE",
     name: "All Tests + Profiling",
-    description: "All core tests plus Cross-Test Profiling and the personalized V15 report.",
+    description: "All available assessment types including Work Attitude and Learning Preference, plus Cross-Test Profiling and the personalized V15 report.",
     planningPriceIdr: 249_000,
     mode: "ALL_TESTS_PROFILING",
     customerFacing: true,

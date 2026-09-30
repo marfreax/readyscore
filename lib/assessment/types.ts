@@ -65,6 +65,14 @@ export interface AssessmentResult {
       overallScore: number;
     };
   };
+  learningPreference?: {
+    contractVersion: "LEARNING_PREFERENCE_RESULT_V1";
+    measurement: { testType: "LEARNING_PREFERENCE"; scoringVersion: "LEARNING_PREFERENCE_SCORE_V1"; dimensionScores: Array<{ dimension: "VISUAL"|"AUDITORY"|"KINESTHETIC"; score: number; percentage: number; answeredCount: number; questionCount: number }>; overallScore: number; dominantPreference: "VISUAL"|"AUDITORY"|"KINESTHETIC"; dominantPreferences: Array<"VISUAL"|"AUDITORY"|"KINESTHETIC"> };
+  };
+  workAttitude?: {
+    contractVersion: "WORK_ATTITUDE_RESULT_V1";
+    measurement: { testType: "WORK_ATTITUDE"; scoringVersion: "WORK_ATTITUDE_SCORE_V1"; dimensionScores: Array<{ dimension: string; score: number; answeredCount: number; questionCount: number }>; overallScore: number };
+  };
   disc?: {
     contractVersion: "DISC_RESULT_V2";
     measurement: {

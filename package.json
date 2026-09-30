@@ -304,7 +304,22 @@
     "v18.3:gate": "node scripts/validate-v18-3-production-certification.mjs",
     "v18.3:preflight": "node scripts/v18-3-production-preflight.mjs",
     "e2e:v18.3:local-cert": "node scripts/e2e-v18-3-local-certification.mjs",
-    "e2e:v18.3:hardening": "node scripts/e2e-v18-3-hardening.mjs"
+    "e2e:v18.3:hardening": "node scripts/e2e-v18-3-hardening.mjs",
+    "v19.1:gate": "node scripts/validate-v19-1-work-attitude.mjs",
+    "v19.1:migrate:local": "pnpm db:migrate:deploy",
+    "v19.2:migrate:local": "pnpm db:migrate:deploy",
+    "v19.2:gate": "node scripts/validate-v19-2-learning-preference.mjs",
+    "v19.2.1:gate": "node scripts/validate-v19-2-1-profile-access-fixes.mjs",
+    "v19.2.1:access-classification": "tsx scripts/validate-v19-2-1-access-classification.ts",
+    "v19.3:gate": "pnpm v19.3:summary:gate && node scripts/validate-v19-3-report-adjustment.mjs",
+    "v19.3.1:gate": "node scripts/validate-v19-3-1-subject-identity.mjs",
+    "v19.3:summary:gate": "node scripts/validate-v19-3-assessment-summary.mjs",
+    "v19.4:gate": "node scripts/validate-v19-4-profile-integration.mjs && pnpm profile:gate",
+    "v19.5:gate": "node scripts/validate-v19-5-commercial-alignment.mjs",
+    "v19.5.1:gate": "node scripts/validate-v19-5-1-subject-context.mjs",
+    "v19.5.2:gate": "node scripts/validate-v19-5-2-subject-switcher-ux.mjs",
+    "v19.6:gate": "node scripts/validate-v19-6-public-trust.mjs",
+    "v19.7:question-bank-v2:gate": "node scripts/validate-v19-7-question-bank-v2.mjs"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

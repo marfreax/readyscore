@@ -93,11 +93,11 @@ export function parseQuestionCsvForGroup(text: string, sourceFile: string, group
     const reverseScore = boolValue(value(row, "reverseScore", "reverse score", "reverse"));
     const parsedOptions = options(row);
     const scale = intArray(value(row, "scale"), [...contract.scale]);
-    const defaultKey = group === "RIASEC" ? [1,2,3,4,5] : group === "DISC" ? [1,2,3,4] : [1];
+    const defaultKey = group === "RIASEC" || group === "WORK_ATTITUDE" || group === "LEARNING_PREFERENCE" ? [1,2,3,4,5] : group === "DISC" ? [1,2,3,4] : [1];
     const scoringKey = intArray(value(row, "scoringKey", "scoring key"), defaultKey);
     const correctRaw = value(row, "correctOption", "correct option", "jawaban benar");
     const correctOption = correctRaw ? Number(correctRaw) : null;
-    if (group !== "RIASEC" && (!parsedOptions || parsedOptions.length !== 4)) throw new Error(`OPTIONS_REQUIRED_4:${id}`);
+    if (!(["RIASEC", "WORK_ATTITUDE", "LEARNING_PREFERENCE"] as string[]).includes(group) && (!parsedOptions || parsedOptions.length !== 4)) throw new Error(`OPTIONS_REQUIRED_4:${id}`);
     // V2 EQ uses an ordinal scoring permutation (option position -> 1..4)
     // and intentionally has no single correct answer. Cognitive remains
     // objective: correctOption + single-value scoringKey.
@@ -120,7 +120,7 @@ export function parseQuestionCsvForGroup(text: string, sourceFile: string, group
     if (group === "DISC" && correctOption !== null) throw new Error(`DISC_MUST_NOT_HAVE_CORRECT_OPTION:${id}`);
     if (scale.length !== contract.scale.length) throw new Error(`SCALE_INVALID:${id}`);
     if (group === "DISC" && (scoringKey.length !== 4 || new Set(scoringKey).size !== 4)) throw new Error(`DISC_FORCED_CHOICE_KEY_INVALID:${id}`);
-    if (group === "RIASEC" && scoringKey.length !== 5) throw new Error(`RIASEC_SCORING_KEY_INVALID:${id}`);
+    if ((group === "RIASEC" || group === "WORK_ATTITUDE" || group === "LEARNING_PREFERENCE") && scoringKey.length !== 5) throw new Error(`${group}_SCORING_KEY_INVALID:${id}`);
     if (group === "IQ_COGNITIVE" && scoringKey.length !== 1) throw new Error(`OBJECTIVE_SCORING_KEY_INVALID:${id}`);
     return { id, domain: mapping.domain, subdomain: mapping.subdomain, indicator: mapping.indicator, text: textInput,
       type: value(row, "type", "tipe") || contract.type, answerType: contract.answerType as ImportedQuestion["answerType"], reverseScore,
@@ -134,13 +134,15 @@ export const QUESTION_BANK_TEMPLATE_HEADERS: Record<QuestionGroup, string[]> = {
   RIASEC: ["id","domain","subdomain","indicator","text","type","answerType","scale","scoringKey","reverseScore","weight","difficulty"],
   IQ_COGNITIVE: ["id","domain","subdomain","indicator","text","type","answerType","options","correctOption","scoringKey","weight","difficulty"],
   EQ: ["id","domain","subdomain","indicator","text","type","answerType","options","correctOption","scoringKey","weight","difficulty"],
+  WORK_ATTITUDE: ["id","domain","subdomain","indicator","text","type","answerType","scale","scoringKey","reverseScore","weight","difficulty"],
+  LEARNING_PREFERENCE: ["id","domain","subdomain","indicator","text","type","answerType","scale","scoringKey","reverseScore","weight","difficulty"],
 };
 
 export function questionBankTemplate(groupInput: string) {
   const group = normalizeQuestionGroup(groupInput);
   const headers = QUESTION_BANK_TEMPLATE_HEADERS[group];
   const example = headers.map((h) => {
-    const values: Record<string,string> = { id: "EXAMPLE-001", domain: "REPLACE_DOMAIN", subdomain: "REPLACE_SUBDOMAIN", indicator: "REPLACE_INDICATOR", text: "Tulis pertanyaan di sini", type: questionContractForGroup(group).type, answerType: questionContractForGroup(group).answerType, options: "Pilihan 1||Pilihan 2||Pilihan 3||Pilihan 4", correctOption: group === "DISC" || group === "RIASEC" || group === "EQ" ? "" : "1", scoringKey: group === "DISC" ? "1,2,3,4" : group === "RIASEC" ? "1,2,3,4,5" : group === "EQ" ? "1,2,3,4" : "1", scale: "1,2,3,4,5", reverseScore: "false", weight: "1", difficulty: "MEDIUM" };
+    const values: Record<string,string> = { id: "EXAMPLE-001", domain: "REPLACE_DOMAIN", subdomain: "REPLACE_SUBDOMAIN", indicator: "REPLACE_INDICATOR", text: "Tulis pertanyaan di sini", type: questionContractForGroup(group).type, answerType: questionContractForGroup(group).answerType, options: "Pilihan 1||Pilihan 2||Pilihan 3||Pilihan 4", correctOption: group === "DISC" || group === "RIASEC" || group === "EQ" || group === "WORK_ATTITUDE" || group === "LEARNING_PREFERENCE" ? "" : "1", scoringKey: group === "DISC" ? "1,2,3,4" : group === "RIASEC" || group === "WORK_ATTITUDE" || group === "LEARNING_PREFERENCE" ? "1,2,3,4,5" : group === "EQ" ? "1,2,3,4" : "1", scale: "1,2,3,4,5", reverseScore: "false", weight: "1", difficulty: "MEDIUM" };
     return values[h] ?? "";
   });
   const csv = (r: string[]) => r.map((x) => /[,"\n]/.test(x) ? `"${x.replaceAll('"','""')}"` : x).join(",");

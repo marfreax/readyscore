@@ -1,7 +1,7 @@
 export const RESULT_EXPERIENCE_V9_VERSION = "V9.9_RESULT_EXPERIENCE_V1" as const;
 
 export type ResultExperienceDefinition = {
-  assessmentType: "COGNITIVE" | "EQ" | "DISC" | "RIASEC";
+  assessmentType: "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
   eyebrow: string;
   title: string;
   description: string;
@@ -50,8 +50,9 @@ export const RESULT_EXPERIENCE: Readonly<Record<ResultExperienceDefinition["asse
     nextAction: "Gunakan hasil untuk merefleksikan pola interaksi dan cara bekerja dalam konteks yang berbeda.",
     limitations: "DISC menggambarkan kecenderungan respons perilaku, bukan aptitude, intelligence, diagnosis, atau kepastian kecocokan jurusan/karier.",
   },
-  RIASEC: {
-    assessmentType: "RIASEC",
+  LEARNING_PREFERENCE: { assessmentType:"LEARNING_PREFERENCE", eyebrow:"Learning Preference · Result", title:"Learning Preference Profile", description:"Ringkasan kecenderungan relatif pada Visual, Auditory, dan Kinesthetic dalam assessment ini.", metricLabel:"Dominant Preference", metricMeaning:"Preferensi yang paling menonjol dalam distribusi respons assessment ini; bukan label absolut kemampuan belajar.", profileTitle:"Three Learning Preferences", profileDescription:"Gunakan perbedaan relatif antar-preference sebagai bahan refleksi terhadap cara Anda menerima dan mengolah informasi.", nextAction:"Gunakan hasil sebagai bahan refleksi untuk mencoba variasi cara belajar sesuai konteks.", limitations:"Hasil ini menggambarkan kecenderungan preferensi dalam assessment ini. Bukan batas kemampuan belajar dan bukan diagnosis." },
+  WORK_ATTITUDE: { assessmentType:"WORK_ATTITUDE", eyebrow:"Work Attitude · Result", title:"Work Attitude Profile", description:"Ringkasan kecenderungan relatif pada tujuh dimensi sikap kerja yang diukur dalam assessment ini.", metricLabel:"Work Attitude Profile", metricMeaning:"Profil relatif tujuh dimensi sikap kerja; bukan prediksi kinerja atau universal score.", profileTitle:"Seven Work Attitude Dimensions", profileDescription:"Gunakan perbedaan relatif antar-dimensi sebagai bahan refleksi terhadap cara Anda bekerja.", nextAction:"Gunakan hasil sebagai bahan refleksi terhadap kebiasaan kerja, kolaborasi, pengambilan keputusan, dan adaptasi.", limitations:"Hasil ini menggambarkan kecenderungan respons dalam assessment ini. Bukan diagnosis, bukan prediksi kinerja kerja, dan bukan satu-satunya dasar keputusan karier." },
+  RIASEC: {    assessmentType: "RIASEC",
     eyebrow: "RIASEC · Result",
     title: "RIASEC Interest Profile",
     description: "Ringkasan pola preferensi relatif pada enam dimensi vocational interest.",

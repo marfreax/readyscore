@@ -1,4 +1,4 @@
-export const QUESTION_GROUPS = ["DISC", "RIASEC", "IQ_COGNITIVE", "EQ"] as const;
+export const QUESTION_GROUPS = ["DISC", "RIASEC", "IQ_COGNITIVE", "EQ", "WORK_ATTITUDE", "LEARNING_PREFERENCE"] as const;
 export type QuestionGroup = typeof QUESTION_GROUPS[number];
 
 export const QUESTION_GROUP_LABELS: Record<QuestionGroup, string> = {
@@ -6,23 +6,25 @@ export const QUESTION_GROUP_LABELS: Record<QuestionGroup, string> = {
   RIASEC: "RIASEC",
   IQ_COGNITIVE: "IQ & Cognitive",
   EQ: "EQ",
+  WORK_ATTITUDE: "Work Attitude",
+  LEARNING_PREFERENCE: "Learning Preference",
 };
 
 export function normalizeQuestionGroup(value: string | null | undefined): QuestionGroup {
   const normalized = String(value ?? "").trim().toUpperCase().replace(/[\s-]+/g, "_");
   if (normalized === "COGNITIVE" || normalized === "IQ" || normalized === "IQ_COGNITIVE") return "IQ_COGNITIVE";
-  if (normalized === "DISC" || normalized === "RIASEC" || normalized === "EQ") return normalized;
+  if (normalized === "DISC" || normalized === "RIASEC" || normalized === "EQ" || normalized === "WORK_ATTITUDE" || normalized === "LEARNING_PREFERENCE") return normalized;
   throw new Error("INVALID_QUESTION_GROUP");
 }
 
-export function testTypeCodeForGroup(group: QuestionGroup): "DISC" | "RIASEC" | "COGNITIVE" | "EQ" {
+export function testTypeCodeForGroup(group: QuestionGroup): "DISC" | "RIASEC" | "COGNITIVE" | "EQ" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE" {
   return group === "IQ_COGNITIVE" ? "COGNITIVE" : group;
 }
 
 export function questionGroupFromTestTypeCode(code: string | null | undefined): QuestionGroup | null {
   const normalized = String(code ?? "").trim().toUpperCase();
   if (normalized === "COGNITIVE") return "IQ_COGNITIVE";
-  if (normalized === "DISC" || normalized === "RIASEC" || normalized === "EQ") return normalized;
+  if (normalized === "DISC" || normalized === "RIASEC" || normalized === "EQ" || normalized === "WORK_ATTITUDE" || normalized === "LEARNING_PREFERENCE") return normalized;
   return null;
 }
 
@@ -34,6 +36,10 @@ export function questionContractForGroup(group: QuestionGroup) {
       return { answerType: "SINGLE_CHOICE_4", type: "SCENARIO", scale: [1, 2, 3, 4] as const };
     case "EQ":
       return { answerType: "SINGLE_CHOICE_4", type: "SCENARIO", scale: [1, 2, 3, 4] as const };
+    case "WORK_ATTITUDE":
+      return { answerType: "LIKERT_5", type: "LIKERT", scale: [1, 2, 3, 4, 5] as const };
+    case "LEARNING_PREFERENCE":
+      return { answerType: "LIKERT_5", type: "PREFERENCE", scale: [1, 2, 3, 4, 5] as const };
     case "IQ_COGNITIVE":
       return { answerType: "SINGLE_CHOICE_4", type: "SINGLE_CHOICE", scale: [1, 2, 3, 4] as const };
   }

@@ -5,7 +5,7 @@ export const RESULT_SEMANTICS_VERSION = "RESULT_SEMANTICS_V1" as const;
 export type ResultSemanticMode = "ABILITY_PROFILE" | "CONSTRUCT_SCORE" | "IPSATIVE_PROFILE" | "INTEREST_PROFILE";
 
 export type AssessmentResultSemantics = {
-  readonly assessmentType: "COGNITIVE" | "EQ" | "DISC" | "RIASEC";
+  readonly assessmentType: "COGNITIVE" | "EQ" | "DISC" | "RIASEC" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
   readonly mode: ResultSemanticMode;
   readonly mainResult: string;
   readonly dimensions: readonly string[];
@@ -50,8 +50,26 @@ export const RESULT_SEMANTICS: Readonly<Record<AssessmentResultSemantics["assess
     interpretationVersion: "DISC_INTERPRETATION_V2",
     resultContractVersion: "DISC_RESULT_V2",
   },
-  RIASEC: {
-    assessmentType: "RIASEC",
+  WORK_ATTITUDE: {
+    assessmentType: "WORK_ATTITUDE", mode: "CONSTRUCT_SCORE", mainResult: "Work Attitude Profile",
+    dimensions: ["SYSTEMATIKA_KERJA","POLA_BERPIKIR","PENGAMBILAN_KEPUTUSAN","KERJASAMA","INTERAKSI_SOSIAL","PENYESUAIAN_DIRI","KEDISIPLINAN"],
+    scoreMeaning: "Relative tendency scores across seven work-attitude dimensions in this assessment.",
+    customerSummaryRule: "Describe relative work-attitude tendencies as self-reflection information; do not treat the result as a definitive measure of job performance or suitability.",
+    prohibitedInterpretation: ["clinical diagnosis", "deterministic career decision", "guaranteed job performance", "universal score"],
+    interpretationVersion: "WORK_ATTITUDE_INTERPRETATION_V1", resultContractVersion: "WORK_ATTITUDE_RESULT_V1",
+  },
+
+  LEARNING_PREFERENCE: {
+    assessmentType: "LEARNING_PREFERENCE",
+    mode: "CONSTRUCT_SCORE",
+    mainResult: "Learning Preference Profile",
+    dimensions: ["VISUAL", "AUDITORY", "KINESTHETIC"],
+    scoreMeaning: "Relative preference scores across three learning-preference dimensions in this assessment.",
+    customerSummaryRule: "Describe relative learning preferences as tendencies in this assessment; do not label a person as capable of learning only in one way.",
+    prohibitedInterpretation: ["absolute learning-style label", "universal learning ability", "clinical diagnosis", "deterministic educational or career decision"],
+    interpretationVersion: "LEARNING_PREFERENCE_INTERPRETATION_V1", resultContractVersion: "LEARNING_PREFERENCE_RESULT_V1",
+  },
+  RIASEC: {    assessmentType: "RIASEC",
     mode: "INTEREST_PROFILE",
     mainResult: "RIASEC Interest Profile",
     dimensions: ["R", "I", "A", "S", "E", "C"],
@@ -100,6 +118,18 @@ export function validateResultSemantics(result: AssessmentResult): void {
     if (!disc || disc.contractVersion !== "DISC_RESULT_V2") fail("DISC result contract mismatch.");
     if (result.interpretation?.interpretationVersion !== semantics.interpretationVersion) fail("DISC interpretation version mismatch.");
     if (disc.measurement.profileModel !== "IPSATIVE_FORCED_CHOICE") fail("DISC profile model mismatch.");
+  }
+
+  if (semantics.assessmentType === "LEARNING_PREFERENCE") {
+    if (result.scoringVersion !== "LEARNING_PREFERENCE_SCORE_V1") fail("Learning Preference scoring version mismatch.");
+    if (!result.learningPreference || result.learningPreference.contractVersion !== "LEARNING_PREFERENCE_RESULT_V1") fail("Learning Preference result contract mismatch.");
+    if (result.interpretation?.interpretationVersion !== semantics.interpretationVersion) fail("Learning Preference interpretation version mismatch.");
+  }
+
+  if (semantics.assessmentType === "WORK_ATTITUDE") {
+    if (result.scoringVersion !== "WORK_ATTITUDE_SCORE_V1") fail("Work Attitude scoring version mismatch.");
+    if (!result.workAttitude || result.workAttitude.contractVersion !== "WORK_ATTITUDE_RESULT_V1") fail("Work Attitude result contract mismatch.");
+    if (result.interpretation?.interpretationVersion !== semantics.interpretationVersion) fail("Work Attitude interpretation version mismatch.");
   }
 
   if (semantics.assessmentType === "RIASEC") {

@@ -64,6 +64,7 @@ type LatestQuestion = Prisma.QuestionVersionGetPayload<{ include: { question: tr
 function isContentComplete(q: LatestQuestion) {
   if (!q.text.trim() || !q.domain.trim() || !q.subdomain?.trim() || !q.indicator?.trim() || q.weight <= 0) return false;
   if (q.testType?.code === "RIASEC") return q.answerType === "LIKERT_5" && q.scale.length === 5 && q.scoringKey.length === 5;
+  if (q.testType?.code === "WORK_ATTITUDE" || q.testType?.code === "LEARNING_PREFERENCE") return q.answerType === "LIKERT_5" && q.scale.length === 5 && q.scoringKey.length === 5 && q.correctOption == null;
   if (q.testType?.code === "DISC") return q.answerType === "SINGLE_CHOICE_4" && q.scale.length === 4 && q.scoringKey.length === 4;
   if (q.testType?.code === "EQ") return q.answerType === "SINGLE_CHOICE_4" && q.scale.length === 4 && q.scoringKey.length === 4 && new Set(q.scoringKey).size === 4 && q.correctOption == null;
   if (q.testType?.code === "COGNITIVE") return q.answerType === "SINGLE_CHOICE_4" && q.scale.length === 4 && q.scoringKey.length === 1 && q.correctOption != null;

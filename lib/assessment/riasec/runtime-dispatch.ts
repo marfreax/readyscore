@@ -10,7 +10,7 @@ export {
   listScoringEngines,
 };
 
-export type RuntimeAssessmentType = "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive";
+export type RuntimeAssessmentType = "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference";
 export type RuntimeScoringMetadata = {
   attemptId: string;
   assessmentConfigurationVersion: string;

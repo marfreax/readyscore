@@ -4,14 +4,14 @@ import { useSearchParams } from "next/navigation";
 import { normalizeAdminPagination } from "../../lib/admin-pagination";
 import { AdminPagination, type AdminPaginationPageSize } from "./AdminPagination";
 
-type Group = "DISC" | "RIASEC" | "IQ_COGNITIVE" | "EQ";
+type Group = "DISC" | "RIASEC" | "IQ_COGNITIVE" | "EQ" | "WORK_ATTITUDE" | "LEARNING_PREFERENCE";
 type Q = { id:string; questionId:string; questionVersionId:string; version:string; testTypeCode:string|null; testTypeName:string|null; questionGroup:Group|null; domain:string; subdomain:string|null; indicator:string|null; text:string; type:string; answerType:"LIKERT_5"|"SINGLE_CHOICE_4"; reverseScore:boolean; weight:number; scale:number[]; scoringKey:number[]; options?:string[]|null; correctOption?:number|null; difficulty:string; status:string; mappingStatus:string; taxonomyNodeCode:string|null; taxonomyNodeName:string|null; taxonomyNodeType:string|null };
 type T = { id:string; code:string; name:string; category:string; runtimeKey:string|null };
 type Stats = { total:number; draft:number; mapped:number; approved:number; published:number; questionBankVersion:string };
 type DuplicateAnalysis = { totalRows:number; uniqueQuestionIds:number; duplicateExistingIds:string[]; duplicateExistingCount:number; duplicateInFileIds:string[]; duplicateInFileCount:number; duplicateInFileExtraRows:number; readyRows:number; importBlocked:boolean };
 type Pagination = { page:number; pageSize:AdminPaginationPageSize; totalItems:number; totalPages:number; hasNextPage:boolean; hasPreviousPage:boolean };
 type WorkspaceState = { group: Group; search: string; status: string; sort: string; direction: string; page: number; pageSize: AdminPaginationPageSize };
-const GROUPS: {key:Group;label:string;code:string}[]=[{key:"DISC",label:"DISC",code:"DISC"},{key:"RIASEC",label:"RIASEC",code:"RIASEC"},{key:"IQ_COGNITIVE",label:"IQ & Cognitive",code:"COGNITIVE"},{key:"EQ",label:"EQ",code:"EQ"}];
+const GROUPS: {key:Group;label:string;code:string}[]=[{key:"DISC",label:"DISC",code:"DISC"},{key:"RIASEC",label:"RIASEC",code:"RIASEC"},{key:"IQ_COGNITIVE",label:"IQ & Cognitive",code:"COGNITIVE"},{key:"EQ",label:"EQ",code:"EQ"},{key:"WORK_ATTITUDE",label:"Work Attitude",code:"WORK_ATTITUDE"},{key:"LEARNING_PREFERENCE",label:"Learning Preference",code:"LEARNING_PREFERENCE"}];
 const empty={code:"",text:"",testTypeId:"",domain:"",subdomain:"",indicator:"",difficulty:"UNSPECIFIED",type:"",answerType:"",options:"",correctOption:"",scoringKey:"",scale:"",weight:"1",reverseScore:false};
 export default function UnifiedQuestionBankWorkspace({initialQuestions,initialPagination,initialStats,testTypes,initialWorkspaceState}:{initialQuestions:Q[];initialPagination:Pagination;initialStats:Stats;testTypes:T[];initialWorkspaceState:WorkspaceState}){
  const searchParams=useSearchParams();

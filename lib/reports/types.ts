@@ -21,6 +21,9 @@ export type ReportSummary = {
   reportId: string;
   generatedAt: string;
   ownerUserId: string;
+  participantName: string;
+  accountOwnerName: string;
+  completedAt: string | null;
   status: ReportStatus;
   assessmentCount: number;
   completedAssessmentCount: number;

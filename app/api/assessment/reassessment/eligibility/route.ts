@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "../../../../../lib/auth/session";
 import { syncUserToDatabase } from "../../../../../lib/auth/database-sync";
+import { getActiveSubject } from "../../../../../lib/subjects/service";
 import { getReassessmentEligibility, isReassessmentTestType } from "../../../../../lib/assessment/reassessment";
 
 export const runtime = "nodejs";
@@ -16,6 +17,7 @@ export async function GET(request: Request) {
     return NextResponse.json({ ok: false, error: { code: "INVALID_ASSESSMENT_TYPE", message: "Tipe assessment tidak valid." } }, { status: 400 });
   }
   await syncUserToDatabase(current.user.id);
-  const eligibility = await getReassessmentEligibility(current.user.id, type);
+  const subject = await getActiveSubject(current.user.id);
+  const eligibility = await getReassessmentEligibility(current.user.id, type, new Date(), subject.id);
   return NextResponse.json({ ok: true, type, ...eligibility });
 }

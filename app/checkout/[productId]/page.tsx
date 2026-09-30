@@ -18,6 +18,8 @@ const TEST_LABELS: Record<string, string> = {
   EQ: "Emotional Intelligence",
   DISC: "DISC",
   RIASEC: "RIASEC",
+  WORK_ATTITUDE: "Work Attitude",
+  LEARNING_PREFERENCE: "Learning Preference",
 };
 
 export default function CheckoutPage() {
@@ -32,7 +34,7 @@ export default function CheckoutPage() {
   const couponCode = (searchParams.get("coupon") ?? "").trim().toUpperCase();
 
   const selectedTestType = useMemo(
-    () => (requestedTestType && ["IQ", "EQ", "DISC", "RIASEC"].includes(requestedTestType) ? requestedTestType : ""),
+    () => (requestedTestType && ["IQ", "EQ", "DISC", "RIASEC", "WORK_ATTITUDE", "LEARNING_PREFERENCE"].includes(requestedTestType) ? requestedTestType : ""),
     [requestedTestType],
   );
 

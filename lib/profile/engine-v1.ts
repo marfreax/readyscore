@@ -2,6 +2,8 @@ import { cognitiveProfileAdapter } from "./adapters/cognitive";
 import { discProfileAdapter } from "./adapters/disc";
 import { eqProfileAdapter } from "./adapters/eq";
 import { riasecProfileAdapter } from "./adapters/riasec";
+import { workAttitudeProfileAdapter } from "./adapters/work-attitude";
+import { learningPreferenceProfileAdapter } from "./adapters/learning-preference";
 import {
   CROSS_TEST_PROFILE_CONTRACT_VERSION,
   CROSS_TEST_PROFILE_ENGINE_VERSION,
@@ -10,6 +12,8 @@ import {
   type ProfileDomain,
   type ProfileSignalAdapter,
   type ProfileConfidence,
+  type CrossTestProfileLimitationCode,
+  CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY,
 } from "./types";
 
 export const PROFILE_DOMAINS: readonly ProfileDomain[] = [
@@ -27,6 +31,8 @@ const ADAPTERS: ProfileSignalAdapter[] = [
   discProfileAdapter,
   eqProfileAdapter,
   riasecProfileAdapter,
+  workAttitudeProfileAdapter,
+  learningPreferenceProfileAdapter,
 ];
 const REGISTRY = new Map(ADAPTERS.map((adapter) => [adapter.testType.toUpperCase(), adapter]));
 
@@ -85,6 +91,7 @@ export function buildCrossTestProfile(
   );
   const sources: CrossTestProfile["sources"] = [];
   const limitations: string[] = [];
+  const limitationCodes: CrossTestProfileLimitationCode[] = [];
 
   for (const input of inputs) {
     const key = input.result.assessmentType.trim().toUpperCase();
@@ -123,20 +130,30 @@ export function buildCrossTestProfile(
   const confidence = combineConfidence(sources.map((source) => source.confidence));
   const observedPatterns: string[] = [];
 
-  const availableDomainNames = domainList.filter((domain) => domain.status === "AVAILABLE").map((domain) => domain.domain);
+  const DOMAIN_LABELS: Record<ProfileDomain, string> = {
+    ABILITY: "Ability",
+    EMOTIONAL: "Emotional",
+    RESILIENCE: "Resilience",
+    BEHAVIOR: "Behavior",
+    INTEREST: "Interest",
+    STRENGTH: "Strength",
+    LEARNING: "Learning",
+  };
+  const availableDomainNames = domainList.filter((domain) => domain.status === "AVAILABLE").map((domain) => DOMAIN_LABELS[domain.domain]);
   if (availableDomainNames.length) {
-    observedPatterns.push(`Evidence is available across ${availableDomainNames.length} profile domains: ${availableDomainNames.join(", ")}.`);
+    observedPatterns.push(`Evidence tersedia pada ${availableDomainNames.length} domain profil: ${availableDomainNames.join(", ")}.`);
   }
   if (availableDomains === 1) {
-    const limitation = "Current cross-test evidence is limited to one profile domain; no cross-test conclusion is generated.";
+    const limitation = "Evidence lintas assessment saat ini baru tersedia pada satu domain profil; tidak ada kesimpulan lintas assessment yang dibuat.";
     observedPatterns.push(limitation);
     limitations.push(limitation);
+    limitationCodes.push(CROSS_TEST_LIMITATION_ONE_PROFILE_DOMAIN_ONLY);
   }
 
   const interest = domains.get("INTEREST")!;
   const availableInterest = interest.signals.filter((signal) => signal.score !== null).sort((a, b) => (b.score ?? -1) - (a.score ?? -1));
   if (availableInterest.length >= 2) {
-    observedPatterns.push(`Interest evidence is available across ${availableInterest.length} RIASEC dimensions; the relative pattern is preserved without collapsing it into a universal score.`);
+    observedPatterns.push(`Evidence minat tersedia pada ${availableInterest.length} dimensi RIASEC; pola relatif dipertahankan tanpa menggabungkannya menjadi skor universal.`);
   }
 
   return {
@@ -160,6 +177,7 @@ export function buildCrossTestProfile(
         .map((domain) => domain.domain),
       observedPatterns,
       limitations: [...new Set(limitations)],
+      limitationCodes: [...new Set(limitationCodes)],
     },
     claims: {
       allowed: [

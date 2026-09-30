@@ -5,7 +5,7 @@ import { CustomerPageShell } from "../../../../components/app/CustomerPageShell"
 import { getCurrentSession } from "../../../../lib/auth/session";
 import { getAssessmentAboutPreTest } from "../../../../lib/assessment/about-pretest";
 
-const TYPES = ["cognitive", "eq", "disc", "riasec"] as const;
+const TYPES = ["cognitive", "eq", "disc", "riasec", "work-attitude", "learning-preference"] as const;
 
 export function generateStaticParams() { return TYPES.map((type) => ({ type })); }
 

@@ -8,11 +8,11 @@ import { CustomerPageShell } from "../../components/app/CustomerPageShell";
 const DOMAIN_META: Record<ProfileDomain, { label: string; description: string }> = {
   ABILITY: { label: "Ability", description: "Evidence dari cognitive reasoning profile." },
   EMOTIONAL: { label: "Emotional", description: "Evidence dari EQ response profile." },
-  RESILIENCE: { label: "Resilience", description: "Belum tersedia pada instrumen aktif." },
+  RESILIENCE: { label: "Resilience", description: "Evidence terkait penyesuaian diri dari Work Attitude." },
   BEHAVIOR: { label: "Behavior", description: "Evidence dari DISC behavioral profile." },
   INTEREST: { label: "Interest", description: "Evidence dari RIASEC interest profile." },
-  STRENGTH: { label: "Strength", description: "Belum tersedia pada instrumen aktif." },
-  LEARNING: { label: "Learning", description: "Belum tersedia pada instrumen aktif." },
+  STRENGTH: { label: "Strength", description: "Evidence kekuatan perilaku kerja dari Work Attitude." },
+  LEARNING: { label: "Learning", description: "Evidence preferensi belajar dari Learning Preference." },
 };
 
 const DOMAIN_ORDER: ProfileDomain[] = ["ABILITY", "EMOTIONAL", "RESILIENCE", "BEHAVIOR", "INTEREST", "STRENGTH", "LEARNING"];
@@ -22,6 +22,8 @@ const TEST_LABELS: Record<string, string> = {
   EQ: "EQ",
   DISC: "DISC",
   RIASEC: "RIASEC",
+  WORK_ATTITUDE: "Work Attitude",
+  LEARNING_PREFERENCE: "Learning Preference",
 };
 
 function statusLabel(domain: CrossTestProfileDomain) {
@@ -98,7 +100,7 @@ export default async function ProfilePage() {
   if (!session) redirect("/login?next=/profile");
 
   try {
-    const { profile } = await getCrossTestProfile(session.user.id);
+    const { profile, subject } = await getCrossTestProfile(session.user.id);
     const hasAnyEvidence = profile.domains.some((domain) => domain.signalCount > 0);
     const hasFullCoverage = profile.completeness.availableDomains === profile.completeness.totalDomains;
 
@@ -106,7 +108,7 @@ export default async function ProfilePage() {
       <CustomerPageShell
         userName={session.user.name}
         eyebrow="My profile"
-        title="Gambaran diri dari evidence yang tersedia"
+        title={`Profile — ${subject.name}`}
         description="My Profile membantu Anda melihat gambaran lintas assessment. Setiap assessment tetap menjadi sumber makna utamanya; profile bukan assessment baru dan bukan universal score."
       >
         <section className="rs-card p-6 sm:p-8" aria-labelledby="profile-visualization-heading">

@@ -494,6 +494,51 @@ function createFreeEngine(): TestScoringEngine {
   };
 }
 
+function createLearningPreferenceEngine(): TestScoringEngine {
+  const identity: ScoringModelIdentity = { testType: "LEARNING_PREFERENCE", modelId: "LEARNING_PREFERENCE_SCORE", version: "LEARNING_PREFERENCE_SCORE_V1" };
+  const dimensions = ["VISUAL", "AUDITORY", "KINESTHETIC"] as const;
+  return { identity, score(context) {
+    if (context.metadata.scoringVersion !== identity.version) throw new ScoringEngineConfigurationError(`Learning Preference scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`);
+    if (context.questions.length !== 30) throw new Error(`Learning Preference requires exactly 30 questions; received ${context.questions.length}.`);
+    const answers = new Map(context.answers.map(a => [a.questionId, Number(a.value)]));
+    const dimensionScores = dimensions.map(dimension => {
+      const qs = context.questions.filter(q => String(q.domain).trim().toUpperCase() === dimension);
+      if (qs.length !== 10) throw new Error(`Learning Preference dimension "${dimension}" requires exactly 10 questions; received ${qs.length}.`);
+      const scored = qs.map(q => { const raw = answers.get(q.id); if (raw === undefined || !Number.isInteger(raw) || raw < 1 || raw > 5) return null; const normalized = q.reverseScore ? 6 - raw : raw; return ((normalized - 1) / 4) * 100; }).filter((v): v is number => v !== null);
+      const score = scored.length ? Number((scored.reduce((a,b)=>a+b,0)/scored.length).toFixed(2)) : 0;
+      return { dimension, score, percentage: score, answeredCount: scored.length, questionCount: qs.length };
+    });
+    const ranked = [...dimensionScores].sort((a,b)=>b.score-a.score || dimensions.indexOf(a.dimension)-dimensions.indexOf(b.dimension));
+    const overallScore = Number((dimensionScores.reduce((a,b)=>a+b.score,0)/dimensionScores.length).toFixed(2));
+    const dominantScore = ranked[0]?.score ?? 0;
+    const dominantPreferences = ranked.filter(d => d.score === dominantScore).map(d => d.dimension);
+    const dominantPreference = dominantPreferences[0] ?? "VISUAL";
+    return { attemptId:context.metadata.attemptId, assessmentType:"LEARNING_PREFERENCE", assessmentConfigurationVersion:context.metadata.assessmentConfigurationVersion, questionBankVersion:context.metadata.questionBankVersion, taxonomyVersion:context.metadata.taxonomyVersion, scoringVersion:context.metadata.scoringVersion, learningPreference:{contractVersion:"LEARNING_PREFERENCE_RESULT_V1",measurement:{testType:"LEARNING_PREFERENCE",scoringVersion:"LEARNING_PREFERENCE_SCORE_V1",dimensionScores,overallScore,dominantPreference,dominantPreferences}}, overallScore, score:overallScore, totalQuestions:30, answeredQuestions:context.answers.length, domainCount:3, measuredDomainCount:dimensionScores.filter(d=>d.answeredCount>0).length, coverage:Number(((context.answers.length/30)*100).toFixed(2)), coveragePercent:Number(((context.answers.length/30)*100).toFixed(2)), isComplete:context.metadata.completionMode!=="TIMEOUT", minimumCompleteDomains:3, domainScores:dimensionScores.map(d=>({domainId:d.dimension,score:d.score,questionCount:d.questionCount,weightTotal:d.questionCount,scoredSubdomainCount:0,totalSubdomainCount:0,sufficient:d.answeredCount===d.questionCount})), domains:dimensionScores.map(d=>({domainId:d.dimension,score:d.score,questionCount:d.questionCount,weightTotal:d.questionCount,sufficient:d.answeredCount===d.questionCount})), subdomainScores:[], indicatorScores:[], strongestDomains:ranked.map(d=>d.dimension), developmentDomains:[], quality:{scoreableQuestions:context.answers.length,measuredDomains:dimensionScores.filter(d=>d.answeredCount>0).length,totalDomains:3,coveragePercent:Number(((context.answers.length/30)*100).toFixed(2)),complete:context.metadata.completionMode!=="TIMEOUT"}, status:context.metadata.completionMode === "TIMEOUT" ? "PARTIAL" : "COMPLETE" } as unknown as AssessmentResult;
+  }};
+}
+
+function createWorkAttitudeEngine(): TestScoringEngine {
+  const identity: ScoringModelIdentity = { testType: "WORK_ATTITUDE", modelId: "WORK_ATTITUDE_SCORE", version: "WORK_ATTITUDE_SCORE_V1" };
+  const dimensions = ["SYSTEMATIKA_KERJA","POLA_BERPIKIR","PENGAMBILAN_KEPUTUSAN","KERJASAMA","INTERAKSI_SOSIAL","PENYESUAIAN_DIRI","KEDISIPLINAN"] as const;
+  return { identity, score(context) {
+    if (context.metadata.scoringVersion !== identity.version) throw new ScoringEngineConfigurationError(`Work Attitude scoring version mismatch: configured=${context.metadata.scoringVersion}, engine=${identity.version}`);
+    if (context.questions.length !== 35) throw new Error(`Work Attitude requires exactly 35 questions; received ${context.questions.length}.`);
+    const answers = new Map(context.answers.map(a => [a.questionId, Number(a.value)]));
+    const dimensionScores = dimensions.map(dimension => {
+      const qs = context.questions.filter(q => String(q.domain).trim().toUpperCase() === dimension);
+      if (qs.length !== 5) throw new Error(`Work Attitude dimension "${dimension}" requires exactly 5 questions; received ${qs.length}.`);
+      const values = qs.map(q => answers.get(q.id)).filter((v): v is number => v !== undefined && Number.isInteger(v) && v >= 1 && v <= 5);
+      if (context.metadata.completionMode !== "TIMEOUT" && values.length !== qs.length) throw new Error(`Work Attitude dimension ${dimension} is incomplete.`);
+      const scored = qs.map(q => { const raw = answers.get(q.id); if (raw === undefined || !Number.isInteger(raw) || raw < 1 || raw > 5) return null; const normalized = q.reverseScore ? 6 - raw : raw; return ((normalized - 1) / 4) * 100; }).filter((v): v is number => v !== null);
+      const score = scored.length ? Number((scored.reduce((a,b)=>a+b,0)/scored.length).toFixed(2)) : 0;
+      return { dimension, score, answeredCount: scored.length, questionCount: qs.length };
+    });
+    const overallScore = Number((dimensionScores.reduce((a,b)=>a+b.score,0)/dimensionScores.length).toFixed(2));
+    const ranked=[...dimensionScores].sort((a,b)=>b.score-a.score);
+    return { attemptId:context.metadata.attemptId, assessmentType:"WORK_ATTITUDE", assessmentConfigurationVersion:context.metadata.assessmentConfigurationVersion, questionBankVersion:context.metadata.questionBankVersion, taxonomyVersion:context.metadata.taxonomyVersion, scoringVersion:context.metadata.scoringVersion, workAttitude:{contractVersion:"WORK_ATTITUDE_RESULT_V1",measurement:{testType:"WORK_ATTITUDE",scoringVersion:"WORK_ATTITUDE_SCORE_V1",dimensionScores,overallScore}}, overallScore, score:overallScore, totalQuestions:35, answeredQuestions:context.answers.length, domainCount:7, measuredDomainCount:dimensionScores.filter(d=>d.answeredCount>0).length, coverage:Number(((context.answers.length/35)*100).toFixed(2)), coveragePercent:Number(((context.answers.length/35)*100).toFixed(2)), isComplete:context.metadata.completionMode!=="TIMEOUT", minimumCompleteDomains:7, domainScores:dimensionScores.map(d=>({domainId:d.dimension,score:d.score,questionCount:d.questionCount,weightTotal:d.questionCount,scoredSubdomainCount:0,totalSubdomainCount:0,sufficient:d.answeredCount===d.questionCount})), domains:dimensionScores.map(d=>({domainId:d.dimension,score:d.score,questionCount:d.questionCount,weightTotal:d.questionCount,sufficient:d.answeredCount===d.questionCount})), subdomainScores:[], indicatorScores:[], strongestDomains:ranked.slice(0,3).map(d=>d.dimension), developmentDomains:[...ranked].reverse().slice(0,3).map(d=>d.dimension), quality:{scoreableQuestions:context.answers.length,measuredDomains:dimensionScores.filter(d=>d.answeredCount>0).length,totalDomains:7,coveragePercent:Number(((context.answers.length/35)*100).toFixed(2)),complete:context.metadata.completionMode!=="TIMEOUT"}, status:context.metadata.completionMode === "TIMEOUT" ? "PARTIAL" : "COMPLETE" } as unknown as AssessmentResult;
+  }};
+}
+
 function createLegacyEngine(testType: "free" | "premium"): TestScoringEngine {
   const identity: ScoringModelIdentity = {
     testType: testType.toUpperCase(),
@@ -527,14 +572,20 @@ const ENGINES = [
   createEqEngine(),
   createCognitiveEngine(),
   createRiasecEngine(),
+  createWorkAttitudeEngine(),
+  createLearningPreferenceEngine(),
 ] as const;
 
-const REGISTRY = new Map<string, TestScoringEngine>(
-  ENGINES.map((engine) => [engine.identity.testType.toLowerCase(), engine]),
-);
+const REGISTRY = new Map<string, TestScoringEngine>();
+for (const engine of ENGINES) {
+  const key = engine.identity.testType.toLowerCase();
+  REGISTRY.set(key, engine);
+  REGISTRY.set(key.replaceAll("_", "-"), engine);
+}
 
 export function getScoringEngine(assessmentType: ScoringContext["assessmentType"]): TestScoringEngine {
-  const engine = REGISTRY.get(assessmentType);
+  const normalizedAssessmentType = assessmentType.toLowerCase();
+  const engine = REGISTRY.get(normalizedAssessmentType);
   if (!engine) {
     throw new ScoringEngineConfigurationError(
       `No scoring engine registered for assessment type "${assessmentType}".`,

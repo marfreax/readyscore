@@ -3,8 +3,10 @@ import { riasecInterpretationEngine } from "../interpretation/riasec";
 import { interpretDisc, DISC_INTERPRETATION_VERSION } from "../disc/interpretation";
 import { interpretEq, EQ_INTERPRETATION_VERSION } from "../eq/interpretation";
 import { interpretCognitive, COGNITIVE_INTERPRETATION_VERSION } from "../cognitive/interpretation";
+import { interpretWorkAttitude, WORK_ATTITUDE_INTERPRETATION_VERSION } from "../work-attitude/interpretation";
+import { interpretLearningPreference, LEARNING_PREFERENCE_INTERPRETATION_VERSION } from "../learning-preference/interpretation";
 import { InterpretationEngineConfigurationError, type InterpretationContext, type TestInterpretationEngine } from "../interpretation/types";
-import type { TestResultEnvelope } from "./types";
+import type { TestResultEnvelope, ResultInterpretation } from "./types";
 
 const discInterpretationEngine: TestInterpretationEngine = {
   testType: "DISC",
@@ -30,7 +32,21 @@ const cognitiveInterpretationEngine: TestInterpretationEngine = {
   },
 };
 
-const ENGINES: TestInterpretationEngine[] = [riasecInterpretationEngine, discInterpretationEngine, eqInterpretationEngine, cognitiveInterpretationEngine];
+
+const workAttitudeInterpretationEngine: TestInterpretationEngine = {
+  testType: "WORK_ATTITUDE",
+  interpretationVersion: WORK_ATTITUDE_INTERPRETATION_VERSION,
+  interpret({ result }) { return interpretWorkAttitude(result) as ResultInterpretation & Record<string, unknown>; },
+};
+
+
+const learningPreferenceInterpretationEngine: TestInterpretationEngine = {
+  testType: "LEARNING_PREFERENCE",
+  interpretationVersion: LEARNING_PREFERENCE_INTERPRETATION_VERSION,
+  interpret({ result }) { return interpretLearningPreference(result) as ResultInterpretation & Record<string, unknown>; },
+};
+
+const ENGINES: TestInterpretationEngine[] = [riasecInterpretationEngine, discInterpretationEngine, eqInterpretationEngine, cognitiveInterpretationEngine, workAttitudeInterpretationEngine, learningPreferenceInterpretationEngine];
 const REGISTRY = new Map(ENGINES.map((engine) => [engine.testType.toLowerCase(), engine]));
 
 export function getInterpretationEngine(testType: string): TestInterpretationEngine {

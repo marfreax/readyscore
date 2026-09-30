@@ -55,10 +55,20 @@ const PREMIUM_DOMAIN_QUOTAS: Array<{ label: string; aliases: string[]; quota: nu
   { label: "Emotional Resilience", aliases: ["ERS", "Ketahanan Emosional", "Emotional Resilience"], quota: 12 },
 ];
 
+const PRISMA_TYPE_BY_RUNTIME_TYPE: Record<AssessmentType, PrismaAssessmentType> = {
+  free: "FREE",
+  riasec: "RIASEC",
+  disc: "DISC",
+  eq: "EQ",
+  cognitive: "COGNITIVE",
+  "work-attitude": "WORK_ATTITUDE",
+  "learning-preference": "LEARNING_PREFERENCE",
+};
+
 export async function selectQuestions(type: AssessmentType, seed?: string): Promise<SelectedQuestion[]> {
-  const config = await resolveActiveAssessmentConfiguration(type.toUpperCase() as PrismaAssessmentType);
-  const eligible = type === "free" || type === "riasec" || type === "disc" || type === "eq" || type === "cognitive"
-    ? (await getPublishedQuestionBank(type === "free" || type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : "COGNITIVE"))
+  const config = await resolveActiveAssessmentConfiguration(PRISMA_TYPE_BY_RUNTIME_TYPE[type]);
+  const eligible = type === "free" || type === "riasec" || type === "disc" || type === "eq" || type === "cognitive" || type === "work-attitude" || type === "learning-preference"
+    ? (await getPublishedQuestionBank(type === "free" || type === "riasec" ? "RIASEC" : type === "disc" ? "DISC" : type === "eq" ? "EQ" : type === "cognitive" ? "COGNITIVE" : type === "work-attitude" ? "WORK_ATTITUDE" : "LEARNING_PREFERENCE"))
         .filter((q) => (type === "free" || type === "riasec") ? q.taxonomyVersion === "RIASEC_TAXONOMY_V2" : true)
         .map((q) => ({
         id: q.questionCode,
@@ -199,6 +209,24 @@ export async function selectQuestions(type: AssessmentType, seed?: string): Prom
       selected.push(...candidates.slice(0, quota));
     }
     selected = seededShuffle(selected, `${s}:COGNITIVE`);
+  } else if (type === "learning-preference") {
+    const preferences = ["VISUAL", "AUDITORY", "KINESTHETIC"] as const;
+    const quota = 10;
+    for (const preference of preferences) {
+      const candidates = seededShuffle(runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === preference), `${s}:LEARNING_PREFERENCE:${preference}`);
+      if (candidates.length < quota) throw new SelectionError("INSUFFICIENT_LEARNING_PREFERENCE_DIMENSION_QUESTIONS", `Learning Preference dimension "${preference}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`);
+      selected.push(...candidates.slice(0, quota));
+    }
+    selected = seededShuffle(selected, `${s}:LEARNING_PREFERENCE`);
+  } else if (type === "work-attitude") {
+    const dimensions = ["SYSTEMATIKA_KERJA","POLA_BERPIKIR","PENGAMBILAN_KEPUTUSAN","KERJASAMA","INTERAKSI_SOSIAL","PENYESUAIAN_DIRI","KEDISIPLINAN"] as const;
+    const quota = 5;
+    for (const dimension of dimensions) {
+      const candidates = seededShuffle(runtimeQuestions.filter((q) => q.domain.trim().toUpperCase() === dimension), `${s}:WORK_ATTITUDE:${dimension}`);
+      if (candidates.length < quota) throw new SelectionError("INSUFFICIENT_WORK_ATTITUDE_DIMENSION_QUESTIONS", `Work Attitude dimension "${dimension}" tidak cukup. Membutuhkan ${quota}, tersedia ${candidates.length}.`);
+      selected.push(...candidates.slice(0, quota));
+    }
+    selected = seededShuffle(selected, `${s}:WORK_ATTITUDE`);
   } else if (type === "free") {
     // V16 free acquisition form: 10 RIASEC items with intentional coverage
     // across all six dimensions. Quotas are 2/2/2/2/1/1 (R/I/A/S/E/C).

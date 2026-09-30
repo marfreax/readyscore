@@ -49,7 +49,7 @@ async function validateInput(tx: Prisma.TransactionClient, input: PackageInput) 
   ensurePositiveInteger(input.totalQuestions, "INVALID_TOTAL_QUESTIONS");
   ensureNonNegativeInteger(input.timeLimitSeconds, "INVALID_TIME_LIMIT");
   const configuredTestType = await tx.testType.findUnique({ where: { id: input.testTypeId }, select: { code: true } });
-  if (configuredTestType && ["RIASEC", "DISC", "EQ", "COGNITIVE"].includes(configuredTestType.code) && input.timeLimitSeconds !== 1200) {
+  if (configuredTestType && ["RIASEC", "DISC", "EQ", "COGNITIVE", "WORK_ATTITUDE", "LEARNING_PREFERENCE"].includes(configuredTestType.code) && input.timeLimitSeconds !== 1200) {
     throw new Error("PRODUCTION_TIMER_MUST_BE_1200");
   }
   if (!input.testTypeId.trim()) throw new Error("TEST_TYPE_REQUIRED");
@@ -99,7 +99,7 @@ export async function validateQuestionPackageVersion(versionId: string): Promise
 
   const checks: PackageValidationCheck[] = [];
   checks.push({ key: "total-questions", label: "Total question count", status: version.totalQuestions > 0 ? "PASS" : "BLOCK", detail: `${version.totalQuestions} questions configured` });
-  const productionTestType = ["RIASEC", "DISC", "EQ", "COGNITIVE"].includes(version.package.testType.code);
+  const productionTestType = ["RIASEC", "DISC", "EQ", "COGNITIVE", "WORK_ATTITUDE", "LEARNING_PREFERENCE"].includes(version.package.testType.code);
   checks.push({ key: "timer", label: "Time limit", status: version.timeLimitSeconds >= 0 && (!productionTestType || version.timeLimitSeconds === 1200) ? "PASS" : "BLOCK", detail: productionTestType ? `${version.timeLimitSeconds} seconds configured / 1200 required` : `${version.timeLimitSeconds} seconds configured` });
   checks.push({ key: "taxonomy", label: "Taxonomy linkage", status: version.taxonomy && version.taxonomy.testTypeId === version.package.testTypeId ? "PASS" : "BLOCK", detail: version.taxonomy ? `${version.taxonomy.version}` : "Missing taxonomy" });
 
