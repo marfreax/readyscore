@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getPublicAppBaseUrl } from "../../../../../../lib/public-app-url";
 import { getCurrentSession } from "../../../../../../lib/auth/session";
 import { requireClientOrganizationAdmin, resendClientInvitation, revokeClientInvitation, retryClientResultEmail } from "../../../../../../lib/client-organization/service";
 
@@ -25,8 +26,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ org
       return NextResponse.json({ ok: true, invitation });
     }
     if (body.action === "RESEND") {
-      const url = new URL(request.url);
-      const invitation = await resendClientInvitation({ organizationId, invitationId, userId: session.user.id, baseUrl: process.env.APP_BASE_URL?.trim() || url.origin });
+      const invitation = await resendClientInvitation({ organizationId, invitationId, userId: session.user.id, baseUrl: getPublicAppBaseUrl(request) });
       return NextResponse.json({ ok: true, invitation });
     }
     if (body.action === "RETRY_RESULT_EMAIL") {

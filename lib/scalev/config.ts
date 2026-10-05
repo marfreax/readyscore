@@ -1,4 +1,5 @@
 import type { CommercialTier } from "@prisma/client";
+import { getPublicAppBaseUrl } from "../public-app-url";
 
 export type ScalevProductMapping =
   | { kind?: "PRODUCT"; tier: CommercialTier; testType?: "IQ" | "EQ" | "DISC" | "RIASEC" }
@@ -67,10 +68,7 @@ export function resolveScalevSku(sku: string): ScalevProductMapping | null {
 }
 
 export function getScalevPublicBaseUrl(): string {
-  return (
-    process.env.READYSCORE_PUBLIC_URL?.trim().replace(/\/+$/, "") ||
-    "http://localhost:3000"
-  );
+  return getPublicAppBaseUrl(undefined, "READYSCORE_PUBLIC_URL");
 }
 
 export function getScalevHandoffTtlMinutes(): number {

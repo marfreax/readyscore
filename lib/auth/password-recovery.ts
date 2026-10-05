@@ -3,6 +3,7 @@ import { prisma } from "../db/prisma";
 import { findUserByEmail } from "./store";
 import { passwordResetExpiryMinutes, sendPasswordResetEmail } from "./password-recovery-email";
 import { recordAuthenticationAudit } from "./audit";
+import { getPublicAppBaseUrl } from "../public-app-url";
 
 export const PASSWORD_RESET_GENERIC_MESSAGE = "Jika email tersebut terdaftar, instruksi reset password telah dikirim.";
 
@@ -15,12 +16,7 @@ function hashResetToken(token: string) {
 }
 
 function appBaseUrl() {
-  const value = process.env.APP_BASE_URL?.trim();
-  if (!value) {
-    if (process.env.NODE_ENV === "production") throw new Error("APP_BASE_URL_NOT_CONFIGURED");
-    return "http://localhost:3000";
-  }
-  return value.replace(/\/$/, "");
+  return getPublicAppBaseUrl();
 }
 
 async function safeAudit(input: Parameters<typeof recordAuthenticationAudit>[0]) {

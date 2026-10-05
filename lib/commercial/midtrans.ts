@@ -4,6 +4,7 @@ import type {
   PaymentProvider,
   PaymentStatusResult,
 } from "./payment-provider";
+import { getPublicAppBaseUrl } from "../public-app-url";
 
 const PROVIDER = "MIDTRANS";
 const DEFAULT_SANDBOX_API = "https://api.sandbox.midtrans.com";
@@ -38,12 +39,7 @@ function authHeader() {
 }
 
 function publicBaseUrl() {
-  const configured = process.env.READYSCORE_PUBLIC_URL?.trim().replace(/\/+$/, "");
-  if (configured) return configured;
-  if (process.env.NODE_ENV === "production") {
-    throw new Error("READYSCORE_PUBLIC_URL_NOT_CONFIGURED");
-  }
-  return "http://localhost:3000";
+  return getPublicAppBaseUrl(undefined, "READYSCORE_PUBLIC_URL");
 }
 
 function jsonRecord(value: unknown): Record<string, unknown> {

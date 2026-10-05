@@ -1,13 +1,14 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "../../../../lib/auth/session";
 import { getScalevCheckoutUrl, isScalevCheckoutSku, type ScalevCheckoutSku } from "../../../../lib/scalev/checkout";
+import { getPublicAppUrl } from "../../../../lib/public-app-url";
 
 export const runtime = "nodejs";
 
 export async function GET(request: Request) {
   const session = await getCurrentSession();
   if (!session) {
-    return NextResponse.redirect(new URL("/login?next=/access", request.url));
+    return NextResponse.redirect(getPublicAppUrl("/login?next=/access", request));
   }
 
   const sku = new URL(request.url).searchParams.get("sku")?.trim() ?? "";
@@ -17,7 +18,7 @@ export async function GET(request: Request) {
 
   const checkoutUrl = getScalevCheckoutUrl(sku as ScalevCheckoutSku);
   if (!checkoutUrl) {
-    const fallback = new URL("/access", request.url);
+    const fallback = getPublicAppUrl("/access", request);
     fallback.searchParams.set("checkout", "not-configured");
     fallback.searchParams.set("sku", sku);
     return NextResponse.redirect(fallback, 303);

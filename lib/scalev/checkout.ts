@@ -32,6 +32,15 @@ const ENV_URL_BY_SKU: Record<ScalevCheckoutSku, string> = {
   "RS-REASSESSMENT-CREDIT-LEARNING_PREFERENCE-V1": "SCALEV_CHECKOUT_REASSESSMENT_CREDIT_LEARNING_PREFERENCE_URL",
 };
 
+function checkoutUrlAllowed(url: URL): boolean {
+  const hostname = url.hostname.toLowerCase().replace(/^\[|\]$/g, "");
+  const loopback =
+    hostname === "localhost" || hostname.endsWith(".localhost") || hostname === "::1" ||
+    hostname === "0.0.0.0" || /^127(?:\.\d{1,3}){3}$/.test(hostname);
+  if (process.env.NODE_ENV === "production") return url.protocol === "https:" && !loopback;
+  return url.protocol === "https:" || (url.protocol === "http:" && loopback);
+}
+
 export function isScalevCheckoutSku(value: string): value is ScalevCheckoutSku {
   return (CHECKOUT_SKUS as readonly string[]).includes(value);
 }
@@ -63,7 +72,7 @@ function readCheckoutMap(): Partial<Record<ScalevCheckoutSku, string>> {
     } catch {
       throw new Error(`SCALEV_CHECKOUT_URL_INVALID:${sku}`);
     }
-    if (url.protocol !== "https:" && url.hostname !== "localhost" && url.hostname !== "127.0.0.1") {
+    if (!checkoutUrlAllowed(url)) {
       throw new Error(`SCALEV_CHECKOUT_URL_HTTPS_REQUIRED:${sku}`);
     }
     result[sku] = url.toString();
@@ -79,7 +88,7 @@ export function getScalevCheckoutUrl(sku: ScalevCheckoutSku): string | null {
   const raw = process.env[envName]?.trim();
   if (!raw) return null;
   const url = new URL(raw);
-  if (url.protocol !== "https:" && url.hostname !== "localhost" && url.hostname !== "127.0.0.1") {
+  if (!checkoutUrlAllowed(url)) {
     throw new Error(`SCALEV_CHECKOUT_URL_HTTPS_REQUIRED:${sku}`);
   }
   return url.toString();

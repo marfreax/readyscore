@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { startSession } from "../../../../lib/auth/session";
 import { claimScalevHandoff } from "../../../../lib/scalev/service";
+import { getPublicAppUrl } from "../../../../lib/public-app-url";
 
 export const runtime = "nodejs";
 
@@ -18,7 +19,7 @@ export async function GET(request: Request) {
     const userId = await claimScalevHandoff(token);
     await startSession(userId);
 
-    return NextResponse.redirect(new URL("/app", request.url));
+    return NextResponse.redirect(getPublicAppUrl("/app", request));
   } catch (error) {
     const message = error instanceof Error ? error.message : "SCALEV_HANDOFF_FAILED";
 

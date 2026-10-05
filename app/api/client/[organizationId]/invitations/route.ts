@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getPublicAppBaseUrl } from "../../../../../lib/public-app-url";
 import { getCurrentSession } from "../../../../../lib/auth/session";
 import { createClientInvitation, listClientInvitations, requireClientOrganizationAdmin } from "../../../../../lib/client-organization/service";
 
@@ -51,7 +52,6 @@ export async function POST(
     if (body.department !== undefined && (typeof body.department !== "string" || body.department.length > 120)) throw new Error("INVALID_DEPARTMENT");
     if (body.expiresInDays !== undefined && typeof body.expiresInDays !== "number") throw new Error("INVALID_EXPIRY");
 
-    const url = new URL(request.url);
     const result = await createClientInvitation({
       organizationId,
       actorUserId: session.user.id,
@@ -60,7 +60,7 @@ export async function POST(
       jobTitle: body.jobTitle as string | undefined,
       department: body.department as string | undefined,
       expiresInDays: body.expiresInDays as number | undefined,
-      baseUrl: process.env.APP_BASE_URL?.trim() || url.origin,
+      baseUrl: getPublicAppBaseUrl(request),
     });
     return NextResponse.json({ ok: true, invitation: result }, { status: 201 });
   } catch (error) {
