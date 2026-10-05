@@ -319,7 +319,8 @@
     "v19.5.1:gate": "node scripts/validate-v19-5-1-subject-context.mjs",
     "v19.5.2:gate": "node scripts/validate-v19-5-2-subject-switcher-ux.mjs",
     "v19.6:gate": "node scripts/validate-v19-6-public-trust.mjs",
-    "v19.7:question-bank-v2:gate": "node scripts/validate-v19-7-question-bank-v2.mjs"
+    "v19.7:question-bank-v2:gate": "node scripts/validate-v19-7-question-bank-v2.mjs",
+    "v20:client-disc-100:gate": "node --import tsx scripts/validate-client-disc-100.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.19.0",

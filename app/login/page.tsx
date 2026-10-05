@@ -22,7 +22,8 @@ export default function LoginPage() {
       const data = await response.json();
       if (!response.ok) throw new Error(data?.error?.code ?? "LOGIN_FAILED");
       const next = new URLSearchParams(window.location.search).get("next");
-      window.location.assign(next?.startsWith("/") ? next : "/app");
+      const safeNext = next?.startsWith("/") && !next.startsWith("//") && !next.includes("\\") ? next : "/app";
+      window.location.assign(safeNext);
     } catch (err) {
       const code = err instanceof Error ? err.message : "LOGIN_FAILED";
       setError(code === "INVALID_CREDENTIALS" ? "Email atau password salah." : "Login tidak dapat diproses.");
@@ -44,7 +45,13 @@ export default function LoginPage() {
             <button disabled={busy} className="rs-button rs-button-primary w-full">{busy ? "Memproses..." : "Masuk"}</button>
           </form>
           <p className="mt-4 text-center text-sm"><Link href="/forgot-password" className="font-black text-indigo-600">Lupa password?</Link></p>
-          <p className="mt-6 text-center text-sm text-slate-500">Belum punya akun? <Link href="/register" className="font-black text-indigo-600">Daftar</Link></p>
+          <p className="mt-6 text-center text-sm text-slate-500">Belum punya akun? <Link href="/register" onClick={(event) => {
+            const next = new URLSearchParams(window.location.search).get("next");
+            if (next?.startsWith("/") && !next.startsWith("//") && !next.includes("\\")) {
+              event.preventDefault();
+              window.location.assign(`/register?next=${encodeURIComponent(next)}`);
+            }
+          }} className="font-black text-indigo-600">Daftar</Link></p>
           <Link href="/" className="rs-button rs-button-ghost mt-3 w-full">Kembali ke beranda</Link>
         </section>
       </div>

@@ -386,6 +386,85 @@ export async function selectPackageAndQuestions(type: SupportedAssessmentType, s
   };
 }
 
+/** Selects from the exact published package pinned to a client invitation. */
+export async function selectPackageVersionAndQuestions(
+  type: SupportedAssessmentType,
+  seed: string,
+  packageVersionId: string,
+) {
+  const version = await validatePublishedPackage(packageVersionId, type);
+  const eligible = await loadEligibleQuestionsForPackage(version);
+  const selectedRows = buildCompositionSelection(eligible, version.compositionRules, seed);
+  if (!selectedRows) {
+    throw new PackageSelectionError(
+      "INSUFFICIENT_COMPOSITION_QUESTIONS",
+      "Eligible question pool tidak dapat memenuhi seluruh composition secara bersamaan.",
+    );
+  }
+
+  const selected: SelectedQuestion[] = selectedRows.map((row) => ({
+    id: row.question.code,
+    code: row.question.code,
+    text: row.text,
+    domain: row.domain,
+    subdomain: row.subdomain,
+    indicator: row.indicator,
+    type: row.type,
+    answerType: row.answerType as SelectedQuestion["answerType"],
+    reverseScore: row.reverseScore,
+    weight: row.weight,
+    scoringKey: row.scoringKey.map(Number),
+    scale: row.scale.map(Number),
+    options: Array.isArray(row.options) ? row.options.map(String) : undefined,
+    correctOption: typeof row.correctOption === "number" ? row.correctOption : undefined,
+    difficulty: String(row.difficulty).toUpperCase() as SelectedQuestion["difficulty"],
+    status: String(row.status).toUpperCase() as SelectedQuestion["status"],
+    mappingStatus: String(row.mappingStatus).toUpperCase() as SelectedQuestion["mappingStatus"],
+    version: row.version,
+    source: row.sourceFile ?? "POSTGRESQL",
+    taxonomyVersion: row.taxonomyVersion,
+    questionRecordId: row.question.id,
+    questionVersionId: row.id,
+  }));
+
+  if (selected.length !== version.totalQuestions) {
+    throw new PackageSelectionError("SELECTION_COUNT_MISMATCH", "Jumlah question hasil selection tidak sesuai total package.");
+  }
+  const composition = version.compositionRules.map((rule) => ({
+    taxonomyNodeId: rule.taxonomyNodeId,
+    taxonomyNodeCode: rule.taxonomyNode.code,
+    taxonomyNodeName: rule.taxonomyNode.name,
+    nodeType: rule.taxonomyNode.nodeType,
+    requiredCount: rule.requiredCount,
+    availableCount: eligible.filter((question) => nodeMatchesQuestion(rule.taxonomyNode, question)).length,
+  }));
+  if (composition.some((item) => item.availableCount < item.requiredCount)) {
+    throw new PackageSelectionError("INSUFFICIENT_COMPOSITION_QUESTIONS", "Question package tidak lagi memenuhi composition yang dipublikasikan.");
+  }
+  const metadata = version.metadata && typeof version.metadata === "object" && !Array.isArray(version.metadata) ? version.metadata as Record<string, unknown> : {};
+  const selectionAlgorithmVersion = typeof metadata.selectionAlgorithmVersion === "string"
+    ? metadata.selectionAlgorithmVersion
+    : V13_2_SELECTION_ALGORITHM_VERSION;
+  const pkg: RuntimePackageReadiness = {
+    packageId: version.packageId,
+    packageCode: version.package.code,
+    packageVersionId: version.id,
+    packageVersion: version.version,
+    testTypeId: version.package.testTypeId,
+    testTypeCode: version.package.testType.code,
+    taxonomyVersionId: version.taxonomyVersionId!,
+    taxonomyVersion: version.taxonomy!.version,
+    totalQuestions: version.totalQuestions,
+    timeLimitSeconds: version.timeLimitSeconds,
+    selectionAlgorithmVersion,
+    composition,
+  };
+  return {
+    package: pkg,
+    questions: seededShuffle(selected, `${seed}:ORDER:${version.id}`),
+  };
+}
+
 export function packageSnapshotMetadata(
   pkg: RuntimePackageReadiness,
   attemptSeed: string,

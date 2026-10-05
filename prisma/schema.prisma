@@ -256,6 +256,8 @@ model User {
   addOnEntitlements UserAddOnEntitlement[]
   reassessmentCredits ReassessmentCredit[]
   institutionMemberships InstitutionMembership[]
+  clientOrganizationMemberships ClientOrganizationMembership[]
+  createdClientInvitations ClientInvitation[] @relation("ClientInvitationCreator")
   contentAuditEvents AdminContentAuditEvent[]
   v15Reports V15Report[]
   authenticationAuditEventsAsActor AuthenticationAuditEvent[] @relation("AuthenticationAuditActor")
@@ -263,6 +265,7 @@ model User {
   dataDeletionRequests DataDeletionRequest[]
 
   @@index([createdAt])
+  @@index([status, createdAt])
 }
 
 model SubjectProfile {
@@ -454,6 +457,162 @@ model InstitutionEntitlement {
   @@unique([institutionId, type, resourceType, resourceKey])
   @@index([institutionId, status])
   @@index([resourceType, resourceKey, status])
+}
+
+enum ClientOrganizationStatus {
+  ACTIVE
+  SUSPENDED
+  RETIRED
+}
+
+enum ClientOrganizationMembershipStatus {
+  ACTIVE
+  SUSPENDED
+  LEFT
+}
+
+enum ClientOrganizationMemberRole {
+  ADMIN
+  VIEWER
+}
+
+/// Client company boundary for employer DISC workflows. Kept separate from
+/// Institution because the existing Institution roles and access contracts
+/// are education-oriented.
+model ClientOrganization {
+  id        String                   @id @default(cuid())
+  code      String                   @unique
+  name      String
+  websiteUrl String?
+  logoUrl   String?
+  status    ClientOrganizationStatus @default(ACTIVE)
+  createdAt DateTime                 @default(now())
+  updatedAt DateTime                 @updatedAt
+
+  memberships ClientOrganizationMembership[]
+  participants ClientParticipant[]
+  invitations ClientInvitation[]
+  assessmentAttempts AssessmentAttempt[]
+
+  @@index([status])
+  @@index([createdAt])
+}
+
+/// Client membership is an authorization context only. Assessment results
+/// and participant access are governed by their own scoped contracts.
+model ClientOrganizationMembership {
+  id             String                             @id @default(cuid())
+  organizationId String
+  userId         String
+  role           ClientOrganizationMemberRole
+  status         ClientOrganizationMembershipStatus @default(ACTIVE)
+  startsAt       DateTime                           @default(now())
+  endsAt         DateTime?
+  createdAt      DateTime                           @default(now())
+  updatedAt      DateTime                           @updatedAt
+
+  organization ClientOrganization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  user         User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([organizationId, userId])
+  @@index([userId, status])
+  @@index([organizationId, status])
+}
+
+enum ClientParticipantCategory {
+  CANDIDATE
+  EMPLOYEE
+  ALUMNI
+}
+
+enum ClientInvitationStatus {
+  DRAFT
+  SENT
+  OPENED
+  IN_PROGRESS
+  COMPLETED
+  EXPIRED
+  REVOKED
+  DELIVERY_FAILED
+}
+
+enum ClientResultDeliveryStatus {
+  NOT_SENT
+  PENDING
+  SENT
+  FAILED
+}
+
+model ClientParticipant {
+  id             String                    @id @default(cuid())
+  organizationId String
+  fullName       String?
+  email          String
+  whatsapp       String?
+  category       ClientParticipantCategory
+  createdAt      DateTime                  @default(now())
+  updatedAt      DateTime                  @updatedAt
+
+  organization ClientOrganization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  invitations ClientInvitation[]
+  assessmentAttempts AssessmentAttempt[]
+
+  @@unique([organizationId, email])
+  @@index([organizationId, category, updatedAt])
+}
+
+model ClientInvitation {
+  id                            String                    @id @default(cuid())
+  organizationId                String
+  createdByUserId               String
+  participantId                 String?
+  email                         String
+  category                      ClientParticipantCategory
+  jobTitle                      String?
+  department                    String?
+  tokenHash                     String                    @unique
+  status                        ClientInvitationStatus    @default(DRAFT)
+  assessmentConfigurationVersionId String
+  questionPackageVersionId      String
+  expiresAt                     DateTime
+  sentAt                        DateTime?
+  openedAt                      DateTime?
+  completedAt                   DateTime?
+  revokedAt                     DateTime?
+  resultEmailStatus             ClientResultDeliveryStatus @default(NOT_SENT)
+  resultEmailSentAt             DateTime?
+  resultEmailError              String?
+  resultEmailProviderMessageId  String?
+  resultEmailAttemptCount       Int                       @default(0)
+  invitationDeliveryAttempt     Int                       @default(0)
+  createdAt                     DateTime                  @default(now())
+  updatedAt                     DateTime                  @updatedAt
+
+  organization ClientOrganization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  createdBy User @relation("ClientInvitationCreator", fields: [createdByUserId], references: [id], onDelete: Restrict)
+  participant ClientParticipant? @relation(fields: [participantId], references: [id], onDelete: Restrict)
+  assessmentConfigurationVersion AssessmentConfigurationVersion @relation(fields: [assessmentConfigurationVersionId], references: [id], onDelete: Restrict)
+  questionPackageVersion QuestionPackageVersion @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
+  consent ClientParticipantConsent?
+  assessmentAttempt AssessmentAttempt?
+
+  @@index([organizationId, status, createdAt])
+  @@index([organizationId, email])
+  @@index([participantId, createdAt])
+  @@index([expiresAt, status])
+}
+
+/// Immutable notice and optional marketing choices captured for an invitation.
+model ClientParticipantConsent {
+  id               String   @id @default(cuid())
+  invitationId     String   @unique
+  noticeVersion    String
+  noticeAcceptedAt DateTime
+  emailMarketing   Boolean  @default(false)
+  whatsappMarketing Boolean @default(false)
+  createdAt        DateTime @default(now())
+
+  invitation ClientInvitation @relation(fields: [invitationId], references: [id], onDelete: Restrict)
 }
 
 model TestType {
@@ -1008,6 +1167,7 @@ model QuestionPackageVersion {
   compositionRules QuestionPackageCompositionRule[]
   assessmentConfigurations AssessmentConfigurationVersion[]
   assessmentAttempts AssessmentAttempt[]
+  clientInvitations ClientInvitation[]
 
   @@unique([packageId, version])
   @@index([packageId, status])
@@ -1062,16 +1222,21 @@ model AssessmentConfigurationVersion {
 
   configuration AssessmentConfiguration @relation(fields: [configurationId], references: [id], onDelete: Restrict)
   questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
+  clientInvitations ClientInvitation[]
 
   @@unique([configurationId, version])
   @@index([configurationId, status])
   @@index([status, updatedAt])
+  @@index([questionPackageVersionId])
 }
 
 model AssessmentAttempt {
   id                             String         @id
   userId                         String?
   subjectId                      String?
+  clientOrganizationId           String?
+  clientParticipantId            String?
+  clientInvitationId             String?        @unique
   assessmentType                 AssessmentType
   status                         AttemptStatus  @default(IN_PROGRESS)
   assessmentConfigurationId      String
@@ -1095,6 +1260,9 @@ model AssessmentAttempt {
   subject   SubjectProfile?   @relation(fields: [subjectId], references: [id], onDelete: SetNull)
   questions AttemptQuestion[]
   questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
+  clientOrganization ClientOrganization? @relation(fields: [clientOrganizationId], references: [id], onDelete: Restrict)
+  clientParticipant ClientParticipant? @relation(fields: [clientParticipantId], references: [id], onDelete: Restrict)
+  clientInvitation ClientInvitation? @relation(fields: [clientInvitationId], references: [id], onDelete: Restrict)
   answers   Answer[]
   result    AssessmentResult?
   freeLead  FreeLeadCapture?
@@ -1104,6 +1272,9 @@ model AssessmentAttempt {
 
   @@index([userId, startedAt])
   @@index([subjectId, startedAt])
+  @@index([clientOrganizationId, startedAt])
+  @@index([clientParticipantId, startedAt])
+  @@index([questionPackageVersionId])
   @@index([status, startedAt])
   @@index([status, expiresAt])
   @@index([assessmentType, status])
@@ -1245,6 +1416,8 @@ model BusinessLead {
   status              String   @default("NEW")
   consent             Boolean
   consentAt           DateTime
+  emailMarketingConsent Boolean @default(false)
+  whatsappMarketingConsent Boolean @default(false)
   assessmentAttemptId String?  @unique
   createdAt           DateTime @default(now())
   updatedAt           DateTime @updatedAt

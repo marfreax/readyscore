@@ -1,0 +1,122 @@
+[
+  {
+    "id": "DISC-CLIENT-V1-081", "code": "DISC-CLIENT-V1-081", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_D", "indicator": "CLIENT_SCENARIO_081",
+    "text": "Beberapa pekerjaan penting bersamaan mendekati tenggat. Apa yang paling mungkin kamu lakukan lebih dulu?", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menentukan prioritas utama dan membagi langkah agar pekerjaan segera bergerak.", "Mengajak pihak terkait menyepakati fokus bersama dengan komunikasi yang terbuka.", "Memeriksa kapasitas setiap orang dan menyusun urutan kerja yang tetap realistis.", "Membandingkan tenggat, dependensi, dan kriteria hasil sebelum menetapkan urutan."],
+    "optionDimensions": ["D", "I", "S", "C"], "scoringKey": [1, 2, 3, 4], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-082", "code": "DISC-CLIENT-V1-082", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_I", "indicator": "CLIENT_SCENARIO_082",
+    "text": "Kamu perlu memperkenalkan gagasan baru kepada tim lintas departemen yang belum saling mengenal. Kamu cenderung...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menghubungkan orang-orang melalui percakapan dan contoh yang mudah mereka tanggapi.", "Menyiapkan alur perkenalan yang nyaman agar setiap pihak mendapat ruang berbicara.", "Mengumpulkan konteks dan kebutuhan tiap departemen sebelum menyampaikan gagasan.", "Menjelaskan manfaat utama dan mengarahkan diskusi menuju keputusan yang diperlukan."],
+    "optionDimensions": ["I", "S", "C", "D"], "scoringKey": [2, 3, 4, 1], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-083", "code": "DISC-CLIENT-V1-083", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_S", "indicator": "CLIENT_SCENARIO_083",
+    "text": "Seorang rekan akan mengambil alih tugasmu selama beberapa hari. Apa yang paling mungkin kamu lakukan?", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menjelaskan konteks dan kebutuhan rekan tersebut secara bertahap, lalu memastikan ia siap.", "Menyusun catatan rinci, memeriksa status pekerjaan, dan menandai hal yang perlu dipantau.", "Menentukan hasil penting dan keputusan yang perlu segera dijaga selama masa alih tugas.", "Memperkenalkan rekan itu kepada pihak terkait agar komunikasi selama alih tugas lancar."],
+    "optionDimensions": ["S", "C", "D", "I"], "scoringKey": [3, 4, 1, 2], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-084", "code": "DISC-CLIENT-V1-084", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_C", "indicator": "CLIENT_SCENARIO_084",
+    "text": "Tim sedang membandingkan beberapa vendor untuk pekerjaan yang berisiko tinggi. Kamu paling mungkin...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Memeriksa bukti, kriteria, dan risiko setiap vendor secara konsisten.", "Menentukan pilihan yang paling kuat lalu mendorong tim mengambil langkah.", "Mengajak pihak terkait bertukar pandangan agar kebutuhan mereka terwakili.", "Memastikan proses perbandingan memberi waktu dan ruang yang cukup bagi semua pihak."],
+    "optionDimensions": ["C", "D", "I", "S"], "scoringKey": [4, 1, 2, 3], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-085", "code": "DISC-CLIENT-V1-085", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_D", "indicator": "CLIENT_SCENARIO_085",
+    "text": "Kamu melihat peluang memperbaiki proses yang selama ini menghambat pekerjaan. Respons awalmu biasanya...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mengusulkan percobaan terbatas dengan target hasil dan penanggung jawab yang jelas.", "Mengajak rekan membayangkan manfaat perubahan dan menyumbang ide perbaikan.", "Mendiskusikan dampaknya pada rutinitas tim dan membantu perubahan berjalan bertahap.", "Memetakan penyebab hambatan dan menguji apakah usulan sesuai bukti yang ada."],
+    "optionDimensions": ["D", "I", "S", "C"], "scoringKey": [1, 2, 3, 4], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-086", "code": "DISC-CLIENT-V1-086", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_I", "indicator": "CLIENT_SCENARIO_086",
+    "text": "Kamu bergabung dengan kelompok kerja baru yang anggotanya tersebar di beberapa lokasi. Kamu cenderung...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Membuka komunikasi informal dan mengenali orang-orang yang terlibat.", "Menyepakati kebiasaan koordinasi yang stabil agar semua orang merasa terhubung.", "Memahami kanal, dokumentasi, dan informasi yang dibutuhkan sebelum mulai berkoordinasi.", "Menetapkan sasaran awal dan memastikan setiap lokasi tahu langkah berikutnya."],
+    "optionDimensions": ["I", "S", "C", "D"], "scoringKey": [2, 3, 4, 1], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-087", "code": "DISC-CLIENT-V1-087", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_S", "indicator": "CLIENT_SCENARIO_087",
+    "text": "Seorang rekan tampak kewalahan setelah tanggung jawab tim bertambah. Apa yang paling mungkin kamu lakukan?", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mendengarkan kondisinya dan membantu menyusun beban kerja yang lebih seimbang.", "Memeriksa tugas, kapasitas, dan tenggat untuk mengetahui bagian yang paling mendesak.", "Menyepakati tindakan cepat agar prioritas penting tetap tertangani.", "Menghubungkannya dengan rekan yang dapat membantu dan menjaga semangat kerja."],
+    "optionDimensions": ["S", "C", "D", "I"], "scoringKey": [3, 4, 1, 2], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-088", "code": "DISC-CLIENT-V1-088", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_C", "indicator": "CLIENT_SCENARIO_088",
+    "text": "Pemeriksaan rutin menemukan kesalahan yang sama pada beberapa laporan. Kamu paling mungkin...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menelusuri pola kesalahan dan memperbaiki titik kontrol agar hasil dapat diverifikasi.", "Menentukan tindakan koreksi dan penanggung jawab supaya masalah segera berhenti.", "Mengajak penyusun laporan membahas penyebabnya dengan suasana yang terbuka.", "Mendampingi tim memperbarui kebiasaan kerja secara konsisten tanpa menyalahkan individu."],
+    "optionDimensions": ["C", "D", "I", "S"], "scoringKey": [4, 1, 2, 3], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-089", "code": "DISC-CLIENT-V1-089", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_D", "indicator": "CLIENT_SCENARIO_089",
+    "text": "Kemajuan proyek terhenti karena tim menunggu keputusan tentang dua pilihan. Kamu cenderung...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menetapkan kriteria keputusan, memilih arah yang paling berdampak, lalu bergerak.", "Mengajak tim menyampaikan pandangan agar keputusan terasa menarik untuk dijalankan.", "Memastikan semua pihak memahami perubahan dan dapat menyesuaikan pekerjaannya.", "Membandingkan konsekuensi dan asumsi dari setiap pilihan sebelum merekomendasikan satu."],
+    "optionDimensions": ["D", "I", "S", "C"], "scoringKey": [1, 2, 3, 4], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-090", "code": "DISC-CLIENT-V1-090", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_I", "indicator": "CLIENT_SCENARIO_090",
+    "text": "Kamu perlu mengajak beberapa tim mencoba cara kerja baru yang belum pernah mereka gunakan. Kamu paling mungkin...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menyampaikan gambaran yang menarik dan membuka ruang bagi ide dari tiap tim.", "Mengatur uji coba bertahap agar perubahan terasa aman dan mudah diikuti.", "Menjelaskan langkah, ukuran keberhasilan, dan batasan uji coba dengan rinci.", "Menentukan tim pelaksana dan tenggat awal agar uji coba segera menghasilkan data."],
+    "optionDimensions": ["I", "S", "C", "D"], "scoringKey": [2, 3, 4, 1], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-091", "code": "DISC-CLIENT-V1-091", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_S", "indicator": "CLIENT_SCENARIO_091",
+    "text": "Perubahan kebijakan kerja membuat beberapa rekan merasa khawatir. Apa yang paling mungkin kamu lakukan?", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mendengarkan kekhawatiran mereka dan membantu menjelaskan perubahan secara bertahap.", "Memeriksa isi kebijakan dan dampak praktisnya agar informasi yang dibagikan akurat.", "Menentukan hal yang harus segera dilakukan supaya transisi tidak tertunda.", "Membuka diskusi agar orang dapat menyampaikan pertanyaan dan menemukan dukungan."],
+    "optionDimensions": ["S", "C", "D", "I"], "scoringKey": [3, 4, 1, 2], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-092", "code": "DISC-CLIENT-V1-092", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_C", "indicator": "CLIENT_SCENARIO_092",
+    "text": "Kamu menerima tugas dengan tujuan yang jelas tetapi batas keberhasilannya belum dijelaskan. Kamu cenderung...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Meminta definisi hasil, kriteria, dan batasan agar pekerjaan dapat dinilai secara tepat.", "Menyepakati hasil utama lalu memulai bagian yang paling penting.", "Mengajak pemberi tugas berdialog untuk menyelaraskan harapan sejak awal.", "Memastikan pemahaman bersama dan mengatur tindak lanjut yang nyaman bagi semua pihak."],
+    "optionDimensions": ["C", "D", "I", "S"], "scoringKey": [4, 1, 2, 3], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-093", "code": "DISC-CLIENT-V1-093", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_D", "indicator": "CLIENT_SCENARIO_093",
+    "text": "Kamu diminta menangani keluhan pelanggan yang berpotensi mengganggu kerja sama penting. Kamu paling mungkin...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mengambil tanggung jawab atas langkah pemulihan dan menetapkan waktu tindak lanjut.", "Membangun kembali komunikasi dengan mendengarkan dan menunjukkan perhatian.", "Menjaga percakapan tetap tenang sambil memahami kebutuhan pelanggan.", "Memeriksa kronologi dan bukti agar respons sesuai fakta serta komitmen."],
+    "optionDimensions": ["D", "I", "S", "C"], "scoringKey": [1, 2, 3, 4], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-094", "code": "DISC-CLIENT-V1-094", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_I", "indicator": "CLIENT_SCENARIO_094",
+    "text": "Dalam lokakarya, klien yang hadir cenderung diam meski keputusan membutuhkan masukan mereka. Kamu biasanya...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Membuka percakapan dengan pertanyaan yang ringan dan mengundang beragam pandangan.", "Memberi waktu berpikir dan menawarkan cara berpartisipasi yang terasa nyaman.", "Mencatat kebutuhan informasi lalu mengajukan pertanyaan terarah untuk memperjelas masukan.", "Menjelaskan keputusan yang perlu dibuat dan meminta tanggapan yang relevan."],
+    "optionDimensions": ["I", "S", "C", "D"], "scoringKey": [2, 3, 4, 1], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-095", "code": "DISC-CLIENT-V1-095", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_S", "indicator": "CLIENT_SCENARIO_095",
+    "text": "Proyek melibatkan beberapa tim dengan kecepatan kerja yang berbeda. Apa yang paling mungkin kamu lakukan?", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Menyelaraskan ritme dan jadwal koordinasi agar tiap tim dapat bekerja dengan stabil.", "Membuat ketergantungan dan tenggat terlihat agar rencana dapat dipantau.", "Menentukan urutan prioritas dan menangani hambatan yang paling memperlambat hasil.", "Membangun komunikasi antartim supaya orang saling mengetahui kemajuan dan kebutuhan."],
+    "optionDimensions": ["S", "C", "D", "I"], "scoringKey": [3, 4, 1, 2], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-096", "code": "DISC-CLIENT-V1-096", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_C", "indicator": "CLIENT_SCENARIO_096",
+    "text": "Sebuah proses kualitas mengharuskan angka dari beberapa sumber digabungkan sebelum laporan diterbitkan. Kamu cenderung...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mencocokkan definisi, sumber, dan perhitungan agar hasil dapat ditelusuri.", "Menentukan siapa yang menggabungkan data dan kapan laporan harus siap.", "Mengajak pemilik data berkoordinasi agar pertukaran informasi berjalan lancar.", "Membagi pekerjaan pengecekan dengan jelas dan menjaga kerja sama tetap tertata."],
+    "optionDimensions": ["C", "D", "I", "S"], "scoringKey": [4, 1, 2, 3], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-097", "code": "DISC-CLIENT-V1-097", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_D", "indicator": "CLIENT_SCENARIO_097",
+    "text": "Sebuah proyek membutuhkan satu orang untuk mengambil keputusan akhir, sementara waktu semakin terbatas. Kamu paling mungkin...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Bersedia menetapkan keputusan dan bertanggung jawab atas langkah berikutnya.", "Meminta pandangan singkat agar orang merasa dilibatkan sebelum bergerak.", "Memastikan pihak yang terdampak memahami keputusan dan masa transisinya.", "Merangkum bukti dan konsekuensi utama supaya keputusan memiliki dasar yang jelas."],
+    "optionDimensions": ["D", "I", "S", "C"], "scoringKey": [1, 2, 3, 4], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-098", "code": "DISC-CLIENT-V1-098", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_I", "indicator": "CLIENT_SCENARIO_098",
+    "text": "Tim baru saja menyelesaikan pekerjaan besar setelah melalui masa yang cukup melelahkan. Kamu biasanya...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mengapresiasi kontribusi secara terbuka dan menghidupkan suasana kebersamaan.", "Mengecek keadaan rekan dan memberi ruang untuk beristirahat sebelum tugas berikutnya.", "Merapikan dokumentasi dan mencatat hal yang perlu diperbaiki pada pekerjaan berikut.", "Menyoroti hasil yang tercapai dan segera menyepakati tantangan berikutnya."],
+    "optionDimensions": ["I", "S", "C", "D"], "scoringKey": [2, 3, 4, 1], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-099", "code": "DISC-CLIENT-V1-099", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_S", "indicator": "CLIENT_SCENARIO_099",
+    "text": "Dua rekan mengalami ketegangan karena memahami kesepakatan kerja secara berbeda. Apa yang paling mungkin kamu lakukan?", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mendengarkan kedua pihak dan membantu mereka menyepakati cara bekerja yang berkelanjutan.", "Meninjau catatan kesepakatan dan memperjelas bagian yang ditafsirkan berbeda.", "Mengarahkan pembicaraan pada keputusan yang diperlukan agar pekerjaan dapat dilanjutkan.", "Membantu mereka berbicara secara terbuka supaya suasana kerja kembali positif."],
+    "optionDimensions": ["S", "C", "D", "I"], "scoringKey": [3, 4, 1, 2], "weight": 1, "difficulty": "MEDIUM"
+  },
+  {
+    "id": "DISC-CLIENT-V1-100", "code": "DISC-CLIENT-V1-100", "version": "DISC_CLIENT_V1", "dimension": "DISC", "subdomain": "TARGET_C", "indicator": "CLIENT_SCENARIO_100",
+    "text": "Sebuah keputusan operasional akan sulit dibatalkan jika ternyata keliru. Kamu paling mungkin...", "type": "SCENARIO", "answerType": "SINGLE_CHOICE_4",
+    "options": ["Mengidentifikasi asumsi, kemungkinan risiko, dan bukti yang masih perlu diperiksa.", "Memilih arah yang paling menjanjikan dan menyiapkan tindakan koreksi bila diperlukan.", "Mendiskusikan dampak keputusan dengan pihak yang akan menjalankannya.", "Memastikan perubahan dilakukan dengan dukungan dan waktu penyesuaian yang cukup."],
+    "optionDimensions": ["C", "D", "I", "S"], "scoringKey": [4, 1, 2, 3], "weight": 1, "difficulty": "MEDIUM"
+  }
+]

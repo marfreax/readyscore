@@ -216,6 +216,9 @@ export async function createAttempt(input: {
   id: string;
   userId?: string;
   subjectId?: string;
+  clientOrganizationId?: string;
+  clientParticipantId?: string;
+  clientInvitationId?: string;
   type: "free" | "premium" | "riasec" | "disc" | "eq" | "cognitive" | "work-attitude" | "learning-preference";
   assessmentConfigurationId: string;
   assessmentConfigurationVersion: string;
@@ -237,6 +240,9 @@ export async function createAttempt(input: {
         id: input.id,
         userId: input.userId,
         subjectId: input.subjectId,
+        clientOrganizationId: input.clientOrganizationId,
+        clientParticipantId: input.clientParticipantId,
+        clientInvitationId: input.clientInvitationId,
         assessmentType: ({
           free: "FREE",
           premium: "PREMIUM",

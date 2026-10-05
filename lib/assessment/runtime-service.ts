@@ -2,7 +2,7 @@ import { randomBytes } from "node:crypto";
 import { prisma } from "../db/prisma";
 import { type AssessmentType } from "../assessment-config";
 import { AssessmentType as PrismaAssessmentType } from "@prisma/client";
-import { resolveActiveAssessmentConfiguration } from "./runtime-configuration";
+import { resolveActiveAssessmentConfiguration, resolveClientDiscAssessmentConfiguration } from "./runtime-configuration";
 import { getQuestionBankStats } from "../question-bank-repository";
 import {
   abandonAttempt,
@@ -18,7 +18,7 @@ import {
   persistExpiredResult,
 } from "./assessment-repository";
 import { snapshotFromSelection, SelectionError } from "./question-engine";
-import { packageSnapshotMetadata, selectPackageAndQuestions, PackageSelectionError } from "../question-package-runtime";
+import { packageSnapshotMetadata, selectPackageAndQuestions, selectPackageVersionAndQuestions, PackageSelectionError } from "../question-package-runtime";
 import { calculateUnifiedAssessmentResult } from "./unified-engine";
 import { interpretAssessmentResult } from "./result/engine-v1";
 import { validateResultSemantics } from "./result/semantics-v1";
@@ -32,6 +32,125 @@ function requireSupportedAssessmentType(type: string): AssessmentType {
     return normalized;
   }
   throw new RuntimeError("ASSESSMENT_TYPE_NOT_SUPPORTED", `Assessment type ${type} is no longer an active runtime assessment.`);
+}
+
+/** Starts a guest DISC attempt pinned to the package stored on its invitation. */
+export async function startClientDiscAssessment(input: {
+  organizationId: string;
+  participantId: string;
+  invitationId: string;
+  configurationVersionId: string;
+  questionPackageVersionId: string;
+}) {
+  const invitation = await prisma.clientInvitation.findUnique({
+    where: { id: input.invitationId },
+    select: { organizationId: true, participantId: true, status: true, expiresAt: true },
+  });
+  if (
+    !invitation ||
+    invitation.organizationId !== input.organizationId ||
+    invitation.participantId !== input.participantId ||
+    ["DRAFT", "REVOKED", "EXPIRED", "COMPLETED"].includes(invitation.status) ||
+    invitation.expiresAt <= new Date()
+  ) {
+    throw new RuntimeError("INVITATION_NOT_AVAILABLE", "Undangan tidak tersedia atau sudah kedaluwarsa.");
+  }
+  const existing = await prisma.assessmentAttempt.findUnique({
+    where: { clientInvitationId: input.invitationId },
+    select: { id: true },
+  });
+  if (existing) return getAttemptView(existing.id);
+
+  let config;
+  try {
+    config = await resolveClientDiscAssessmentConfiguration(input.configurationVersionId);
+  } catch {
+    throw new RuntimeError("CLIENT_DISC_PACKAGE_UNAVAILABLE", "Paket DISC pada undangan tidak tersedia.");
+  }
+  if (
+    config.questionPackageVersionId !== input.questionPackageVersionId ||
+    !config.questionPackageVersion
+  ) {
+    throw new RuntimeError("CLIENT_DISC_PACKAGE_UNAVAILABLE", "Paket DISC pada undangan tidak tersedia.");
+  }
+
+  const attemptId = newId("disc");
+  const attemptSeed = newSeed();
+  let packageSelection: Awaited<ReturnType<typeof selectPackageVersionAndQuestions>>;
+  try {
+    packageSelection = await selectPackageVersionAndQuestions("disc", attemptSeed, input.questionPackageVersionId);
+  } catch (error) {
+    if (error instanceof PackageSelectionError) throw new RuntimeError(error.code, error.message);
+    throw error;
+  }
+  const selected = packageSelection.questions;
+  validateSelectedQuestionPresentation("disc", selected);
+  if (selected.length !== config.questionCount) {
+    throw new RuntimeError("SELECTION_COUNT_MISMATCH", "Jumlah soal pada paket invitation tidak sesuai konfigurasi.");
+  }
+
+  const stats = await getQuestionBankStats();
+  const startedAt = new Date();
+  const timeLimitSeconds = packageSelection.package.timeLimitSeconds;
+  const expiresAt = timeLimitSeconds > 0
+    ? new Date(startedAt.getTime() + timeLimitSeconds * 1000)
+    : null;
+  const snapshot = snapshotFromSelection(
+    "disc",
+    {
+      attemptId,
+      attemptSeed,
+      questionBankVersion: stats.questionBankVersion,
+      assessmentConfigurationVersion: config.version,
+      taxonomyVersion: config.taxonomyVersion,
+      scoringVersion: config.scoringVersion,
+      selectionAlgorithmVersion: packageSelection.package.selectionAlgorithmVersion,
+    },
+    selected,
+  );
+  Object.assign(snapshot, {
+    selectionAlgorithmVersion: packageSelection.package.selectionAlgorithmVersion,
+    package: packageSnapshotMetadata(packageSelection.package, attemptSeed, selected),
+    timer: expiresAt ? {
+      startedAt: startedAt.toISOString(),
+      expiresAt: expiresAt.toISOString(),
+      timeLimitSeconds,
+    } : null,
+    clientAssessment: true,
+  });
+
+  let persisted;
+  try {
+    persisted = await createAttempt({
+      id: attemptId,
+      type: "disc",
+      clientOrganizationId: input.organizationId,
+      clientParticipantId: input.participantId,
+      clientInvitationId: input.invitationId,
+      assessmentConfigurationId: config.configurationId,
+      assessmentConfigurationVersion: config.version,
+      questionBankVersion: stats.questionBankVersion,
+      taxonomyVersion: config.taxonomyVersion,
+      scoringVersion: config.scoringVersion,
+      selectionAlgorithmVersion: packageSelection.package.selectionAlgorithmVersion,
+      questionPackageVersionId: packageSelection.package.packageVersionId,
+      attemptSeed,
+      selectionSnapshot: snapshot,
+      selectedQuestions: selected,
+      startedAt,
+      expiresAt,
+    });
+  } catch (error) {
+    const raced = await prisma.assessmentAttempt.findUnique({ where: { clientInvitationId: input.invitationId }, select: { id: true } });
+    if (!raced) throw error;
+    return getAttemptView(raced.id);
+  }
+  if (!persisted) throw new RuntimeError("ATTEMPT_CREATE_FAILED", "Assessment attempt gagal dibuat.");
+  await prisma.clientInvitation.updateMany({
+    where: { id: input.invitationId, status: { in: ["SENT", "OPENED", "DELIVERY_FAILED", "IN_PROGRESS"] } },
+    data: { status: "IN_PROGRESS" },
+  });
+  return buildRuntimeView(persisted);
 }
 import {
   getReassessmentEligibility,

@@ -16,7 +16,9 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: true, user }, { status: 201 });
   } catch (error) {
     const code = error instanceof Error ? error.message : "REGISTER_FAILED";
-    const status = code === "EMAIL_ALREADY_EXISTS" ? 409 : 400;
-    return NextResponse.json({ ok: false, error: { code } }, { status });
+    const databaseUnavailable = code.includes("PrismaClientInitializationError") || code.includes("Can't reach database server");
+    const safeCode = databaseUnavailable ? "DATABASE_UNAVAILABLE" : code;
+    const status = databaseUnavailable ? 503 : code === "EMAIL_ALREADY_EXISTS" ? 409 : 400;
+    return NextResponse.json({ ok: false, error: { code: safeCode } }, { status });
   }
 }

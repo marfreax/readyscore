@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Script from "next/script";
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 
 export default function RegisterPage() {
   const [name, setName] = useState("");
@@ -10,6 +10,11 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [clientIntent, setClientIntent] = useState(false);
+
+  useEffect(() => {
+    setClientIntent(new URLSearchParams(window.location.search).get("next") === "/client");
+  }, []);
 
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -24,10 +29,11 @@ export default function RegisterPage() {
       const data = await response.json();
       if (!response.ok) throw new Error(data?.error?.code ?? "REGISTER_FAILED");
       const next = new URLSearchParams(window.location.search).get("next");
-      window.location.assign(next?.startsWith("/") ? next : "/app");
+      const safeNext = next?.startsWith("/") && !next.startsWith("//") && !next.includes("\\") ? next : "/app";
+      window.location.assign(safeNext);
     } catch (err) {
       const code = err instanceof Error ? err.message : "REGISTER_FAILED";
-      setError(code === "EMAIL_ALREADY_EXISTS" ? "Email tersebut sudah terdaftar." : code === "PASSWORD_TOO_SHORT" ? "Password minimal 8 karakter." : "Registrasi tidak dapat diproses.");
+      setError(code === "EMAIL_ALREADY_EXISTS" ? "Email tersebut sudah terdaftar." : code === "PASSWORD_TOO_SHORT" ? "Password minimal 8 karakter." : code === "DATABASE_UNAVAILABLE" ? "Database lokal belum tersedia. Pastikan Docker dan database ReadyScore sudah berjalan, lalu coba lagi." : "Registrasi tidak dapat diproses.");
       setBusy(false);
     }
   }
@@ -58,6 +64,7 @@ export default function RegisterPage() {
           <p className="rs-eyebrow">ReadyScore</p>
           <h1 className="rs-title mt-3 text-3xl">Buat akun</h1>
           <p className="rs-subtitle mt-2">Satu akun untuk mengelola assessment dan hasil ReadyScore Anda.</p>
+          {clientIntent && <p className="mt-4 rounded-xl border border-indigo-100 bg-indigo-50 p-4 text-sm leading-6 text-indigo-950">Setelah mendaftar, lengkapi nama organisasi untuk membuat ruang kerja Client Portal dan mengundang peserta DISC.</p>}
           <form onSubmit={submit} className="rs-form mt-7">
             <label className="block text-sm font-bold">Nama<input required minLength={2} autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} className="rs-input" /></label>
             <label className="block text-sm font-bold">Email<input required type="email" autoComplete="email" value={email} onChange={(e) => setEmail(e.target.value)} className="rs-input" /></label>
@@ -65,7 +72,13 @@ export default function RegisterPage() {
             {error && <p role="alert" className="rs-form-error">{error}</p>}
             <button disabled={busy} className="rs-button rs-button-primary w-full">{busy ? "Membuat akun..." : "Daftar"}</button>
           </form>
-          <p className="mt-6 text-center text-sm text-slate-500">Sudah punya akun? <Link href="/login" className="font-black text-indigo-600">Masuk</Link></p>
+          <p className="mt-6 text-center text-sm text-slate-500">Sudah punya akun? <Link href="/login" onClick={(event) => {
+            const next = new URLSearchParams(window.location.search).get("next");
+            if (next?.startsWith("/") && !next.startsWith("//") && !next.includes("\\")) {
+              event.preventDefault();
+              window.location.assign(`/login?next=${encodeURIComponent(next)}`);
+            }
+          }} className="font-black text-indigo-600">Masuk</Link></p>
         </section>
       </div>
     </main>

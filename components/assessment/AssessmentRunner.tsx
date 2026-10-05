@@ -9,6 +9,7 @@ type AssessmentType="free"|"premium"|"riasec"|"disc"|"eq"|"cognitive"|"work-atti
 type Question={id:string;code:string;text:string;domain:string;subdomain:string|null;indicator:string|null;sequence:number;answered?:boolean;answer?:number|null;answerType?:string;options?:string[]};
 type Progress={answered:number;total:number;remaining:number;percentage:number};
 type AttemptView={attempt:{id:string;assessmentType:AssessmentType;status:string;startedAt:string;expiresAt?:string};timer?:{startedAt:string;expiresAt:string;timeLimitSeconds:number;remainingSeconds:number;serverNow:string}|null;questions:Question[];progress:Progress;result?:unknown};
+type ClientRuntimePayload={attemptId?:string;attempt?:AttemptView["attempt"];timer?:AttemptView["timer"];questions:Question[];progress:Progress};
 
 const LIKERT_OPTIONS=[[1,"Sangat Tidak Sesuai"],[2,"Tidak Sesuai"],[3,"Netral / Kadang Sesuai"],[4,"Sesuai"],[5,"Sangat Sesuai"]] as const;
 const RIASEC_LABELS: Record<string,string>={R:"Realistic",I:"Investigative",A:"Artistic",S:"Social",E:"Enterprising",C:"Conventional"};
@@ -18,9 +19,9 @@ const COGNITIVE_LABELS: Record<string,string>={VERBAL_REASONING:"Verbal Reasonin
 const LEARNING_PREFERENCE_LABELS: Record<string,string>={VISUAL:"Visual",AUDITORY:"Auditory",KINESTHETIC:"Kinesthetic"};
 const STORAGE_PREFIX="readyscore:active-attempt:";
 
-export default function AssessmentRunner({type,mode="standard"}:{type:AssessmentType;mode?:"standard"|"reassessment"}){
+export default function AssessmentRunner({type,mode="standard",clientToken,initialRuntime}:{type:AssessmentType;mode?:"standard"|"reassessment";clientToken?:string;initialRuntime?:ClientRuntimePayload}){
   const router=useRouter();
-  const [attemptId,setAttemptId]=useState("");
+  const [attemptId,setAttemptId]=useState(initialRuntime?.attemptId??initialRuntime?.attempt?.id??"");
   const [questions,setQuestions]=useState<Question[]>([]);
   const [current,setCurrent]=useState(0);
   const [answers,setAnswers]=useState<Record<string,number>>({});
@@ -48,6 +49,24 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
   const answeredPercent=progress.total?Math.round(answeredCount/progress.total*100):0;
 
   useEffect(()=>{
+    if(clientToken){
+      let cancelled=false;
+      const hydrate=(data:ClientRuntimePayload)=>{
+        const id=data.attemptId??data.attempt?.id;
+        if(!id)return;
+        const nextAnswers:Record<string,number>={};
+        for(const q of data.questions)if(typeof q.answer==="number")nextAnswers[q.id]=q.answer;
+        setAttemptId(id);setQuestions(data.questions);setProgress(data.progress);setAnswers(nextAnswers);
+        setTimer(data.timer?{expiresAt:data.timer.expiresAt,remainingSeconds:data.timer.remainingSeconds??Math.max(0,Math.ceil((new Date(data.timer.expiresAt).getTime()-Date.now())/1000)),serverNow:data.timer.serverNow??new Date().toISOString()}:null);
+      };
+      if(initialRuntime){hydrate(initialRuntime);setResuming(false);return()=>{cancelled=true;};}
+      setResuming(true);
+      fetch(`/api/invite/${encodeURIComponent(clientToken)}/attempt`,{cache:"no-store"})
+        .then(async response=>{const data=await response.json();if(!response.ok||!data.ok||!data.questions||!data.progress)throw new Error("NO_ACTIVE_ATTEMPT");if(!cancelled)hydrate(data as ClientRuntimePayload);})
+        .catch(()=>{if(!cancelled)setMessage("Undangan ini belum memiliki assessment yang dapat dilanjutkan.");})
+        .finally(()=>{if(!cancelled)setResuming(false);});
+      return()=>{cancelled=true;};
+    }
     const saved=window.localStorage.getItem(storageKey);
     if(!saved)return;
     setResuming(true);
@@ -68,7 +87,7 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
       })
       .catch(()=>window.localStorage.removeItem(storageKey))
       .finally(()=>setResuming(false));
-  },[storageKey,type,router]);
+  },[storageKey,type,router,clientToken,initialRuntime]);
 
   useEffect(()=>{
     if(!attemptId || !timer?.expiresAt)return;
@@ -82,18 +101,18 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
     if(!attemptId)return;
     const interval=window.setInterval(async()=>{
       try{
-        const response=await fetch(`/api/assessment/${attemptId}`,{cache:"no-store"});
+        const response=await fetch(clientToken?`/api/invite/${encodeURIComponent(clientToken)}/attempt`:`/api/assessment/${attemptId}`,{cache:"no-store"});
         const data=await response.json();
         if(!response.ok||!data.ok)return;
         if(data.timer)setTimer({expiresAt:data.timer.expiresAt,remainingSeconds:data.timer.remainingSeconds,serverNow:data.timer.serverNow});
         if(data.attempt?.status==="EXPIRED" || data.result){
-          window.localStorage.removeItem(storageKey);
-          router.push(`/result/${attemptId}`);
+          if(!clientToken)window.localStorage.removeItem(storageKey);
+          router.push(clientToken?`/invite/${encodeURIComponent(clientToken)}?completed=1`:`/result/${attemptId}`);
         }
       }catch{}
     },15000);
     return()=>window.clearInterval(interval);
-  },[attemptId,storageKey,router]);
+  },[attemptId,storageKey,router,clientToken]);
 
   useEffect(() => {
     if (!attemptId || !questions.length) return;
@@ -137,7 +156,7 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
     let lastError:Error|null=null;
     for(let attempt=0;attempt<3;attempt+=1){
       try{
-        const response=await fetch(`/api/assessment/${attemptId}/answer`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({questionId:question.id,value})});
+        const response=await fetch(clientToken?`/api/invite/${encodeURIComponent(clientToken)}/answer`:`/api/assessment/${attemptId}/answer`,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({questionId:question.id,value})});
         const data=await response.json();
         if(!response.ok)throw new Error(data?.error?.message??"Jawaban gagal disimpan.");
         setProgress(data.progress);
@@ -156,24 +175,25 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
   async function abandon(){
     if(!attemptId)return;
     setBusy(true);
-    try{await fetch(`/api/assessment/${attemptId}/abandon`,{method:"POST"});}finally{window.localStorage.removeItem(storageKey);setAttemptId("");setQuestions([]);setAnswers({});setCurrent(0);setShowReview(false);setConfirmSubmit(false);setBusy(false);}
+    try{if(!clientToken)await fetch(`/api/assessment/${attemptId}/abandon`,{method:"POST"});}finally{if(!clientToken)window.localStorage.removeItem(storageKey);setAttemptId("");setQuestions([]);setAnswers({});setCurrent(0);setShowReview(false);setConfirmSubmit(false);setBusy(false);}
   }
 
   async function submit(){
     if(!attemptId)return;
     setBusy(true);setMessage("");
     try{
-      const response=await fetch(`/api/assessment/${attemptId}/submit`,{method:"POST"});
+      const response=await fetch(clientToken?`/api/invite/${encodeURIComponent(clientToken)}/submit`:`/api/assessment/${attemptId}/submit`,{method:"POST"});
       const data=await response.json();
       if(!response.ok)throw new Error(data?.error?.message??"Assessment gagal disubmit.");
-      window.localStorage.removeItem(storageKey);
-      router.push(`/result/${attemptId}`);
+      if(!clientToken)window.localStorage.removeItem(storageKey);
+      router.push(clientToken?`/invite/${encodeURIComponent(clientToken)}?completed=1`:`/result/${attemptId}`);
     }catch(error){setMessage(error instanceof Error?error.message:"Assessment gagal disubmit.");setConfirmSubmit(false);}
     finally{setBusy(false);}
   }
 
   if(resuming)return <LoadingScreen label="Memulihkan assessment Anda..." />;
 
+  if(clientToken&&!attemptId)return <LoadingScreen label="Menyiapkan assessment client..." />;
   if(!attemptId)return <Intro type={type} busy={busy} message={message} onStart={start} />;
   if(!question)return null;
 
@@ -183,7 +203,7 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
     <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
       <div className="mx-auto max-w-5xl px-4 py-4 sm:px-6">
         <div className="flex items-center justify-between gap-4">
-          <div className="min-w-0"><div className="flex items-center gap-2 text-[11px] font-bold text-slate-400"><Link href="/app" className="hover:text-slate-700">Workspace</Link><span>›</span><span className="text-indigo-600">Assessment</span></div><p className="mt-1 text-xs font-bold uppercase tracking-wide text-indigo-600">ReadyScore {isRiasec?"RIASEC":isDisc?"DISC":isEq?"EQ":isCognitive?"Cognitive":isWorkAttitude?"Work Attitude":isLearningPreference?"Learning Preference":isPremium?"Premium":"Free"}</p><p className="mt-1 truncate text-sm font-semibold text-slate-900">Actual Assessment</p></div>
+          <div className="min-w-0"><div className="flex items-center gap-2 text-[11px] font-bold text-slate-400">{clientToken?<><Link href={`/invite/${encodeURIComponent(clientToken)}`} className="hover:text-slate-700">Undangan</Link><span>›</span><span className="text-indigo-600">Assessment</span></>:<><Link href="/app" className="hover:text-slate-700">Workspace</Link><span>›</span><span className="text-indigo-600">Assessment</span></>}</div><p className="mt-1 text-xs font-bold uppercase tracking-wide text-indigo-600">{clientToken?"Assessment provided by ReadyScore":`ReadyScore ${isRiasec?"RIASEC":isDisc?"DISC":isEq?"EQ":isCognitive?"Cognitive":isWorkAttitude?"Work Attitude":isLearningPreference?"Learning Preference":isPremium?"Premium":"Free"}`}</p><p className="mt-1 truncate text-sm font-semibold text-slate-900">Actual Assessment</p></div>
           <div className="flex items-center gap-3 text-xs font-semibold text-slate-500"><span className={timer&&timer.remainingSeconds<=60?"font-black text-rose-600":""}><Clock3 className="mr-1 inline h-4 w-4" /> {timer?formatRemaining(timer.remainingSeconds):"—"}</span><span>{current+1} / {questions.length}</span></div>
         </div>
         <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100" role="progressbar" aria-label="Progress assessment" aria-valuemin={0} aria-valuemax={100} aria-valuenow={progress.percentage}><div className="h-full rounded-full bg-indigo-600 transition-all" style={{width:`${progress.percentage}%`}}/></div>
@@ -233,7 +253,7 @@ export default function AssessmentRunner({type,mode="standard"}:{type:Assessment
           <div className="mt-5 space-y-2 text-xs text-slate-500"><div className="flex justify-between"><span>Terjawab</span><strong className="text-slate-800">{answeredCount}</strong></div><div className="flex justify-between"><span>Belum dijawab</span><strong className="text-slate-800">{questions.length-answeredCount}</strong></div></div>
           {firstUnanswered>=0&&<button onClick={()=>setCurrent(firstUnanswered)} className="rs-touch-target mt-5 w-full rounded-xl border border-indigo-200 bg-indigo-50 px-3 py-2.5 text-xs font-bold text-indigo-700">Ke soal belum dijawab</button>}
           <button onClick={()=>setConfirmSubmit(true)} disabled={busy||answeredCount!==questions.length} className="rs-touch-target mt-3 w-full rounded-xl bg-slate-950 px-3 py-2.5 text-xs font-bold text-white disabled:opacity-35">Review & Selesai</button>
-          <button onClick={abandon} disabled={busy} className="rs-touch-target mt-3 w-full px-3 py-2 text-xs font-semibold text-slate-400 hover:text-slate-600">Keluar dari assessment</button>
+          {!clientToken&&<button onClick={abandon} disabled={busy} className="rs-touch-target mt-3 w-full px-3 py-2 text-xs font-semibold text-slate-400 hover:text-slate-600">Keluar dari assessment</button>}
         </aside>
       </div>
     </div>

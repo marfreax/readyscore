@@ -72,8 +72,8 @@ export function scoreDisc(
   questions: DiscQuestion[],
   answers: DiscAnswer[],
 ): DiscMeasurement {
-  if (questions.length !== 24 && questions.length !== 80) {
-    throw new Error(`DISC V2 supports 24-item legacy and 80-item production forms; received ${questions.length}.`);
+  if (questions.length !== 24 && questions.length !== 80 && questions.length !== 100) {
+    throw new Error(`DISC V2 supports 24-item legacy, 80-item public, and 100-item client forms; received ${questions.length}.`);
   }
 
   for (const question of questions) validateQuestion(question);

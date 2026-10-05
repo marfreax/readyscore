@@ -19,6 +19,7 @@ import {
   X,
   Menu,
   MessageCircle,
+  Building2,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -52,6 +53,7 @@ const groups = [
     label: "USERS & ACCESS",
     items: [
       { key: "users", href: "/admin/users", label: "Users & Access", icon: Users },
+      { key: "client-organizations", href: "/admin/client-organizations", label: "Client Organizations", icon: Building2 },
       { key: "data-deletion", href: "/admin/data-deletion", label: "Data Deletion", icon: Trash2 },
     ],
   },

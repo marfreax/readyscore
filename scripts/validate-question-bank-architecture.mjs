@@ -27,6 +27,7 @@ try {
   const published = await prisma.questionVersion.findMany({
     where: {
       status: "PUBLISHED",
+      taxonomyVersion: riasec.taxonomies[0].version,
       question: { code: { startsWith: "RIASEC-" } },
     },
     select: {
@@ -57,6 +58,7 @@ try {
   const publishedNonRiasecOwnership = await prisma.questionVersion.count({
     where: {
       status: "PUBLISHED",
+      taxonomyVersion: riasec.taxonomies[0].version,
       question: { code: { startsWith: "RIASEC-" } },
       NOT: { testTypeId: riasec.id },
     },
