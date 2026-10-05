@@ -3,7 +3,7 @@
 **Document status:** V20 implementation and deployment record
 **Prepared:** 2026-10-05
 **Target:** Fast, demonstrable client DISC workflow built on the existing ReadyScore application
-**Current production reference:** User-reported V19.7.2; local checkout must be audited against that release before implementation
+**Current production reference:** V20 client DISC portal deployed 2026-10-06; public DISC remains on its existing 80-question configuration
 **Version assignment:** V20 Client DISC Portal, per product owner direction
 
 ---
@@ -281,12 +281,12 @@ Phases are ordered to deliver a small end-to-end pilot quickly while keeping ten
 | Phase | Local status | Remaining boundary |
 |---|---|---|
 | 0 — Baseline/product decisions | Separate client requirement confirmed: 100 questions / 30 minutes; public remains 80 / 20 minutes | Validate pilot content and migration/recovery rehearsal before any production application |
-| 1 — Tenant/access | Organization schema, membership, admin provisioning, client self-onboarding, and tenant-scoped portal implemented locally; migration applied to local development database only | New client must complete organization profile on first `/client` visit; cross-tenant acceptance walkthrough pending |
+| 1 — Tenant/access | Organization schema, membership, admin provisioning, client self-onboarding, and tenant-scoped portal deployed to production | New client completes organization profile on first `/client` visit; cross-tenant acceptance walkthrough pending |
 | 2 — DISC package | Separate client-only 100-question/30-minute package and scorer support implemented locally; public 80/20 contract remains pinned | Validate migration data, composition, scoring, invitation snapshot, and recovery path; supplemental items remain unnormed pilot content |
-| 3 — Invitations/lifecycle | Create, resend, revoke, participant capture, category lists, and lifecycle audit implemented locally | Local walkthrough and privacy/accessibility review pending |
-| 4 — Assessment/result delivery | Assessment submission, PDF email, persistent delivery state, and admin retry for failed email implemented locally | Email-provider and PDF rendering walkthrough pending |
-| 5 — Dashboard/report | Status overview, category counts, participant directory, individual result view, and searchable/filterable completed-report list implemented locally | Client acceptance and report presentation review pending |
-| 6 — Release readiness | Full restore rehearsal from the latest production backup passed; all pending migrations through V20 applied on the isolated clone | Refresh and verify production backups; execute the authorized deployment and certify database, build, runtime, and smoke checks |
+| 3 — Invitations/lifecycle | Create, resend, revoke, participant capture, category lists, and lifecycle audit deployed to production | Authenticated client walkthrough and privacy/accessibility review pending |
+| 4 — Assessment/result delivery | Assessment submission, PDF email, persistent delivery state, and admin retry for failed email deployed to production | No test invitation/result email was sent during deployment; perform email/PDF rendering walkthrough with the client |
+| 5 — Dashboard/report | Status overview, category counts, participant directory, individual result view, and searchable/filterable completed-report list deployed to production | Client acceptance and report presentation review pending |
+| 6 — Release readiness | Full restore rehearsal passed; backup verified; all migrations through V20 applied; production build, PM2, database, and HTTPS smoke checks passed | Deployment complete; authenticated client end-to-end acceptance remains pending |
 
 The full production-backup restore rehearsal was performed in a separate disposable database. Production itself remained unchanged during rehearsal. The env-configured development database is separate and retains its own local records.
 
@@ -294,7 +294,7 @@ The full production-backup restore rehearsal was performed in a separate disposa
 
 Production has an unfinished failure for `20260926100000_v18_3_runtime_data_reconciliation`: it attempted to insert `AssessmentConfigurationVersion` rows while `updatedAt` was NOT NULL and had no database default. Read-only production checks found no V18.3 FREE runtime package/configuration rows, but that alone is not proof that the whole failed migration had no effects. The normal `db:migrate:deploy` wrapper correctly stops when it sees an unresolved migration and must stay fail-closed.
 
-The complete production backup was restored into an isolated PostgreSQL database and the exact production migration history was replayed through V20. The clone began with 42 successful migrations and one failed V18.3 migration. Before recovery, no V18.3 partial runtime rows were present. On the clone only, a temporary `CURRENT_TIMESTAMP` default allowed the failed migration to be marked rolled back and replayed; the default was removed after all 59 migrations succeeded. Final checks found 59 successful migrations, one recorded rollback, no unresolved migrations, 11 historical attempts and 11 results retained, zero client organizations seeded, public DISC active at 80 questions, and client DISC published at 100 questions / 1,800 seconds. No production data was changed during this rehearsal. The production mutation plan is to repeat this evidence-based recovery only after a fresh verified production backup; the migration deploy wrapper remains fail-closed.
+The complete production backup was restored into an isolated PostgreSQL database and the exact production migration history was replayed through V20. The clone began with 42 successful migrations and one failed V18.3 migration. Before recovery, no V18.3 partial runtime rows were present. On the clone only, a temporary `CURRENT_TIMESTAMP` default allowed the failed migration to be marked rolled back and replayed; the default was removed after all 59 migrations succeeded. Final checks found 59 successful migrations, one recorded rollback, no unresolved migrations, 11 historical attempts and 11 results retained, zero client organizations seeded, public DISC active at 80 questions, and client DISC published at 100 questions / 1,800 seconds. The same recovery plan then ran in production after a fresh verified backup; the temporary default was removed when migration deployment succeeded. The migration deploy wrapper remains fail-closed.
 
 ### V20 production deployment record — 2026-10-06 (Asia/Jakarta)
 
