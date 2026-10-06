@@ -5,6 +5,7 @@ import { sendClientInvitationEmail, sendClientResultEmail } from "./email";
 import { buildAssessmentReportV19_3 } from "../reports/v19-3-engine";
 import { renderAssessmentReportPdfV19_3 } from "../reports/pdf-v19-3";
 import type { ClientOrganizationRole, ClientOrganizationSummary } from "./types";
+import { releaseInvitationCredit, reserveInvitationCredit } from "./credits";
 
 function activeWindow(now = new Date()) {
   return {
@@ -210,6 +211,7 @@ export async function createClientInvitation(input: {
         expiresAt,
       },
     });
+    await reserveInvitationCredit(tx, input.organizationId, created.id);
     await tx.adminContentAuditEvent.create({ data: { entityType: "CLIENT_INVITATION", entityId: created.id, action: "CLIENT_DISC_INVITATION_CREATED", toStatus: "DRAFT", actorUserId: input.actorUserId, metadata: { organizationId: input.organizationId, category: input.category, emailDomain: email.split("@")[1] } } });
     return created;
   });
@@ -256,6 +258,7 @@ export async function resendClientInvitation(input: { organizationId: string; in
       data: { tokenHash: invitationTokenHash(token), status: "DRAFT", expiresAt, revokedAt: null },
     });
     if (updated.count !== 1) throw new Error("CLIENT_INVITATION_STATE_CHANGED");
+    await reserveInvitationCredit(tx, input.organizationId, current.id);
     await tx.adminContentAuditEvent.create({ data: { entityType: "CLIENT_INVITATION", entityId: current.id, action: "CLIENT_DISC_INVITATION_RESEND_REQUESTED", fromStatus: current.status, toStatus: "DRAFT", actorUserId: input.userId, metadata: { organizationId: input.organizationId } } });
     return tx.clientInvitation.update({ where: { id: current.id }, data: { invitationDeliveryAttempt: { increment: 1 } }, select: { invitationDeliveryAttempt: true } });
   });
@@ -283,6 +286,7 @@ export async function revokeClientInvitation(input: { organizationId: string; in
     if (updated.count !== 1) throw new Error("CLIENT_INVITATION_STATE_CHANGED");
     await tx.adminContentAuditEvent.create({ data: { entityType: "CLIENT_INVITATION", entityId: invitation.id, action: "CLIENT_DISC_INVITATION_REVOKED", fromStatus: invitation.status, toStatus: "REVOKED", actorUserId: input.userId, metadata: { organizationId: input.organizationId } } });
   });
+  await releaseInvitationCredit(invitation.id, "INVITATION_REVOKED");
   return { id: invitation.id, status: "REVOKED" as const };
 }
 
@@ -514,6 +518,7 @@ export async function getClientInvitationByToken(token: string) {
   if (["DRAFT", "REVOKED", "EXPIRED"].includes(row.status)) return null;
   if (row.expiresAt <= new Date() && row.status !== "COMPLETED") {
     await prisma.clientInvitation.update({ where: { id: row.id }, data: { status: "EXPIRED" } });
+    await releaseInvitationCredit(row.id, "INVITATION_EXPIRED");
     return null;
   }
   return row;
@@ -537,6 +542,7 @@ export async function captureClientParticipant(input: {
   if (invitation.status === "DRAFT") throw new Error("INVITATION_NOT_AVAILABLE");
   if (invitation.expiresAt <= new Date()) {
     await prisma.clientInvitation.update({ where: { id: invitation.id }, data: { status: "EXPIRED" } });
+    await releaseInvitationCredit(invitation.id, "INVITATION_EXPIRED");
     throw new Error("INVITATION_EXPIRED");
   }
   if (!input.noticeAccepted) throw new Error("NOTICE_REQUIRED");

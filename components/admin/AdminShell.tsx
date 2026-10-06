@@ -20,6 +20,7 @@ import {
   Menu,
   MessageCircle,
   Building2,
+  Handshake,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -47,13 +48,16 @@ const groups = [
   },
   {
     label: "ACQUISITION",
-    items: [{ key: "leads", href: "/admin/leads", label: "Business Leads", icon: UserRoundPlus }],
+    items: [
+      { key: "leads", href: "/admin/leads", label: "Business Leads", icon: UserRoundPlus },
+      { key: "affiliates", href: "/admin/affiliates", label: "Affiliates", icon: Handshake },
+    ],
   },
   {
     label: "USERS & ACCESS",
     items: [
       { key: "users", href: "/admin/users", label: "Users & Access", icon: Users },
-      { key: "client-organizations", href: "/admin/client-organizations", label: "Client Organizations", icon: Building2 },
+      { key: "client-organizations", href: "/admin/client-organizations", label: "Corporate Organizations", icon: Building2 },
       { key: "data-deletion", href: "/admin/data-deletion", label: "Data Deletion", icon: Trash2 },
     ],
   },

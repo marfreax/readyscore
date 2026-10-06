@@ -76,7 +76,12 @@ function mapStatus(value: string, fraudStatus?: string): PaymentStatusResult["st
   if (status === "pending" || status === "authorize") return "PENDING";
   if (status === "expire") return "EXPIRED";
   if (status === "cancel") return "CANCELLED";
-  if (["deny", "failure", "refund", "partial_refund", "chargeback", "partial_chargeback"].includes(status)) return "FAILED";
+  if (["refund", "chargeback"].includes(status)) return "REFUNDED";
+  // A partial refund does not invalidate the original payment or justify a
+  // full commission/credit reversal. Keep the order paid; partial adjustments
+  // are handled manually until the ledger supports proportional reversals.
+  if (["partial_refund", "partial_chargeback"].includes(status)) return "PAID";
+  if (["deny", "failure"].includes(status)) return "FAILED";
   return "PENDING";
 }
 

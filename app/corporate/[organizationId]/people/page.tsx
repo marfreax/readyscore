@@ -6,10 +6,10 @@ import ClientInvitations from "../ClientInvitations";
 
 export default async function ClientPeoplePage({ params }: { params: Promise<{ organizationId: string }> }) {
   const session = await getCurrentSession();
-  if (!session) redirect("/login?next=%2Fclient");
+  if (!session) redirect("/login?next=%2Fcorporate");
   const { organizationId } = await params;
   const workspace = await getClientOrganizationWorkspace(session.user.id, organizationId);
-  if (!workspace) redirect("/client");
+  if (!workspace) redirect("/corporate");
   return (
     <ClientWorkspaceShell organizationId={organizationId} organizationName={workspace.organization.name} websiteUrl={workspace.organization.websiteUrl} active="people" role={workspace.membership.role}>
       <div className="space-y-5">

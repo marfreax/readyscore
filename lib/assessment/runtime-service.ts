@@ -120,7 +120,10 @@ export async function startClientDiscAssessment(input: {
   });
 
   let persisted;
+  let consumedCorporateCredit = false;
   try {
+    const credit = await consumeInvitationCredit(input.invitationId);
+    consumedCorporateCredit = credit.consumed;
     persisted = await createAttempt({
       id: attemptId,
       type: "disc",
@@ -142,10 +145,16 @@ export async function startClientDiscAssessment(input: {
     });
   } catch (error) {
     const raced = await prisma.assessmentAttempt.findUnique({ where: { clientInvitationId: input.invitationId }, select: { id: true } });
-    if (!raced) throw error;
+    if (!raced) {
+      if (consumedCorporateCredit) await releaseInvitationCredit(input.invitationId, "ATTEMPT_START_FAILED");
+      throw error;
+    }
     return getAttemptView(raced.id);
   }
-  if (!persisted) throw new RuntimeError("ATTEMPT_CREATE_FAILED", "Assessment attempt gagal dibuat.");
+  if (!persisted) {
+    if (consumedCorporateCredit) await releaseInvitationCredit(input.invitationId, "ATTEMPT_START_FAILED");
+    throw new RuntimeError("ATTEMPT_CREATE_FAILED", "Assessment attempt gagal dibuat.");
+  }
   await prisma.clientInvitation.updateMany({
     where: { id: input.invitationId, status: { in: ["SENT", "OPENED", "DELIVERY_FAILED", "IN_PROGRESS"] } },
     data: { status: "IN_PROGRESS" },
@@ -157,6 +166,7 @@ import {
   isReassessmentTestType,
 } from "./reassessment";
 import { findConsumableTestEntitlement } from "../commercial/v14-3";
+import { consumeInvitationCredit, releaseInvitationCredit } from "../client-organization/credits";
 
 export class RuntimeError extends Error {
   constructor(public readonly code: string, message: string) {

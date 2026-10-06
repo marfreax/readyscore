@@ -11,14 +11,14 @@ export default async function ClientDiscResultPage({
   params: Promise<{ organizationId: string; invitationId: string }>;
 }) {
   const session = await getCurrentSession();
-  if (!session) redirect("/login?next=%2Fclient");
+  if (!session) redirect("/login?next=%2Fcorporate");
   const { organizationId, invitationId } = await params;
   const workspace = await getClientOrganizationWorkspace(session.user.id, organizationId);
-  if (!workspace) redirect("/client");
+  if (!workspace) redirect("/corporate");
   const result = await getClientAssessmentResult(organizationId, invitationId, session.user.id);
 
   if (!result) {
-    return <ClientWorkspaceShell organizationId={organizationId} organizationName={workspace.organization.name} websiteUrl={workspace.organization.websiteUrl} active="reports" role={workspace.membership.role}><section className="rs-card max-w-2xl p-7"><h1 className="text-2xl font-black">Hasil belum tersedia</h1><p className="mt-2 text-sm text-slate-600">Hasil tidak ditemukan atau assessment belum selesai.</p><Link href={`/client/${encodeURIComponent(organizationId)}/reports`} className="rs-button rs-button-primary mt-5">Kembali ke laporan</Link></section></ClientWorkspaceShell>;
+    return <ClientWorkspaceShell organizationId={organizationId} organizationName={workspace.organization.name} websiteUrl={workspace.organization.websiteUrl} active="reports" role={workspace.membership.role}><section className="rs-card max-w-2xl p-7"><h1 className="text-2xl font-black">Hasil belum tersedia</h1><p className="mt-2 text-sm text-slate-600">Hasil tidak ditemukan atau assessment belum selesai.</p><Link href={`/corporate/${encodeURIComponent(organizationId)}/reports`} className="rs-button rs-button-primary mt-5">Kembali ke laporan</Link></section></ClientWorkspaceShell>;
   }
 
   const rawResult = result.assessmentAttempt!.result!.result as unknown as Parameters<typeof interpretDisc>[0];
@@ -28,7 +28,7 @@ export default async function ClientDiscResultPage({
   return (
     <ClientWorkspaceShell organizationId={organizationId} organizationName={result.organization.name} websiteUrl={result.organization.websiteUrl} active="reports" role={workspace.membership.role}>
       <div className="mx-auto max-w-5xl space-y-5">
-        <Link href={`/client/${encodeURIComponent(organizationId)}/reports`} className="text-sm font-bold text-slate-600">← Kembali ke laporan</Link>
+        <Link href={`/corporate/${encodeURIComponent(organizationId)}/reports`} className="text-sm font-bold text-slate-600">← Kembali ke laporan</Link>
         <header className="rs-card mt-5 p-7 sm:p-9">
           <p className="rs-eyebrow">{result.organization.name} · Laporan DISC</p>
           <h1 className="mt-2 text-3xl font-black">{result.participant!.fullName}</h1>
@@ -58,7 +58,7 @@ export default async function ClientDiscResultPage({
           <section className="rs-card p-6"><h2 className="text-lg font-black">Potensi kekuatan</h2><ul className="mt-3 space-y-2 text-sm text-slate-700">{interpretation.potentialStrengths.map((item) => <li key={item}>• {item}</li>)}</ul></section>
           <section className="rs-card p-6"><h2 className="text-lg font-black">Area untuk diperhatikan</h2><ul className="mt-3 space-y-2 text-sm text-slate-700">{interpretation.potentialChallenges.map((item) => <li key={item}>• {item}</li>)}</ul></section>
         </div>
-        <p className="mt-6 text-xs leading-5 text-slate-500">Client Admin dan Viewer yang memiliki akses organisasi dapat melihat laporan ini. Hasil mengikuti paket dan versi interpretasi yang digunakan saat assessment.</p>
+        <p className="mt-6 text-xs leading-5 text-slate-500">Administrator dan Viewer Corporate dengan akses ke organisasi dapat melihat laporan ini. Hasil mengikuti paket dan versi interpretasi yang digunakan saat assessment.</p>
       </div>
     </ClientWorkspaceShell>
   );

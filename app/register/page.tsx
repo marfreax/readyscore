@@ -13,7 +13,7 @@ export default function RegisterPage() {
   const [clientIntent, setClientIntent] = useState(false);
 
   useEffect(() => {
-    setClientIntent(new URLSearchParams(window.location.search).get("next") === "/client");
+    setClientIntent(new URLSearchParams(window.location.search).get("next") === "/corporate");
   }, []);
 
   async function submit(event: FormEvent<HTMLFormElement>) {

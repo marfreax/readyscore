@@ -2,14 +2,15 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ClipboardList, LayoutDashboard, ListChecks, LogOut, Settings2, UsersRound } from "lucide-react";
+import { ClipboardList, CreditCard, LayoutDashboard, ListChecks, LogOut, Settings2, UsersRound } from "lucide-react";
 
-type Section = "dashboard" | "people" | "invitations" | "reports" | "settings";
+type Section = "dashboard" | "people" | "invitations" | "reports" | "pricing" | "settings";
 
 export default function ClientWorkspaceNavigation({ organizationId, fallbackActive, role }: { organizationId: string; fallbackActive: Section; role: "ADMIN" | "VIEWER" }) {
   const pathname = usePathname();
-  const root = `/client/${encodeURIComponent(organizationId)}`;
+  const root = `/corporate/${encodeURIComponent(organizationId)}`;
   const routeActive: Section = pathname.endsWith("/settings") ? "settings"
+    : pathname.endsWith("/pricing") ? "pricing"
     : pathname.endsWith("/reports") || pathname.includes("/results/") ? "reports"
     : pathname.endsWith("/people") ? "people"
     : pathname.endsWith("/invitations") ? "invitations"
@@ -19,6 +20,7 @@ export default function ClientWorkspaceNavigation({ organizationId, fallbackActi
     { key: "people" as const, label: "Direktori orang", hint: "Karyawan, candidate, alumni", href: `${root}/people`, icon: UsersRound },
     { key: "invitations" as const, label: "Undangan DISC", hint: "Kirim dan pantau test", href: `${root}/invitations`, icon: ClipboardList },
     { key: "reports" as const, label: "Laporan", hint: "Hasil DISC peserta", href: `${root}/reports`, icon: ListChecks },
+    { key: "pricing" as const, label: "Paket & kredit", hint: "Saldo dan pembelian DISC", href: `${root}/pricing`, icon: CreditCard },
     ...(role === "ADMIN" ? [{ key: "settings" as const, label: "Pengaturan", hint: "Profil dan branding", href: `${root}/settings`, icon: Settings2 }] : []),
   ];
 

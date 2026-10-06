@@ -4,6 +4,7 @@ import { getCurrentSession } from "../auth/session";
 import { COMMERCIAL_PRODUCT_CATALOG, SINGLE_TEST_TYPES, type SingleTestType } from "./types";
 import { validateV16Offer } from "./offer";
 import { getActiveSubject } from "../subjects/service";
+import { calculateAffiliateCommission, resolveAffiliateForBuyer } from "../affiliate/service";
 
 const ACTIVE_PRODUCT_STATUS = "ACTIVE" as const;
 
@@ -14,6 +15,18 @@ function orderNumber() {
 function resolveAssessmentType(entitlements: Array<{ type: string; resourceType: string; resourceKey: string }>) {
   const item = entitlements.find((e) => e.type === "TEST_ACCESS" && e.resourceType === "TEST_TYPE");
   return item?.resourceKey ?? null;
+}
+
+async function affiliateSnapshot(userId: string, orderAmountIdr: number) {
+  const attribution = await resolveAffiliateForBuyer(userId);
+  if (!attribution) return {};
+  const affiliate = await prisma.affiliateProfile.findUnique({ where: { id: attribution.affiliateId }, select: { id: true, commissionRateBps: true, status: true } });
+  if (!affiliate || affiliate.status !== "ACTIVE" || affiliate.commissionRateBps <= 0 || affiliate.commissionRateBps > 10000) return {};
+  return {
+    affiliateId: affiliate.id,
+    affiliateRateBpsSnapshot: affiliate.commissionRateBps,
+    affiliateCommissionIdrSnapshot: calculateAffiliateCommission(orderAmountIdr, affiliate.commissionRateBps),
+  };
 }
 
 export async function createCheckoutOrder(input: { productId: string; quantity?: number; testType?: string; couponCode?: string }) {
@@ -46,6 +59,7 @@ export async function createCheckoutOrder(input: { productId: string; quantity?:
   if (couponCode && !offer.valid) throw new Error(offer.code);
   const discountAmount = offer.valid ? Math.floor(subtotalAmount * offer.percent / 100) : 0;
   const totalAmount = Math.max(1, subtotalAmount - discountAmount);
+  const affiliate = await affiliateSnapshot(session.user.id, totalAmount);
   const catalogAssessmentType = resolveAssessmentType(product.entitlements);
   const assessmentType = product.tier === "BASIC"
     ? requestedTestType === "IQ"
@@ -73,6 +87,7 @@ export async function createCheckoutOrder(input: { productId: string; quantity?:
         quantity,
         unitPriceIdrSnapshot: unitPriceIdr,
         totalAmountIdr: totalAmount,
+        ...affiliate,
         currency: "IDR",
         commercialConfig: {
           source: "V14.1_CHECKOUT",
@@ -159,6 +174,7 @@ export async function createUpgradeCheckoutOrder(input: { targetTier: "MEDIUM" |
   }
   const totalAmount = quote.selected.differentialIdr;
   if (!Number.isInteger(totalAmount) || totalAmount <= 0) throw new Error("UPGRADE_NOT_AVAILABLE");
+  const affiliate = await affiliateSnapshot(session.user.id, totalAmount);
 
   return prisma.$transaction(async (tx) => {
     const order = await tx.commercialOrder.create({
@@ -173,6 +189,7 @@ export async function createUpgradeCheckoutOrder(input: { targetTier: "MEDIUM" |
         quantity: 1,
         unitPriceIdrSnapshot: totalAmount,
         totalAmountIdr: totalAmount,
+        ...affiliate,
         currency: "IDR",
         commercialConfig: {
           source: "V19.5_UPGRADE_CHECKOUT",
@@ -262,6 +279,7 @@ export async function createReassessmentCreditCheckoutOrder(input: { testType: s
 
   const orderNumberValue = orderNumber();
   const productNameSnapshot = `${addOn.name} — ${normalized}`;
+  const affiliate = await affiliateSnapshot(session.user.id, unitPriceIdr);
 
   const order = await prisma.$transaction(async (tx) => {
     const created = await tx.commercialOrder.create({
@@ -276,6 +294,7 @@ export async function createReassessmentCreditCheckoutOrder(input: { testType: s
         quantity: 1,
         unitPriceIdrSnapshot: unitPriceIdr,
         totalAmountIdr: unitPriceIdr,
+        ...affiliate,
         currency: "IDR",
         commercialConfig: {
           source: "V19.2.1_REASSESSMENT_CREDIT_CHECKOUT",

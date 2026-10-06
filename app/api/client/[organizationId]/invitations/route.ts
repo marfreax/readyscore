@@ -10,6 +10,7 @@ function statusFor(code: string) {
   if (code === "UNAUTHENTICATED") return 401;
   if (code === "CLIENT_ORGANIZATION_ACCESS_DENIED" || code === "CLIENT_ORGANIZATION_ADMIN_REQUIRED") return 403;
   if (code === "CLIENT_DISC_PACKAGE_NOT_READY") return 409;
+  if (code === "CORPORATE_CREDIT_INSUFFICIENT") return 409;
   return 400;
 }
 
@@ -65,6 +66,6 @@ export async function POST(
     return NextResponse.json({ ok: true, invitation: result }, { status: 201 });
   } catch (error) {
     const code = error instanceof Error ? error.message : "CLIENT_INVITATION_CREATE_FAILED";
-    return NextResponse.json({ ok: false, error: { code } }, { status: statusFor(code) });
+    return NextResponse.json({ ok: false, error: { code, message: code === "CORPORATE_CREDIT_INSUFFICIENT" ? "Saldo kredit DISC tidak mencukupi. Beli paket kredit terlebih dahulu." : undefined } }, { status: statusFor(code) });
   }
 }

@@ -14,10 +14,10 @@ export default async function ClientReportsPage({
   searchParams: Promise<{ category?: string; q?: string }>;
 }) {
   const session = await getCurrentSession();
-  if (!session) redirect("/login?next=%2Fclient");
+  if (!session) redirect("/login?next=%2Fcorporate");
   const [{ organizationId }, query] = await Promise.all([params, searchParams]);
   const workspace = await getClientOrganizationWorkspace(session.user.id, organizationId);
-  if (!workspace) redirect("/client");
+  if (!workspace) redirect("/corporate");
   const search = query.q?.trim().slice(0, 120) ?? "";
   const allReports = await listClientReports(organizationId, session.user.id, search);
   const validCategories: Category[] = ["ALL", "CANDIDATE", "EMPLOYEE", "ALUMNI"];
@@ -33,7 +33,7 @@ export default async function ClientReportsPage({
   return (
     <ClientWorkspaceShell organizationId={organizationId} organizationName={workspace.organization.name} websiteUrl={workspace.organization.websiteUrl} active="reports" role={workspace.membership.role}>
       <div className="space-y-5">
-        <Link href={`/client/${encodeURIComponent(organizationId)}`} className="text-sm font-bold text-slate-600">← Kembali ke ringkasan</Link>
+        <Link href={`/corporate/${encodeURIComponent(organizationId)}`} className="text-sm font-bold text-slate-600">← Kembali ke ringkasan</Link>
         <header className="rs-card mt-5 flex flex-wrap items-end justify-between gap-5 p-7 sm:p-9">
           <div>
             <p className="rs-eyebrow">{workspace.organization.name} · Client Report</p>
@@ -44,7 +44,7 @@ export default async function ClientReportsPage({
         </header>
 
         <nav aria-label="Filter kategori laporan" className="mt-6 flex flex-wrap gap-2">
-          {categories.map(({ key, label }) => <Link key={key} href={`/client/${encodeURIComponent(organizationId)}/reports${key === "ALL" ? "" : `?category=${key}`}`} aria-current={category === key ? "page" : undefined} className={`rounded-full px-4 py-2 text-sm font-bold ${category === key ? "bg-indigo-700 text-white" : "border border-slate-200 bg-white text-slate-700"}`}>{label}</Link>)}
+          {categories.map(({ key, label }) => <Link key={key} href={`/corporate/${encodeURIComponent(organizationId)}/reports${key === "ALL" ? "" : `?category=${key}`}`} aria-current={category === key ? "page" : undefined} className={`rounded-full px-4 py-2 text-sm font-bold ${category === key ? "bg-indigo-700 text-white" : "border border-slate-200 bg-white text-slate-700"}`}>{label}</Link>)}
         </nav>
 
         <form method="get" className="rs-card mt-4 flex flex-wrap items-end gap-3 p-4">
@@ -54,7 +54,7 @@ export default async function ClientReportsPage({
             <input name="q" defaultValue={search} maxLength={120} placeholder="Nama, email, jabatan, atau departemen" className="mt-1.5 w-full rounded-xl border border-slate-200 bg-white px-4 py-3 font-medium outline-none focus:border-indigo-500" />
           </label>
           <button type="submit" className="rs-button rs-button-secondary">Cari</button>
-          {search ? <Link href={`/client/${encodeURIComponent(organizationId)}/reports${category === "ALL" ? "" : `?category=${category}`}`} className="px-3 py-3 text-sm font-bold text-slate-600">Hapus pencarian</Link> : null}
+          {search ? <Link href={`/corporate/${encodeURIComponent(organizationId)}/reports${category === "ALL" ? "" : `?category=${category}`}`} className="px-3 py-3 text-sm font-bold text-slate-600">Hapus pencarian</Link> : null}
         </form>
 
         <section className="rs-card mt-5 overflow-hidden">
@@ -66,7 +66,7 @@ export default async function ClientReportsPage({
                 <p className="mt-1 text-xs text-slate-500">{report.participant?.email} · {report.assessmentConfigurationVersion.questionCount} soal · {Math.ceil(report.questionPackageVersion.timeLimitSeconds / 60)} menit · selesai {report.completedAt ? new Date(report.completedAt).toLocaleDateString("id-ID") : "—"}</p>
                 <p className="mt-1 text-xs text-slate-400">Paket {report.questionPackageVersion.version} · konfigurasi {report.assessmentConfigurationVersion.version} · Email hasil: {report.resultEmailStatus === "SENT" ? "terkirim" : report.resultEmailStatus === "FAILED" ? "gagal" : "menunggu"}</p>
               </div>
-              <Link href={`/client/${encodeURIComponent(organizationId)}/results/${encodeURIComponent(report.id)}`} className="rs-button rs-button-secondary shrink-0">Buka laporan</Link>
+              <Link href={`/corporate/${encodeURIComponent(organizationId)}/results/${encodeURIComponent(report.id)}`} className="rs-button rs-button-secondary shrink-0">Buka laporan</Link>
             </article>
           ))}</div>}
         </section>

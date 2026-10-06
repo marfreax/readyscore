@@ -15,11 +15,12 @@ function allowedTransition(current: string, next: string) {
   if (current === next) return true;
   const allowed: Record<string, string[]> = {
     PENDING: ["PAID", "FAILED", "EXPIRED", "CANCELLED"],
+    PAID: ["REFUNDED"],
     CREATED: ["PENDING"],
-    PAID: [],
     FAILED: [],
     EXPIRED: [],
     CANCELLED: [],
+    REFUNDED: [],
   };
   return allowed[current]?.includes(next) ?? false;
 }
@@ -157,7 +158,7 @@ async function applyVerifiedStatus(input: {
   providerReference: string;
   providerTransactionId?: string;
   providerStatus: string;
-  nextStatus: "PENDING" | "PAID" | "FAILED" | "EXPIRED" | "CANCELLED";
+  nextStatus: "PENDING" | "PAID" | "FAILED" | "EXPIRED" | "CANCELLED" | "REFUNDED";
   source: string;
   raw: Record<string, unknown>;
 }) {
@@ -178,7 +179,7 @@ async function applyVerifiedStatus(input: {
       where: { id: order.id },
       data: {
         paymentStatus: input.nextStatus,
-        paidAt: input.nextStatus === "PAID" ? new Date() : order.paidAt,
+        paidAt: input.nextStatus === "PAID" ? order.paidAt ?? new Date() : order.paidAt,
       },
     });
 
@@ -192,6 +193,57 @@ async function applyVerifiedStatus(input: {
           responsePayload: json(input.raw),
         },
       });
+    }
+
+    if (input.nextStatus === "PAID" && order.affiliateId && order.affiliateRateBpsSnapshot && order.affiliateCommissionIdrSnapshot) {
+      const availableAt = new Date((order.paidAt ?? new Date()).getTime() + 24 * 60 * 60 * 1000);
+      await tx.affiliateLedgerEntry.upsert({
+        where: { idempotencyKey: `ORDER:${order.id}:COMMISSION` },
+        create: {
+          affiliateId: order.affiliateId,
+          orderId: order.id,
+          entryType: "COMMISSION",
+          status: "PENDING",
+          amountIdr: order.affiliateCommissionIdrSnapshot,
+          availableAt,
+          idempotencyKey: `ORDER:${order.id}:COMMISSION`,
+          metadata: { rateBps: order.affiliateRateBpsSnapshot, paidAmountIdr: order.totalAmountIdr },
+        },
+        update: {},
+      });
+    }
+
+    if (input.nextStatus === "REFUNDED" && order.affiliateId && order.affiliateCommissionIdrSnapshot) {
+      await tx.affiliateLedgerEntry.upsert({
+        where: { idempotencyKey: `ORDER:${order.id}:REFUND_REVERSAL` },
+        create: {
+          affiliateId: order.affiliateId,
+          orderId: order.id,
+          entryType: "REVERSAL",
+          status: "AVAILABLE",
+          amountIdr: -order.affiliateCommissionIdrSnapshot,
+          availableAt: new Date(),
+          idempotencyKey: `ORDER:${order.id}:REFUND_REVERSAL`,
+          metadata: { providerStatus: input.providerStatus },
+        },
+        update: {},
+      });
+    }
+
+    if (input.nextStatus === "REFUNDED" && order.clientOrganizationId) {
+      const lot = await tx.clientOrganizationCreditLot.findUnique({ where: { sourceOrderId: order.id } });
+      if (lot) {
+        const unusedCredits = lot.remainingCredits;
+        await tx.clientOrganizationCreditLot.update({ where: { id: lot.id }, data: { remainingCredits: 0 } });
+        await tx.clientInvitationCreditReservation.updateMany({ where: { creditLotId: lot.id, status: "RESERVED" }, data: { status: "RELEASED" } });
+        if (unusedCredits > 0) {
+          await tx.clientOrganizationCreditLedger.upsert({
+            where: { idempotencyKey: `CORPORATE_REFUND:${order.id}` },
+            create: { organizationId: order.clientOrganizationId, orderId: order.id, entryType: "MANUAL_ADJUSTMENT", creditsDelta: -unusedCredits, idempotencyKey: `CORPORATE_REFUND:${order.id}`, metadata: { reason: "PAYMENT_REFUNDED", unusedCredits } },
+            update: {},
+          });
+        }
+      }
     }
 
     const action =
@@ -307,6 +359,8 @@ export async function processProviderWebhook(input: {
         ? "EXPIRED" as const
         : eventType === "cancel"
           ? "CANCELLED" as const
+          : ["refund", "chargeback"].includes(eventType)
+            ? "REFUNDED" as const
           : "FAILED" as const;
 
   let eventRecord;
@@ -386,6 +440,10 @@ export async function reconcileCommercialOrderReturn(orderNumber: string) {
       paymentStatus: true,
       fulfillmentStatus: true,
       paidAt: true,
+      clientOrganizationId: true,
+      clientDiscPackage: { select: { name: true, creditQuantity: true } },
+      clientOrganization: { select: { name: true, logoUrl: true } },
+      creditLot: { select: { remainingCredits: true, expiresAt: true } },
     },
   });
   if (!order) throw new Error("ORDER_NOT_FOUND");
@@ -409,6 +467,10 @@ export async function reconcileCommercialOrderReturn(orderNumber: string) {
       paymentStatus: true,
       fulfillmentStatus: true,
       paidAt: true,
+      clientOrganizationId: true,
+      clientDiscPackage: { select: { name: true, creditQuantity: true } },
+      clientOrganization: { select: { name: true, logoUrl: true } },
+      creditLot: { select: { remainingCredits: true, expiresAt: true } },
     },
   });
   if (!order) throw new Error("ORDER_NOT_FOUND");
@@ -427,6 +489,10 @@ export async function reconcileCommercialOrderReturn(orderNumber: string) {
         paymentStatus: true,
         fulfillmentStatus: true,
         paidAt: true,
+        clientOrganizationId: true,
+        clientDiscPackage: { select: { name: true, creditQuantity: true } },
+        clientOrganization: { select: { name: true, logoUrl: true } },
+        creditLot: { select: { remainingCredits: true, expiresAt: true } },
       },
     });
     if (!order) throw new Error("ORDER_NOT_FOUND");

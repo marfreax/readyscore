@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import ClientWorkspaceNavigation from "./ClientWorkspaceNavigation";
 
-type Section = "dashboard" | "people" | "invitations" | "reports" | "settings";
+type Section = "dashboard" | "people" | "invitations" | "reports" | "pricing" | "settings";
 
 export default function ClientWorkspaceShell({
   organizationId,
@@ -24,7 +24,7 @@ export default function ClientWorkspaceShell({
         <aside className="flex flex-col gap-4 lg:sticky lg:top-6 lg:h-[calc(100vh-3rem)]">
           <div className="rs-card p-5">
             <p className="text-[11px] font-black uppercase tracking-[0.18em] text-indigo-700">ReadyScore</p>
-            <p className="mt-1 text-xs font-bold text-slate-400">CLIENT PORTAL</p>
+            <p className="mt-1 text-xs font-bold text-slate-400">CORPORATE</p>
             <h1 className="mt-4 line-clamp-2 text-lg font-black leading-snug">{organizationName}</h1>
             {websiteUrl && <a href={websiteUrl} target="_blank" rel="noreferrer" className="mt-2 block truncate text-xs font-semibold text-indigo-700 hover:underline">{websiteUrl.replace(/^https:\/\//, "")}</a>}
           </div>

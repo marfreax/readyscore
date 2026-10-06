@@ -22,7 +22,7 @@ export type PaymentStatusResult = {
   providerTransactionId?: string;
   providerReference: string;
   providerStatus: string;
-  status: "PENDING" | "PAID" | "FAILED" | "EXPIRED" | "CANCELLED";
+  status: "PENDING" | "PAID" | "FAILED" | "EXPIRED" | "CANCELLED" | "REFUNDED";
   grossAmount: number;
   currency: string;
   raw: Record<string, unknown>;

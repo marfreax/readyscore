@@ -53,6 +53,7 @@ enum CommercialTier {
   BASIC
   MEDIUM
   ADVANCE
+  CORPORATE_DISC_CREDIT
 }
 
 enum ProductStatus {
@@ -99,8 +100,6 @@ enum DataDeletionRequestStatus {
   COMPLETED
   REJECTED
 }
-
-
 
 enum ScalevWebhookEventStatus {
   RECEIVED
@@ -175,15 +174,15 @@ enum MappingStatus {
 
 /// Immutable audit trail for material admin content/configuration operations.
 model AdminContentAuditEvent {
-  id           String   @id @default(cuid())
-  entityType   String
-  entityId     String
-  action       String
-  fromStatus   String?
-  toStatus     String?
-  actorUserId  String
-  metadata     Json?
-  createdAt    DateTime @default(now())
+  id          String   @id @default(cuid())
+  entityType  String
+  entityId    String
+  action      String
+  fromStatus  String?
+  toStatus    String?
+  actorUserId String
+  metadata    Json?
+  createdAt   DateTime @default(now())
 
   actor User @relation(fields: [actorUserId], references: [id], onDelete: Restrict)
 
@@ -210,6 +209,7 @@ enum CommercialPaymentStatus {
   FAILED
   EXPIRED
   CANCELLED
+  REFUNDED
 }
 
 enum CommercialFulfillmentStatus {
@@ -226,6 +226,7 @@ enum CommercialPaymentAttemptStatus {
   FAILED
   EXPIRED
   CANCELLED
+  REFUNDED
 }
 
 enum CommercialWebhookStatus {
@@ -236,33 +237,36 @@ enum CommercialWebhookStatus {
 }
 
 model User {
-  id           String   @id
+  id           String     @id
   name         String
-  email        String   @unique
+  email        String     @unique
   passwordHash String
-  role         UserRole @default(USER)
+  role         UserRole   @default(USER)
   status       UserStatus @default(ACTIVE)
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
 
-  sessions Session[]
-  passwordResetTokens PasswordResetToken[]
-  attempts AssessmentAttempt[]
-  subjects SubjectProfile[]
-  entitlements UserEntitlement[]
-  scalevPurchases ScalevPurchase[]
-  commercialOrders CommercialOrder[]
-  scalevAddOnPurchases ScalevAddOnPurchase[]
-  addOnEntitlements UserAddOnEntitlement[]
-  reassessmentCredits ReassessmentCredit[]
-  institutionMemberships InstitutionMembership[]
-  clientOrganizationMemberships ClientOrganizationMembership[]
-  createdClientInvitations ClientInvitation[] @relation("ClientInvitationCreator")
-  contentAuditEvents AdminContentAuditEvent[]
-  v15Reports V15Report[]
-  authenticationAuditEventsAsActor AuthenticationAuditEvent[] @relation("AuthenticationAuditActor")
-  authenticationAuditEventsAsTarget AuthenticationAuditEvent[] @relation("AuthenticationAuditTarget")
-  dataDeletionRequests DataDeletionRequest[]
+  sessions                          Session[]
+  passwordResetTokens               PasswordResetToken[]
+  attempts                          AssessmentAttempt[]
+  subjects                          SubjectProfile[]
+  entitlements                      UserEntitlement[]
+  scalevPurchases                   ScalevPurchase[]
+  commercialOrders                  CommercialOrder[]
+  scalevAddOnPurchases              ScalevAddOnPurchase[]
+  addOnEntitlements                 UserAddOnEntitlement[]
+  reassessmentCredits               ReassessmentCredit[]
+  institutionMemberships            InstitutionMembership[]
+  clientOrganizationMemberships     ClientOrganizationMembership[]
+  createdClientInvitations          ClientInvitation[]             @relation("ClientInvitationCreator")
+  contentAuditEvents                AdminContentAuditEvent[]
+  v15Reports                        V15Report[]
+  authenticationAuditEventsAsActor  AuthenticationAuditEvent[]     @relation("AuthenticationAuditActor")
+  authenticationAuditEventsAsTarget AuthenticationAuditEvent[]     @relation("AuthenticationAuditTarget")
+  dataDeletionRequests              DataDeletionRequest[]
+  affiliateProfile                  AffiliateProfile?
+  affiliateAttribution              AffiliateAttribution?          @relation("AffiliateBuyer")
+  affiliatePayoutRequests           AffiliatePayoutRequest[]       @relation("AffiliatePayoutBuyer")
 
   @@index([createdAt])
   @@index([status, createdAt])
@@ -276,11 +280,11 @@ model SubjectProfile {
   createdAt DateTime           @default(now())
   updatedAt DateTime           @updatedAt
 
-  account              User                    @relation(fields: [accountId], references: [id], onDelete: Cascade)
-  attempts             AssessmentAttempt[]
-  entitlements         UserEntitlement[]
-  addOnEntitlements    UserAddOnEntitlement[]
-  reassessmentCredits  ReassessmentCredit[]
+  account                   User                   @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  attempts                  AssessmentAttempt[]
+  entitlements              UserEntitlement[]
+  addOnEntitlements         UserAddOnEntitlement[]
+  reassessmentCredits       ReassessmentCredit[]
   commercialOrdersAsSubject CommercialOrder[]
 
   @@unique([accountId, name])
@@ -325,12 +329,12 @@ model AuthenticationAuditEvent {
 }
 
 model PasswordResetToken {
-  id        String   @id @default(cuid())
+  id        String    @id @default(cuid())
   userId    String
-  tokenHash String   @unique
+  tokenHash String    @unique
   expiresAt DateTime
   usedAt    DateTime?
-  createdAt DateTime @default(now())
+  createdAt DateTime  @default(now())
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
@@ -350,7 +354,6 @@ model Session {
   @@index([expiresAt])
 }
 
-
 /// Commercial product catalog. Product tier is commercial packaging,
 /// not measurement identity.
 
@@ -359,12 +362,12 @@ enum TestTypeCatalogStatus {
   ACTIVE
   RETIRED
 }
+
 enum TaxonomyStatus {
   DRAFT
   ACTIVE
   RETIRED
 }
-
 
 enum InstitutionStatus {
   DRAFT
@@ -405,8 +408,8 @@ model Institution {
   status      InstitutionStatus @default(DRAFT)
   description String?
   metadata    Json?
-  createdAt   DateTime           @default(now())
-  updatedAt   DateTime           @updatedAt
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
 
   memberships  InstitutionMembership[]
   entitlements InstitutionEntitlement[]
@@ -418,15 +421,15 @@ model Institution {
 /// A user may belong to multiple institutions. Membership is authorization
 /// context only; it does not grant measurement claims by itself.
 model InstitutionMembership {
-  id            String                     @id @default(cuid())
+  id            String                      @id @default(cuid())
   institutionId String
   userId        String
   role          InstitutionMemberRole
   status        InstitutionMembershipStatus @default(ACTIVE)
-  startsAt      DateTime                   @default(now())
+  startsAt      DateTime                    @default(now())
   endsAt        DateTime?
-  createdAt     DateTime                   @default(now())
-  updatedAt     DateTime                   @updatedAt
+  createdAt     DateTime                    @default(now())
+  updatedAt     DateTime                    @updatedAt
 
   institution Institution @relation(fields: [institutionId], references: [id], onDelete: Cascade)
   user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -480,19 +483,23 @@ enum ClientOrganizationMemberRole {
 /// Institution because the existing Institution roles and access contracts
 /// are education-oriented.
 model ClientOrganization {
-  id        String                   @id @default(cuid())
-  code      String                   @unique
-  name      String
+  id         String                   @id @default(cuid())
+  code       String                   @unique
+  name       String
   websiteUrl String?
-  logoUrl   String?
-  status    ClientOrganizationStatus @default(ACTIVE)
-  createdAt DateTime                 @default(now())
-  updatedAt DateTime                 @updatedAt
+  logoUrl    String?
+  status     ClientOrganizationStatus @default(ACTIVE)
+  createdAt  DateTime                 @default(now())
+  updatedAt  DateTime                 @updatedAt
 
-  memberships ClientOrganizationMembership[]
-  participants ClientParticipant[]
-  invitations ClientInvitation[]
-  assessmentAttempts AssessmentAttempt[]
+  memberships         ClientOrganizationMembership[]
+  participants        ClientParticipant[]
+  invitations         ClientInvitation[]
+  assessmentAttempts  AssessmentAttempt[]
+  creditLedgerEntries ClientOrganizationCreditLedger[]
+  creditLots          ClientOrganizationCreditLot[]
+  creditReservations  ClientInvitationCreditReservation[]
+  commercialOrders    CommercialOrder[]
 
   @@index([status])
   @@index([createdAt])
@@ -553,8 +560,8 @@ model ClientParticipant {
   createdAt      DateTime                  @default(now())
   updatedAt      DateTime                  @updatedAt
 
-  organization ClientOrganization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
-  invitations ClientInvitation[]
+  organization       ClientOrganization  @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  invitations        ClientInvitation[]
   assessmentAttempts AssessmentAttempt[]
 
   @@unique([organizationId, email])
@@ -562,39 +569,41 @@ model ClientParticipant {
 }
 
 model ClientInvitation {
-  id                            String                    @id @default(cuid())
-  organizationId                String
-  createdByUserId               String
-  participantId                 String?
-  email                         String
-  category                      ClientParticipantCategory
-  jobTitle                      String?
-  department                    String?
-  tokenHash                     String                    @unique
-  status                        ClientInvitationStatus    @default(DRAFT)
+  id                               String                     @id @default(cuid())
+  organizationId                   String
+  createdByUserId                  String
+  participantId                    String?
+  email                            String
+  category                         ClientParticipantCategory
+  jobTitle                         String?
+  department                       String?
+  tokenHash                        String                     @unique
+  status                           ClientInvitationStatus     @default(DRAFT)
   assessmentConfigurationVersionId String
-  questionPackageVersionId      String
-  expiresAt                     DateTime
-  sentAt                        DateTime?
-  openedAt                      DateTime?
-  completedAt                   DateTime?
-  revokedAt                     DateTime?
-  resultEmailStatus             ClientResultDeliveryStatus @default(NOT_SENT)
-  resultEmailSentAt             DateTime?
-  resultEmailError              String?
-  resultEmailProviderMessageId  String?
-  resultEmailAttemptCount       Int                       @default(0)
-  invitationDeliveryAttempt     Int                       @default(0)
-  createdAt                     DateTime                  @default(now())
-  updatedAt                     DateTime                  @updatedAt
+  questionPackageVersionId         String
+  expiresAt                        DateTime
+  sentAt                           DateTime?
+  openedAt                         DateTime?
+  completedAt                      DateTime?
+  revokedAt                        DateTime?
+  resultEmailStatus                ClientResultDeliveryStatus @default(NOT_SENT)
+  resultEmailSentAt                DateTime?
+  resultEmailError                 String?
+  resultEmailProviderMessageId     String?
+  resultEmailAttemptCount          Int                        @default(0)
+  invitationDeliveryAttempt        Int                        @default(0)
+  createdAt                        DateTime                   @default(now())
+  updatedAt                        DateTime                   @updatedAt
 
-  organization ClientOrganization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
-  createdBy User @relation("ClientInvitationCreator", fields: [createdByUserId], references: [id], onDelete: Restrict)
-  participant ClientParticipant? @relation(fields: [participantId], references: [id], onDelete: Restrict)
-  assessmentConfigurationVersion AssessmentConfigurationVersion @relation(fields: [assessmentConfigurationVersionId], references: [id], onDelete: Restrict)
-  questionPackageVersion QuestionPackageVersion @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
-  consent ClientParticipantConsent?
-  assessmentAttempt AssessmentAttempt?
+  organization                   ClientOrganization                 @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  createdBy                      User                               @relation("ClientInvitationCreator", fields: [createdByUserId], references: [id], onDelete: Restrict)
+  participant                    ClientParticipant?                 @relation(fields: [participantId], references: [id], onDelete: Restrict)
+  assessmentConfigurationVersion AssessmentConfigurationVersion     @relation(fields: [assessmentConfigurationVersionId], references: [id], onDelete: Restrict)
+  questionPackageVersion         QuestionPackageVersion             @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
+  consent                        ClientParticipantConsent?
+  assessmentAttempt              AssessmentAttempt?
+  creditReservation              ClientInvitationCreditReservation?
+  creditLedgerEntries            ClientOrganizationCreditLedger[]
 
   @@index([organizationId, status, createdAt])
   @@index([organizationId, email])
@@ -604,70 +613,71 @@ model ClientInvitation {
 
 /// Immutable notice and optional marketing choices captured for an invitation.
 model ClientParticipantConsent {
-  id               String   @id @default(cuid())
-  invitationId     String   @unique
-  noticeVersion    String
-  noticeAcceptedAt DateTime
-  emailMarketing   Boolean  @default(false)
-  whatsappMarketing Boolean @default(false)
-  createdAt        DateTime @default(now())
+  id                String   @id @default(cuid())
+  invitationId      String   @unique
+  noticeVersion     String
+  noticeAcceptedAt  DateTime
+  emailMarketing    Boolean  @default(false)
+  whatsappMarketing Boolean  @default(false)
+  createdAt         DateTime @default(now())
 
   invitation ClientInvitation @relation(fields: [invitationId], references: [id], onDelete: Restrict)
 }
 
 model TestType {
-  id String @id
-  code String @unique
-  name String
-  category String
-  status TestTypeCatalogStatus @default(CANDIDATE)
-  description String
-  runtimeKey String? @unique
-  metadata Json?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  taxonomies TaxonomyVersion[]
+  id               String                @id
+  code             String                @unique
+  name             String
+  category         String
+  status           TestTypeCatalogStatus @default(CANDIDATE)
+  description      String
+  runtimeKey       String?               @unique
+  metadata         Json?
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
+  taxonomies       TaxonomyVersion[]
   questionVersions QuestionVersion[]
   questionPackages QuestionPackage[]
+
   @@index([status])
   @@index([category])
 }
 
 model TaxonomyVersion {
-  id String @id
-  testTypeId String
-  version String
-  status TaxonomyStatus @default(DRAFT)
-  sourceVersion String?
-  metadata Json?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  testType TestType @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
-  nodes TaxonomyNode[]
+  id                      String                   @id
+  testTypeId              String
+  version                 String
+  status                  TaxonomyStatus           @default(DRAFT)
+  sourceVersion           String?
+  metadata                Json?
+  createdAt               DateTime                 @default(now())
+  updatedAt               DateTime                 @updatedAt
+  testType                TestType                 @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
+  nodes                   TaxonomyNode[]
   questionPackageVersions QuestionPackageVersion[]
+
   @@unique([testTypeId, version])
   @@index([testTypeId, status])
 }
 
 model TaxonomyNode {
-  id String @id
-  taxonomyId String
-  code String
-  name String
-  nodeType String
-  level Int
-  parentId String?
-  metadata Json?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  taxonomy TaxonomyVersion @relation(fields: [taxonomyId], references: [id], onDelete: Cascade)
+  id                              String                           @id
+  taxonomyId                      String
+  code                            String
+  name                            String
+  nodeType                        String
+  level                           Int
+  parentId                        String?
+  metadata                        Json?
+  createdAt                       DateTime                         @default(now())
+  updatedAt                       DateTime                         @updatedAt
+  taxonomy                        TaxonomyVersion                  @relation(fields: [taxonomyId], references: [id], onDelete: Cascade)
   questionPackageCompositionRules QuestionPackageCompositionRule[]
+
   @@unique([taxonomyId, code])
   @@index([taxonomyId, level])
   @@index([taxonomyId, parentId])
 }
-
-
 
 enum AddOnProductStatus {
   DRAFT
@@ -678,19 +688,19 @@ enum AddOnProductStatus {
 /// Phase 3.12 B2C add-on catalog.
 /// Add-ons extend commercial access without redefining Product/Tier or measurement identity.
 model AddOnProduct {
-  id                String            @id
-  code              String            @unique
-  name              String
-  description       String
-  priceIdr          Int?
-  status            AddOnProductStatus @default(DRAFT)
-  sortOrder         Int               @default(0)
-  createdAt         DateTime          @default(now())
-  updatedAt         DateTime          @updatedAt
+  id          String             @id
+  code        String             @unique
+  name        String
+  description String
+  priceIdr    Int?
+  status      AddOnProductStatus @default(DRAFT)
+  sortOrder   Int                @default(0)
+  createdAt   DateTime           @default(now())
+  updatedAt   DateTime           @updatedAt
 
-  entitlements        AddOnProductEntitlement[]
-  userEntitlements    UserAddOnEntitlement[]
-  reassessmentCredits ReassessmentCredit[]
+  entitlements         AddOnProductEntitlement[]
+  userEntitlements     UserAddOnEntitlement[]
+  reassessmentCredits  ReassessmentCredit[]
   scalevAddOnPurchases ScalevAddOnPurchase[]
 
   @@index([status, sortOrder])
@@ -698,13 +708,13 @@ model AddOnProduct {
 
 /// Explicit access bundle owned by an add-on product.
 model AddOnProductEntitlement {
-  id           String                   @id @default(cuid())
+  id             String                  @id @default(cuid())
   addOnProductId String
-  type         EntitlementType
-  resourceType EntitlementResourceType
-  resourceKey  String
-  metadata     Json?
-  createdAt    DateTime                 @default(now())
+  type           EntitlementType
+  resourceType   EntitlementResourceType
+  resourceKey    String
+  metadata       Json?
+  createdAt      DateTime                @default(now())
 
   addOnProduct AddOnProduct @relation(fields: [addOnProductId], references: [id], onDelete: Cascade)
 
@@ -715,23 +725,23 @@ model AddOnProductEntitlement {
 /// User access granted by an add-on.
 /// No checkout/payment automation is implemented in Phase 3.12.
 model UserAddOnEntitlement {
-  id             String                   @id @default(cuid())
+  id             String                  @id @default(cuid())
   userId         String
   subjectId      String?
   addOnProductId String
   type           EntitlementType
   resourceType   EntitlementResourceType
   resourceKey    String
-  status         EntitlementStatus        @default(ACTIVE)
-  source         String                   @default("MANUAL")
-  startsAt       DateTime                 @default(now())
+  status         EntitlementStatus       @default(ACTIVE)
+  source         String                  @default("MANUAL")
+  startsAt       DateTime                @default(now())
   endsAt         DateTime?
-  createdAt      DateTime                 @default(now())
-  updatedAt      DateTime                 @updatedAt
+  createdAt      DateTime                @default(now())
+  updatedAt      DateTime                @updatedAt
 
-  user         User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User            @relation(fields: [userId], references: [id], onDelete: Cascade)
   subject      SubjectProfile? @relation(fields: [subjectId], references: [id], onDelete: Cascade)
-  addOnProduct AddOnProduct @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
+  addOnProduct AddOnProduct    @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
 
   @@unique([subjectId, type, resourceType, resourceKey])
   @@index([userId, status])
@@ -739,24 +749,23 @@ model UserAddOnEntitlement {
   @@index([resourceType, resourceKey, status])
 }
 
-
 /// V4 L2 — Durable Scalev webhook receipt and idempotency record.
 /// The unique Scalev event ID is the primary delivery deduplication boundary.
 model ScalevWebhookEvent {
-  id          String                    @id @default(cuid())
-  uniqueId    String                    @unique
-  event       String
-  orderId     String?
-  eventTime   DateTime?
-  status      ScalevWebhookEventStatus @default(RECEIVED)
-  payload     Json
-  errorCode   String?
+  id           String                   @id @default(cuid())
+  uniqueId     String                   @unique
+  event        String
+  orderId      String?
+  eventTime    DateTime?
+  status       ScalevWebhookEventStatus @default(RECEIVED)
+  payload      Json
+  errorCode    String?
   errorMessage String?
-  processedAt DateTime?
-  createdAt   DateTime                  @default(now())
-  updatedAt   DateTime                  @updatedAt
+  processedAt  DateTime?
+  createdAt    DateTime                 @default(now())
+  updatedAt    DateTime                 @updatedAt
 
-  purchases ScalevPurchase[]
+  purchases      ScalevPurchase[]
   addOnPurchases ScalevAddOnPurchase[]
 
   @@index([orderId, event])
@@ -767,29 +776,29 @@ model ScalevWebhookEvent {
 /// Scalev remains the commerce/order system; ReadyScore stores only the
 /// integration transaction needed for entitlement and access delivery.
 model ScalevPurchase {
-  id              String               @id @default(cuid())
-  scalevOrderId   String               @unique
+  id               String               @id @default(cuid())
+  scalevOrderId    String               @unique
   scalevCustomerId String?
-  customerName    String
-  customerEmail   String
-  customerPhone   String?
-  productSku      String
-  productTier     CommercialTier
+  customerName     String
+  customerEmail    String
+  customerPhone    String?
+  productSku       String
+  productTier      CommercialTier
   selectedTestType String?
-  productId       String
-  userId          String
-  paymentStatus   String
-  status          ScalevPurchaseStatus  @default(PAID)
-  paidAt          DateTime?
-  sourceEventId   String?
-  orderPayload    Json
-  createdAt       DateTime             @default(now())
-  updatedAt       DateTime             @updatedAt
+  productId        String
+  userId           String
+  paymentStatus    String
+  status           ScalevPurchaseStatus @default(PAID)
+  paidAt           DateTime?
+  sourceEventId    String?
+  orderPayload     Json
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
 
-  user          User               @relation(fields: [userId], references: [id], onDelete: Restrict)
-  product       Product            @relation(fields: [productId], references: [id], onDelete: Restrict)
-  sourceEvent   ScalevWebhookEvent? @relation(fields: [sourceEventId], references: [id], onDelete: SetNull)
-  handoff       ScalevHandoff?
+  user        User                @relation(fields: [userId], references: [id], onDelete: Restrict)
+  product     Product             @relation(fields: [productId], references: [id], onDelete: Restrict)
+  sourceEvent ScalevWebhookEvent? @relation(fields: [sourceEventId], references: [id], onDelete: SetNull)
+  handoff     ScalevHandoff?
 
   @@index([userId, createdAt])
   @@index([customerEmail, createdAt])
@@ -801,27 +810,27 @@ model ScalevPurchase {
 /// Used for paid Reassessment Credit fulfillment without conflating an add-on
 /// with a core Product/Tier purchase.
 model ScalevAddOnPurchase {
-  id              String                @id @default(cuid())
-  scalevOrderId   String                @unique
+  id               String               @id @default(cuid())
+  scalevOrderId    String               @unique
   scalevCustomerId String?
-  customerName    String
-  customerEmail   String
-  customerPhone   String?
-  productSku      String
-  addOnProductId  String
-  userId          String
-  paymentStatus   String
-  status          ScalevPurchaseStatus  @default(PAID)
-  paidAt          DateTime?
-  sourceEventId   String?
-  orderPayload    Json
-  createdAt       DateTime              @default(now())
-  updatedAt       DateTime              @updatedAt
+  customerName     String
+  customerEmail    String
+  customerPhone    String?
+  productSku       String
+  addOnProductId   String
+  userId           String
+  paymentStatus    String
+  status           ScalevPurchaseStatus @default(PAID)
+  paidAt           DateTime?
+  sourceEventId    String?
+  orderPayload     Json
+  createdAt        DateTime             @default(now())
+  updatedAt        DateTime             @updatedAt
 
-  user        User               @relation(fields: [userId], references: [id], onDelete: Restrict)
-  addOnProduct AddOnProduct      @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
-  sourceEvent ScalevWebhookEvent? @relation(fields: [sourceEventId], references: [id], onDelete: SetNull)
-  handoff     ScalevHandoff?
+  user         User                @relation(fields: [userId], references: [id], onDelete: Restrict)
+  addOnProduct AddOnProduct        @relation(fields: [addOnProductId], references: [id], onDelete: Restrict)
+  sourceEvent  ScalevWebhookEvent? @relation(fields: [sourceEventId], references: [id], onDelete: SetNull)
+  handoff      ScalevHandoff?
 
   @@index([userId, createdAt])
   @@index([customerEmail, createdAt])
@@ -832,13 +841,13 @@ model ScalevAddOnPurchase {
 /// V4 L2 / V6 L11 — Single-use customer handoff token.
 /// The raw token is never persisted; only its SHA-256 hash is stored.
 model ScalevHandoff {
-  id              String                @id @default(cuid())
-  purchaseId      String?               @unique
-  addOnPurchaseId String?               @unique
-  tokenHash       String                @unique
+  id              String    @id @default(cuid())
+  purchaseId      String?   @unique
+  addOnPurchaseId String?   @unique
+  tokenHash       String    @unique
   expiresAt       DateTime
   consumedAt      DateTime?
-  createdAt       DateTime              @default(now())
+  createdAt       DateTime  @default(now())
 
   purchase      ScalevPurchase?      @relation(fields: [purchaseId], references: [id], onDelete: Cascade)
   addOnPurchase ScalevAddOnPurchase? @relation(fields: [addOnPurchaseId], references: [id], onDelete: Cascade)
@@ -850,28 +859,28 @@ model ScalevHandoff {
 /// A credit is a separate commercial/access artifact from the assessment
 /// measurement event. Consumption never mutates an existing result.
 model ReassessmentCredit {
-  id                String                    @id @default(cuid())
+  id                String                   @id @default(cuid())
   userId            String
   subjectId         String?
   addOnProductId    String?
   testType          ReassessmentTestType
-  status          ReassessmentCreditStatus  @default(AVAILABLE)
-  source          String                    @default("MANUAL")
-  purchasedAt     DateTime                  @default(now())
-  consumedAt      DateTime?
+  status            ReassessmentCreditStatus @default(AVAILABLE)
+  source            String                   @default("MANUAL")
+  purchasedAt       DateTime                 @default(now())
+  consumedAt        DateTime?
   consumedAttemptId String?
-  createdAt       DateTime                  @default(now())
-  updatedAt       DateTime                  @updatedAt
+  createdAt         DateTime                 @default(now())
+  updatedAt         DateTime                 @updatedAt
 
-  user         User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user         User            @relation(fields: [userId], references: [id], onDelete: Cascade)
   subject      SubjectProfile? @relation(fields: [subjectId], references: [id], onDelete: Cascade)
-  addOnProduct AddOnProduct? @relation(fields: [addOnProductId], references: [id], onDelete: SetNull)
+  addOnProduct AddOnProduct?   @relation(fields: [addOnProductId], references: [id], onDelete: SetNull)
 
+  @@unique([consumedAttemptId])
   @@index([userId, testType, status])
   @@index([subjectId, testType, status])
   @@index([addOnProductId])
   @@index([userId, consumedAt])
-  @@unique([consumedAttemptId])
 }
 
 model Product {
@@ -886,22 +895,100 @@ model Product {
 
   entitlements     ProductEntitlement[]
   userEntitlements UserEntitlement[]
-  scalevPurchases ScalevPurchase[]
+  scalevPurchases  ScalevPurchase[]
   commercialOrders CommercialOrder[]
 
   @@index([status])
 }
 
+enum AffiliateProfileStatus {
+  ACTIVE
+  SUSPENDED
+}
+
+enum AffiliateLedgerEntryType {
+  COMMISSION
+  COMMISSION_UNLOCK
+  REVERSAL
+  WITHDRAWAL_HOLD
+  WITHDRAWAL_RELEASE
+  ADMIN_ADJUSTMENT
+}
+
+enum AffiliateLedgerEntryStatus {
+  PENDING
+  AVAILABLE
+  SETTLED
+}
+
+enum AffiliatePayoutStatus {
+  REQUESTED
+  PROCESSING
+  PAID
+  REJECTED
+  CANCELLED
+}
+
+enum ClientCreditLedgerEntryType {
+  PURCHASE
+  ASSESSMENT_CONSUMED
+  ASSESSMENT_REFUND
+  MANUAL_ADJUSTMENT
+}
+
+enum ClientCreditReservationStatus {
+  RESERVED
+  CONSUMED
+  RELEASED
+}
+
+model AffiliateProfile {
+  id                  String                 @id @default(cuid())
+  userId              String                 @unique
+  referralCode        String                 @unique
+  commissionRateBps   Int                    @default(1000)
+  status              AffiliateProfileStatus @default(ACTIVE)
+  payoutBankName      String?
+  payoutAccountName   String?
+  payoutAccountNumber String?
+  createdAt           DateTime               @default(now())
+  updatedAt           DateTime               @updatedAt
+
+  user         User                     @relation(fields: [userId], references: [id], onDelete: Restrict)
+  attributions AffiliateAttribution[]
+  orders       CommercialOrder[]
+  ledger       AffiliateLedgerEntry[]
+  payouts      AffiliatePayoutRequest[]
+
+  @@index([status, createdAt])
+}
+
+model AffiliateAttribution {
+  id           String   @id @default(cuid())
+  buyerUserId  String   @unique
+  affiliateId  String
+  sourceCode   String
+  attributedAt DateTime @default(now())
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+
+  buyer     User             @relation("AffiliateBuyer", fields: [buyerUserId], references: [id], onDelete: Cascade)
+  affiliate AffiliateProfile @relation(fields: [affiliateId], references: [id], onDelete: Restrict)
+
+  @@index([affiliateId, attributedAt])
+  @@index([expiresAt])
+}
+
 /// Explicit entitlement definitions attached to a commercial product.
 /// resourceType/resourceKey keep measurement identity separate from tier.
 model ProductEntitlement {
-  id           String                   @id @default(cuid())
+  id           String                  @id @default(cuid())
   productId    String
   type         EntitlementType
   resourceType EntitlementResourceType
   resourceKey  String
   metadata     Json?
-  createdAt    DateTime                 @default(now())
+  createdAt    DateTime                @default(now())
 
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
 
@@ -912,26 +999,26 @@ model ProductEntitlement {
 /// Concrete entitlement granted to a user. V4 L2 payment integrations may
 /// fulfill this record only after a verified paid transaction.
 model UserEntitlement {
-  id           String                   @id @default(cuid())
-  userId       String
-  subjectId    String?
-  productId    String?
-  type         EntitlementType
-  resourceType EntitlementResourceType
-  resourceKey  String
-  status       EntitlementStatus        @default(ACTIVE)
-  source       String                   @default("MANUAL")
+  id            String                  @id @default(cuid())
+  userId        String
+  subjectId     String?
+  productId     String?
+  type          EntitlementType
+  resourceType  EntitlementResourceType
+  resourceKey   String
+  status        EntitlementStatus       @default(ACTIVE)
+  source        String                  @default("MANUAL")
   sourceOrderId String?
-  usageLimit   Int                      @default(1)
+  usageLimit    Int                     @default(1)
   usageConsumed Int                     @default(0)
-  startsAt     DateTime                 @default(now())
-  endsAt       DateTime?
-  createdAt    DateTime                 @default(now())
-  updatedAt    DateTime                 @updatedAt
+  startsAt      DateTime                @default(now())
+  endsAt        DateTime?
+  createdAt     DateTime                @default(now())
+  updatedAt     DateTime                @updatedAt
 
-  user    User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user    User            @relation(fields: [userId], references: [id], onDelete: Cascade)
   subject SubjectProfile? @relation(fields: [subjectId], references: [id], onDelete: Cascade)
-  product Product? @relation(fields: [productId], references: [id], onDelete: SetNull)
+  product Product?        @relation(fields: [productId], references: [id], onDelete: SetNull)
 
   @@unique([subjectId, type, resourceType, resourceKey])
   @@index([userId, status])
@@ -942,53 +1029,182 @@ model UserEntitlement {
 
 /// V14.1 commercial order snapshot. Provider integration is intentionally absent.
 model CommercialOrder {
-  id                    String                    @id @default(cuid())
-  userId                String
-  subjectId             String?
-  productId             String
-  orderNumber           String                    @unique
-  productNameSnapshot   String
-  assessmentTypeSnapshot String?
-  quantity              Int                       @default(1)
-  unitPriceIdrSnapshot  Int
-  totalAmountIdr        Int
-  currency              String                    @default("IDR")
-  commercialConfig       Json?
-  status                CommercialOrderStatus      @default(CREATED)
-  paymentStatus         CommercialPaymentStatus    @default(CREATED)
-  fulfillmentStatus     CommercialFulfillmentStatus @default(NOT_STARTED)
-  provider              String?
-  providerReference     String?
-  paidAt                DateTime?
-  fulfilledAt           DateTime?
-  createdAt             DateTime                  @default(now())
-  updatedAt             DateTime                  @updatedAt
+  id                             String                      @id @default(cuid())
+  userId                         String
+  subjectId                      String?
+  productId                      String
+  orderNumber                    String                      @unique
+  productNameSnapshot            String
+  assessmentTypeSnapshot         String?
+  quantity                       Int                         @default(1)
+  unitPriceIdrSnapshot           Int
+  totalAmountIdr                 Int
+  currency                       String                      @default("IDR")
+  commercialConfig               Json?
+  status                         CommercialOrderStatus       @default(CREATED)
+  paymentStatus                  CommercialPaymentStatus     @default(CREATED)
+  fulfillmentStatus              CommercialFulfillmentStatus @default(NOT_STARTED)
+  provider                       String?
+  providerReference              String?
+  paidAt                         DateTime?
+  fulfilledAt                    DateTime?
+  clientOrganizationId           String?
+  affiliateId                    String?
+  affiliateRateBpsSnapshot       Int?
+  affiliateCommissionIdrSnapshot Int?
+  clientDiscPackageId            String?
+  createdAt                      DateTime                    @default(now())
+  updatedAt                      DateTime                    @updatedAt
 
-  user                  User                      @relation(fields: [userId], references: [id], onDelete: Restrict)
-  subject               SubjectProfile?           @relation(fields: [subjectId], references: [id], onDelete: SetNull)
-  product               Product                   @relation(fields: [productId], references: [id], onDelete: Restrict)
-  auditEvents           CommercialAuditEvent[]
-  paymentAttempts       CommercialPaymentAttempt[]
-  webhookEvents         CommercialWebhookEvent[]
+  user                   User                             @relation(fields: [userId], references: [id], onDelete: Restrict)
+  subject                SubjectProfile?                  @relation(fields: [subjectId], references: [id], onDelete: SetNull)
+  product                Product                          @relation(fields: [productId], references: [id], onDelete: Restrict)
+  auditEvents            CommercialAuditEvent[]
+  paymentAttempts        CommercialPaymentAttempt[]
+  webhookEvents          CommercialWebhookEvent[]
   fulfillment            CommercialFulfillment?
+  clientOrganization     ClientOrganization?              @relation(fields: [clientOrganizationId], references: [id], onDelete: Restrict)
+  affiliate              AffiliateProfile?                @relation(fields: [affiliateId], references: [id], onDelete: Restrict)
+  creditLedgerEntries    ClientOrganizationCreditLedger[]
+  affiliateLedgerEntries AffiliateLedgerEntry[]
+  clientDiscPackage      ClientDiscPackage?               @relation(fields: [clientDiscPackageId], references: [id], onDelete: Restrict)
+  creditLot              ClientOrganizationCreditLot?
 
   @@index([userId, createdAt])
   @@index([subjectId, createdAt])
   @@index([productId, createdAt])
   @@index([paymentStatus, createdAt])
   @@index([fulfillmentStatus, createdAt])
+  @@index([clientOrganizationId, createdAt])
+  @@index([affiliateId, createdAt])
+  @@index([clientDiscPackageId])
+}
+
+model ClientDiscPackage {
+  id             String        @id
+  name           String
+  creditQuantity Int
+  priceIdr       Int
+  status         ProductStatus @default(ACTIVE)
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+
+  orders     CommercialOrder[]
+  creditLots ClientOrganizationCreditLot[]
+
+  @@unique([creditQuantity, status])
+  @@index([status, creditQuantity])
+}
+
+model ClientOrganizationCreditLot {
+  id               String   @id @default(cuid())
+  organizationId   String
+  packageId        String
+  sourceOrderId    String   @unique
+  purchasedCredits Int
+  remainingCredits Int
+  expiresAt        DateTime
+  createdAt        DateTime @default(now())
+
+  organization ClientOrganization                  @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  package      ClientDiscPackage                   @relation(fields: [packageId], references: [id], onDelete: Restrict)
+  sourceOrder  CommercialOrder                     @relation(fields: [sourceOrderId], references: [id], onDelete: Restrict)
+  reservations ClientInvitationCreditReservation[]
+
+  @@index([organizationId, expiresAt, createdAt])
+}
+
+model ClientOrganizationCreditLedger {
+  id             String                      @id @default(cuid())
+  organizationId String
+  orderId        String?
+  invitationId   String?
+  entryType      ClientCreditLedgerEntryType
+  creditsDelta   Int
+  idempotencyKey String                      @unique
+  metadata       Json?
+  createdAt      DateTime                    @default(now())
+
+  organization ClientOrganization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  order        CommercialOrder?   @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  invitation   ClientInvitation?  @relation(fields: [invitationId], references: [id], onDelete: Restrict)
+
+  @@index([organizationId, createdAt])
+  @@index([orderId, entryType])
+}
+
+model ClientInvitationCreditReservation {
+  id             String                        @id @default(cuid())
+  organizationId String
+  invitationId   String                        @unique
+  creditLotId    String
+  status         ClientCreditReservationStatus @default(RESERVED)
+  reservationVersion Int                      @default(1)
+  createdAt      DateTime                      @default(now())
+  updatedAt      DateTime                      @updatedAt
+
+  organization ClientOrganization          @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  invitation   ClientInvitation            @relation(fields: [invitationId], references: [id], onDelete: Restrict)
+  creditLot    ClientOrganizationCreditLot @relation(fields: [creditLotId], references: [id], onDelete: Restrict)
+
+  @@index([organizationId, status, createdAt])
+  @@index([creditLotId, status])
+}
+
+model AffiliateLedgerEntry {
+  id              String                     @id @default(cuid())
+  affiliateId     String
+  orderId         String?
+  payoutRequestId String?
+  entryType       AffiliateLedgerEntryType
+  status          AffiliateLedgerEntryStatus @default(AVAILABLE)
+  amountIdr       Int
+  availableAt     DateTime                   @default(now())
+  idempotencyKey  String                     @unique
+  metadata        Json?
+  createdAt       DateTime                   @default(now())
+
+  affiliate AffiliateProfile        @relation(fields: [affiliateId], references: [id], onDelete: Restrict)
+  order     CommercialOrder?        @relation(fields: [orderId], references: [id], onDelete: Restrict)
+  payout    AffiliatePayoutRequest? @relation(fields: [payoutRequestId], references: [id], onDelete: Restrict)
+
+  @@index([affiliateId, status, availableAt])
+  @@index([orderId, entryType])
+  @@index([payoutRequestId])
+}
+
+model AffiliatePayoutRequest {
+  id                String                @id @default(cuid())
+  affiliateId       String
+  requestedByUserId String
+  amountIdr         Int
+  status            AffiliatePayoutStatus @default(REQUESTED)
+  adminUserId       String?
+  transferReference String?
+  adminNote         String?
+  requestedAt       DateTime              @default(now())
+  processedAt       DateTime?
+  createdAt         DateTime              @default(now())
+  updatedAt         DateTime              @updatedAt
+
+  affiliate     AffiliateProfile       @relation(fields: [affiliateId], references: [id], onDelete: Restrict)
+  requestedBy   User                   @relation("AffiliatePayoutBuyer", fields: [requestedByUserId], references: [id], onDelete: Restrict)
+  ledgerEntries AffiliateLedgerEntry[]
+
+  @@index([status, requestedAt])
+  @@index([affiliateId, requestedAt])
 }
 
 model CommercialAuditEvent {
-  id          String   @id @default(cuid())
-  orderId     String
-  action      String
-  fromState   String?
-  toState     String?
-  source      String
-  reference   String?
-  metadata    Json?
-  createdAt   DateTime @default(now())
+  id        String   @id @default(cuid())
+  orderId   String
+  action    String
+  fromState String?
+  toState   String?
+  source    String
+  reference String?
+  metadata  Json?
+  createdAt DateTime @default(now())
 
   order CommercialOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
 
@@ -997,19 +1213,17 @@ model CommercialAuditEvent {
   @@index([source, createdAt])
 }
 
-
-
 /// V14.3 durable fulfillment ledger. One commercial order has one canonical
 /// fulfillment record so retries cannot create a second fulfillment.
 model CommercialFulfillment {
-  id           String                     @id @default(cuid())
-  orderId      String                     @unique
+  id           String                      @id @default(cuid())
+  orderId      String                      @unique
   status       CommercialFulfillmentStatus @default(NOT_STARTED)
-  attemptCount Int                        @default(0)
+  attemptCount Int                         @default(0)
   lastError    String?
   fulfilledAt  DateTime?
-  createdAt    DateTime                   @default(now())
-  updatedAt    DateTime                   @updatedAt
+  createdAt    DateTime                    @default(now())
+  updatedAt    DateTime                    @updatedAt
 
   order CommercialOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
 
@@ -1027,7 +1241,7 @@ model CommercialPaymentAttempt {
   paymentToken          String?
   redirectUrl           String?
   status                CommercialPaymentAttemptStatus @default(CREATED)
-  providerStatus       String?
+  providerStatus        String?
   requestPayload        Json?
   responsePayload       Json?
   createdAt             DateTime                       @default(now())
@@ -1043,7 +1257,7 @@ model CommercialPaymentAttempt {
 
 /// V14.2 durable webhook receipt / idempotency boundary.
 model CommercialWebhookEvent {
-  id                    String                 @id @default(cuid())
+  id                    String                  @id @default(cuid())
   provider              String
   eventKey              String
   orderId               String?
@@ -1054,8 +1268,8 @@ model CommercialWebhookEvent {
   errorCode             String?
   errorMessage          String?
   processedAt           DateTime?
-  createdAt             DateTime               @default(now())
-  updatedAt             DateTime               @updatedAt
+  createdAt             DateTime                @default(now())
+  updatedAt             DateTime                @updatedAt
 
   order CommercialOrder? @relation(fields: [orderId], references: [id], onDelete: Cascade)
 
@@ -1081,33 +1295,33 @@ model Question {
 /// Assessment-facing question version. Content is immutable after creation;
 /// lifecycle state may advance on the latest version before publication.
 model QuestionVersion {
-  id            String             @id @default(cuid())
-  questionId    String
-  testTypeId    String?
+  id              String             @id @default(cuid())
+  questionId      String
+  testTypeId      String?
   taxonomyVersion String?
-  version       String
-  text          String
-  domain        String
-  subdomain     String?
-  indicator     String?
-  type          String             @default("LIKERT")
-  answerType    String             @default("LIKERT_5")
-  reverseScore  Boolean            @default(false)
-  weight        Float              @default(1)
-  scale         Int[]
-  scoringKey    Int[]
+  version         String
+  text            String
+  domain          String
+  subdomain       String?
+  indicator       String?
+  type            String             @default("LIKERT")
+  answerType      String             @default("LIKERT_5")
+  reverseScore    Boolean            @default(false)
+  weight          Float              @default(1)
+  scale           Int[]
+  scoringKey      Int[]
   /// Optional answer choices for objective/situational question types. Correct-answer metadata is never exposed to customer runtime.
-  options       Json?
-  correctOption Int?
-  difficulty    QuestionDifficulty @default(UNSPECIFIED)
-  status        QuestionStatus     @default(DRAFT)
-  mappingStatus MappingStatus      @default(UNMAPPED)
-  sourceFile    String?
-  createdAt     DateTime           @default(now())
-  updatedAt     DateTime           @updatedAt
+  options         Json?
+  correctOption   Int?
+  difficulty      QuestionDifficulty @default(UNSPECIFIED)
+  status          QuestionStatus     @default(DRAFT)
+  mappingStatus   MappingStatus      @default(UNMAPPED)
+  sourceFile      String?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
 
   question         Question          @relation(fields: [questionId], references: [id], onDelete: Restrict)
-  testType         TestType?          @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
+  testType         TestType?         @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
   attemptQuestions AttemptQuestion[]
 
   @@unique([questionId, version])
@@ -1117,7 +1331,6 @@ model QuestionVersion {
   @@index([createdAt])
   @@index([updatedAt])
 }
-
 
 enum AssessmentConfigurationStatus {
   DRAFT
@@ -1144,30 +1357,30 @@ model QuestionPackage {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  testType TestType                @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
+  testType TestType                 @relation(fields: [testTypeId], references: [id], onDelete: Restrict)
   versions QuestionPackageVersion[]
 
   @@index([testTypeId])
 }
 
 model QuestionPackageVersion {
-  id               String              @id @default(cuid())
-  packageId        String
-  version          String
-  totalQuestions   Int
-  timeLimitSeconds Int
+  id                String                @id @default(cuid())
+  packageId         String
+  version           String
+  totalQuestions    Int
+  timeLimitSeconds  Int
   taxonomyVersionId String?
-  status           QuestionPackageStatus @default(DRAFT)
-  metadata         Json?
-  createdAt        DateTime            @default(now())
-  updatedAt        DateTime            @updatedAt
+  status            QuestionPackageStatus @default(DRAFT)
+  metadata          Json?
+  createdAt         DateTime              @default(now())
+  updatedAt         DateTime              @updatedAt
 
-  package       QuestionPackage  @relation(fields: [packageId], references: [id], onDelete: Restrict)
-  taxonomy      TaxonomyVersion? @relation(fields: [taxonomyVersionId], references: [id], onDelete: Restrict)
-  compositionRules QuestionPackageCompositionRule[]
+  package                  QuestionPackage                  @relation(fields: [packageId], references: [id], onDelete: Restrict)
+  taxonomy                 TaxonomyVersion?                 @relation(fields: [taxonomyVersionId], references: [id], onDelete: Restrict)
+  compositionRules         QuestionPackageCompositionRule[]
   assessmentConfigurations AssessmentConfigurationVersion[]
-  assessmentAttempts AssessmentAttempt[]
-  clientInvitations ClientInvitation[]
+  assessmentAttempts       AssessmentAttempt[]
+  clientInvitations        ClientInvitation[]
 
   @@unique([packageId, version])
   @@index([packageId, status])
@@ -1176,7 +1389,7 @@ model QuestionPackageVersion {
 }
 
 model QuestionPackageCompositionRule {
-  id               String @id @default(cuid())
+  id               String   @id @default(cuid())
   packageVersionId String
   taxonomyNodeId   String
   requiredCount    Int
@@ -1192,13 +1405,13 @@ model QuestionPackageCompositionRule {
 }
 
 model AssessmentConfiguration {
-  id             String   @id
+  id             String         @id
   assessmentType AssessmentType
-  code           String   @unique
+  code           String         @unique
   name           String
   description    String?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
 
   versions AssessmentConfigurationVersion[]
 
@@ -1206,23 +1419,23 @@ model AssessmentConfiguration {
 }
 
 model AssessmentConfigurationVersion {
-  id                         String   @id @default(cuid())
-  configurationId            String
-  version                    String
-  questionBankVersion        String
-  taxonomyVersion            String
-  scoringVersion             String
+  id                        String                        @id @default(cuid())
+  configurationId           String
+  version                   String
+  questionBankVersion       String
+  taxonomyVersion           String
+  scoringVersion            String
   selectionAlgorithmVersion String
-  questionCount              Int
-  status                     AssessmentConfigurationStatus @default(DRAFT)
-  metadata                   Json?
-  questionPackageVersionId   String?
-  createdAt                  DateTime @default(now())
-  updatedAt                  DateTime @updatedAt
+  questionCount             Int
+  status                    AssessmentConfigurationStatus @default(DRAFT)
+  metadata                  Json?
+  questionPackageVersionId  String?
+  createdAt                 DateTime                      @default(now())
+  updatedAt                 DateTime                      @updatedAt
 
-  configuration AssessmentConfiguration @relation(fields: [configurationId], references: [id], onDelete: Restrict)
+  configuration          AssessmentConfiguration @relation(fields: [configurationId], references: [id], onDelete: Restrict)
   questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
-  clientInvitations ClientInvitation[]
+  clientInvitations      ClientInvitation[]
 
   @@unique([configurationId, version])
   @@index([configurationId, status])
@@ -1256,19 +1469,19 @@ model AssessmentAttempt {
   createdAt                      DateTime       @default(now())
   updatedAt                      DateTime       @updatedAt
 
-  user      User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
-  subject   SubjectProfile?   @relation(fields: [subjectId], references: [id], onDelete: SetNull)
-  questions AttemptQuestion[]
+  user                   User?                   @relation(fields: [userId], references: [id], onDelete: SetNull)
+  subject                SubjectProfile?         @relation(fields: [subjectId], references: [id], onDelete: SetNull)
+  questions              AttemptQuestion[]
   questionPackageVersion QuestionPackageVersion? @relation(fields: [questionPackageVersionId], references: [id], onDelete: Restrict)
-  clientOrganization ClientOrganization? @relation(fields: [clientOrganizationId], references: [id], onDelete: Restrict)
-  clientParticipant ClientParticipant? @relation(fields: [clientParticipantId], references: [id], onDelete: Restrict)
-  clientInvitation ClientInvitation? @relation(fields: [clientInvitationId], references: [id], onDelete: Restrict)
-  answers   Answer[]
-  result    AssessmentResult?
-  freeLead  FreeLeadCapture?
-  businessLead BusinessLead?
-  freeReportDelivery FreeReportDelivery?
-  funnelEvents FunnelEvent[]
+  clientOrganization     ClientOrganization?     @relation(fields: [clientOrganizationId], references: [id], onDelete: Restrict)
+  clientParticipant      ClientParticipant?      @relation(fields: [clientParticipantId], references: [id], onDelete: Restrict)
+  clientInvitation       ClientInvitation?       @relation(fields: [clientInvitationId], references: [id], onDelete: Restrict)
+  answers                Answer[]
+  result                 AssessmentResult?
+  freeLead               FreeLeadCapture?
+  businessLead           BusinessLead?
+  freeReportDelivery     FreeReportDelivery?
+  funnelEvents           FunnelEvent[]
 
   @@index([userId, startedAt])
   @@index([subjectId, startedAt])
@@ -1343,8 +1556,8 @@ model FreeLeadCapture {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
-  attempt  AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
-  businessLead BusinessLead? @relation(fields: [businessLeadId], references: [id], onDelete: SetNull)
+  attempt        AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  businessLead   BusinessLead?     @relation(fields: [businessLeadId], references: [id], onDelete: SetNull)
   businessLeadId String?
 
   @@index([whatsapp])
@@ -1355,20 +1568,20 @@ model FreeLeadCapture {
 /// V16.7 canonical acquisition business lead. This is intentionally minimal;
 /// it is not a replacement CRM or sales pipeline.
 model WhatsAppConversation {
-  id             String   @id @default(cuid())
+  id             String                     @id @default(cuid())
   businessLeadId String?
-  channel        WhatsAppChannel @default(WHATSAPP)
+  channel        WhatsAppChannel            @default(WHATSAPP)
   phoneNumber    String
   displayName    String?
   status         WhatsAppConversationStatus @default(OPEN)
-  unreadCount    Int      @default(0)
+  unreadCount    Int                        @default(0)
   lastMessageAt  DateTime?
   lastInboundAt  DateTime?
   lastOutboundAt DateTime?
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  createdAt      DateTime                   @default(now())
+  updatedAt      DateTime                   @updatedAt
 
-  businessLead BusinessLead? @relation(fields: [businessLeadId], references: [id], onDelete: SetNull)
+  businessLead BusinessLead?     @relation(fields: [businessLeadId], references: [id], onDelete: SetNull)
   messages     WhatsAppMessage[]
 
   @@unique([phoneNumber, channel])
@@ -1379,25 +1592,25 @@ model WhatsAppConversation {
 }
 
 model WhatsAppMessage {
-  id                  String   @id @default(cuid())
-  conversationId      String
-  direction           WhatsAppMessageDirection
-  messageType         WhatsAppMessageType
-  externalMessageId   String?  @unique
-  clientRequestId     String?  @unique
-  text                String?
-  mediaId             String?
-  mediaMimeType       String?
-  mediaFilename       String?
-  status              WhatsAppMessageStatus
-  providerErrorCode   String?
+  id                   String                   @id @default(cuid())
+  conversationId       String
+  direction            WhatsAppMessageDirection
+  messageType          WhatsAppMessageType
+  externalMessageId    String?                  @unique
+  clientRequestId      String?                  @unique
+  text                 String?
+  mediaId              String?
+  mediaMimeType        String?
+  mediaFilename        String?
+  status               WhatsAppMessageStatus
+  providerErrorCode    String?
   providerErrorMessage String?
-  metadata            Json?
-  sentAt              DateTime?
-  deliveredAt         DateTime?
-  readAt              DateTime?
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
+  metadata             Json?
+  sentAt               DateTime?
+  deliveredAt          DateTime?
+  readAt               DateTime?
+  createdAt            DateTime                 @default(now())
+  updatedAt            DateTime                 @updatedAt
 
   conversation WhatsAppConversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
 
@@ -1408,22 +1621,22 @@ model WhatsAppMessage {
 }
 
 model BusinessLead {
-  id                  String   @id @default(cuid())
-  name                String
-  whatsapp            String   @unique
-  email               String?  @unique
-  source              String   @default("FREE_ASSESSMENT")
-  status              String   @default("NEW")
-  consent             Boolean
-  consentAt           DateTime
-  emailMarketingConsent Boolean @default(false)
-  whatsappMarketingConsent Boolean @default(false)
-  assessmentAttemptId String?  @unique
-  createdAt           DateTime @default(now())
-  updatedAt           DateTime @updatedAt
+  id                       String   @id @default(cuid())
+  name                     String
+  whatsapp                 String   @unique
+  email                    String?  @unique
+  source                   String   @default("FREE_ASSESSMENT")
+  status                   String   @default("NEW")
+  consent                  Boolean
+  consentAt                DateTime
+  emailMarketingConsent    Boolean  @default(false)
+  whatsappMarketingConsent Boolean  @default(false)
+  assessmentAttemptId      String?  @unique
+  createdAt                DateTime @default(now())
+  updatedAt                DateTime @updatedAt
 
-  assessmentAttempt AssessmentAttempt? @relation(fields: [assessmentAttemptId], references: [id], onDelete: SetNull)
-  freeLeadCaptures  FreeLeadCapture[]
+  assessmentAttempt     AssessmentAttempt?     @relation(fields: [assessmentAttemptId], references: [id], onDelete: SetNull)
+  freeLeadCaptures      FreeLeadCapture[]
   whatsappConversations WhatsAppConversation[]
 
   @@index([source, createdAt])
@@ -1434,21 +1647,21 @@ model BusinessLead {
 /// V16.3 durable free-report generation and channel-delivery ledger.
 /// Delivery failures never revoke the already-unlocked web report.
 model FreeReportDelivery {
-  id               String   @id @default(cuid())
-  attemptId        String   @unique
-  pdfStatus        String   @default("NOT_GENERATED")
-  pdfContent       Bytes?
-  pdfFileName      String?
-  pdfGeneratedAt   DateTime?
-  whatsappStatus   String   @default("NOT_ATTEMPTED")
-  whatsappError    String?
-  emailStatus      String   @default("NOT_ATTEMPTED")
-  emailError       String?
-  lastAttemptAt    DateTime?
-  processingUntil  DateTime?
-  processingToken  String?
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  id              String    @id @default(cuid())
+  attemptId       String    @unique
+  pdfStatus       String    @default("NOT_GENERATED")
+  pdfContent      Bytes?
+  pdfFileName     String?
+  pdfGeneratedAt  DateTime?
+  whatsappStatus  String    @default("NOT_ATTEMPTED")
+  whatsappError   String?
+  emailStatus     String    @default("NOT_ATTEMPTED")
+  emailError      String?
+  lastAttemptAt   DateTime?
+  processingUntil DateTime?
+  processingToken String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
 
   attempt AssessmentAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
 
@@ -1457,7 +1670,6 @@ model FreeReportDelivery {
   @@index([emailStatus, updatedAt])
   @@index([processingUntil])
 }
-
 
 /// V16.4 server-recorded acquisition funnel event. Payload is intentionally limited to non-sensitive analytics metadata.
 model FunnelEvent {

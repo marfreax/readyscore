@@ -125,6 +125,31 @@ async function fulfillReassessmentCreditOrder(order: { id: string; userId: strin
   };
 }
 
+async function fulfillCorporateCreditOrder(order: { id: string; userId: string; orderNumber: string; clientOrganizationId: string | null; clientDiscPackageId: string | null; paymentStatus: string; fulfillmentStatus: string; paidAt: Date | null }, source: string): Promise<FulfillmentResult> {
+  if (!order.clientOrganizationId || !order.clientDiscPackageId) throw new Error("CORPORATE_CREDIT_ORDER_CONFIGURATION_MISSING");
+  const result = await prisma.$transaction(async (tx) => {
+    const current = await tx.commercialOrder.findUnique({ where: { id: order.id }, include: { fulfillment: true } });
+    if (!current || current.paymentStatus !== "PAID") throw new Error("PAYMENT_NOT_PAID");
+    if (current.fulfillmentStatus === "FULFILLED") return { credits: 0, already: true };
+    const claimed = await tx.commercialOrder.updateMany({ where: { id: current.id, paymentStatus: "PAID", fulfillmentStatus: { in: ["NOT_STARTED", "FULFILLMENT_FAILED"] } }, data: { fulfillmentStatus: "FULFILLMENT_PENDING" } });
+    if (claimed.count !== 1) return { credits: 0, already: true };
+    const packageInfo = await tx.clientDiscPackage.findUnique({ where: { id: current.clientDiscPackageId! } });
+    if (!packageInfo || packageInfo.status !== "ACTIVE") throw new Error("CORPORATE_PACKAGE_NOT_AVAILABLE");
+    const purchasedAt = current.paidAt ?? new Date();
+    const expiresAt = new Date(purchasedAt);
+    expiresAt.setFullYear(expiresAt.getFullYear() + 1);
+    await tx.commercialFulfillment.upsert({ where: { orderId: current.id }, create: { orderId: current.id, status: "FULFILLMENT_PENDING", attemptCount: 1 }, update: { status: "FULFILLMENT_PENDING", attemptCount: { increment: 1 }, lastError: null } });
+    await tx.clientOrganizationCreditLot.create({ data: { organizationId: current.clientOrganizationId!, packageId: packageInfo.id, sourceOrderId: current.id, purchasedCredits: packageInfo.creditQuantity, remainingCredits: packageInfo.creditQuantity, expiresAt } });
+    await tx.clientOrganizationCreditLedger.create({ data: { organizationId: current.clientOrganizationId!, orderId: current.id, entryType: "PURCHASE", creditsDelta: packageInfo.creditQuantity, idempotencyKey: `CORPORATE_PURCHASE:${current.id}`, metadata: { packageId: packageInfo.id, expiresAt: expiresAt.toISOString() } } });
+    const fulfilledAt = new Date();
+    await tx.commercialFulfillment.update({ where: { orderId: current.id }, data: { status: "FULFILLED", fulfilledAt, lastError: null } });
+    await tx.commercialOrder.update({ where: { id: current.id }, data: { fulfillmentStatus: "FULFILLED", fulfilledAt, status: "COMPLETED" } });
+    await tx.commercialAuditEvent.create({ data: { orderId: current.id, action: "CORPORATE_CREDIT_GRANTED", fromState: "FULFILLMENT_PENDING", toState: "FULFILLED", source, reference: current.orderNumber, metadata: { organizationId: current.clientOrganizationId, packageId: packageInfo.id, creditQuantity: packageInfo.creditQuantity, expiresAt: expiresAt.toISOString() } } });
+    return { credits: packageInfo.creditQuantity, already: false };
+  }, { isolationLevel: "Serializable" });
+  return { orderId: order.id, orderNumber: order.orderNumber, fulfillmentStatus: result.already ? "FULFILLED" : "FULFILLED", entitlementCount: result.credits, assessmentTypes: ["DISC"], retryable: false };
+}
+
 function existingSourceOrderId(existing: { sourceOrderId: string | null }) {
   return existing.sourceOrderId;
 }
@@ -154,6 +179,11 @@ export async function fulfillPaidOrder(orderId: string, source = "V14.3_FULFILLM
   if (reassessmentCreditType(order)) {
     return fulfillReassessmentCreditOrder(order, source);
   }
+
+  const config = order.commercialConfig && typeof order.commercialConfig === "object" && !Array.isArray(order.commercialConfig)
+    ? order.commercialConfig as Record<string, unknown>
+    : {};
+  if (config.orderKind === "CORPORATE_DISC_CREDIT") return fulfillCorporateCreditOrder(order, source);
 
   if (order.fulfillmentStatus === "FULFILLED" && order.fulfillment) {
     const types = order.product.tier === "BASIC"
@@ -582,4 +612,3 @@ export async function findConsumableTestEntitlement(userId: string, testType: st
     return null;
   });
 }
-

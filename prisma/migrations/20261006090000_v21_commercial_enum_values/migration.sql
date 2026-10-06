@@ -1,0 +1,3 @@
+ALTER TYPE "CommercialTier" ADD VALUE 'CORPORATE_DISC_CREDIT';
+ALTER TYPE "CommercialPaymentStatus" ADD VALUE 'REFUNDED';
+ALTER TYPE "CommercialPaymentAttemptStatus" ADD VALUE 'REFUNDED';

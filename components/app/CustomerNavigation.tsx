@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { usePathname } from "next/navigation";
-import { Menu, X, LayoutDashboard, UserRound, ClipboardList, Clock3, CreditCard, LogOut, ListChecks, KeyRound } from "lucide-react";
+import { Menu, X, LayoutDashboard, UserRound, ClipboardList, Clock3, CreditCard, LogOut, ListChecks, KeyRound, UsersRound } from "lucide-react";
 
 const WORKSPACE_ITEMS = [
   { key: "overview", href: "/app", label: "Overview", icon: LayoutDashboard },
@@ -15,6 +15,7 @@ const WORKSPACE_ITEMS = [
 
 const ACCOUNT_ITEMS = [
   { key: "access", href: "/access", label: "Access & Plans", icon: CreditCard },
+  { key: "affiliate", href: "/affiliate", label: "Affiliate", icon: UsersRound },
   { key: "change-password", href: "/change-password", label: "Change Password", icon: KeyRound },
 ] as const;
 
@@ -33,6 +34,7 @@ function resolveActiveKey(pathname: string, hash: string): NavKey {
   if (pathname === "/activity" || pathname.startsWith("/activity/")) return "activity";
   if (pathname === "/access") return "access";
   if (pathname === "/change-password") return "change-password";
+  if (pathname === "/affiliate") return "affiliate";
   if (pathname === "/profile") return "profile";
   if (pathname === "/results" || pathname.startsWith("/results/")) return "results";
   if (pathname === "/reports" || pathname.startsWith("/reports/")) return "results";

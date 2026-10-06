@@ -6,20 +6,20 @@ import ClientOrganizationOnboarding from "./ClientOrganizationOnboarding";
 
 export default async function ClientPortalPage() {
   const session = await getCurrentSession();
-  if (!session) redirect("/login?next=%2Fclient");
+  if (!session) redirect("/login?next=%2Fcorporate");
 
   const organizations = await listClientOrganizations(session.user.id);
-  if (organizations.length === 1) redirect(`/client/${encodeURIComponent(organizations[0].id)}`);
+  if (organizations.length === 1) redirect(`/corporate/${encodeURIComponent(organizations[0].id)}`);
 
   return (
     <main className="rs-page min-h-screen px-4 py-8 text-slate-950 sm:px-6 sm:py-12">
       <div className="rs-container">
         <header className="flex flex-wrap items-center justify-between gap-4">
           <div>
-            <p className="rs-eyebrow">ReadyScore · Client Portal</p>
+            <p className="rs-eyebrow">ReadyScore · Corporate</p>
             <h1 className="mt-2 text-3xl font-black tracking-tight">DISC untuk organisasi</h1>
             <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-600">
-              Ruang kerja khusus client untuk invitation assessment dan laporan peserta.
+              Ruang kerja perusahaan untuk undangan assessment DISC dan laporan peserta.
             </p>
           </div>
           <Link href="/logout" className="rs-button rs-button-secondary">Keluar</Link>
@@ -40,7 +40,7 @@ export default async function ClientPortalPage() {
               {organizations.map((organization) => (
                 <Link
                   key={organization.id}
-                  href={`/client/${encodeURIComponent(organization.id)}`}
+                  href={`/corporate/${encodeURIComponent(organization.id)}`}
                   className="rs-card block p-6 transition hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md"
                 >
                   <p className="text-[10px] font-black uppercase tracking-[0.16em] text-indigo-600">{organization.code}</p>

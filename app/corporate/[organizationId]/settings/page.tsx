@@ -6,11 +6,11 @@ import ClientOrganizationSettingsForm from "./ClientOrganizationSettingsForm";
 
 export default async function ClientOrganizationSettingsPage({ params }: { params: Promise<{ organizationId: string }> }) {
   const session = await getCurrentSession();
-  if (!session) redirect("/login?next=%2Fclient");
+  if (!session) redirect("/login?next=%2Fcorporate");
   const { organizationId } = await params;
   const workspace = await getClientOrganizationWorkspace(session.user.id, organizationId);
-  if (!workspace) redirect("/client");
-  if (workspace.membership.role !== "ADMIN") redirect(`/client/${encodeURIComponent(organizationId)}`);
+  if (!workspace) redirect("/corporate");
+  if (workspace.membership.role !== "ADMIN") redirect(`/corporate/${encodeURIComponent(organizationId)}`);
 
   return (
     <ClientWorkspaceShell organizationId={organizationId} organizationName={workspace.organization.name} websiteUrl={workspace.organization.websiteUrl} active="settings" role={workspace.membership.role}>

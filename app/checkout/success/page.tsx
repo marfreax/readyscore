@@ -6,6 +6,7 @@ import { CustomerPageShell } from "../../../components/app/CustomerPageShell";
 import { Badge, Card } from "../../../components/ui/DesignSystem";
 import { getCurrentSession } from "../../../lib/auth/session";
 import { reconcileCommercialOrderReturn } from "../../../lib/commercial/v14-2";
+import { CorporateCheckoutSuccess } from "../../../components/commercial/CorporateCheckoutSuccess";
 
 function formatRupiah(value: number) {
   return `Rp${value.toLocaleString("id-ID")}`;
@@ -28,15 +29,19 @@ export default async function CheckoutSuccessPage({
 }: {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
-  const session = await getCurrentSession();
-  if (!session) redirect("/login?next=/checkout/success");
-
   const params = await searchParams;
   const rawOrderNumber = params.order_id ?? params.order;
   const orderNumber = Array.isArray(rawOrderNumber) ? rawOrderNumber[0] : rawOrderNumber;
   const providerStatus = typeof params.transaction_status === "string"
     ? params.transaction_status.trim().toLowerCase()
     : "";
+  const session = await getCurrentSession();
+  if (!session) {
+    const returnPath = orderNumber
+      ? `/checkout/success?order_id=${encodeURIComponent(orderNumber)}`
+      : "/checkout/success";
+    redirect(`/login?next=${encodeURIComponent(returnPath)}`);
+  }
 
   let order: Awaited<ReturnType<typeof reconcileCommercialOrderReturn>> | null = null;
   let reconciliationError: string | null = null;
@@ -55,19 +60,26 @@ export default async function CheckoutSuccessPage({
 
   const paymentStatus = order?.paymentStatus ?? "PENDING";
   const paymentPaid = paymentStatus === "PAID";
-  const paymentFailed = ["FAILED", "EXPIRED", "CANCELLED"].includes(paymentStatus);
+  const paymentFailed = ["FAILED", "EXPIRED", "CANCELLED", "REFUNDED"].includes(paymentStatus);
   const accessReady = order?.fulfillmentStatus === "FULFILLED";
+  const isCorporateCredit = Boolean(order?.clientOrganizationId);
   const isReassessmentCredit = Boolean(order?.productNameSnapshot?.startsWith("Reassessment Credit"));
   const startPath = assessmentPath(order?.assessmentTypeSnapshot ?? null);
   const pageTitle = paymentPaid
-    ? isReassessmentCredit
+    ? isCorporateCredit
+      ? accessReady ? "Kredit Corporate berhasil ditambahkan" : "Pembayaran Corporate berhasil"
+      : isReassessmentCredit
       ? "Credit berhasil ditambahkan"
       : "Pembayaran berhasil"
     : paymentFailed
       ? "Pembayaran belum berhasil"
       : "Pembayaran sedang diproses";
   const pageDescription = paymentPaid
-    ? accessReady
+    ? isCorporateCredit
+      ? accessReady
+        ? "Pembayaran terverifikasi dan kredit DISC sudah ditambahkan ke organisasi Corporate Anda."
+        : "Pembayaran terverifikasi. ReadyScore sedang menambahkan kredit ke saldo organisasi."
+      : accessReady
       ? isReassessmentCredit
         ? "Pembayaran Midtrans sudah terverifikasi dan satu Reassessment Credit sudah ditambahkan ke akun Anda."
         : "Pembayaran sudah terverifikasi dan akses pembelian sudah tersedia pada akun Anda."
@@ -78,8 +90,11 @@ export default async function CheckoutSuccessPage({
 
   return (
     <>
-    {paymentPaid ? <FunnelPageTracker event="checkout_completed" /> : null}
-    {paymentPaid && accessReady ? <FunnelPageTracker event="premium_unlocked" /> : null}
+    {paymentPaid && !isCorporateCredit ? <FunnelPageTracker event="checkout_completed" /> : null}
+    {paymentPaid && accessReady && !isCorporateCredit ? <FunnelPageTracker event="premium_unlocked" /> : null}
+    {isCorporateCredit ? (
+      <CorporateCheckoutSuccess order={order} orderNumber={orderNumber} providerStatus={providerStatus} reconciliationError={reconciliationError} />
+    ) : (
     <CustomerPageShell
       userName={session.user.name}
       eyebrow="Payment"
@@ -148,12 +163,14 @@ export default async function CheckoutSuccessPage({
           {paymentPaid && accessReady ? (
             <div className="mt-6 rounded-2xl border border-emerald-100 bg-emerald-50 p-4">
               <p className="text-sm font-black text-emerald-900">
-                {isReassessmentCredit ? "Reassessment Credit sudah tersedia." : "Akses pembelian sudah unlock."}
+                {isCorporateCredit ? "Kredit DISC Corporate sudah tersedia." : isReassessmentCredit ? "Reassessment Credit sudah tersedia." : "Akses pembelian sudah unlock."}
               </p>
               <p className="mt-1 text-sm leading-6 text-emerald-800">
-                {isReassessmentCredit
+                {isCorporateCredit
+                  ? "Buka halaman Paket & kredit di workspace Corporate untuk melihat saldo dan masa berlaku kredit."
+                  : isReassessmentCredit
                   ? "Anda dapat menggunakan credit tersebut untuk satu assessment tambahan pada jenis test yang dibeli."
-                  : "Anda sekarang dapat melihat assessment yang dimiliki pada Access &amp; Plans."}
+                : "Anda sekarang dapat melihat assessment yang dimiliki pada Access & Plans."}
               </p>
             </div>
           ) : null}
@@ -164,9 +181,7 @@ export default async function CheckoutSuccessPage({
                 Mulai Assessment
               </Link>
             ) : null}
-            <Link href="/access" className="rs-button rs-button-primary">
-              Buka Access &amp; Plans
-            </Link>
+            <Link href="/access" className="rs-button rs-button-primary">Buka Access &amp; Plans</Link>
             {!paymentPaid && orderNumber ? (
               <Link
                 href={`/checkout/success?order_id=${encodeURIComponent(orderNumber)}`}
@@ -179,6 +194,7 @@ export default async function CheckoutSuccessPage({
         </Card>
       </div>
     </CustomerPageShell>
+    )}
     </>
   );
 }
