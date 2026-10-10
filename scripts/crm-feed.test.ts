@@ -1,0 +1,11 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
+import { authenticateFeed, feedPage, encodeCursor } from '../lib/crm-feed/security';
+const token='a'.repeat(43), grant={id:'fixture-a',sourceInstance:'fixture',tokenSha256:createHash('sha256').update(token).digest('hex'),scopes:['customers.read','leads.read']};
+process.env.CRM_FEED_ENABLED='true';process.env.CRM_FEED_GRANTS_JSON=JSON.stringify([grant]);
+const request=(value?:string)=>new Request('https://fixture.example',{headers:value?{authorization:'Bearer '+value}:{}});
+test('feed requires credential and requested scope',()=>{assert.throws(()=>authenticateFeed(request(),'customers.read'));assert.throws(()=>authenticateFeed(request('b'.repeat(43)),'customers.read'));assert.equal(authenticateFeed(request(token),'customers.read').id,grant.id);assert.throws(()=>authenticateFeed(request(token),'purchases.read'));});
+test('disabled feed fails closed',()=>{process.env.CRM_FEED_ENABLED='false';assert.throws(()=>authenticateFeed(request(token),'customers.read'));process.env.CRM_FEED_ENABLED='true';});
+test('signed cursor binds grant, stream and stable upper watermark',()=>{const first=feedPage(new URL('https://fixture.example?limit=2'),grant,'users');const cursor=encodeCursor({...first.position,at:first.position.until,id:'record-1'},grant);const url=new URL('https://fixture.example?cursor='+cursor);assert.equal(feedPage(url,grant,'users').position.until,first.position.until);assert.throws(()=>feedPage(url,grant,'leads'));assert.throws(()=>feedPage(url,{...grant,id:'other'},'users'));assert.throws(()=>feedPage(new URL('https://fixture.example?cursor='+cursor+'x'),grant,'users'));});
+test('limits and invalid incremental bounds are rejected',()=>{for(const q of ['limit=0','limit=201','limit=1.5','since=invalid','since=2999-01-01T00:00:00Z']) assert.throws(()=>feedPage(new URL('https://fixture.example?'+q),grant,'users'));});
