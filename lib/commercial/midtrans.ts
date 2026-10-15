@@ -107,10 +107,11 @@ export class MidtransSnapProvider implements PaymentProvider {
         customer_details: {
           first_name: input.customer.name,
           email: input.customer.email,
+          ...(input.customer.phone ? { phone: input.customer.phone } : {}),
         },
         callbacks: {
-          finish: `${publicBaseUrl()}/checkout/success`,
-          error: `${publicBaseUrl()}/checkout/success`,
+          finish: `${publicBaseUrl()}${input.returnPath ?? "/checkout/success"}`,
+          error: `${publicBaseUrl()}${input.returnPath ?? "/checkout/success"}`,
         },
       }),
       cache: "no-store",

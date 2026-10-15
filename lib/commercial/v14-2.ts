@@ -41,8 +41,16 @@ export async function createProviderPayment(orderId: string) {
   const session = await getCurrentSession();
   if (!session) throw new Error("UNAUTHENTICATED");
 
+  return createProviderPaymentForOwner(orderId, session.user.id);
+}
+
+// Server-only boundary: callers must authenticate the account or verify the
+// order-scoped guest capability before supplying its owner. Never accept this
+// owner ID from an API request body.
+export async function createProviderPaymentForOwner(orderId: string, ownerId: string) {
+
   const order = await prisma.commercialOrder.findFirst({
-    where: { id: orderId, userId: session.user.id },
+    where: { id: orderId, userId: ownerId },
     include: { paymentAttempts: true, user: { select: { name: true, email: true } } },
   });
   if (!order) throw new Error("ORDER_NOT_FOUND");
@@ -93,11 +101,17 @@ export async function createProviderPayment(orderId: string) {
     };
   }
 
+  const config = order.commercialConfig as Record<string, unknown> | null;
+  const guest = config?.source === "PROMO_GUEST_CHECKOUT" && config.customer && typeof config.customer === "object"
+    ? config.customer as Record<string, unknown> : null;
   const result = await provider.createPayment({
     orderId: order.orderNumber,
     amountIdr: order.totalAmountIdr,
     currency: order.currency,
-    customer: order.user,
+    customer: guest && typeof guest.name === "string" && typeof guest.email === "string" && typeof guest.phone === "string"
+      ? { name: guest.name, email: guest.email, phone: guest.phone }
+      : order.user,
+    ...(guest ? { returnPath: "/checkout/promo" as const } : {}),
   });
 
   const updated = await prisma.$transaction(async (tx) => {
