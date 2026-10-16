@@ -61,11 +61,11 @@ export default function FreeTestRunner() {
     const question = questions[current];
     if (!question || !attemptId || busy) return;
     setBusy(true); setMessage("");
-    setAnswers((old) => ({ ...old, [question.id]: value }));
     try {
       const response = await fetch(`/api/assessment/${attemptId}/answer`, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ questionId: question.id, value }) });
       const data = await response.json();
       if (!response.ok) throw new Error(data?.error?.message ?? "Jawaban gagal disimpan.");
+      setAnswers((old) => ({ ...old, [question.id]: value }));
       setProgress(data.progress);
       if (current < questions.length - 1) setCurrent((v) => v + 1);
     } catch (error) { setMessage(error instanceof Error ? error.message : "Jawaban gagal disimpan."); }

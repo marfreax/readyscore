@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getCurrentSession } from "../../../../../lib/auth/session";
-import { assertAttemptBelongsToActiveSubject } from "../../../../../lib/assessment/runtime-service";
+import { assertAttemptRuntimeAccess } from "../../../../../lib/assessment/runtime-service";
 import { RuntimeError, submitAssessment } from "../../../../../lib/assessment/runtime-service";
 
 export async function POST(
@@ -9,16 +9,15 @@ export async function POST(
 ) {
   try {
     const session = await getCurrentSession();
-    if (!session) return NextResponse.json({ ok: false, error: { code: "AUTH_REQUIRED", message: "Login diperlukan." } }, { status: 401 });
     const { attemptId } = await params;
-    await assertAttemptBelongsToActiveSubject(session.user.id, attemptId);
+    await assertAttemptRuntimeAccess(attemptId, session?.user.id);
     const result = await submitAssessment(attemptId);
     return NextResponse.json({ ok: true, result });
   } catch (error) {
     if (error instanceof RuntimeError) {
       return NextResponse.json(
         { ok: false, error: { code: error.code, message: error.message } },
-        { status: 422 },
+        { status: error.code === "AUTH_REQUIRED" ? 401 : 422 },
       );
     }
     console.error(error);

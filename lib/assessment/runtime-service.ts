@@ -537,6 +537,17 @@ export async function getAttemptResultForUser(userId: string, attemptId: string)
 }
 
 
+/** Free attempts use their opaque attempt ID; paid attempts require account and subject ownership. */
+export async function assertAttemptRuntimeAccess(attemptId: string, userId?: string) {
+  const attempt = await prisma.assessmentAttempt.findUnique({
+    where: { id: attemptId },
+    select: { assessmentType: true },
+  });
+  if (attempt?.assessmentType === "FREE") return;
+  if (!userId) throw new RuntimeError("AUTH_REQUIRED", "Login diperlukan.");
+  await assertAttemptBelongsToActiveSubject(userId, attemptId);
+}
+
 export async function assertAttemptBelongsToActiveSubject(userId: string, attemptId: string) {
   const subject = await getActiveSubject(userId);
   const owned = await prisma.assessmentAttempt.findFirst({ where: { id: attemptId, userId, subjectId: subject.id }, select: { id: true } });

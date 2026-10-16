@@ -60,7 +60,7 @@ export async function POST(request: Request) {
     if (!attemptId) return NextResponse.json({ ok: false, error: { code: "INVALID_ATTEMPT", message: "Attempt tidak valid." } }, { status: 400 });
     if (name.length < 2 || name.length > 100) return NextResponse.json({ ok: false, error: { code: "INVALID_NAME", message: "Nama harus 2–100 karakter." } }, { status: 400 });
     if (!whatsapp) return NextResponse.json({ ok: false, error: { code: "INVALID_WHATSAPP", message: "Nomor WhatsApp tidak valid." } }, { status: 400 });
-    if (body.email !== undefined && body.email !== null && body.email !== "" && !email) return NextResponse.json({ ok: false, error: { code: "INVALID_EMAIL", message: "Format email tidak valid." } }, { status: 400 });
+    if (!email) return NextResponse.json({ ok: false, error: { code: "INVALID_EMAIL", message: "Email wajib diisi dengan format yang valid." } }, { status: 400 });
     if (body.consent !== true) return NextResponse.json({ ok: false, error: { code: "CONSENT_REQUIRED", message: "Persetujuan WhatsApp diperlukan untuk membuka Free Report." } }, { status: 400 });
 
     const attempt = await getFreeAttempt(attemptId);
