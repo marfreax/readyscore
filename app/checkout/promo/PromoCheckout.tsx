@@ -117,6 +117,10 @@ export default function PromoCheckout() {
   const paid = order?.paymentStatus === "PAID";
   const accessReady = paid && order.fulfillmentStatus === "FULFILLED";
   const unavailable = !configuration?.gateway.ready || !configuration?.product.available;
+  const priceIdr = order?.priceIdr ?? configuration?.product.priceIdr ?? 249000;
+  const referencePriceIdr = 7_500_000;
+  const savingsIdr = referencePriceIdr - priceIdr;
+  const savingsPercent = new Intl.NumberFormat("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(savingsIdr / referencePriceIdr * 100);
 
   return (
     <div className={styles.page}>
@@ -149,7 +153,7 @@ export default function PromoCheckout() {
             {!loading && configuration && unavailable && !order && <div className={styles.notice}>Pembayaran online untuk paket ini belum tersedia. <a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Hubungi tim ReadyScore</a> untuk bantuan.</div>}
           </div>
           <aside className={styles.summary}>
-            <div className={styles.summaryTop}>PAKET LENGKAP READYSCORE</div><h2>Tes & Profiling Lengkap</h2><p>Pahami potensi dan arah pilihan anak melalui assessment dan laporan personal.</p><div className={styles.price}>{rupiah(order?.priceIdr ?? configuration?.product.priceIdr ?? 249000)}<span>Satu kali pembayaran · satu peserta</span></div><ul><li>Akses paket assessment lengkap</li><li>Hasil masing-masing assessment</li><li>Profiling lintas tes</li><li>Laporan personal ReadyScore</li></ul><div className={styles.total}><span>Total pembayaran</span><strong>{rupiah(order?.priceIdr ?? configuration?.product.priceIdr ?? 249000)}</strong></div><p className={styles.summaryNote}>Akses aktif setelah pembayaran terverifikasi. Simpan nomor pesanan Anda.</p><div className={styles.support}><strong>Ada yang ingin ditanyakan?</strong><a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Chat tim ReadyScore ↗</a></div>
+            <div className={styles.summaryTop}>PAKET LENGKAP READYSCORE</div><h2>6 Tes & Profiling Lengkap</h2><p>Pahami potensi dan arah pilihan anak melalui assessment dan laporan personal.</p><div className={styles.priceComparison}>Dari <del>{rupiah(referencePriceIdr)}</del> menjadi</div><div className={styles.price}>{rupiah(priceIdr)}<span>Satu kali pembayaran · satu peserta</span></div><p className={styles.priceSaving}>Hemat {rupiah(savingsIdr)} ({savingsPercent}%)</p><ul><li>Akses 6 tes lengkap</li><li>Hasil masing-masing assessment</li><li>Profiling lintas tes</li><li>Laporan personal ReadyScore</li></ul><div className={styles.total}><span>Total pembayaran</span><strong>{rupiah(priceIdr)}</strong></div><p className={styles.summaryNote}>Akses aktif setelah pembayaran terverifikasi. Simpan nomor pesanan Anda.</p><div className={styles.support}><strong>Ada yang ingin ditanyakan?</strong><a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Chat tim ReadyScore ↗</a></div>
           </aside>
         </div>
         <footer className={styles.footer}>ReadyScore · Kenali potensi, temukan arah.<span>Data Anda digunakan untuk memproses pesanan dan akses akun.</span></footer>
