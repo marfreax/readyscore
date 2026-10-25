@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 import { createPromoCheckout, findPromoOrder, getPromoProduct, promoGatewayConfiguration, promoOrderSummary } from "../../../../lib/commercial/promo-checkout";
 import { PROMO_COOKIE, PROMO_PRICE_IDR, PROMO_TTL_SECONDS, assertPromoOrigin, isPromoToken, newPromoToken, parsePromoCustomer } from "../../../../lib/commercial/promo-security";
 import { checkV16RateLimit } from "../../../../lib/v16-rate-limit";
+import { parsePromoAttribution } from "../../../../lib/commercial/promo-attribution";
 
 export const runtime = "nodejs";
 const noStore = { "Cache-Control": "private, no-store, max-age=0", Vary: "Cookie" };
@@ -47,7 +48,7 @@ export async function POST(request: Request) {
     const customer = parsePromoCustomer(body);
     const token = (await cookies()).get(PROMO_COOKIE)?.value;
     if (!isPromoToken(token)) throw new Error("CHECKOUT_SESSION_REQUIRED");
-    return NextResponse.json({ ok: true, order: await createPromoCheckout(token, customer) }, { headers: noStore });
+    return NextResponse.json({ ok: true, order: await createPromoCheckout(token, customer, parsePromoAttribution((body as Record<string, unknown>).attribution)) }, { headers: noStore });
   } catch (error) { return failure(error); }
 }
 export async function DELETE(request: Request) {

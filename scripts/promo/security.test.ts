@@ -1,6 +1,13 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { PROMO_TTL_SECONDS, assertPromoOrigin, newPromoToken, parsePromoCustomer, promoOrderId, promoTokenHash, verifyPromoCapability } from "../../lib/commercial/promo-security";
+import { parsePromoAttribution } from "../../lib/commercial/promo-attribution";
+
+test("campaign attribution accepts only bounded campaign fields and rejects contact data and URLs", () => {
+  assert.deepEqual(parsePromoAttribution({ utm_source: "instagram", utm_campaign: "Promo Orang Tua", ad_id: "120254261686400154", fbclid: "Iwx-Test_123", email: "private@example.test", name: "Parent", result: { score: 90 } }), { utm_source: "instagram", utm_campaign: "Promo Orang Tua", ad_id: "120254261686400154", fbclid: "Iwx-Test_123" });
+  for (const value of [null, [], "bad"]) assert.deepEqual(parsePromoAttribution(value), {});
+  assert.deepEqual(parsePromoAttribution({ utm_source: "person@example.test", utm_campaign: "https://example.test/?email=private", utm_term: "a".repeat(161), fbclid: "<script>" }), {});
+});
 
 test("normalizes Indonesian WhatsApp formats and customer email", () => {
   for (const phone of ["0812 3456 7890", "+62 812-3456-7890", "81234567890"]) {

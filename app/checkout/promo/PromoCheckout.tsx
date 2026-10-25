@@ -3,6 +3,7 @@
 import Script from "next/script";
 import { useCallback, useEffect, useState, type FormEvent } from "react";
 import styles from "./promo.module.css";
+import PromoMeasurement, { promoTracker } from "./PromoMeasurement";
 
 type Customer = { name: string; phone: string; email: string };
 type Order = { orderNumber: string; priceIdr: number; paymentStatus: string; fulfillmentStatus: string; customer: Customer; paymentToken: string | null; redirectUrl: string | null };
@@ -73,7 +74,7 @@ export default function PromoCheckout() {
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault(); setBusy(true); setError(""); setNotice("");
     try {
-      const response = await fetch("/api/promo/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...customer, acceptedTerms: terms }) });
+      const response = await fetch("/api/promo/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...customer, acceptedTerms: terms, attribution: promoTracker()?.attribution() ?? {} }) });
       const data = await response.json();
       if (!response.ok || !data.ok) {
         if (response.status === 409) await refresh().catch(() => {});
@@ -118,12 +119,11 @@ export default function PromoCheckout() {
   const accessReady = paid && order.fulfillmentStatus === "FULFILLED";
   const unavailable = !configuration?.gateway.ready || !configuration?.product.available;
   const priceIdr = order?.priceIdr ?? configuration?.product.priceIdr ?? 249000;
-  const referencePriceIdr = 7_500_000;
-  const savingsIdr = referencePriceIdr - priceIdr;
-  const savingsPercent = new Intl.NumberFormat("id-ID", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(savingsIdr / referencePriceIdr * 100);
+  const estimatedValueIdr = 7_500_000;
 
   return (
     <div className={styles.page}>
+      <PromoMeasurement paymentStatus={order?.paymentStatus} orderNumber={order?.orderNumber} value={priceIdr} />
       {configuration?.gateway.ready && <Script id="promo-midtrans-snap" src={configuration.gateway.scriptUrl} data-client-key={configuration.gateway.clientKey} strategy="afterInteractive" onReady={() => setScriptReady(true)} onError={() => setScriptError(true)} />}
       <header className={styles.header}><div><a href="https://promo.readyscore.id/" aria-label="ReadyScore, kembali ke halaman promo"><img src="/readyscore-logo.png" width="166" height="55" alt="ReadyScore" /></a><span>Pembelian paket ReadyScore</span><a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Butuh bantuan?</a></div></header>
       <main className={styles.main}>
@@ -153,7 +153,7 @@ export default function PromoCheckout() {
             {!loading && configuration && unavailable && !order && <div className={styles.notice}>Pembayaran online untuk paket ini belum tersedia. <a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Hubungi tim ReadyScore</a> untuk bantuan.</div>}
           </div>
           <aside className={styles.summary}>
-            <div className={styles.summaryTop}>PAKET LENGKAP READYSCORE</div><h2>6 Tes & Profiling Lengkap</h2><p>Pahami potensi dan arah pilihan anak melalui assessment dan laporan personal.</p><div className={styles.priceComparison}>Dari <del>{rupiah(referencePriceIdr)}</del> menjadi</div><div className={styles.price}>{rupiah(priceIdr)}<span>Satu kali pembayaran · satu peserta</span></div><p className={styles.priceSaving}>Hemat {rupiah(savingsIdr)} ({savingsPercent}%)</p><ul><li>Akses 6 tes lengkap</li><li>Hasil masing-masing assessment</li><li>Profiling lintas tes</li><li>Laporan personal ReadyScore</li></ul><div className={styles.total}><span>Total pembayaran</span><strong>{rupiah(priceIdr)}</strong></div><p className={styles.summaryNote}>Akses aktif setelah pembayaran terverifikasi. Simpan nomor pesanan Anda.</p><div className={styles.support}><strong>Ada yang ingin ditanyakan?</strong><a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Chat tim ReadyScore ↗</a></div>
+            <div className={styles.summaryTop}>PAKET LENGKAP READYSCORE</div><h2>6 Tes & Profiling Lengkap</h2><p>Pahami potensi dan arah pilihan anak melalui assessment dan laporan personal.</p><div className={styles.priceComparison}>Estimasi nilai paket {rupiah(estimatedValueIdr)}</div><div className={styles.price}>{rupiah(priceIdr)}<span>Harga penawaran · satu kali pembayaran · satu peserta</span></div><p className={styles.priceSaving}>6 tes + profiling + laporan personal</p><details className={styles.valueDetails}><summary>Rincian estimasi nilai paket</summary><ul><li>6 tes: Rp6.000.000</li><li>Profiling: Rp1.000.000</li><li>Laporan: Rp500.000</li></ul><p>Estimasi internal ReadyScore, bukan harga jual sebelumnya. Total pembayaran Anda tetap {rupiah(priceIdr)}.</p></details><ul><li>Cognitive, EQ, DISC, dan RIASEC</li><li>Work Attitude dan Learning Preference</li><li>Hasil per tes dan profiling lintas tes</li><li>Laporan personal ReadyScore</li></ul><div className={styles.total}><span>Total pembayaran</span><strong>{rupiah(priceIdr)}</strong></div><p className={styles.summaryNote}>Akses aktif setelah pembayaran terverifikasi. Simpan nomor pesanan Anda.</p><div className={styles.support}><strong>Ada yang ingin ditanyakan?</strong><a href="https://wa.me/6281196962200" target="_blank" rel="noopener noreferrer">Chat tim ReadyScore ↗</a></div>
           </aside>
         </div>
         <footer className={styles.footer}>ReadyScore · Kenali potensi, temukan arah.<span>Data Anda digunakan untuk memproses pesanan dan akses akun.</span></footer>

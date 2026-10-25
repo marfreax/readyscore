@@ -5,6 +5,7 @@ import { createProviderPaymentForOwner } from "./v14-2";
 import { COMMERCIAL_ENTITLEMENT_MATRIX } from "./types";
 import { getPublicAppBaseUrl } from "../public-app-url";
 import { PROMO_PRICE_IDR, PROMO_PRODUCT_ID, PROMO_TTL_SECONDS, promoOrderId, promoTokenHash, verifyPromoCapability, type PromoCustomer } from "./promo-security";
+import { parsePromoAttribution, type PromoAttribution } from "./promo-attribution";
 
 export function promoGatewayConfiguration() {
   const production = process.env.MIDTRANS_ENVIRONMENT?.trim().toLowerCase() === "production";
@@ -49,7 +50,7 @@ export async function getPromoProduct() {
   return product;
 }
 
-export async function createPromoCheckout(token: string, customer: PromoCustomer) {
+export async function createPromoCheckout(token: string, customer: PromoCustomer, attribution: PromoAttribution = {}) {
   if (!promoGatewayConfiguration().ready) throw new Error("PROMO_PAYMENT_UNAVAILABLE");
   const existing = await findPromoOrder(token);
   if (existing) {
@@ -80,7 +81,7 @@ export async function createPromoCheckout(token: string, customer: PromoCustomer
         id: promoOrderId(token), userId: user.id, subjectId: subject.id, productId: product.id,
         orderNumber: `RS-P-${Date.now().toString(36).toUpperCase()}-${randomBytes(4).toString("hex").toUpperCase()}`,
         productNameSnapshot: product.name, quantity: 1, unitPriceIdrSnapshot: product.priceIdr!, totalAmountIdr: product.priceIdr!, currency: "IDR",
-        commercialConfig: { source: "PROMO_GUEST_CHECKOUT", productTier: product.tier, customer, terms: { path: "/terms", acceptedAt: new Date().toISOString() }, guestTokenHash: promoTokenHash(token), guestExpiresAt: new Date(Date.now() + PROMO_TTL_SECONDS * 1000).toISOString(), entitlementKeys: product.entitlements.map(e => `${e.type}:${e.resourceType}:${e.resourceKey}`) },
+        commercialConfig: { source: "PROMO_GUEST_CHECKOUT", productTier: product.tier, customer, attribution: parsePromoAttribution(attribution), terms: { path: "/terms", acceptedAt: new Date().toISOString() }, guestTokenHash: promoTokenHash(token), guestExpiresAt: new Date(Date.now() + PROMO_TTL_SECONDS * 1000).toISOString(), entitlementKeys: product.entitlements.map(e => `${e.type}:${e.resourceType}:${e.resourceKey}`) },
         status: "CREATED", paymentStatus: "PENDING", fulfillmentStatus: "NOT_STARTED",
       } });
       await tx.commercialAuditEvent.create({ data: { orderId: order.id, action: "ORDER_CREATED", toState: "CREATED", source: "PROMO_GUEST_CHECKOUT", reference: order.orderNumber, metadata: { productId: product.id, totalAmountIdr: order.totalAmountIdr } } });

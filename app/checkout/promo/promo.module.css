@@ -3,3 +3,4 @@
 
 .priceComparison{margin:22px 0 -16px;font-size:13px;line-height:1.6;color:#7d899e}.priceComparison del{font-weight:700;text-decoration-thickness:1.5px}.summary>.priceSaving{display:inline-block;margin:-10px 0 20px;padding:3px 8px;border:1px solid #bce8d4;border-radius:20px;background:#edf9f2;color:#16815b;font-size:11px;font-weight:700;line-height:1.6}
 @media(max-width:760px){.priceComparison{margin:16px 0 -8px;font-size:12px}.summary>.priceSaving{margin:-4px 0 16px;font-size:10px}}
+.valueDetails{margin:0 0 18px;padding:12px;border:1px solid #e2e7f0;border-radius:8px;background:#f8faff;font-size:11px;color:#647088}.valueDetails summary{cursor:pointer;font-weight:700;color:#354966}.valueDetails ul{display:block;padding:10px 0 0;border:0}.valueDetails li{margin:0 0 5px;padding:0;font-size:11px}.valueDetails li:before{content:none}.valueDetails p{margin:10px 0 0;line-height:1.8}
